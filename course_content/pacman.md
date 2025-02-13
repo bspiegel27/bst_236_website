@@ -2,7 +2,7 @@ Hello World
 
 ## Pacman
 
-```html
+```js client
 <script src='https://code.jquery.com/jquery-1.4.2.min.js'></script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
