@@ -1,4 +1,4 @@
 Brandon's GitHub Site
 ## Pages
 
-- [Pacman Page](pacman.md)
+- [Pacman Page](/course_content/pacman.md)
