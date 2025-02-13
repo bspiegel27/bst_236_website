@@ -1,81 +1,45 @@
 Hello World
 
 ## Pacman
-
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacman</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .grid {
-            display: grid;
-            grid-template-rows: repeat(28, 20px);
-            grid-template-columns: repeat(36, 20px);
-            gap: 1px;
-        }
-        .cell {
-            width: 20px;
-            height: 20px;
-            border: 1px solid #ccc;
-        }
-        .yellow-box {
-            width: 20px;
-            height: 20px;
-            background-color: yellow;
-        }
-    </style>
-</head>
-<body>
-    <div class="grid"></div>
-    <script src='https://code.jquery.com/jquery-1.4.2.min.js'></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const grid = document.querySelector('.grid');
+<canvas id="gameCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
 
-            for (let i = 0; i < 28 * 36; i++) {
-                const cell = document.createElement('div');
-                cell.classList.add('cell');
-                grid.appendChild(cell);
-            }
+<script>
+    var canvas = document.getElementById("gameCanvas");
+    var ctx = canvas.getContext("2d");
+    var box = {
+        x: 50,
+        y: 50,
+        size: 20,
+        color: "black"
+    };
 
-            const yellowBox = document.createElement('div');
-            yellowBox.classList.add('yellow-box');
-            yellowBox.style.gridRowStart = 1;
-            yellowBox.style.gridColumnStart = 1;
-            grid.appendChild(yellowBox);
+    document.addEventListener("keydown", moveBox);
 
-            let position = { row: 1, col: 1 };
+    function moveBox(e) {
+        switch(e.key) {
+            case "ArrowUp":
+                box.y -= 5;
+                break;
+            case "ArrowDown":
+                box.y += 5;
+                break;
+            case "ArrowLeft":
+                box.x -= 5;
+                break;
+            case "ArrowRight":
+                box.x += 5;
+                break;
+        }
+        drawBox();
+    }
 
-            document.addEventListener('keydown', (e) => {
-                switch (e.key) {
-                    case 'ArrowUp':
-                        if (position.row > 1) position.row--;
-                        break;
-                    case 'ArrowDown':
-                        if (position.row < 28) position.row++;
-                        break;
-                    case 'ArrowLeft':
-                        if (position.col > 1) position.col--;
-                        break;
-                    case 'ArrowRight':
-                        if (position.col < 36) position.col++;
-                        break;
-                }
-                yellowBox.style.gridRowStart = position.row;
-                yellowBox.style.gridColumnStart = position.col;
-            });
-        });
-    </script>
-</body>
-</html>
+    function drawBox() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = box.color;
+        ctx.fillRect(box.x, box.y, box.size, box.size);
+    }
+
+    drawBox();
+</script>
 ```
