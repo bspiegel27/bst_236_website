@@ -25,7 +25,9 @@ This page displays a regularly updated list of the newest research papers about 
 
 <style>
 table {
-    width: 100%;
+    width: 200%;
+    margin-left: -50%;
+    margin-right: -50%;
     table-layout: fixed;
 }
 
@@ -103,5 +105,4 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
 ## Features
 - Daily updates at midnight
 - Direct links to arXiv papers
-- Displays paper titles, authors, abstracts, and publication dates
-- Focused specifically on causal inference research
+- Displays paper titles, authors, abstracts, and publication dates- Focused specifically on causal inference research
