@@ -1,7 +1,9 @@
 Hello World
 
 ## Pacman
-```html
+
+<script src='http://code.jquery.com/jquery-1.4.2.min.js'>
+{newline}
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
         const grid = document.createElement('div');
@@ -49,4 +51,3 @@ Hello World
         });
     });
 </script>
-```
