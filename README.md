@@ -1,2 +1,4 @@
 Brandon's GitHub Site
-[Pacman Page](pacman.md)
+## Pages
+
+- [Pacman Page](pacman.md)
