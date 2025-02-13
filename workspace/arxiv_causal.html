@@ -57,8 +57,11 @@
 
     <script>
         async function fetchPapers() {
-            const query = 'search_query=all:"causal+inference"+AND+submittedDate:[${yesterday}+TO+${today}]&sortBy=submittedDate&sortOrder=descending';
-            const response = await fetch(`https://export.arxiv.org/api/query?${query}`);
+            // http://export.arxiv.org/api/query?search_query=all:electron
+            // https://arxiv.org/search/?query=causal+inference&searchtype=all&source=header
+            // submittedDate:[202301010600+TO+202401010600]
+            const query = 'search_query=all:causal+inference+AND+submittedDate:[${yesterday}+TO+${today}]&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10';
+            const response = await fetch(`http://export.arxiv.org/api/query?${query}`);
             const text = await response.text();
             const parser = new DOMParser();
             const xml = parser.parseFromString(text, 'text/xml');

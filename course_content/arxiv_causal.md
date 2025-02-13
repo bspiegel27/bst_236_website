@@ -2,7 +2,7 @@
 
 This page displays a regularly updated list of the newest research papers about causal inference from arXiv. The list is automatically refreshed daily at midnight to ensure you always have access to the latest publications.
 
-[View Latest Papers](arxiv_causal.html)
+[View Latest Papers](../workspace/arxiv_causal.html)
 
 ## Features
 - Daily updates at midnight
