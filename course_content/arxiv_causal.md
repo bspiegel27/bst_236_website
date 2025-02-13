@@ -54,7 +54,9 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
             abstract: entry.querySelector('summary').textContent,
             published: new Date(entry.querySelector('published').textContent)
                 .toLocaleDateString(),
-            link: entry.querySelector('id').textContent
+            link: Array.from(entry.getElementsByTagName('link'))
+                .find(link => link.getAttribute('title') === 'pdf')
+                ?.getAttribute('href') || entry.querySelector('id').textContent
         }));
     }
 
