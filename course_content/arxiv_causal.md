@@ -23,6 +23,20 @@ This page displays a regularly updated list of the newest research papers about 
     </tbody>
 </table>
 
+<style>
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Column widths */
+th:nth-child(1), td:nth-child(1) { width: 15%; }  /* Title */
+th:nth-child(2), td:nth-child(2) { width: 12%; }  /* Authors */
+th:nth-child(3), td:nth-child(3) { width: 60%; }  /* Abstract */
+th:nth-child(4), td:nth-child(4) { width: 8%; }   /* Published */
+th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
+</style>
+
 <script>
     async function fetchPapers() {
         const query = 'search_query=all:causal+inference&submittedDate:[${yesterday}+TO+${today}]&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10';
