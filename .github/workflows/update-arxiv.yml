@@ -2,7 +2,7 @@ name: Update ArXiv Cache
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 0 * * *'  # Run at midnight UTC
   workflow_dispatch: {}
   push:
     branches:
@@ -24,10 +24,16 @@ jobs:
       
       - name: Fetch ArXiv Data
         run: |
-          # Fetch and store raw XML
-          curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > data/arxiv-cache.xml
-          # Add timestamp as XML comment
-          sed -i "1i<!-- Last updated: $(date -u +"%Y-%m-%dT%H:%M:%SZ") -->" data/arxiv-cache.xml
+          # Create fresh XML file with proper header
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > data/arxiv-cache.xml
+          echo "<!-- Last updated: $(date -u +"%Y-%m-%dT%H:%M:%SZ") -->" >> data/arxiv-cache.xml
+          
+          # Fetch and append ArXiv data
+          curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" >> data/arxiv-cache.xml
+          
+          # Debug output
+          echo "Generated XML file:"
+          cat data/arxiv-cache.xml
 
       - name: Commit and push changes
         env:
