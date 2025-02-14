@@ -21,3 +21,4 @@ This function checks if two rectangles (representing game elements) overlap. It'
 [Try the game yourself](/course_content/pacman.md)
 
 *Tags: #javascript #gamedev #webdev*
+
