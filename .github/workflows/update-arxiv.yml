@@ -13,10 +13,28 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: Install xmlstarlet
+        run: sudo apt-get install xmlstarlet
+      
       - name: Fetch ArXiv Data
         run: |
-          response=$(curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10")
-          echo "{\"lastUpdate\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\", \"papers\": $response}" > data/arxiv-cache.json
+          # Fetch XML from ArXiv
+          curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > arxiv.xml
+          
+          # Convert XML to JSON array
+          papers=$(xmlstarlet sel -t -m "//entry" -o "{" \
+            -o '"title":' -v "normalize-space(title)" -o '",' \
+            -o '"authors":"' -m "author" -v "name" -i "position()!=last()" -o ", " -b -o '",' \
+            -o '"abstract":"' -v "normalize-space(summary)" -o '",' \
+            -o '"published":"' -v "published" -o '",' \
+            -o '"link":"' -v "id" -o '"' \
+            -o "}," -n arxiv.xml | sed '$s/,$//')
+          
+          # Create final JSON with timestamp and papers array
+          echo "{
+            \"lastUpdate\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",
+            \"papers\": [$papers]
+          }" > data/arxiv-cache.json
           
       - name: Commit and push if changed
         run: |
