@@ -2,12 +2,14 @@ name: Update ArXiv Cache
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Run every 10 minutes for testing
-  workflow_dispatch:
+    - cron: '*/10 * * * *'
+  workflow_dispatch: {}
 
 jobs:
   update-cache:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v2
       
