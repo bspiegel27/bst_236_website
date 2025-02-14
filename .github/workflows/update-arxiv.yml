@@ -12,54 +12,62 @@ jobs:
   update-cache:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       
-      - name: Install xmlstarlet
-        run: sudo apt-get install xmlstarlet
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xmlstarlet jq
+
+      - name: Create data directory
+        run: mkdir -p data
       
       - name: Fetch ArXiv Data
         id: fetch-data
         run: |
-          # Fetch XML from ArXiv
-          curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > arxiv.xml
+          # Debug: Show current directory and contents
+          pwd
+          ls -la
           
-          # Convert XML to JSON array
+          # Fetch XML from ArXiv with error checking
+          if ! curl -s -f "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > arxiv.xml; then
+            echo "Failed to fetch ArXiv data"
+            exit 1
+          fi
+          
+          # Debug: Show XML content
+          echo "ArXiv XML response:"
+          cat arxiv.xml
+          
+          # Convert XML to JSON array with error checking
           papers=$(xmlstarlet sel -t -m "//entry" -o "{" \
             -o '"title":"' -v "normalize-space(title)" -o '",' \
             -o '"authors":"' -m "author" -v "name" -i "position()!=last()" -o ", " -b -o '",' \
             -o '"abstract":"' -v "normalize-space(summary)" -o '",' \
             -o '"published":"' -v "published" -o '",' \
             -o '"link":"' -v "id" -o '"' \
-            -o "}," -n arxiv.xml | sed '$s/,$//')
+            -o "}," -n arxiv.xml | sed '$s/,$//' || echo "[]")
           
-          # Create JSON content
-          content="{\"lastUpdate\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\", \"papers\": [$papers]}"
+          # Create and validate JSON content
+          json_content=$(jq -n \
+            --arg time "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+            --arg papers "[$papers]" \
+            '{lastUpdate: $time, papers: ($papers | fromjson)}')
           
-          # Encode content for GitHub API
-          encoded_content=$(echo "$content" | base64 -w 0)
-          echo "::set-output name=content::$encoded_content"
+          # Debug: Show JSON content
+          echo "Generated JSON:"
+          echo "$json_content" | jq '.'
+          
+          # Save to file directly first
+          echo "$json_content" > data/arxiv-cache.json
+          
+          # Debug: Show file contents
+          echo "Cache file contents:"
+          cat data/arxiv-cache.json
 
-      - name: Update GitHub Pages Cache
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push changes
         run: |
-          # Get current file SHA (if exists)
-          sha=$(curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/data/arxiv-cache.json" \
-            | jq -r '.sha // empty')
-          
-          # Prepare API request body
-          if [ -n "$sha" ]; then
-            body=$(jq -n --arg sha "$sha" --arg content "${{ steps.fetch-data.outputs.content }}" \
-              '{message: "Update ArXiv cache", sha: $sha, content: $content}')
-          else
-            body=$(jq -n --arg content "${{ steps.fetch-data.outputs.content }}" \
-              '{message: "Update ArXiv cache", content: $content}')
-          fi
-          
-          # Update file via GitHub API
-          curl -X PUT \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/data/arxiv-cache.json" \
-            -d "$body"
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add data/arxiv-cache.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update ArXiv cache" && git push)
