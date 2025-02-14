@@ -46,33 +46,56 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
 <script>
     async function fetchPapers() {
         try {
-            // Update path to be relative to GitHub Pages root
-            const response = await fetch('https://bspiegel27.github.io/bst_236_website/data/arxiv-cache.xml');
+            // Use raw.githubusercontent.com URL
+            const response = await fetch('https://raw.githubusercontent.com/bspiegel27/bst_236_website/main/data/arxiv-cache.xml');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const text = await response.text();
+            console.log('Raw XML:', text); // Debug output
             
             // Get last update time from XML comment
             const updateMatch = text.match(/<!-- Last updated: (.*?) -->/);
             const updateTime = updateMatch ? updateMatch[1] : new Date().toISOString();
             document.getElementById('update-time').textContent = new Date(updateTime).toLocaleString();
             
+            // Parse XML
             const parser = new DOMParser();
-            const xml = parser.parseFromString(text, 'text/xml');
-            const ns = 'http://www.w3.org/2005/Atom';  // ArXiv uses Atom feed format
-            
-            // Extract papers using correct namespace
-            return Array.from(xml.getElementsByTagNameNS(ns, 'entry')).map(entry => ({
-                title: entry.getElementsByTagNameNS(ns, 'title')[0].textContent.trim(),
-                authors: Array.from(entry.getElementsByTagNameNS(ns, 'author'))
-                    .map(author => author.getElementsByTagNameNS(ns, 'name')[0].textContent.trim())
-                    .join(', '),
-                abstract: entry.getElementsByTagNameNS(ns, 'summary')[0].textContent.trim(),
-                published: new Date(entry.getElementsByTagNameNS(ns, 'published')[0].textContent)
-                    .toLocaleDateString(),
-                link: entry.getElementsByTagNameNS(ns, 'id')[0].textContent
-            }));
+            const xml = parser.parseFromString(text, 'application/xml');
+            console.log('Parsed XML:', xml); // Debug output
+
+            // Check for parsing errors
+            const parserError = xml.querySelector('parsererror');
+            if (parserError) {
+                throw new Error('XML parsing error: ' + parserError.textContent);
+            }
+
+            // Extract papers with error handling
+            const entries = xml.getElementsByTagName('entry');
+            console.log('Found entries:', entries.length); // Debug output
+
+            return Array.from(entries).map(entry => {
+                try {
+                    return {
+                        title: entry.querySelector('title')?.textContent?.trim() || 'No title',
+                        authors: Array.from(entry.getElementsByTagName('author'))
+                            .map(author => author.querySelector('name')?.textContent?.trim())
+                            .filter(Boolean)
+                            .join(', ') || 'No authors',
+                        abstract: entry.querySelector('summary')?.textContent?.trim() || 'No abstract',
+                        published: entry.querySelector('published') ? 
+                            new Date(entry.querySelector('published').textContent).toLocaleDateString() :
+                            'No date',
+                        link: entry.querySelector('id')?.textContent || '#'
+                    };
+                } catch (e) {
+                    console.error('Error parsing entry:', e);
+                    return null;
+                }
+            }).filter(Boolean);
         } catch (error) {
             console.error('Error fetching papers:', error);
-            document.getElementById('loading').textContent = 'Error loading papers. Please try again later.';
+            document.getElementById('loading').textContent = `Error loading papers: ${error.message}`;
             return [];
         }
     }
