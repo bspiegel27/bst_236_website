@@ -46,7 +46,8 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
 <script>
     async function fetchPapers() {
         try {
-            const response = await fetch('/data/arxiv-cache.xml');
+            // Update path to be relative to GitHub Pages root
+            const response = await fetch('https://bspiegel27.github.io/bst_236_website/data/arxiv-cache.xml');
             const text = await response.text();
             
             // Get last update time from XML comment
@@ -54,22 +55,20 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
             const updateTime = updateMatch ? updateMatch[1] : new Date().toISOString();
             document.getElementById('update-time').textContent = new Date(updateTime).toLocaleString();
             
-            // Parse XML
             const parser = new DOMParser();
             const xml = parser.parseFromString(text, 'text/xml');
+            const ns = 'http://www.w3.org/2005/Atom';  // ArXiv uses Atom feed format
             
-            // Extract papers
-            return Array.from(xml.getElementsByTagName('entry')).map(entry => ({
-                title: entry.querySelector('title').textContent,
-                authors: Array.from(entry.getElementsByTagName('author'))
-                    .map(author => author.textContent)
+            // Extract papers using correct namespace
+            return Array.from(xml.getElementsByTagNameNS(ns, 'entry')).map(entry => ({
+                title: entry.getElementsByTagNameNS(ns, 'title')[0].textContent.trim(),
+                authors: Array.from(entry.getElementsByTagNameNS(ns, 'author'))
+                    .map(author => author.getElementsByTagNameNS(ns, 'name')[0].textContent.trim())
                     .join(', '),
-                abstract: entry.querySelector('summary').textContent,
-                published: new Date(entry.querySelector('published').textContent)
+                abstract: entry.getElementsByTagNameNS(ns, 'summary')[0].textContent.trim(),
+                published: new Date(entry.getElementsByTagNameNS(ns, 'published')[0].textContent)
                     .toLocaleDateString(),
-                link: Array.from(entry.getElementsByTagName('link'))
-                    .find(link => link.getAttribute('title') === 'pdf')
-                    ?.getAttribute('href') || entry.querySelector('id').textContent
+                link: entry.getElementsByTagNameNS(ns, 'id')[0].textContent
             }));
         } catch (error) {
             console.error('Error fetching papers:', error);
