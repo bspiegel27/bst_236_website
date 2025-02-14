@@ -4,7 +4,7 @@ title: Latest Causal Inference Research
 ---
 
 <div style="text-align: right; margin: 10px;">
-    <a href="/" style="text-decoration: none; color: #0366d6; font-weight: bold;">← Home</a>
+    <a href="https://bspiegel27.github.io/bst_236_website/" style="text-decoration: none; color: #0366d6; font-weight: bold;">← Home</a>
 </div>
 
 # Latest Causal Inference Research
