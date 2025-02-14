@@ -3,6 +3,10 @@ layout: default
 title: Latest Causal Inference Research
 ---
 
+<div style="text-align: right; margin: 10px;">
+    <a href="/" style="text-decoration: none; color: #0366d6; font-weight: bold;">← Home</a>
+</div>
+
 # Latest Causal Inference Research
 
 This page displays a regularly updated list of the newest research papers about causal inference from arXiv. The list is automatically refreshed daily at midnight.
