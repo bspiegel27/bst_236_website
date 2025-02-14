@@ -46,53 +46,46 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
 <script>
     async function fetchPapers() {
         try {
-            // Use raw.githubusercontent.com URL
-            const response = await fetch('https://raw.githubusercontent.com/bspiegel27/bst_236_website/main/data/arxiv-cache.xml');
+            // Direct ArXiv API query
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            
+            const query = `https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10`;
+            const response = await fetch(query);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const text = await response.text();
-            console.log('Raw XML:', text); // Debug output
             
-            // Get last update time from XML comment
-            const updateMatch = text.match(/<!-- Last updated: (.*?) -->/);
-            const updateTime = updateMatch ? updateMatch[1] : new Date().toISOString();
-            document.getElementById('update-time').textContent = new Date(updateTime).toLocaleString();
+            // Update timestamp
+            document.getElementById('update-time').textContent = new Date().toLocaleString();
             
-            // Parse XML
+            // Parse XML response
             const parser = new DOMParser();
             const xml = parser.parseFromString(text, 'application/xml');
-            console.log('Parsed XML:', xml); // Debug output
-
+            
             // Check for parsing errors
             const parserError = xml.querySelector('parsererror');
             if (parserError) {
                 throw new Error('XML parsing error: ' + parserError.textContent);
             }
 
-            // Extract papers with error handling
-            const entries = xml.getElementsByTagName('entry');
-            console.log('Found entries:', entries.length); // Debug output
-
-            return Array.from(entries).map(entry => {
-                try {
-                    return {
-                        title: entry.querySelector('title')?.textContent?.trim() || 'No title',
-                        authors: Array.from(entry.getElementsByTagName('author'))
-                            .map(author => author.querySelector('name')?.textContent?.trim())
-                            .filter(Boolean)
-                            .join(', ') || 'No authors',
-                        abstract: entry.querySelector('summary')?.textContent?.trim() || 'No abstract',
-                        published: entry.querySelector('published') ? 
-                            new Date(entry.querySelector('published').textContent).toLocaleDateString() :
-                            'No date',
-                        link: entry.querySelector('id')?.textContent || '#'
-                    };
-                } catch (e) {
-                    console.error('Error parsing entry:', e);
-                    return null;
-                }
-            }).filter(Boolean);
+            // Extract papers
+            return Array.from(xml.getElementsByTagName('entry')).map(entry => ({
+                title: entry.querySelector('title')?.textContent?.trim() || 'No title',
+                authors: Array.from(entry.getElementsByTagName('author'))
+                    .map(author => author.querySelector('name')?.textContent?.trim())
+                    .filter(Boolean)
+                    .join(', ') || 'No authors',
+                abstract: entry.querySelector('summary')?.textContent?.trim() || 'No abstract',
+                published: entry.querySelector('published') ? 
+                    new Date(entry.querySelector('published').textContent).toLocaleDateString() :
+                    'No date',
+                link: Array.from(entry.getElementsByTagName('link'))
+                    .find(link => link.getAttribute('title') === 'pdf')
+                    ?.getAttribute('href') || entry.querySelector('id')?.textContent || '#'
+            }));
         } catch (error) {
             console.error('Error fetching papers:', error);
             document.getElementById('loading').textContent = `Error loading papers: ${error.message}`;
