@@ -46,13 +46,31 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
 <script>
     async function fetchPapers() {
         try {
-            const response = await fetch('/data/arxiv-cache.json');
-            const data = await response.json();
-            const timestamp = new Date(data.lastUpdate).toLocaleString();
-            document.getElementById('update-time').textContent = timestamp;
-            return data.papers;
+            const response = await fetch('/data/arxiv-cache.xml');
+            const text = await response.text();
+            
+            // Get last update time from XML comment
+            const updateMatch = text.match(/<!-- Last updated: (.*?) -->/);
+            const updateTime = updateMatch ? updateMatch[1] : new Date().toISOString();
+            document.getElementById('update-time').textContent = new Date(updateTime).toLocaleString();
+            
+            // Parse XML
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(text, 'text/xml');
+            
+            // Extract papers
+            return Array.from(xml.getElementsByTagName('entry')).map(entry => ({
+                title: entry.querySelector('title').textContent,
+                authors: Array.from(entry.getElementsByTagName('author'))
+                    .map(author => author.querySelector('name').textContent)
+                    .join(', '),
+                abstract: entry.querySelector('summary').textContent,
+                published: new Date(entry.querySelector('published').textContent)
+                    .toLocaleDateString(),
+                link: entry.querySelector('id').textContent
+            }));
         } catch (error) {
-            console.error('Error fetching cached papers:', error);
+            console.error('Error fetching papers:', error);
             document.getElementById('loading').textContent = 'Error loading papers. Please try again later.';
             return [];
         }

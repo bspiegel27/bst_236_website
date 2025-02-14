@@ -18,47 +18,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xmlstarlet jq
 
       - name: Create data directory
         run: mkdir -p data
       
-      - name: Fetch and Process ArXiv Data
+      - name: Fetch ArXiv Data
         run: |
-          # Fetch ArXiv data and save to file
-          curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > arxiv.xml
-          
-          # Debug: Print the XML content
-          echo "Raw XML content:"
-          cat arxiv.xml
-          
-          # Process XML and create temporary JSON entries
-          echo "[" > temp.json
-          xmlstarlet sel -N x="http://www.w3.org/2005/Atom" -t \
-            -m "//x:entry" \
-            -o "{" \
-            -o '"title":' -v "normalize-space(x:title)" -o "," \
-            -o '"authors":"' -m "x:author" -v "x:name" -i "position()!=last()" -o ", " -b -o '",' \
-            -o '"abstract":' -v "normalize-space(x:summary)" -o "," \
-            -o '"published":"' -v "x:published" -o '",' \
-            -o '"link":"' -v "x:id" -o '"' \
-            -o "}," -n arxiv.xml >> temp.json
-          
-          # Remove trailing comma and close array
-          sed -i '$ s/,$/\n]/' temp.json
-          
-          # Create final JSON with proper escaping
-          jq -n --arg time "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
-             --rawfile papers temp.json \
-             '{lastUpdate: $time, papers: ($papers | fromjson)}' > data/arxiv-cache.json
-          
-          # Debug: Print the final JSON
-          echo "Final JSON content:"
-          cat data/arxiv-cache.json
+          # Fetch and store raw XML
+          curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > data/arxiv-cache.xml
+          # Add timestamp as XML comment
+          sed -i "1i<!-- Last updated: $(date -u +"%Y-%m-%dT%H:%M:%SZ") -->" data/arxiv-cache.xml
 
       - name: Commit and push changes
         env:
@@ -66,7 +35,7 @@ jobs:
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add data/arxiv-cache.json
+          git add data/arxiv-cache.xml
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
