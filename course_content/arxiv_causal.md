@@ -45,23 +45,17 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
 
 <script>
     async function fetchPapers() {
-        const query = 'search_query=all:causal+inference&submittedDate:[${yesterday}+TO+${today}]&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10';
-        const response = await fetch(`https://export.arxiv.org/api/query?${query}`);
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, 'text/xml');
-        return Array.from(xml.getElementsByTagName('entry')).map(entry => ({
-            title: entry.querySelector('title').textContent,
-            authors: Array.from(entry.getElementsByTagName('author'))
-                .map(author => author.textContent)
-                .join(', '),
-            abstract: entry.querySelector('summary').textContent,
-            published: new Date(entry.querySelector('published').textContent)
-                .toLocaleDateString(),
-            link: Array.from(entry.getElementsByTagName('link'))
-                .find(link => link.getAttribute('title') === 'pdf')
-                ?.getAttribute('href') || entry.querySelector('id').textContent
-        }));
+        try {
+            const response = await fetch('/data/arxiv-cache.json');
+            const data = await response.json();
+            const timestamp = new Date(data.lastUpdate).toLocaleString();
+            document.getElementById('update-time').textContent = timestamp;
+            return data.papers;
+        } catch (error) {
+            console.error('Error fetching cached papers:', error);
+            document.getElementById('loading').textContent = 'Error loading papers. Please try again later.';
+            return [];
+        }
     }
 
     function updateTable(papers) {
@@ -76,36 +70,15 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
             </tr>
         `).join('');
         document.getElementById('loading').style.display = 'none';
-        document.getElementById('update-time').textContent = 
-            new Date().toLocaleString();
     }
 
     async function updatePapers() {
-        try {
-            const papers = await fetchPapers();
-            updateTable(papers);
-        } catch (error) {
-            console.error('Error fetching papers:', error);
-            document.getElementById('loading').textContent = 
-                'Error loading papers. Please try again later.';
-        }
+        const papers = await fetchPapers();
+        updateTable(papers);
     }
 
-    // Update immediately when page loads
+    // Only fetch once when page loads
     updatePapers();
-
-    // Calculate time until next midnight
-    const now = new Date();
-    const tomorrow = new Date(now);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0);
-    const timeUntilMidnight = tomorrow - now;
-
-    // Set up daily updates at midnight
-    setTimeout(() => {
-        updatePapers();
-        setInterval(updatePapers, 24 * 60 * 60 * 1000);
-    }, timeUntilMidnight);
 </script>
 
 ## Features
