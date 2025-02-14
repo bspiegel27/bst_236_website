@@ -62,12 +62,14 @@ th:nth-child(5), td:nth-child(5) { width: 5%; }   /* Link */
             return Array.from(xml.getElementsByTagName('entry')).map(entry => ({
                 title: entry.querySelector('title').textContent,
                 authors: Array.from(entry.getElementsByTagName('author'))
-                    .map(author => author.querySelector('name').textContent)
+                    .map(author => author.textContent)
                     .join(', '),
                 abstract: entry.querySelector('summary').textContent,
                 published: new Date(entry.querySelector('published').textContent)
                     .toLocaleDateString(),
-                link: entry.querySelector('id').textContent
+                link: Array.from(entry.getElementsByTagName('link'))
+                    .find(link => link.getAttribute('title') === 'pdf')
+                    ?.getAttribute('href') || entry.querySelector('id').textContent
             }));
         } catch (error) {
             console.error('Error fetching papers:', error);
