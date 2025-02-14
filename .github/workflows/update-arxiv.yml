@@ -27,28 +27,37 @@ jobs:
       - name: Create data directory
         run: mkdir -p data
       
-      - name: Fetch ArXiv Data
-        id: fetch-data
+      - name: Fetch and Process ArXiv Data
         run: |
-          # Fetch XML from ArXiv
+          # Fetch ArXiv data and save to file
           curl -s "https://export.arxiv.org/api/query?search_query=all:causal+inference&sortBy=submittedDate&sortOrder=descending&start=0&max_results=10" > arxiv.xml
           
-          # Convert XML to JSON with proper escaping
-          papers=$(xmlstarlet sel -N atom="http://www.w3.org/2005/Atom" -t -m "//atom:entry" \
-            -v "concat('{\"title\":\"', translate(normalize-space(atom:title), '\"', '\\\\\\\\\\\\\\\\"'), '\",')" \
-            -v "concat('\"authors\":\"', string-join(atom:author/atom:name, ', '), '\",')" \
-            -v "concat('\"abstract\":\"', translate(normalize-space(atom:summary), '\"', '\\\\\\\\\\\\\\\\"'), '\",')" \
-            -v "concat('\"published\":\"', atom:published, '\",')" \
-            -v "concat('\"link\":\"', atom:id, '\"}')" \
-            -n arxiv.xml | sed ':a;N;$!ba;s/\n/,/g')
+          # Debug: Print the XML content
+          echo "Raw XML content:"
+          cat arxiv.xml
           
-          # Create final JSON
-          echo "{
-            \"lastUpdate\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",
-            \"papers\": [$papers]
-          }" | jq '.' > data/arxiv-cache.json
+          # Process XML and create temporary JSON entries
+          echo "[" > temp.json
+          xmlstarlet sel -N x="http://www.w3.org/2005/Atom" -t \
+            -m "//x:entry" \
+            -o "{" \
+            -o '"title":' -v "normalize-space(x:title)" -o "," \
+            -o '"authors":"' -m "x:author" -v "x:name" -i "position()!=last()" -o ", " -b -o '",' \
+            -o '"abstract":' -v "normalize-space(x:summary)" -o "," \
+            -o '"published":"' -v "x:published" -o '",' \
+            -o '"link":"' -v "x:id" -o '"' \
+            -o "}," -n arxiv.xml >> temp.json
           
-          # Verify content
+          # Remove trailing comma and close array
+          sed -i '$ s/,$/\n]/' temp.json
+          
+          # Create final JSON with proper escaping
+          jq -n --arg time "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+             --rawfile papers temp.json \
+             '{lastUpdate: $time, papers: ($papers | fromjson)}' > data/arxiv-cache.json
+          
+          # Debug: Print the final JSON
+          echo "Final JSON content:"
           cat data/arxiv-cache.json
 
       - name: Commit and push changes
