@@ -60,6 +60,7 @@ This is a simple implementation of the classic Pacman game using HTML, CSS, and 
         text-align: center;
     }
 </style>
+
 <script>
     const gameBoard = document.getElementById('game-board');
     const pacman = document.getElementById('pacman');
