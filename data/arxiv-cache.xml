@@ -1,493 +1,430 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-02-26T00:50:15Z -->
+<!-- Last updated: 2025-02-27T00:50:27Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-02-25T00:00:00-05:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">107647</opensearch:totalResults>
+  <updated>2025-02-26T00:00:00-05:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">107715</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2502.17435v1</id>
-    <updated>2025-02-24T18:59:54Z</updated>
-    <published>2025-02-24T18:59:54Z</published>
-    <title>GCC: Generative Color Constancy via Diffusing a Color Checker</title>
-    <summary>  Color constancy methods often struggle to generalize across different camera
-sensors due to varying spectral sensitivities. We present GCC, which leverages
-diffusion models to inpaint color checkers into images for illumination
-estimation. Our key innovations include (1) a single-step deterministic
-inference approach that inpaints color checkers reflecting scene illumination,
-(2) a Laplacian decomposition technique that preserves checker structure while
-allowing illumination-dependent color adaptation, and (3) a mask-based data
-augmentation strategy for handling imprecise color checker annotations. GCC
-demonstrates superior robustness in cross-camera scenarios, achieving
-state-of-the-art worst-25% error rates of 5.15{\deg} and 4.32{\deg} in
-bi-directional evaluations. These results highlight our method's stability and
-generalization capability across different camera characteristics without
-requiring sensor-specific training, making it a versatile solution for
-real-world applications.
+    <id>http://arxiv.org/abs/2502.18462v1</id>
+    <updated>2025-02-25T18:59:13Z</updated>
+    <published>2025-02-25T18:59:13Z</published>
+    <title>Scalable Equilibrium Sampling with Sequential Boltzmann Generators</title>
+    <summary>  Scalable sampling of molecular states in thermodynamic equilibrium is a
+long-standing challenge in statistical physics. Boltzmann generators tackle
+this problem by pairing powerful normalizing flows with importance sampling to
+obtain statistically independent samples under the target distribution. In this
+paper, we extend the Boltzmann generator framework and introduce Sequential
+Boltzmann generators (SBG) with two key improvements. The first is a highly
+efficient non-equivariant Transformer-based normalizing flow operating directly
+on all-atom Cartesian coordinates. In contrast to equivariant continuous flows
+of prior methods, we leverage exactly invertible non-equivariant architectures
+which are highly efficient both during sample generation and likelihood
+computation. As a result, this unlocks more sophisticated inference strategies
+beyond standard importance sampling. More precisely, as a second key
+improvement we perform inference-time scaling of flow samples using annealed
+Langevin dynamics which transports samples toward the target distribution
+leading to lower variance (annealed) importance weights which enable higher
+fidelity resampling with sequential Monte Carlo. SBG achieves state-of-the-art
+performance w.r.t. all metrics on molecular systems, demonstrating the first
+equilibrium sampling in Cartesian coordinates of tri, tetra, and hexapeptides
+that were so far intractable for prior Boltzmann generators.
 </summary>
     <author>
-      <name>Chen-Wei Chang</name>
+      <name>Charlie B. Tan</name>
     </author>
     <author>
-      <name>Cheng-De Fan</name>
+      <name>Avishek Joey Bose</name>
     </author>
     <author>
-      <name>Chia-Che Chang</name>
+      <name>Chen Lin</name>
     </author>
     <author>
-      <name>Yi-Chen Lo</name>
+      <name>Leon Klein</name>
     </author>
     <author>
-      <name>Yu-Chee Tseng</name>
+      <name>Michael M. Bronstein</name>
     </author>
     <author>
-      <name>Jiun-Long Huang</name>
+      <name>Alexander Tong</name>
     </author>
-    <author>
-      <name>Yu-Lun Liu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://chenwei891213.github.io/GCC/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2502.17435v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17435v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2502.17422v1</id>
-    <updated>2025-02-24T18:54:40Z</updated>
-    <published>2025-02-24T18:54:40Z</published>
-    <title>MLLMs Know Where to Look: Training-free Perception of Small Visual
-  Details with Multimodal LLMs</title>
-    <summary>  Multimodal Large Language Models (MLLMs) have experienced rapid progress in
-visual recognition tasks in recent years. Given their potential integration
-into many critical applications, it is important to understand the limitations
-of their visual perception. In this work, we study whether MLLMs can perceive
-small visual details as effectively as large ones when answering questions
-about images. We observe that their performance is very sensitive to the size
-of the visual subject of the question, and further show that this effect is in
-fact causal by conducting an intervention study. Next, we study the attention
-patterns of MLLMs when answering visual questions, and intriguingly find that
-they consistently know where to look, even when they provide the wrong answer.
-Based on these findings, we then propose training-free visual intervention
-methods that leverage the internal knowledge of any MLLM itself, in the form of
-attention and gradient maps, to enhance its perception of small visual details.
-We evaluate our proposed methods on two widely-used MLLMs and seven visual
-question answering benchmarks and show that they can significantly improve
-MLLMs' accuracy without requiring any training. Our results elucidate the risk
-of applying MLLMs to visual recognition tasks concerning small details and
-indicate that visual intervention using the model's internal state is a
-promising direction to mitigate this risk.
-</summary>
-    <author>
-      <name>Jiarui Zhang</name>
-    </author>
-    <author>
-      <name>Mahyar Khayatkhoei</name>
-    </author>
-    <author>
-      <name>Prateek Chhikara</name>
-    </author>
-    <author>
-      <name>Filip Ilievski</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Published as a conference paper at ICLR 2025. Code at:
-  https://github.com/saccharomycetes/mllms_know</arxiv:comment>
-    <link href="http://arxiv.org/abs/2502.17422v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17422v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2502.17421v1</id>
-    <updated>2025-02-24T18:53:31Z</updated>
-    <published>2025-02-24T18:53:31Z</published>
-    <title>LongSpec: Long-Context Speculative Decoding with Efficient Drafting and
-  Verification</title>
-    <summary>  Speculative decoding has become a promising technique to mitigate the high
-inference latency of autoregressive decoding in Large Language Models (LLMs).
-Despite its promise, the effective application of speculative decoding in LLMs
-still confronts three key challenges: the increasing memory demands of the
-draft model, the distribution shift between the short-training corpora and
-long-context inference, and inefficiencies in attention implementation. In this
-work, we enhance the performance of speculative decoding in long-context
-settings by addressing these challenges. First, we propose a memory-efficient
-draft model with a constant-sized Key-Value (KV) cache. Second, we introduce
-novel position indices for short-training data, enabling seamless adaptation
-from short-context training to long-context inference. Finally, we present an
-innovative attention aggregation method that combines fast implementations for
-prefix computation with standard attention for tree mask handling, effectively
-resolving the latency and memory inefficiencies of tree decoding. Our approach
-achieves strong results on various long-context tasks, including
-repository-level code completion, long-context summarization, and o1-like long
-reasoning tasks, demonstrating significant improvements in latency reduction.
-The code is available at https://github.com/sail-sg/LongSpec.
-</summary>
-    <author>
-      <name>Penghui Yang</name>
-    </author>
-    <author>
-      <name>Cunxiao Du</name>
-    </author>
-    <author>
-      <name>Fengzhuo Zhang</name>
-    </author>
-    <author>
-      <name>Haonan Wang</name>
-    </author>
-    <author>
-      <name>Tianyu Pang</name>
-    </author>
-    <author>
-      <name>Chao Du</name>
-    </author>
-    <author>
-      <name>Bo An</name>
-    </author>
-    <link href="http://arxiv.org/abs/2502.17421v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17421v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
+    <link href="http://arxiv.org/abs/2502.18462v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18462v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2502.17418v1</id>
-    <updated>2025-02-24T18:50:52Z</updated>
-    <published>2025-02-24T18:50:52Z</published>
-    <title>A JWST Panchromatic Thermal Emission Spectrum of the Warm Neptune
-  Archetype GJ 436b</title>
-    <summary>  GJ 436b is the archetype warm Neptune exoplanet. The planet's thermal
-emission spectrum was previously observed via intensive secondary eclipse
-campaigns with Spitzer. The atmosphere has long been interpreted to be
-extremely metal-rich, out of chemical equilibrium, and potentially tidally
-heated. We present the first panchromatic emission spectrum of GJ 436b observed
-with JWST's NIRCAM (F322W2 and F444W) and MIRI (LRS) instruments between 2.4
-and 11.9 $\mu$m. Surprisingly, the JWST spectrum appears significantly fainter
-around 3.6 $\mu$m than that implied by Spitzer photometry. The molecular
-absorption features in the spectrum are relatively weak, and we only find
-tentative evidence of CO$_2$ absorption at 2$\sigma$ significance. Under the
-assumption of a day-side blackbody, we find $T_{\rm day}$=662.8$\pm$5.0 K,
-which is similar to the zero Bond albedo equilibrium temperature. We use it to
-obtain a 3$\sigma$ upper limit on the Bond albedo of $A_B{\le}$0.66. To
-understand the spectrum we employ 1D radiative-convective models but find that
-atmospheric constraints depend strongly on model assumptions. If thermochemical
-equilibrium is assumed, we find a cloudy metal-enriched atmosphere (metallicity
-$\ge$ 300$\times$solar). We employ 1D photochemical modeling to show that the
-observed spectrum is also consistent with a cloud-free, relatively
-lower-metallicity atmosphere (metallicity $\ge$ 80$\times$solar) with a cold
-internal temperature ($T_{\rm int}$$\sim$60 K). These are much lower
-metallicities and internal temperatures than inferences from Spitzer
-photometry. The low $T_{\rm day}$ and non-detection of transmission features at
-high spectral resolution does suggest a role for cloud opacity, but this is not
-definitive.
-</summary>
-    <author>
-      <name>Sagnick Mukherjee</name>
-    </author>
-    <author>
-      <name>Everett Schlawin</name>
-    </author>
-    <author>
-      <name>Taylor J. Bell</name>
-    </author>
-    <author>
-      <name>Jonathan J. Fortney</name>
-    </author>
-    <author>
-      <name>Thomas G. Beatty</name>
-    </author>
-    <author>
-      <name>Thomas P. Greene</name>
-    </author>
-    <author>
-      <name>Kazumasa Ohno</name>
-    </author>
-    <author>
-      <name>Matthew M. Murphy</name>
-    </author>
-    <author>
-      <name>Vivien Parmentier</name>
-    </author>
-    <author>
-      <name>Michael R Line</name>
-    </author>
-    <author>
-      <name>Luis Welbanks</name>
-    </author>
-    <author>
-      <name>Lindsey S. Wiser</name>
-    </author>
-    <author>
-      <name>Marcia J. Rieke</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in ApJL, 27 Pages, 17 Figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2502.17418v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17418v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2502.17416v1</id>
-    <updated>2025-02-24T18:49:05Z</updated>
-    <published>2025-02-24T18:49:05Z</published>
-    <title>Reasoning with Latent Thoughts: On the Power of Looped Transformers</title>
-    <summary>  Large language models have shown remarkable reasoning abilities and scaling
-laws suggest that large parameter count, especially along the depth axis, is
-the primary driver. In this work, we make a stronger claim -- many reasoning
-problems require a large depth but not necessarily many parameters. This
-unlocks a novel application of looped models for reasoning. Firstly, we show
-that for many synthetic reasoning problems like addition, $p$-hop induction,
-and math problems, a $k$-layer transformer looped $L$ times nearly matches the
-performance of a $kL$-layer non-looped model, and is significantly better than
-a $k$-layer model. This is further corroborated by theoretical results showing
-that many such reasoning problems can be solved via iterative algorithms, and
-thus, can be solved effectively using looped models with nearly optimal depth.
-Perhaps surprisingly, these benefits also translate to practical settings of
-language modeling -- on many downstream reasoning tasks, a language model with
-$k$-layers looped $L$ times can be competitive to, if not better than, a
-$kL$-layer language model. In fact, our empirical analysis reveals an
-intriguing phenomenon: looped and non-looped models exhibit scaling behavior
-that depends on their effective depth, akin to the inference-time scaling of
-chain-of-thought (CoT) reasoning. We further elucidate the connection to CoT
-reasoning by proving that looped models implicitly generate latent thoughts and
-can simulate $T$ steps of CoT with $T$ loops. Inspired by these findings, we
-also present an interesting dichotomy between reasoning and memorization, and
-design a looping-based regularization that is effective on both fronts.
-</summary>
-    <author>
-      <name>Nikunj Saunshi</name>
-    </author>
-    <author>
-      <name>Nishanth Dikkala</name>
-    </author>
-    <author>
-      <name>Zhiyuan Li</name>
-    </author>
-    <author>
-      <name>Sanjiv Kumar</name>
-    </author>
-    <author>
-      <name>Sashank J. Reddi</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICLR 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2502.17416v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17416v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2502.17407v1</id>
-    <updated>2025-02-24T18:36:15Z</updated>
-    <published>2025-02-24T18:36:15Z</published>
-    <title>Linguistic Generalizability of Test-Time Scaling in Mathematical
-  Reasoning</title>
-    <summary>  Scaling pre-training compute has proven effective for achieving
-mulitlinguality, but does the same hold for test-time scaling? In this work, we
-introduce MCLM, a multilingual math benchmark featuring competition-level
-problems in 55 languages. We test three test-time scaling methods-Outcome
-Reward Modeling (ORM), Process Reward Modeling (ORM), and Budget Forcing
-(BF)-on both Qwen2.5-1.5B Math and MR1-1.5B, a multilingual LLM we trained for
-extended reasoning. Our experiments show that using Qwen2.5-1.5B Math with ORM
-achieves a score of 35.8 on MCLM, while BF on MR1-1.5B attains 35.2. Although
-"thinking LLMs" have recently garnered significant attention, we find that
-their performance is comparable to traditional scaling methods like best-of-N
-once constrained to similar levels of inference FLOPs. Moreover, while BF
-yields a 20-point improvement on English AIME, it provides only a 1.94-point
-average gain across other languages-a pattern consistent across the other
-test-time scaling methods we studied-higlighting that test-time scaling may not
-generalize as effectively to multilingual tasks. To foster further research, we
-release MCLM, MR1-1.5B, and evaluation results.
+    <id>http://arxiv.org/abs/2502.18460v1</id>
+    <updated>2025-02-25T18:59:07Z</updated>
+    <published>2025-02-25T18:59:07Z</published>
+    <title>DRAMA: Diverse Augmentation from Large Language Models to Smaller Dense
+  Retrievers</title>
+    <summary>  Large language models (LLMs) have demonstrated strong effectiveness and
+robustness while fine-tuned as dense retrievers. However, their large parameter
+size brings significant inference time computational challenges, including high
+encoding costs for large-scale corpora and increased query latency, limiting
+their practical deployment. While smaller retrievers offer better efficiency,
+they often fail to generalize effectively with limited supervised fine-tuning
+data. In this work, we introduce DRAMA, a training framework that leverages
+LLMs to train smaller generalizable dense retrievers. In particular, we adopt
+pruned LLMs as the backbone and train on diverse LLM-augmented data in a
+single-stage contrastive learning setup. Experiments show that DRAMA offers
+better multilingual and long-context capabilities than traditional
+encoder-based retrievers, and achieves strong performance across multiple tasks
+and languages. These highlight the potential of connecting the training of
+smaller retrievers with the growing advancements in LLMs, bridging the gap
+between efficiency and generalization.
 </summary>
     <author>
-      <name>Guijin Son</name>
+      <name>Xueguang Ma</name>
     </author>
     <author>
-      <name>Jiwoo Hong</name>
+      <name>Xi Victoria Lin</name>
     </author>
     <author>
-      <name>Hyunwoo Ko</name>
+      <name>Barlas Oguz</name>
     </author>
     <author>
-      <name>James Thorne</name>
+      <name>Jimmy Lin</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">work in progress</arxiv:comment>
-    <link href="http://arxiv.org/abs/2502.17407v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17407v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Wen-tau Yih</name>
+    </author>
+    <author>
+      <name>Xilun Chen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2502.18460v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18460v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2502.17361v1</id>
-    <updated>2025-02-24T17:38:42Z</updated>
-    <published>2025-02-24T17:38:42Z</published>
-    <title>A Closer Look at TabPFN v2: Strength, Limitation, and Extension</title>
-    <summary>  Tabular datasets are inherently heterogeneous, posing significant challenges
-for developing pre-trained foundation models. The recently introduced
-transformer-based Tabular Prior-data Fitted Network v2 (TabPFN v2) achieves
-unprecedented in-context learning accuracy across multiple tabular datasets,
-marking a pivotal advancement in tabular foundation models. In this paper, we
-comprehensively evaluate TabPFN v2 on over 300 datasets, confirming its
-exceptional generalization capabilities on small- to medium-scale tasks. Our
-analysis identifies randomized feature tokens as a key factor behind TabPFN
-v2's success, as they unify heterogeneous datasets into a fixed-dimensional
-representation, enabling more effective training and inference. To further
-understand TabPFN v2's predictions, we propose a leave-one-fold-out approach,
-transforming TabPFN v2 into a feature extractor and revealing its capability to
-simplify data distributions and boost accuracy. Lastly, to address TabPFN v2's
-limitations in high-dimensional, large-scale, and many-category tasks, we
-introduce a divide-and-conquer mechanism inspired by Chain-of-Thought
-prompting, enabling scalable inference. By uncovering the mechanisms behind
-TabPFN v2's success and introducing strategies to expand its applicability,
-this study provides key insights into the future of tabular foundation models.
+    <id>http://arxiv.org/abs/2502.18447v1</id>
+    <updated>2025-02-25T18:42:05Z</updated>
+    <published>2025-02-25T18:42:05Z</published>
+    <title>Supervised Reward Inference</title>
+    <summary>  Existing approaches to reward inference from behavior typically assume that
+humans provide demonstrations according to specific models of behavior.
+However, humans often indicate their goals through a wide range of behaviors,
+from actions that are suboptimal due to poor planning or execution to behaviors
+which are intended to communicate goals rather than achieve them. We propose
+that supervised learning offers a unified framework to infer reward functions
+from any class of behavior, and show that such an approach is asymptotically
+Bayes-optimal under mild assumptions. Experiments on simulated robotic
+manipulation tasks show that our method can efficiently infer rewards from a
+wide variety of arbitrarily suboptimal demonstrations.
 </summary>
     <author>
-      <name>Han-Jia Ye</name>
+      <name>Will Schwarzer</name>
     </author>
     <author>
-      <name>Si-Yang Liu</name>
+      <name>Jordan Schneider</name>
     </author>
     <author>
-      <name>Wei-Lun Chao</name>
+      <name>Philip S. Thomas</name>
     </author>
-    <link href="http://arxiv.org/abs/2502.17361v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17361v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Scott Niekum</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2502.18447v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18447v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2502.17358v1</id>
-    <updated>2025-02-24T17:36:49Z</updated>
-    <published>2025-02-24T17:36:49Z</published>
-    <title>DIS-CO: Discovering Copyrighted Content in VLMs Training Data</title>
-    <summary>  How can we verify whether copyrighted content was used to train a large
-vision-language model (VLM) without direct access to its training data?
-Motivated by the hypothesis that a VLM is able to recognize images from its
-training corpus, we propose DIS-CO, a novel approach to infer the inclusion of
-copyrighted content during the model's development. By repeatedly querying a
-VLM with specific frames from targeted copyrighted material, DIS-CO extracts
-the content's identity through free-form text completions. To assess its
-effectiveness, we introduce MovieTection, a benchmark comprising 14,000 frames
-paired with detailed captions, drawn from films released both before and after
-a model's training cutoff. Our results show that DIS-CO significantly improves
-detection performance, nearly doubling the average AUC of the best prior method
-on models with logits available. Our findings also highlight a broader concern:
-all tested models appear to have been exposed to some extent to copyrighted
-content. Our code and data are available at
-https://github.com/avduarte333/DIS-CO
+    <id>http://arxiv.org/abs/2502.18443v1</id>
+    <updated>2025-02-25T18:38:38Z</updated>
+    <published>2025-02-25T18:38:38Z</published>
+    <title>olmOCR: Unlocking Trillions of Tokens in PDFs with Vision Language
+  Models</title>
+    <summary>  PDF documents have the potential to provide trillions of novel, high-quality
+tokens for training language models. However, these documents come in a
+diversity of types with differing formats and visual layouts that pose a
+challenge when attempting to extract and faithfully represent the underlying
+content for language model use. We present olmOCR, an open-source Python
+toolkit for processing PDFs into clean, linearized plain text in natural
+reading order while preserving structured content like sections, tables, lists,
+equations, and more. Our toolkit runs a fine-tuned 7B vision language model
+(VLM) trained on a sample of 260,000 pages from over 100,000 crawled PDFs with
+diverse properties, including graphics, handwritten text and poor quality
+scans. olmOCR is optimized for large-scale batch processing, able to scale
+flexibly to different hardware setups and convert a million PDF pages for only
+$190 USD. We release all components of olmOCR including VLM weights, data and
+training code, as well as inference code built on serving frameworks including
+vLLM and SGLang.
 </summary>
     <author>
-      <name>André V. Duarte</name>
+      <name>Jake Poznanski</name>
     </author>
     <author>
-      <name>Xuandong Zhao</name>
+      <name>Jon Borchardt</name>
     </author>
     <author>
-      <name>Arlindo L. Oliveira</name>
+      <name>Jason Dunkelberger</name>
     </author>
     <author>
-      <name>Lei Li</name>
+      <name>Regan Huff</name>
     </author>
-    <link href="http://arxiv.org/abs/2502.17358v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17358v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Daniel Lin</name>
+    </author>
+    <author>
+      <name>Aman Rangapur</name>
+    </author>
+    <author>
+      <name>Christopher Wilhelm</name>
+    </author>
+    <author>
+      <name>Kyle Lo</name>
+    </author>
+    <author>
+      <name>Luca Soldaini</name>
+    </author>
+    <link href="http://arxiv.org/abs/2502.18443v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18443v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2502.17352v1</id>
-    <updated>2025-02-24T17:29:10Z</updated>
-    <published>2025-02-24T17:29:10Z</published>
-    <title>Leveraging Procedural Knowledge and Task Hierarchies for Efficient
-  Instructional Video Pre-training</title>
-    <summary>  Instructional videos provide a convenient modality to learn new tasks (ex.
-cooking a recipe, or assembling furniture). A viewer will want to find a
-corresponding video that reflects both the overall task they are interested in
-as well as contains the relevant steps they need to carry out the task. To
-perform this, an instructional video model should be capable of inferring both
-the tasks and the steps that occur in an input video. Doing this efficiently
-and in a generalizable fashion is key when compute or relevant video topics
-used to train this model are limited. To address these requirements we
-explicitly mine task hierarchies and the procedural steps associated with
-instructional videos. We use this prior knowledge to pre-train our model,
-$\texttt{Pivot}$, for step and task prediction. During pre-training, we also
-provide video augmentation and early stopping strategies to optimally identify
-which model to use for downstream tasks. We test this pre-trained model on task
-recognition, step recognition, and step prediction tasks on two downstream
-datasets. When pre-training data and compute are limited, we outperform
-previous baselines along these tasks. Therefore, leveraging prior task and step
-structures enables efficient training of $\texttt{Pivot}$ for instructional
-video recommendation.
+    <id>http://arxiv.org/abs/2502.18438v1</id>
+    <updated>2025-02-25T18:31:55Z</updated>
+    <published>2025-02-25T18:31:55Z</published>
+    <title>ToMCAT: Theory-of-Mind for Cooperative Agents in Teams via Multiagent
+  Diffusion Policies</title>
+    <summary>  In this paper we present ToMCAT (Theory-of-Mind for Cooperative Agents in
+Teams), a new framework for generating ToM-conditioned trajectories. It
+combines a meta-learning mechanism, that performs ToM reasoning over teammates'
+underlying goals and future behavior, with a multiagent denoising-diffusion
+model, that generates plans for an agent and its teammates conditioned on both
+the agent's goals and its teammates' characteristics, as computed via ToM. We
+implemented an online planning system that dynamically samples new trajectories
+(replans) from the diffusion model whenever it detects a divergence between a
+previously generated plan and the current state of the world. We conducted
+several experiments using ToMCAT in a simulated cooking domain. Our results
+highlight the importance of the dynamic replanning mechanism in reducing the
+usage of resources without sacrificing team performance. We also show that
+recent observations about the world and teammates' behavior collected by an
+agent over the course of an episode combined with ToM inferences are crucial to
+generate team-aware plans for dynamic adaptation to teammates, especially when
+no prior information is provided about them.
 </summary>
     <author>
-      <name>Karan Samel</name>
+      <name>Pedro Sequeira</name>
     </author>
     <author>
-      <name>Nitish Sontakke</name>
+      <name>Vidyasagar Sadhu</name>
     </author>
     <author>
-      <name>Irfan Essa</name>
+      <name>Melinda Gervasio</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 3 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2502.17352v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17352v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2502.17349v1</id>
-    <updated>2025-02-24T17:23:40Z</updated>
-    <published>2025-02-24T17:23:40Z</published>
-    <title>HybridLinker: Topology-Guided Posterior Sampling for Enhanced Diversity
-  and Validity in 3D Molecular Linker Generation</title>
-    <summary>  Linker generation is critical in drug discovery applications such as lead
-optimization and PROTAC design, where molecular fragments are assembled into
-diverse drug candidates. Existing methods fall into PC-Free and PC-Aware
-categories based on their use of 3D point clouds (PC). PC-Free models
-prioritize diversity but suffer from lower validity due to overlooking PC
-constraints, while PC-Aware models ensure higher validity but restrict
-diversity by enforcing strict PC constraints. To overcome these trade-offs
-without additional training, we propose HybridLinker, a framework that enhances
-PC-Aware inference by providing diverse bonding topologies from a pretrained
-PC-Free model as guidance. At its core, we propose LinkerDPS, the first
-diffusion posterior sampling (DPS) method operating across PC-Free and PC-Aware
-spaces, bridging molecular topology with 3D point clouds via an energy-inspired
-function. By transferring the diverse sampling distribution of PC-Free models
-into the PC-Aware distribution, HybridLinker significantly and consistently
-surpasses baselines, improving both validity and diversity in foundational
-molecular design and applied property optimization tasks, establishing a new
-DPS framework in the molecular and graph domains beyond imaging.
-</summary>
-    <author>
-      <name>Minyeong Hwang</name>
-    </author>
-    <author>
-      <name>Ziseok Lee</name>
-    </author>
-    <author>
-      <name>Gwangsoo Kim</name>
-    </author>
-    <author>
-      <name>Kyungsu Kim</name>
-    </author>
-    <author>
-      <name>Eunho Yang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2502.17349v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2502.17349v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2502.18438v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18438v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18412v1</id>
+    <updated>2025-02-25T18:05:46Z</updated>
+    <published>2025-02-25T18:05:46Z</published>
+    <title>Comparative Analysis of MDL-VAE vs. Standard VAE on 202 Years of
+  Gynecological Data</title>
+    <summary>  This study presents a comparative evaluation of a Variational Autoencoder
+(VAE) enhanced with Minimum Description Length (MDL) regularization against a
+Standard Autoencoder for reconstructing high-dimensional gynecological data.
+The MDL-VAE exhibits significantly lower reconstruction errors (MSE, MAE, RMSE)
+and more structured latent representations, driven by effective KL divergence
+regularization. Statistical analyses confirm these performance improvements are
+significant. Furthermore, the MDL-VAE shows consistent training and validation
+losses and achieves efficient inference times, underscoring its robustness and
+practical viability. Our findings suggest that incorporating MDL principles
+into VAE architectures can substantially improve data reconstruction and
+generalization, making it a promising approach for advanced applications in
+healthcare data modeling and analysis.
+</summary>
+    <author>
+      <name>Paula Santos</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.5121/csit.2025.150403</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.5121/csit.2025.150403" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pagas, 5 figures, 9th International Conference on Signal, Image
+  Processing (SIPO 2025), Vancouver CA</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Computer Science &amp; Information Technology - 2025 pp. 21-32, 2025.
+  CS &amp; IT - CSCP 2025</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2502.18412v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18412v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18409v1</id>
+    <updated>2025-02-25T17:59:18Z</updated>
+    <published>2025-02-25T17:59:18Z</published>
+    <title>Chemical abundance ratios for the bulge of M31</title>
+    <summary>  We present abundance ratio estimates of individual elements, namely C, N, Na,
+and the so-called alpha elements, Mg, O, Si, Ca, and Ti, for the bulge of M31.
+The analysis is based on long-slit, high-quality spectroscopy of the bulge,
+taken with the OSIRIS spectrograph at the Gran Telescopio CANARIAS (GTC).
+Abundance ratios, [X/Fe]s, are inferred by comparing radially binned spectra of
+M31 with different state-of-the-art stellar population models, averaging out
+results from various methods, namely full-spectral, full-index, and
+line-strength fitting, respectively. For the bulk of the bulge, we find that O,
+N, and Na are significantly enhanced compared to Fe, with abundances of about
+0.3dex, followed by C, Mg, and Si, with [X/Fe] about 0.2dex, and lastly, Ti and
+Ca, mostly tracking Fe ([X/Fe]&lt;0.1dex), within the error bars. Performing the
+same analysis on SDSS stacked spectra of early-type galaxies with different
+velocity dispersion, we find that the abundance pattern of the M31 bulge is
+very similar to that of most massive galaxies, supporting a scenario where most
+of the bulge formed in a fast and intense episode of star-formation.
+</summary>
+    <author>
+      <name>F. La Barbera</name>
+    </author>
+    <author>
+      <name>A. Vazdekis</name>
+    </author>
+    <author>
+      <name>A. Pasquali</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">4 pages, 1 figure, Proceedings of the IAU Symposium No. 395, Stellar
+  populations in the Milky Way and beyond</arxiv:comment>
+    <link href="http://arxiv.org/abs/2502.18409v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18409v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18406v1</id>
+    <updated>2025-02-25T17:57:55Z</updated>
+    <published>2025-02-25T17:57:55Z</published>
+    <title>The Gradient of Algebraic Model Counting</title>
+    <summary>  Algebraic model counting unifies many inference tasks on logic formulas by
+exploiting semirings. Rather than focusing on inference, we consider learning,
+especially in statistical-relational and neurosymbolic AI, which combine
+logical, probabilistic and neural representations. Concretely, we show that the
+very same semiring perspective of algebraic model counting also applies to
+learning. This allows us to unify various learning algorithms by generalizing
+gradients and backpropagation to different semirings. Furthermore, we show how
+cancellation and ordering properties of a semiring can be exploited for more
+memory-efficient backpropagation. This allows us to obtain some interesting
+variations of state-of-the-art gradient-based optimisation methods for
+probabilistic logical models. We also discuss why algebraic model counting on
+tractable circuits does not lead to more efficient second-order optimization.
+Empirically, our algebraic backpropagation exhibits considerable speed-ups as
+compared to existing approaches.
+</summary>
+    <author>
+      <name>Jaron Maene</name>
+    </author>
+    <author>
+      <name>Luc De Raedt</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Published at AAAI 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2502.18406v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18406v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18405v1</id>
+    <updated>2025-02-25T17:56:25Z</updated>
+    <published>2025-02-25T17:56:25Z</published>
+    <title>Enhancing DNA Foundation Models to Address Masking Inefficiencies</title>
+    <summary>  Masked language modelling (MLM) as a pretraining objective has been widely
+adopted in genomic sequence modelling. While pretrained models can successfully
+serve as encoders for various downstream tasks, the distribution shift between
+pretraining and inference detrimentally impacts performance, as the pretraining
+task is to map [MASK] tokens to predictions, yet the [MASK] is absent during
+downstream applications. This means the encoder does not prioritize its
+encodings of non-[MASK] tokens, and expends parameters and compute on work only
+relevant to the MLM task, despite this being irrelevant at deployment time. In
+this work, we propose a modified encoder-decoder architecture based on the
+masked autoencoder framework, designed to address this inefficiency within a
+BERT-based transformer. We empirically show that the resulting mismatch is
+particularly detrimental in genomic pipelines where models are often used for
+feature extraction without fine-tuning. We evaluate our approach on the
+BIOSCAN-5M dataset, comprising over 2 million unique DNA barcodes. We achieve
+substantial performance gains in both closed-world and open-world
+classification tasks when compared against causal models and bidirectional
+architectures pretrained with MLM tasks.
+</summary>
+    <author>
+      <name>Monireh Safari</name>
+    </author>
+    <author>
+      <name>Pablo Millan Arias</name>
+    </author>
+    <author>
+      <name>Scott C. Lowe</name>
+    </author>
+    <author>
+      <name>Lila Kari</name>
+    </author>
+    <author>
+      <name>Angel X. Chang</name>
+    </author>
+    <author>
+      <name>Graham W. Taylor</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 5 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2502.18405v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18405v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18403v1</id>
+    <updated>2025-02-25T17:52:01Z</updated>
+    <published>2025-02-25T17:52:01Z</published>
+    <title>Kitsune: Enabling Dataflow Execution on GPUs</title>
+    <summary>  State of art DL models are growing in size and complexity, with many modern
+models also increasing in heterogeneity of behavior. GPUs are still the
+dominant platform for DL applications, relying on a bulk-synchronous execution
+model which has many drawbacks and is ill-suited for the graph structure of DL
+applications. Many industry and academic works attempt to overcome these by
+employing vertical fusion but this approach still fails to realize three
+untapped opportunities: (1) the fact that many resources on the GPU are idle
+while only one operator executes due to temporal multiplexing of the SM; (2)
+lower energy from more intelligent on-chip data-movement which lends to higher
+performance in a power-provisioned environment. (3) inability to exploit hidden
+or reduction dimensions as a source of parallelism to ease pressure on batch
+size. This paper explores relatively uncharted territory, answering the
+following key question: Can modest adjustments to the current GPU architecture
+enable efficient dataflow execution, thereby circumventing the constraints of
+vertical fusion without necessitating a clean-slate architecture design. We
+develop Kitsune -- a set of primitives that enable dataflow execution on GPUs
+and an end-to-end compiler based on PyTorch Dynamo. Across 5 challenge
+applications, Kitsune can provide 1.3$\times$-2.3$\times$ and
+1.1$\times$-2.4$\times$ performance improvement as well as 41%-98% and 16%-42%
+off-chip traffic reduction for inference and training, respectively.
+</summary>
+    <author>
+      <name>Michael Davies</name>
+    </author>
+    <author>
+      <name>Neal Crago</name>
+    </author>
+    <author>
+      <name>Karthikeyan Sankaralingam</name>
+    </author>
+    <author>
+      <name>Stephen W. Keckler</name>
+    </author>
+    <link href="http://arxiv.org/abs/2502.18403v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2502.18403v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
