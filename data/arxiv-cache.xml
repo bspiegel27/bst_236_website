@@ -1,1209 +1,679 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-03-20T00:51:25Z -->
+<!-- Last updated: 2025-03-21T00:52:35Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-03-19T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">109073</opensearch:totalResults>
+  <updated>2025-03-20T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">109159</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2503.14492v1</id>
-    <updated>2025-03-18T17:57:54Z</updated>
-    <published>2025-03-18T17:57:54Z</published>
-    <title>Cosmos-Transfer1: Conditional World Generation with Adaptive Multimodal
-  Control</title>
-    <summary>  We introduce Cosmos-Transfer, a conditional world generation model that can
-generate world simulations based on multiple spatial control inputs of various
-modalities such as segmentation, depth, and edge. In the design, the spatial
-conditional scheme is adaptive and customizable. It allows weighting different
-conditional inputs differently at different spatial locations. This enables
-highly controllable world generation and finds use in various world-to-world
-transfer use cases, including Sim2Real. We conduct extensive evaluations to
-analyze the proposed model and demonstrate its applications for Physical AI,
-including robotics Sim2Real and autonomous vehicle data enrichment. We further
-demonstrate an inference scaling strategy to achieve real-time world generation
-with an NVIDIA GB200 NVL72 rack. To help accelerate research development in the
-field, we open-source our models and code at
-https://github.com/nvidia-cosmos/cosmos-transfer1.
+    <id>http://arxiv.org/abs/2503.15463v1</id>
+    <updated>2025-03-19T17:41:46Z</updated>
+    <published>2025-03-19T17:41:46Z</published>
+    <title>From 1,000,000 Users to Every User: Scaling Up Personalized Preference
+  for User-level Alignment</title>
+    <summary>  Large language models (LLMs) have traditionally been aligned through
+one-size-fits-all approaches that assume uniform human preferences,
+fundamentally overlooking the diversity in user values and needs. This paper
+introduces a comprehensive framework for scalable personalized alignment of
+LLMs. We establish a systematic preference space characterizing psychological
+and behavioral dimensions, alongside diverse persona representations for robust
+preference inference in real-world scenarios. Building upon this foundation, we
+introduce \textsc{AlignX}, a large-scale dataset of over 1.3 million
+personalized preference examples, and develop two complementary alignment
+approaches: \textit{in-context alignment} directly conditioning on persona
+representations and \textit{preference-bridged alignment} modeling intermediate
+preference distributions. Extensive experiments demonstrate substantial
+improvements over existing methods, with an average 17.06\% accuracy gain
+across four benchmarks while exhibiting a strong adaptation capability to novel
+preferences, robustness to limited user data, and precise preference
+controllability. These results validate our framework's effectiveness,
+advancing toward truly user-adaptive AI systems.
 </summary>
     <author>
-      <name> NVIDIA</name>
+      <name>Jia-Nan Li</name>
     </author>
     <author>
-      <name> :</name>
+      <name>Jian Guan</name>
     </author>
     <author>
-      <name>Hassan Abu Alhaija</name>
+      <name>Songhao Wu</name>
     </author>
     <author>
-      <name>Jose Alvarez</name>
+      <name>Wei Wu</name>
     </author>
     <author>
-      <name>Maciej Bala</name>
+      <name>Rui Yan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.15463v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15463v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.15457v1</id>
+    <updated>2025-03-19T17:36:54Z</updated>
+    <published>2025-03-19T17:36:54Z</published>
+    <title>Di$\mathtt{[M]}$O: Distilling Masked Diffusion Models into One-step
+  Generator</title>
+    <summary>  Masked Diffusion Models (MDMs) have emerged as a powerful generative modeling
+technique. Despite their remarkable results, they typically suffer from slow
+inference with several steps. In this paper, we propose Di$\mathtt{[M]}$O, a
+novel approach that distills masked diffusion models into a one-step generator.
+Di$\mathtt{[M]}$O addresses two key challenges: (1) the intractability of using
+intermediate-step information for one-step generation, which we solve through
+token-level distribution matching that optimizes model output logits by an
+'on-policy framework' with the help of an auxiliary model; and (2) the lack of
+entropy in the initial distribution, which we address through a token
+initialization strategy that injects randomness while maintaining similarity to
+teacher training distribution. We show Di$\mathtt{[M]}$O's effectiveness on
+both class-conditional and text-conditional image generation, impressively
+achieving performance competitive to multi-step teacher outputs while
+drastically reducing inference time. To our knowledge, we are the first to
+successfully achieve one-step distillation of masked diffusion models and the
+first to apply discrete distillation to text-to-image generation, opening new
+paths for efficient generative modeling.
+</summary>
+    <author>
+      <name>Yuanzhi Zhu</name>
     </author>
     <author>
-      <name>Tiffany Cai</name>
+      <name>Xi Wang</name>
     </author>
     <author>
-      <name>Tianshi Cao</name>
+      <name>Stéphane Lathuilière</name>
     </author>
     <author>
-      <name>Liz Cha</name>
+      <name>Vicky Kalogeiton</name>
     </author>
-    <author>
-      <name>Joshua Chen</name>
-    </author>
-    <author>
-      <name>Mike Chen</name>
-    </author>
-    <author>
-      <name>Francesco Ferroni</name>
-    </author>
-    <author>
-      <name>Sanja Fidler</name>
-    </author>
-    <author>
-      <name>Dieter Fox</name>
-    </author>
-    <author>
-      <name>Yunhao Ge</name>
-    </author>
-    <author>
-      <name>Jinwei Gu</name>
-    </author>
-    <author>
-      <name>Ali Hassani</name>
-    </author>
-    <author>
-      <name>Michael Isaev</name>
-    </author>
-    <author>
-      <name>Pooya Jannaty</name>
-    </author>
-    <author>
-      <name>Shiyi Lan</name>
-    </author>
-    <author>
-      <name>Tobias Lasser</name>
-    </author>
-    <author>
-      <name>Huan Ling</name>
-    </author>
-    <author>
-      <name>Ming-Yu Liu</name>
-    </author>
-    <author>
-      <name>Xian Liu</name>
-    </author>
-    <author>
-      <name>Yifan Lu</name>
-    </author>
-    <author>
-      <name>Alice Luo</name>
-    </author>
-    <author>
-      <name>Qianli Ma</name>
-    </author>
-    <author>
-      <name>Hanzi Mao</name>
-    </author>
-    <author>
-      <name>Fabio Ramos</name>
-    </author>
-    <author>
-      <name>Xuanchi Ren</name>
-    </author>
-    <author>
-      <name>Tianchang Shen</name>
-    </author>
-    <author>
-      <name>Shitao Tang</name>
-    </author>
-    <author>
-      <name>Ting-Chun Wang</name>
-    </author>
-    <author>
-      <name>Jay Wu</name>
-    </author>
-    <author>
-      <name>Jiashu Xu</name>
-    </author>
-    <author>
-      <name>Stella Xu</name>
-    </author>
-    <author>
-      <name>Kevin Xie</name>
-    </author>
-    <author>
-      <name>Yuchong Ye</name>
-    </author>
-    <author>
-      <name>Xiaodong Yang</name>
-    </author>
-    <author>
-      <name>Xiaohui Zeng</name>
-    </author>
-    <author>
-      <name>Yu Zeng</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.14492v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14492v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2503.15457v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15457v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.14484v1</id>
-    <updated>2025-03-18T17:54:14Z</updated>
-    <published>2025-03-18T17:54:14Z</published>
-    <title>Gricean Norms as a Basis for Effective Collaboration</title>
-    <summary>  Effective human-AI collaboration hinges not only on the AI agent's ability to
-follow explicit instructions but also on its capacity to navigate ambiguity,
-incompleteness, invalidity, and irrelevance in communication. Gricean
-conversational and inference norms facilitate collaboration by aligning unclear
-instructions with cooperative principles. We propose a normative framework that
-integrates Gricean norms and cognitive frameworks -- common ground, relevance
-theory, and theory of mind -- into large language model (LLM) based agents. The
-normative framework adopts the Gricean maxims of quantity, quality, relation,
-and manner, along with inference, as Gricean norms to interpret unclear
-instructions, which are: ambiguous, incomplete, invalid, or irrelevant. Within
-this framework, we introduce Lamoids, GPT-4 powered agents designed to
-collaborate with humans. To assess the influence of Gricean norms in human-AI
-collaboration, we evaluate two versions of a Lamoid: one with norms and one
-without. In our experiments, a Lamoid collaborates with a human to achieve
-shared goals in a grid world (Doors, Keys, and Gems) by interpreting both clear
-and unclear natural language instructions. Our results reveal that the Lamoid
-with Gricean norms achieves higher task accuracy and generates clearer, more
-accurate, and contextually relevant responses than the Lamoid without norms.
-This improvement stems from the normative framework, which enhances the agent's
-pragmatic reasoning, fostering effective human-AI collaboration and enabling
-context-aware communication in LLM-based agents.
+    <id>http://arxiv.org/abs/2503.15451v1</id>
+    <updated>2025-03-19T17:32:24Z</updated>
+    <published>2025-03-19T17:32:24Z</published>
+    <title>MotionStreamer: Streaming Motion Generation via Diffusion-based
+  Autoregressive Model in Causal Latent Space</title>
+    <summary>  This paper addresses the challenge of text-conditioned streaming motion
+generation, which requires us to predict the next-step human pose based on
+variable-length historical motions and incoming texts. Existing methods
+struggle to achieve streaming motion generation, e.g., diffusion models are
+constrained by pre-defined motion lengths, while GPT-based methods suffer from
+delayed response and error accumulation problem due to discretized non-causal
+tokenization. To solve these problems, we propose MotionStreamer, a novel
+framework that incorporates a continuous causal latent space into a
+probabilistic autoregressive model. The continuous latents mitigate information
+loss caused by discretization and effectively reduce error accumulation during
+long-term autoregressive generation. In addition, by establishing temporal
+causal dependencies between current and historical motion latents, our model
+fully utilizes the available information to achieve accurate online motion
+decoding. Experiments show that our method outperforms existing approaches
+while offering more applications, including multi-round generation, long-term
+generation, and dynamic motion composition. Project Page:
+https://zju3dv.github.io/MotionStreamer/
 </summary>
     <author>
-      <name>Fardin Saad</name>
+      <name>Lixing Xiao</name>
     </author>
     <author>
-      <name>Pradeep K. Murukannaiah</name>
+      <name>Shunlin Lu</name>
     </author>
     <author>
-      <name>Munindar P. Singh</name>
+      <name>Huaijin Pi</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to AAMAS 2025. 8 pages (excl. references), 9 figures/tables.
-  (Appendix: 5 pages, 6 figures/tables). Code available at:
-  https://github.com/fardinsaad/Gricean-Norms</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.14484v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14484v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Ke Fan</name>
+    </author>
+    <author>
+      <name>Liang Pan</name>
+    </author>
+    <author>
+      <name>Yueer Zhou</name>
+    </author>
+    <author>
+      <name>Ziyong Feng</name>
+    </author>
+    <author>
+      <name>Xiaowei Zhou</name>
+    </author>
+    <author>
+      <name>Sida Peng</name>
+    </author>
+    <author>
+      <name>Jingbo Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://zju3dv.github.io/MotionStreamer/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.15451v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15451v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.15436v1</id>
+    <updated>2025-03-19T17:18:18Z</updated>
+    <published>2025-03-19T17:18:18Z</published>
+    <title>An extensive simulation study evaluating the interaction of resampling
+  techniques across multiple causal discovery contexts</title>
+    <summary>  Despite the accelerating presence of exploratory causal analysis in modern
+science and medicine, the available non-experimental methods for validating
+causal models are not well characterized. One of the most popular methods is to
+evaluate the stability of model features after resampling the data, similar to
+resampling methods for estimating confidence intervals in statistics. Many
+aspects of this approach have received little to no attention, however, such as
+whether the choice of resampling method should depend on the sample size,
+algorithms being used, or algorithm tuning parameters. We present theoretical
+results proving that certain resampling methods closely emulate the assignment
+of specific values to algorithm tuning parameters. We also report the results
+of extensive simulation experiments, which verify the theoretical result and
+provide substantial data to aid researchers in further characterizing
+resampling in the context of causal discovery analysis. Together, the
+theoretical work and simulation results provide specific guidance on how
+resampling methods and tuning parameters should be selected in practice.
+</summary>
+    <author>
+      <name>Ritwick Banerjee</name>
+    </author>
+    <author>
+      <name>Bryan Andrews</name>
+    </author>
+    <author>
+      <name>Erich Kummerfeld</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.15436v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15436v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.14477v1</id>
-    <updated>2025-03-18T17:51:04Z</updated>
-    <published>2025-03-18T17:51:04Z</published>
-    <title>Calibrating Verbal Uncertainty as a Linear Feature to Reduce
-  Hallucinations</title>
-    <summary>  LLMs often adopt an assertive language style also when making false claims.
-Such ``overconfident hallucinations'' mislead users and erode trust. Achieving
-the ability to express in language the actual degree of uncertainty around a
-claim is therefore of great importance. We find that ``verbal uncertainty'' is
-governed by a single linear feature in the representation space of LLMs, and
-show that this has only moderate correlation with the actual ``semantic
-uncertainty'' of the model. We apply this insight and show that (1) the
-mismatch between semantic and verbal uncertainty is a better predictor of
-hallucinations than semantic uncertainty alone and (2) we can intervene on
-verbal uncertainty at inference time and reduce hallucinations on short-form
-answers, achieving an average relative reduction of 32%.
+    <id>http://arxiv.org/abs/2503.15422v1</id>
+    <updated>2025-03-19T17:01:40Z</updated>
+    <published>2025-03-19T17:01:40Z</published>
+    <title>Limits on the Ejecta Mass During the Search for Kilonovae Associated
+  with Neutron Star-Black Hole Mergers: A case study of S230518h, GW230529,
+  S230627c and the Low-Significance Candidate S240422ed</title>
+    <summary>  Neutron star-black hole (NSBH) mergers, detectable via their
+gravitational-wave (GW) emission, are expected to produce kilonovae (KNe). Four
+NSBH candidates have been identified and followed-up by more than fifty
+instruments since the start of the fourth GW Observing Run (O4), in May 2023,
+up to July 2024; however, no confirmed associated KN has been detected. This
+study evaluates ejecta properties from multi-messenger observations to
+understand the absence of detectable KN: we use GW public information and joint
+observations taken from 05.2023 to 07.2024 (LVK, ATLAS, DECam, GECKO, GOTO,
+GRANDMA, SAGUARO, TESS, WINTER, ZTF). First, our analysis on follow-up
+observation strategies shows that, on average, more than 50% of the simulated
+KNe associated with NSBH mergers reach their peak luminosity around one day
+after merger in the $g,r,i$- bands, which is not necessarily covered for each
+NSBH GW candidate. We also analyze the trade-off between observation efficiency
+and the intrinsic properties of the KN emission, to understand the impact on
+how these constraints affect our ability to detect the KN, and underlying
+ejecta properties for each GW candidate. In particular, we can only confirm the
+kilonova was not missed for 1% of the GW230529 and S230627c sky localization
+region, given the large sky localization error of GW230529 and the large
+distance for S230627c and, their respective KN faint luminosities. More
+constraining, for S230518h, we infer the dynamical ejecta and post-merger disk
+wind ejecta $m_{dyn}, m_{wind}$ $&lt;$ $0.03$ $M_\odot$ and the viewing angle
+$\theta&gt;25^\circ$. Similarly, the non-astrophysical origin of S240422ed is
+likely further confirmed by the fact that we would have detected even a faint
+KN at the time and presumed distance of the S240422ed event candidate, within a
+minimum 45% credible region of the sky area, that can be larger depending on
+the KN scenario.
 </summary>
     <author>
-      <name>Ziwei Ji</name>
+      <name>M. Pillas</name>
     </author>
     <author>
-      <name>Lei Yu</name>
+      <name>S. Antier</name>
     </author>
     <author>
-      <name>Yeskendir Koishekenov</name>
+      <name>K. Ackley</name>
     </author>
     <author>
-      <name>Yejin Bang</name>
+      <name>T. Ahumada</name>
     </author>
     <author>
-      <name>Anthony Hartshorn</name>
+      <name>D. Akl</name>
     </author>
     <author>
-      <name>Alan Schelten</name>
+      <name>L. de Almeida</name>
     </author>
     <author>
-      <name>Cheng Zhang</name>
+      <name>S. Anand</name>
     </author>
     <author>
-      <name>Pascale Fung</name>
+      <name>C. Andrade</name>
     </author>
     <author>
-      <name>Nicola Cancedda</name>
+      <name>I. Andreoni</name>
     </author>
-    <link href="http://arxiv.org/abs/2503.14477v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14477v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>K. A. Bostroem</name>
+    </author>
+    <author>
+      <name>M. Bulla</name>
+    </author>
+    <author>
+      <name>E. Burns</name>
+    </author>
+    <author>
+      <name>T. Cabrera</name>
+    </author>
+    <author>
+      <name>S. Chang</name>
+    </author>
+    <author>
+      <name>H. Choi</name>
+    </author>
+    <author>
+      <name>B. O'Connor</name>
+    </author>
+    <author>
+      <name>M. W. Coughlin</name>
+    </author>
+    <author>
+      <name>W. Corradi</name>
+    </author>
+    <author>
+      <name>A. R. Gibbs</name>
+    </author>
+    <author>
+      <name>T. Dietrich</name>
+    </author>
+    <author>
+      <name>D. Dornic</name>
+    </author>
+    <author>
+      <name>J. -G. Ducoin</name>
+    </author>
+    <author>
+      <name>P. -A. Duverne</name>
+    </author>
+    <author>
+      <name>M. Dyer</name>
+    </author>
+    <author>
+      <name>H. -B. Eggenstein</name>
+    </author>
+    <author>
+      <name>M. Freeberg</name>
+    </author>
+    <author>
+      <name>M. Fausnaugh</name>
+    </author>
+    <author>
+      <name>W. Fong</name>
+    </author>
+    <author>
+      <name>F. Foucart</name>
+    </author>
+    <author>
+      <name>D. Frostig</name>
+    </author>
+    <author>
+      <name>N. Guessoum</name>
+    </author>
+    <author>
+      <name>V. Gupta</name>
+    </author>
+    <author>
+      <name>P. Hello</name>
+    </author>
+    <author>
+      <name>G. Hosseinzadeh</name>
+    </author>
+    <author>
+      <name>L. Hu</name>
+    </author>
+    <author>
+      <name>T. Hussenot-Desenonges</name>
+    </author>
+    <author>
+      <name>M. Im</name>
+    </author>
+    <author>
+      <name>R. Jayaraman</name>
+    </author>
+    <author>
+      <name>M. Jeong</name>
+    </author>
+    <author>
+      <name>V. Karambelkar</name>
+    </author>
+    <author>
+      <name>S. Karpov</name>
+    </author>
+    <author>
+      <name>M. Kasliwal</name>
+    </author>
+    <author>
+      <name>C. D. Kilpatrick</name>
+    </author>
+    <author>
+      <name>S. Kim</name>
+    </author>
+    <author>
+      <name>N. Kochiashvili</name>
+    </author>
+    <author>
+      <name>K. Kunnumkai</name>
+    </author>
+    <author>
+      <name>M. Lamoureux</name>
+    </author>
+    <author>
+      <name>C. U. Lee</name>
+    </author>
+    <author>
+      <name>N. Lourie</name>
+    </author>
+    <author>
+      <name>J. Lyman</name>
+    </author>
+    <author>
+      <name>F. Magnani</name>
+    </author>
+    <author>
+      <name>M. Masek</name>
+    </author>
+    <author>
+      <name>G. Mo</name>
+    </author>
+    <author>
+      <name>M. Molham</name>
+    </author>
+    <author>
+      <name>F. Navarete</name>
+    </author>
+    <author>
+      <name>D. O'Neill</name>
+    </author>
+    <author>
+      <name>M. Nicholl</name>
+    </author>
+    <author>
+      <name>A. H. Nitz</name>
+    </author>
+    <author>
+      <name>K. Noysena</name>
+    </author>
+    <author>
+      <name>G. S. H. Paek</name>
+    </author>
+    <author>
+      <name>A. Palmese</name>
+    </author>
+    <author>
+      <name>R. Poggiani</name>
+    </author>
+    <author>
+      <name>T. Pradier</name>
+    </author>
+    <author>
+      <name>O. Pyshna</name>
+    </author>
+    <author>
+      <name>Y. Rajabov</name>
+    </author>
+    <author>
+      <name>J. C. Rastinejad</name>
+    </author>
+    <author>
+      <name>D. J. Sand</name>
+    </author>
+    <author>
+      <name>P. Shawhan</name>
+    </author>
+    <author>
+      <name>M. Shrestha</name>
+    </author>
+    <author>
+      <name>R. Simcoe</name>
+    </author>
+    <author>
+      <name>S. J. Smartt</name>
+    </author>
+    <author>
+      <name>D. Steeghs</name>
+    </author>
+    <author>
+      <name>R. Stein</name>
+    </author>
+    <author>
+      <name>H. F. Stevance</name>
+    </author>
+    <author>
+      <name>M. Sun</name>
+    </author>
+    <author>
+      <name>A. Takey</name>
+    </author>
+    <author>
+      <name>A. Toivonen</name>
+    </author>
+    <author>
+      <name>D. Turpin</name>
+    </author>
+    <author>
+      <name>K. Ulaczyk</name>
+    </author>
+    <author>
+      <name>A. Wold</name>
+    </author>
+    <author>
+      <name>T. Wouters</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">47 pages, 17 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.15422v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15422v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.14476v1</id>
-    <updated>2025-03-18T17:49:06Z</updated>
-    <published>2025-03-18T17:49:06Z</published>
-    <title>DAPO: An Open-Source LLM Reinforcement Learning System at Scale</title>
-    <summary>  Inference scaling empowers LLMs with unprecedented reasoning ability, with
-reinforcement learning as the core technique to elicit complex reasoning.
-However, key technical details of state-of-the-art reasoning LLMs are concealed
-(such as in OpenAI o1 blog and DeepSeek R1 technical report), thus the
-community still struggles to reproduce their RL training results. We propose
-the $\textbf{D}$ecoupled Clip and $\textbf{D}$ynamic s$\textbf{A}$mpling
-$\textbf{P}$olicy $\textbf{O}$ptimization ($\textbf{DAPO}$) algorithm, and
-fully open-source a state-of-the-art large-scale RL system that achieves 50
-points on AIME 2024 using Qwen2.5-32B base model. Unlike previous works that
-withhold training details, we introduce four key techniques of our algorithm
-that make large-scale LLM RL a success. In addition, we open-source our
-training code, which is built on the verl framework, along with a carefully
-curated and processed dataset. These components of our open-source system
-enhance reproducibility and support future research in large-scale LLM RL.
+    <id>http://arxiv.org/abs/2503.15420v1</id>
+    <updated>2025-03-19T17:00:58Z</updated>
+    <published>2025-03-19T17:00:58Z</published>
+    <title>LIFT: Latent Implicit Functions for Task- and Data-Agnostic Encoding</title>
+    <summary>  Implicit Neural Representations (INRs) are proving to be a powerful paradigm
+in unifying task modeling across diverse data domains, offering key advantages
+such as memory efficiency and resolution independence. Conventional deep
+learning models are typically modality-dependent, often requiring custom
+architectures and objectives for different types of signals. However, existing
+INR frameworks frequently rely on global latent vectors or exhibit
+computational inefficiencies that limit their broader applicability. We
+introduce LIFT, a novel, high-performance framework that addresses these
+challenges by capturing multiscale information through meta-learning. LIFT
+leverages multiple parallel localized implicit functions alongside a
+hierarchical latent generator to produce unified latent representations that
+span local, intermediate, and global features. This architecture facilitates
+smooth transitions across local regions, enhancing expressivity while
+maintaining inference efficiency. Additionally, we introduce ReLIFT, an
+enhanced variant of LIFT that incorporates residual connections and expressive
+frequency encodings. With this straightforward approach, ReLIFT effectively
+addresses the convergence-capacity gap found in comparable methods, providing
+an efficient yet powerful solution to improve capacity and speed up
+convergence. Empirical results show that LIFT achieves state-of-the-art (SOTA)
+performance in generative modeling and classification tasks, with notable
+reductions in computational costs. Moreover, in single-task settings, the
+streamlined ReLIFT architecture proves effective in signal representations and
+inverse problem tasks.
 </summary>
     <author>
-      <name>Qiying Yu</name>
+      <name>Amirhossein Kazerouni</name>
     </author>
     <author>
-      <name>Zheng Zhang</name>
+      <name>Soroush Mehraban</name>
     </author>
     <author>
-      <name>Ruofei Zhu</name>
+      <name>Michael Brudno</name>
     </author>
     <author>
-      <name>Yufeng Yuan</name>
+      <name>Babak Taati</name>
     </author>
-    <author>
-      <name>Xiaochen Zuo</name>
-    </author>
-    <author>
-      <name>Yu Yue</name>
-    </author>
-    <author>
-      <name>Tiantian Fan</name>
-    </author>
-    <author>
-      <name>Gaohong Liu</name>
-    </author>
-    <author>
-      <name>Lingjun Liu</name>
-    </author>
-    <author>
-      <name>Xin Liu</name>
-    </author>
-    <author>
-      <name>Haibin Lin</name>
-    </author>
-    <author>
-      <name>Zhiqi Lin</name>
-    </author>
-    <author>
-      <name>Bole Ma</name>
-    </author>
-    <author>
-      <name>Guangming Sheng</name>
-    </author>
-    <author>
-      <name>Yuxuan Tong</name>
-    </author>
-    <author>
-      <name>Chi Zhang</name>
-    </author>
-    <author>
-      <name>Mofan Zhang</name>
-    </author>
-    <author>
-      <name>Wang Zhang</name>
-    </author>
-    <author>
-      <name>Hang Zhu</name>
-    </author>
-    <author>
-      <name>Jinhua Zhu</name>
-    </author>
-    <author>
-      <name>Jiaze Chen</name>
-    </author>
-    <author>
-      <name>Jiangjie Chen</name>
-    </author>
-    <author>
-      <name>Chengyi Wang</name>
-    </author>
-    <author>
-      <name>Hongli Yu</name>
-    </author>
-    <author>
-      <name>Weinan Dai</name>
-    </author>
-    <author>
-      <name>Yuxuan Song</name>
-    </author>
-    <author>
-      <name>Xiangpeng Wei</name>
-    </author>
-    <author>
-      <name>Hao Zhou</name>
-    </author>
-    <author>
-      <name>Jingjing Liu</name>
-    </author>
-    <author>
-      <name>Wei-Ying Ma</name>
-    </author>
-    <author>
-      <name>Ya-Qin Zhang</name>
-    </author>
-    <author>
-      <name>Lin Yan</name>
-    </author>
-    <author>
-      <name>Mu Qiao</name>
-    </author>
-    <author>
-      <name>Yonghui Wu</name>
-    </author>
-    <author>
-      <name>Mingxuan Wang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://dapo-sia.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.14476v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14476v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2503.15420v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15420v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.14469v1</id>
-    <updated>2025-03-18T17:45:32Z</updated>
-    <published>2025-03-18T17:45:32Z</published>
-    <title>Attribution Score Alignment in Explainable Data Management</title>
-    <summary>  Different attribution-scores have been proposed to quantify the relevance of
-database tuples for a query answer from a database. Among them, we find Causal
-Responsibility, the Shapley Value, the Banzhaf Power-Index, and the Causal
-Effect. They have been analyzed in isolation, mainly in terms of computational
-properties. In this work, we start an investigation into the alignment of these
-scores on the basis of the queries at hand; that is, on whether they induce
-compatible rankings of tuples. We are able to identify vast classes of queries
-for which some pairs of scores are always aligned, and others for which they
-are not. It turns out that the presence of exogenous tuples makes a crucial
-difference in this regard.
+    <id>http://arxiv.org/abs/2503.15415v1</id>
+    <updated>2025-03-19T16:57:00Z</updated>
+    <published>2025-03-19T16:57:00Z</published>
+    <title>Automated Processing of eXplainable Artificial Intelligence Outputs in
+  Deep Learning Models for Fault Diagnostics of Large Infrastructures</title>
+    <summary>  Deep Learning (DL) models processing images to recognize the health state of
+large infrastructure components can exhibit biases and rely on non-causal
+shortcuts. eXplainable Artificial Intelligence (XAI) can address these issues
+but manually analyzing explanations generated by XAI techniques is
+time-consuming and prone to errors. This work proposes a novel framework that
+combines post-hoc explanations with semi-supervised learning to automatically
+identify anomalous explanations that deviate from those of correctly classified
+images and may therefore indicate model abnormal behaviors. This significantly
+reduces the workload for maintenance decision-makers, who only need to manually
+reclassify images flagged as having anomalous explanations. The proposed
+framework is applied to drone-collected images of insulator shells for power
+grid infrastructure monitoring, considering two different Convolutional Neural
+Networks (CNNs), GradCAM explanations and Deep Semi-Supervised Anomaly
+Detection. The average classification accuracy on two faulty classes is
+improved by 8% and maintenance operators are required to manually reclassify
+only 15% of the images. We compare the proposed framework with a
+state-of-the-art approach based on the faithfulness metric: the experimental
+results obtained demonstrate that the proposed framework consistently achieves
+F_1 scores larger than those of the faithfulness-based approach. Additionally,
+the proposed framework successfully identifies correct classifications that
+result from non-causal shortcuts, such as the presence of ID tags printed on
+insulator shells.
 </summary>
     <author>
-      <name>Felipe Azua</name>
+      <name>Giovanni Floreale</name>
     </author>
     <author>
-      <name>Leopoldo Bertossi</name>
+      <name>Piero Baraldi</name>
     </author>
-    <link href="http://arxiv.org/abs/2503.14469v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14469v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.14460v1</id>
-    <updated>2025-03-18T17:36:26Z</updated>
-    <published>2025-03-18T17:36:26Z</published>
-    <title>Low-Metallicity Star Formation Survey in Sh2-284 (LZ-STAR). I. Ordered
-  massive star formation in the outer Galaxy</title>
-    <summary>  Star formation is a fundamental, yet poorly understood, process of the
-Universe. It is important to study how star formation occurs in different
-galactic environments. Thus, here, in the first of a series of papers, we
-introduce the Low-Metallicity Star Formation (LZ-STAR) survey of the Sh2-284
-(hereafter S284) region, which, at $Z\sim 0.3-0.5Z_\odot$, is one of the
-lowest-metallicity star-forming regions of our Galaxy. LZ-STAR is a
-multi-facility survey, including observations with {\it JWST}, {\it ALMA}, {\it
-HST}, {\it Chandra} and {\it Gemini}. As a starting point, we report {\it JWST}
-and {\it ALMA} observations of one of the most massive protostars in the
-region, S284p1. The observations of shock-excited molecular hydrogen reveal a
-symmetric, bipolar outflow originating from the protostar, spanning several
-parsecs, and fully covered by the {\it JWST} field of view and the {\it ALMA}
-observations of CO(2-1) emission. This allows us to infer that the protostar
-has maintained a relatively stable orientation of disk accretion over its
-formation history. The {\it JWST} near-IR continuum observations detect a
-centrally illuminated bipolar outflow cavity around the protostar, as well as a
-surrounding cluster of low-mass young stars. We develop new radiative transfer
-models of massive protostars designed for the low metallicity of S284. Fitting
-these models to the protostar's spectral energy distribution implies a current
-protostellar mass of $\sim11\:M_\odot$ has formed from an initially
-$\sim100\:M_\odot$ core over the last $\sim3\times10^5$ years. Overall, these
-results indicate that massive stars can form in an ordered manner in
-low-metallicity, protocluster environments.
-</summary>
     <author>
-      <name>Yu Cheng</name>
+      <name>Enrico Zio</name>
     </author>
     <author>
-      <name>Jonathan C. Tan</name>
+      <name>Olga Fink</name>
     </author>
-    <author>
-      <name>Morten Andersen</name>
-    </author>
-    <author>
-      <name>Rubén Fedriani</name>
-    </author>
-    <author>
-      <name>Yichen Zhang</name>
-    </author>
-    <author>
-      <name>Massimo Robberto</name>
-    </author>
-    <author>
-      <name>Zhi-Yun Li</name>
-    </author>
-    <author>
-      <name>Kei E. I. Tanaka</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 12 figures, submitted to ApJ, comments welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.14460v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14460v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.14459v1</id>
-    <updated>2025-03-18T17:33:10Z</updated>
-    <published>2025-03-18T17:33:10Z</published>
-    <title>Doubly robust identification of treatment effects from multiple
-  environments</title>
-    <summary>  Practical and ethical constraints often require the use of observational data
-for causal inference, particularly in medicine and social sciences. Yet,
-observational datasets are prone to confounding, potentially compromising the
-validity of causal conclusions. While it is possible to correct for biases if
-the underlying causal graph is known, this is rarely a feasible ask in
-practical scenarios. A common strategy is to adjust for all available
-covariates, yet this approach can yield biased treatment effect estimates,
-especially when post-treatment or unobserved variables are present. We propose
-RAMEN, an algorithm that produces unbiased treatment effect estimates by
-leveraging the heterogeneity of multiple data sources without the need to know
-or learn the underlying causal graph. Notably, RAMEN achieves doubly robust
-identification: it can identify the treatment effect whenever the causal
-parents of the treatment or those of the outcome are observed, and the node
-whose parents are observed satisfies an invariance assumption. Empirical
-evaluations on synthetic and real-world datasets show that our approach
-outperforms existing methods.
-</summary>
-    <author>
-      <name>Piersilvio De Bartolomeis</name>
-    </author>
-    <author>
-      <name>Julia Kostin</name>
-    </author>
-    <author>
-      <name>Javier Abad</name>
-    </author>
-    <author>
-      <name>Yixin Wang</name>
-    </author>
-    <author>
-      <name>Fanny Yang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for presentation at the International Conference on Learning
-  Representations (ICLR) 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.14459v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14459v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.14456v1</id>
-    <updated>2025-03-18T17:31:05Z</updated>
-    <published>2025-03-18T17:31:05Z</published>
-    <title>RWKV-7 "Goose" with Expressive Dynamic State Evolution</title>
-    <summary>  We present RWKV-7 "Goose", a new sequence modeling architecture, along with
-pre-trained language models that establish a new state-of-the-art in downstream
-performance at the 3 billion parameter scale on multilingual tasks, and match
-current SoTA English language performance despite being trained on dramatically
-fewer tokens than other top 3B models. Nevertheless, RWKV-7 models require only
-constant memory usage and constant inference time per token. RWKV-7 introduces
-a newly generalized formulation of the delta rule with vector-valued gating and
-in-context learning rates, as well as a relaxed value replacement rule. We show
-that RWKV-7 can perform state tracking and recognize all regular languages,
-while retaining parallelizability of training. This exceeds the capabilities of
-Transformers under standard complexity conjectures, which are limited to
-$\mathsf{TC}^0$. To demonstrate RWKV-7's language modeling capability, we also
-present an extended open source 3.1 trillion token multilingual corpus, and
-train four RWKV-7 models ranging from 0.19 billion to 2.9 billion parameters on
-this dataset.
-  To foster openness, reproduction, and adoption, we release our models and
-dataset component listing at https://huggingface.co/RWKV, and our training and
-inference code at https://github.com/RWKV/RWKV-LM all under the Apache 2.0
-License.
-</summary>
-    <author>
-      <name>Bo Peng</name>
-    </author>
-    <author>
-      <name>Ruichong Zhang</name>
-    </author>
-    <author>
-      <name>Daniel Goldstein</name>
-    </author>
-    <author>
-      <name>Eric Alcaide</name>
-    </author>
-    <author>
-      <name>Haowen Hou</name>
-    </author>
-    <author>
-      <name>Janna Lu</name>
-    </author>
-    <author>
-      <name>William Merrill</name>
-    </author>
-    <author>
-      <name>Guangyu Song</name>
-    </author>
-    <author>
-      <name>Kaifeng Tan</name>
-    </author>
-    <author>
-      <name>Saiteja Utpala</name>
-    </author>
-    <author>
-      <name>Nathan Wilce</name>
-    </author>
-    <author>
-      <name>Johan S. Wind</name>
-    </author>
-    <author>
-      <name>Tianyi Wu</name>
-    </author>
-    <author>
-      <name>Daniel Wuttke</name>
-    </author>
-    <author>
-      <name>Christian Zhou-Zheng</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.14456v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14456v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.0; I.2.7" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.14454v1</id>
-    <updated>2025-03-18T17:30:26Z</updated>
-    <published>2025-03-18T17:30:26Z</published>
-    <title>The Atacama Cosmology Telescope: DR6 Constraints on Extended
-  Cosmological Models</title>
-    <summary>  We use new cosmic microwave background (CMB) primary temperature and
-polarization anisotropy measurements from the Atacama Cosmology Telescope (ACT)
-Data Release 6 (DR6) to test foundational assumptions of the standard
-cosmological model and set constraints on extensions to it. We derive
-constraints from the ACT DR6 power spectra alone, as well as in combination
-with legacy data from Planck. To break geometric degeneracies, we include ACT
-and Planck CMB lensing data and baryon acoustic oscillation data from DESI
-Year-1, and further add supernovae measurements from Pantheon+ for models that
-affect the late-time expansion history. We verify the near-scale-invariance
-(running of the spectral index $d n_s/d\ln k = 0.0062 \pm 0.0052$) and
-adiabaticity of the primordial perturbations. Neutrino properties are
-consistent with Standard Model predictions: we find no evidence for new light,
-relativistic species that are free-streaming ($N_{\rm eff} = 2.86 \pm 0.13$,
-which combined with external BBN data becomes $N_{\rm eff} = 2.89 \pm 0.11$),
-for non-zero neutrino masses ($\sum m_\nu &lt; 0.082$ eV at 95% CL), or for
-neutrino self-interactions. We also find no evidence for self-interacting dark
-radiation ($N_{\rm idr} &lt; 0.134$), early-universe variation of fundamental
-constants, early dark energy, primordial magnetic fields, or modified
-recombination. Our data are consistent with standard BBN, the FIRAS-inferred
-CMB temperature, a dark matter component that is collisionless and with only a
-small fraction allowed as axion-like particles, a cosmological constant, and
-the late-time growth rate predicted by general relativity. We find no
-statistically significant preference for a departure from the baseline
-$\Lambda$CDM model. In general, models introduced to increase the Hubble
-constant or to decrease the amplitude of density fluctuations inferred from the
-primary CMB are not favored by our data.
-</summary>
-    <author>
-      <name>Erminia Calabrese</name>
-    </author>
-    <author>
-      <name>J. Colin Hill</name>
-    </author>
-    <author>
-      <name>Hidde T. Jense</name>
-    </author>
-    <author>
-      <name>Adrien La Posta</name>
-    </author>
-    <author>
-      <name>Irene Abril-Cabezas</name>
-    </author>
-    <author>
-      <name>Graeme E. Addison</name>
-    </author>
-    <author>
-      <name>Peter A. R. Ade</name>
-    </author>
-    <author>
-      <name>Simone Aiola</name>
-    </author>
-    <author>
-      <name>Tommy Alford</name>
-    </author>
-    <author>
-      <name>David Alonso</name>
-    </author>
-    <author>
-      <name>Mandana Amiri</name>
-    </author>
-    <author>
-      <name>Rui An</name>
-    </author>
-    <author>
-      <name>Zachary Atkins</name>
-    </author>
-    <author>
-      <name>Jason E. Austermann</name>
-    </author>
-    <author>
-      <name>Eleonora Barbavara</name>
-    </author>
-    <author>
-      <name>Nicola Barbieri</name>
-    </author>
-    <author>
-      <name>Nicholas Battaglia</name>
-    </author>
-    <author>
-      <name>Elia Stefano Battistelli</name>
-    </author>
-    <author>
-      <name>James A. Beall</name>
-    </author>
-    <author>
-      <name>Rachel Bean</name>
-    </author>
-    <author>
-      <name>Ali Beheshti</name>
-    </author>
-    <author>
-      <name>Benjamin Beringue</name>
-    </author>
-    <author>
-      <name>Tanay Bhandarkar</name>
-    </author>
-    <author>
-      <name>Emily Biermann</name>
-    </author>
-    <author>
-      <name>Boris Bolliet</name>
-    </author>
-    <author>
-      <name>J Richard Bond</name>
-    </author>
-    <author>
-      <name>Valentina Capalbo</name>
-    </author>
-    <author>
-      <name>Felipe Carrero</name>
-    </author>
-    <author>
-      <name>Stephen Chen</name>
-    </author>
-    <author>
-      <name>Grace Chesmore</name>
-    </author>
-    <author>
-      <name>Hsiao-mei Cho</name>
-    </author>
-    <author>
-      <name>Steve K. Choi</name>
-    </author>
-    <author>
-      <name>Susan E. Clark</name>
-    </author>
-    <author>
-      <name>Nicholas F. Cothard</name>
-    </author>
-    <author>
-      <name>Kevin Coughlin</name>
-    </author>
-    <author>
-      <name>William Coulton</name>
-    </author>
-    <author>
-      <name>Devin Crichton</name>
-    </author>
-    <author>
-      <name>Kevin T. Crowley</name>
-    </author>
-    <author>
-      <name>Omar Darwish</name>
-    </author>
-    <author>
-      <name>Mark J. Devlin</name>
-    </author>
-    <author>
-      <name>Simon Dicker</name>
-    </author>
-    <author>
-      <name>Cody J. Duell</name>
-    </author>
-    <author>
-      <name>Shannon M. Duff</name>
-    </author>
-    <author>
-      <name>Adriaan J. Duivenvoorden</name>
-    </author>
-    <author>
-      <name>Jo Dunkley</name>
-    </author>
-    <author>
-      <name>Rolando Dunner</name>
-    </author>
-    <author>
-      <name>Carmen Embil Villagra</name>
-    </author>
-    <author>
-      <name>Max Fankhanel</name>
-    </author>
-    <author>
-      <name>Gerrit S. Farren</name>
-    </author>
-    <author>
-      <name>Simone Ferraro</name>
-    </author>
-    <author>
-      <name>Allen Foster</name>
-    </author>
-    <author>
-      <name>Rodrigo Freundt</name>
-    </author>
-    <author>
-      <name>Brittany Fuzia</name>
-    </author>
-    <author>
-      <name>Patricio A. Gallardo</name>
-    </author>
-    <author>
-      <name>Xavier Garrido</name>
-    </author>
-    <author>
-      <name>Martina Gerbino</name>
-    </author>
-    <author>
-      <name>Serena Giardiello</name>
-    </author>
-    <author>
-      <name>Ajay Gill</name>
-    </author>
-    <author>
-      <name>Jahmour Givans</name>
-    </author>
-    <author>
-      <name>Vera Gluscevic</name>
-    </author>
-    <author>
-      <name>Samuel Goldstein</name>
-    </author>
-    <author>
-      <name>Joseph E. Golec</name>
-    </author>
-    <author>
-      <name>Yulin Gong</name>
-    </author>
-    <author>
-      <name>Yilun Guan</name>
-    </author>
-    <author>
-      <name>Mark Halpern</name>
-    </author>
-    <author>
-      <name>Ian Harrison</name>
-    </author>
-    <author>
-      <name>Matthew Hasselfield</name>
-    </author>
-    <author>
-      <name>Adam He</name>
-    </author>
-    <author>
-      <name>Erin Healy</name>
-    </author>
-    <author>
-      <name>Shawn Henderson</name>
-    </author>
-    <author>
-      <name>Brandon Hensley</name>
-    </author>
-    <author>
-      <name>Carlos Hervías-Caimapo</name>
-    </author>
-    <author>
-      <name>Gene C. Hilton</name>
-    </author>
-    <author>
-      <name>Matt Hilton</name>
-    </author>
-    <author>
-      <name>Adam D. Hincks</name>
-    </author>
-    <author>
-      <name>Renée Hložek</name>
-    </author>
-    <author>
-      <name>Shuay-Pwu Patty Ho</name>
-    </author>
-    <author>
-      <name>John Hood</name>
-    </author>
-    <author>
-      <name>Erika Hornecker</name>
-    </author>
-    <author>
-      <name>Zachary B. Huber</name>
-    </author>
-    <author>
-      <name>Johannes Hubmayr</name>
-    </author>
-    <author>
-      <name>Kevin M. Huffenberger</name>
-    </author>
-    <author>
-      <name>John P. Hughes</name>
-    </author>
-    <author>
-      <name>Margaret Ikape</name>
-    </author>
-    <author>
-      <name>Kent Irwin</name>
-    </author>
-    <author>
-      <name>Giovanni Isopi</name>
-    </author>
-    <author>
-      <name>Neha Joshi</name>
-    </author>
-    <author>
-      <name>Ben Keller</name>
-    </author>
-    <author>
-      <name>Joshua Kim</name>
-    </author>
-    <author>
-      <name>Kenda Knowles</name>
-    </author>
-    <author>
-      <name>Brian J. Koopman</name>
-    </author>
-    <author>
-      <name>Arthur Kosowsky</name>
-    </author>
-    <author>
-      <name>Darby Kramer</name>
-    </author>
-    <author>
-      <name>Aleksandra Kusiak</name>
-    </author>
-    <author>
-      <name>Alex Lague</name>
-    </author>
-    <author>
-      <name>Victoria Lakey</name>
-    </author>
-    <author>
-      <name>Massimiliano Lattanzi</name>
-    </author>
-    <author>
-      <name>Eunseong Lee</name>
-    </author>
-    <author>
-      <name>Yaqiong Li</name>
-    </author>
-    <author>
-      <name>Zack Li</name>
-    </author>
-    <author>
-      <name>Michele Limon</name>
-    </author>
-    <author>
-      <name>Martine Lokken</name>
-    </author>
-    <author>
-      <name>Thibaut Louis</name>
-    </author>
-    <author>
-      <name>Marius Lungu</name>
-    </author>
-    <author>
-      <name>Niall MacCrann</name>
-    </author>
-    <author>
-      <name>Amanda MacInnis</name>
-    </author>
-    <author>
-      <name>Mathew S. Madhavacheril</name>
-    </author>
-    <author>
-      <name>Diego Maldonado</name>
-    </author>
-    <author>
-      <name>Felipe Maldonado</name>
-    </author>
-    <author>
-      <name>Maya Mallaby-Kay</name>
-    </author>
-    <author>
-      <name>Gabriela A. Marques</name>
-    </author>
-    <author>
-      <name>Joshiwa van Marrewijk</name>
-    </author>
-    <author>
-      <name>Fiona McCarthy</name>
-    </author>
-    <author>
-      <name>Jeff McMahon</name>
-    </author>
-    <author>
-      <name>Yogesh Mehta</name>
-    </author>
-    <author>
-      <name>Felipe Menanteau</name>
-    </author>
-    <author>
-      <name>Kavilan Moodley</name>
-    </author>
-    <author>
-      <name>Thomas W. Morris</name>
-    </author>
-    <author>
-      <name>Tony Mroczkowski</name>
-    </author>
-    <author>
-      <name>Sigurd Naess</name>
-    </author>
-    <author>
-      <name>Toshiya Namikawa</name>
-    </author>
-    <author>
-      <name>Federico Nati</name>
-    </author>
-    <author>
-      <name>Simran K. Nerval</name>
-    </author>
-    <author>
-      <name>Laura Newburgh</name>
-    </author>
-    <author>
-      <name>Andrina Nicola</name>
-    </author>
-    <author>
-      <name>Michael D. Niemack</name>
-    </author>
-    <author>
-      <name>Michael R. Nolta</name>
-    </author>
-    <author>
-      <name>John Orlowski-Scherer</name>
-    </author>
-    <author>
-      <name>Luca Pagano</name>
-    </author>
-    <author>
-      <name>Lyman A. Page</name>
-    </author>
-    <author>
-      <name>Shivam Pandey</name>
-    </author>
-    <author>
-      <name>Bruce Partridge</name>
-    </author>
-    <author>
-      <name>Karen Perez Sarmiento</name>
-    </author>
-    <author>
-      <name>Heather Prince</name>
-    </author>
-    <author>
-      <name>Roberto Puddu</name>
-    </author>
-    <author>
-      <name>Frank J. Qu</name>
-    </author>
-    <author>
-      <name>Damien C. Ragavan</name>
-    </author>
-    <author>
-      <name>Bernardita Ried Guachalla</name>
-    </author>
-    <author>
-      <name>Keir K. Rogers</name>
-    </author>
-    <author>
-      <name>Felipe Rojas</name>
-    </author>
-    <author>
-      <name>Tai Sakuma</name>
-    </author>
-    <author>
-      <name>Emmanuel Schaan</name>
-    </author>
-    <author>
-      <name>Benjamin L. Schmitt</name>
-    </author>
-    <author>
-      <name>Neelima Sehgal</name>
-    </author>
-    <author>
-      <name>Shabbir Shaikh</name>
-    </author>
-    <author>
-      <name>Blake D. Sherwin</name>
-    </author>
-    <author>
-      <name>Carlos Sierra</name>
-    </author>
-    <author>
-      <name>Jon Sievers</name>
-    </author>
-    <author>
-      <name>Cristóbal Sifón</name>
-    </author>
-    <author>
-      <name>Sara Simon</name>
-    </author>
-    <author>
-      <name>Rita Sonka</name>
-    </author>
-    <author>
-      <name>David N. Spergel</name>
-    </author>
-    <author>
-      <name>Suzanne T. Staggs</name>
-    </author>
-    <author>
-      <name>Emilie Storer</name>
-    </author>
-    <author>
-      <name>Kristen Surrao</name>
-    </author>
-    <author>
-      <name>Eric R. Switzer</name>
-    </author>
-    <author>
-      <name>Niklas Tampier</name>
-    </author>
-    <author>
-      <name>Leander Thiele</name>
-    </author>
-    <author>
-      <name>Robert Thornton</name>
-    </author>
-    <author>
-      <name>Hy Trac</name>
-    </author>
-    <author>
-      <name>Carole Tucker</name>
-    </author>
-    <author>
-      <name>Joel Ullom</name>
-    </author>
-    <author>
-      <name>Leila R. Vale</name>
-    </author>
-    <author>
-      <name>Alexander Van Engelen</name>
-    </author>
-    <author>
-      <name>Jeff Van Lanen</name>
-    </author>
-    <author>
-      <name>Cristian Vargas</name>
-    </author>
-    <author>
-      <name>Eve M. Vavagiakis</name>
-    </author>
-    <author>
-      <name>Kasey Wagoner</name>
-    </author>
-    <author>
-      <name>Yuhan Wang</name>
-    </author>
-    <author>
-      <name>Lukas Wenzl</name>
-    </author>
-    <author>
-      <name>Edward J. Wollack</name>
-    </author>
-    <author>
-      <name>Kaiwen Zheng</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">56+32 pages, 46+9 figures, abstract abridged here. Part of ACT DR6
-  suite of papers submitted to JCAP. Data located at
-  https://lambda.gsfc.nasa.gov/product/act/actadv_prod_table.html</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.14454v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14454v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.14445v1</id>
-    <updated>2025-03-18T17:24:19Z</updated>
-    <published>2025-03-18T17:24:19Z</published>
-    <title>Bolt3D: Generating 3D Scenes in Seconds</title>
-    <summary>  We present a latent diffusion model for fast feed-forward 3D scene
-generation. Given one or more images, our model Bolt3D directly samples a 3D
-scene representation in less than seven seconds on a single GPU. We achieve
-this by leveraging powerful and scalable existing 2D diffusion network
-architectures to produce consistent high-fidelity 3D scene representations. To
-train this model, we create a large-scale multiview-consistent dataset of 3D
-geometry and appearance by applying state-of-the-art dense 3D reconstruction
-techniques to existing multiview image datasets. Compared to prior multiview
-generative models that require per-scene optimization for 3D reconstruction,
-Bolt3D reduces the inference cost by a factor of up to 300 times.
-</summary>
-    <author>
-      <name>Stanislaw Szymanowicz</name>
-    </author>
-    <author>
-      <name>Jason Y. Zhang</name>
-    </author>
-    <author>
-      <name>Pratul Srinivasan</name>
-    </author>
-    <author>
-      <name>Ruiqi Gao</name>
-    </author>
-    <author>
-      <name>Arthur Brussee</name>
-    </author>
-    <author>
-      <name>Aleksander Holynski</name>
-    </author>
-    <author>
-      <name>Ricardo Martin-Brualla</name>
-    </author>
-    <author>
-      <name>Jonathan T. Barron</name>
-    </author>
-    <author>
-      <name>Philipp Henzler</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://szymanowiczs.github.io/bolt3d</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.14445v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.14445v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2503.15415v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15415v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.15410v1</id>
+    <updated>2025-03-19T16:52:28Z</updated>
+    <published>2025-03-19T16:52:28Z</published>
+    <title>Loophole-free argument for physicality of electromagnetic potential from
+  causal structure of flux quantization</title>
+    <summary>  Recent work by Vaidman [Phys. Rev. A 86,040101 (2012)] showed that
+Aharonov-Bohm effect can be explained in terms of local fields, thus
+effectively restating an old problem of physicality of potentials. In this
+work, we propose an argument demonstrating the physicality of electromagnetic
+potential (upon the assumption of locality) based on the causal structure in
+flux quantization setup. Crucially, we discuss the fundamental difference
+between the considered setup and the Aharonov-Bohm experiment that allows for
+avoiding Vaidman's loophole in our scenario.
+</summary>
+    <author>
+      <name>Konrad Schlichtholz</name>
+    </author>
+    <author>
+      <name>Marcin Markiewicz</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.15410v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15410v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.15395v1</id>
+    <updated>2025-03-19T16:35:05Z</updated>
+    <published>2025-03-19T16:35:05Z</published>
+    <title>Making Online Polls More Accurate: Statistical Methods Explained</title>
+    <summary>  Online data has the potential to transform how researchers and companies
+produce election forecasts. Social media surveys, online panels and even
+comments scraped from the internet can offer valuable insights into political
+preferences. However, such data is often affected by significant selection
+bias, as online respondents may not be representative of the overall
+population. At the same time, traditional data collection methods are becoming
+increasingly cost-prohibitive. In this scenario, scientists need instruments to
+be able to draw the most accurate estimate possible from samples drawn online.
+This paper provides an introduction to key statistical methods for mitigating
+bias and improving inference in such cases, with a focus on electoral polling.
+Specifically, it presents the main statistical techniques, categorized into
+weighting, modeling and other approaches. It also offers practical
+recommendations for drawing estimates with measures of uncertainty. Designed
+for both researchers and industry practitioners, this introduction takes a
+hands-on approach, with code available for implementing the main methods.
+</summary>
+    <author>
+      <name>Alberto Arletti</name>
+    </author>
+    <author>
+      <name>Maria Letizia Tanturri</name>
+    </author>
+    <author>
+      <name>Omar Paccagnella</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.15395v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15395v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.15393v1</id>
+    <updated>2025-03-19T16:33:08Z</updated>
+    <published>2025-03-19T16:33:08Z</published>
+    <title>Orbital eccentricity in a neutron star - black hole binary</title>
+    <summary>  The observation of gravitational waves from merging black holes and neutron
+stars provides a unique opportunity to discern information about their
+astrophysical environment. Two signatures that are considered powerful tracers
+to distinguish between different binary formation channels are
+general-relativistic spin-induced orbital precession and orbital eccentricity.
+Both effects leave characteristic imprints in the gravitational-wave signal
+that can be extracted from observations. To date, neither precession nor
+eccentricity have been discerned in neutron star - black hole binaries. Here we
+report the first measurement of orbital eccentricity in a neutron star - black
+hole binary. Using, for the first time, a waveform model that incorporates
+precession and eccentricity, we perform Bayesian inference on the event
+GW200105 and infer a median orbital eccentricity of $e_{20}\sim 0.145$ at an
+orbital period of $0.1$s, excluding zero at more than $99\%$ confidence. We
+find inconclusive evidence for the presence of precession, consistent with
+previous, non-eccentric results. Our result implies a fraction of these
+binaries will exhibit orbital eccentricity even at small separations,
+suggesting formation through mechanisms involving dynamical interactions beyond
+isolated binary evolution. Future observations will reveal the contribution of
+eccentric neutron star - black hole binaries to the total merger rate across
+cosmic time.
+</summary>
+    <author>
+      <name>Gonzalo Morras</name>
+    </author>
+    <author>
+      <name>Geraint Pratten</name>
+    </author>
+    <author>
+      <name>Patricia Schmidt</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.15393v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.15393v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
