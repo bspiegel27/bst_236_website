@@ -1,504 +1,572 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-03-25T00:52:56Z -->
+<!-- Last updated: 2025-03-26T00:52:30Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-03-24T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">109315</opensearch:totalResults>
+  <updated>2025-03-25T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">109454</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2503.17363v1</id>
-    <updated>2025-03-21T17:59:55Z</updated>
-    <published>2025-03-21T17:59:55Z</published>
-    <title>Dancing with Critiques: Enhancing LLM Reasoning with Stepwise Natural
-  Language Self-Critique</title>
-    <summary>  Enhancing the reasoning capabilities of large language models (LLMs),
-particularly for complex tasks requiring multi-step logical deductions, remains
-a significant challenge. Traditional inference time scaling methods utilize
-scalar reward signals from process reward models to evaluate candidate
-reasoning steps, but these scalar rewards lack the nuanced qualitative
-information essential for understanding and justifying each step. In this
-paper, we propose a novel inference-time scaling approach -- stepwise natural
-language self-critique (PANEL), which employs self-generated natural language
-critiques as feedback to guide the step-level search process. By generating
-rich, human-readable critiques for each candidate reasoning step, PANEL retains
-essential qualitative information, facilitating better-informed decision-making
-during inference. This approach bypasses the need for task-specific verifiers
-and the associated training overhead, making it broadly applicable across
-diverse tasks. Experimental results on challenging reasoning benchmarks,
-including AIME and GPQA, demonstrate that PANEL significantly enhances
-reasoning performance, outperforming traditional scalar reward-based methods.
-Our code is available at https://github.com/puddingyeah/PANEL to support and
-encourage future research in this promising field.
+    <id>http://arxiv.org/abs/2503.18948v1</id>
+    <updated>2025-03-24T17:59:57Z</updated>
+    <published>2025-03-24T17:59:57Z</published>
+    <title>Equivariant Image Modeling</title>
+    <summary>  Current generative models, such as autoregressive and diffusion approaches,
+decompose high-dimensional data distribution learning into a series of simpler
+subtasks. However, inherent conflicts arise during the joint optimization of
+these subtasks, and existing solutions fail to resolve such conflicts without
+sacrificing efficiency or scalability. We propose a novel equivariant image
+modeling framework that inherently aligns optimization targets across subtasks
+by leveraging the translation invariance of natural visual signals. Our method
+introduces (1) column-wise tokenization which enhances translational symmetry
+along the horizontal axis, and (2) windowed causal attention which enforces
+consistent contextual relationships across positions. Evaluated on
+class-conditioned ImageNet generation at 256x256 resolution, our approach
+achieves performance comparable to state-of-the-art AR models while using fewer
+computational resources. Systematic analysis demonstrates that enhanced
+equivariance reduces inter-task conflicts, significantly improving zero-shot
+generalization and enabling ultra-long image synthesis. This work establishes
+the first framework for task-aligned decomposition in generative modeling,
+offering insights into efficient parameter sharing and conflict-free
+optimization. The code and models are publicly available at
+https://github.com/drx-code/EquivariantModeling.
 </summary>
     <author>
-      <name>Yansi Li</name>
+      <name>Ruixiao Dong</name>
     </author>
     <author>
-      <name>Jiahao Xu</name>
+      <name>Mengde Xu</name>
     </author>
     <author>
-      <name>Tian Liang</name>
+      <name>Zigang Geng</name>
     </author>
     <author>
-      <name>Xingyu Chen</name>
+      <name>Li Li</name>
     </author>
     <author>
-      <name>Zhiwei He</name>
+      <name>Han Hu</name>
     </author>
     <author>
-      <name>Qiuzhi Liu</name>
+      <name>Shuyang Gu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.18948v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18948v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18944v1</id>
+    <updated>2025-03-24T17:59:11Z</updated>
+    <published>2025-03-24T17:59:11Z</published>
+    <title>DINO in the Room: Leveraging 2D Foundation Models for 3D Segmentation</title>
+    <summary>  Vision foundation models (VFMs) trained on large-scale image datasets provide
+high-quality features that have significantly advanced 2D visual recognition.
+However, their potential in 3D vision remains largely untapped, despite the
+common availability of 2D images alongside 3D point cloud datasets. While
+significant research has been dedicated to 2D-3D fusion, recent
+state-of-the-art 3D methods predominantly focus on 3D data, leaving the
+integration of VFMs into 3D models underexplored. In this work, we challenge
+this trend by introducing DITR, a simple yet effective approach that extracts
+2D foundation model features, projects them to 3D, and finally injects them
+into a 3D point cloud segmentation model. DITR achieves state-of-the-art
+results on both indoor and outdoor 3D semantic segmentation benchmarks. To
+enable the use of VFMs even when images are unavailable during inference, we
+further propose to distill 2D foundation models into a 3D backbone as a
+pretraining task. By initializing the 3D backbone with knowledge distilled from
+2D VFMs, we create a strong basis for downstream 3D segmentation tasks,
+ultimately boosting performance across various datasets.
+</summary>
+    <author>
+      <name>Karim Abou Zeid</name>
     </author>
     <author>
-      <name>Rui Wang</name>
+      <name>Kadir Yilmaz</name>
     </author>
     <author>
-      <name>Zhuosheng Zhang</name>
+      <name>Daan de Geus</name>
     </author>
     <author>
-      <name>Zhaopeng Tu</name>
+      <name>Alexander Hermans</name>
     </author>
     <author>
-      <name>Haitao Mi</name>
+      <name>David Adrian</name>
     </author>
     <author>
-      <name>Dong Yu</name>
+      <name>Timm Linder</name>
     </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.13140/RG.2.2.27912.33289</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.13140/RG.2.2.27912.33289" rel="related"/>
-    <link href="http://arxiv.org/abs/2503.17363v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17363v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Bastian Leibe</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page at https://vision.rwth-aachen.de/DITR</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.18944v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18944v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18942v1</id>
+    <updated>2025-03-24T17:59:04Z</updated>
+    <published>2025-03-24T17:59:04Z</published>
+    <title>Video-T1: Test-Time Scaling for Video Generation</title>
+    <summary>  With the scale capability of increasing training data, model size, and
+computational cost, video generation has achieved impressive results in digital
+creation, enabling users to express creativity across various domains.
+Recently, researchers in Large Language Models (LLMs) have expanded the scaling
+to test-time, which can significantly improve LLM performance by using more
+inference-time computation. Instead of scaling up video foundation models
+through expensive training costs, we explore the power of Test-Time Scaling
+(TTS) in video generation, aiming to answer the question: if a video generation
+model is allowed to use non-trivial amount of inference-time compute, how much
+can it improve generation quality given a challenging text prompt. In this
+work, we reinterpret the test-time scaling of video generation as a searching
+problem to sample better trajectories from Gaussian noise space to the target
+video distribution. Specifically, we build the search space with test-time
+verifiers to provide feedback and heuristic algorithms to guide searching
+process. Given a text prompt, we first explore an intuitive linear search
+strategy by increasing noise candidates at inference time. As full-step
+denoising all frames simultaneously requires heavy test-time computation costs,
+we further design a more efficient TTS method for video generation called
+Tree-of-Frames (ToF) that adaptively expands and prunes video branches in an
+autoregressive manner. Extensive experiments on text-conditioned video
+generation benchmarks demonstrate that increasing test-time compute
+consistently leads to significant improvements in the quality of videos.
+Project page: https://liuff19.github.io/Video-T1
+</summary>
+    <author>
+      <name>Fangfu Liu</name>
+    </author>
+    <author>
+      <name>Hanyang Wang</name>
+    </author>
+    <author>
+      <name>Yimo Cai</name>
+    </author>
+    <author>
+      <name>Kaiyan Zhang</name>
+    </author>
+    <author>
+      <name>Xiaohang Zhan</name>
+    </author>
+    <author>
+      <name>Yueqi Duan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://liuff19.github.io/Video-T1</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.18942v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18942v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18941v1</id>
+    <updated>2025-03-24T17:59:03Z</updated>
+    <published>2025-03-24T17:59:03Z</published>
+    <title>Exploring Training and Inference Scaling Laws in Generative Retrieval</title>
+    <summary>  Generative retrieval has emerged as a novel paradigm that leverages large
+language models (LLMs) to autoregressively generate document identifiers.
+Although promising, the mechanisms that underpin its performance and
+scalability remain largely unclear. We conduct a systematic investigation of
+training and inference scaling laws in generative retrieval, exploring how
+model size, training data scale, and inference-time compute jointly influence
+retrieval performance. To address the lack of suitable metrics, we propose a
+novel evaluation measure inspired by contrastive entropy and generation loss,
+providing a continuous performance signal that enables robust comparisons
+across diverse generative retrieval methods. Our experiments show that
+n-gram-based methods demonstrate strong alignment with both training and
+inference scaling laws, especially when paired with larger LLMs. Furthermore,
+increasing inference computation yields substantial performance gains,
+revealing that generative retrieval can significantly benefit from higher
+compute budgets at inference. Across these settings, LLaMA models consistently
+outperform T5 models, suggesting a particular advantage for larger decoder-only
+models in generative retrieval. Taken together, our findings underscore that
+model sizes, data availability, and inference computation interact to unlock
+the full potential of generative retrieval, offering new insights for designing
+and optimizing future systems.
+</summary>
+    <author>
+      <name>Hongru Cai</name>
+    </author>
+    <author>
+      <name>Yongqi Li</name>
+    </author>
+    <author>
+      <name>Ruifeng Yuan</name>
+    </author>
+    <author>
+      <name>Wenjie Wang</name>
+    </author>
+    <author>
+      <name>Zhen Zhang</name>
+    </author>
+    <author>
+      <name>Wenjie Li</name>
+    </author>
+    <author>
+      <name>Tat-Seng Chua</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.18941v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18941v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.17361v1</id>
-    <updated>2025-03-21T17:59:43Z</updated>
-    <published>2025-03-21T17:59:43Z</published>
-    <title>Gumbel-Softmax Flow Matching with Straight-Through Guidance for
-  Controllable Biological Sequence Generation</title>
-    <summary>  Flow matching in the continuous simplex has emerged as a promising strategy
-for DNA sequence design, but struggles to scale to higher simplex dimensions
-required for peptide and protein generation. We introduce Gumbel-Softmax Flow
-and Score Matching, a generative framework on the simplex based on a novel
-Gumbel-Softmax interpolant with a time-dependent temperature. Using this
-interpolant, we introduce Gumbel-Softmax Flow Matching by deriving a
-parameterized velocity field that transports from smooth categorical
-distributions to distributions concentrated at a single vertex of the simplex.
-We alternatively present Gumbel-Softmax Score Matching which learns to regress
-the gradient of the probability density. Our framework enables high-quality,
-diverse generation and scales efficiently to higher-dimensional simplices. To
-enable training-free guidance, we propose Straight-Through Guided Flows
-(STGFlow), a classifier-based guidance method that leverages straight-through
-estimators to steer the unconditional velocity field toward optimal vertices of
-the simplex. STGFlow enables efficient inference-time guidance using
-classifiers pre-trained on clean sequences, and can be used with any discrete
-flow method. Together, these components form a robust framework for
-controllable de novo sequence generation. We demonstrate state-of-the-art
-performance in conditional DNA promoter design, sequence-only protein
-generation, and target-binding peptide design for rare disease treatment.
+    <id>http://arxiv.org/abs/2503.18940v1</id>
+    <updated>2025-03-24T17:59:02Z</updated>
+    <published>2025-03-24T17:59:02Z</published>
+    <title>Training-free Diffusion Acceleration with Bottleneck Sampling</title>
+    <summary>  Diffusion models have demonstrated remarkable capabilities in visual content
+generation but remain challenging to deploy due to their high computational
+cost during inference. This computational burden primarily arises from the
+quadratic complexity of self-attention with respect to image or video
+resolution. While existing acceleration methods often compromise output quality
+or necessitate costly retraining, we observe that most diffusion models are
+pre-trained at lower resolutions, presenting an opportunity to exploit these
+low-resolution priors for more efficient inference without degrading
+performance. In this work, we introduce Bottleneck Sampling, a training-free
+framework that leverages low-resolution priors to reduce computational overhead
+while preserving output fidelity. Bottleneck Sampling follows a high-low-high
+denoising workflow: it performs high-resolution denoising in the initial and
+final stages while operating at lower resolutions in intermediate steps. To
+mitigate aliasing and blurring artifacts, we further refine the resolution
+transition points and adaptively shift the denoising timesteps at each stage.
+We evaluate Bottleneck Sampling on both image and video generation tasks, where
+extensive experiments demonstrate that it accelerates inference by up to
+3$\times$ for image generation and 2.5$\times$ for video generation, all while
+maintaining output quality comparable to the standard full-resolution sampling
+process across multiple evaluation metrics. Code is available at:
+https://github.com/tyfeld/Bottleneck-Sampling
 </summary>
     <author>
-      <name>Sophia Tang</name>
+      <name>Ye Tian</name>
     </author>
     <author>
-      <name>Yinuo Zhang</name>
+      <name>Xin Xia</name>
     </author>
     <author>
-      <name>Alexander Tong</name>
+      <name>Yuxi Ren</name>
     </author>
     <author>
-      <name>Pranam Chatterjee</name>
+      <name>Shanchuan Lin</name>
     </author>
-    <link href="http://arxiv.org/abs/2503.17361v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17361v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Xing Wang</name>
+    </author>
+    <author>
+      <name>Xuefeng Xiao</name>
+    </author>
+    <author>
+      <name>Yunhai Tong</name>
+    </author>
+    <author>
+      <name>Ling Yang</name>
+    </author>
+    <author>
+      <name>Bin Cui</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code Repo: https://github.com/tyfeld/Bottleneck-Sampling ,Project
+  Page: https://tyfeld.github.io/BottleneckSampling.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.18940v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18940v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18923v1</id>
+    <updated>2025-03-24T17:46:09Z</updated>
+    <published>2025-03-24T17:46:09Z</published>
+    <title>Video SimpleQA: Towards Factuality Evaluation in Large Video Language
+  Models</title>
+    <summary>  Recent advancements in Large Video Language Models (LVLMs) have highlighted
+their potential for multi-modal understanding, yet evaluating their factual
+grounding in video contexts remains a critical unsolved challenge. To address
+this gap, we introduce Video SimpleQA, the first comprehensive benchmark
+tailored for factuality evaluation of LVLMs. Our work distinguishes from
+existing video benchmarks through the following key features: 1) Knowledge
+required: demanding integration of external knowledge beyond the explicit
+narrative; 2) Fact-seeking question: targeting objective, undisputed events or
+relationships, avoiding subjective interpretation; 3) Definitive &amp; short-form
+answer: Answers are crafted as unambiguous and definitively correct in a short
+format, enabling automated evaluation through LLM-as-a-judge frameworks with
+minimal scoring variance; 4) External-source verified: All annotations undergo
+rigorous validation against authoritative external references to ensure the
+reliability; 5) Temporal reasoning required: The annotated question types
+encompass both static single-frame understanding and dynamic temporal
+reasoning, explicitly evaluating LVLMs factuality under the long-context
+dependencies. We extensively evaluate 41 state-of-the-art LVLMs and summarize
+key findings as follows: 1) Current LVLMs exhibit notable deficiencies in
+factual adherence, particularly for open-source models. The best-performing
+model Gemini-1.5-Pro achieves merely an F-score of 54.4%; 2) Test-time compute
+paradigms show insignificant performance gains, revealing fundamental
+constraints for enhancing factuality through post-hoc computation; 3)
+Retrieval-Augmented Generation demonstrates consistent improvements at the cost
+of additional inference time overhead, presenting a critical
+efficiency-performance trade-off.
+</summary>
+    <author>
+      <name>Meng Cao</name>
+    </author>
+    <author>
+      <name>Pengfei Hu</name>
+    </author>
+    <author>
+      <name>Yingyao Wang</name>
+    </author>
+    <author>
+      <name>Jihao Gu</name>
+    </author>
+    <author>
+      <name>Haoran Tang</name>
+    </author>
+    <author>
+      <name>Haoze Zhao</name>
+    </author>
+    <author>
+      <name>Jiahua Dong</name>
+    </author>
+    <author>
+      <name>Wangbo Yu</name>
+    </author>
+    <author>
+      <name>Ge Zhang</name>
+    </author>
+    <author>
+      <name>Ian Reid</name>
+    </author>
+    <author>
+      <name>Xiaodan Liang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">24 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.18923v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18923v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18912v1</id>
+    <updated>2025-03-24T17:25:44Z</updated>
+    <published>2025-03-24T17:25:44Z</published>
+    <title>Causal Links Between Anthropogenic Emissions and Air Pollution Dynamics
+  in Delhi</title>
+    <summary>  Air pollution poses significant health and environmental challenges,
+particularly in rapidly urbanizing regions. Delhi-National Capital Region
+experiences air pollution episodes due to complex interactions between
+anthropogenic emissions and meteorological conditions. Understanding the causal
+drivers of key pollutants such as $PM_{2.5}$ and ground $O_3$ is crucial for
+developing effective mitigation strategies. This study investigates the causal
+links of anthropogenic emissions on $PM_{2.5}$ and $O_3$ concentrations using
+predictive modeling and causal inference techniques. Integrating
+high-resolution air quality data from Jan 2018 to Aug 2023 across 32 monitoring
+stations, we develop predictive regression models that incorporate
+meteorological variables (temperature and relative humidity), pollutant
+concentrations ($NO_2, SO_2, CO$), and seasonal harmonic components to capture
+both diurnal and annual cycles. Here, we show that reductions in anthropogenic
+emissions lead to significant decreases in $PM_{2.5}$ levels, whereas their
+effect on $O_3$ remains marginal and statistically insignificant. To address
+spatial heterogeneity, we employ Gaussian Process modeling. Further, we use
+Granger causality analysis and counterfactual simulation to establish direct
+causal links. Validation using real-world data from the COVID-19 lockdown
+confirms that reduced emissions led to a substantial drop in $PM_{2.5}$ but
+only a slight, insignificant change in $O_3$. The findings highlight the
+necessity of targeted emission reduction policies while emphasizing the need
+for integrated strategies addressing both particulate and ozone pollution.
+These insights are crucial for policymakers designing air pollution
+interventions in other megacities, and offer a scalable methodology for
+tackling complex urban air pollution through data-driven decision-making.
+</summary>
+    <author>
+      <name>Sourish Das</name>
+    </author>
+    <author>
+      <name>Sudeep Shukla</name>
+    </author>
+    <author>
+      <name>Alka Yadav</name>
+    </author>
+    <author>
+      <name>Anirban Chakraborti</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 10 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.18912v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18912v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18908v1</id>
+    <updated>2025-03-24T17:20:35Z</updated>
+    <published>2025-03-24T17:20:35Z</published>
+    <title>FFN Fusion: Rethinking Sequential Computation in Large Language Models</title>
+    <summary>  We introduce FFN Fusion, an architectural optimization technique that reduces
+sequential computation in large language models by identifying and exploiting
+natural opportunities for parallelization. Our key insight is that sequences of
+Feed-Forward Network (FFN) layers, particularly those remaining after the
+removal of specific attention layers, can often be parallelized with minimal
+accuracy impact. We develop a principled methodology for identifying and fusing
+such sequences, transforming them into parallel operations that significantly
+reduce inference latency while preserving model behavior. Applying these
+techniques to Llama-3.1-405B-Instruct, we create Llama-Nemotron-Ultra-253B-Base
+(Ultra-253B-Base), an efficient and soon-to-be publicly available model that
+achieves a 1.71X speedup in inference latency and 35X lower per-token cost
+while maintaining strong performance across benchmarks. Through extensive
+experiments on models from 49B to 253B parameters, we demonstrate that FFN
+Fusion becomes increasingly effective at larger scales and can complement
+existing optimization techniques like quantization and pruning. Most
+intriguingly, we find that even full transformer blocks containing both
+attention and FFN layers can sometimes be parallelized, suggesting new
+directions for neural architecture design.
+</summary>
+    <author>
+      <name>Akhiad Bercovich</name>
+    </author>
+    <author>
+      <name>Mohammad Dabbah</name>
+    </author>
+    <author>
+      <name>Omri Puny</name>
+    </author>
+    <author>
+      <name>Ido Galil</name>
+    </author>
+    <author>
+      <name>Amnon Geifman</name>
+    </author>
+    <author>
+      <name>Yonatan Geifman</name>
+    </author>
+    <author>
+      <name>Izhak Golan</name>
+    </author>
+    <author>
+      <name>Ehud Karpas</name>
+    </author>
+    <author>
+      <name>Itay Levy</name>
+    </author>
+    <author>
+      <name>Zach Moshe</name>
+    </author>
+    <author>
+      <name>Najeeb Nabwani</name>
+    </author>
+    <author>
+      <name>Tomer Ronen</name>
+    </author>
+    <author>
+      <name>Itamar Schen</name>
+    </author>
+    <author>
+      <name>Elad Segal</name>
+    </author>
+    <author>
+      <name>Ido Shahaf</name>
+    </author>
+    <author>
+      <name>Oren Tropp</name>
+    </author>
+    <author>
+      <name>Ran Zilberstein</name>
+    </author>
+    <author>
+      <name>Ran El-Yaniv</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.18908v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18908v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.17359v1</id>
-    <updated>2025-03-21T17:59:22Z</updated>
-    <published>2025-03-21T17:59:22Z</published>
-    <title>Position: Interactive Generative Video as Next-Generation Game Engine</title>
-    <summary>  Modern game development faces significant challenges in creativity and cost
-due to predetermined content in traditional game engines. Recent breakthroughs
-in video generation models, capable of synthesizing realistic and interactive
-virtual environments, present an opportunity to revolutionize game creation. In
-this position paper, we propose Interactive Generative Video (IGV) as the
-foundation for Generative Game Engines (GGE), enabling unlimited novel content
-generation in next-generation gaming. GGE leverages IGV's unique strengths in
-unlimited high-quality content synthesis, physics-aware world modeling,
-user-controlled interactivity, long-term memory capabilities, and causal
-reasoning. We present a comprehensive framework detailing GGE's core modules
-and a hierarchical maturity roadmap (L0-L4) to guide its evolution. Our work
-charts a new course for game development in the AI era, envisioning a future
-where AI-powered generative systems fundamentally reshape how games are created
-and experienced.
+    <id>http://arxiv.org/abs/2503.18899v1</id>
+    <updated>2025-03-24T17:13:25Z</updated>
+    <published>2025-03-24T17:13:25Z</published>
+    <title>Statistical Proof of Execution (SPEX)</title>
+    <summary>  Many real-world applications are increasingly incorporating automated
+decision-making, driven by the widespread adoption of ML/AI inference for
+planning and guidance. This study examines the growing need for verifiable
+computing in autonomous decision-making. We formalize the problem of verifiable
+computing and introduce a sampling-based protocol that is significantly faster,
+more cost-effective, and simpler than existing methods. Furthermore, we tackle
+the challenges posed by non-determinism, proposing a set of strategies to
+effectively manage common scenarios.
 </summary>
     <author>
-      <name>Jiwen Yu</name>
+      <name>Michele Dallachiesa</name>
     </author>
     <author>
-      <name>Yiran Qin</name>
+      <name>Antonio Pitasi</name>
     </author>
     <author>
-      <name>Haoxuan Che</name>
+      <name>David Pinger</name>
     </author>
     <author>
-      <name>Quande Liu</name>
+      <name>Josh Goodbody</name>
     </author>
     <author>
-      <name>Xintao Wang</name>
+      <name>Luis Vaello</name>
     </author>
-    <author>
-      <name>Pengfei Wan</name>
-    </author>
-    <author>
-      <name>Di Zhang</name>
-    </author>
-    <author>
-      <name>Xihui Liu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.17359v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17359v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.17347v1</id>
-    <updated>2025-03-21T17:48:14Z</updated>
-    <published>2025-03-21T17:48:14Z</published>
-    <title>Dereflection Any Image with Diffusion Priors and Diversified Data</title>
-    <summary>  Reflection removal of a single image remains a highly challenging task due to
-the complex entanglement between target scenes and unwanted reflections.
-Despite significant progress, existing methods are hindered by the scarcity of
-high-quality, diverse data and insufficient restoration priors, resulting in
-limited generalization across various real-world scenarios. In this paper, we
-propose Dereflection Any Image, a comprehensive solution with an efficient data
-preparation pipeline and a generalizable model for robust reflection removal.
-First, we introduce a dataset named Diverse Reflection Removal (DRR) created by
-randomly rotating reflective mediums in target scenes, enabling variation of
-reflection angles and intensities, and setting a new benchmark in scale,
-quality, and diversity. Second, we propose a diffusion-based framework with
-one-step diffusion for deterministic outputs and fast inference. To ensure
-stable learning, we design a three-stage progressive training strategy,
-including reflection-invariant finetuning to encourage consistent outputs
-across varying reflection patterns that characterize our dataset. Extensive
-experiments show that our method achieves SOTA performance on both common
-benchmarks and challenging in-the-wild images, showing superior generalization
-across diverse real-world scenes.
-</summary>
-    <author>
-      <name>Jichen Hu</name>
-    </author>
-    <author>
-      <name>Chen Yang</name>
-    </author>
-    <author>
-      <name>Zanwei Zhou</name>
-    </author>
-    <author>
-      <name>Jiemin Fang</name>
-    </author>
-    <author>
-      <name>Xiaokang Yang</name>
-    </author>
-    <author>
-      <name>Qi Tian</name>
-    </author>
-    <author>
-      <name>Wei Shen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.17347v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17347v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.17340v1</id>
-    <updated>2025-03-21T17:42:50Z</updated>
-    <published>2025-03-21T17:42:50Z</published>
-    <title>Align Your Rhythm: Generating Highly Aligned Dance Poses with
-  Gating-Enhanced Rhythm-Aware Feature Representation</title>
-    <summary>  Automatically generating natural, diverse and rhythmic human dance movements
-driven by music is vital for virtual reality and film industries. However,
-generating dance that naturally follows music remains a challenge, as existing
-methods lack proper beat alignment and exhibit unnatural motion dynamics. In
-this paper, we propose Danceba, a novel framework that leverages gating
-mechanism to enhance rhythm-aware feature representation for music-driven dance
-generation, which achieves highly aligned dance poses with enhanced rhythmic
-sensitivity. Specifically, we introduce Phase-Based Rhythm Extraction (PRE) to
-precisely extract rhythmic information from musical phase data, capitalizing on
-the intrinsic periodicity and temporal structures of music. Additionally, we
-propose Temporal-Gated Causal Attention (TGCA) to focus on global rhythmic
-features, ensuring that dance movements closely follow the musical rhythm. We
-also introduce Parallel Mamba Motion Modeling (PMMM) architecture to separately
-model upper and lower body motions along with musical features, thereby
-improving the naturalness and diversity of generated dance movements. Extensive
-experiments confirm that Danceba outperforms state-of-the-art methods,
-achieving significantly better rhythmic alignment and motion diversity. Project
-page: https://danceba.github.io/ .
-</summary>
-    <author>
-      <name>Congyi Fan</name>
-    </author>
-    <author>
-      <name>Jian Guan</name>
-    </author>
-    <author>
-      <name>Xuanjia Zhao</name>
-    </author>
-    <author>
-      <name>Dongli Xu</name>
-    </author>
-    <author>
-      <name>Youtian Lin</name>
-    </author>
-    <author>
-      <name>Tong Ye</name>
-    </author>
-    <author>
-      <name>Pengming Feng</name>
-    </author>
-    <author>
-      <name>Haiwei Pan</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.17340v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17340v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2503.18899v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18899v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.17316v1</id>
-    <updated>2025-03-21T17:12:30Z</updated>
-    <published>2025-03-21T17:12:30Z</published>
-    <title>Pow3R: Empowering Unconstrained 3D Reconstruction with Camera and Scene
-  Priors</title>
-    <summary>  We present Pow3r, a novel large 3D vision regression model that is highly
-versatile in the input modalities it accepts. Unlike previous feed-forward
-models that lack any mechanism to exploit known camera or scene priors at test
-time, Pow3r incorporates any combination of auxiliary information such as
-intrinsics, relative pose, dense or sparse depth, alongside input images,
-within a single network. Building upon the recent DUSt3R paradigm, a
-transformer-based architecture that leverages powerful pre-training, our
-lightweight and versatile conditioning acts as additional guidance for the
-network to predict more accurate estimates when auxiliary information is
-available. During training we feed the model with random subsets of modalities
-at each iteration, which enables the model to operate under different levels of
-known priors at test time. This in turn opens up new capabilities, such as
-performing inference in native image resolution, or point-cloud completion. Our
-experiments on 3D reconstruction, depth completion, multi-view depth
-prediction, multi-view stereo, and multi-view pose estimation tasks yield
-state-of-the-art results and confirm the effectiveness of Pow3r at exploiting
-all available information. The project webpage is
-https://europe.naverlabs.com/pow3r.
+    <id>http://arxiv.org/abs/2503.18893v1</id>
+    <updated>2025-03-24T17:06:37Z</updated>
+    <published>2025-03-24T17:06:37Z</published>
+    <title>xKV: Cross-Layer SVD for KV-Cache Compression</title>
+    <summary>  Large Language Models (LLMs) with long context windows enable powerful
+applications but come at the cost of high memory consumption to store the Key
+and Value states (KV-Cache). Recent studies attempted to merge KV-cache from
+multiple layers into shared representations, yet these approaches either
+require expensive pretraining or rely on assumptions of high per-token cosine
+similarity across layers which generally does not hold in practice. We find
+that the dominant singular vectors are remarkably well-aligned across multiple
+layers of the KV-Cache. Exploiting this insight, we propose xKV, a simple
+post-training method that applies Singular Value Decomposition (SVD) on the
+KV-Cache of grouped layers. xKV consolidates the KV-Cache of multiple layers
+into a shared low-rank subspace, significantly reducing KV-Cache sizes. Through
+extensive evaluations on the RULER long-context benchmark with widely-used LLMs
+(e.g., Llama-3.1 and Qwen2.5), xKV achieves up to 6.8x higher compression rates
+than state-of-the-art inter-layer technique while improving accuracy by 2.7%.
+Moreover, xKV is compatible with the emerging Multi-Head Latent Attention (MLA)
+(e.g., DeepSeek-Coder-V2), yielding a notable 3x compression rates on coding
+tasks without performance degradation. These results highlight xKV's strong
+capability and versatility in addressing memory bottlenecks for long-context
+LLM inference. Our code is publicly available at:
+https://github.com/abdelfattah-lab/xKV.
 </summary>
     <author>
-      <name>Wonbong Jang</name>
+      <name>Chi-Chih Chang</name>
     </author>
     <author>
-      <name>Philippe Weinzaepfel</name>
+      <name>Chien-Yu Lin</name>
     </author>
     <author>
-      <name>Vincent Leroy</name>
+      <name>Yash Akhauri</name>
     </author>
     <author>
-      <name>Lourdes Agapito</name>
+      <name>Wei-Cheng Lin</name>
     </author>
     <author>
-      <name>Jerome Revaud</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">CVPR 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.17316v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17316v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.17314v1</id>
-    <updated>2025-03-21T17:10:32Z</updated>
-    <published>2025-03-21T17:10:32Z</published>
-    <title>Numerical Investigation of Preferential Flow Paths in Enzymatically
-  Induced Calcite Precipitation supported by Bayesian Model Analysis</title>
-    <summary>  The usability of enzymatically induced calcium carbonate precipitation (EICP)
-as a method for altering porous-media properties, soil stabilization, or
-biocementation depends on our ability to predict the spatial distribution of
-the precipitated calcium carbonate in porous media. While current REV-scale
-models are able to reproduce the main features of laboratory experiments, they
-neglect effects like the formation of preferential flow paths and the
-appearance of multiple polymorphs of calcium carbonate with differing
-properties. We show that extending an existing EICP model by the conceptual
-assumption of a mobile precipitate, amorphous calcium carbonate (ACC), allows
-for the formation of preferential flow paths when the initial porosity is
-heterogeneous. We apply sensitivity analysis and Bayesian inference to gain an
-understanding of the influence of characteristic parameters of ACC that are
-uncertain or unknown and compare two variations of the model based on different
-formulations of the ACC detachment term to analyse the plausibility of our
-hypothesis. An arbitrary Polynomial Chaos (aPC) surrogate model is trained
-based on the full model and used to reduce the computational cost of this
-study.
-</summary>
-    <author>
-      <name>Rebecca Kohlhaas</name>
+      <name>Kai-Chiang Wu</name>
     </author>
     <author>
-      <name>Johannes Hommel</name>
+      <name>Luis Ceze</name>
     </author>
     <author>
-      <name>Felix Weinhardt</name>
+      <name>Mohamed S. Abdelfattah</name>
     </author>
-    <author>
-      <name>Holger Class</name>
-    </author>
-    <author>
-      <name>Sergey Oladyshkin</name>
-    </author>
-    <author>
-      <name>Bernd Flemisch</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.17314v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17314v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.17291v1</id>
-    <updated>2025-03-21T16:42:45Z</updated>
-    <published>2025-03-21T16:42:45Z</published>
-    <title>Linear sigma model with quarks and Polyakov loop in rotation: phase
-  diagrams, Tolman-Ehrenfest law and mechanical properties</title>
-    <summary>  We study the effect of rotation on the confining and chiral properties of QCD
-using the Polyakov-enhanced linear sigma model coupled to quarks. Working in
-the homogeneous approximation, we obtain the phase diagram at finite
-temperature, baryon density and angular frequency, taking into account the
-causality constraint enforced by the spectral boundary conditions at a
-cylindrical surface. We explicitly address various limits with respect to
-system size, angular frequency and chemical potential. We demonstrate that, in
-this model, the critical temperatures of both transitions diminish in response
-to the increasing rotation, being in contradiction with the first-principle
-lattice results. In the limit of large volume, the thermodynamics of the model
-is consistent with the Tolman-Ehrenfest law. We also compute the mechanical
-characteristics of rotating plasma such as the moment of inertia and the $K_4$
-shape coefficient.
-</summary>
-    <author>
-      <name>Pracheta Singha</name>
-    </author>
-    <author>
-      <name>Sergiu Busuioc</name>
-    </author>
-    <author>
-      <name>Victor E. Ambrus</name>
-    </author>
-    <author>
-      <name>Maxim N. Chernodub</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">62 pages, 26 figures, 2 tables, insane numerics</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.17291v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17291v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.17290v1</id>
-    <updated>2025-03-21T16:41:10Z</updated>
-    <published>2025-03-21T16:41:10Z</published>
-    <title>Calibration Strategies for Robust Causal Estimation: Theoretical and
-  Empirical Insights on Propensity Score Based Estimators</title>
-    <summary>  The partitioning of data for estimation and calibration critically impacts
-the performance of propensity score based estimators like inverse probability
-weighting (IPW) and double/debiased machine learning (DML) frameworks. We
-extend recent advances in calibration techniques for propensity score
-estimation, improving the robustness of propensity scores in challenging
-settings such as limited overlap, small sample sizes, or unbalanced data. Our
-contributions are twofold: First, we provide a theoretical analysis of the
-properties of calibrated estimators in the context of DML. To this end, we
-refine existing calibration frameworks for propensity score models, with a
-particular emphasis on the role of sample-splitting schemes in ensuring valid
-causal inference. Second, through extensive simulations, we show that
-calibration reduces variance of inverse-based propensity score estimators while
-also mitigating bias in IPW, even in small-sample regimes. Notably, calibration
-improves stability for flexible learners (e.g., gradient boosting) while
-preserving the doubly robust properties of DML. A key insight is that, even
-when methods perform well without calibration, incorporating a calibration step
-does not degrade performance, provided that an appropriate sample-splitting
-approach is chosen.
-</summary>
-    <author>
-      <name>Jan Rabenseifner</name>
-    </author>
-    <author>
-      <name>Sven Klaassen</name>
-    </author>
-    <author>
-      <name>Jannis Kueck</name>
-    </author>
-    <author>
-      <name>Philipp Bach</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.17290v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17290v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2503.18893v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.18893v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.17269v1</id>
-    <updated>2025-03-21T16:11:21Z</updated>
-    <published>2025-03-21T16:11:21Z</published>
-    <title>Recovering Pulse Waves from Video Using Deep Unrolling and Deep
-  Equilibrium Models</title>
-    <summary>  Camera-based monitoring of vital signs, also known as imaging
-photoplethysmography (iPPG), has seen applications in driver-monitoring,
-perfusion assessment in surgical settings, affective computing, and more. iPPG
-involves sensing the underlying cardiac pulse from video of the skin and
-estimating vital signs such as the heart rate or a full pulse waveform. Some
-previous iPPG methods impose model-based sparse priors on the pulse signals and
-use iterative optimization for pulse wave recovery, while others use end-to-end
-black-box deep learning methods. In contrast, we introduce methods that combine
-signal processing and deep learning methods in an inverse problem framework.
-Our methods estimate the underlying pulse signal and heart rate from facial
-video by learning deep-network-based denoising operators that leverage deep
-algorithm unfolding and deep equilibrium models. Experiments show that our
-methods can denoise an acquired signal from the face and infer the correct
-underlying pulse rate, achieving state-of-the-art heart rate estimation
-performance on well-known benchmarks, all with less than one-fifth the number
-of learnable parameters as the closest competing method.
-</summary>
-    <author>
-      <name>Vineet R Shenoy</name>
-    </author>
-    <author>
-      <name>Suhas Lohit</name>
-    </author>
-    <author>
-      <name>Hassan Mansour</name>
-    </author>
-    <author>
-      <name>Rama Chellappa</name>
-    </author>
-    <author>
-      <name>Tim K. Marks</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 9 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.17269v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.17269v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
