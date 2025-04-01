@@ -1,635 +1,459 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-03-31T00:56:04Z -->
+<!-- Last updated: 2025-04-01T00:59:42Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-03-30T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">109640</opensearch:totalResults>
+  <updated>2025-03-31T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">109698</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2503.21782v1</id>
-    <updated>2025-03-27T17:59:58Z</updated>
-    <published>2025-03-27T17:59:58Z</published>
-    <title>Mobile-VideoGPT: Fast and Accurate Video Understanding Language Model</title>
-    <summary>  Video understanding models often struggle with high computational
-requirements, extensive parameter counts, and slow inference speed, making them
-inefficient for practical use. To tackle these challenges, we propose
-Mobile-VideoGPT, an efficient multimodal framework designed to operate with
-fewer than a billion parameters. Unlike traditional video large multimodal
-models (LMMs), Mobile-VideoGPT consists of lightweight dual visual encoders,
-efficient projectors, and a small language model (SLM), enabling real-time
-throughput. To further improve efficiency, we present an Attention-Based Frame
-Scoring mechanism to select the key-frames, along with an efficient token
-projector that prunes redundant visual tokens and preserves essential
-contextual cues. We evaluate our model across well-established six video
-understanding benchmarks (e.g., MVBench, EgoSchema, NextQA, and PercepTest).
-Our results show that Mobile-VideoGPT-0.5B can generate up to 46 tokens per
-second while outperforming existing state-of-the-art 0.5B-parameter models by 6
-points on average with 40% fewer parameters and more than 2x higher throughput.
-Our code and models are publicly available at:
-https://github.com/Amshaker/Mobile-VideoGPT.
+    <id>http://arxiv.org/abs/2503.22675v1</id>
+    <updated>2025-03-28T17:59:03Z</updated>
+    <published>2025-03-28T17:59:03Z</published>
+    <title>Think Before Recommend: Unleashing the Latent Reasoning Power for
+  Sequential Recommendation</title>
+    <summary>  Sequential Recommendation (SeqRec) aims to predict the next item by capturing
+sequential patterns from users' historical interactions, playing a crucial role
+in many real-world recommender systems. However, existing approaches
+predominantly adopt a direct forward computation paradigm, where the final
+hidden state of the sequence encoder serves as the user representation. We
+argue that this inference paradigm, due to its limited computational depth,
+struggles to model the complex evolving nature of user preferences and lacks a
+nuanced understanding of long-tail items, leading to suboptimal performance. To
+address this issue, we propose \textbf{ReaRec}, the first inference-time
+computing framework for recommender systems, which enhances user
+representations through implicit multi-step reasoning. Specifically, ReaRec
+autoregressively feeds the sequence's last hidden state into the sequential
+recommender while incorporating special reasoning position embeddings to
+decouple the original item encoding space from the multi-step reasoning space.
+Moreover, we introduce two lightweight reasoning-based learning methods,
+Ensemble Reasoning Learning (ERL) and Progressive Reasoning Learning (PRL), to
+further effectively exploit ReaRec's reasoning potential. Extensive experiments
+on five public real-world datasets and different SeqRec architectures
+demonstrate the generality and effectiveness of our proposed ReaRec.
+Remarkably, post-hoc analyses reveal that ReaRec significantly elevates the
+performance ceiling of multiple sequential recommendation backbones by
+approximately 30\%-50\%. Thus, we believe this work can open a new and
+promising avenue for future research in inference-time computing for sequential
+recommendation.
 </summary>
     <author>
-      <name>Abdelrahman Shaker</name>
+      <name>Jiakai Tang</name>
     </author>
     <author>
-      <name>Muhammad Maaz</name>
+      <name>Sunhao Dai</name>
     </author>
     <author>
-      <name>Chenhui Gou</name>
+      <name>Teng Shi</name>
     </author>
     <author>
-      <name>Hamid Rezatofighi</name>
+      <name>Jun Xu</name>
     </author>
     <author>
-      <name>Salman Khan</name>
+      <name>Xu Chen</name>
     </author>
     <author>
-      <name>Fahad Shahbaz Khan</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Technical Report. Project Page:
-  https://amshaker.github.io/Mobile-VideoGPT</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21782v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21782v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21758v1</id>
-    <updated>2025-03-27T17:57:07Z</updated>
-    <published>2025-03-27T17:57:07Z</published>
-    <title>Lumina-Image 2.0: A Unified and Efficient Image Generative Framework</title>
-    <summary>  We introduce Lumina-Image 2.0, an advanced text-to-image generation framework
-that achieves significant progress compared to previous work, Lumina-Next.
-Lumina-Image 2.0 is built upon two key principles: (1) Unification - it adopts
-a unified architecture (Unified Next-DiT) that treats text and image tokens as
-a joint sequence, enabling natural cross-modal interactions and allowing
-seamless task expansion. Besides, since high-quality captioners can provide
-semantically well-aligned text-image training pairs, we introduce a unified
-captioning system, Unified Captioner (UniCap), specifically designed for T2I
-generation tasks. UniCap excels at generating comprehensive and accurate
-captions, accelerating convergence and enhancing prompt adherence. (2)
-Efficiency - to improve the efficiency of our proposed model, we develop
-multi-stage progressive training strategies and introduce inference
-acceleration techniques without compromising image quality. Extensive
-evaluations on academic benchmarks and public text-to-image arenas show that
-Lumina-Image 2.0 delivers strong performances even with only 2.6B parameters,
-highlighting its scalability and design efficiency. We have released our
-training details, code, and models at
-https://github.com/Alpha-VLLM/Lumina-Image-2.0.
-</summary>
-    <author>
-      <name>Qi Qin</name>
+      <name>Wen Chen</name>
     </author>
     <author>
-      <name>Le Zhuo</name>
+      <name>Wu Jian</name>
     </author>
     <author>
-      <name>Yi Xin</name>
+      <name>Yuning Jiang</name>
     </author>
-    <author>
-      <name>Ruoyi Du</name>
-    </author>
-    <author>
-      <name>Zhen Li</name>
-    </author>
-    <author>
-      <name>Bin Fu</name>
-    </author>
-    <author>
-      <name>Yiting Lu</name>
-    </author>
-    <author>
-      <name>Jiakang Yuan</name>
-    </author>
-    <author>
-      <name>Xinyue Li</name>
-    </author>
-    <author>
-      <name>Dongyang Liu</name>
-    </author>
-    <author>
-      <name>Xiangyang Zhu</name>
-    </author>
-    <author>
-      <name>Manyuan Zhang</name>
-    </author>
-    <author>
-      <name>Will Beddow</name>
-    </author>
-    <author>
-      <name>Erwann Millon</name>
-    </author>
-    <author>
-      <name>Victor Perez</name>
-    </author>
-    <author>
-      <name>Wenhai Wang</name>
-    </author>
-    <author>
-      <name>Conghui He</name>
-    </author>
-    <author>
-      <name>Bo Zhang</name>
-    </author>
-    <author>
-      <name>Xiaohong Liu</name>
-    </author>
-    <author>
-      <name>Hongsheng Li</name>
-    </author>
-    <author>
-      <name>Yu Qiao</name>
-    </author>
-    <author>
-      <name>Chang Xu</name>
-    </author>
-    <author>
-      <name>Peng Gao</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Tech Report, 21 pages, 12 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21758v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21758v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21720v1</id>
-    <updated>2025-03-27T17:34:25Z</updated>
-    <published>2025-03-27T17:34:25Z</published>
-    <title>Collab: Controlled Decoding using Mixture of Agents for LLM Alignment</title>
-    <summary>  Alignment of Large Language models (LLMs) is crucial for safe and trustworthy
-deployment in applications. Reinforcement learning from human feedback (RLHF)
-has emerged as an effective technique to align LLMs to human preferences and
-broader utilities, but it requires updating billions of model parameters, which
-is computationally expensive. Controlled Decoding, by contrast, provides a
-mechanism for aligning a model at inference time without retraining. However,
-single-agent decoding approaches often struggle to adapt to diverse tasks due
-to the complexity and variability inherent in these tasks. To strengthen the
-test-time performance w.r.t the target task, we propose a mixture of
-agent-based decoding strategies leveraging the existing off-the-shelf aligned
-LLM policies. Treating each prior policy as an agent in the spirit of mixture
-of agent collaboration, we develop a decoding method that allows for
-inference-time alignment through a token-level selection strategy among
-multiple agents. For each token, the most suitable LLM is dynamically chosen
-from a pool of models based on a long-term utility metric. This
-policy-switching mechanism ensures optimal model selection at each step,
-enabling efficient collaboration and alignment among LLMs during decoding.
-Theoretical analysis of our proposed algorithm establishes optimal performance
-with respect to the target task represented via a target reward for the given
-off-the-shelf models. We conduct comprehensive empirical evaluations with
-open-source aligned models on diverse tasks and preferences, which demonstrates
-the merits of this approach over single-agent decoding baselines. Notably,
-Collab surpasses the current SoTA decoding strategy, achieving an improvement
-of up to 1.56x in average reward and 71.89% in GPT-4 based win-tie rate.
-</summary>
-    <author>
-      <name>Souradip Chakraborty</name>
-    </author>
-    <author>
-      <name>Sujay Bhatt</name>
-    </author>
-    <author>
-      <name>Udari Madhushani Sehwag</name>
-    </author>
-    <author>
-      <name>Soumya Suvra Ghosal</name>
-    </author>
-    <author>
-      <name>Jiahao Qiu</name>
-    </author>
-    <author>
-      <name>Mengdi Wang</name>
-    </author>
-    <author>
-      <name>Dinesh Manocha</name>
-    </author>
-    <author>
-      <name>Furong Huang</name>
-    </author>
-    <author>
-      <name>Alec Koppel</name>
-    </author>
-    <author>
-      <name>Sumitra Ganesh</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to ICLR 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21720v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21720v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2503.22675v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22675v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21714v1</id>
-    <updated>2025-03-27T17:26:32Z</updated>
-    <published>2025-03-27T17:26:32Z</published>
-    <title>As easy as PIE: understanding when pruning causes language models to
-  disagree</title>
-    <summary>  Language Model (LM) pruning compresses the model by removing weights, nodes,
-or other parts of its architecture. Typically, pruning focuses on the resulting
-efficiency gains at the cost of effectiveness. However, when looking at how
-individual data points are affected by pruning, it turns out that a particular
-subset of data points always bears most of the brunt (in terms of reduced
-accuracy) when pruning, but this effect goes unnoticed when reporting the mean
-accuracy of all data points. These data points are called PIEs and have been
-studied in image processing, but not in NLP. In a study of various NLP
-datasets, pruning methods, and levels of compression, we find that PIEs impact
-inference quality considerably, regardless of class frequency, and that BERT is
-more prone to this than BiLSTM. We also find that PIEs contain a high amount of
-data points that have the largest influence on how well the model generalises
-to unseen data. This means that when pruning, with seemingly moderate loss to
-accuracy across all data points, we in fact hurt tremendously those data points
-that matter the most. We trace what makes PIEs both hard and impactful to
-inference to their overall longer and more semantically complex text. These
-findings are novel and contribute to understanding how LMs are affected by
-pruning. The code is available at: https://github.com/pietrotrope/AsEasyAsPIE
-</summary>
-    <author>
-      <name>Pietro Tropeano</name>
-    </author>
-    <author>
-      <name>Maria Maistro</name>
-    </author>
-    <author>
-      <name>Tuukka Ruotsalo</name>
-    </author>
-    <author>
-      <name>Christina Lioma</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to NAACL 2025 (Findings)</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21714v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21714v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2503.21706v1</id>
-    <updated>2025-03-27T17:20:35Z</updated>
-    <published>2025-03-27T17:20:35Z</published>
-    <title>Flashlights: Prospects for constraining the Initial Mass Function around
-  cosmic noon with caustic-crossing events</title>
-    <summary>  The Flashlights program with the Hubble Space Telescope imaged the six Hubble
-Frontier Fields galaxy clusters in two epochs and detected twenty transients.
-These are primarily expected to be caustic-crossing events (CCEs) where bright
-stars in distant lensed galaxies, typically at redshift $z\approx1$--3, get
-temporarily magnified close to cluster caustics. Since CCEs are generally
-biased toward more massive and luminous stars, they offer a unique route for
-probing the high end of the stellar mass function. We take advantage of the
-Flashlights event statistics to place preliminary constraints on the stellar
-initial mass function (IMF) around cosmic noon. The photometry (along with
-spectral information) of lensed arcs is used to infer their various stellar
-properties, and stellar synthesis models are used to evolve a recent stellar
-population in them. We estimate the microlens surface density near each arc
-and, together with existing lens models and simple formalism for CCEs,
-calculate the expected rate for a given IMF. We find that, on average, a
-Salpeter-like IMF ($\alpha=2.35$) underpredicts the number of observed CCEs by
-a factor of ${\sim}0.7$, and a top-heavy IMF ($\alpha=1.00$) overpredicts by a
-factor of ${\sim}1.7$, suggesting that the average IMF slope may lie somewhere
-in between. However, given the large uncertainties associated with estimating
-the stellar populations, these results are strongly model-dependent.
-Nevertheless, we introduce a useful framework for constraining the IMF using
-CCEs. Observations with JWST are already yielding many more CCEs and will soon
-enable more stringent constraints on the IMF at a range of redshifts.
+    <id>http://arxiv.org/abs/2503.22616v1</id>
+    <updated>2025-03-28T16:58:27Z</updated>
+    <published>2025-03-28T16:58:27Z</published>
+    <title>A Unified Approach for Estimating Various Treatment Effects in Causal
+  Inference</title>
+    <summary>  In this paper, we introduce a unified estimator to analyze various treatment
+effects in causal inference, including but not limited to the average treatment
+effect (ATE) and the quantile treatment effect (QTE). The proposed estimator is
+developed under the statistical functional and cumulative distribution function
+structure, which leads to a flexible and robust estimator and covers some
+frequent treatment effects. In addition, our approach also takes variable
+selection into account, so that informative and network structure in
+confounders can be identified and be implemented in our estimation procedure.
+The theoretical properties, including variable selection consistency and
+asymptotic normality of the statistical functional estimator, are established.
+Various treatment effects estimations are also conducted in numerical studies,
+and the results reveal that the proposed estimator generally outperforms the
+existing methods and is more efficient than its competitors.
 </summary>
     <author>
-      <name>Ashish Kumar Meena</name>
+      <name>Kuan-Hsun Wu</name>
     </author>
     <author>
-      <name>Sung Kei Li</name>
+      <name>Li-Pang Chen</name>
     </author>
-    <author>
-      <name>Adi Zitrin</name>
-    </author>
-    <author>
-      <name>Patrick L. Kelly</name>
-    </author>
-    <author>
-      <name>Tom Broadhurst</name>
-    </author>
-    <author>
-      <name>Wenlei Chen</name>
-    </author>
-    <author>
-      <name>Jose M. Diego</name>
-    </author>
-    <author>
-      <name>Alexei V. Filippenko</name>
-    </author>
-    <author>
-      <name>Lukas J. Furtak</name>
-    </author>
-    <author>
-      <name>Liliya L. R. Williams</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages. 6 figures. Comments welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21706v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21706v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21702v1</id>
-    <updated>2025-03-27T17:06:09Z</updated>
-    <published>2025-03-27T17:06:09Z</published>
-    <title>Enabling Robust Exoplanet Atmospheric Retrievals with Gaussian Processes</title>
-    <summary>  Atmospheric retrievals are essential tools for interpreting exoplanet
-transmission and eclipse spectra, enabling quantitative constraints on the
-chemical composition, aerosol properties, and thermal structure of planetary
-atmospheres. The James Webb Space Telescope (JWST) offers unprecedented
-spectral precision, resolution, and wavelength coverage, unlocking
-transformative insights into the formation, evolution, climate, and potential
-habitability of planetary systems. However, this opportunity is accompanied by
-challenges: modeling assumptions and unaccounted-for noise or signal sources
-can bias retrieval outcomes and their interpretation. To address these
-limitations, we introduce a Gaussian Process (GP)-aided atmospheric retrieval
-framework that flexibly accounts for unmodeled features in exoplanet spectra,
-whether global or localized. We validate this method on synthetic JWST
-observations and show that GP-aided retrievals reduce bias in inferred
-abundances and better capture model-data mismatches than traditional
-approaches. We also introduce the concept of mean squared error to quantify the
-trade-off between bias and variance, arguing that this metric more accurately
-reflects retrieval performance than bias alone. We then reanalyze the
-NIRISS/SOSS JWST transmission spectrum of WASP-96 b, finding that GP-aided
-retrievals yield broader constraints on CO$_2$ and H$_2$O, alleviating tension
-between previous retrieval results and equilibrium predictions. Our GP
-framework provides precise and accurate constraints while highlighting regions
-where models fail to explain the data. As JWST matures and future facilities
-come online, a deeper understanding of the limitations of both data and models
-will be essential, and GP-enabled retrievals like the one presented here offer
-a principled path forward.
-</summary>
-    <author>
-      <name>Yoav Rotman</name>
-    </author>
-    <author>
-      <name>Luis Welbanks</name>
-    </author>
-    <author>
-      <name>Michael R. Line</name>
-    </author>
-    <author>
-      <name>Peter McGill</name>
-    </author>
-    <author>
-      <name>Michael Radica</name>
-    </author>
-    <author>
-      <name>Matthew C. Nixon</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to AAS Journals, 25 pages, 13 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21702v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21702v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21699v1</id>
-    <updated>2025-03-27T17:04:33Z</updated>
-    <published>2025-03-27T17:04:33Z</published>
-    <title>MAVERIX: Multimodal Audio-Visual Evaluation Reasoning IndeX</title>
-    <summary>  Frontier models have either been language-only or have primarily focused on
-vision and language modalities. Although recent advancements in models with
-vision and audio understanding capabilities have shown substantial progress,
-the field lacks a standardized evaluation framework for thoroughly assessing
-their cross-modality perception performance. We introduce MAVERIX~(Multimodal
-Audio-Visual Evaluation Reasoning IndeX), a novel benchmark with 700 videos and
-2,556 questions explicitly designed to evaluate multimodal models through tasks
-that necessitate close integration of video and audio information. MAVERIX
-uniquely provides models with audiovisual tasks, closely mimicking the
-multimodal perceptual experiences available to humans during inference and
-decision-making processes. To our knowledge, MAVERIX is the first benchmark
-aimed explicitly at assessing comprehensive audiovisual integration.
-Experiments with state-of-the-art models, including Gemini 1.5 Pro and o1, show
-performance approaching human levels (around 70% accuracy), while human experts
-reach near-ceiling performance (95.1%). With standardized evaluation protocols,
-a rigorously annotated pipeline, and a public toolkit, MAVERIX establishes a
-challenging testbed for advancing audiovisual multimodal intelligence.
-</summary>
-    <author>
-      <name>Liuyue Xie</name>
-    </author>
-    <author>
-      <name>George Z. Wei</name>
-    </author>
-    <author>
-      <name>Avik Kuthiala</name>
-    </author>
-    <author>
-      <name>Ce Zheng</name>
-    </author>
-    <author>
-      <name>Ananya Bal</name>
-    </author>
-    <author>
-      <name>Mosam Dabhi</name>
-    </author>
-    <author>
-      <name>Liting Wen</name>
-    </author>
-    <author>
-      <name>Taru Rustagi</name>
-    </author>
-    <author>
-      <name>Ethan Lai</name>
-    </author>
-    <author>
-      <name>Sushil Khyalia</name>
-    </author>
-    <author>
-      <name>Rohan Choudhury</name>
-    </author>
-    <author>
-      <name>Morteza Ziyadi</name>
-    </author>
-    <author>
-      <name>Xu Zhang</name>
-    </author>
-    <author>
-      <name>Hao Yang</name>
-    </author>
-    <author>
-      <name>László A. Jeni</name>
-    </author>
-    <link href="http://arxiv.org/abs/2503.21699v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21699v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21694v1</id>
-    <updated>2025-03-27T16:59:15Z</updated>
-    <published>2025-03-27T16:59:15Z</published>
-    <title>Progressive Rendering Distillation: Adapting Stable Diffusion for
-  Instant Text-to-Mesh Generation without 3D Data</title>
-    <summary>  It is highly desirable to obtain a model that can generate high-quality 3D
-meshes from text prompts in just seconds. While recent attempts have adapted
-pre-trained text-to-image diffusion models, such as Stable Diffusion (SD), into
-generators of 3D representations (e.g., Triplane), they often suffer from poor
-quality due to the lack of sufficient high-quality 3D training data. Aiming at
-overcoming the data shortage, we propose a novel training scheme, termed as
-Progressive Rendering Distillation (PRD), eliminating the need for 3D
-ground-truths by distilling multi-view diffusion models and adapting SD into a
-native 3D generator. In each iteration of training, PRD uses the U-Net to
-progressively denoise the latent from random noise for a few steps, and in each
-step it decodes the denoised latent into 3D output. Multi-view diffusion
-models, including MVDream and RichDreamer, are used in joint with SD to distill
-text-consistent textures and geometries into the 3D outputs through score
-distillation. Since PRD supports training without 3D ground-truths, we can
-easily scale up the training data and improve generation quality for
-challenging text prompts with creative concepts. Meanwhile, PRD can accelerate
-the inference speed of the generation model in just a few steps. With PRD, we
-train a Triplane generator, namely TriplaneTurbo, which adds only $2.5\%$
-trainable parameters to adapt SD for Triplane generation. TriplaneTurbo
-outperforms previous text-to-3D generators in both efficiency and quality.
-Specifically, it can produce high-quality 3D meshes in 1.2 seconds and
-generalize well for challenging text input. The code is available at
-https://github.com/theEricMa/TriplaneTurbo.
-</summary>
-    <author>
-      <name>Zhiyuan Ma</name>
-    </author>
-    <author>
-      <name>Xinyue Liang</name>
-    </author>
-    <author>
-      <name>Rongyuan Wu</name>
-    </author>
-    <author>
-      <name>Xiangyu Zhu</name>
-    </author>
-    <author>
-      <name>Zhen Lei</name>
-    </author>
-    <author>
-      <name>Lei Zhang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to CVPR 2025.
-  Code:https://github.com/theEricMa/TriplaneTurbo.
-  Demo:https://huggingface.co/spaces/ZhiyuanthePony/TriplaneTurbo</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21694v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21694v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21687v1</id>
-    <updated>2025-03-27T16:54:22Z</updated>
-    <published>2025-03-27T16:54:22Z</published>
-    <title>Exploiting synergies between JWST and cosmic 21-cm observations to
-  uncover star formation in the early Universe</title>
-    <summary>  In the current era of JWST, we continue to uncover a wealth of information
-about the Universe deep into the Epoch of Reionization. In this work, we run a
-suite of simulations using the code 21cmSPACE, to explore the astrophysical
-properties of galaxies in the early Universe, and their impact on high-redshift
-observables. We use multi-wavelength observational data including the global
-21-cm signal and power spectrum limits from SARAS~3 and HERA respectively,
-present-day diffuse X-ray and radio backgrounds, and UV luminosity functions
-(UVLFs) from HST and JWST in the range $z=6-14.5$ to derive our constraints. We
-constrain a flexible model of halo-mass and redshift dependent star-formation
-efficiency (SFE), defined as the gas fraction converted into stars, and find
-that it is best described by little to no redshift evolution at $z\approx6-10$
-and rapid evolution at $z\approx10-15$. We derive Bayesian functional posterior
-distributions for the SFE across this redshift range, inferring that a halo of
-mass $M_h=10^{10}\text{M}_\odot$ has an efficiency of $2-3\%$ at $z\lesssim10$,
-$12\%$ at $z=12$ and $26\%$ at $z=15$. We also find, through synergy between
-SARAS~3 and UVLFs, that the minimum circular velocity for star-formation in
-halos is $V_c = 16.9^{+25.7}_{-9.5}\text{km s}^{-1}$ or equivalently
-$\log_{10}(M_\text{crit}/\text{M}_\odot) = 8.29^{+1.21}_{-1.08}$ at $z=6$.
-Alongside these star-formation constraints, we find the X-ray and radio
-efficiencies of early galaxies to be $f_X = 0.5^{+6.3}_{-0.3}$ and $f_r
-\lesssim 11.7$ respectively, improving upon existing works that do not use UVLF
-data. Our results demonstrate the critical role of UVLFs in constraining the
-early Universe, and its synergies with 21-cm observations, alongside other
-multi-wavelength observational datasets.
-</summary>
-    <author>
-      <name>Jiten Dhandha</name>
-    </author>
-    <author>
-      <name>Thomas Gessey-Jones</name>
-    </author>
-    <author>
-      <name>Harry T. J. Bevins</name>
-    </author>
-    <author>
-      <name>Simon Pochinda</name>
-    </author>
-    <author>
-      <name>Anastasia Fialkov</name>
-    </author>
-    <author>
-      <name>Sandro Tacchella</name>
-    </author>
-    <author>
-      <name>Eloy de Lera Acedo</name>
-    </author>
-    <author>
-      <name>Saurabh Singh</name>
-    </author>
-    <author>
-      <name>Rennan Barkana</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 13 figures, 6 tables. Submitted to MNRAS. All comments
-  welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21687v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21687v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2503.21673v1</id>
-    <updated>2025-03-27T16:41:14Z</updated>
-    <published>2025-03-27T16:41:14Z</published>
-    <title>A friendly introduction to triangular transport</title>
-    <summary>  Decision making under uncertainty is a cross-cutting challenge in science and
-engineering. Most approaches to this challenge employ probabilistic
-representations of uncertainty. In complicated systems accessible only via data
-or black-box models, however, these representations are rarely known. We
-discuss how to characterize and manipulate such representations using
-triangular transport maps, which approximate any complex probability
-distribution as a transformation of a simple, well-understood distribution. The
-particular structure of triangular transport guarantees many desirable
-mathematical and computational properties that translate well into solving
-practical problems. Triangular maps are actively used for density estimation,
-(conditional) generative modelling, Bayesian inference, data assimilation,
-optimal experimental design, and related tasks. While there is ample literature
-on the development and theory of triangular transport methods, this manuscript
-provides a detailed introduction for scientists interested in employing measure
-transport without assuming a formal mathematical background. We build intuition
-for the key foundations of triangular transport, discuss many aspects of its
-practical implementation, and outline the frontiers of this field.
-</summary>
-    <author>
-      <name>Maximilian Ramgraber</name>
-    </author>
-    <author>
-      <name>Daniel Sharp</name>
-    </author>
-    <author>
-      <name>Mathieu Le Provost</name>
-    </author>
-    <author>
-      <name>Youssef Marzouk</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">46 pages, 17 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2503.21673v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2503.21673v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2503.22616v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22616v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="62-01, 62-02, 60-08, 65C05, 62F15, 65C20" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22600v1</id>
+    <updated>2025-03-28T16:44:28Z</updated>
+    <published>2025-03-28T16:44:28Z</published>
+    <title>Generative Latent Neural PDE Solver using Flow Matching</title>
+    <summary>  Autoregressive next-step prediction models have become the de-facto standard
+for building data-driven neural solvers to forecast time-dependent partial
+differential equations (PDEs). Denoise training that is closely related to
+diffusion probabilistic model has been shown to enhance the temporal stability
+of neural solvers, while its stochastic inference mechanism enables ensemble
+predictions and uncertainty quantification. In principle, such training
+involves sampling a series of discretized diffusion timesteps during both
+training and inference, inevitably increasing computational overhead. In
+addition, most diffusion models apply isotropic Gaussian noise on structured,
+uniform grids, limiting their adaptability to irregular domains. We propose a
+latent diffusion model for PDE simulation that embeds the PDE state in a
+lower-dimensional latent space, which significantly reduces computational
+costs. Our framework uses an autoencoder to map different types of meshes onto
+a unified structured latent grid, capturing complex geometries. By analyzing
+common diffusion paths, we propose to use a coarsely sampled noise schedule
+from flow matching for both training and testing. Numerical experiments show
+that the proposed model outperforms several deterministic baselines in both
+accuracy and long-term stability, highlighting the potential of diffusion-based
+approaches for robust data-driven PDE learning.
+</summary>
+    <author>
+      <name>Zijie Li</name>
+    </author>
+    <author>
+      <name>Anthony Zhou</name>
+    </author>
+    <author>
+      <name>Amir Barati Farimani</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">work in progress</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.22600v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22600v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22573v1</id>
+    <updated>2025-03-28T16:20:57Z</updated>
+    <published>2025-03-28T16:20:57Z</published>
+    <title>A Framework for Cryptographic Verifiability of End-to-End AI Pipelines</title>
+    <summary>  The increasing integration of Artificial Intelligence across multiple
+industry sectors necessitates robust mechanisms for ensuring transparency,
+trust, and auditability of its development and deployment. This topic is
+particularly important in light of recent calls in various jurisdictions to
+introduce regulation and legislation on AI safety. In this paper, we propose a
+framework for complete verifiable AI pipelines, identifying key components and
+analyzing existing cryptographic approaches that contribute to verifiability
+across different stages of the AI lifecycle, from data sourcing to training,
+inference, and unlearning. This framework could be used to combat
+misinformation by providing cryptographic proofs alongside AI-generated assets
+to allow downstream verification of their provenance and correctness. Our
+findings underscore the importance of ongoing research to develop cryptographic
+tools that are not only efficient for isolated AI processes, but that are
+efficiently `linkable' across different processes within the AI pipeline, to
+support the development of end-to-end verifiable AI technologies.
+</summary>
+    <author>
+      <name>Kar Balan</name>
+    </author>
+    <author>
+      <name>Robert Learney</name>
+    </author>
+    <author>
+      <name>Tim Wood</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to 11th ACM International Workshop on Security and Privacy
+  Analytics (IWSPA 2025)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2503.22573v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22573v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22567v1</id>
+    <updated>2025-03-28T16:14:06Z</updated>
+    <published>2025-03-28T16:14:06Z</published>
+    <title>Benchmarking Ultra-Low-Power $μ$NPUs</title>
+    <summary>  Efficient on-device neural network (NN) inference has various advantages over
+cloud-based processing, including predictable latency, enhanced privacy,
+greater reliability, and reduced operating costs for vendors. This has sparked
+the recent rapid development of microcontroller-scale NN accelerators, often
+referred to as neural processing units ($\mu$NPUs), designed specifically for
+ultra-low-power applications.
+  In this paper we present the first comparative evaluation of a number of
+commercially-available $\mu$NPUs, as well as the first independent benchmarks
+for several of these platforms. We develop and open-source a model compilation
+framework to enable consistent benchmarking of quantized models across diverse
+$\mu$NPU hardware. Our benchmark targets end-to-end performance and includes
+model inference latency, power consumption, and memory overhead, alongside
+other factors. The resulting analysis uncovers both expected performance trends
+as well as surprising disparities between hardware specifications and actual
+performance, including $\mu$NPUs exhibiting unexpected scaling behaviors with
+increasing model complexity. Our framework provides a foundation for further
+evaluation of $\mu$NPU platforms alongside valuable insights for both hardware
+designers and software developers in this rapidly evolving space.
+</summary>
+    <author>
+      <name>Josh Millar</name>
+    </author>
+    <author>
+      <name>Yushan Huang</name>
+    </author>
+    <author>
+      <name>Sarab Sethi</name>
+    </author>
+    <author>
+      <name>Hamed Haddadi</name>
+    </author>
+    <author>
+      <name>Anil Madhavapeddy</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.22567v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22567v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22562v1</id>
+    <updated>2025-03-28T16:04:20Z</updated>
+    <published>2025-03-28T16:04:20Z</published>
+    <title>Niyama : Breaking the Silos of LLM Inference Serving</title>
+    <summary>  The widespread adoption of Large Language Models (LLMs) has enabled diverse
+applications with very different latency requirements. Existing LLM serving
+frameworks rely on siloed infrastructure with coarse-grained workload
+segregation -- interactive and batch -- leading to inefficient resource
+utilization and limited support for fine-grained Quality-of-Service (QoS)
+differentiation. This results in operational inefficiencies, over-provisioning
+and poor load management during traffic surges.
+  We present Niyama, a novel QoS-driven inference serving system that enables
+efficient co-scheduling of diverse workloads on shared infrastructure. Niyama
+introduces fine-grained QoS classification allowing applications to specify
+precise latency requirements, and dynamically adapts scheduling decisions based
+on real-time system state. Leveraging the predictable execution characteristics
+of LLM inference, Niyama implements a dynamic chunking mechanism to improve
+overall throughput while maintaining strict QoS guarantees. Additionally,
+Niyama employs a hybrid prioritization policy that balances fairness and
+efficiency, and employs selective request relegation that enables graceful
+service degradation during overload conditions. Our evaluation demonstrates
+that Niyama increases serving capacity by 32% compared to current siloed
+deployments, while maintaining QoS guarantees. Notably, under extreme load, our
+system reduces SLO violations by an order of magnitude compared to current
+strategies.
+</summary>
+    <author>
+      <name>Kanishk Goel</name>
+    </author>
+    <author>
+      <name>Jayashree Mohan</name>
+    </author>
+    <author>
+      <name>Nipun Kwatra</name>
+    </author>
+    <author>
+      <name>Ravi Shreyas Anupindi</name>
+    </author>
+    <author>
+      <name>Ramachandran Ramjee</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.22562v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22562v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22551v1</id>
+    <updated>2025-03-28T15:51:27Z</updated>
+    <published>2025-03-28T15:51:27Z</published>
+    <title>Approximate stationarity in disjunctive optimization: concepts,
+  qualification conditions, and application to MPCCs</title>
+    <summary>  In this paper, we are concerned with stationarity conditions and
+qualification conditions for optimization problems with disjunctive
+constraints. This class covers, among others, optimization problems with
+complementarity, vanishing, or switching constraints which are notoriously
+challenging due to their highly combinatorial structure. The focus of our study
+is twofold. First, we investigate approximate stationarity conditions and the
+associated strict constraint qualifications which can be used to infer
+stationarity of local minimizers. While such concepts are already known in the
+context of so-called Mordukhovich-stationarity, we introduce suitable
+extensions associated with strong stationarity. Second, a qualification
+condition is established which, based on an approximately Mordukhovich- or
+strongly stationary point, can be used to infer its Mordukhovich- or strong
+stationarity, respectively. In contrast to the aforementioned strict constraint
+qualifications, this condition depends on the involved sequences justifying
+approximate stationarity and, thus, is not a constraint qualification in the
+narrower sense. However, it is much easier to verify as it merely requires to
+check the (positive) linear independence of a certain family of gradients. In
+fact, it provides a characterization of stationarity and, thus, is weaker than
+these strict constraint qualifications. In order to illustrate the obtained
+findings, they are applied to optimization problems with complementarity
+constraints where they can be naturally extended to the well-known concepts of
+weak and Clarke-stationarity.
+</summary>
+    <author>
+      <name>Isabella Käming</name>
+    </author>
+    <author>
+      <name>Patrick Mehlitz</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.22551v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22551v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="49J53, 90C30, 90C33, 90C46" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22541v1</id>
+    <updated>2025-03-28T15:38:21Z</updated>
+    <published>2025-03-28T15:38:21Z</published>
+    <title>SafeCast: Risk-Responsive Motion Forecasting for Autonomous Vehicles</title>
+    <summary>  Accurate motion forecasting is essential for the safety and reliability of
+autonomous driving (AD) systems. While existing methods have made significant
+progress, they often overlook explicit safety constraints and struggle to
+capture the complex interactions among traffic agents, environmental factors,
+and motion dynamics. To address these challenges, we present SafeCast, a
+risk-responsive motion forecasting model that integrates safety-aware
+decision-making with uncertainty-aware adaptability. SafeCast is the first to
+incorporate the Responsibility-Sensitive Safety (RSS) framework into motion
+forecasting, encoding interpretable safety rules--such as safe distances and
+collision avoidance--based on traffic norms and physical principles. To further
+enhance robustness, we introduce the Graph Uncertainty Feature (GUF), a
+graph-based module that injects learnable noise into Graph Attention Networks,
+capturing real-world uncertainties and enhancing generalization across diverse
+scenarios. We evaluate SafeCast on four real-world benchmark datasets--Next
+Generation Simulation (NGSIM), Highway Drone (HighD), ApolloScape, and the
+Macao Connected Autonomous Driving (MoCAD)--covering highway, urban, and
+mixed-autonomy traffic environments. Our model achieves state-of-the-art (SOTA)
+accuracy while maintaining a lightweight architecture and low inference
+latency, underscoring its potential for real-time deployment in safety-critical
+AD systems.
+</summary>
+    <author>
+      <name>Haicheng Liao</name>
+    </author>
+    <author>
+      <name>Hanlin Kong</name>
+    </author>
+    <author>
+      <name>Bin Rao</name>
+    </author>
+    <author>
+      <name>Bonan Wang</name>
+    </author>
+    <author>
+      <name>Chengyue Wang</name>
+    </author>
+    <author>
+      <name>Guyang Yu</name>
+    </author>
+    <author>
+      <name>Yuming Huang</name>
+    </author>
+    <author>
+      <name>Ruru Tang</name>
+    </author>
+    <author>
+      <name>Chengzhong Xu</name>
+    </author>
+    <author>
+      <name>Zhenning Li</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.22541v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22541v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22537v1</id>
+    <updated>2025-03-28T15:36:53Z</updated>
+    <published>2025-03-28T15:36:53Z</published>
+    <title>LIM: Large Interpolator Model for Dynamic Reconstruction</title>
+    <summary>  Reconstructing dynamic assets from video data is central to many in computer
+vision and graphics tasks. Existing 4D reconstruction approaches are limited by
+category-specific models or slow optimization-based methods. Inspired by the
+recent Large Reconstruction Model (LRM), we present the Large Interpolation
+Model (LIM), a transformer-based feed-forward solution, guided by a novel
+causal consistency loss, for interpolating implicit 3D representations across
+time. Given implicit 3D representations at times $t_0$ and $t_1$, LIM produces
+a deformed shape at any continuous time $t\in[t_0,t_1]$, delivering
+high-quality interpolated frames in seconds. Furthermore, LIM allows explicit
+mesh tracking across time, producing a consistently uv-textured mesh sequence
+ready for integration into existing production pipelines. We also use LIM, in
+conjunction with a diffusion-based multiview generator, to produce dynamic 4D
+reconstructions from monocular videos. We evaluate LIM on various dynamic
+datasets, benchmarking against image-space interpolation methods (e.g., FiLM)
+and direct triplane linear interpolation, and demonstrate clear advantages. In
+summary, LIM is the first feed-forward model capable of high-speed tracked 4D
+asset reconstruction across diverse categories.
+</summary>
+    <author>
+      <name>Remy Sabathier</name>
+    </author>
+    <author>
+      <name>Niloy J. Mitra</name>
+    </author>
+    <author>
+      <name>David Novotny</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.22537v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22537v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22467v1</id>
+    <updated>2025-03-28T14:27:54Z</updated>
+    <published>2025-03-28T14:27:54Z</published>
+    <title>An integrated method for clustering and association network inference</title>
+    <summary>  We consider high dimensional Gaussian graphical models inference. These
+models provide a rigorous framework to describe a network of statistical
+dependencies between entities, such as genes in genomic regulation studies or
+species in ecology. Penalized methods, including the standard Graphical-Lasso,
+are well-known approaches to infer the parameters of these models. As the
+number of variables in the model (of entities in the network) grow, the network
+inference and interpretation become more complex. We propose Normal-Block, a
+new model that clusters variables and consider a network at the cluster level.
+Normal-Block both adds structure to the network and reduces its size. We build
+on Graphical-Lasso to add a penalty on the network's edges and limit the
+detection of spurious dependencies, we also propose a zero-inflated version of
+the model to account for real-world data properties. For the inference
+procedure, we propose a direct heuristic method and another more rigorous one
+that simultaneously infers the clustering of variables and the association
+network between clusters, using a penalized variational
+Expectation-Maximization approach. An implementation of the model in R, in a
+package called normalblockr, is available on github
+(https://github.com/jeannetous/normalblockr). We present the results in terms
+of clustering and network inference using both simulated data and various types
+of real-world data (proteomics, words occurrences on webpages, and microbiota
+distribution).
+</summary>
+    <author>
+      <name>Jeanne Tous</name>
+    </author>
+    <author>
+      <name>Julien Chiquet</name>
+    </author>
+    <link href="http://arxiv.org/abs/2503.22467v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2503.22467v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
