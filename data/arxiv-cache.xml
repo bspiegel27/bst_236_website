@@ -1,1096 +1,532 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-04-08T00:52:58Z -->
+<!-- Last updated: 2025-04-09T00:53:19Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-04-07T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110102</opensearch:totalResults>
+  <updated>2025-04-08T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110242</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2504.03640v1</id>
-    <updated>2025-04-04T17:59:50Z</updated>
-    <published>2025-04-04T17:59:50Z</published>
-    <title>Bonsai: Interpretable Tree-Adaptive Grounded Reasoning</title>
-    <summary>  To develop general-purpose collaborative agents, humans need reliable AI
-systems that can (1) adapt to new domains and (2) transparently reason with
-uncertainty to allow for verification and correction. Black-box models
-demonstrate powerful data processing abilities but do not satisfy these
-criteria due to their opaqueness, domain specificity, and lack of uncertainty
-awareness. We introduce Bonsai, a compositional and probabilistic reasoning
-system that generates adaptable inference trees by retrieving relevant
-grounding evidence and using it to compute likelihoods of sub-claims derived
-from broader natural language inferences. Bonsai's reasoning power is tunable
-at test-time via evidence scaling and it demonstrates reliable handling of
-varied domains including transcripts, photographs, videos, audio, and
-databases. Question-answering and human alignment experiments demonstrate that
-Bonsai matches the performance of domain-specific black-box methods while
-generating interpretable, grounded, and uncertainty-aware reasoning traces.
+    <id>http://arxiv.org/abs/2504.05304v1</id>
+    <updated>2025-04-07T17:59:42Z</updated>
+    <published>2025-04-07T17:59:42Z</published>
+    <title>Gaussian Mixture Flow Matching Models</title>
+    <summary>  Diffusion models approximate the denoising distribution as a Gaussian and
+predict its mean, whereas flow matching models reparameterize the Gaussian mean
+as flow velocity. However, they underperform in few-step sampling due to
+discretization error and tend to produce over-saturated colors under
+classifier-free guidance (CFG). To address these limitations, we propose a
+novel Gaussian mixture flow matching (GMFlow) model: instead of predicting the
+mean, GMFlow predicts dynamic Gaussian mixture (GM) parameters to capture a
+multi-modal flow velocity distribution, which can be learned with a KL
+divergence loss. We demonstrate that GMFlow generalizes previous diffusion and
+flow matching models where a single Gaussian is learned with an $L_2$ denoising
+loss. For inference, we derive GM-SDE/ODE solvers that leverage analytic
+denoising distributions and velocity fields for precise few-step sampling.
+Furthermore, we introduce a novel probabilistic guidance scheme that mitigates
+the over-saturation issues of CFG and improves image generation quality.
+Extensive experiments demonstrate that GMFlow consistently outperforms flow
+matching baselines in generation quality, achieving a Precision of 0.942 with
+only 6 sampling steps on ImageNet 256$\times$256.
 </summary>
     <author>
-      <name>Kate Sanders</name>
+      <name>Hansheng Chen</name>
     </author>
     <author>
-      <name>Benjamin Van Durme</name>
+      <name>Kai Zhang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.03640v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03640v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="68T50, 68T37" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.7" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.03636v1</id>
-    <updated>2025-04-04T17:57:50Z</updated>
-    <published>2025-04-04T17:57:50Z</published>
-    <title>The Spectrum of Gravitational Waves from Annihilating Domain Walls</title>
-    <summary>  Networks of cosmic domain walls can form in the early Universe as a
-consequence of the spontaneous breaking of discrete symmetries. We study the
-production of a cosmological background of gravitational waves (GWs) from such
-networks, when they annihilate due to a small explicit symmetry breaking term.
-Averaging over several 3+1-dimensional high-resolution lattice field
-simulations, we obtain a GW spectrum with the following characteristics: (1) a
-broad asymmetric peak, roughly located at frequency $f\sim 2 H_{\rm gw}$, where
-$H_{\rm gw}$ is the Hubble rate at the end of GW production, shortly after
-annihilation, (2) a doubly broken power spectrum $\propto k^{-n}$, with initial
-slope $n \sim 0.5$ after the main peak and $n \sim 1.8$ at high $f$, while the
-low frequency region $f&lt;f_p$ agrees with the causality behavior $\sim k^3$.
-Additionally, extending previous results, we find that GW production continues
-to be efficient until a value of the Hubble scale $H_{\text gw}$ that is
-roughly an order of magnitude smaller than the naive estimate $\sigma H =
-\Delta V$, where $\sigma$ is the wall tension and $\Delta V$ the size of the
-symmetry breaking term, thereby leading to a $O(100)$ larger GW signal. We find
-such results to be robust when changing the shape of the scalar field potential
-or including a time-dependent symmetry breaking term. Our findings have
-important implications for GW searches, especially in light of the reported
-evidence for a stochastic GW background in Pulsar Timing Array data.
-</summary>
     <author>
-      <name>Alessio Notari</name>
+      <name>Hao Tan</name>
     </author>
     <author>
-      <name>Fabrizio Rompineve</name>
+      <name>Zexiang Xu</name>
     </author>
     <author>
-      <name>Francisco Torrenti</name>
+      <name>Fujun Luan</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages + appendices, 19 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.03636v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03636v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.03635v1</id>
-    <updated>2025-04-04T17:57:22Z</updated>
-    <published>2025-04-04T17:57:22Z</published>
-    <title>Do Larger Language Models Imply Better Reasoning? A Pretraining Scaling
-  Law for Reasoning</title>
-    <summary>  Large Language Models (LLMs) have demonstrated remarkable capabilities across
-a wide range of tasks requiring complex reasoning. However, the effects of
-scaling on their reasoning abilities remain insufficiently understood. In this
-paper, we introduce a synthetic multihop reasoning environment designed to
-closely replicate the structure and distribution of real-world large-scale
-knowledge graphs. Our reasoning task involves completing missing edges in the
-graph, which requires advanced multi-hop reasoning and mimics real-world
-reasoning scenarios. To evaluate this, we pretrain language models (LMs) from
-scratch solely on triples from the incomplete graph and assess their ability to
-infer the missing edges. Interestingly, we observe that overparameterization
-can impair reasoning performance due to excessive memorization. We investigate
-different factors that affect this U-shaped loss curve, including graph
-structure, model size, and training steps. To predict the optimal model size
-for a specific knowledge graph, we find an empirical scaling that linearly maps
-the knowledge graph search entropy to the optimal model size. This work
-provides new insights into the relationship between scaling and reasoning in
-LLMs, shedding light on possible ways to optimize their performance for
-reasoning tasks.
-</summary>
     <author>
-      <name>Xinyi Wang</name>
+      <name>Leonidas Guibas</name>
     </author>
     <author>
-      <name>Shawn Tan</name>
+      <name>Gordon Wetzstein</name>
     </author>
     <author>
-      <name>Mingyu Jin</name>
+      <name>Sai Bi</name>
     </author>
-    <author>
-      <name>William Yang Wang</name>
-    </author>
-    <author>
-      <name>Rameswar Panda</name>
-    </author>
-    <author>
-      <name>Yikang Shen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.03635v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03635v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.03630v1</id>
-    <updated>2025-04-04T17:47:34Z</updated>
-    <published>2025-04-04T17:47:34Z</published>
-    <title>Enhancing Causal Effect Estimation with Diffusion-Generated Data</title>
-    <summary>  Estimating causal effects from observational data is inherently challenging
-due to the lack of observable counterfactual outcomes and even the presence of
-unmeasured confounding. Traditional methods often rely on restrictive,
-untestable assumptions or necessitate valid instrumental variables,
-significantly limiting their applicability and robustness. In this paper, we
-introduce Augmented Causal Effect Estimation (ACEE), an innovative approach
-that utilizes synthetic data generated by a diffusion model to enhance causal
-effect estimation. By fine-tuning pre-trained generative models, ACEE simulates
-counterfactual scenarios that are otherwise unobservable, facilitating accurate
-estimation of individual and average treatment effects even under unmeasured
-confounding. Unlike conventional methods, ACEE relaxes the stringent
-unconfoundedness assumption, relying instead on an empirically checkable
-condition. Additionally, a bias-correction mechanism is introduced to mitigate
-synthetic data inaccuracies. We provide theoretical guarantees demonstrating
-the consistency and efficiency of the ACEE estimator, alongside comprehensive
-empirical validation through simulation studies and benchmark datasets. Results
-confirm that ACEE significantly improves causal estimation accuracy,
-particularly in complex settings characterized by nonlinear relationships and
-heteroscedastic noise.
-</summary>
-    <author>
-      <name>Li Chen</name>
-    </author>
-    <author>
-      <name>Xiaotong Shen</name>
-    </author>
-    <author>
-      <name>Wei Pan</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.03630v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03630v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.03624v1</id>
-    <updated>2025-04-04T17:41:58Z</updated>
-    <published>2025-04-04T17:41:58Z</published>
-    <title>Nemotron-H: A Family of Accurate and Efficient Hybrid Mamba-Transformer
-  Models</title>
-    <summary>  As inference-time scaling becomes critical for enhanced reasoning
-capabilities, it is increasingly becoming important to build models that are
-efficient to infer. We introduce Nemotron-H, a family of 8B and 56B/47B hybrid
-Mamba-Transformer models designed to reduce inference cost for a given accuracy
-level. To achieve this goal, we replace the majority of self-attention layers
-in the common Transformer model architecture with Mamba layers that perform
-constant computation and require constant memory per generated token. We show
-that Nemotron-H models offer either better or on-par accuracy compared to other
-similarly-sized state-of-the-art open-sourced Transformer models (e.g.,
-Qwen-2.5-7B/72B and Llama-3.1-8B/70B), while being up to 3$\times$ faster at
-inference. To further increase inference speed and reduce the memory required
-at inference time, we created Nemotron-H-47B-Base from the 56B model using a
-new compression via pruning and distillation technique called MiniPuzzle.
-Nemotron-H-47B-Base achieves similar accuracy to the 56B model, but is 20%
-faster to infer. In addition, we introduce an FP8-based training recipe and
-show that it can achieve on par results with BF16-based training. This recipe
-is used to train the 56B model. All Nemotron-H models will be released, with
-support in Hugging Face, NeMo, and Megatron-LM.
-</summary>
-    <author>
-      <name> NVIDIA</name>
-    </author>
-    <author>
-      <name> :</name>
-    </author>
-    <author>
-      <name>Aaron Blakeman</name>
-    </author>
-    <author>
-      <name>Aarti Basant</name>
-    </author>
-    <author>
-      <name>Abhinav Khattar</name>
-    </author>
-    <author>
-      <name>Adithya Renduchintala</name>
-    </author>
-    <author>
-      <name>Akhiad Bercovich</name>
-    </author>
-    <author>
-      <name>Aleksander Ficek</name>
-    </author>
-    <author>
-      <name>Alexis Bjorlin</name>
-    </author>
-    <author>
-      <name>Ali Taghibakhshi</name>
-    </author>
-    <author>
-      <name>Amala Sanjay Deshmukh</name>
-    </author>
-    <author>
-      <name>Ameya Sunil Mahabaleshwarkar</name>
-    </author>
-    <author>
-      <name>Andrew Tao</name>
-    </author>
-    <author>
-      <name>Anna Shors</name>
-    </author>
-    <author>
-      <name>Ashwath Aithal</name>
-    </author>
-    <author>
-      <name>Ashwin Poojary</name>
-    </author>
-    <author>
-      <name>Ayush Dattagupta</name>
-    </author>
-    <author>
-      <name>Balaram Buddharaju</name>
-    </author>
-    <author>
-      <name>Bobby Chen</name>
-    </author>
-    <author>
-      <name>Boris Ginsburg</name>
-    </author>
-    <author>
-      <name>Boxin Wang</name>
-    </author>
-    <author>
-      <name>Brandon Norick</name>
-    </author>
-    <author>
-      <name>Brian Butterfield</name>
-    </author>
-    <author>
-      <name>Bryan Catanzaro</name>
-    </author>
-    <author>
-      <name>Carlo del Mundo</name>
-    </author>
-    <author>
-      <name>Chengyu Dong</name>
-    </author>
-    <author>
-      <name>Christine Harvey</name>
-    </author>
-    <author>
-      <name>Christopher Parisien</name>
-    </author>
-    <author>
-      <name>Dan Su</name>
-    </author>
-    <author>
-      <name>Daniel Korzekwa</name>
-    </author>
-    <author>
-      <name>Danny Yin</name>
-    </author>
-    <author>
-      <name>Daria Gitman</name>
-    </author>
-    <author>
-      <name>David Mosallanezhad</name>
-    </author>
-    <author>
-      <name>Deepak Narayanan</name>
-    </author>
-    <author>
-      <name>Denys Fridman</name>
-    </author>
-    <author>
-      <name>Dima Rekesh</name>
-    </author>
-    <author>
-      <name>Ding Ma</name>
-    </author>
-    <author>
-      <name>Dmytro Pykhtar</name>
-    </author>
-    <author>
-      <name>Dong Ahn</name>
-    </author>
-    <author>
-      <name>Duncan Riach</name>
-    </author>
-    <author>
-      <name>Dusan Stosic</name>
-    </author>
-    <author>
-      <name>Eileen Long</name>
-    </author>
-    <author>
-      <name>Elad Segal</name>
-    </author>
-    <author>
-      <name>Ellie Evans</name>
-    </author>
-    <author>
-      <name>Eric Chung</name>
-    </author>
-    <author>
-      <name>Erick Galinkin</name>
-    </author>
-    <author>
-      <name>Evelina Bakhturina</name>
-    </author>
-    <author>
-      <name>Ewa Dobrowolska</name>
-    </author>
-    <author>
-      <name>Fei Jia</name>
-    </author>
-    <author>
-      <name>Fuxiao Liu</name>
-    </author>
-    <author>
-      <name>Gargi Prasad</name>
-    </author>
-    <author>
-      <name>Gerald Shen</name>
-    </author>
-    <author>
-      <name>Guilin Liu</name>
-    </author>
-    <author>
-      <name>Guo Chen</name>
-    </author>
-    <author>
-      <name>Haifeng Qian</name>
-    </author>
-    <author>
-      <name>Helen Ngo</name>
-    </author>
-    <author>
-      <name>Hongbin Liu</name>
-    </author>
-    <author>
-      <name>Hui Li</name>
-    </author>
-    <author>
-      <name>Igor Gitman</name>
-    </author>
-    <author>
-      <name>Ilia Karmanov</name>
-    </author>
-    <author>
-      <name>Ivan Moshkov</name>
-    </author>
-    <author>
-      <name>Izik Golan</name>
-    </author>
-    <author>
-      <name>Jan Kautz</name>
-    </author>
-    <author>
-      <name>Jane Polak Scowcroft</name>
-    </author>
-    <author>
-      <name>Jared Casper</name>
-    </author>
-    <author>
-      <name>Jarno Seppanen</name>
-    </author>
-    <author>
-      <name>Jason Lu</name>
-    </author>
-    <author>
-      <name>Jason Sewall</name>
-    </author>
-    <author>
-      <name>Jiaqi Zeng</name>
-    </author>
-    <author>
-      <name>Jiaxuan You</name>
-    </author>
-    <author>
-      <name>Jimmy Zhang</name>
-    </author>
-    <author>
-      <name>Jing Zhang</name>
-    </author>
-    <author>
-      <name>Jining Huang</name>
-    </author>
-    <author>
-      <name>Jinze Xue</name>
-    </author>
-    <author>
-      <name>Jocelyn Huang</name>
-    </author>
-    <author>
-      <name>Joey Conway</name>
-    </author>
-    <author>
-      <name>John Kamalu</name>
-    </author>
-    <author>
-      <name>Jon Barker</name>
-    </author>
-    <author>
-      <name>Jonathan Cohen</name>
-    </author>
-    <author>
-      <name>Joseph Jennings</name>
-    </author>
-    <author>
-      <name>Jupinder Parmar</name>
-    </author>
-    <author>
-      <name>Karan Sapra</name>
-    </author>
-    <author>
-      <name>Kari Briski</name>
-    </author>
-    <author>
-      <name>Kateryna Chumachenko</name>
-    </author>
-    <author>
-      <name>Katherine Luna</name>
-    </author>
-    <author>
-      <name>Keshav Santhanam</name>
-    </author>
-    <author>
-      <name>Kezhi Kong</name>
-    </author>
-    <author>
-      <name>Kirthi Sivamani</name>
-    </author>
-    <author>
-      <name>Krzysztof Pawelec</name>
-    </author>
-    <author>
-      <name>Kumar Anik</name>
-    </author>
-    <author>
-      <name>Kunlun Li</name>
-    </author>
-    <author>
-      <name>Lawrence McAfee</name>
-    </author>
-    <author>
-      <name>Leon Derczynski</name>
-    </author>
-    <author>
-      <name>Lindsey Pavao</name>
-    </author>
-    <author>
-      <name>Luis Vega</name>
-    </author>
-    <author>
-      <name>Lukas Voegtle</name>
-    </author>
-    <author>
-      <name>Maciej Bala</name>
-    </author>
-    <author>
-      <name>Maer Rodrigues de Melo</name>
-    </author>
-    <author>
-      <name>Makesh Narsimhan Sreedhar</name>
-    </author>
-    <author>
-      <name>Marcin Chochowski</name>
-    </author>
-    <author>
-      <name>Markus Kliegl</name>
-    </author>
-    <author>
-      <name>Marta Stepniewska-Dziubinska</name>
-    </author>
-    <author>
-      <name>Matthieu Le</name>
-    </author>
-    <author>
-      <name>Matvei Novikov</name>
-    </author>
-    <author>
-      <name>Mehrzad Samadi</name>
-    </author>
-    <author>
-      <name>Michael Andersch</name>
-    </author>
-    <author>
-      <name>Michael Evans</name>
-    </author>
-    <author>
-      <name>Miguel Martinez</name>
-    </author>
-    <author>
-      <name>Mike Chrzanowski</name>
-    </author>
-    <author>
-      <name>Mike Ranzinger</name>
-    </author>
-    <author>
-      <name>Mikolaj Blaz</name>
-    </author>
-    <author>
-      <name>Misha Smelyanskiy</name>
-    </author>
-    <author>
-      <name>Mohamed Fawzy</name>
-    </author>
-    <author>
-      <name>Mohammad Shoeybi</name>
-    </author>
-    <author>
-      <name>Mostofa Patwary</name>
-    </author>
-    <author>
-      <name>Nayeon Lee</name>
-    </author>
-    <author>
-      <name>Nima Tajbakhsh</name>
-    </author>
-    <author>
-      <name>Ning Xu</name>
-    </author>
-    <author>
-      <name>Oleg Rybakov</name>
-    </author>
-    <author>
-      <name>Oleksii Kuchaiev</name>
-    </author>
-    <author>
-      <name>Olivier Delalleau</name>
-    </author>
-    <author>
-      <name>Osvald Nitski</name>
-    </author>
-    <author>
-      <name>Parth Chadha</name>
-    </author>
-    <author>
-      <name>Pasha Shamis</name>
-    </author>
-    <author>
-      <name>Paulius Micikevicius</name>
-    </author>
-    <author>
-      <name>Pavlo Molchanov</name>
-    </author>
-    <author>
-      <name>Peter Dykas</name>
-    </author>
-    <author>
-      <name>Philipp Fischer</name>
-    </author>
-    <author>
-      <name>Pierre-Yves Aquilanti</name>
-    </author>
-    <author>
-      <name>Piotr Bialecki</name>
-    </author>
-    <author>
-      <name>Prasoon Varshney</name>
-    </author>
-    <author>
-      <name>Pritam Gundecha</name>
-    </author>
-    <author>
-      <name>Przemek Tredak</name>
-    </author>
-    <author>
-      <name>Rabeeh Karimi</name>
-    </author>
-    <author>
-      <name>Rahul Kandu</name>
-    </author>
-    <author>
-      <name>Ran El-Yaniv</name>
-    </author>
-    <author>
-      <name>Raviraj Joshi</name>
-    </author>
-    <author>
-      <name>Roger Waleffe</name>
-    </author>
-    <author>
-      <name>Ruoxi Zhang</name>
-    </author>
-    <author>
-      <name>Sabrina Kavanaugh</name>
-    </author>
-    <author>
-      <name>Sahil Jain</name>
-    </author>
-    <author>
-      <name>Samuel Kriman</name>
-    </author>
-    <author>
-      <name>Sangkug Lym</name>
-    </author>
-    <author>
-      <name>Sanjeev Satheesh</name>
-    </author>
-    <author>
-      <name>Saurav Muralidharan</name>
-    </author>
-    <author>
-      <name>Sean Narenthiran</name>
-    </author>
-    <author>
-      <name>Selvaraj Anandaraj</name>
-    </author>
-    <author>
-      <name>Seonmyeong Bak</name>
-    </author>
-    <author>
-      <name>Sergey Kashirsky</name>
-    </author>
-    <author>
-      <name>Seungju Han</name>
-    </author>
-    <author>
-      <name>Shantanu Acharya</name>
-    </author>
-    <author>
-      <name>Shaona Ghosh</name>
-    </author>
-    <author>
-      <name>Sharath Turuvekere Sreenivas</name>
-    </author>
-    <author>
-      <name>Sharon Clay</name>
-    </author>
-    <author>
-      <name>Shelby Thomas</name>
-    </author>
-    <author>
-      <name>Shrimai Prabhumoye</name>
-    </author>
-    <author>
-      <name>Shubham Pachori</name>
-    </author>
-    <author>
-      <name>Shubham Toshniwal</name>
-    </author>
-    <author>
-      <name>Shyamala Prayaga</name>
-    </author>
-    <author>
-      <name>Siddhartha Jain</name>
-    </author>
-    <author>
-      <name>Sirshak Das</name>
-    </author>
-    <author>
-      <name>Slawek Kierat</name>
-    </author>
-    <author>
-      <name>Somshubra Majumdar</name>
-    </author>
-    <author>
-      <name>Song Han</name>
-    </author>
-    <author>
-      <name>Soumye Singhal</name>
-    </author>
-    <author>
-      <name>Sriharsha Niverty</name>
-    </author>
-    <author>
-      <name>Stefania Alborghetti</name>
-    </author>
-    <author>
-      <name>Suseella Panguluri</name>
-    </author>
-    <author>
-      <name>Swetha Bhendigeri</name>
-    </author>
-    <author>
-      <name>Syeda Nahida Akter</name>
-    </author>
-    <author>
-      <name>Szymon Migacz</name>
-    </author>
-    <author>
-      <name>Tal Shiri</name>
-    </author>
-    <author>
-      <name>Terry Kong</name>
-    </author>
-    <author>
-      <name>Timo Roman</name>
-    </author>
-    <author>
-      <name>Tomer Ronen</name>
-    </author>
-    <author>
-      <name>Trisha Saar</name>
-    </author>
-    <author>
-      <name>Tugrul Konuk</name>
-    </author>
-    <author>
-      <name>Tuomas Rintamaki</name>
-    </author>
-    <author>
-      <name>Tyler Poon</name>
-    </author>
-    <author>
-      <name>Ushnish De</name>
-    </author>
-    <author>
-      <name>Vahid Noroozi</name>
-    </author>
-    <author>
-      <name>Varun Singh</name>
-    </author>
-    <author>
-      <name>Vijay Korthikanti</name>
-    </author>
-    <author>
-      <name>Vitaly Kurin</name>
-    </author>
-    <author>
-      <name>Wasi Uddin Ahmad</name>
-    </author>
-    <author>
-      <name>Wei Du</name>
-    </author>
-    <author>
-      <name>Wei Ping</name>
-    </author>
-    <author>
-      <name>Wenliang Dai</name>
-    </author>
-    <author>
-      <name>Wonmin Byeon</name>
-    </author>
-    <author>
-      <name>Xiaowei Ren</name>
-    </author>
-    <author>
-      <name>Yao Xu</name>
-    </author>
-    <author>
-      <name>Yejin Choi</name>
-    </author>
-    <author>
-      <name>Yian Zhang</name>
-    </author>
-    <author>
-      <name>Ying Lin</name>
-    </author>
-    <author>
-      <name>Yoshi Suhara</name>
-    </author>
-    <author>
-      <name>Zhiding Yu</name>
-    </author>
-    <author>
-      <name>Zhiqi Li</name>
-    </author>
-    <author>
-      <name>Zhiyu Li</name>
-    </author>
-    <author>
-      <name>Zhongbo Zhu</name>
-    </author>
-    <author>
-      <name>Zhuolin Yang</name>
-    </author>
-    <author>
-      <name>Zijia Chen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.03624v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03624v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.03612v1</id>
-    <updated>2025-04-04T17:33:07Z</updated>
-    <published>2025-04-04T17:33:07Z</published>
-    <title>AIR: A Systematic Analysis of Annotations, Instructions, and Response
-  Pairs in Preference Dataset</title>
-    <summary>  Preference learning is critical for aligning large language models (LLMs)
-with human values, yet its success hinges on high-quality datasets comprising
-three core components: Preference \textbf{A}nnotations, \textbf{I}nstructions,
-and \textbf{R}esponse Pairs. Current approaches conflate these components,
-obscuring their individual impacts and hindering systematic optimization. In
-this work, we propose \textbf{AIR}, a component-wise analysis framework that
-systematically isolates and optimizes each component while evaluating their
-synergistic effects. Through rigorous experimentation, AIR reveals actionable
-principles: annotation simplicity (point-wise generative scoring), instruction
-inference stability (variance-based filtering across LLMs), and response pair
-quality (moderate margins + high absolute scores). When combined, these
-principles yield +5.3 average gains over baseline method, even with only 14k
-high-quality pairs. Our work shifts preference dataset design from ad hoc
-scaling to component-aware optimization, offering a blueprint for efficient,
-reproducible alignment.
-</summary>
-    <author>
-      <name>Bingxiang He</name>
-    </author>
-    <author>
-      <name>Wenbin Zhang</name>
-    </author>
-    <author>
-      <name>Jiaxi Song</name>
-    </author>
-    <author>
-      <name>Cheng Qian</name>
-    </author>
-    <author>
-      <name>Zixuan Fu</name>
-    </author>
-    <author>
-      <name>Bowen Sun</name>
-    </author>
-    <author>
-      <name>Ning Ding</name>
-    </author>
-    <author>
-      <name>Haiwen Hong</name>
-    </author>
-    <author>
-      <name>Longtao Huang</name>
-    </author>
-    <author>
-      <name>Hui Xue</name>
-    </author>
-    <author>
-      <name>Ganqu Cui</name>
-    </author>
-    <author>
-      <name>Wanxiang Che</name>
-    </author>
-    <author>
-      <name>Zhiyuan Liu</name>
-    </author>
-    <author>
-      <name>Maosong Sun</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 11 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.03612v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03612v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.03583v1</id>
-    <updated>2025-04-04T16:47:30Z</updated>
-    <published>2025-04-04T16:47:30Z</published>
-    <title>Scalable Hypergraph Structure Learning with Diverse Smoothness Priors</title>
-    <summary>  In graph signal processing, learning the weighted connections between nodes
-from a set of sample signals is a fundamental task when the underlying
-relationships are not known a priori. This task is typically addressed by
-finding a graph Laplacian on which the observed signals are smooth. With the
-extension of graphs to hypergraphs - where edges can connect more than two
-nodes - graph learning methods have similarly been generalized to hypergraphs.
-However, the absence of a unified framework for calculating total variation has
-led to divergent definitions of smoothness and, consequently, differing
-approaches to hyperedge recovery. We confront this challenge through
-generalization of several previously proposed hypergraph total variations,
-subsequently allowing ease of substitution into a vector based optimization. To
-this end, we propose a novel hypergraph learning method that recovers a
-hypergraph topology from time-series signals based on a smoothness prior. Our
-approach addresses key limitations in prior works, such as hyperedge selection
-and convergence issues, by formulating the problem as a convex optimization
-solved via a forward-backward-forward algorithm, ensuring guaranteed
-convergence. Additionally, we introduce a process that simultaneously limits
-the span of the hyperedge search and maintains a valid hyperedge selection set.
-In doing so, our method becomes scalable in increasingly complex network
-structures. The experimental results demonstrate improved performance, in terms
-of accuracy, over other state-of-the-art hypergraph inference methods;
-furthermore, we empirically show our method to be robust to total variation
-terms, biased towards global smoothness, and scalable to larger hypergraphs.
-</summary>
-    <author>
-      <name>Benjamin T. Brown</name>
-    </author>
-    <author>
-      <name>Haoxiang Zhang</name>
-    </author>
-    <author>
-      <name>Daniel L. Lau</name>
-    </author>
-    <author>
-      <name>Gonzalo R. Arce</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 6 figures, submitted to IEEE for possible publication</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.03583v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03583v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/Lakonik/GMFlow</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05304v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05304v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.03537v1</id>
-    <updated>2025-04-04T15:35:57Z</updated>
-    <published>2025-04-04T15:35:57Z</published>
-    <title>Coupling hydrodynamics with comoving frame radiative transfer. III. The
-  wind regime of early-type B hypergiants</title>
-    <summary>  Context. B hypergiants (BHGs) are important for understanding high-mass
-stellar evolution. While they are in a similar parameter space of B supergiants
-(BSGs), some BHGs are known to be luminous blue variables (LBVs). Their spectra
-with absorption and emission features resemble Of/WNh stars. Yet, their wind
-physics and their evolutionary connections are not clear. Aims. In this study,
-we aim to understand (i) the atmospheric and wind structure, (ii) the
-wind-launching and -driving mechanisms, and (iii) the spectrum formation of
-early-type BHGs. As an observational prototype, we use zet1 Sco (B1.5Ia+).
-Methods. Using the atmosphere code PoWRhd, we calculated the first
-hydrodynamically consistent models at the BHG domain. They give insights into
-the radiative driving of the calculated wind regimes and enable us to study the
-influence of clumping and X-rays on the resulting wind structure. Results. Our
-consistent model reproduces the main spectral features of zet1 Sco. The
-obtained mass-loss rate is higher than that of similar spectral type BSGs.
-However, the wind optical depth of BHGs is way below unity, making them less of
-a transition type. To reproduce zet1 Sco's spectrum, we needed low clumping
-with subsonic onset. The wind has a shallow-gradient velocity profile,
-deviating from the beta law, and is mainly driven by Fe III opacity.
-Conclusions. Our study suggests that despite more mass loss, early-type
-Galactic BHGs have winds relatively similar to BSGs. Their winds are not thick
-enough to characterize them as "transition-type" stars, unlike Of/WNh, implying
-that emission features arise more easily in cooler than in hotter stars. The
-spectral BHG appearance is likely connected to atmospheric inhomogeneities
-below the sonic point. To reach an appearance similar to LBVs, BHGs need to be
-either closer to the Eddington limit or have higher wind clumping than inferred
-for zeta1 Sco.
+    <id>http://arxiv.org/abs/2504.05303v1</id>
+    <updated>2025-04-07T17:59:33Z</updated>
+    <published>2025-04-07T17:59:33Z</published>
+    <title>InteractVLM: 3D Interaction Reasoning from 2D Foundational Models</title>
+    <summary>  We introduce InteractVLM, a novel method to estimate 3D contact points on
+human bodies and objects from single in-the-wild images, enabling accurate
+human-object joint reconstruction in 3D. This is challenging due to occlusions,
+depth ambiguities, and widely varying object shapes. Existing methods rely on
+3D contact annotations collected via expensive motion-capture systems or
+tedious manual labeling, limiting scalability and generalization. To overcome
+this, InteractVLM harnesses the broad visual knowledge of large Vision-Language
+Models (VLMs), fine-tuned with limited 3D contact data. However, directly
+applying these models is non-trivial, as they reason only in 2D, while
+human-object contact is inherently 3D. Thus we introduce a novel
+Render-Localize-Lift module that: (1) embeds 3D body and object surfaces in 2D
+space via multi-view rendering, (2) trains a novel multi-view localization
+model (MV-Loc) to infer contacts in 2D, and (3) lifts these to 3D.
+Additionally, we propose a new task called Semantic Human Contact estimation,
+where human contact predictions are conditioned explicitly on object semantics,
+enabling richer interaction modeling. InteractVLM outperforms existing work on
+contact estimation and also facilitates 3D reconstruction from an in-the wild
+image. Code and models are available at https://interactvlm.is.tue.mpg.de.
 </summary>
     <author>
-      <name>M. Bernini-Peron</name>
+      <name>Sai Kumar Dwivedi</name>
     </author>
     <author>
-      <name>A. A. C. Sander</name>
+      <name>Dimitrije Antić</name>
     </author>
     <author>
-      <name>F. Najarro</name>
+      <name>Shashank Tripathi</name>
     </author>
     <author>
-      <name>G. N. Sabhahit</name>
+      <name>Omid Taheri</name>
     </author>
     <author>
-      <name>D. Pauli</name>
+      <name>Cordelia Schmid</name>
     </author>
     <author>
-      <name>R. R. Lefever</name>
+      <name>Michael J. Black</name>
     </author>
     <author>
-      <name>J. S. Vink</name>
+      <name>Dimitrios Tzionas</name>
     </author>
-    <author>
-      <name>V. Ramachandran</name>
-    </author>
-    <author>
-      <name>L. M. Oskinova</name>
-    </author>
-    <author>
-      <name>G. González-Torà</name>
-    </author>
-    <author>
-      <name>E. C. Schösser</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.03537v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03537v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">CVPR 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05303v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05303v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.03518v1</id>
-    <updated>2025-04-04T15:17:26Z</updated>
-    <published>2025-04-04T15:17:26Z</published>
-    <title>Intracluster light is a biased tracer of the dark matter distribution in
-  clusters</title>
-    <summary>  The diffuse stellar component of galaxy clusters known as intracluster light
-(ICL) has been proposed as an observable tracer of the cluster's dark matter
-(DM) halo. Assessing its reliability as a DM tracer requires understanding how
-the intracluster stars are energetically linked to the underlying DM
-distribution, which we investigate at $z\approx0$ in 12 galaxy clusters with
-$M_{178} = 1.18 - 3.71 \times 10^{14}\,\textrm{M}_\odot$ from the Horizon-AGN
-simulation. We quantify the orbital energies of these components by their mean
-specific energies ${\langle \varepsilon \rangle}$, and find that this quantity
-is $\approx$ 25 per cent lower for the intracluster stars than the DM, whilst
-the energetics of the satellite galaxies (a standard DM tracer) are only
-marginally ($\approx$ 5 per cent) higher than the DM. Importantly, the lower
-${\langle \varepsilon \rangle}$ of the intracluster stars compared to the DM is
-robust against the precise separation between the brightest cluster galaxy
-(BCG) and the ICL. The specific energy distribution of ICL stars is
-concentrated towards lower energies and poorly samples the higher energies,
-where much of the DM resides. Consequently, the intracluster stars have
-velocity distributions with lower typical speeds and a more
-centrally-concentrated density profile than the DM. We also find that
-intracluster stars have more radially-biased orbits than the DM, indicating
-these components have distinct orbital distributions. This study demonstrates
-that although the morphology of the ICL may match the DM halo, the ICL is a
-biased tracer of DM, and these biases must be understood in order to infer
-properties of the DM from the ICL.
+    <id>http://arxiv.org/abs/2504.05299v1</id>
+    <updated>2025-04-07T17:58:57Z</updated>
+    <published>2025-04-07T17:58:57Z</published>
+    <title>SmolVLM: Redefining small and efficient multimodal models</title>
+    <summary>  Large Vision-Language Models (VLMs) deliver exceptional performance but
+require significant computational resources, limiting their deployment on
+mobile and edge devices. Smaller VLMs typically mirror design choices of larger
+models, such as extensive image tokenization, leading to inefficient GPU memory
+usage and constrained practicality for on-device applications.
+  We introduce SmolVLM, a series of compact multimodal models specifically
+engineered for resource-efficient inference. We systematically explore
+architectural configurations, tokenization strategies, and data curation
+optimized for low computational overhead. Through this, we identify key design
+choices that yield substantial performance gains on image and video tasks with
+minimal memory footprints.
+  Our smallest model, SmolVLM-256M, uses less than 1GB GPU memory during
+inference and outperforms the 300-times larger Idefics-80B model, despite an
+18-month development gap. Our largest model, at 2.2B parameters, rivals
+state-of-the-art VLMs consuming twice the GPU memory. SmolVLM models extend
+beyond static images, demonstrating robust video comprehension capabilities.
+  Our results emphasize that strategic architectural optimizations, aggressive
+yet efficient tokenization, and carefully curated training data significantly
+enhance multimodal performance, facilitating practical, energy-efficient
+deployments at significantly smaller scales.
 </summary>
     <author>
-      <name>J. Butler</name>
+      <name>Andrés Marafioti</name>
     </author>
     <author>
-      <name>G. Martin</name>
+      <name>Orr Zohar</name>
     </author>
     <author>
-      <name>N. A. Hatch</name>
+      <name>Miquel Farré</name>
     </author>
     <author>
-      <name>F. Pearce</name>
+      <name>Merve Noyan</name>
     </author>
     <author>
-      <name>S. Brough</name>
+      <name>Elie Bakouch</name>
     </author>
     <author>
-      <name>Y. Dubois</name>
+      <name>Pedro Cuenca</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 8 figures, resubmitted to MNRAS following minor revisions</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.03518v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03518v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Cyril Zakka</name>
+    </author>
+    <author>
+      <name>Loubna Ben Allal</name>
+    </author>
+    <author>
+      <name>Anton Lozhkov</name>
+    </author>
+    <author>
+      <name>Nouamane Tazi</name>
+    </author>
+    <author>
+      <name>Vaibhav Srivastav</name>
+    </author>
+    <author>
+      <name>Joshua Lochner</name>
+    </author>
+    <author>
+      <name>Hugo Larcher</name>
+    </author>
+    <author>
+      <name>Mathieu Morlon</name>
+    </author>
+    <author>
+      <name>Lewis Tunstall</name>
+    </author>
+    <author>
+      <name>Leandro von Werra</name>
+    </author>
+    <author>
+      <name>Thomas Wolf</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.05299v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05299v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.05294v1</id>
+    <updated>2025-04-07T17:49:23Z</updated>
+    <published>2025-04-07T17:49:23Z</published>
+    <title>Truthful or Fabricated? Using Causal Attribution to Mitigate Reward
+  Hacking in Explanations</title>
+    <summary>  Chain-of-thought explanations are widely used to inspect the decision process
+of large language models (LLMs) and to evaluate the trustworthiness of model
+outputs, making them important for effective collaboration between LLMs and
+humans. We demonstrate that preference optimization - a key step in the
+alignment phase - can inadvertently reduce the faithfulness of these
+explanations. This occurs because the reward model (RM), which guides
+alignment, is tasked with optimizing both the expected quality of the response
+and the appropriateness of the explanations (e.g., minimizing bias or adhering
+to safety standards), creating potential conflicts. The RM lacks a mechanism to
+assess the consistency between the model's internal decision process and the
+generated explanation. Consequently, the LLM may engage in "reward hacking" by
+producing a final response that scores highly while giving an explanation
+tailored to maximize reward rather than accurately reflecting its reasoning. To
+address this issue, we propose enriching the RM's input with a causal
+attribution of the prediction, allowing the RM to detect discrepancies between
+the generated self-explanation and the model's decision process. In controlled
+settings, we show that this approach reduces the tendency of the LLM to
+generate misleading explanations.
+</summary>
+    <author>
+      <name>Pedro Ferreira</name>
+    </author>
+    <author>
+      <name>Wilker Aziz</name>
+    </author>
+    <author>
+      <name>Ivan Titov</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 10 figures, 5 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05294v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05294v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.05278v1</id>
+    <updated>2025-04-07T17:24:11Z</updated>
+    <published>2025-04-07T17:24:11Z</published>
+    <title>The challenge of uncertainty quantification of large language models in
+  medicine</title>
+    <summary>  This study investigates uncertainty quantification in large language models
+(LLMs) for medical applications, emphasizing both technical innovations and
+philosophical implications. As LLMs become integral to clinical
+decision-making, accurately communicating uncertainty is crucial for ensuring
+reliable, safe, and ethical AI-assisted healthcare. Our research frames
+uncertainty not as a barrier but as an essential part of knowledge that invites
+a dynamic and reflective approach to AI design. By integrating advanced
+probabilistic methods such as Bayesian inference, deep ensembles, and Monte
+Carlo dropout with linguistic analysis that computes predictive and semantic
+entropy, we propose a comprehensive framework that manages both epistemic and
+aleatoric uncertainties. The framework incorporates surrogate modeling to
+address limitations of proprietary APIs, multi-source data integration for
+better context, and dynamic calibration via continual and meta-learning.
+Explainability is embedded through uncertainty maps and confidence metrics to
+support user trust and clinical interpretability. Our approach supports
+transparent and ethical decision-making aligned with Responsible and Reflective
+AI principles. Philosophically, we advocate accepting controlled ambiguity
+instead of striving for absolute predictability, recognizing the inherent
+provisionality of medical knowledge.
+</summary>
+    <author>
+      <name>Zahra Atf</name>
+    </author>
+    <author>
+      <name>Seyed Amir Ahmad Safavi-Naini</name>
+    </author>
+    <author>
+      <name>Peter R. Lewis</name>
+    </author>
+    <author>
+      <name>Aref Mahjoubfar</name>
+    </author>
+    <author>
+      <name>Nariman Naderi</name>
+    </author>
+    <author>
+      <name>Thomas R. Savage</name>
+    </author>
+    <author>
+      <name>Ali Soroush</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages, 11 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05278v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05278v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.05271v1</id>
+    <updated>2025-04-07T17:08:17Z</updated>
+    <published>2025-04-07T17:08:17Z</published>
+    <title>AnomalousNet: A Hybrid Approach with Attention U-Nets and Change Point
+  Detection for Accurate Characterization of Anomalous Diffusion in Video Data</title>
+    <summary>  Anomalous diffusion occurs in a wide range of systems, including protein
+transport within cells, animal movement in complex habitats, pollutant
+dispersion in groundwater, and nanoparticle motion in synthetic materials.
+Accurately estimating the anomalous diffusion exponent and the diffusion
+coefficient from the particle trajectories is essential to distinguish between
+sub-diffusive, super-diffusive, or normal diffusion regimes. These estimates
+provide a deeper insight into the underlying dynamics of the system,
+facilitating the identification of particle behaviors and the detection of
+changes in diffusion states. However, analyzing short and noisy video data,
+which often yield incomplete and heterogeneous trajectories, poses a
+significant challenge for traditional statistical approaches. We introduce a
+data-driven method that integrates particle tracking, an attention
+  U-Net architecture, and a change-point detection algorithm to address these
+issues. This approach not only infers the anomalous diffusion parameters with
+high accuracy but also identifies temporal transitions between different
+states, even in the presence of noise and limited temporal resolution. Our
+methodology demonstrated strong performance in the 2nd Anomalous Diffusion
+(AnDi) Challenge benchmark within the top submissions for video tasks.
+</summary>
+    <author>
+      <name>Yusef Ahsini</name>
+    </author>
+    <author>
+      <name>Marc Escoto</name>
+    </author>
+    <author>
+      <name>J. Alberto Conejero</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 9 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05271v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05271v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.05258v1</id>
+    <updated>2025-04-07T16:51:45Z</updated>
+    <published>2025-04-07T16:51:45Z</published>
+    <title>Learning to Reason Over Time: Timeline Self-Reflection for Improved
+  Temporal Reasoning in Language Models</title>
+    <summary>  Large Language Models (LLMs) have emerged as powerful tools for generating
+coherent text, understanding context, and performing reasoning tasks. However,
+they struggle with temporal reasoning, which requires processing time-related
+information such as event sequencing, durations, and inter-temporal
+relationships. These capabilities are critical for applications including
+question answering, scheduling, and historical analysis. In this paper, we
+introduce TISER, a novel framework that enhances the temporal reasoning
+abilities of LLMs through a multi-stage process that combines timeline
+construction with iterative self-reflection. Our approach leverages test-time
+scaling to extend the length of reasoning traces, enabling models to capture
+complex temporal dependencies more effectively. This strategy not only boosts
+reasoning accuracy but also improves the traceability of the inference process.
+Experimental results demonstrate state-of-the-art performance across multiple
+benchmarks, including out-of-distribution test sets, and reveal that TISER
+enables smaller open-source models to surpass larger closed-weight models on
+challenging temporal reasoning tasks.
+</summary>
+    <author>
+      <name>Adrián Bazaga</name>
+    </author>
+    <author>
+      <name>Rexhina Blloshmi</name>
+    </author>
+    <author>
+      <name>Bill Byrne</name>
+    </author>
+    <author>
+      <name>Adrià de Gispert</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.05258v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05258v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.05248v1</id>
+    <updated>2025-04-07T16:34:57Z</updated>
+    <published>2025-04-07T16:34:57Z</published>
+    <title>PINNverse: Accurate parameter estimation in differential equations from
+  noisy data with constrained physics-informed neural networks</title>
+    <summary>  Parameter estimation for differential equations from measured data is an
+inverse problem prevalent across quantitative sciences. Physics-Informed Neural
+Networks (PINNs) have emerged as effective tools for solving such problems,
+especially with sparse measurements and incomplete system information. However,
+PINNs face convergence issues, stability problems, overfitting, and complex
+loss function design. Here we introduce PINNverse, a training paradigm that
+addresses these limitations by reformulating the learning process as a
+constrained differential optimization problem. This approach achieves a dynamic
+balance between data loss and differential equation residual loss during
+training while preventing overfitting. PINNverse combines the advantages of
+PINNs with the Modified Differential Method of Multipliers to enable
+convergence on any point on the Pareto front. We demonstrate robust and
+accurate parameter estimation from noisy data in four classical ODE and PDE
+models from physics and biology. Our method enables accurate parameter
+inference also when the forward problem is expensive to solve.
+</summary>
+    <author>
+      <name>Marius Almanstötter</name>
+    </author>
+    <author>
+      <name>Roman Vetter</name>
+    </author>
+    <author>
+      <name>Dagmar Iber</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">17 pages, 5 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05248v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05248v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.05244v1</id>
+    <updated>2025-04-07T16:30:31Z</updated>
+    <published>2025-04-07T16:30:31Z</published>
+    <title>Behind the Spotlight: A systematic assessment of outshining using NIRCam
+  medium-bands in the JADES Origins Field</title>
+    <summary>  The spatial resolution and sensitivity of JWST's NIRCam instrument has
+revolutionised our ability to probe the internal structure of early galaxies.
+By leveraging deep medium-band imaging in the Jades Origins Field, we assemble
+comprehensive spectral energy distributions (SEDs) using 19 photometric bands
+for over 200 high-redshift galaxies ($z \geq 4.5$). We present an analysis of
+this sample with particular emphasis on investigating the "outshining"
+phenomenon, which can bias the inferred stellar populations by masking the
+presence of evolved stellar populations ($\geq$ 100 Myr) with the light of
+bright, young O and B-type stars. We address this problem by performing
+spatially-resolved SED-fitting of both binned and full pixel-by-pixel
+photometry, which we compare to the traditional integrated approach. We find
+evidence for systematic underestimation of stellar mass in low-mass galaxies
+($\leq 10^9 \rm M_\odot$) with bursty star formation, which can exceed a factor
+of 10 in individual cases, but on average is typically a factor of 1.25-2.5,
+depending on the binning methodology and SFH model used. The observed mass
+offset correlates with burstiness (SFR$_{10 \ \rm Myr}$/SFR$_{100 \ \rm Myr}$)
+and sSFR, such that galaxies with recently rising SFHs have larger mass
+offsets. The integrated SFH models which produce the most consistent stellar
+masses are the double power-law and non-parametric `continuity' models,
+although no integrated model fully reproduces all resolved SFHs. We apply an
+outshining correction factor to the Stellar Mass Function at $z=7$, finding
+little impact within the uncertainties. We conclude that outshining can be
+important in individual low-mass galaxies, but the overall impact is limited
+and should be considered alongside other systematic SED fitting effects.
+</summary>
+    <author>
+      <name>Thomas Harvey</name>
+    </author>
+    <author>
+      <name>Christopher J. Conselice</name>
+    </author>
+    <author>
+      <name>Nathan J. Adams</name>
+    </author>
+    <author>
+      <name>Duncan Austin</name>
+    </author>
+    <author>
+      <name>Qiong Li</name>
+    </author>
+    <author>
+      <name>Vadim Rusakov</name>
+    </author>
+    <author>
+      <name>Lewi Westcott</name>
+    </author>
+    <author>
+      <name>Caio M. Goolsby</name>
+    </author>
+    <author>
+      <name>Christopher C. Lovell</name>
+    </author>
+    <author>
+      <name>Rachel K. Cochrane</name>
+    </author>
+    <author>
+      <name>Aswin P. Vijayan</name>
+    </author>
+    <author>
+      <name>James Trussler</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">23 pages, 14 figures. Submitted to MNRAS. Code available on GitHub:
+  https://github.com/tHarvey303/EXPANSE . Comments welcome at
+  thomas.harvey-3@manchester.ac.uk</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.05244v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05244v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.03517v1</id>
-    <updated>2025-04-04T15:17:09Z</updated>
-    <published>2025-04-04T15:17:09Z</published>
-    <title>A framework for computing upper bounds in passive learning settings</title>
-    <summary>  The task of inferring logical formulas from examples has garnered significant
-attention as a means to assist engineers in creating formal specifications used
-in the design, synthesis, and verification of computing systems. Among various
-approaches, enumeration algorithms have emerged as some of the most effective
-techniques for this task. These algorithms employ advanced strategies to
-systematically enumerate candidate formulas while minimizing redundancies by
-avoiding the generation of syntactically different but semantically equivalent
-formulas. However, a notable drawback is that these algorithms typically do not
-provide guarantees of termination, which poses challenges for their use in
-real-world applications.
-  This paper develops an abstract framework to bound the size of possible
-solutions for a logic inference task, thereby providing a termination guarantee
-for enumeration algorithms through the introduction of a sufficient stopping
-criterion. The proposed framework is designed with flexibility in mind and is
-applicable to a broad spectrum of practically relevant logical formalisms,
-including Modal Logic, Linear Temporal Logic, Computation Tree Logic,
-Alternating-time Temporal Logic, and even selected inference task for finite
-automata. In addition, our approach enabled us to develop a new class of
-algorithms that enumerate over the semantics of formulas rather than their
-syntactic representations, offering new possibilities for reducing redundancy.
+    <id>http://arxiv.org/abs/2504.05240v1</id>
+    <updated>2025-04-07T16:23:19Z</updated>
+    <published>2025-04-07T16:23:19Z</published>
+    <title>Bayesian local clustering of age-period mortality surfaces across
+  multiple countries</title>
+    <summary>  Although traditional literature on mortality modeling has focused on single
+countries in isolation, recent contributions have progressively moved toward
+joint models for multiple countries. Besides favoring borrowing of information
+to improve age-period forecasts, this perspective has also potentials to infer
+local similarities among countries' mortality patterns in specific age classes
+and periods that could unveil unexplored demographic trends, while guiding the
+design of targeted policies. Advancements along this latter relevant direction
+are currently undermined by the lack of a multi-country model capable of
+incorporating the core structures of age-period mortality surfaces together
+with clustering patterns among countries that are not global, but rather vary
+locally across different combinations of ages and periods. We cover this gap by
+developing a novel Bayesian model for log-mortality rates that characterizes
+the age structure of mortality through a B-spline expansion whose
+country-specific dynamic coefficients encode both changes of this age structure
+across periods and also local clustering patterns among countries under a
+time-dependent random partition prior for these country-specific dynamic
+coefficients. While flexible, this formulation admits tractable posterior
+inference leveraging a suitably-designed Gibbs-sampler. The application to
+mortality data from 14 countries unveils local similarities highlighting both
+previously-recognized demographic phenomena and also yet-unexplored trends.
 </summary>
     <author>
-      <name>Benjamin Bordais</name>
+      <name>Giovanni Romanò</name>
     </author>
     <author>
-      <name>Daniel Neider</name>
+      <name>Emanuele Aliverti</name>
     </author>
-    <link href="http://arxiv.org/abs/2504.03517v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.03517v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Daniele Durante</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.05240v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.05240v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
