@@ -1,529 +1,535 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-04-14T00:56:28Z -->
+<!-- Last updated: 2025-04-15T00:54:55Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-04-13T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110426</opensearch:totalResults>
+  <updated>2025-04-14T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110489</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2504.07961v1</id>
-    <updated>2025-04-10T17:59:55Z</updated>
-    <published>2025-04-10T17:59:55Z</published>
-    <title>Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction</title>
-    <summary>  We introduce Geo4D, a method to repurpose video diffusion models for
-monocular 3D reconstruction of dynamic scenes. By leveraging the strong dynamic
-prior captured by such video models, Geo4D can be trained using only synthetic
-data while generalizing well to real data in a zero-shot manner. Geo4D predicts
-several complementary geometric modalities, namely point, depth, and ray maps.
-It uses a new multi-modal alignment algorithm to align and fuse these
-modalities, as well as multiple sliding windows, at inference time, thus
-obtaining robust and accurate 4D reconstruction of long videos. Extensive
-experiments across multiple benchmarks show that Geo4D significantly surpasses
-state-of-the-art video depth estimation methods, including recent methods such
-as MonST3R, which are also designed to handle dynamic scenes.
+    <id>http://arxiv.org/abs/2504.08719v1</id>
+    <updated>2025-04-11T17:33:32Z</updated>
+    <published>2025-04-11T17:33:32Z</published>
+    <title>SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language
+  Modeling</title>
+    <summary>  We present a decoder-only Transformer architecture that robustly generalizes
+to sequence lengths substantially longer than those seen during training. Our
+model, SWAN-GPT, interleaves layers without positional encodings (NoPE) and
+sliding-window attention layers equipped with rotary positional encodings
+(SWA-RoPE). Experiments demonstrate strong performance on sequence lengths
+significantly longer than the training length without the need for additional
+long-context training. This robust length extrapolation is achieved through our
+novel architecture, enhanced by a straightforward dynamic scaling of attention
+scores during inference. In addition, SWAN-GPT is more computationally
+efficient than standard GPT architectures, resulting in cheaper training and
+higher throughput. Further, we demonstrate that existing pre-trained
+decoder-only models can be efficiently converted to the SWAN architecture with
+minimal continued training, enabling longer contexts. Overall, our work
+presents an effective approach for scaling language models to longer contexts
+in a robust and efficient manner.
 </summary>
     <author>
-      <name>Zeren Jiang</name>
+      <name>Krishna C. Puvvada</name>
     </author>
     <author>
-      <name>Chuanxia Zheng</name>
+      <name>Faisal Ladhak</name>
     </author>
     <author>
-      <name>Iro Laina</name>
+      <name>Santiago Akle Serrano</name>
     </author>
     <author>
-      <name>Diane Larlus</name>
+      <name>Cheng-Ping Hsieh</name>
     </author>
     <author>
-      <name>Andrea Vedaldi</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 5 figures, Project page: https://geo4d.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07961v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07961v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.4.5" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.07952v1</id>
-    <updated>2025-04-10T17:57:33Z</updated>
-    <published>2025-04-10T17:57:33Z</published>
-    <title>Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory</title>
-    <summary>  Despite their impressive performance on complex tasks, current language
-models (LMs) typically operate in a vacuum: Each input query is processed
-separately, without retaining insights from previous attempts. Here, we present
-Dynamic Cheatsheet (DC), a lightweight framework that endows a black-box LM
-with a persistent, evolving memory. Rather than repeatedly re-discovering or
-re-committing the same solutions and mistakes, DC enables models to store and
-reuse accumulated strategies, code snippets, and general problem-solving
-insights at inference time. This test-time learning enhances performance
-substantially across a range of tasks without needing explicit ground-truth
-labels or human feedback. Leveraging DC, Claude 3.5 Sonnet's accuracy more than
-doubled on AIME math exams once it began retaining algebraic insights across
-questions. Similarly, GPT-4o's success rate on Game of 24 increased from 10% to
-99% after the model discovered and reused a Python-based solution. In tasks
-prone to arithmetic mistakes, such as balancing equations, DC enabled GPT-4o
-and Claude to reach near-perfect accuracy by recalling previously validated
-code, whereas their baselines stagnated around 50%. Beyond arithmetic
-challenges, DC yields notable accuracy gains on knowledge-demanding tasks.
-Claude achieved a 9% improvement in GPQA-Diamond and an 8% boost on MMLU-Pro
-problems. Crucially, DC's memory is self-curated, focusing on concise,
-transferable snippets rather than entire transcript. Unlike finetuning or
-static retrieval methods, DC adapts LMs' problem-solving skills on the fly,
-without modifying their underlying parameters. Overall, our findings present DC
-as a promising approach for augmenting LMs with persistent memory, bridging the
-divide between isolated inference events and the cumulative, experience-driven
-learning characteristic of human cognition.
-</summary>
-    <author>
-      <name>Mirac Suzgun</name>
+      <name>Shantanu Acharya</name>
     </author>
     <author>
-      <name>Mert Yuksekgonul</name>
+      <name>Somshubra Majumdar</name>
     </author>
     <author>
-      <name>Federico Bianchi</name>
+      <name>Fei Jia</name>
     </author>
     <author>
-      <name>Dan Jurafsky</name>
+      <name>Samuel Kriman</name>
     </author>
     <author>
-      <name>James Zou</name>
+      <name>Simeng Sun</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">https://github.com/suzgunmirac/dynamic-cheatsheet</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07952v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07952v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Dima Rekesh</name>
+    </author>
+    <author>
+      <name>Boris Ginsburg</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.08719v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08719v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.07943v1</id>
-    <updated>2025-04-10T17:53:31Z</updated>
-    <published>2025-04-10T17:53:31Z</published>
-    <title>HoloPart: Generative 3D Part Amodal Segmentation</title>
-    <summary>  3D part amodal segmentation--decomposing a 3D shape into complete,
-semantically meaningful parts, even when occluded--is a challenging but crucial
-task for 3D content creation and understanding. Existing 3D part segmentation
-methods only identify visible surface patches, limiting their utility. Inspired
-by 2D amodal segmentation, we introduce this novel task to the 3D domain and
-propose a practical, two-stage approach, addressing the key challenges of
-inferring occluded 3D geometry, maintaining global shape consistency, and
-handling diverse shapes with limited training data. First, we leverage existing
-3D part segmentation to obtain initial, incomplete part segments. Second, we
-introduce HoloPart, a novel diffusion-based model, to complete these segments
-into full 3D parts. HoloPart utilizes a specialized architecture with local
-attention to capture fine-grained part geometry and global shape context
-attention to ensure overall shape consistency. We introduce new benchmarks
-based on the ABO and PartObjaverse-Tiny datasets and demonstrate that HoloPart
-significantly outperforms state-of-the-art shape completion methods. By
-incorporating HoloPart with existing segmentation techniques, we achieve
-promising results on 3D part amodal segmentation, opening new avenues for
-applications in geometry editing, animation, and material assignment.
+    <id>http://arxiv.org/abs/2504.08718v1</id>
+    <updated>2025-04-11T17:30:46Z</updated>
+    <published>2025-04-11T17:30:46Z</published>
+    <title>EMO-X: Efficient Multi-Person Pose and Shape Estimation in One-Stage</title>
+    <summary>  Expressive Human Pose and Shape Estimation (EHPS) aims to jointly estimate
+human pose, hand gesture, and facial expression from monocular images. Existing
+methods predominantly rely on Transformer-based architectures, which suffer
+from quadratic complexity in self-attention, leading to substantial
+computational overhead, especially in multi-person scenarios. Recently, Mamba
+has emerged as a promising alternative to Transformers due to its efficient
+global modeling capability. However, it remains limited in capturing
+fine-grained local dependencies, which are essential for precise EHPS. To
+address these issues, we propose EMO-X, the Efficient Multi-person One-stage
+model for multi-person EHPS. Specifically, we explore a Scan-based Global-Local
+Decoder (SGLD) that integrates global context with skeleton-aware local
+features to iteratively enhance human tokens. Our EMO-X leverages the superior
+global modeling capability of Mamba and designs a local bidirectional scan
+mechanism for skeleton-aware local refinement. Comprehensive experiments
+demonstrate that EMO-X strikes an excellent balance between efficiency and
+accuracy. Notably, it achieves a significant reduction in computational
+complexity, requiring 69.8% less inference time compared to state-of-the-art
+(SOTA) methods, while outperforming most of them in accuracy.
 </summary>
     <author>
-      <name>Yunhan Yang</name>
+      <name>Haohang Jian</name>
     </author>
     <author>
-      <name>Yuan-Chen Guo</name>
+      <name>Jinlu Zhang</name>
     </author>
     <author>
-      <name>Yukun Huang</name>
+      <name>Junyi Wu</name>
     </author>
     <author>
-      <name>Zi-Xin Zou</name>
+      <name>Zhigang Tu</name>
     </author>
-    <author>
-      <name>Zhipeng Yu</name>
-    </author>
-    <author>
-      <name>Yangguang Li</name>
-    </author>
-    <author>
-      <name>Yan-Pei Cao</name>
-    </author>
-    <author>
-      <name>Xihui Liu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://vast-ai-research.github.io/HoloPart</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07943v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07943v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2504.08718v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08718v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.07916v1</id>
-    <updated>2025-04-10T17:30:07Z</updated>
-    <published>2025-04-10T17:30:07Z</published>
-    <title>Semantically Encoding Activity Labels for Context-Aware Human Activity
-  Recognition</title>
-    <summary>  Prior work has primarily formulated CA-HAR as a multi-label classification
-problem, where model inputs are time-series sensor data and target labels are
-binary encodings representing whether a given activity or context occurs. These
-CA-HAR methods either predicted each label independently or manually imposed
-relationships using graphs. However, both strategies often neglect an essential
-aspect: activity labels have rich semantic relationships. For instance,
-walking, jogging, and running activities share similar movement patterns but
-differ in pace and intensity, indicating that they are semantically related.
-Consequently, prior CA-HAR methods often struggled to accurately capture these
-inherent and nuanced relationships, particularly on datasets with noisy labels
-typically used for CA-HAR or situations where the ideal sensor type is
-unavailable (e.g., recognizing speech without audio sensors). To address this
-limitation, we propose SEAL, which leverage LMs to encode CA-HAR activity
-labels to capture semantic relationships. LMs generate vector embeddings that
-preserve rich semantic information from natural language. Our SEAL approach
-encodes input-time series sensor data from smart devices and their associated
-activity and context labels (text) as vector embeddings. During training, SEAL
-aligns the sensor data representations with their corresponding
-activity/context label embeddings in a shared embedding space. At inference
-time, SEAL performs a similarity search, returning the CA-HAR label with the
-embedding representation closest to the input data. Although LMs have been
-widely explored in other domains, surprisingly, their potential in CA-HAR has
-been underexplored, making our approach a novel contribution to the field. Our
-research opens up new possibilities for integrating more advanced LMs into
-CA-HAR tasks.
+    <id>http://arxiv.org/abs/2504.08716v1</id>
+    <updated>2025-04-11T17:29:35Z</updated>
+    <published>2025-04-11T17:29:35Z</published>
+    <title>ModernBERT or DeBERTaV3? Examining Architecture and Data Influence on
+  Transformer Encoder Models Performance</title>
+    <summary>  Pretrained transformer-encoder models like DeBERTaV3 and ModernBERT introduce
+architectural advancements aimed at improving efficiency and performance.
+Although the authors of ModernBERT report improved performance over DeBERTaV3
+on several benchmarks, the lack of disclosed training data and the absence of
+comparisons using a shared dataset make it difficult to determine whether these
+gains are due to architectural improvements or differences in training data. In
+this work, we conduct a controlled study by pretraining ModernBERT on the same
+dataset as CamemBERTaV2, a DeBERTaV3 French model, isolating the effect of
+model design. Our results show that the previous model generation remains
+superior in sample efficiency and overall benchmark performance, with
+ModernBERT's primary advantage being faster training and inference speed.
+However, the new proposed model still provides meaningful architectural
+improvements compared to earlier models such as BERT and RoBERTa. Additionally,
+we observe that high-quality pre-training data accelerates convergence but does
+not significantly improve final performance, suggesting potential benchmark
+saturation. These findings show the importance of disentangling pretraining
+data from architectural innovations when evaluating transformer models.
 </summary>
     <author>
-      <name>Wen Ge</name>
+      <name>Wissam Antoun</name>
     </author>
     <author>
-      <name>Guanyi Mou</name>
+      <name>Benoît Sagot</name>
     </author>
     <author>
-      <name>Emmanuel O. Agu</name>
+      <name>Djamé Seddah</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Under review</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.08716v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08716v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.08714v1</id>
+    <updated>2025-04-11T17:24:58Z</updated>
+    <published>2025-04-11T17:24:58Z</published>
+    <title>Generating Fine Details of Entity Interactions</title>
+    <summary>  Images not only depict objects but also encapsulate rich interactions between
+them. However, generating faithful and high-fidelity images involving multiple
+entities interacting with each other, is a long-standing challenge. While
+pre-trained text-to-image models are trained on large-scale datasets to follow
+diverse text instructions, they struggle to generate accurate interactions,
+likely due to the scarcity of training data for uncommon object interactions.
+This paper introduces InterActing, an interaction-focused dataset with 1000
+fine-grained prompts covering three key scenarios: (1) functional and
+action-based interactions, (2) compositional spatial relationships, and (3)
+multi-subject interactions. To address interaction generation challenges, we
+propose a decomposition-augmented refinement procedure. Our approach,
+DetailScribe, built on Stable Diffusion 3.5, leverages LLMs to decompose
+interactions into finer-grained concepts, uses a VLM to critique generated
+images, and applies targeted interventions within the diffusion process in
+refinement. Automatic and human evaluations show significantly improved image
+quality, demonstrating the potential of enhanced inference strategies. Our
+dataset and code are available at https://concepts-ai.com/p/detailscribe/ to
+facilitate future exploration of interaction-rich image generation.
+</summary>
+    <author>
+      <name>Xinyi Gu</name>
     </author>
     <author>
-      <name>Kyumin Lee</name>
+      <name>Jiayuan Mao</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Percom 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07916v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07916v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://concepts-ai.com/p/detailscribe/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.08714v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08714v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.07896v1</id>
-    <updated>2025-04-10T16:14:17Z</updated>
-    <published>2025-04-10T16:14:17Z</published>
-    <title>Fast Adaptation with Behavioral Foundation Models</title>
-    <summary>  Unsupervised zero-shot reinforcement learning (RL) has emerged as a powerful
-paradigm for pretraining behavioral foundation models (BFMs), enabling agents
-to solve a wide range of downstream tasks specified via reward functions in a
-zero-shot fashion, i.e., without additional test-time learning or planning.
-This is achieved by learning self-supervised task embeddings alongside
-corresponding near-optimal behaviors and incorporating an inference procedure
-to directly retrieve the latent task embedding and associated policy for any
-given reward function. Despite promising results, zero-shot policies are often
-suboptimal due to errors induced by the unsupervised training process, the
-embedding, and the inference procedure. In this paper, we focus on devising
-fast adaptation strategies to improve the zero-shot performance of BFMs in a
-few steps of online interaction with the environment while avoiding any
-performance drop during the adaptation process. Notably, we demonstrate that
-existing BFMs learn a set of skills containing more performant policies than
-those identified by their inference procedure, making them well-suited for fast
-adaptation. Motivated by this observation, we propose both actor-critic and
-actor-only fast adaptation strategies that search in the low-dimensional
-task-embedding space of the pre-trained BFM to rapidly improve the performance
-of its zero-shot policies on any downstream task. Notably, our approach
-mitigates the initial "unlearning" phase commonly observed when fine-tuning
-pre-trained RL models. We evaluate our fast adaptation strategies on top of
-four state-of-the-art zero-shot RL methods in multiple navigation and
-locomotion domains. Our results show that they achieve 10-40% improvement over
-their zero-shot performance in a few tens of episodes, outperforming existing
-baselines.
+    <id>http://arxiv.org/abs/2504.08700v1</id>
+    <updated>2025-04-11T17:07:09Z</updated>
+    <published>2025-04-11T17:07:09Z</published>
+    <title>Don't torque like that. Measuring compact object magnetic fields with
+  analytic torque models</title>
+    <summary>  Context. Changes of the rotational period observed in various magnetized
+accreting sources are generally attributed to the interaction between the
+in-falling plasma and the large-scale magnetic field of the accretor. A number
+of models have been proposed to link these changes to the mass accretion rate,
+based on different assumptions on the relevant physical processes and system
+parameters. For X-ray binaries with neutron stars, with the help of precise
+measurements of the spin periods provided by current instrumentation, these
+models render a way to infer such parameters as the strength of the dipolar
+field and a distance to the system. Often, the obtained magnetic field strength
+values contradict those from other methods used to obtain magnetic field
+estimates.
+  Aims. We want to compare the results of several of the proposed accretion
+models. To this end an example application of these models to data is
+performed.
+  Methods. We reformulate the set of disk accretion torque models in a way that
+their parametrization are directly comparable. The application of the
+reformulated models is discussed and demonstrated using Fermi/GBM and Swift/BAT
+monitoring data covering several X-ray outbursts of the accreting pulsar 4U
+0115+63.
+  Results. We find that most of the models under consideration are able to
+describe the observations to a high degree of accuracy and with little
+indication for one model being preferred over the others. Yet, derived
+parameters from those models show a large spread. Specifically the magnetic
+field strength ranges over one order of magnitude for the different models.
+This indicates that the results are heavily influenced by systematic
+uncertainties.
 </summary>
     <author>
-      <name>Harshit Sikchi</name>
+      <name>J. J. R. Stierhof</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
     </author>
     <author>
-      <name>Andrea Tirinzoni</name>
+      <name>E. Sokolova-Lapa</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
     </author>
     <author>
-      <name>Ahmed Touati</name>
+      <name>K. Berger</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
     </author>
     <author>
-      <name>Yingchen Xu</name>
+      <name>G. Vasilopoulos</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Department of Physics, National and Kapodistrian University of Athens</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Institute of Accelerating Systems &amp; Applications Athens</arxiv:affiliation>
     </author>
     <author>
-      <name>Anssi Kanervisto</name>
+      <name>P. Thalhammer</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
     </author>
     <author>
-      <name>Scott Niekum</name>
+      <name>N. Zalot</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
     </author>
     <author>
-      <name>Amy Zhang</name>
+      <name>R. Ballhausen</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">University of Maryland College Park, Department of Astronomy</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">NASA Goddard Space Flight Center, Astrophysics Science Division</arxiv:affiliation>
     </author>
     <author>
-      <name>Alessandro Lazaric</name>
+      <name>I. El Mellah</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Departmento de Física, Universidad de Santiago de Chile</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Center for Interdisciplinary Research in Astrophysics and Space Exploration Santiago</arxiv:affiliation>
     </author>
     <author>
-      <name>Matteo Pirotta</name>
+      <name>C. Malacaria</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">INAF-Osservatorio Astronomico di Roma</arxiv:affiliation>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07896v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07896v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>R. E. Rothschild</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Department of Astronomy and Astrophysics, University of California San Diego</arxiv:affiliation>
+    </author>
+    <author>
+      <name>P. Kretschmar</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">European Space Astronomy Centre Madrid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>K. Pottschmidt</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">NASA Goddard Space Flight Center, Astrophysics Science Division</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Center for Space Sciences and Technology, University of Maryland Baltimore County</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. Wilms</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in A&amp;A, 20 pages, 13 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.08700v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08700v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.08655v1</id>
+    <updated>2025-04-11T15:58:46Z</updated>
+    <published>2025-04-11T15:58:46Z</published>
+    <title>TinyCenterSpeed: Efficient Center-Based Object Detection for Autonomous
+  Racing</title>
+    <summary>  Perception within autonomous driving is nearly synonymous with Neural
+Networks (NNs). Yet, the domain of autonomous racing is often characterized by
+scaled, computationally limited robots used for cost-effectiveness and safety.
+For this reason, opponent detection and tracking systems typically resort to
+traditional computer vision techniques due to computational constraints. This
+paper introduces TinyCenterSpeed, a streamlined adaptation of the seminal
+CenterPoint method, optimized for real-time performance on 1:10 scale
+autonomous racing platforms. This adaptation is viable even on OBCs powered
+solely by Central Processing Units (CPUs), as it incorporates the use of an
+external Tensor Processing Unit (TPU). We demonstrate that, compared to
+Adaptive Breakpoint Detector (ABD), the current State-of-the-Art (SotA) in
+scaled autonomous racing, TinyCenterSpeed not only improves detection and
+velocity estimation by up to 61.38% but also supports multi-opponent detection
+and estimation. It achieves real-time performance with an inference time of
+just 7.88 ms on the TPU, significantly reducing CPU utilization 8.3-fold.
+</summary>
+    <author>
+      <name>Neil Reichlin</name>
+    </author>
+    <author>
+      <name>Nicolas Baumann</name>
+    </author>
+    <author>
+      <name>Edoardo Ghignone</name>
+    </author>
+    <author>
+      <name>Michele Magno</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.08655v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08655v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.07891v1</id>
-    <updated>2025-04-10T16:05:19Z</updated>
-    <published>2025-04-10T16:05:19Z</published>
-    <title>SpecReason: Fast and Accurate Inference-Time Compute via Speculative
-  Reasoning</title>
-    <summary>  Recent advances in inference-time compute have significantly improved
-performance on complex tasks by generating long chains of thought (CoTs) using
-Large Reasoning Models (LRMs). However, this improved accuracy comes at the
-cost of high inference latency due to the length of generated reasoning
-sequences and the autoregressive nature of decoding. Our key insight in
-tackling these overheads is that LRM inference, and the reasoning that it
-embeds, is highly tolerant of approximations: complex tasks are typically
-broken down into simpler steps, each of which brings utility based on the
-semantic insight it provides for downstream steps rather than the exact tokens
-it generates. Accordingly, we introduce SpecReason, a system that automatically
-accelerates LRM inference by using a lightweight model to (speculatively) carry
-out simpler intermediate reasoning steps and reserving the costly base model
-only to assess (and potentially correct) the speculated outputs. Importantly,
-SpecReason's focus on exploiting the semantic flexibility of thinking tokens in
-preserving final-answer accuracy is complementary to prior speculation
-techniques, most notably speculative decoding, which demands token-level
-equivalence at each step. Across a variety of reasoning benchmarks, SpecReason
-achieves 1.5-2.5$\times$ speedup over vanilla LRM inference while improving
-accuracy by 1.0-9.9\%. Compared to speculative decoding without SpecReason,
-their combination yields an additional 19.4-44.2\% latency reduction. We
-open-source SpecReason at https://github.com/ruipeterpan/specreason.
+    <id>http://arxiv.org/abs/2504.08654v1</id>
+    <updated>2025-04-11T15:58:31Z</updated>
+    <published>2025-04-11T15:58:31Z</published>
+    <title>The Invisible EgoHand: 3D Hand Forecasting through EgoBody Pose
+  Estimation</title>
+    <summary>  Forecasting hand motion and pose from an egocentric perspective is essential
+for understanding human intention. However, existing methods focus solely on
+predicting positions without considering articulation, and only when the hands
+are visible in the field of view. This limitation overlooks the fact that
+approximate hand positions can still be inferred even when they are outside the
+camera's view. In this paper, we propose a method to forecast the 3D
+trajectories and poses of both hands from an egocentric video, both in and out
+of the field of view. We propose a diffusion-based transformer architecture for
+Egocentric Hand Forecasting, EgoH4, which takes as input the observation
+sequence and camera poses, then predicts future 3D motion and poses for both
+hands of the camera wearer. We leverage full-body pose information, allowing
+other joints to provide constraints on hand motion. We denoise the hand and
+body joints along with a visibility predictor for hand joints and a 3D-to-2D
+reprojection loss that minimizes the error when hands are in-view. We evaluate
+EgoH4 on the Ego-Exo4D dataset, combining subsets with body and hand
+annotations. We train on 156K sequences and evaluate on 34K sequences,
+respectively. EgoH4 improves the performance by 3.4cm and 5.1cm over the
+baseline in terms of ADE for hand trajectory forecasting and MPJPE for hand
+pose forecasting. Project page: https://masashi-hatano.github.io/EgoH4/
 </summary>
     <author>
-      <name>Rui Pan</name>
+      <name>Masashi Hatano</name>
     </author>
     <author>
-      <name>Yinwei Dai</name>
+      <name>Zhifan Zhu</name>
     </author>
     <author>
-      <name>Zhihao Zhang</name>
+      <name>Hideo Saito</name>
     </author>
     <author>
-      <name>Gabriele Oliaro</name>
+      <name>Dima Damen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.08654v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08654v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.08651v1</id>
+    <updated>2025-04-11T15:55:50Z</updated>
+    <published>2025-04-11T15:55:50Z</published>
+    <title>Application of machine learning models to predict the relationship
+  between air pollution, ecosystem degradation, and health disparities and lung
+  cancer in Vietnam</title>
+    <summary>  Lung cancer is one of the major causes of death worldwide, and Vietnam is not
+an exception. This disease is the second most common type of cancer globally
+and the second most common cause of death in Vietnam, just after liver cancer,
+with 23,797 fatal cases and 26,262 new cases, or 14.4% of the disease in 2020.
+Recently, with rising disease rates in Vietnam causing a huge public health
+burden, lung cancer continues to hold the top position in attention and care.
+Especially together with climate change, under a variety of types of pollution,
+deforestation, and modern lifestyles, lung cancer risks are on red alert,
+particularly in Vietnam. To understand more about the severe disease sources in
+Vietnam from a diversity of key factors, including environmental features and
+the current health state, with a particular emphasis on Vietnam's distinct
+socioeconomic and ecological context, we utilize large datasets such as patient
+health records and environmental indicators containing necessary information,
+such as deforestation rate, green cover rate, air pollution, and lung cancer
+risks, that is collected from well-known governmental sharing websites. Then,
+we process and connect them and apply analytical methods (heatmap, information
+gain, p-value, spearman correlation) to determine causal correlations
+influencing lung cancer risks. Moreover, we deploy machine learning (ML) models
+(Decision Tree, Random Forest, Support Vector Machine, K-mean clustering) to
+discover cancer risk patterns. Our experimental results, leveraged by the
+aforementioned ML models to identify the disease patterns, are promising,
+particularly, the models as Random Forest, SVM, and PCA are working well on the
+datasets and give high accuracy (99%), however, the K means clustering has very
+low accuracy (10%) and does not fit the datasets.
+</summary>
+    <author>
+      <name>Ngoc Hong Tran</name>
     </author>
     <author>
-      <name>Zhihao Jia</name>
+      <name>Lan Kim Vien</name>
     </author>
     <author>
-      <name>Ravi Netravali</name>
+      <name>Ngoc-Thao Thi Le</name>
     </author>
-    <link href="http://arxiv.org/abs/2504.07891v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07891v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted and Published in the Proceeding of the 2nd International
+  Conference on "Green Solutions and Emerging Technologies for Sustainability"
+  (GSETS 2025) ISBN: 978-604-76-3087-5</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.08651v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08651v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.07878v1</id>
-    <updated>2025-04-10T15:54:19Z</updated>
-    <published>2025-04-10T15:54:19Z</published>
-    <title>Token Level Routing Inference System for Edge Devices</title>
-    <summary>  The computational complexity of large language model (LLM) inference
-significantly constrains their deployment efficiency on edge devices. In
-contrast, small language models offer faster decoding and lower resource
-consumption but often suffer from degraded response quality and heightened
-susceptibility to hallucinations. To address this trade-off, collaborative
-decoding, in which a large model assists in generating critical tokens, has
-emerged as a promising solution. This paradigm leverages the strengths of both
-model types by enabling high-quality inference through selective intervention
-of the large model, while maintaining the speed and efficiency of the smaller
-model. In this work, we present a novel collaborative decoding inference system
-that allows small models to perform on-device inference while selectively
-consulting a cloud-based large model for critical token generation. Remarkably,
-the system achieves a 60% performance gain on CommonsenseQA using only a 0.5B
-model on an M1 MacBook, with under 7% of tokens generation uploaded to the
-large model in the cloud.
+    <id>http://arxiv.org/abs/2504.08645v1</id>
+    <updated>2025-04-11T15:45:17Z</updated>
+    <published>2025-04-11T15:45:17Z</published>
+    <title>Title block detection and information extraction for enhanced building
+  drawings search</title>
+    <summary>  The architecture, engineering, and construction (AEC) industry still heavily
+relies on information stored in drawings for building construction,
+maintenance, compliance and error checks. However, information extraction (IE)
+from building drawings is often time-consuming and costly, especially when
+dealing with historical buildings. Drawing search can be simplified by
+leveraging the information stored in the title block portion of the drawing,
+which can be seen as drawing metadata. However, title block IE can be complex
+especially when dealing with historical drawings which do not follow existing
+standards for uniformity. This work performs a comparison of existing methods
+for this kind of IE task, and then proposes a novel title block detection and
+IE pipeline which outperforms existing methods, in particular when dealing with
+complex, noisy historical drawings. The pipeline is obtained by combining a
+lightweight Convolutional Neural Network and GPT-4o, the proposed inference
+pipeline detects building engineering title blocks with high accuracy, and then
+extract structured drawing metadata from the title blocks, which can be used
+for drawing search, filtering and grouping. The work demonstrates high accuracy
+and efficiency in IE for both vector (CAD) and hand-drawn (historical)
+drawings. A user interface (UI) that leverages the extracted metadata for
+drawing search is established and deployed on real projects, which demonstrates
+significant time savings. Additionally, an extensible domain-expert-annotated
+dataset for title block detection is developed, via an efficient AEC-friendly
+annotation workflow that lays the foundation for future work.
 </summary>
     <author>
-      <name>Jianshu She</name>
+      <name>Alessio Lombardi</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Buro Happold, London</arxiv:affiliation>
     </author>
     <author>
-      <name>Wenhao Zheng</name>
+      <name>Li Duan</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
     </author>
     <author>
-      <name>Zhengzhong Liu</name>
+      <name>Ahmed Elnagar</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Buro Happold, London</arxiv:affiliation>
     </author>
     <author>
-      <name>Hongyi Wang</name>
+      <name>Ahmed Zaalouk</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
     </author>
     <author>
-      <name>Eric Xing</name>
+      <name>Khalid Ismail</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
     </author>
     <author>
-      <name>Huaxiu Yao</name>
+      <name>Edlira Vakaj</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
     </author>
-    <author>
-      <name>Qirong Ho</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 8 figures, under review of ACL system demo</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07878v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07878v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.07861v1</id>
-    <updated>2025-04-10T15:37:06Z</updated>
-    <published>2025-04-10T15:37:06Z</published>
-    <title>Horizons, throats and bounces in hybrid metric-Palatini gravity with a
-  non-zero potential</title>
-    <summary>  This work conducts an in-depth exploration of exact electrically charged
-solutions, including traversable wormholes, black holes, and black bounces,
-within the framework of the scalar-tensor representation of hybrid
-metric-Palatini gravity (HMPG) with a non-zero scalar potential. By integrating
-principles from both the metric and Palatini formulations, HMPG provides a
-flexible approach to addressing persistent challenges in General Relativity
-(GR), such as the late-time cosmic acceleration and the nature of dark matter.
-Under the assumption of spherical symmetry, we employ an inverse problem
-technique to derive exact solutions in both the Jordan and Einstein conformal
-frames. This method naturally leads to configurations involving either
-canonical or phantom scalar fields. A thorough examination of horizon
-structures, throat conditions, asymptotic behaviour, and curvature regularity
-(via the Kretschmann scalar) reveals the intricate causal structures permitted
-by this theoretical model. The analysis uncovers a diverse range of geometric
-configurations, with the phantom sector exhibiting a notably richer spectrum of
-solutions than the canonical case. These solutions encompass traversable
-wormholes, black universe models, where the interior of a black hole evolves
-into an expanding cosmological phase rather than a singularity, as well as
-black bounce structures and multi-horizon black holes. The results demonstrate
-that introducing a non-zero scalar potential within HMPG significantly expands
-the array of possible gravitational solutions, yielding complex causal and
-curvature properties that go beyond standard GR. Consequently, HMPG stands out
-as a powerful theoretical framework for modelling extreme astrophysical
-environments, where deviations from classical gravity are expected to play a
-crucial role.
-</summary>
-    <author>
-      <name>Gabriel I. Róis</name>
-    </author>
-    <author>
-      <name>José Tarciso S. S. Junior</name>
-    </author>
-    <author>
-      <name>Francisco S. N. Lobo</name>
-    </author>
-    <author>
-      <name>Manuel E. Rodrigues</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">34 pages, 13 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07861v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07861v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.07836v2</id>
-    <updated>2025-04-11T01:47:14Z</updated>
-    <published>2025-04-10T15:13:00Z</published>
-    <title>AerialVG: A Challenging Benchmark for Aerial Visual Grounding by
-  Exploring Positional Relations</title>
-    <summary>  Visual grounding (VG) aims to localize target objects in an image based on
-natural language descriptions. In this paper, we propose AerialVG, a new task
-focusing on visual grounding from aerial views. Compared to traditional VG,
-AerialVG poses new challenges, \emph{e.g.}, appearance-based grounding is
-insufficient to distinguish among multiple visually similar objects, and
-positional relations should be emphasized. Besides, existing VG models struggle
-when applied to aerial imagery, where high-resolution images cause significant
-difficulties. To address these challenges, we introduce the first AerialVG
-dataset, consisting of 5K real-world aerial images, 50K manually annotated
-descriptions, and 103K objects. Particularly, each annotation in AerialVG
-dataset contains multiple target objects annotated with relative spatial
-relations, requiring models to perform comprehensive spatial reasoning.
-Furthermore, we propose an innovative model especially for the AerialVG task,
-where a Hierarchical Cross-Attention is devised to focus on target regions, and
-a Relation-Aware Grounding module is designed to infer positional relations.
-Experimental results validate the effectiveness of our dataset and method,
-highlighting the importance of spatial reasoning in aerial visual grounding.
-The code and dataset will be released.
-</summary>
-    <author>
-      <name>Junli Liu</name>
-    </author>
-    <author>
-      <name>Qizhi Chen</name>
-    </author>
-    <author>
-      <name>Zhigang Wang</name>
-    </author>
-    <author>
-      <name>Yiwen Tang</name>
-    </author>
-    <author>
-      <name>Yiting Zhang</name>
-    </author>
-    <author>
-      <name>Chi Yan</name>
-    </author>
-    <author>
-      <name>Dong Wang</name>
-    </author>
-    <author>
-      <name>Xuelong Li</name>
-    </author>
-    <author>
-      <name>Bin Zhao</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.07836v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07836v2" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 8 figures, 1 table. Accepted for publication in the 2025
+  European Conference on Computing in Construction (EC3,
+  https://ec-3.org/conference2025/)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.08645v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08645v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.07835v1</id>
-    <updated>2025-04-10T15:12:29Z</updated>
-    <published>2025-04-10T15:12:29Z</published>
-    <title>Pychop: Emulating Low-Precision Arithmetic in Numerical Methods and
-  Neural Networks</title>
-    <summary>  Motivated by the growing demand for low-precision arithmetic in computational
-science, we exploit lower-precision emulation in Python -- widely regarded as
-the dominant programming language for numerical analysis and machine learning.
-Low-precision training has revolutionized deep learning by enabling more
-efficient computation and reduced memory and energy consumption while
-maintaining model fidelity. To better enable numerical experimentation with and
-exploration of low precision computation, we developed the Pychop library,
-which supports customizable floating-point formats and a comprehensive set of
-rounding modes in Python, allowing users to benefit from fast, low-precision
-emulation in numerous applications. Pychop also introduces interfaces for both
-PyTorch and JAX, enabling efficient low-precision emulation on GPUs for neural
-network training and inference with unparalleled flexibility.
-  In this paper, we offer a comprehensive exposition of the design,
-implementation, validation, and practical application of Pychop, establishing
-it as a foundational tool for advancing efficient mixed-precision algorithms.
-Furthermore, we present empirical results on low-precision emulation for image
-classification and object detection using published datasets, illustrating the
-sensitivity of the use of low precision and offering valuable insights into its
-impact. Pychop enables in-depth investigations into the effects of numerical
-precision, facilitates the development of novel hardware accelerators, and
-integrates seamlessly into existing deep learning workflows. Software and
-experimental code are publicly available at
-https://github.com/inEXASCALE/pychop.
+    <id>http://arxiv.org/abs/2504.08641v1</id>
+    <updated>2025-04-11T15:41:43Z</updated>
+    <published>2025-04-11T15:41:43Z</published>
+    <title>Training-free Guidance in Text-to-Video Generation via Multimodal
+  Planning and Structured Noise Initialization</title>
+    <summary>  Recent advancements in text-to-video (T2V) diffusion models have
+significantly enhanced the visual quality of the generated videos. However,
+even recent T2V models find it challenging to follow text descriptions
+accurately, especially when the prompt requires accurate control of spatial
+layouts or object trajectories. A recent line of research uses layout guidance
+for T2V models that require fine-tuning or iterative manipulation of the
+attention map during inference time. This significantly increases the memory
+requirement, making it difficult to adopt a large T2V model as a backbone. To
+address this, we introduce Video-MSG, a training-free Guidance method for T2V
+generation based on Multimodal planning and Structured noise initialization.
+Video-MSG consists of three steps, where in the first two steps, Video-MSG
+creates Video Sketch, a fine-grained spatio-temporal plan for the final video,
+specifying background, foreground, and object trajectories, in the form of
+draft video frames. In the last step, Video-MSG guides a downstream T2V
+diffusion model with Video Sketch through noise inversion and denoising.
+Notably, Video-MSG does not need fine-tuning or attention manipulation with
+additional memory during inference time, making it easier to adopt large T2V
+models. Video-MSG demonstrates its effectiveness in enhancing text alignment
+with multiple T2V backbones (VideoCrafter2 and CogVideoX-5B) on popular T2V
+generation benchmarks (T2VCompBench and VBench). We provide comprehensive
+ablation studies about noise inversion ratio, different background generators,
+background object detection, and foreground object segmentation.
 </summary>
     <author>
-      <name>Erin Carson</name>
+      <name>Jialu Li</name>
     </author>
     <author>
-      <name>Xinye Chen</name>
+      <name>Shoubin Yu</name>
     </author>
-    <link href="http://arxiv.org/abs/2504.07835v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.07835v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Han Lin</name>
+    </author>
+    <author>
+      <name>Jaemin Cho</name>
+    </author>
+    <author>
+      <name>Jaehong Yoon</name>
+    </author>
+    <author>
+      <name>Mohit Bansal</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Website: https://video-msg.github.io; The first three authors
+  contributed equally</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.08641v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.08641v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
