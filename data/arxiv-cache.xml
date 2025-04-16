@@ -1,535 +1,492 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-04-15T00:54:55Z -->
+<!-- Last updated: 2025-04-16T00:54:47Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-04-14T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110489</opensearch:totalResults>
+  <updated>2025-04-15T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110622</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2504.08719v1</id>
-    <updated>2025-04-11T17:33:32Z</updated>
-    <published>2025-04-11T17:33:32Z</published>
-    <title>SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language
-  Modeling</title>
-    <summary>  We present a decoder-only Transformer architecture that robustly generalizes
-to sequence lengths substantially longer than those seen during training. Our
-model, SWAN-GPT, interleaves layers without positional encodings (NoPE) and
-sliding-window attention layers equipped with rotary positional encodings
-(SWA-RoPE). Experiments demonstrate strong performance on sequence lengths
-significantly longer than the training length without the need for additional
-long-context training. This robust length extrapolation is achieved through our
-novel architecture, enhanced by a straightforward dynamic scaling of attention
-scores during inference. In addition, SWAN-GPT is more computationally
-efficient than standard GPT architectures, resulting in cheaper training and
-higher throughput. Further, we demonstrate that existing pre-trained
-decoder-only models can be efficiently converted to the SWAN architecture with
-minimal continued training, enabling longer contexts. Overall, our work
-presents an effective approach for scaling language models to longer contexts
-in a robust and efficient manner.
+    <id>http://arxiv.org/abs/2504.10486v1</id>
+    <updated>2025-04-14T17:59:58Z</updated>
+    <published>2025-04-14T17:59:58Z</published>
+    <title>DNF-Avatar: Distilling Neural Fields for Real-time Animatable Avatar
+  Relighting</title>
+    <summary>  Creating relightable and animatable human avatars from monocular videos is a
+rising research topic with a range of applications, e.g. virtual reality,
+sports, and video games. Previous works utilize neural fields together with
+physically based rendering (PBR), to estimate geometry and disentangle
+appearance properties of human avatars. However, one drawback of these methods
+is the slow rendering speed due to the expensive Monte Carlo ray tracing. To
+tackle this problem, we proposed to distill the knowledge from implicit neural
+fields (teacher) to explicit 2D Gaussian splatting (student) representation to
+take advantage of the fast rasterization property of Gaussian splatting. To
+avoid ray-tracing, we employ the split-sum approximation for PBR appearance. We
+also propose novel part-wise ambient occlusion probes for shadow computation.
+Shadow prediction is achieved by querying these probes only once per pixel,
+which paves the way for real-time relighting of avatars. These techniques
+combined give high-quality relighting results with realistic shadow effects.
+Our experiments demonstrate that the proposed student model achieves comparable
+or even better relighting results with our teacher model while being 370 times
+faster at inference time, achieving a 67 FPS rendering speed.
 </summary>
     <author>
-      <name>Krishna C. Puvvada</name>
+      <name>Zeren Jiang</name>
     </author>
     <author>
-      <name>Faisal Ladhak</name>
+      <name>Shaofei Wang</name>
     </author>
     <author>
-      <name>Santiago Akle Serrano</name>
+      <name>Siyu Tang</name>
     </author>
-    <author>
-      <name>Cheng-Ping Hsieh</name>
-    </author>
-    <author>
-      <name>Shantanu Acharya</name>
-    </author>
-    <author>
-      <name>Somshubra Majumdar</name>
-    </author>
-    <author>
-      <name>Fei Jia</name>
-    </author>
-    <author>
-      <name>Samuel Kriman</name>
-    </author>
-    <author>
-      <name>Simeng Sun</name>
-    </author>
-    <author>
-      <name>Dima Rekesh</name>
-    </author>
-    <author>
-      <name>Boris Ginsburg</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.08719v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08719v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.08718v1</id>
-    <updated>2025-04-11T17:30:46Z</updated>
-    <published>2025-04-11T17:30:46Z</published>
-    <title>EMO-X: Efficient Multi-Person Pose and Shape Estimation in One-Stage</title>
-    <summary>  Expressive Human Pose and Shape Estimation (EHPS) aims to jointly estimate
-human pose, hand gesture, and facial expression from monocular images. Existing
-methods predominantly rely on Transformer-based architectures, which suffer
-from quadratic complexity in self-attention, leading to substantial
-computational overhead, especially in multi-person scenarios. Recently, Mamba
-has emerged as a promising alternative to Transformers due to its efficient
-global modeling capability. However, it remains limited in capturing
-fine-grained local dependencies, which are essential for precise EHPS. To
-address these issues, we propose EMO-X, the Efficient Multi-person One-stage
-model for multi-person EHPS. Specifically, we explore a Scan-based Global-Local
-Decoder (SGLD) that integrates global context with skeleton-aware local
-features to iteratively enhance human tokens. Our EMO-X leverages the superior
-global modeling capability of Mamba and designs a local bidirectional scan
-mechanism for skeleton-aware local refinement. Comprehensive experiments
-demonstrate that EMO-X strikes an excellent balance between efficiency and
-accuracy. Notably, it achieves a significant reduction in computational
-complexity, requiring 69.8% less inference time compared to state-of-the-art
-(SOTA) methods, while outperforming most of them in accuracy.
-</summary>
-    <author>
-      <name>Haohang Jian</name>
-    </author>
-    <author>
-      <name>Jinlu Zhang</name>
-    </author>
-    <author>
-      <name>Junyi Wu</name>
-    </author>
-    <author>
-      <name>Zhigang Tu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.08718v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08718v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 8 figures, Project pages:
+  https://jzr99.github.io/DNF-Avatar/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10486v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10486v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.08716v1</id>
-    <updated>2025-04-11T17:29:35Z</updated>
-    <published>2025-04-11T17:29:35Z</published>
-    <title>ModernBERT or DeBERTaV3? Examining Architecture and Data Influence on
-  Transformer Encoder Models Performance</title>
-    <summary>  Pretrained transformer-encoder models like DeBERTaV3 and ModernBERT introduce
-architectural advancements aimed at improving efficiency and performance.
-Although the authors of ModernBERT report improved performance over DeBERTaV3
-on several benchmarks, the lack of disclosed training data and the absence of
-comparisons using a shared dataset make it difficult to determine whether these
-gains are due to architectural improvements or differences in training data. In
-this work, we conduct a controlled study by pretraining ModernBERT on the same
-dataset as CamemBERTaV2, a DeBERTaV3 French model, isolating the effect of
-model design. Our results show that the previous model generation remains
-superior in sample efficiency and overall benchmark performance, with
-ModernBERT's primary advantage being faster training and inference speed.
-However, the new proposed model still provides meaningful architectural
-improvements compared to earlier models such as BERT and RoBERTa. Additionally,
-we observe that high-quality pre-training data accelerates convergence but does
-not significantly improve final performance, suggesting potential benchmark
-saturation. These findings show the importance of disentangling pretraining
-data from architectural innovations when evaluating transformer models.
+    <id>http://arxiv.org/abs/2504.10453v1</id>
+    <updated>2025-04-14T17:40:18Z</updated>
+    <published>2025-04-14T17:40:18Z</published>
+    <title>Anchors no more: Using peculiar velocities to constrain $H_0$ and the
+  primordial Universe without calibrators</title>
+    <summary>  We develop a novel approach to constrain the Hubble parameter $H_0$ and the
+primordial power spectrum amplitude $A_\mathrm{s}$ using supernovae type Ia
+(SNIa) data. By considering SNIa as tracers of the peculiar velocity field, we
+can model their distance and their covariance as a function of cosmological
+parameters without the need of calibrators like Cepheids; this yields a new
+independent probe of the large-scale structure based on SNIa data without
+distance anchors. Crucially, we implement a differentiable pipeline in JAX,
+including efficient emulators and affine sampling, reducing inference time from
+years to hours on a single GPU. We first validate our method on mock datasets,
+demonstrating that we can constrain $H_0$ and $\log 10^{10}A_\mathrm{s}$ within
+$\sim10\%$ using $\sim10^3$ SNIa. We then test our pipeline with SNIa from an
+$N$-body simulation, obtaining $7\%$-level unbiased constraints on $H_0$ with a
+moderate noise level. We finally apply our method to Pantheon+ data,
+constraining $H_0$ at the $10\%$ level without Cepheids when fixing
+$A_\mathrm{s}$ to its $\it{Planck}$ value. On the other hand, we obtain
+$15\%$-level constraints on $\log 10^{10}A_\mathrm{s}$ in agreement with
+$\it{Planck}$ when including Cepheids in the analysis. In light of upcoming
+observations of low redshift SNIa from the Zwicky Transient Facility and the
+Vera Rubin Legacy Survey of Space and Time, surveys for which our method will
+develop its full potential, we make our code publicly available.
 </summary>
     <author>
-      <name>Wissam Antoun</name>
+      <name>Davide Piras</name>
     </author>
     <author>
-      <name>Benoît Sagot</name>
+      <name>Francesco Sorrenti</name>
     </author>
     <author>
-      <name>Djamé Seddah</name>
+      <name>Ruth Durrer</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Under review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.08716v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08716v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Martin Kunz</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 5 figures, comments welcome. Code available at
+  https://github.com/dpiras/veloce</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10453v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10453v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.08714v1</id>
-    <updated>2025-04-11T17:24:58Z</updated>
-    <published>2025-04-11T17:24:58Z</published>
-    <title>Generating Fine Details of Entity Interactions</title>
-    <summary>  Images not only depict objects but also encapsulate rich interactions between
-them. However, generating faithful and high-fidelity images involving multiple
-entities interacting with each other, is a long-standing challenge. While
-pre-trained text-to-image models are trained on large-scale datasets to follow
-diverse text instructions, they struggle to generate accurate interactions,
-likely due to the scarcity of training data for uncommon object interactions.
-This paper introduces InterActing, an interaction-focused dataset with 1000
-fine-grained prompts covering three key scenarios: (1) functional and
-action-based interactions, (2) compositional spatial relationships, and (3)
-multi-subject interactions. To address interaction generation challenges, we
-propose a decomposition-augmented refinement procedure. Our approach,
-DetailScribe, built on Stable Diffusion 3.5, leverages LLMs to decompose
-interactions into finer-grained concepts, uses a VLM to critique generated
-images, and applies targeted interventions within the diffusion process in
-refinement. Automatic and human evaluations show significantly improved image
-quality, demonstrating the potential of enhanced inference strategies. Our
-dataset and code are available at https://concepts-ai.com/p/detailscribe/ to
-facilitate future exploration of interaction-rich image generation.
+    <id>http://arxiv.org/abs/2504.10449v1</id>
+    <updated>2025-04-14T17:38:25Z</updated>
+    <published>2025-04-14T17:38:25Z</published>
+    <title>M1: Towards Scalable Test-Time Compute with Mamba Reasoning Models</title>
+    <summary>  Effective reasoning is crucial to solving complex mathematical problems.
+Recent large language models (LLMs) have boosted performance by scaling
+test-time computation through long chain-of-thought reasoning. However,
+transformer-based models are inherently limited in extending context length due
+to their quadratic computational complexity and linear memory requirements. In
+this paper, we introduce a novel hybrid linear RNN reasoning model, M1, built
+on the Mamba architecture, which allows memory-efficient inference. Our
+approach leverages a distillation process from existing reasoning models and is
+further enhanced through RL training. Experimental results on the AIME and MATH
+benchmarks show that M1 not only outperforms previous linear RNN models but
+also matches the performance of state-of-the-art Deepseek R1 distilled
+reasoning models at a similar scale. We also compare our generation speed with
+a highly performant general purpose inference engine, vLLM, and observe more
+than a 3x speedup compared to a same size transformer. With throughput speedup,
+we are able to achieve higher accuracy compared to DeepSeek R1 distilled
+transformer reasoning models under a fixed generation time budget using
+self-consistency voting. Overall, we introduce a hybrid Mamba reasoning model
+and provide a more effective approach to scaling test-time generation using
+self-consistency or long chain of thought reasoning.
 </summary>
     <author>
-      <name>Xinyi Gu</name>
+      <name>Junxiong Wang</name>
     </author>
     <author>
-      <name>Jiayuan Mao</name>
+      <name>Wen-Ding Li</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://concepts-ai.com/p/detailscribe/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.08714v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08714v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Daniele Paliotta</name>
+    </author>
+    <author>
+      <name>Daniel Ritter</name>
+    </author>
+    <author>
+      <name>Alexander M. Rush</name>
+    </author>
+    <author>
+      <name>Tri Dao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code is available https://github.com/jxiw/M1</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10449v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10449v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.08700v1</id>
-    <updated>2025-04-11T17:07:09Z</updated>
-    <published>2025-04-11T17:07:09Z</published>
-    <title>Don't torque like that. Measuring compact object magnetic fields with
-  analytic torque models</title>
-    <summary>  Context. Changes of the rotational period observed in various magnetized
-accreting sources are generally attributed to the interaction between the
-in-falling plasma and the large-scale magnetic field of the accretor. A number
-of models have been proposed to link these changes to the mass accretion rate,
-based on different assumptions on the relevant physical processes and system
-parameters. For X-ray binaries with neutron stars, with the help of precise
-measurements of the spin periods provided by current instrumentation, these
-models render a way to infer such parameters as the strength of the dipolar
-field and a distance to the system. Often, the obtained magnetic field strength
-values contradict those from other methods used to obtain magnetic field
-estimates.
-  Aims. We want to compare the results of several of the proposed accretion
-models. To this end an example application of these models to data is
-performed.
-  Methods. We reformulate the set of disk accretion torque models in a way that
-their parametrization are directly comparable. The application of the
-reformulated models is discussed and demonstrated using Fermi/GBM and Swift/BAT
-monitoring data covering several X-ray outbursts of the accreting pulsar 4U
-0115+63.
-  Results. We find that most of the models under consideration are able to
-describe the observations to a high degree of accuracy and with little
-indication for one model being preferred over the others. Yet, derived
-parameters from those models show a large spread. Specifically the magnetic
-field strength ranges over one order of magnitude for the different models.
-This indicates that the results are heavily influenced by systematic
-uncertainties.
+    <id>http://arxiv.org/abs/2504.10400v1</id>
+    <updated>2025-04-14T16:51:10Z</updated>
+    <published>2025-04-14T16:51:10Z</published>
+    <title>Towards Low-Latency Event-based Obstacle Avoidance on a FPGA-Drone</title>
+    <summary>  This work quantitatively evaluates the performance of event-based vision
+systems (EVS) against conventional RGB-based models for action prediction in
+collision avoidance on an FPGA accelerator. Our experiments demonstrate that
+the EVS model achieves a significantly higher effective frame rate (1 kHz) and
+lower temporal (-20 ms) and spatial prediction errors (-20 mm) compared to the
+RGB-based model, particularly when tested on out-of-distribution data. The EVS
+model also exhibits superior robustness in selecting optimal evasion maneuvers.
+In particular, in distinguishing between movement and stationary states, it
+achieves a 59 percentage point advantage in precision (78% vs. 19%) and a
+substantially higher F1 score (0.73 vs. 0.06), highlighting the susceptibility
+of the RGB model to overfitting. Further analysis in different combinations of
+spatial classes confirms the consistent performance of the EVS model in both
+test data sets. Finally, we evaluated the system end-to-end and achieved a
+latency of approximately 2.14 ms, with event aggregation (1 ms) and inference
+on the processing unit (0.94 ms) accounting for the largest components. These
+results underscore the advantages of event-based vision for real-time collision
+avoidance and demonstrate its potential for deployment in resource-constrained
+environments.
 </summary>
     <author>
-      <name>J. J. R. Stierhof</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
+      <name>Pietro Bonazzi</name>
     </author>
     <author>
-      <name>E. Sokolova-Lapa</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
+      <name>Christian Vogt</name>
     </author>
     <author>
-      <name>K. Berger</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
+      <name>Michael Jost</name>
     </author>
     <author>
-      <name>G. Vasilopoulos</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Department of Physics, National and Kapodistrian University of Athens</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Institute of Accelerating Systems &amp; Applications Athens</arxiv:affiliation>
+      <name>Lyes Khacef</name>
     </author>
     <author>
-      <name>P. Thalhammer</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
-    </author>
-    <author>
-      <name>N. Zalot</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
-    </author>
-    <author>
-      <name>R. Ballhausen</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">University of Maryland College Park, Department of Astronomy</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">NASA Goddard Space Flight Center, Astrophysics Science Division</arxiv:affiliation>
-    </author>
-    <author>
-      <name>I. El Mellah</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Departmento de Física, Universidad de Santiago de Chile</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Center for Interdisciplinary Research in Astrophysics and Space Exploration Santiago</arxiv:affiliation>
-    </author>
-    <author>
-      <name>C. Malacaria</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">INAF-Osservatorio Astronomico di Roma</arxiv:affiliation>
-    </author>
-    <author>
-      <name>R. E. Rothschild</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Department of Astronomy and Astrophysics, University of California San Diego</arxiv:affiliation>
-    </author>
-    <author>
-      <name>P. Kretschmar</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">European Space Astronomy Centre Madrid</arxiv:affiliation>
-    </author>
-    <author>
-      <name>K. Pottschmidt</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">NASA Goddard Space Flight Center, Astrophysics Science Division</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Center for Space Sciences and Technology, University of Maryland Baltimore County</arxiv:affiliation>
-    </author>
-    <author>
-      <name>J. Wilms</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Karl Remeis-Sternwarte and Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg</arxiv:affiliation>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in A&amp;A, 20 pages, 13 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.08700v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08700v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.08655v1</id>
-    <updated>2025-04-11T15:58:46Z</updated>
-    <published>2025-04-11T15:58:46Z</published>
-    <title>TinyCenterSpeed: Efficient Center-Based Object Detection for Autonomous
-  Racing</title>
-    <summary>  Perception within autonomous driving is nearly synonymous with Neural
-Networks (NNs). Yet, the domain of autonomous racing is often characterized by
-scaled, computationally limited robots used for cost-effectiveness and safety.
-For this reason, opponent detection and tracking systems typically resort to
-traditional computer vision techniques due to computational constraints. This
-paper introduces TinyCenterSpeed, a streamlined adaptation of the seminal
-CenterPoint method, optimized for real-time performance on 1:10 scale
-autonomous racing platforms. This adaptation is viable even on OBCs powered
-solely by Central Processing Units (CPUs), as it incorporates the use of an
-external Tensor Processing Unit (TPU). We demonstrate that, compared to
-Adaptive Breakpoint Detector (ABD), the current State-of-the-Art (SotA) in
-scaled autonomous racing, TinyCenterSpeed not only improves detection and
-velocity estimation by up to 61.38% but also supports multi-opponent detection
-and estimation. It achieves real-time performance with an inference time of
-just 7.88 ms on the TPU, significantly reducing CPU utilization 8.3-fold.
-</summary>
-    <author>
-      <name>Neil Reichlin</name>
-    </author>
-    <author>
-      <name>Nicolas Baumann</name>
-    </author>
-    <author>
-      <name>Edoardo Ghignone</name>
+      <name>Federico Paredes-Vallés</name>
     </author>
     <author>
       <name>Michele Magno</name>
     </author>
-    <link href="http://arxiv.org/abs/2504.08655v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08655v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.08654v1</id>
-    <updated>2025-04-11T15:58:31Z</updated>
-    <published>2025-04-11T15:58:31Z</published>
-    <title>The Invisible EgoHand: 3D Hand Forecasting through EgoBody Pose
-  Estimation</title>
-    <summary>  Forecasting hand motion and pose from an egocentric perspective is essential
-for understanding human intention. However, existing methods focus solely on
-predicting positions without considering articulation, and only when the hands
-are visible in the field of view. This limitation overlooks the fact that
-approximate hand positions can still be inferred even when they are outside the
-camera's view. In this paper, we propose a method to forecast the 3D
-trajectories and poses of both hands from an egocentric video, both in and out
-of the field of view. We propose a diffusion-based transformer architecture for
-Egocentric Hand Forecasting, EgoH4, which takes as input the observation
-sequence and camera poses, then predicts future 3D motion and poses for both
-hands of the camera wearer. We leverage full-body pose information, allowing
-other joints to provide constraints on hand motion. We denoise the hand and
-body joints along with a visibility predictor for hand joints and a 3D-to-2D
-reprojection loss that minimizes the error when hands are in-view. We evaluate
-EgoH4 on the Ego-Exo4D dataset, combining subsets with body and hand
-annotations. We train on 156K sequences and evaluate on 34K sequences,
-respectively. EgoH4 improves the performance by 3.4cm and 5.1cm over the
-baseline in terms of ADE for hand trajectory forecasting and MPJPE for hand
-pose forecasting. Project page: https://masashi-hatano.github.io/EgoH4/
-</summary>
-    <author>
-      <name>Masashi Hatano</name>
-    </author>
-    <author>
-      <name>Zhifan Zhu</name>
-    </author>
-    <author>
-      <name>Hideo Saito</name>
-    </author>
-    <author>
-      <name>Dima Damen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.08654v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08654v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2504.10400v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10400v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.08651v1</id>
-    <updated>2025-04-11T15:55:50Z</updated>
-    <published>2025-04-11T15:55:50Z</published>
-    <title>Application of machine learning models to predict the relationship
-  between air pollution, ecosystem degradation, and health disparities and lung
-  cancer in Vietnam</title>
-    <summary>  Lung cancer is one of the major causes of death worldwide, and Vietnam is not
-an exception. This disease is the second most common type of cancer globally
-and the second most common cause of death in Vietnam, just after liver cancer,
-with 23,797 fatal cases and 26,262 new cases, or 14.4% of the disease in 2020.
-Recently, with rising disease rates in Vietnam causing a huge public health
-burden, lung cancer continues to hold the top position in attention and care.
-Especially together with climate change, under a variety of types of pollution,
-deforestation, and modern lifestyles, lung cancer risks are on red alert,
-particularly in Vietnam. To understand more about the severe disease sources in
-Vietnam from a diversity of key factors, including environmental features and
-the current health state, with a particular emphasis on Vietnam's distinct
-socioeconomic and ecological context, we utilize large datasets such as patient
-health records and environmental indicators containing necessary information,
-such as deforestation rate, green cover rate, air pollution, and lung cancer
-risks, that is collected from well-known governmental sharing websites. Then,
-we process and connect them and apply analytical methods (heatmap, information
-gain, p-value, spearman correlation) to determine causal correlations
-influencing lung cancer risks. Moreover, we deploy machine learning (ML) models
-(Decision Tree, Random Forest, Support Vector Machine, K-mean clustering) to
-discover cancer risk patterns. Our experimental results, leveraged by the
-aforementioned ML models to identify the disease patterns, are promising,
-particularly, the models as Random Forest, SVM, and PCA are working well on the
-datasets and give high accuracy (99%), however, the K means clustering has very
-low accuracy (10%) and does not fit the datasets.
+    <id>http://arxiv.org/abs/2504.10397v1</id>
+    <updated>2025-04-14T16:45:52Z</updated>
+    <published>2025-04-14T16:45:52Z</published>
+    <title>Can LLMs Assist Expert Elicitation for Probabilistic Causal Modeling?</title>
+    <summary>  Objective: This study investigates the potential of Large Language Models
+(LLMs) as an alternative to human expert elicitation for extracting structured
+causal knowledge and facilitating causal modeling in biometric and healthcare
+applications.
+  Material and Methods: LLM-generated causal structures, specifically Bayesian
+networks (BNs), were benchmarked against traditional statistical methods (e.g.,
+Bayesian Information Criterion) using healthcare datasets. Validation
+techniques included structural equation modeling (SEM) to verifying
+relationships, and measures such as entropy, predictive accuracy, and
+robustness to compare network structures.
+  Results and Discussion: LLM-generated BNs demonstrated lower entropy than
+expert-elicited and statistically generated BNs, suggesting higher confidence
+and precision in predictions. However, limitations such as contextual
+constraints, hallucinated dependencies, and potential biases inherited from
+training data require further investigation.
+  Conclusion: LLMs represent a novel frontier in expert elicitation for
+probabilistic causal modeling, promising to improve transparency and reduce
+uncertainty in the decision-making using such models.
 </summary>
     <author>
-      <name>Ngoc Hong Tran</name>
+      <name>Olha Shaposhnyk</name>
     </author>
     <author>
-      <name>Lan Kim Vien</name>
+      <name>Daria Zahorska</name>
     </author>
     <author>
-      <name>Ngoc-Thao Thi Le</name>
+      <name>Svetlana Yanushkevich</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted and Published in the Proceeding of the 2nd International
-  Conference on "Green Solutions and Emerging Technologies for Sustainability"
-  (GSETS 2025) ISBN: 978-604-76-3087-5</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.08651v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08651v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2504.10397v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10397v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.08645v1</id>
-    <updated>2025-04-11T15:45:17Z</updated>
-    <published>2025-04-11T15:45:17Z</published>
-    <title>Title block detection and information extraction for enhanced building
-  drawings search</title>
-    <summary>  The architecture, engineering, and construction (AEC) industry still heavily
-relies on information stored in drawings for building construction,
-maintenance, compliance and error checks. However, information extraction (IE)
-from building drawings is often time-consuming and costly, especially when
-dealing with historical buildings. Drawing search can be simplified by
-leveraging the information stored in the title block portion of the drawing,
-which can be seen as drawing metadata. However, title block IE can be complex
-especially when dealing with historical drawings which do not follow existing
-standards for uniformity. This work performs a comparison of existing methods
-for this kind of IE task, and then proposes a novel title block detection and
-IE pipeline which outperforms existing methods, in particular when dealing with
-complex, noisy historical drawings. The pipeline is obtained by combining a
-lightweight Convolutional Neural Network and GPT-4o, the proposed inference
-pipeline detects building engineering title blocks with high accuracy, and then
-extract structured drawing metadata from the title blocks, which can be used
-for drawing search, filtering and grouping. The work demonstrates high accuracy
-and efficiency in IE for both vector (CAD) and hand-drawn (historical)
-drawings. A user interface (UI) that leverages the extracted metadata for
-drawing search is established and deployed on real projects, which demonstrates
-significant time savings. Additionally, an extensible domain-expert-annotated
-dataset for title block detection is developed, via an efficient AEC-friendly
-annotation workflow that lays the foundation for future work.
+    <id>http://arxiv.org/abs/2504.10388v1</id>
+    <updated>2025-04-14T16:32:17Z</updated>
+    <published>2025-04-14T16:32:17Z</published>
+    <title>Inferring genotype-phenotype maps using attention models</title>
+    <summary>  Predicting phenotype from genotype is a central challenge in genetics.
+Traditional approaches in quantitative genetics typically analyze this problem
+using methods based on linear regression. These methods generally assume that
+the genetic architecture of complex traits can be parameterized in terms of an
+additive model, where the effects of loci are independent, plus (in some cases)
+pairwise epistatic interactions between loci. However, these models struggle to
+analyze more complex patterns of epistasis or subtle gene-environment
+interactions. Recent advances in machine learning, particularly attention-based
+models, offer a promising alternative. Initially developed for natural language
+processing, attention-based models excel at capturing context-dependent
+interactions and have shown exceptional performance in predicting protein
+structure and function. Here, we apply attention-based models to quantitative
+genetics. We analyze the performance of this attention-based approach in
+predicting phenotype from genotype using simulated data across a range of
+models with increasing epistatic complexity, and using experimental data from a
+recent quantitative trait locus mapping study in budding yeast. We find that
+our model demonstrates superior out-of-sample predictions in epistatic regimes
+compared to standard methods. We also explore a more general multi-environment
+attention-based model to jointly analyze genotype-phenotype maps across
+multiple environments and show that such architectures can be used for
+"transfer learning" - predicting phenotypes in novel environments with limited
+training data.
 </summary>
     <author>
-      <name>Alessio Lombardi</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Buro Happold, London</arxiv:affiliation>
+      <name>Krishna Rijal</name>
     </author>
     <author>
-      <name>Li Duan</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
+      <name>Caroline M. Holmes</name>
     </author>
     <author>
-      <name>Ahmed Elnagar</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Buro Happold, London</arxiv:affiliation>
+      <name>Samantha Petti</name>
     </author>
     <author>
-      <name>Ahmed Zaalouk</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
+      <name>Gautam Reddy</name>
     </author>
     <author>
-      <name>Khalid Ismail</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
+      <name>Michael M. Desai</name>
     </author>
     <author>
-      <name>Edlira Vakaj</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Birmingham City University</arxiv:affiliation>
+      <name>Pankaj Mehta</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 8 figures, 1 table. Accepted for publication in the 2025
-  European Conference on Computing in Construction (EC3,
-  https://ec-3.org/conference2025/)</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.08645v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08645v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2504.10388v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10388v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.08641v1</id>
-    <updated>2025-04-11T15:41:43Z</updated>
-    <published>2025-04-11T15:41:43Z</published>
-    <title>Training-free Guidance in Text-to-Video Generation via Multimodal
-  Planning and Structured Noise Initialization</title>
-    <summary>  Recent advancements in text-to-video (T2V) diffusion models have
-significantly enhanced the visual quality of the generated videos. However,
-even recent T2V models find it challenging to follow text descriptions
-accurately, especially when the prompt requires accurate control of spatial
-layouts or object trajectories. A recent line of research uses layout guidance
-for T2V models that require fine-tuning or iterative manipulation of the
-attention map during inference time. This significantly increases the memory
-requirement, making it difficult to adopt a large T2V model as a backbone. To
-address this, we introduce Video-MSG, a training-free Guidance method for T2V
-generation based on Multimodal planning and Structured noise initialization.
-Video-MSG consists of three steps, where in the first two steps, Video-MSG
-creates Video Sketch, a fine-grained spatio-temporal plan for the final video,
-specifying background, foreground, and object trajectories, in the form of
-draft video frames. In the last step, Video-MSG guides a downstream T2V
-diffusion model with Video Sketch through noise inversion and denoising.
-Notably, Video-MSG does not need fine-tuning or attention manipulation with
-additional memory during inference time, making it easier to adopt large T2V
-models. Video-MSG demonstrates its effectiveness in enhancing text alignment
-with multiple T2V backbones (VideoCrafter2 and CogVideoX-5B) on popular T2V
-generation benchmarks (T2VCompBench and VBench). We provide comprehensive
-ablation studies about noise inversion ratio, different background generators,
-background object detection, and foreground object segmentation.
+    <id>http://arxiv.org/abs/2504.10380v1</id>
+    <updated>2025-04-14T16:25:36Z</updated>
+    <published>2025-04-14T16:25:36Z</published>
+    <title>Lorentzian Gromov-Hausdorff convergence and pre-compactness</title>
+    <summary>  To goal of the paper is to introduce a convergence \`a la Gromov-Hausdorff
+for Lorentzian spaces, building on $\epsilon$-nets consisting of causal
+diamonds and relying only on the time separation function. This yields a
+geometric notion of convergence, which can be applied to synthetic Lorentzian
+spaces (Lorentzian pre-length spaces) or smooth spacetimes. Among the main
+results, we prove a Lorentzian counterpart of the celebrated Gromov's
+pre-compactness theorem for metric spaces, where controlled covers by balls are
+replaced by controlled covers by diamonds. This yields a geometric
+pre-compactness result for classes of globally hyperbolic spacetimes,
+satisfying a uniform doubling property on Cauchy hypersurfaces and a suitable
+control on the causality. The final part of the paper establishes several
+applications: we show that Chru\'sciel-Grant approximations are an instance of
+the Lorentzian Gromov-Hausdorff convergence here introduced, we prove that
+timelike sectional curvature bounds are stable under such a convergence, we
+introduce timelike blow-up tangents and discuss connections with the main
+conjecture of causal set theory.
 </summary>
     <author>
-      <name>Jialu Li</name>
+      <name>Andrea Mondino</name>
     </author>
     <author>
-      <name>Shoubin Yu</name>
+      <name>Clemens Sämann</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">62 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10380v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10380v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="28A75, 51K10, 53C23, 53C50, 53B30, 53C80, 83C99" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.10372v1</id>
+    <updated>2025-04-14T16:20:48Z</updated>
+    <published>2025-04-14T16:20:48Z</published>
+    <title>Simple physical systems as a reference for multivariate information
+  dynamics</title>
+    <summary>  Understanding a complex system entails capturing the non-trivial collective
+phenomena that arise from interactions between its different parts. Information
+theory is a flexible and robust framework to study such behaviours, with
+several measures designed to quantify and characterise the interdependencies
+among the system's components. However, since these estimators rely on the
+statistical distributions of observed quantities, it is crucial to examine the
+relationships between information-theoretic measures and the system's
+underlying mechanistic structure. To this end, here we present an
+information-theoretic analytical investigation of an elementary system of
+interactive random walkers subject to Gaussian noise. Focusing on partial
+information decomposition, causal emergence, and integrated information, our
+results help us develop some intuitions on their relationship with the physical
+parameters of the system. For instance, we observe that uncoupled systems can
+exhibit emergent properties, in a way that we suggest may be better described
+as ''statistically autonomous''. Overall, we observe that in this simple
+scenario information measures align more reliably with the system's mechanistic
+properties when calculated at the level of microscopic components, rather than
+their coarse-grained counterparts, and over timescales comparable with the
+system's intrinsic dynamics. Moreover, we show that approaches that separate
+the contributions of the system's dynamics and steady-state distribution (e.g.
+via causal perturbations) may help strengthen the interpretation of
+information-theoretic analyses.
+</summary>
+    <author>
+      <name>Alberto Liardi</name>
     </author>
     <author>
-      <name>Han Lin</name>
+      <name>Madalina I. Sas</name>
     </author>
     <author>
-      <name>Jaemin Cho</name>
+      <name>George Blackburne</name>
     </author>
     <author>
-      <name>Jaehong Yoon</name>
+      <name>William J. Knottenbelt</name>
     </author>
     <author>
-      <name>Mohit Bansal</name>
+      <name>Pedro A. M. Mediano</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Website: https://video-msg.github.io; The first three authors
-  contributed equally</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.08641v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.08641v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Henrik Jeldtoft Jensen</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 5 figures + supplementary material</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10372v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10372v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.10361v1</id>
+    <updated>2025-04-14T16:08:34Z</updated>
+    <published>2025-04-14T16:08:34Z</published>
+    <title>Root-$T\bar{T}$ Deformations On Causal Self-Dual Electrodynamics
+  Theories</title>
+    <summary>  The self-dual condition, which ensures invariance under electromagnetic
+duality, manifests as a partial differential equation in nonlinear
+electromagnetism theories. The general solution to this equation is expressed
+in terms of an auxiliary field, $\tau$, and Courant-Hilbert functions,
+$\ell(\tau)$, which depend on $\tau$. Recent studies have shown that
+duality-invariant nonlinear electromagnetic theories fulfill the principle of
+causality under the conditions $\frac{\partial \ell}{\partial \tau} \ge 1$ and
+$\frac{\partial^2 \ell}{\partial \tau^2} \ge 0$.
+  In this paper, we investigate theories with two coupling constants that also
+comply with the principle of causality. We demonstrate that these theories
+possess a new universal representation of the root-$T\bar{T}$ operator.
+Additionally, we derive marginal and irrelevant flow equations for the
+logarithmic causal self-dual electrodynamics and identify a symmetry referred
+to as $\alpha$-symmetry, which is present in all these models.
+</summary>
+    <author>
+      <name>Hossein Babaei-Aghbolagh</name>
+    </author>
+    <author>
+      <name>Komeil Babaei Velni</name>
+    </author>
+    <author>
+      <name>Song He</name>
+    </author>
+    <author>
+      <name>Zahra Pezhman</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">17 pages, no figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10361v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10361v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.10352v1</id>
+    <updated>2025-04-14T16:03:21Z</updated>
+    <published>2025-04-14T16:03:21Z</published>
+    <title>Pseudo-Autoregressive Neural Codec Language Models for Efficient
+  Zero-Shot Text-to-Speech Synthesis</title>
+    <summary>  Recent zero-shot text-to-speech (TTS) systems face a common dilemma:
+autoregressive (AR) models suffer from slow generation and lack duration
+controllability, while non-autoregressive (NAR) models lack temporal modeling
+and typically require complex designs. In this paper, we introduce a novel
+pseudo-autoregressive (PAR) codec language modeling approach that unifies AR
+and NAR modeling. Combining explicit temporal modeling from AR with parallel
+generation from NAR, PAR generates dynamic-length spans at fixed time steps.
+Building on PAR, we propose PALLE, a two-stage TTS system that leverages PAR
+for initial generation followed by NAR refinement. In the first stage, PAR
+progressively generates speech tokens along the time dimension, with each step
+predicting all positions in parallel but only retaining the left-most span. In
+the second stage, low-confidence tokens are iteratively refined in parallel,
+leveraging the global contextual information. Experiments demonstrate that
+PALLE, trained on LibriTTS, outperforms state-of-the-art systems trained on
+large-scale data, including F5-TTS, E2-TTS, and MaskGCT, on the LibriSpeech
+test-clean set in terms of speech quality, speaker similarity, and
+intelligibility, while achieving up to ten times faster inference speed. Audio
+samples are available at https://anonymous-palle.github.io.
+</summary>
+    <author>
+      <name>Yifan Yang</name>
+    </author>
+    <author>
+      <name>Shujie Liu</name>
+    </author>
+    <author>
+      <name>Jinyu Li</name>
+    </author>
+    <author>
+      <name>Yuxuan Hu</name>
+    </author>
+    <author>
+      <name>Haibin Wu</name>
+    </author>
+    <author>
+      <name>Hui Wang</name>
+    </author>
+    <author>
+      <name>Jianwei Yu</name>
+    </author>
+    <author>
+      <name>Lingwei Meng</name>
+    </author>
+    <author>
+      <name>Haiyang Sun</name>
+    </author>
+    <author>
+      <name>Yanqing Liu</name>
+    </author>
+    <author>
+      <name>Yan Lu</name>
+    </author>
+    <author>
+      <name>Kai Yu</name>
+    </author>
+    <author>
+      <name>Xie Chen</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to ACM MM 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.10352v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.10352v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
