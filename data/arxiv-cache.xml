@@ -1,591 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-04-21T00:57:22Z -->
+<!-- Last updated: 2025-04-22T00:54:17Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-04-20T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110837</opensearch:totalResults>
+  <updated>2025-04-21T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">110896</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2504.13176v1</id>
-    <updated>2025-04-17T17:59:47Z</updated>
-    <published>2025-04-17T17:59:47Z</published>
-    <title>IMAGGarment-1: Fine-Grained Garment Generation for Controllable Fashion
-  Design</title>
-    <summary>  This paper presents IMAGGarment-1, a fine-grained garment generation (FGG)
-framework that enables high-fidelity garment synthesis with precise control
-over silhouette, color, and logo placement. Unlike existing methods that are
-limited to single-condition inputs, IMAGGarment-1 addresses the challenges of
-multi-conditional controllability in personalized fashion design and digital
-apparel applications. Specifically, IMAGGarment-1 employs a two-stage training
-strategy to separately model global appearance and local details, while
-enabling unified and controllable generation through end-to-end inference. In
-the first stage, we propose a global appearance model that jointly encodes
-silhouette and color using a mixed attention module and a color adapter. In the
-second stage, we present a local enhancement model with an adaptive
-appearance-aware module to inject user-defined logos and spatial constraints,
-enabling accurate placement and visual consistency. To support this task, we
-release GarmentBench, a large-scale dataset comprising over 180K garment
-samples paired with multi-level design conditions, including sketches, color
-references, logo placements, and textual prompts. Extensive experiments
-demonstrate that our method outperforms existing baselines, achieving superior
-structural stability, color fidelity, and local controllability performance.
-The code and model are available at https://github.com/muzishen/IMAGGarment-1.
+    <id>http://arxiv.org/abs/2504.13825v1</id>
+    <updated>2025-04-18T17:54:33Z</updated>
+    <published>2025-04-18T17:54:33Z</published>
+    <title>Feature Alignment and Representation Transfer in Knowledge Distillation
+  for Large Language Models</title>
+    <summary>  Knowledge distillation (KD) is a technique for transferring knowledge from
+complex teacher models to simpler student models, significantly enhancing model
+efficiency and accuracy. It has demonstrated substantial advancements in
+various applications including image classification, object detection, language
+modeling, text classification, and sentiment analysis. Recent innovations in KD
+methods, such as attention-based approaches, block-wise logit distillation, and
+decoupling distillation, have notably improved student model performance. These
+techniques focus on stimulus complexity, attention mechanisms, and global
+information capture to optimize knowledge transfer. In addition, KD has proven
+effective in compressing large language models while preserving accuracy,
+reducing computational overhead, and improving inference speed. This survey
+synthesizes the latest literature, highlighting key findings, contributions,
+and future directions in knowledge distillation to provide insights for
+researchers and practitioners on its evolving role in artificial intelligence
+and machine learning.
 </summary>
     <author>
-      <name>Fei Shen</name>
+      <name>Junjie Yang</name>
     </author>
     <author>
-      <name>Jian Yu</name>
+      <name>Junhao Song</name>
     </author>
     <author>
-      <name>Cong Wang</name>
+      <name>Xudong Han</name>
     </author>
     <author>
-      <name>Xin Jiang</name>
+      <name>Ziqian Bi</name>
     </author>
     <author>
-      <name>Xiaoyu Du</name>
+      <name>Tianyang Wang</name>
     </author>
     <author>
-      <name>Jinhui Tang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.13176v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13176v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.13171v1</id>
-    <updated>2025-04-17T17:59:25Z</updated>
-    <published>2025-04-17T17:59:25Z</published>
-    <title>Sleep-time Compute: Beyond Inference Scaling at Test-time</title>
-    <summary>  Scaling test-time compute has emerged as a key ingredient for enabling large
-language models (LLMs) to solve difficult problems, but comes with high latency
-and inference cost. We introduce sleep-time compute, which allows models to
-"think" offline about contexts before queries are presented: by anticipating
-what queries users might ask and pre-computing useful quantities, we can
-significantly reduce the compute requirements at test-time. To demonstrate the
-efficacy of our method, we create modified versions of two reasoning tasks -
-Stateful GSM-Symbolic and Stateful AIME. We find that sleep-time compute can
-reduce the amount of test-time compute needed to achieve the same accuracy by ~
-5x on Stateful GSM-Symbolic and Stateful AIME and that by scaling sleep-time
-compute we can further increase accuracy by up to 13% on Stateful GSM-Symbolic
-and 18% on Stateful AIME. Furthermore, we introduce Multi-Query GSM-Symbolic,
-which extends GSM-Symbolic by including multiple related queries per context.
-By amortizing sleep-time compute across related queries about the same context
-using Multi-Query GSM-Symbolic, we can decrease the average cost per query by
-2.5x. We then conduct additional analysis to understand when sleep-time compute
-is most effective, finding the predictability of the user query to be well
-correlated with the efficacy of sleep-time compute. Finally, we conduct a
-case-study of applying sleep-time compute to a realistic agentic SWE task.
-</summary>
-    <author>
-      <name>Kevin Lin</name>
+      <name>Chia Xin Liang</name>
     </author>
     <author>
-      <name>Charlie Snell</name>
+      <name>Xinyuan Song</name>
     </author>
     <author>
-      <name>Yu Wang</name>
+      <name>Yichao Zhang</name>
     </author>
     <author>
-      <name>Charles Packer</name>
+      <name>Qian Niu</name>
     </author>
     <author>
-      <name>Sarah Wooders</name>
+      <name>Benji Peng</name>
     </author>
     <author>
-      <name>Ion Stoica</name>
+      <name>Keyu Chen</name>
     </author>
     <author>
-      <name>Joseph E. Gonzalez</name>
+      <name>Ming Liu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code and data released at:
-  https://github.com/letta-ai/sleep-time-compute</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13171v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13171v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2504.13825v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13825v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.13169v1</id>
-    <updated>2025-04-17T17:59:22Z</updated>
-    <published>2025-04-17T17:59:22Z</published>
-    <title>Generate, but Verify: Reducing Hallucination in Vision-Language Models
-  with Retrospective Resampling</title>
-    <summary>  Vision-Language Models (VLMs) excel at visual understanding but often suffer
-from visual hallucinations, where they generate descriptions of nonexistent
-objects, actions, or concepts, posing significant risks in safety-critical
-applications. Existing hallucination mitigation methods typically follow one of
-two paradigms: generation adjustment, which modifies decoding behavior to align
-text with visual inputs, and post-hoc verification, where external models
-assess and correct outputs. While effective, generation adjustment methods
-often rely on heuristics and lack correction mechanisms, while post-hoc
-verification is complicated, typically requiring multiple models and tending to
-reject outputs rather than refine them. In this work, we introduce REVERSE, a
-unified framework that integrates hallucination-aware training with on-the-fly
-self-verification. By leveraging a new hallucination-verification dataset
-containing over 1.3M semi-synthetic samples, along with a novel inference-time
-retrospective resampling technique, our approach enables VLMs to both detect
-hallucinations during generation and dynamically revise those hallucinations.
-Our evaluations show that REVERSE achieves state-of-the-art hallucination
-reduction, outperforming the best existing methods by up to 12% on CHAIR-MSCOCO
-and 28% on HaloQuest. Our dataset, model, and code are available at:
-https://reverse-vlm.github.io.
+    <id>http://arxiv.org/abs/2504.13818v1</id>
+    <updated>2025-04-18T17:49:55Z</updated>
+    <published>2025-04-18T17:49:55Z</published>
+    <title>Not All Rollouts are Useful: Down-Sampling Rollouts in LLM Reinforcement
+  Learning</title>
+    <summary>  Reinforcement learning (RL) has emerged as a powerful paradigm for enhancing
+reasoning capabilities in large language models, but faces a fundamental
+asymmetry in computation and memory requirements: inference is embarrassingly
+parallel with a minimal memory footprint, while policy updates require
+extensive synchronization and are memory-intensive. To address this asymmetry,
+we introduce PODS (Policy Optimization with Down-Sampling), a framework that
+strategically decouples these phases by generating numerous rollouts in
+parallel but updating only on an informative subset. Within this framework, we
+develop max-variance down-sampling, a theoretically motivated method that
+selects rollouts with maximally diverse reward signals. We prove that this
+approach has an efficient algorithmic solution, and empirically demonstrate
+that GRPO with PODS using max-variance down-sampling achieves superior
+performance over standard GRPO on the GSM8K benchmark.
 </summary>
     <author>
-      <name>Tsung-Han Wu</name>
+      <name>Yixuan Even Xu</name>
     </author>
     <author>
-      <name>Heekyung Lee</name>
+      <name>Yash Savani</name>
     </author>
     <author>
-      <name>Jiaxin Ge</name>
+      <name>Fei Fang</name>
     </author>
     <author>
-      <name>Joseph E. Gonzalez</name>
+      <name>Zico Kolter</name>
     </author>
-    <author>
-      <name>Trevor Darrell</name>
-    </author>
-    <author>
-      <name>David M. Chan</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Project Page: https://reverse-vlm.github.io</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13169v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13169v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.13151v1</id>
-    <updated>2025-04-17T17:55:45Z</updated>
-    <published>2025-04-17T17:55:45Z</published>
-    <title>MIB: A Mechanistic Interpretability Benchmark</title>
-    <summary>  How can we know whether new mechanistic interpretability methods achieve real
-improvements? In pursuit of meaningful and lasting evaluation standards, we
-propose MIB, a benchmark with two tracks spanning four tasks and five models.
-MIB favors methods that precisely and concisely recover relevant causal
-pathways or specific causal variables in neural language models. The circuit
-localization track compares methods that locate the model components - and
-connections between them - most important for performing a task (e.g.,
-attribution patching or information flow routes). The causal variable
-localization track compares methods that featurize a hidden vector, e.g.,
-sparse autoencoders (SAEs) or distributed alignment search (DAS), and locate
-model features for a causal variable relevant to the task. Using MIB, we find
-that attribution and mask optimization methods perform best on circuit
-localization. For causal variable localization, we find that the supervised DAS
-method performs best, while SAE features are not better than neurons, i.e.,
-standard dimensions of hidden vectors. These findings illustrate that MIB
-enables meaningful comparisons of methods, and increases our confidence that
-there has been real progress in the field.
-</summary>
-    <author>
-      <name>Aaron Mueller</name>
-    </author>
-    <author>
-      <name>Atticus Geiger</name>
-    </author>
-    <author>
-      <name>Sarah Wiegreffe</name>
-    </author>
-    <author>
-      <name>Dana Arad</name>
-    </author>
-    <author>
-      <name>Iván Arcuschin</name>
-    </author>
-    <author>
-      <name>Adam Belfki</name>
-    </author>
-    <author>
-      <name>Yik Siu Chan</name>
-    </author>
-    <author>
-      <name>Jaden Fiotto-Kaufman</name>
-    </author>
-    <author>
-      <name>Tal Haklay</name>
-    </author>
-    <author>
-      <name>Michael Hanna</name>
-    </author>
-    <author>
-      <name>Jing Huang</name>
-    </author>
-    <author>
-      <name>Rohan Gupta</name>
-    </author>
-    <author>
-      <name>Yaniv Nikankin</name>
-    </author>
-    <author>
-      <name>Hadas Orgad</name>
-    </author>
-    <author>
-      <name>Nikhil Prakash</name>
-    </author>
-    <author>
-      <name>Anja Reusch</name>
-    </author>
-    <author>
-      <name>Aruna Sankaranarayanan</name>
-    </author>
-    <author>
-      <name>Shun Shao</name>
-    </author>
-    <author>
-      <name>Alessandro Stolfo</name>
-    </author>
-    <author>
-      <name>Martin Tutek</name>
-    </author>
-    <author>
-      <name>Amir Zur</name>
-    </author>
-    <author>
-      <name>David Bau</name>
-    </author>
-    <author>
-      <name>Yonatan Belinkov</name>
-    </author>
-    <link href="http://arxiv.org/abs/2504.13151v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13151v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, 1 figure</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.13818v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13818v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.13144v1</id>
-    <updated>2025-04-17T17:53:39Z</updated>
-    <published>2025-04-17T17:53:39Z</published>
-    <title>Bayesian model-data comparison incorporating theoretical uncertainties</title>
-    <summary>  Accurate comparisons between theoretical models and experimental data are
-critical for scientific progress. However, inferred model parameters can vary
-significantly with the chosen physics model, highlighting the importance of
-properly accounting for theoretical uncertainties. In this article, we
-explicitly incorporate these uncertainties using Gaussian processes that model
-the domain of validity of theoretical models, integrating prior knowledge about
-where a theory applies and where it does not. We demonstrate the effectiveness
-of this approach using two systems: a simple ball drop experiment and
-multi-stage heavy-ion simulations. In both cases incorporating model
-discrepancy leads to improved parameter estimates, with systematic improvements
-observed as additional experimental observables are integrated.
+    <id>http://arxiv.org/abs/2504.13803v1</id>
+    <updated>2025-04-18T17:12:00Z</updated>
+    <published>2025-04-18T17:12:00Z</published>
+    <title>Imitation Learning with Precisely Labeled Human Demonstrations</title>
+    <summary>  Within the imitation learning paradigm, training generalist robots requires
+large-scale datasets obtainable only through diverse curation. Due to the
+relative ease to collect, human demonstrations constitute a valuable addition
+when incorporated appropriately. However, existing methods utilizing human
+demonstrations face challenges in inferring precise actions, ameliorating
+embodiment gaps, and fusing with frontier generalist robot training pipelines.
+In this work, building on prior studies that demonstrate the viability of using
+hand-held grippers for efficient data collection, we leverage the user's
+control over the gripper's appearance--specifically by assigning it a unique,
+easily segmentable color--to enable simple and reliable application of the
+RANSAC and ICP registration method for precise end-effector pose estimation. We
+show in simulation that precisely labeled human demonstrations on their own
+allow policies to reach on average 88.1% of the performance of using robot
+demonstrations, and boost policy performance when combined with robot
+demonstrations, despite the inherent embodiment gap.
 </summary>
     <author>
-      <name>Sunil Jaiswal</name>
+      <name>Yilong Song</name>
     </author>
-    <author>
-      <name>Chun Shen</name>
-    </author>
-    <author>
-      <name>Richard J. Furnstahl</name>
-    </author>
-    <author>
-      <name>Ulrich Heinz</name>
-    </author>
-    <author>
-      <name>Matthew T. Pratola</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13144v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13144v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.13139v1</id>
-    <updated>2025-04-17T17:49:40Z</updated>
-    <published>2025-04-17T17:49:40Z</published>
-    <title>Syntactic and Semantic Control of Large Language Models via Sequential
-  Monte Carlo</title>
-    <summary>  A wide range of LM applications require generating text that conforms to
-syntactic or semantic constraints. Imposing such constraints can be naturally
-framed as probabilistic conditioning, but exact generation from the resulting
-distribution -- which can differ substantially from the LM's base distribution
--- is generally intractable. In this work, we develop an architecture for
-controlled LM generation based on sequential Monte Carlo (SMC). Our SMC
-framework allows us to flexibly incorporate domain- and problem-specific
-constraints at inference time, and efficiently reallocate computational
-resources in light of new information during the course of generation. By
-comparing to a number of alternatives and ablations on four challenging domains
--- Python code generation for data science, text-to-SQL, goal inference, and
-molecule synthesis -- we demonstrate that, with little overhead, our approach
-allows small open-source language models to outperform models over 8x larger,
-as well as closed-source, fine-tuned ones. In support of the probabilistic
-perspective, we show that these performance improvements are driven by better
-approximation to the posterior distribution. Our system builds on the framework
-of Lew et al. (2023) and integrates with its language model probabilistic
-programming language, giving users a simple, programmable way to apply SMC to a
-broad variety of controlled generation problems.
-</summary>
-    <author>
-      <name>João Loula</name>
-    </author>
-    <author>
-      <name>Benjamin LeBrun</name>
-    </author>
-    <author>
-      <name>Li Du</name>
-    </author>
-    <author>
-      <name>Ben Lipkin</name>
-    </author>
-    <author>
-      <name>Clemente Pasti</name>
-    </author>
-    <author>
-      <name>Gabriel Grand</name>
-    </author>
-    <author>
-      <name>Tianyu Liu</name>
-    </author>
-    <author>
-      <name>Yahya Emara</name>
-    </author>
-    <author>
-      <name>Marjorie Freedman</name>
-    </author>
-    <author>
-      <name>Jason Eisner</name>
-    </author>
-    <author>
-      <name>Ryan Cotterel</name>
-    </author>
-    <author>
-      <name>Vikash Mansinghka</name>
-    </author>
-    <author>
-      <name>Alexander K. Lew</name>
-    </author>
-    <author>
-      <name>Tim Vieira</name>
-    </author>
-    <author>
-      <name>Timothy J. O'Donnell</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">34 pages, 4 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13139v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13139v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2504.13803v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13803v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.13785v1</id>
+    <updated>2025-04-18T16:35:12Z</updated>
+    <published>2025-04-18T16:35:12Z</published>
+    <title>Learning Through Retrospection: Improving Trajectory Prediction for
+  Automated Driving with Error Feedback</title>
+    <summary>  In automated driving, predicting trajectories of surrounding vehicles
+supports reasoning about scene dynamics and enables safe planning for the ego
+vehicle. However, existing models handle predictions as an instantaneous task
+of forecasting future trajectories based on observed information. As time
+proceeds, the next prediction is made independently of the previous one, which
+means that the model cannot correct its errors during inference and will repeat
+them. To alleviate this problem and better leverage temporal data, we propose a
+novel retrospection technique. Through training on closed-loop rollouts the
+model learns to use aggregated feedback. Given new observations it reflects on
+previous predictions and analyzes its errors to improve the quality of
+subsequent predictions. Thus, the model can learn to correct systematic errors
+during inference. Comprehensive experiments on nuScenes and Argoverse
+demonstrate a considerable decrease in minimum Average Displacement Error of up
+to 31.9% compared to the state-of-the-art baseline without retrospection. We
+further showcase the robustness of our technique by demonstrating a better
+handling of out-of-distribution scenarios with undetected road-users.
+</summary>
+    <author>
+      <name>Steffen Hagedorn</name>
+    </author>
+    <author>
+      <name>Aron Distelzweig</name>
+    </author>
+    <author>
+      <name>Marcel Hallgarten</name>
+    </author>
+    <author>
+      <name>Alexandru P. Condurache</name>
+    </author>
+    <link href="http://arxiv.org/abs/2504.13785v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13785v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.13774v1</id>
+    <updated>2025-04-18T16:22:20Z</updated>
+    <published>2025-04-18T16:22:20Z</published>
+    <title>DP2Unlearning: An Efficient and Guaranteed Unlearning Framework for LLMs</title>
+    <summary>  Large language models (LLMs) have recently revolutionized language processing
+tasks but have also brought ethical and legal issues. LLMs have a tendency to
+memorize potentially private or copyrighted information present in the training
+data, which might then be delivered to end users at inference time. When this
+happens, a naive solution is to retrain the model from scratch after excluding
+the undesired data. Although this guarantees that the target data have been
+forgotten, it is also prohibitively expensive for LLMs. Approximate unlearning
+offers a more efficient alternative, as it consists of ex post modifications of
+the trained model itself to prevent undesirable results, but it lacks
+forgetting guarantees because it relies solely on empirical evidence. In this
+work, we present DP2Unlearning, a novel LLM unlearning framework that offers
+formal forgetting guarantees at a significantly lower cost than retraining from
+scratch on the data to be retained. DP2Unlearning involves training LLMs on
+textual data protected using {\epsilon}-differential privacy (DP), which later
+enables efficient unlearning with the guarantees against disclosure associated
+with the chosen {\epsilon}. Our experiments demonstrate that DP2Unlearning
+achieves similar model performance post-unlearning, compared to an LLM
+retraining from scratch on retained data -- the gold standard exact unlearning
+-- but at approximately half the unlearning cost. In addition, with a
+reasonable computational cost, it outperforms approximate unlearning methods at
+both preserving the utility of the model post-unlearning and effectively
+forgetting the targeted information.
+</summary>
+    <author>
+      <name>Tamim Al Mahmud</name>
+    </author>
+    <author>
+      <name>Najeeb Jebreel</name>
+    </author>
+    <author>
+      <name>Josep Domingo-Ferrer</name>
+    </author>
+    <author>
+      <name>David Sanchez</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.2139/ssrn.5217160</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.2139/ssrn.5217160" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">49 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.13774v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13774v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.13070v1</id>
-    <updated>2025-04-17T16:31:14Z</updated>
-    <published>2025-04-17T16:31:14Z</published>
-    <title>A quadratic estimator view of the transfer function correction in
-  intensity mapping surveys</title>
-    <summary>  In single dish neutral hydrogen (HI) intensity mapping, signal separation
-methods such as Principal Component Analysis (PCA) are used to clean the
-astrophysical foregrounds. PCA induces a signal loss in the estimated power
-spectrum, which can be corrected by a transfer function (TF). By injecting mock
-signals of HI into the data and performing the PCA cleaning, we can use the
-cleaned mock HI signal to cross-correlate with the original mock, and estimate
-the signal loss as a TF, $T(\vec{k})$. As expected, a correction of
-${T}(\vec{k})^{-1}$ restores the cross-power between the HI and optical
-galaxies. However, contrary to intuition, the HI auto-power also requires a
-${T}(\vec{k})^{-1}$ correction, not ${T}(\vec{k})^{-2}$. The
-${T}(\vec{k})^{-1}$ correction is only known empirically through simulations.
-In this Letter, we show that the ${T}(\vec{k})^{-1}$ correction in auto-power
-is universal, and can be analytically proven using the quadratic estimator
-formalism through window function normalisation. The normalisation can also be
-used to determine the TF correction for any type of linear process. Using the
-window function, we demonstrate that PCA induces mode-mixing in the power
-spectrum estimation, which may lead to biases in the model inference.
+    <id>http://arxiv.org/abs/2504.13765v1</id>
+    <updated>2025-04-18T16:04:22Z</updated>
+    <published>2025-04-18T16:04:22Z</published>
+    <title>Modeling L1 Influence on L2 Pronunciation: An MFCC-Based Framework for
+  Explainable Machine Learning and Pedagogical Feedback</title>
+    <summary>  This study investigates the extent to which Mel-Frequency Cepstral
+Coefficients (MFCCs) capture first language (L1) transfer in extended second
+language (L2) English speech. Speech samples from Mandarin and American English
+L1 speakers were extracted from the GMU Speech Accent Archive, converted to WAV
+format, and processed to obtain thirteen MFCCs per speaker. A multi-method
+analytic framework combining inferential statistics (t-tests, MANOVA, Canonical
+Discriminant Analysis) and machine learning (Random Forest classification)
+identified MFCC-1 (broadband energy), MFCC-2 (first formant region), and MFCC-5
+(voicing and fricative energy) as the most discriminative features for
+distinguishing L1 backgrounds. A reduced-feature model using these MFCCs
+significantly outperformed the full-feature model, as confirmed by McNemar's
+test and non-overlapping confidence intervals. The findings empirically support
+the Perceptual Assimilation Model for L2 (PAM-L2) and the Speech Learning Model
+(SLM), demonstrating that L1-conditioned variation in L2 speech is both
+perceptually grounded and acoustically quantifiable. Methodologically, the
+study contributes to applied linguistics and explainable AI by proposing a
+transparent, data-efficient pipeline for L2 pronunciation modeling. The results
+also offer pedagogical implications for ESL/EFL instruction by highlighting
+L1-specific features that can inform intelligibility-oriented instruction,
+curriculum design, and speech assessment tools.
 </summary>
     <author>
-      <name>Zhaoting Chen</name>
+      <name>Peyman Jahanbin</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">To be submitted to MNRAS letters</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13070v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13070v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">27 pages (including references), 4 figures, 1 table. Combines
+  statistical inference and explainable machine learning to model L1 influence
+  in L2 pronunciation using MFCC features. Methodology and code are openly
+  available via Zenodo and OSF: Zenodo: https://doi.org/10.5281/zenodo.15186197
+  OSF: https://doi.org/10.17605/OSF.IO/4UXGM</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.13765v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13765v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.5.4; I.2.6; H.3.1" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.13062v1</id>
-    <updated>2025-04-17T16:15:56Z</updated>
-    <published>2025-04-17T16:15:56Z</published>
-    <title>Seeing Beyond Dark-Field RGB Capabilities: Deep Spectral Extrapolation
-  of Ultrasmall Plasmonic Nanogaps</title>
-    <summary>  Localized surface plasmons can confine light within a deep-subwavelength
-volume comparable to the scale of atoms and molecules, enabling ultrasensitive
-responses to near-field variations. On the other hand, this extreme
-localization also inevitably amplifies the unwanted noise from the response of
-local morphological imperfections, leading to complex spectral variations and
-reduced consistency across the plasmonic nanostructures. Seeking uniform
-optical responses has therefore long been a sought-after goal in
-nanoplasmonics. However, conventional probing techniques by dark-field (DF)
-confocal microscopy, such as image analysis or spectral measurements, can be
-inaccurate and time-consuming, respectively. Here, we introduce SPARX, a
-deep-learning-powered paradigm that surpasses conventional imaging and
-spectroscopic capabilities. In particular, SPARX can batch-predict broadband DF
-spectra (e.g., 500-1000 nm) of numerous nanoparticles simultaneously from an
-information-limited RGB image (i.e., below 700 nm). It achieves this
-extrapolative inference beyond the camera's capture capabilities by learning
-the underlying physical relationships among multiple orders of optical
-resonances. The spectral predictions only take milliseconds, achieving a
-speedup of three to four orders of magnitude compared to traditional spectral
-acquisition, which may take from hours to days. As a proof-of-principle
-demonstration for screening identical resonances, the selection accuracy
-achieved by SPARX is comparable to that of conventional spectroscopy
-techniques. This breakthrough paves the way for consistent plasmonic
-applications and next-generation microscopies.
+    <id>http://arxiv.org/abs/2504.13756v1</id>
+    <updated>2025-04-18T15:45:30Z</updated>
+    <published>2025-04-18T15:45:30Z</published>
+    <title>Scaling sparse feature circuit finding for in-context learning</title>
+    <summary>  Sparse autoencoders (SAEs) are a popular tool for interpreting large language
+model activations, but their utility in addressing open questions in
+interpretability remains unclear. In this work, we demonstrate their
+effectiveness by using SAEs to deepen our understanding of the mechanism behind
+in-context learning (ICL). We identify abstract SAE features that (i) encode
+the model's knowledge of which task to execute and (ii) whose latent vectors
+causally induce the task zero-shot. This aligns with prior work showing that
+ICL is mediated by task vectors. We further demonstrate that these task vectors
+are well approximated by a sparse sum of SAE latents, including these
+task-execution features. To explore the ICL mechanism, we adapt the sparse
+feature circuits methodology of Marks et al. (2024) to work for the much larger
+Gemma-1 2B model, with 30 times as many parameters, and to the more complex
+task of ICL. Through circuit finding, we discover task-detecting features with
+corresponding SAE latents that activate earlier in the prompt, that detect when
+tasks have been performed. They are causally linked with task-execution
+features through the attention and MLP sublayers.
 </summary>
     <author>
-      <name>Mohammadrahim Kazemzadeh</name>
+      <name>Dmitrii Kharlapenko</name>
     </author>
     <author>
-      <name>Banghuan Zhang</name>
+      <name>Stepan Shabalin</name>
     </author>
     <author>
-      <name>Tao He</name>
+      <name>Fazl Barez</name>
     </author>
     <author>
-      <name>Haoran Liu</name>
+      <name>Arthur Conmy</name>
     </author>
     <author>
-      <name>Zihe Jiang</name>
+      <name>Neel Nanda</name>
     </author>
-    <author>
-      <name>Zhiwei Hu</name>
-    </author>
-    <author>
-      <name>Xiaohui Dong</name>
-    </author>
-    <author>
-      <name>Chaowei Sun</name>
-    </author>
-    <author>
-      <name>Wei Jiang</name>
-    </author>
-    <author>
-      <name>Xiaobo He</name>
-    </author>
-    <author>
-      <name>Shuyan Li</name>
-    </author>
-    <author>
-      <name>Gonzalo Alvarez-Perez</name>
-    </author>
-    <author>
-      <name>Ferruccio Pisanello</name>
-    </author>
-    <author>
-      <name>Huatian Hu</name>
-    </author>
-    <author>
-      <name>Wen Chen</name>
-    </author>
-    <author>
-      <name>Hongxing Xu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 5 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13062v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13062v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2504.13756v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13756v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2504.13057v1</id>
-    <updated>2025-04-17T16:11:42Z</updated>
-    <published>2025-04-17T16:11:42Z</published>
-    <title>Covariate balancing estimation and model selection for
-  difference-in-differences approach</title>
-    <summary>  In causal inference, remarkable progress has been made in
-difference-in-differences (DID) approaches to estimate the average effect of
-treatment on the treated (ATT). Of these, the semiparametric DID (SDID)
-approach incorporates a propensity score analysis into the DID setup. Supposing
-that the ATT is a function of covariates, we estimate it by weighting the
-inverse of the propensity score. As one method to make the estimation robust to
-the propensity score modeling, we incorporate covariate balancing. Then, by
-attentively constructing the moment conditions used in the covariate balancing,
-we show that the proposed estimator has doubly robustness. In addition to the
-estimation, model selection is also addressed. In practice, covariate selection
-is an essential task in statistical analysis, but even in the basic setting of
-the SDID approach, there are no reasonable information criteria. Therefore, we
-derive a model selection criterion as an asymptotically bias-corrected
-estimator of risk based on the loss function used in the SDID estimation. As a
-result, we show that a penalty term is derived that is considerably different
-from almost twice the number of parameters that often appears in AIC-type
-information criteria. Numerical experiments show that the proposed method
-estimates the ATT robustly compared to the method using propensity scores given
-by the maximum likelihood estimation (MLE), and that the proposed criterion
-clearly reduces the risk targeted in the SDID approach compared to the
-intuitive generalization of the existing information criterion. In addition,
-real data analysis confirms that there is a large difference between the
-results of the proposed method and the existing method.
+    <id>http://arxiv.org/abs/2504.13744v1</id>
+    <updated>2025-04-18T15:18:08Z</updated>
+    <published>2025-04-18T15:18:08Z</published>
+    <title>Observation of gyroscopic coupling in a non-spinning levitated
+  ferromagnet</title>
+    <summary>  A non-spinning permanent ferromagnet is predicted to behave as a gyroscope at
+sufficiently low frequencies, which can be seen as a manifestation of the
+Einstein-de Haas effect. This yet unexplored regime has been recently proposed
+for ultrasensitive precession-based magnetometry and for atomic-like quantum
+stabilization of a levitated nanomagnet in a static field. Here, we observe
+signatures of gyroscopic effects in the rotational dynamics of a non-spinning
+permanent ferromagnet levitated in a superconducting trap. Specifically, we
+detect spin-rotation coupling between different librational modes, in good
+agreement with theoretical predictions. From our measurements, we can infer
+both the intrinsic angular momentum of the levitated magnet and its
+gyromagnetic $g$-factor.
 </summary>
     <author>
-      <name>Takamichi Baba</name>
+      <name>F. Ahrens</name>
     </author>
     <author>
-      <name>Yoshiyuki Ninomiya</name>
+      <name>A. Vinante</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">24 pages, 6 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13057v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13057v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="62D20" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2504.13043v1</id>
-    <updated>2025-04-17T15:57:16Z</updated>
-    <published>2025-04-17T15:57:16Z</published>
-    <title>Machine Learning Decoding of Circuit-Level Noise for Bivariate Bicycle
-  Codes</title>
-    <summary>  Fault-tolerant quantum computers will depend crucially on the performance of
-the classical decoding algorithm which takes in the results of measurements and
-outputs corrections to the errors inferred to have occurred. Machine learning
-models have shown great promise as decoders for the surface code; however, this
-promise has not yet been substantiated for the more challenging task of
-decoding quantum low-density parity-check (QLDPC) codes. In this paper, we
-present a recurrent, transformer-based neural network designed to decode
-circuit-level noise on Bivariate Bicycle (BB) codes, introduced recently by
-Bravyi et al (Nature 627, 778-782, 2024). For the $[[72,12,6]]$ BB code, at a
-physical error rate of $p=0.1\%$, our model achieves a logical error rate
-almost $5$ times lower than belief propagation with ordered statistics decoding
-(BP-OSD). Moreover, while BP-OSD has a wide distribution of runtimes with
-significant outliers, our model has a consistent runtime and is an
-order-of-magnitude faster than the worst-case times from a benchmark BP-OSD
-implementation. On the $[[144,12,12]]$ BB code, our model obtains worse logical
-error rates but maintains the speed advantage. These results demonstrate that
-machine learning decoders can out-perform conventional decoders on QLDPC codes,
-in regimes of current interest.
-</summary>
-    <author>
-      <name>John Blue</name>
-    </author>
-    <author>
-      <name>Harshil Avlani</name>
-    </author>
-    <author>
-      <name>Zhiyang He</name>
-    </author>
-    <author>
-      <name>Liu Ziyin</name>
-    </author>
-    <author>
-      <name>Isaac L. Chuang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2504.13043v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2504.13043v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">5 pages, 2 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.13744v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13744v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
     <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.13739v1</id>
+    <updated>2025-04-18T15:08:45Z</updated>
+    <published>2025-04-18T15:08:45Z</published>
+    <title>Modular Hamiltonian of holographic time band states</title>
+    <summary>  A holographic time band is a causal incomplete boundary spacetime subregion
+whose causal wedge is a causal complete bulk spacetime subregion. In an AdS$_3$
+spacetime with a specifically modified IR geometry, its causal wedge coincides
+with its entanglement wedge, which suggests the existence of a local modular
+Hamiltonian for the holographic time band state. In this work, we construct the
+local modular Hamiltonian for holographic time bands using two independent
+methods: from the quantum information properties of the time band state and
+from the construction of consistent geometric modular flows. Both methods lead
+to the same unique result of the local modular Hamiltonian, reflecting the
+intrinsic property of the time band state. The entanglement first law has also
+been checked to hold for the simplest time band state. This is a substantial
+addition to the known holographic subsystems with a local modular Hamiltonian,
+beyond the few cases previously identified.
+</summary>
+    <author>
+      <name>Xin-Xiang Ju</name>
+    </author>
+    <author>
+      <name>Bo-Hao Liu</name>
+    </author>
+    <author>
+      <name>Ya-Wen Sun</name>
+    </author>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2504.13739v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13739v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.13736v1</id>
+    <updated>2025-04-18T15:04:53Z</updated>
+    <published>2025-04-18T15:04:53Z</published>
+    <title>LimitNet: Progressive, Content-Aware Image Offloading for Extremely Weak
+  Devices &amp; Networks</title>
+    <summary>  IoT devices have limited hardware capabilities and are often deployed in
+remote areas. Consequently, advanced vision models surpass such devices'
+processing and storage capabilities, requiring offloading of such tasks to the
+cloud. However, remote areas often rely on LPWANs technology with limited
+bandwidth, high packet loss rates, and extremely low duty cycles, which makes
+fast offloading for time-sensitive inference challenging. Today's approaches,
+which are deployable on weak devices, generate a non-progressive bit stream,
+and therefore, their decoding quality suffers strongly when data is only
+partially available on the cloud at a deadline due to limited bandwidth or
+packet losses.
+  In this paper, we introduce LimitNet, a progressive, content-aware image
+compression model designed for extremely weak devices and networks. LimitNet's
+lightweight progressive encoder prioritizes critical data during transmission
+based on the content of the image, which gives the cloud the opportunity to run
+inference even with partial data availability.
+  Experimental results demonstrate that LimitNet, on average, compared to SOTA,
+achieves 14.01 p.p. (percentage point) higher accuracy on ImageNet1000, 18.01
+pp on CIFAR100, and 0.1 higher mAP@0.5 on COCO. Also, on average, LimitNet
+saves 61.24% bandwidth on ImageNet1000, 83.68% on CIFAR100, and 42.25% on the
+COCO dataset compared to SOTA, while it only has 4% more encoding time compared
+to JPEG (with a fixed quality) on STM32F7 (Cortex-M7).
+</summary>
+    <author>
+      <name>Ali Hojjat</name>
+    </author>
+    <author>
+      <name>Janek Haberer</name>
+    </author>
+    <author>
+      <name>Tayyaba Zainab</name>
+    </author>
+    <author>
+      <name>Olaf Landsiedel</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3643832.3661856</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/3643832.3661856" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This is the author's accepted manuscript. The Version of Record is
+  available at: https://doi.org/10.1145/3643832.3661856</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">In Proceedings of the 22nd ACM International Conference on Mobile
+  Systems, Applications, and Services (MobiSys '24), June 3-7, 2024, Minato-ku,
+  Tokyo, Japan. ACM, New York, NY, USA</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2504.13736v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2504.13736v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
