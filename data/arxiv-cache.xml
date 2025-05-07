@@ -1,446 +1,509 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-05-06T00:55:56Z -->
+<!-- Last updated: 2025-05-07T00:56:01Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-05-05T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">111609</opensearch:totalResults>
+  <updated>2025-05-06T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">111721</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.01406v1</id>
-    <updated>2025-05-02T17:35:03Z</updated>
-    <published>2025-05-02T17:35:03Z</published>
-    <title>VIDSTAMP: A Temporally-Aware Watermark for Ownership and Integrity in
-  Video Diffusion Models</title>
-    <summary>  The rapid rise of video diffusion models has enabled the generation of highly
-realistic and temporally coherent videos, raising critical concerns about
-content authenticity, provenance, and misuse. Existing watermarking approaches,
-whether passive, post-hoc, or adapted from image-based techniques, often
-struggle to withstand video-specific manipulations such as frame insertion,
-dropping, or reordering, and typically degrade visual quality. In this work, we
-introduce VIDSTAMP, a watermarking framework that embeds per-frame or
-per-segment messages directly into the latent space of temporally-aware video
-diffusion models. By fine-tuning the model's decoder through a two-stage
-pipeline, first on static image datasets to promote spatial message separation,
-and then on synthesized video sequences to restore temporal consistency,
-VIDSTAMP learns to embed high-capacity, flexible watermarks with minimal
-perceptual impact. Leveraging architectural components such as 3D convolutions
-and temporal attention, our method imposes no additional inference cost and
-offers better perceptual quality than prior methods, while maintaining
-comparable robustness against common distortions and tampering. VIDSTAMP embeds
-768 bits per video (48 bits per frame) with a bit accuracy of 95.0%, achieves a
-log P-value of -166.65 (lower is better), and maintains a video quality score
-of 0.836, comparable to unwatermarked outputs (0.838) and surpassing prior
-methods in capacity-quality tradeoffs. Code: Code:
-\url{https://github.com/SPIN-UMass/VidStamp}
+    <id>http://arxiv.org/abs/2505.02835v1</id>
+    <updated>2025-05-05T17:59:50Z</updated>
+    <published>2025-05-05T17:59:50Z</published>
+    <title>R1-Reward: Training Multimodal Reward Model Through Stable Reinforcement
+  Learning</title>
+    <summary>  Multimodal Reward Models (MRMs) play a crucial role in enhancing the
+performance of Multimodal Large Language Models (MLLMs). While recent
+advancements have primarily focused on improving the model structure and
+training data of MRMs, there has been limited exploration into the
+effectiveness of long-term reasoning capabilities for reward modeling and how
+to activate these capabilities in MRMs. In this paper, we explore how
+Reinforcement Learning (RL) can be used to improve reward modeling.
+Specifically, we reformulate the reward modeling problem as a rule-based RL
+task. However, we observe that directly applying existing RL algorithms, such
+as Reinforce++, to reward modeling often leads to training instability or even
+collapse due to the inherent limitations of these algorithms. To address this
+issue, we propose the StableReinforce algorithm, which refines the training
+loss, advantage estimation strategy, and reward design of existing RL methods.
+These refinements result in more stable training dynamics and superior
+performance. To facilitate MRM training, we collect 200K preference data from
+diverse datasets. Our reward model, R1-Reward, trained using the
+StableReinforce algorithm on this dataset, significantly improves performance
+on multimodal reward modeling benchmarks. Compared to previous SOTA models,
+R1-Reward achieves a $8.4\%$ improvement on the VL Reward-Bench and a $14.3\%$
+improvement on the Multimodal Reward Bench. Moreover, with more inference
+compute, R1-Reward's performance is further enhanced, highlighting the
+potential of RL algorithms in optimizing MRMs.
 </summary>
     <author>
-      <name>Mohammadreza Teymoorianfard</name>
+      <name>Yi-Fan Zhang</name>
     </author>
     <author>
-      <name>Shiqing Ma</name>
+      <name>Xingyu Lu</name>
     </author>
     <author>
-      <name>Amir Houmansadr</name>
+      <name>Xiao Hu</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.01406v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01406v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Chaoyou Fu</name>
+    </author>
+    <author>
+      <name>Bin Wen</name>
+    </author>
+    <author>
+      <name>Tianke Zhang</name>
+    </author>
+    <author>
+      <name>Changyi Liu</name>
+    </author>
+    <author>
+      <name>Kaiyu Jiang</name>
+    </author>
+    <author>
+      <name>Kaibing Chen</name>
+    </author>
+    <author>
+      <name>Kaiyu Tang</name>
+    </author>
+    <author>
+      <name>Haojie Ding</name>
+    </author>
+    <author>
+      <name>Jiankang Chen</name>
+    </author>
+    <author>
+      <name>Fan Yang</name>
+    </author>
+    <author>
+      <name>Zhang Zhang</name>
+    </author>
+    <author>
+      <name>Tingting Gao</name>
+    </author>
+    <author>
+      <name>Liang Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Home page: https://github.com/yfzhang114/r1_reward</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.02835v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02835v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.01386v1</id>
-    <updated>2025-05-02T16:49:10Z</updated>
-    <published>2025-05-02T16:49:10Z</published>
-    <title>Carbon Aware Transformers Through Joint Model-Hardware Optimization</title>
-    <summary>  The rapid growth of machine learning (ML) systems necessitates a more
-comprehensive evaluation of their environmental impact, particularly their
-carbon footprint, which comprises operational carbon from training and
-inference execution and embodied carbon from hardware manufacturing and its
-entire life-cycle. Despite the increasing importance of embodied emissions,
-there is a lack of tools and frameworks to holistically quantify and optimize
-the total carbon footprint of ML systems. To address this, we propose
-CATransformers, a carbon-aware architecture search framework that enables
-sustainability-driven co-optimization of ML models and hardware architectures.
-By incorporating both operational and embodied carbon metrics into early design
-space exploration of domain-specific hardware accelerators, CATransformers
-demonstrates that optimizing for carbon yields design choices distinct from
-those optimized solely for latency or energy efficiency. We apply our framework
-to multi-modal CLIP-based models, producing CarbonCLIP, a family of CLIP models
-achieving up to 17% reduction in total carbon emissions while maintaining
-accuracy and latency compared to state-of-the-art edge small CLIP baselines.
-This work underscores the need for holistic optimization methods to design
-high-performance, environmentally sustainable AI systems.
+    <id>http://arxiv.org/abs/2505.02825v2</id>
+    <updated>2025-05-06T10:17:58Z</updated>
+    <published>2025-05-05T17:51:56Z</published>
+    <title>Towards Application-Specific Evaluation of Vision Models: Case Studies
+  in Ecology and Biology</title>
+    <summary>  Computer vision methods have demonstrated considerable potential to
+streamline ecological and biological workflows, with a growing number of
+datasets and models becoming available to the research community. However,
+these resources focus predominantly on evaluation using machine learning
+metrics, with relatively little emphasis on how their application impacts
+downstream analysis. We argue that models should be evaluated using
+application-specific metrics that directly represent model performance in the
+context of its final use case. To support this argument, we present two
+disparate case studies: (1) estimating chimpanzee abundance and density with
+camera trap distance sampling when using a video-based behaviour classifier and
+(2) estimating head rotation in pigeons using a 3D posture estimator. We show
+that even models with strong machine learning performance (e.g., 87% mAP) can
+yield data that leads to discrepancies in abundance estimates compared to
+expert-derived data. Similarly, the highest-performing models for posture
+estimation do not produce the most accurate inferences of gaze direction in
+pigeons. Motivated by these findings, we call for researchers to integrate
+application-specific metrics in ecological/biological datasets, allowing for
+models to be benchmarked in the context of their downstream application and to
+facilitate better integration of models into application workflows.
 </summary>
     <author>
-      <name>Irene Wang</name>
+      <name>Alex Hoi Hang Chan</name>
     </author>
     <author>
-      <name>Newsha Ardalani</name>
+      <name>Otto Brookes</name>
     </author>
     <author>
-      <name>Mostafa Elhoushi</name>
+      <name>Urs Waldmann</name>
     </author>
     <author>
-      <name>Daniel Jiang</name>
+      <name>Hemal Naik</name>
     </author>
     <author>
-      <name>Samuel Hsia</name>
+      <name>Iain D. Couzin</name>
     </author>
     <author>
-      <name>Ekin Sumbul</name>
+      <name>Majid Mirmehdi</name>
     </author>
     <author>
-      <name>Divya Mahajan</name>
+      <name>Noël Adiko Houa</name>
     </author>
     <author>
-      <name>Carole-Jean Wu</name>
+      <name>Emmanuelle Normand</name>
     </author>
     <author>
-      <name>Bilge Acun</name>
+      <name>Christophe Boesch</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.01386v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01386v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Lukas Boesch</name>
+    </author>
+    <author>
+      <name>Mimi Arandjelovic</name>
+    </author>
+    <author>
+      <name>Hjalmar Kühl</name>
+    </author>
+    <author>
+      <name>Tilo Burghardt</name>
+    </author>
+    <author>
+      <name>Fumihiro Kano</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at CVPR Workshop, CV4Animals 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.02825v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02825v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.01383v1</id>
-    <updated>2025-05-02T16:47:05Z</updated>
-    <published>2025-05-02T16:47:05Z</published>
-    <title>FalconWing: An Open-Source Platform for Ultra-Light Fixed-Wing Aircraft
-  Research</title>
-    <summary>  We present FalconWing -- an open-source, ultra-lightweight (150 g) fixed-wing
-platform for autonomy research. The hardware platform integrates a small
-camera, a standard airframe, offboard computation, and radio communication for
-manual overrides. We demonstrate FalconWing's capabilities by developing and
-deploying a purely vision-based control policy for autonomous landing (without
-IMU or motion capture) using a novel real-to-sim-to-real learning approach. Our
-learning approach: (1) constructs a photorealistic simulation environment via
-3D Gaussian splatting trained on real-world images; (2) identifies nonlinear
-dynamics from vision-estimated real-flight data; and (3) trains a multi-modal
-Vision Transformer (ViT) policy through simulation-only imitation learning. The
-ViT architecture fuses single RGB image with the history of control actions via
-self-attention, preserving temporal context while maintaining real-time 20 Hz
-inference. When deployed zero-shot on the hardware platform, this policy
-achieves an 80% success rate in vision-based autonomous landings. Together with
-the hardware specifications, we also open-source the system dynamics, the
-software for photorealistic simulator and the learning approach.
+    <id>http://arxiv.org/abs/2505.02811v1</id>
+    <updated>2025-05-05T17:39:35Z</updated>
+    <published>2025-05-05T17:39:35Z</published>
+    <title>Knowing You Don't Know: Learning When to Continue Search in Multi-round
+  RAG through Self-Practicing</title>
+    <summary>  Retrieval Augmented Generation (RAG) has shown strong capability in enhancing
+language models' knowledge and reducing AI generative hallucinations, driving
+its widespread use. However, complex tasks requiring multi-round retrieval
+remain challenging, and early attempts tend to be overly optimistic without a
+good sense of self-skepticism. Current multi-round RAG systems may continue
+searching even when enough information has already been retrieved, or they may
+provide incorrect answers without having sufficient information or knowledge.
+Existing solutions either require large amounts of expensive human-labeled
+process supervision data or lead to subpar performance.
+  This paper aims to address these limitations by introducing a new framework,
+\textbf{SIM-RAG}, to explicitly enhance RAG systems' self-awareness and
+multi-round retrieval capabilities. To train SIM-RAG, we first let a RAG system
+self-practice multi-round retrieval, augmenting existing question-answer pairs
+with intermediate inner monologue reasoning steps to generate synthetic
+training data. For each pair, the system may explore multiple retrieval paths,
+which are labeled as successful if they reach the correct answer and
+unsuccessful otherwise. Using this data, we train a lightweight information
+sufficiency Critic. At inference time, the Critic evaluates whether the RAG
+system has retrieved sufficient information at each round, guiding retrieval
+decisions and improving system-level self-awareness through in-context
+reinforcement learning.
+  Experiments across multiple prominent RAG benchmarks show that SIM-RAG is an
+effective multi-round RAG solution. Furthermore, this framework is
+system-efficient, adding a lightweight component to RAG without requiring
+modifications to existing LLMs or search engines, and data-efficient,
+eliminating the need for costly human-annotated mid-step retrieval process
+supervision data.
 </summary>
     <author>
-      <name>Yan Miao</name>
+      <name>Diji Yang</name>
     </author>
     <author>
-      <name>Will Shen</name>
+      <name>Linda Zeng</name>
     </author>
     <author>
-      <name>Hang Cui</name>
+      <name>Jinmeng Rao</name>
     </author>
     <author>
-      <name>Sayan Mitra</name>
+      <name>Yi Zhang</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.01383v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01383v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.01381v1</id>
-    <updated>2025-05-02T16:43:37Z</updated>
-    <published>2025-05-02T16:43:37Z</published>
-    <title>Probing the Cores of Subdwarf B Stars: How do They Compare to Cores in
-  Helium Core-Burning Red Giants?</title>
-    <summary>  The mixing of material from stellar convective cores into their adjacent
-radiative layers has been a matter of long-standing debate. Pulsating subdwarf
-B stars offer excellent conditions to advance our understanding of this
-problem. In this work we use a model-independent approach to infer information
-about the cores of three subdwarf B stars and compare it with similar
-inferences from earlier analysis of red giants in the helium core-burning
-phase. This is achieved by fitting an analytical description of the
-gravity-mode pulsation periods to pulsation data collected by the Kepler
-satellite. From the fits we infer the reduced asymptotic period spacings and
-the amplitude and position of sharp structural variations associated with
-chemical discontinuities in the stellar interiors. Our results indicate the
-presence of sharp structural variations with similar properties in all three
-stars, located near the edge of the gravity-mode propagation cavity and likely
-associated with the C-O/He transition. We find that these structural variations
-differ systematically from those of helium core-burning red giant stars, having
-larger amplitudes and being located at a larger buoyancy radius. This suggests
-that chemical mixing beyond the adiabatically stratified core into the
-radiatively stratified layers may be more extensive in subdwarf B stars than in
-helium core-burning red giants. Alternatively, the stratification of the mixing
-region beyond the adiabatically stratified core may differ significantly
-between the two types of stars. The model-independent constraints set on the
-structural variations inside these three stars are the first of a kind and will
-be key to enhance the modelling of layers adjacent to stellar convective cores
-and to test non-canonical stellar evolution channels leading to the formation
-of hot subdwarf stars.
-</summary>
-    <author>
-      <name>Margarida S. Cunha</name>
-    </author>
-    <author>
-      <name>Juliana Amaral</name>
-    </author>
-    <author>
-      <name>Sofia Avelino</name>
-    </author>
-    <author>
-      <name>Anselmo Falorca</name>
-    </author>
-    <author>
-      <name>Yuri Damasceno</name>
-    </author>
-    <author>
-      <name>Pedro Avelino</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in Astronomy and Astrophysics</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.01381v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01381v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.01372v1</id>
-    <updated>2025-05-02T16:18:40Z</updated>
-    <published>2025-05-02T16:18:40Z</published>
-    <title>Evaluating Explanations: An Explanatory Virtues Framework for
-  Mechanistic Interpretability -- The Strange Science Part I.ii</title>
-    <summary>  Mechanistic Interpretability (MI) aims to understand neural networks through
-causal explanations. Though MI has many explanation-generating methods,
-progress has been limited by the lack of a universal approach to evaluating
-explanations. Here we analyse the fundamental question "What makes a good
-explanation?" We introduce a pluralist Explanatory Virtues Framework drawing on
-four perspectives from the Philosophy of Science - the Bayesian, Kuhnian,
-Deutschian, and Nomological - to systematically evaluate and improve
-explanations in MI. We find that Compact Proofs consider many explanatory
-virtues and are hence a promising approach. Fruitful research directions
-implied by our framework include (1) clearly defining explanatory simplicity,
-(2) focusing on unifying explanations and (3) deriving universal principles for
-neural networks. Improved MI methods enhance our ability to monitor, predict,
-and steer AI systems.
-</summary>
-    <author>
-      <name>Kola Ayonrinde</name>
-    </author>
-    <author>
-      <name>Louis Jaburi</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages (plus appendices), 5 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.01372v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01372v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Proceedings of the 48th International ACM SIGIR 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.02811v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02811v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.01351v1</id>
-    <updated>2025-05-02T15:38:55Z</updated>
-    <published>2025-05-02T15:38:55Z</published>
-    <title>Closing the Loop: A Systematic Review of Experience-Driven Game
-  Adaptation</title>
-    <summary>  Adaptive game systems aim to enrich player experiences by dynamically
-adjusting game content in response to user data. While extensive research has
-addressed content personalization and player experience modeling, the
-integration of these components into fully operational adaptive gameplay
-systems remains limited. This systematic review, conducted in accordance with
-PRISMA guidelines, analyzes 17 empirical studies published between January 2015
-and May 2024, identifying and analyzing approaches that implement the complete
-experience-driven loop -- including player sensing, modeling, and content
-adaptation. Game telemetry remains the most prevalent sensing modality,
-although other non-invasive methods suitable for affective modeling -- such as
-facial expression analysis (FEA) and peripheral interaction data -- remain
-underutilized despite their potential for real-time emotional inference.
-Knowledge-based methods, such as rule-based systems and heuristics, dominate
-modeling and adaptation due to their interpretability and low resource demands,
-whereas machine learning approaches face challenges related to data
-availability and transparency. Despite their relevance to immersive and
-therapeutic experiences, affective states such as stress and anxiety remain
-largely ignored, as systems continue to favor performance over
-emotion-sensitive adaptation. These findings highlight a crucial research
-direction: advancing emotionally responsive game systems that move beyond
-performance optimization by incorporating underutilized sensing modalities --
-such as FEA and peripheral interaction -- to enable real-time affect-driven
-personalization. Advancing in this direction holds strong potential to increase
-immersion, personalize gameplay, and support affect regulation across
-entertainment and therapeutic contexts.
+    <id>http://arxiv.org/abs/2505.02787v1</id>
+    <updated>2025-05-05T17:02:13Z</updated>
+    <published>2025-05-05T17:02:13Z</published>
+    <title>Unsupervised training of keypoint-agnostic descriptors for flexible
+  retinal image registration</title>
+    <summary>  Current color fundus image registration approaches are limited, among other
+things, by the lack of labeled data, which is even more significant in the
+medical domain, motivating the use of unsupervised learning. Therefore, in this
+work, we develop a novel unsupervised descriptor learning method that does not
+rely on keypoint detection. This enables the resulting descriptor network to be
+agnostic to the keypoint detector used during the registration inference.
+  To validate this approach, we perform an extensive and comprehensive
+comparison on the reference public retinal image registration dataset.
+Additionally, we test our method with multiple keypoint detectors of varied
+nature, even proposing some novel ones. Our results demonstrate that the
+proposed approach offers accurate registration, not incurring in any
+performance loss versus supervised methods. Additionally, it demonstrates
+accurate performance regardless of the keypoint detector used. Thus, this work
+represents a notable step towards leveraging unsupervised learning in the
+medical domain.
 </summary>
     <author>
-      <name>Phil Lopes</name>
+      <name>David Rivas-Villar</name>
     </author>
     <author>
-      <name>Nuno Fachada</name>
+      <name>Álvaro S. Hervella</name>
     </author>
     <author>
-      <name>Maria Fonseca</name>
+      <name>José Rouco</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.01351v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01351v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Jorge Novo</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.02787v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02787v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.01324v1</id>
-    <updated>2025-05-02T14:55:34Z</updated>
-    <published>2025-05-02T14:55:34Z</published>
-    <title>Design-Based Inference under Random Potential Outcomes via Riesz
-  Representation</title>
-    <summary>  We introduce a general framework for design-based causal inference that
-accommodates stochastic potential outcomes, thereby extending the classical
-Neyman-Rubin setup in which outcomes are treated as fixed. In our formulation,
-each unit's potential outcome is modelled as a function $\tilde{y}_i(z,
-\omega)$, where $\omega$ denotes latent randomness external to the treatment
-assignment. Building on recent work that connects design-based estimation with
-the Riesz representation theorem, we construct causal estimators by embedding
-potential outcomes in a Hilbert space and defining treatment effects as linear
-functionals. This allows us to derive unbiased and consistent estimators, even
-when potential outcomes exhibit random variation. The framework retains the key
-advantage of design-based analysis, namely, the use of a known randomisation
-scheme for identification, while enabling inference in settings with inherent
-stochasticity. We establish large-sample properties under local dependence,
-provide a variance estimator compatible with sparse dependency structures, and
-illustrate the method through a simulation. Our results unify design-based
-reasoning with random-outcome modelling, broadening the applicability of causal
-inference in complex experimental environments.
+    <id>http://arxiv.org/abs/2505.02781v1</id>
+    <updated>2025-05-05T16:47:29Z</updated>
+    <published>2025-05-05T16:47:29Z</published>
+    <title>Local Markov Equivalence and Local Causal Discovery for Identifying
+  Controlled Direct Effects</title>
+    <summary>  Understanding and identifying controlled direct effects (CDEs) is crucial
+across numerous scientific domains, including public health. While existing
+methods can identify these effects from causal directed acyclic graphs (DAGs),
+the true underlying structure is often unknown in practice. Essential graphs,
+which represent a Markov equivalence class of DAGs characterized by the same
+set of d-separations, provide a more practical and realistic alternative.
+However, learning the full essential graph is computationally intensive and
+typically depends on strong, untestable assumptions. In this work, we
+characterize a local class of graphs, defined relative to a target variable,
+that share a specific subset of d-separations, and introduce a graphical
+representation of this class, called the local essential graph (LEG). We then
+present LocPC, a novel algorithm designed to recover the LEG from an observed
+distribution using only local conditional independence tests. Building on
+LocPC, we propose LocPC-CDE, an algorithm that discovers the portion of the LEG
+that is sufficient to identify a CDE, bypassing the need of retrieving the full
+essential graph. Compared to global methods, our algorithms require less
+conditional independence tests and operate under weaker assumptions while
+maintaining theoretical guarantees.
 </summary>
     <author>
-      <name>Yukai Yang</name>
+      <name>Timothée Loranchet</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">37 pages, 2 figures, 2 Tables, 2 Algorithms. Preprint prepared for
-  journal submission</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.01324v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01324v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Charles K. Assaad</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.02781v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02781v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02773v1</id>
+    <updated>2025-05-05T16:36:46Z</updated>
+    <published>2025-05-05T16:36:46Z</published>
+    <title>Can Transformers help us perform parameter estimation of overlapping
+  signals in gravitational wave detectors?</title>
+    <summary>  Overlapping signals represent one of the major data analysis challenges in
+next-generation gravitational wave detectors. We leverage Transformers and
+Normalizing Flows, state-of-the-art machine learning algorithms, to address the
+parameter estimation of overlapping binary black hole mergers in the Einstein
+Telescope (ET). Our proposed model combines a Transformer-based "Knowledge
+Extractor Neural Network" (KENN) with a Normalizing Flow (HYPERION) to perform
+rapid and unbiased inference over multiple overlapping black hole binary
+events. The choice of architecture leverages the strength of Transformers in
+capturing complex and long-range temporal structures in the strain time series
+data, while Normalizing Flows provide a powerful framework to sample posterior
+distributions. We demonstrate the effectiveness and robustness of our model
+over simulated gravitational wave signals, showing that it maintains the same
+level of accuracy regardless of the correlation level in the data. Moreover our
+model provides estimates of chirp mass and coalescence times within &lt;10-20%
+from the true simulated value. The results obtained are promising and show how
+this approach might represent a first step toward a deep-learning based
+inference pipeline for ET and other future gravitational wave detectors.
+</summary>
+    <author>
+      <name>Lucia Papalini</name>
+    </author>
+    <author>
+      <name>Federico De Santi</name>
+    </author>
+    <author>
+      <name>Massimiliano Razzano</name>
+    </author>
+    <author>
+      <name>Ik Siong Heng</name>
+    </author>
+    <author>
+      <name>Elena Cuoco</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.02773v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02773v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02754v1</id>
+    <updated>2025-05-05T16:07:28Z</updated>
+    <published>2025-05-05T16:07:28Z</published>
+    <title>Debiased inference in error-in-variable problems with non-Gaussian
+  measurement error</title>
+    <summary>  We consider drawing statistical inferences based on data subject to
+non-Gaussian measurement error. Unlike most existing methods developed under
+the assumption of Gaussian measurement error, the proposed strategy exploits
+hypercomplex numbers to reduce bias in naive estimation that ignores
+non-Gaussian measurement error. We apply this new method to several widely
+applicable parametric regression models with error-prone covariates, and kernel
+density estimation using error-contaminated data. The efficacy of this method
+in bias reduction is demonstrated in simulation studies and a real-life
+application in sports analytics.
+</summary>
+    <author>
+      <name>Nicholas W. Woolsey</name>
+    </author>
+    <author>
+      <name>Xianzheng Huang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.02754v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02754v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="62G20, 62K99, 62D05" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="Primary 62G08, 62J02, secondary 62F12" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.01322v1</id>
-    <updated>2025-05-02T14:53:56Z</updated>
-    <published>2025-05-02T14:53:56Z</published>
-    <title>FreeInsert: Disentangled Text-Guided Object Insertion in 3D Gaussian
-  Scene without Spatial Priors</title>
-    <summary>  Text-driven object insertion in 3D scenes is an emerging task that enables
-intuitive scene editing through natural language. However, existing 2D
-editing-based methods often rely on spatial priors such as 2D masks or 3D
-bounding boxes, and they struggle to ensure consistency of the inserted object.
-These limitations hinder flexibility and scalability in real-world
-applications. In this paper, we propose FreeInsert, a novel framework that
-leverages foundation models including MLLMs, LGMs, and diffusion models to
-disentangle object generation from spatial placement. This enables unsupervised
-and flexible object insertion in 3D scenes without spatial priors. FreeInsert
-starts with an MLLM-based parser that extracts structured semantics, including
-object types, spatial relationships, and attachment regions, from user
-instructions. These semantics guide both the reconstruction of the inserted
-object for 3D consistency and the learning of its degrees of freedom. We
-leverage the spatial reasoning capabilities of MLLMs to initialize object pose
-and scale. A hierarchical, spatially aware refinement stage further integrates
-spatial semantics and MLLM-inferred priors to enhance placement. Finally, the
-appearance of the object is improved using the inserted-object image to enhance
-visual fidelity. Experimental results demonstrate that FreeInsert achieves
-semantically coherent, spatially precise, and visually realistic 3D insertions
-without relying on spatial priors, offering a user-friendly and flexible
-editing experience.
+    <id>http://arxiv.org/abs/2505.02743v1</id>
+    <updated>2025-05-05T15:50:52Z</updated>
+    <published>2025-05-05T15:50:52Z</published>
+    <title>Cooperative Bayesian and variance networks disentangle aleatoric and
+  epistemic uncertainties</title>
+    <summary>  Real-world data contains aleatoric uncertainty - irreducible noise arising
+from imperfect measurements or from incomplete knowledge about the data
+generation process. Mean variance estimation (MVE) networks can learn this type
+of uncertainty but require ad-hoc regularization strategies to avoid
+overfitting and are unable to predict epistemic uncertainty (model
+uncertainty). Conversely, Bayesian neural networks predict epistemic
+uncertainty but are notoriously difficult to train due to the approximate
+nature of Bayesian inference. We propose to cooperatively train a variance
+network with a Bayesian neural network and demonstrate that the resulting model
+disentangles aleatoric and epistemic uncertainties while improving the mean
+estimation. We demonstrate the effectiveness and scalability of this method
+across a diverse range of datasets, including a time-dependent heteroscedastic
+regression dataset we created where the aleatoric uncertainty is known. The
+proposed method is straightforward to implement, robust, and adaptable to
+various model architectures.
 </summary>
     <author>
-      <name>Chenxi Li</name>
+      <name>Jiaxiang Yi</name>
     </author>
     <author>
-      <name>Weijie Wang</name>
+      <name>Miguel A. Bessa</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 19 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.02743v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02743v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02705v1</id>
+    <updated>2025-05-05T14:57:43Z</updated>
+    <published>2025-05-05T14:57:43Z</published>
+    <title>Multi-View Learning with Context-Guided Receptance for Image Denoising</title>
+    <summary>  Image denoising is essential in low-level vision applications such as
+photography and automated driving. Existing methods struggle with
+distinguishing complex noise patterns in real-world scenes and consume
+significant computational resources due to reliance on Transformer-based
+models. In this work, the Context-guided Receptance Weighted Key-Value (\M)
+model is proposed, combining enhanced multi-view feature integration with
+efficient sequence modeling. Our approach introduces the Context-guided Token
+Shift (CTS) paradigm, which effectively captures local spatial dependencies and
+enhance the model's ability to model real-world noise distributions.
+Additionally, the Frequency Mix (FMix) module extracting frequency-domain
+features is designed to isolate noise in high-frequency spectra, and is
+integrated with spatial representations through a multi-view learning process.
+To improve computational efficiency, the Bidirectional WKV (BiWKV) mechanism is
+adopted, enabling full pixel-sequence interaction with linear complexity while
+overcoming the causal selection constraints. The model is validated on multiple
+real-world image denoising datasets, outperforming the existing
+state-of-the-art methods quantitatively and reducing inference time up to 40\%.
+Qualitative results further demonstrate the ability of our model to restore
+fine details in various scenes.
+</summary>
+    <author>
+      <name>Binghong Chen</name>
+    </author>
+    <author>
+      <name>Tingting Chai</name>
+    </author>
+    <author>
+      <name>Wei Jiang</name>
+    </author>
+    <author>
+      <name>Yuanrong Xu</name>
+    </author>
+    <author>
+      <name>Guanglu Zhou</name>
+    </author>
+    <author>
+      <name>Xiangqian Wu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IJCAI 2025, code will be available at
+  https://github.com/Seeker98/CRWKV</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.02705v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02705v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02703v1</id>
+    <updated>2025-05-05T14:57:02Z</updated>
+    <published>2025-05-05T14:57:02Z</published>
+    <title>Structure Causal Models and LLMs Integration in Medical Visual Question
+  Answering</title>
+    <summary>  Medical Visual Question Answering (MedVQA) aims to answer medical questions
+according to medical images. However, the complexity of medical data leads to
+confounders that are difficult to observe, so bias between images and questions
+is inevitable. Such cross-modal bias makes it challenging to infer medically
+meaningful answers. In this work, we propose a causal inference framework for
+the MedVQA task, which effectively eliminates the relative confounding effect
+between the image and the question to ensure the precision of the
+question-answering (QA) session. We are the first to introduce a novel causal
+graph structure that represents the interaction between visual and textual
+elements, explicitly capturing how different questions influence visual
+features. During optimization, we apply the mutual information to discover
+spurious correlations and propose a multi-variable resampling front-door
+adjustment method to eliminate the relative confounding effect, which aims to
+align features based on their true causal relevance to the question-answering
+task. In addition, we also introduce a prompt strategy that combines multiple
+prompt forms to improve the model's ability to understand complex medical data
+and answer accurately. Extensive experiments on three MedVQA datasets
+demonstrate that 1) our method significantly improves the accuracy of MedVQA,
+and 2) our method achieves true causal correlations in the face of complex
+medical data.
+</summary>
+    <author>
+      <name>Zibo Xu</name>
     </author>
     <author>
       <name>Qiang Li</name>
     </author>
     <author>
-      <name>Bruno Lepri</name>
-    </author>
-    <author>
-      <name>Nicu Sebe</name>
-    </author>
-    <author>
       <name>Weizhi Nie</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.01322v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01322v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Weijie Wang</name>
+    </author>
+    <author>
+      <name>Anan Liu</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1109/TMI.2025.3564320</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1109/TMI.2025.3564320" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IEEE TMI 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.02703v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.02703v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.01279v1</id>
-    <updated>2025-05-02T13:55:22Z</updated>
-    <published>2025-05-02T13:55:22Z</published>
-    <title>MultiGran-STGCNFog: Towards Accurate and High-Throughput Inference for
-  Multi-Granular Spatiotemporal Traffic Forecasting</title>
-    <summary>  Accurate traffic forecasting and swift inference provision are essential for
-intelligent transportation systems. However, the present Graph Convolutional
-Network (GCN)-based approaches cannot extract and fuse multi-granular
-spatiotemporal features across various spatial and temporal scales
-sufficiently, proven to yield less accurate forecasts. Besides, additional
-feature extraction branches introduced in prior studies critically increased
-model complexity and extended inference time, making it challenging to provide
-fast inference for traffic forecasting. In this paper, we propose
-MultiGran-STGCNFog, an efficient fog distributed inference system with a novel
-traffic forecasting model that employs multi-granular spatiotemporal feature
-fusion on generated dynamic traffic graphs to fully capture interdependent
-traffic dynamics. The proposed scheduling algorithm GA-DPHDS, optimizing layer
-execution order and layer-device scheduling scheme simultaneously, contributes
-to considerable inference throughput improvement by leveraging heterogeneous
-fog devices in a pipelined manner. Extensive experiments on real-world datasets
-demonstrate the superiority of the proposed method over selected baselines.
-</summary>
-    <author>
-      <name>Zhaoyan Wang</name>
-    </author>
-    <author>
-      <name>Xiangchi Song</name>
-    </author>
-    <author>
-      <name>In-Young Ko</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">nine pages and five figures included</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.01279v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01279v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.01249v1</id>
-    <updated>2025-05-02T13:17:08Z</updated>
-    <published>2025-05-02T13:17:08Z</published>
-    <title>Fusing Foveal Fixations Using Linear Retinal Transformations and
-  Bayesian Experimental Design</title>
-    <summary>  Humans (and many vertebrates) face the problem of fusing together multiple
-fixations of a scene in order to obtain a representation of the whole, where
-each fixation uses a high-resolution fovea and decreasing resolution in the
-periphery. In this paper we explicitly represent the retinal transformation of
-a fixation as a linear downsampling of a high-resolution latent image of the
-scene, exploiting the known geometry. This linear transformation allows us to
-carry out exact inference for the latent variables in factor analysis (FA) and
-mixtures of FA models of the scene. Further, this allows us to formulate and
-solve the choice of "where to look next" as a Bayesian experimental design
-problem using the Expected Information Gain criterion. Experiments on the Frey
-faces and MNIST datasets demonstrate the effectiveness of our models.
-</summary>
-    <author>
-      <name>Christopher K. I. Williams</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 4 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.01249v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.01249v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
