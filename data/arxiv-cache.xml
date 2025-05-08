@@ -1,509 +1,547 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-05-07T00:56:01Z -->
+<!-- Last updated: 2025-05-08T00:56:28Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-05-06T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">111721</opensearch:totalResults>
+  <updated>2025-05-07T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">111796</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.02835v1</id>
-    <updated>2025-05-05T17:59:50Z</updated>
-    <published>2025-05-05T17:59:50Z</published>
-    <title>R1-Reward: Training Multimodal Reward Model Through Stable Reinforcement
-  Learning</title>
-    <summary>  Multimodal Reward Models (MRMs) play a crucial role in enhancing the
-performance of Multimodal Large Language Models (MLLMs). While recent
-advancements have primarily focused on improving the model structure and
-training data of MRMs, there has been limited exploration into the
-effectiveness of long-term reasoning capabilities for reward modeling and how
-to activate these capabilities in MRMs. In this paper, we explore how
-Reinforcement Learning (RL) can be used to improve reward modeling.
-Specifically, we reformulate the reward modeling problem as a rule-based RL
-task. However, we observe that directly applying existing RL algorithms, such
-as Reinforce++, to reward modeling often leads to training instability or even
-collapse due to the inherent limitations of these algorithms. To address this
-issue, we propose the StableReinforce algorithm, which refines the training
-loss, advantage estimation strategy, and reward design of existing RL methods.
-These refinements result in more stable training dynamics and superior
-performance. To facilitate MRM training, we collect 200K preference data from
-diverse datasets. Our reward model, R1-Reward, trained using the
-StableReinforce algorithm on this dataset, significantly improves performance
-on multimodal reward modeling benchmarks. Compared to previous SOTA models,
-R1-Reward achieves a $8.4\%$ improvement on the VL Reward-Bench and a $14.3\%$
-improvement on the Multimodal Reward Bench. Moreover, with more inference
-compute, R1-Reward's performance is further enhanced, highlighting the
-potential of RL algorithms in optimizing MRMs.
+    <id>http://arxiv.org/abs/2505.03739v1</id>
+    <updated>2025-05-06T17:59:53Z</updated>
+    <published>2025-05-06T17:59:53Z</published>
+    <title>VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient
+  Large Speech-Language Model</title>
+    <summary>  With the growing requirement for natural human-computer interaction,
+speech-based systems receive increasing attention as speech is one of the most
+common forms of daily communication. However, the existing speech models still
+experience high latency when generating the first audio token during streaming,
+which poses a significant bottleneck for deployment. To address this issue, we
+propose VITA-Audio, an end-to-end large speech model with fast audio-text token
+generation. Specifically, we introduce a lightweight Multiple Cross-modal Token
+Prediction (MCTP) module that efficiently generates multiple audio tokens
+within a single model forward pass, which not only accelerates the inference
+but also significantly reduces the latency for generating the first audio in
+streaming scenarios. In addition, a four-stage progressive training strategy is
+explored to achieve model acceleration with minimal loss of speech quality. To
+our knowledge, VITA-Audio is the first multi-modal large language model capable
+of generating audio output during the first forward pass, enabling real-time
+conversational capabilities with minimal latency. VITA-Audio is fully
+reproducible and is trained on open-source data only. Experimental results
+demonstrate that our model achieves an inference speedup of 3~5x at the 7B
+parameter scale, but also significantly outperforms open-source models of
+similar model size on multiple benchmarks for automatic speech recognition
+(ASR), text-to-speech (TTS), and spoken question answering (SQA) tasks.
 </summary>
     <author>
-      <name>Yi-Fan Zhang</name>
+      <name>Zuwei Long</name>
     </author>
     <author>
-      <name>Xingyu Lu</name>
-    </author>
-    <author>
-      <name>Xiao Hu</name>
+      <name>Yunhang Shen</name>
     </author>
     <author>
       <name>Chaoyou Fu</name>
     </author>
     <author>
-      <name>Bin Wen</name>
+      <name>Heting Gao</name>
     </author>
     <author>
-      <name>Tianke Zhang</name>
+      <name>Lijiang Li</name>
     </author>
     <author>
-      <name>Changyi Liu</name>
+      <name>Peixian Chen</name>
     </author>
     <author>
-      <name>Kaiyu Jiang</name>
+      <name>Mengdan Zhang</name>
     </author>
     <author>
-      <name>Kaibing Chen</name>
+      <name>Hang Shao</name>
     </author>
     <author>
-      <name>Kaiyu Tang</name>
+      <name>Jian Li</name>
     </author>
     <author>
-      <name>Haojie Ding</name>
+      <name>Jinlong Peng</name>
     </author>
     <author>
-      <name>Jiankang Chen</name>
+      <name>Haoyu Cao</name>
     </author>
     <author>
-      <name>Fan Yang</name>
+      <name>Ke Li</name>
     </author>
     <author>
-      <name>Zhang Zhang</name>
+      <name>Rongrong Ji</name>
     </author>
     <author>
-      <name>Tingting Gao</name>
+      <name>Xing Sun</name>
     </author>
-    <author>
-      <name>Liang Wang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Home page: https://github.com/yfzhang114/r1_reward</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.02835v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02835v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Training and Inference Codes: https://github.com/VITA-MLLM/VITA-Audio</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.03739v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03739v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.02825v2</id>
-    <updated>2025-05-06T10:17:58Z</updated>
-    <published>2025-05-05T17:51:56Z</published>
-    <title>Towards Application-Specific Evaluation of Vision Models: Case Studies
-  in Ecology and Biology</title>
-    <summary>  Computer vision methods have demonstrated considerable potential to
-streamline ecological and biological workflows, with a growing number of
-datasets and models becoming available to the research community. However,
-these resources focus predominantly on evaluation using machine learning
-metrics, with relatively little emphasis on how their application impacts
-downstream analysis. We argue that models should be evaluated using
-application-specific metrics that directly represent model performance in the
-context of its final use case. To support this argument, we present two
-disparate case studies: (1) estimating chimpanzee abundance and density with
-camera trap distance sampling when using a video-based behaviour classifier and
-(2) estimating head rotation in pigeons using a 3D posture estimator. We show
-that even models with strong machine learning performance (e.g., 87% mAP) can
-yield data that leads to discrepancies in abundance estimates compared to
-expert-derived data. Similarly, the highest-performing models for posture
-estimation do not produce the most accurate inferences of gaze direction in
-pigeons. Motivated by these findings, we call for researchers to integrate
-application-specific metrics in ecological/biological datasets, allowing for
-models to be benchmarked in the context of their downstream application and to
-facilitate better integration of models into application workflows.
+    <id>http://arxiv.org/abs/2505.03737v1</id>
+    <updated>2025-05-06T17:59:45Z</updated>
+    <published>2025-05-06T17:59:45Z</published>
+    <title>Impact of Galactic non-Gaussian foregrounds on CMB lensing measurements</title>
+    <summary>  Weak gravitational lensing of the CMB has been established as a robust and
+powerful observable for precision cosmology. However, the impact of Galactic
+foregrounds, which has been studied less extensively than many other potential
+systematics, could in principle pose a problem for CMB lensing measurements.
+These foregrounds are inherently non-Gaussian and hence might mimic the
+characteristic signal that lensing estimators are designed to measure. We
+present an analysis that quantifies the level of contamination from Galactic
+dust in lensing measurements, focusing particularly on measurements with the
+Atacama Cosmology Telescope and the Simons Observatory. We employ a whole suite
+of foreground models and study the contamination of lensing measurements with
+both individual frequency channels and multifrequency combinations. We test the
+sensitivity of different estimators to the level of foreground non-Gaussianity,
+and the dependence on sky fraction and multipole range used. We find that
+Galactic foregrounds do not present a problem for the Atacama Cosmology
+Telescope experiment (the bias in the inferred CMB lensing power spectrum
+amplitude remains below $0.3\sigma$). For Simons Observatory, not all
+foreground models remain below this threshold. Although our results are
+conservative upper limits, they suggest that further work on characterizing
+dust biases and determining the impact of mitigation methods is well motivated,
+especially for the largest sky fractions.
 </summary>
     <author>
-      <name>Alex Hoi Hang Chan</name>
+      <name>Irene Abril-Cabezas</name>
     </author>
     <author>
-      <name>Otto Brookes</name>
+      <name>Frank J. Qu</name>
     </author>
     <author>
-      <name>Urs Waldmann</name>
+      <name>Blake D. Sherwin</name>
     </author>
     <author>
-      <name>Hemal Naik</name>
+      <name>Alexander van Engelen</name>
     </author>
     <author>
-      <name>Iain D. Couzin</name>
+      <name>Niall MacCrann</name>
     </author>
     <author>
-      <name>Majid Mirmehdi</name>
+      <name>Carlos Hervías-Caimapo</name>
     </author>
     <author>
-      <name>Noël Adiko Houa</name>
+      <name>Omar Darwish</name>
     </author>
     <author>
-      <name>Emmanuelle Normand</name>
+      <name>J. Colin Hill</name>
     </author>
     <author>
-      <name>Christophe Boesch</name>
+      <name>Mathew S. Madhavacheril</name>
     </author>
     <author>
-      <name>Lukas Boesch</name>
+      <name>Neelima Sehgal</name>
     </author>
-    <author>
-      <name>Mimi Arandjelovic</name>
-    </author>
-    <author>
-      <name>Hjalmar Kühl</name>
-    </author>
-    <author>
-      <name>Tilo Burghardt</name>
-    </author>
-    <author>
-      <name>Fumihiro Kano</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at CVPR Workshop, CV4Animals 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.02825v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02825v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">24 pages, 16 figures, prepared for submission to PRD, comments
+  welcome</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.03737v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03737v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.02811v1</id>
-    <updated>2025-05-05T17:39:35Z</updated>
-    <published>2025-05-05T17:39:35Z</published>
-    <title>Knowing You Don't Know: Learning When to Continue Search in Multi-round
-  RAG through Self-Practicing</title>
-    <summary>  Retrieval Augmented Generation (RAG) has shown strong capability in enhancing
-language models' knowledge and reducing AI generative hallucinations, driving
-its widespread use. However, complex tasks requiring multi-round retrieval
-remain challenging, and early attempts tend to be overly optimistic without a
-good sense of self-skepticism. Current multi-round RAG systems may continue
-searching even when enough information has already been retrieved, or they may
-provide incorrect answers without having sufficient information or knowledge.
-Existing solutions either require large amounts of expensive human-labeled
-process supervision data or lead to subpar performance.
-  This paper aims to address these limitations by introducing a new framework,
-\textbf{SIM-RAG}, to explicitly enhance RAG systems' self-awareness and
-multi-round retrieval capabilities. To train SIM-RAG, we first let a RAG system
-self-practice multi-round retrieval, augmenting existing question-answer pairs
-with intermediate inner monologue reasoning steps to generate synthetic
-training data. For each pair, the system may explore multiple retrieval paths,
-which are labeled as successful if they reach the correct answer and
-unsuccessful otherwise. Using this data, we train a lightweight information
-sufficiency Critic. At inference time, the Critic evaluates whether the RAG
-system has retrieved sufficient information at each round, guiding retrieval
-decisions and improving system-level self-awareness through in-context
-reinforcement learning.
-  Experiments across multiple prominent RAG benchmarks show that SIM-RAG is an
-effective multi-round RAG solution. Furthermore, this framework is
-system-efficient, adding a lightweight component to RAG without requiring
-modifications to existing LLMs or search engines, and data-efficient,
-eliminating the need for costly human-annotated mid-step retrieval process
-supervision data.
+    <id>http://arxiv.org/abs/2505.03732v1</id>
+    <updated>2025-05-06T17:59:10Z</updated>
+    <published>2025-05-06T17:59:10Z</published>
+    <title>A Communication-First Account of Explanation</title>
+    <summary>  This paper develops a formal account of causal explanation, grounded in a
+theory of conversational pragmatics, and inspired by the interventionist idea
+that explanation is about asking and answering
+what-if-things-had-been-different questions. We illustrate the fruitfulness of
+the account, relative to previous accounts, by showing that widely recognised
+explanatory virtues emerge naturally, as do subtle empirical patterns
+concerning the impact of norms on causal judgments. This shows the value of a
+communication-first approach to explanation: getting clear on explanation's
+communicative dimension is an important prerequisite for philosophical work on
+explanation. The result is a simple but powerful framework for incorporating
+insights from the cognitive sciences into philosophical work on explanation,
+which will be useful for philosophers or cognitive scientists interested in
+explanation.
 </summary>
     <author>
-      <name>Diji Yang</name>
+      <name>Jacqueline Harding</name>
     </author>
     <author>
-      <name>Linda Zeng</name>
+      <name>Tobias Gerstenberg</name>
     </author>
     <author>
-      <name>Jinmeng Rao</name>
+      <name>Thomas Icard</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.03732v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03732v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03708v1</id>
+    <updated>2025-05-06T17:27:54Z</updated>
+    <published>2025-05-06T17:27:54Z</published>
+    <title>CHEX-MATE: exploring the kinematical properties of Planck galaxy
+  clusters</title>
+    <summary>  We analyse the kinematical properties of the CHEX-MATE (Cluster HEritage
+project with XMM-Newton - Mass Assembly and Thermodynamics at the Endpoint of
+structure formation) galaxy cluster sample. [...] We derive cluster mass
+profiles for 75 clusters using the \textsc{MG-MAMPOSSt} procedure, which
+recovers the gravitational potential and the anisotropy profiles from
+line-of-sight velocities and projected positions of galaxy members. The
+standard NFW and the Burkert models with flatter cores than NFW both adequately
+fit the kinematic data, with only marginal statistical preference for one model
+over the other. An estimation of the mass bias $(1-B_1) =
+M^{SZ}_{500}/M^{M}_{500} $ is performed from the comparison with
+SZ-X-ray-calibrated mass estimates, resulting in a value of $ 0.54 \pm 0.11$
+when four evidently disturbed clusters are removed from the sample. We assess
+the dynamical state of the clusters by inferring the Anderson-Darling
+coefficient $(A^2)$ and the fraction of galaxies in substructures
+($f_\text{sub}$). Except for a few cases, we found relatively low values for
+$A^2$, suggesting that CHEX-MATE clusters are not too far from relaxation.
+Moreover, no significant trends emerge among $A^2,\,f_\text{sub}$ and the
+difference between the log-masses estimated by \textsc{MG-MAMPOSSt} and by
+SZ-X-ray.
+  We study the concentration-mass relation for the sample; despite the large
+scatter, we observe signs of an increasing trend for large-mass clusters, in
+agreement with recent theoretical expectations.
+  Finally, the analysis of radial anisotropy profiles of member galaxies -
+stacked in five bins of mass and redshift - reveals that orbits tend to be
+isotropic at the center and more radial towards the edge, as already found in
+previous studies. A slight trend of increasing radial orbits at $r_{200}$ is
+observed in clusters with larger velocity dispersion
+</summary>
+    <author>
+      <name>Lorenzo Pizzuti</name>
     </author>
     <author>
-      <name>Yi Zhang</name>
+      <name>Rafael Barrena</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Proceedings of the 48th International ACM SIGIR 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.02811v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02811v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Mauro Sereno</name>
+    </author>
+    <author>
+      <name>Alina Streblyanska</name>
+    </author>
+    <author>
+      <name>Antonio Ferragamo</name>
+    </author>
+    <author>
+      <name>Sophie Maurogordato</name>
+    </author>
+    <author>
+      <name>Alberto Cappi</name>
+    </author>
+    <author>
+      <name>Stefano Ettori</name>
+    </author>
+    <author>
+      <name>Gabriel W. Pratt</name>
+    </author>
+    <author>
+      <name>Gianluca Castignani</name>
+    </author>
+    <author>
+      <name>Megan Donahue</name>
+    </author>
+    <author>
+      <name>Dominique Eckert</name>
+    </author>
+    <author>
+      <name>Fabio Gastaldello</name>
+    </author>
+    <author>
+      <name>Raphael Gavazzi</name>
+    </author>
+    <author>
+      <name>Christopher P. Haines</name>
+    </author>
+    <author>
+      <name>Scott T. Kay</name>
+    </author>
+    <author>
+      <name>Lorenzo Lovisari</name>
+    </author>
+    <author>
+      <name>Ben J. Maughan</name>
+    </author>
+    <author>
+      <name>Etienne Pointecouteau</name>
+    </author>
+    <author>
+      <name>Elena Rasia</name>
+    </author>
+    <author>
+      <name>Mario Radovich</name>
+    </author>
+    <author>
+      <name>Jack Sayers</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages (plus appendices), 14 Figures. To be submitted to A&amp;A</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.03708v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03708v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03674v1</id>
+    <updated>2025-05-06T16:15:24Z</updated>
+    <published>2025-05-06T16:15:24Z</published>
+    <title>Gap the (Theory of) Mind: Sharing Beliefs About Teammates' Goals Boosts
+  Collaboration Perception, Not Performance</title>
+    <summary>  In human-agent teams, openly sharing goals is often assumed to enhance
+planning, collaboration, and effectiveness. However, direct communication of
+these goals is not always feasible, requiring teammates to infer their
+partner's intentions through actions. Building on this, we investigate whether
+an AI agent's ability to share its inferred understanding of a human teammate's
+goals can improve task performance and perceived collaboration. Through an
+experiment comparing three conditions-no recognition (NR), viable goals (VG),
+and viable goals on-demand (VGod) - we find that while goal-sharing information
+did not yield significant improvements in task performance or overall
+satisfaction scores, thematic analysis suggests that it supported strategic
+adaptations and subjective perceptions of collaboration. Cognitive load
+assessments revealed no additional burden across conditions, highlighting the
+challenge of balancing informativeness and simplicity in human-agent
+interactions. These findings highlight the nuanced trade-off of goal-sharing:
+while it fosters trust and enhances perceived collaboration, it can
+occasionally hinder objective performance gains.
+</summary>
+    <author>
+      <name>Yotam Amitai</name>
+    </author>
+    <author>
+      <name>Reuth Mirsky</name>
+    </author>
+    <author>
+      <name>Ofra Amir</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.03674v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03674v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03673v1</id>
+    <updated>2025-05-06T16:11:49Z</updated>
+    <published>2025-05-06T16:11:49Z</published>
+    <title>RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and
+  Multi-Agent Collaboration</title>
+    <summary>  The dawn of embodied intelligence has ushered in an unprecedented imperative
+for resilient, cognition-enabled multi-agent collaboration across
+next-generation ecosystems, revolutionizing paradigms in autonomous
+manufacturing, adaptive service robotics, and cyber-physical production
+architectures. However, current robotic systems face significant limitations,
+such as limited cross-embodiment adaptability, inefficient task scheduling, and
+insufficient dynamic error correction. While End-to-end VLA models demonstrate
+inadequate long-horizon planning and task generalization, hierarchical VLA
+models suffer from a lack of cross-embodiment and multi-agent coordination
+capabilities. To address these challenges, we introduce RoboOS, the first
+open-source embodied system built on a Brain-Cerebellum hierarchical
+architecture, enabling a paradigm shift from single-agent to multi-agent
+intelligence. Specifically, RoboOS consists of three key components: (1)
+Embodied Brain Model (RoboBrain), a MLLM designed for global perception and
+high-level decision-making; (2) Cerebellum Skill Library, a modular,
+plug-and-play toolkit that facilitates seamless execution of multiple skills;
+and (3) Real-Time Shared Memory, a spatiotemporal synchronization mechanism for
+coordinating multi-agent states. By integrating hierarchical information flow,
+RoboOS bridges Embodied Brain and Cerebellum Skill Library, facilitating robust
+planning, scheduling, and error correction for long-horizon tasks, while
+ensuring efficient multi-agent collaboration through Real-Time Shared Memory.
+Furthermore, we enhance edge-cloud communication and cloud-based distributed
+inference to facilitate high-frequency interactions and enable scalable
+deployment. Extensive real-world experiments across various scenarios,
+demonstrate RoboOS's versatility in supporting heterogeneous embodiments.
+Project website: https://github.com/FlagOpen/RoboOS
+</summary>
+    <author>
+      <name>Huajie Tan</name>
+    </author>
+    <author>
+      <name>Xiaoshuai Hao</name>
+    </author>
+    <author>
+      <name>Minglan Lin</name>
+    </author>
+    <author>
+      <name>Pengwei Wang</name>
+    </author>
+    <author>
+      <name>Yaoxu Lyu</name>
+    </author>
+    <author>
+      <name>Mingyu Cao</name>
+    </author>
+    <author>
+      <name>Zhongyuan Wang</name>
+    </author>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 10 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.03673v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03673v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03668v1</id>
+    <updated>2025-05-06T16:08:55Z</updated>
+    <published>2025-05-06T16:08:55Z</published>
+    <title>Learning Symbolic Persistent Macro-Actions for POMDP Solving Over Time</title>
+    <summary>  This paper proposes an integration of temporal logical reasoning and
+Partially Observable Markov Decision Processes (POMDPs) to achieve
+interpretable decision-making under uncertainty with macro-actions. Our method
+leverages a fragment of Linear Temporal Logic (LTL) based on Event Calculus
+(EC) to generate \emph{persistent} (i.e., constant) macro-actions, which guide
+Monte Carlo Tree Search (MCTS)-based POMDP solvers over a time horizon,
+significantly reducing inference time while ensuring robust performance. Such
+macro-actions are learnt via Inductive Logic Programming (ILP) from a few
+traces of execution (belief-action pairs), thus eliminating the need for
+manually designed heuristics and requiring only the specification of the POMDP
+transition model. In the Pocman and Rocksample benchmark scenarios, our learned
+macro-actions demonstrate increased expressiveness and generality when compared
+to time-independent heuristics, indeed offering substantial computational
+efficiency improvements.
+</summary>
+    <author>
+      <name>Celeste Veronese</name>
+    </author>
+    <author>
+      <name>Daniele Meli</name>
+    </author>
+    <author>
+      <name>Alessandro Farinelli</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at 9th Conference on Neurosymbolic Learning and Reasoning</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.03668v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03668v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03666v1</id>
+    <updated>2025-05-06T16:06:44Z</updated>
+    <published>2025-05-06T16:06:44Z</published>
+    <title>A Centrality-independent Framework for Revealing Genuine Higher-Order
+  Cumulants in Heavy-Ion Collisions</title>
+    <summary>  We propose a novel centrality definition-independent method for analyzing
+higher-order proton cumulants, specifically addressing the challenge of volume
+fluctuations that dominate in low-energy heavy-ion collisions. This method
+reconstructs particle number distributions using the Edgeworth expansion, with
+parameters optimized via a combination of differential evolution algorithm and
+Bayesian inference. Its effectiveness is validated using UrQMD model
+simulations and benchmarked against traditional approaches, including
+centrality definitions based on particle multiplicity. Our results show that
+the proposed framework yields cumulant patterns consistent with those obtained
+using number of participant nucleon ($N_{\text{part}}$) based centrality
+observables, while eliminating the conventional reliance on centrality
+determination. This consistency confirms the method's ability to extract
+genuine physical signals, thereby paving the way for probing the intrinsic
+thermodynamic properties of the produced medium through event-by-event
+fluctuations.
+</summary>
+    <author>
+      <name>Zhaohui Wang</name>
+    </author>
+    <author>
+      <name>Xiaofeng Luo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 11 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.03666v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03666v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03655v1</id>
+    <updated>2025-05-06T16:00:41Z</updated>
+    <published>2025-05-06T16:00:41Z</published>
+    <title>Counterfactual Inference for Eliminating Sentiment Bias in Recommender
+  Systems</title>
+    <summary>  Recommender Systems (RSs) aim to provide personalized recommendations for
+users. A newly discovered bias, known as sentiment bias, uncovers a common
+phenomenon within Review-based RSs (RRSs): the recommendation accuracy of users
+or items with negative reviews deteriorates compared with users or items with
+positive reviews. Critical users and niche items are disadvantaged by such
+unfair recommendations. We study this problem from the perspective of
+counterfactual inference with two stages. At the model training stage, we build
+a causal graph and model how sentiment influences the final rating score.
+During the inference stage, we decouple the direct and indirect effects to
+mitigate the impact of sentiment bias and remove the indirect effect using
+counterfactual inference. We have conducted extensive experiments, and the
+results validate that our model can achieve comparable performance on rating
+prediction for better recommendations and effective mitigation of sentiment
+bias. To the best of our knowledge, this is the first work to employ
+counterfactual inference on sentiment bias mitigation in RSs.
+</summary>
+    <author>
+      <name>Le Pan</name>
+    </author>
+    <author>
+      <name>Yuanjiang Cao</name>
+    </author>
+    <author>
+      <name>Chengkai Huang</name>
+    </author>
+    <author>
+      <name>Wenjie Zhang</name>
+    </author>
+    <author>
+      <name>Lina Yao</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.03655v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03655v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.02787v1</id>
-    <updated>2025-05-05T17:02:13Z</updated>
-    <published>2025-05-05T17:02:13Z</published>
-    <title>Unsupervised training of keypoint-agnostic descriptors for flexible
-  retinal image registration</title>
-    <summary>  Current color fundus image registration approaches are limited, among other
-things, by the lack of labeled data, which is even more significant in the
-medical domain, motivating the use of unsupervised learning. Therefore, in this
-work, we develop a novel unsupervised descriptor learning method that does not
-rely on keypoint detection. This enables the resulting descriptor network to be
-agnostic to the keypoint detector used during the registration inference.
-  To validate this approach, we perform an extensive and comprehensive
-comparison on the reference public retinal image registration dataset.
-Additionally, we test our method with multiple keypoint detectors of varied
-nature, even proposing some novel ones. Our results demonstrate that the
-proposed approach offers accurate registration, not incurring in any
-performance loss versus supervised methods. Additionally, it demonstrates
-accurate performance regardless of the keypoint detector used. Thus, this work
-represents a notable step towards leveraging unsupervised learning in the
-medical domain.
-</summary>
-    <author>
-      <name>David Rivas-Villar</name>
-    </author>
-    <author>
-      <name>Álvaro S. Hervella</name>
-    </author>
-    <author>
-      <name>José Rouco</name>
-    </author>
-    <author>
-      <name>Jorge Novo</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.02787v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02787v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.02781v1</id>
-    <updated>2025-05-05T16:47:29Z</updated>
-    <published>2025-05-05T16:47:29Z</published>
-    <title>Local Markov Equivalence and Local Causal Discovery for Identifying
-  Controlled Direct Effects</title>
-    <summary>  Understanding and identifying controlled direct effects (CDEs) is crucial
-across numerous scientific domains, including public health. While existing
-methods can identify these effects from causal directed acyclic graphs (DAGs),
-the true underlying structure is often unknown in practice. Essential graphs,
-which represent a Markov equivalence class of DAGs characterized by the same
-set of d-separations, provide a more practical and realistic alternative.
-However, learning the full essential graph is computationally intensive and
-typically depends on strong, untestable assumptions. In this work, we
-characterize a local class of graphs, defined relative to a target variable,
-that share a specific subset of d-separations, and introduce a graphical
-representation of this class, called the local essential graph (LEG). We then
-present LocPC, a novel algorithm designed to recover the LEG from an observed
-distribution using only local conditional independence tests. Building on
-LocPC, we propose LocPC-CDE, an algorithm that discovers the portion of the LEG
-that is sufficient to identify a CDE, bypassing the need of retrieving the full
-essential graph. Compared to global methods, our algorithms require less
-conditional independence tests and operate under weaker assumptions while
-maintaining theoretical guarantees.
-</summary>
-    <author>
-      <name>Timothée Loranchet</name>
-    </author>
-    <author>
-      <name>Charles K. Assaad</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.02781v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02781v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.02773v1</id>
-    <updated>2025-05-05T16:36:46Z</updated>
-    <published>2025-05-05T16:36:46Z</published>
-    <title>Can Transformers help us perform parameter estimation of overlapping
-  signals in gravitational wave detectors?</title>
-    <summary>  Overlapping signals represent one of the major data analysis challenges in
-next-generation gravitational wave detectors. We leverage Transformers and
-Normalizing Flows, state-of-the-art machine learning algorithms, to address the
-parameter estimation of overlapping binary black hole mergers in the Einstein
-Telescope (ET). Our proposed model combines a Transformer-based "Knowledge
-Extractor Neural Network" (KENN) with a Normalizing Flow (HYPERION) to perform
-rapid and unbiased inference over multiple overlapping black hole binary
-events. The choice of architecture leverages the strength of Transformers in
-capturing complex and long-range temporal structures in the strain time series
-data, while Normalizing Flows provide a powerful framework to sample posterior
-distributions. We demonstrate the effectiveness and robustness of our model
-over simulated gravitational wave signals, showing that it maintains the same
-level of accuracy regardless of the correlation level in the data. Moreover our
-model provides estimates of chirp mass and coalescence times within &lt;10-20%
-from the true simulated value. The results obtained are promising and show how
-this approach might represent a first step toward a deep-learning based
-inference pipeline for ET and other future gravitational wave detectors.
+    <id>http://arxiv.org/abs/2505.03646v1</id>
+    <updated>2025-05-06T15:52:14Z</updated>
+    <published>2025-05-06T15:52:14Z</published>
+    <title>ALMA: Aggregated Lipschitz Maximization Attack on Auto-encoders</title>
+    <summary>  Despite the extensive use of deep autoencoders (AEs) in critical
+applications, their adversarial robustness remains relatively underexplored
+compared to classification models. AE robustness is characterized by the
+Lipschitz bounds of its components. Existing robustness evaluation frameworks
+based on white-box attacks do not fully exploit the vulnerabilities of
+intermediate ill-conditioned layers in AEs. In the context of optimizing
+imperceptible norm-bounded additive perturbations to maximize output damage,
+existing methods struggle to effectively propagate adversarial loss gradients
+throughout the network, often converging to less effective perturbations. To
+address this, we propose a novel layer-conditioning-based adversarial
+optimization objective that effectively guides the adversarial map toward
+regions of local Lipschitz bounds by enhancing loss gradient information
+propagation during attack optimization. We demonstrate through extensive
+experiments on state-of-the-art AEs that our adversarial objective results in
+stronger attacks, outperforming existing methods in both universal and
+sample-specific scenarios. As a defense method against this attack, we
+introduce an inference-time adversarially trained defense plugin that mitigates
+the effects of adversarial examples.
 </summary>
     <author>
-      <name>Lucia Papalini</name>
+      <name>Chethan Krishnamurthy Ramanaik</name>
     </author>
     <author>
-      <name>Federico De Santi</name>
+      <name>Arjun Roy</name>
     </author>
     <author>
-      <name>Massimiliano Razzano</name>
+      <name>Eirini Ntoutsi</name>
     </author>
-    <author>
-      <name>Ik Siong Heng</name>
-    </author>
-    <author>
-      <name>Elena Cuoco</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.02773v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02773v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.02754v1</id>
-    <updated>2025-05-05T16:07:28Z</updated>
-    <published>2025-05-05T16:07:28Z</published>
-    <title>Debiased inference in error-in-variable problems with non-Gaussian
-  measurement error</title>
-    <summary>  We consider drawing statistical inferences based on data subject to
-non-Gaussian measurement error. Unlike most existing methods developed under
-the assumption of Gaussian measurement error, the proposed strategy exploits
-hypercomplex numbers to reduce bias in naive estimation that ignores
-non-Gaussian measurement error. We apply this new method to several widely
-applicable parametric regression models with error-prone covariates, and kernel
-density estimation using error-contaminated data. The efficacy of this method
-in bias reduction is demonstrated in simulation studies and a real-life
-application in sports analytics.
-</summary>
-    <author>
-      <name>Nicholas W. Woolsey</name>
-    </author>
-    <author>
-      <name>Xianzheng Huang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.02754v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02754v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="Primary 62G08, 62J02, secondary 62F12" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.02743v1</id>
-    <updated>2025-05-05T15:50:52Z</updated>
-    <published>2025-05-05T15:50:52Z</published>
-    <title>Cooperative Bayesian and variance networks disentangle aleatoric and
-  epistemic uncertainties</title>
-    <summary>  Real-world data contains aleatoric uncertainty - irreducible noise arising
-from imperfect measurements or from incomplete knowledge about the data
-generation process. Mean variance estimation (MVE) networks can learn this type
-of uncertainty but require ad-hoc regularization strategies to avoid
-overfitting and are unable to predict epistemic uncertainty (model
-uncertainty). Conversely, Bayesian neural networks predict epistemic
-uncertainty but are notoriously difficult to train due to the approximate
-nature of Bayesian inference. We propose to cooperatively train a variance
-network with a Bayesian neural network and demonstrate that the resulting model
-disentangles aleatoric and epistemic uncertainties while improving the mean
-estimation. We demonstrate the effectiveness and scalability of this method
-across a diverse range of datasets, including a time-dependent heteroscedastic
-regression dataset we created where the aleatoric uncertainty is known. The
-proposed method is straightforward to implement, robust, and adaptable to
-various model architectures.
-</summary>
-    <author>
-      <name>Jiaxiang Yi</name>
-    </author>
-    <author>
-      <name>Miguel A. Bessa</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 19 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.02743v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02743v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2505.03646v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.03646v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.02705v1</id>
-    <updated>2025-05-05T14:57:43Z</updated>
-    <published>2025-05-05T14:57:43Z</published>
-    <title>Multi-View Learning with Context-Guided Receptance for Image Denoising</title>
-    <summary>  Image denoising is essential in low-level vision applications such as
-photography and automated driving. Existing methods struggle with
-distinguishing complex noise patterns in real-world scenes and consume
-significant computational resources due to reliance on Transformer-based
-models. In this work, the Context-guided Receptance Weighted Key-Value (\M)
-model is proposed, combining enhanced multi-view feature integration with
-efficient sequence modeling. Our approach introduces the Context-guided Token
-Shift (CTS) paradigm, which effectively captures local spatial dependencies and
-enhance the model's ability to model real-world noise distributions.
-Additionally, the Frequency Mix (FMix) module extracting frequency-domain
-features is designed to isolate noise in high-frequency spectra, and is
-integrated with spatial representations through a multi-view learning process.
-To improve computational efficiency, the Bidirectional WKV (BiWKV) mechanism is
-adopted, enabling full pixel-sequence interaction with linear complexity while
-overcoming the causal selection constraints. The model is validated on multiple
-real-world image denoising datasets, outperforming the existing
-state-of-the-art methods quantitatively and reducing inference time up to 40\%.
-Qualitative results further demonstrate the ability of our model to restore
-fine details in various scenes.
-</summary>
-    <author>
-      <name>Binghong Chen</name>
-    </author>
-    <author>
-      <name>Tingting Chai</name>
-    </author>
-    <author>
-      <name>Wei Jiang</name>
-    </author>
-    <author>
-      <name>Yuanrong Xu</name>
-    </author>
-    <author>
-      <name>Guanglu Zhou</name>
-    </author>
-    <author>
-      <name>Xiangqian Wu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IJCAI 2025, code will be available at
-  https://github.com/Seeker98/CRWKV</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.02705v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02705v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.02703v1</id>
-    <updated>2025-05-05T14:57:02Z</updated>
-    <published>2025-05-05T14:57:02Z</published>
-    <title>Structure Causal Models and LLMs Integration in Medical Visual Question
-  Answering</title>
-    <summary>  Medical Visual Question Answering (MedVQA) aims to answer medical questions
-according to medical images. However, the complexity of medical data leads to
-confounders that are difficult to observe, so bias between images and questions
-is inevitable. Such cross-modal bias makes it challenging to infer medically
-meaningful answers. In this work, we propose a causal inference framework for
-the MedVQA task, which effectively eliminates the relative confounding effect
-between the image and the question to ensure the precision of the
-question-answering (QA) session. We are the first to introduce a novel causal
-graph structure that represents the interaction between visual and textual
-elements, explicitly capturing how different questions influence visual
-features. During optimization, we apply the mutual information to discover
-spurious correlations and propose a multi-variable resampling front-door
-adjustment method to eliminate the relative confounding effect, which aims to
-align features based on their true causal relevance to the question-answering
-task. In addition, we also introduce a prompt strategy that combines multiple
-prompt forms to improve the model's ability to understand complex medical data
-and answer accurately. Extensive experiments on three MedVQA datasets
-demonstrate that 1) our method significantly improves the accuracy of MedVQA,
-and 2) our method achieves true causal correlations in the face of complex
-medical data.
-</summary>
-    <author>
-      <name>Zibo Xu</name>
-    </author>
-    <author>
-      <name>Qiang Li</name>
-    </author>
-    <author>
-      <name>Weizhi Nie</name>
-    </author>
-    <author>
-      <name>Weijie Wang</name>
-    </author>
-    <author>
-      <name>Anan Liu</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1109/TMI.2025.3564320</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.1109/TMI.2025.3564320" rel="related"/>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IEEE TMI 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.02703v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.02703v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
