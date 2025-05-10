@@ -1,417 +1,513 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-05-09T00:56:04Z -->
+<!-- Last updated: 2025-05-10T00:53:33Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-05-08T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">111858</opensearch:totalResults>
+  <updated>2025-05-09T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">111926</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.04613v1</id>
-    <updated>2025-05-07T17:56:19Z</updated>
-    <published>2025-05-07T17:56:19Z</published>
-    <title>From Two Sample Testing to Singular Gaussian Discrimination</title>
-    <summary>  We establish that testing for the equality of two probability measures on a
-general separable and compact metric space is equivalent to testing for the
-singularity between two corresponding Gaussian measures on a suitable
-Reproducing Kernel Hilbert Space. The corresponding Gaussians are defined via
-the notion of kernel mean and covariance embedding of a probability measure.
-Discerning two singular Gaussians is fundamentally simpler from an
-information-theoretic perspective than non-parametric two-sample testing,
-particularly in high-dimensional settings. Our proof leverages the
-Feldman-Hajek criterion for singularity/equivalence of Gaussians on Hilbert
-spaces, and shows that discrepancies between distributions are heavily
-magnified through their corresponding Gaussian embeddings: at a population
-level, distinct probability measures lead to essentially separated Gaussian
-embeddings. This appears to be a new instance of the blessing of dimensionality
-that can be harnessed for the design of efficient inference tools in great
-generality.
+    <id>http://arxiv.org/abs/2505.05473v1</id>
+    <updated>2025-05-08T17:59:47Z</updated>
+    <published>2025-05-08T17:59:47Z</published>
+    <title>DiffusionSfM: Predicting Structure and Motion via Ray Origin and
+  Endpoint Diffusion</title>
+    <summary>  Current Structure-from-Motion (SfM) methods typically follow a two-stage
+pipeline, combining learned or geometric pairwise reasoning with a subsequent
+global optimization step. In contrast, we propose a data-driven multi-view
+reasoning approach that directly infers 3D scene geometry and camera poses from
+multi-view images. Our framework, DiffusionSfM, parameterizes scene geometry
+and cameras as pixel-wise ray origins and endpoints in a global frame and
+employs a transformer-based denoising diffusion model to predict them from
+multi-view inputs. To address practical challenges in training diffusion models
+with missing data and unbounded scene coordinates, we introduce specialized
+mechanisms that ensure robust learning. We empirically validate DiffusionSfM on
+both synthetic and real datasets, demonstrating that it outperforms classical
+and learning-based approaches while naturally modeling uncertainty.
 </summary>
     <author>
-      <name>Leonardo V. Santoro</name>
+      <name>Qitao Zhao</name>
     </author>
     <author>
-      <name>Kartik G. Waghmare</name>
+      <name>Amy Lin</name>
     </author>
     <author>
-      <name>Victor M. Panaretos</name>
+      <name>Jeff Tan</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.04613v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04613v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="62G10, 46E22, 60G15" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Jason Y. Zhang</name>
+    </author>
+    <author>
+      <name>Deva Ramanan</name>
+    </author>
+    <author>
+      <name>Shubham Tulsiani</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">CVPR 2025. Project website: https://qitaozhao.github.io/DiffusionSfM</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05473v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05473v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.04611v2</id>
-    <updated>2025-05-08T11:56:07Z</updated>
-    <published>2025-05-07T17:55:32Z</published>
-    <title>Particle Gibbs without the Gibbs bit</title>
-    <summary>  Exact parameter and trajectory inference in state-space models is typically
-achieved by one of two methods: particle marginal Metropolis-Hastings (PMMH) or
-particle Gibbs (PGibbs). PMMH is a pseudo-marginal algorithm which jointly
-proposes a new trajectory and parameter, and accepts or rejects both at once.
-PGibbs instead alternates between sampling from the trajectory, using an
-algorithm known as conditional sequential Monte Carlo (CSMC) and the parameter
-in a Hastings-within-Gibbs fashion. While particle independent Metropolis
-Hastings (PIMH), the parameter-free version of PMMH, is known to be
-statistically worse than CSMC, PGibbs can induce a slow mixing if the parameter
-and the state trajectory are very correlated. This has made PMMH the method of
-choice for many practitioners, despite theory and experiments favouring CSMC
-over PIMH for the parameter-free problem. In this article, we describe a
-formulation of PGibbs which bypasses the Gibbs step, essentially marginalizing
-over the trajectory distribution in a fashion similar to PMMH. This is achieved
-by considering the implementation of a CSMC algortihm for the state-space model
-integrated over the joint distribution of the current parameter and the
-parameter proposal. We illustrate the benefits of method on a simple example
-known to be challenging for PMMH.
+    <id>http://arxiv.org/abs/2505.05472v1</id>
+    <updated>2025-05-08T17:58:57Z</updated>
+    <published>2025-05-08T17:58:57Z</published>
+    <title>Mogao: An Omni Foundation Model for Interleaved Multi-Modal Generation</title>
+    <summary>  Recent progress in unified models for image understanding and generation has
+been impressive, yet most approaches remain limited to single-modal generation
+conditioned on multiple modalities. In this paper, we present Mogao, a unified
+framework that advances this paradigm by enabling interleaved multi-modal
+generation through a causal approach. Mogao integrates a set of key technical
+improvements in architecture design, including a deep-fusion design, dual
+vision encoders, interleaved rotary position embeddings, and multi-modal
+classifier-free guidance, which allow it to harness the strengths of both
+autoregressive models for text generation and diffusion models for high-quality
+image synthesis. These practical improvements also make Mogao particularly
+effective to process interleaved sequences of text and images arbitrarily. To
+further unlock the potential of unified models, we introduce an efficient
+training strategy on a large-scale, in-house dataset specifically curated for
+joint text and image generation. Extensive experiments show that Mogao not only
+achieves state-of-the-art performance in multi-modal understanding and
+text-to-image generation, but also excels in producing high-quality, coherent
+interleaved outputs. Its emergent capabilities in zero-shot image editing and
+compositional generation highlight Mogao as a practical omni-modal foundation
+model, paving the way for future development and scaling the unified
+multi-modal systems.
 </summary>
     <author>
-      <name>Adrien Corenflos</name>
+      <name>Chao Liao</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Feedback most welcome. 12 pages, 1 figure. Difference with previous
-  version: fixed a couple of typos + longer simulations to remove noise in the
-  figure</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04611v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04611v2" rel="related" type="application/pdf"/>
+    <author>
+      <name>Liyang Liu</name>
+    </author>
+    <author>
+      <name>Xun Wang</name>
+    </author>
+    <author>
+      <name>Zhengxiong Luo</name>
+    </author>
+    <author>
+      <name>Xinyu Zhang</name>
+    </author>
+    <author>
+      <name>Wenliang Zhao</name>
+    </author>
+    <author>
+      <name>Jie Wu</name>
+    </author>
+    <author>
+      <name>Liang Li</name>
+    </author>
+    <author>
+      <name>Zhi Tian</name>
+    </author>
+    <author>
+      <name>Weilin Huang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Mogao Technical Report</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05472v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05472v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05470v1</id>
+    <updated>2025-05-08T17:58:45Z</updated>
+    <published>2025-05-08T17:58:45Z</published>
+    <title>Flow-GRPO: Training Flow Matching Models via Online RL</title>
+    <summary>  We propose Flow-GRPO, the first method integrating online reinforcement
+learning (RL) into flow matching models. Our approach uses two key strategies:
+(1) an ODE-to-SDE conversion that transforms a deterministic Ordinary
+Differential Equation (ODE) into an equivalent Stochastic Differential Equation
+(SDE) that matches the original model's marginal distribution at all timesteps,
+enabling statistical sampling for RL exploration; and (2) a Denoising Reduction
+strategy that reduces training denoising steps while retaining the original
+inference timestep number, significantly improving sampling efficiency without
+performance degradation. Empirically, Flow-GRPO is effective across multiple
+text-to-image tasks. For complex compositions, RL-tuned SD3.5 generates nearly
+perfect object counts, spatial relations, and fine-grained attributes, boosting
+GenEval accuracy from $63\%$ to $95\%$. In visual text rendering, its accuracy
+improves from $59\%$ to $92\%$, significantly enhancing text generation.
+Flow-GRPO also achieves substantial gains in human preference alignment.
+Notably, little to no reward hacking occurred, meaning rewards did not increase
+at the cost of image quality or diversity, and both remained stable in our
+experiments.
+</summary>
+    <author>
+      <name>Jie Liu</name>
+    </author>
+    <author>
+      <name>Gongye Liu</name>
+    </author>
+    <author>
+      <name>Jiajun Liang</name>
+    </author>
+    <author>
+      <name>Yangguang Li</name>
+    </author>
+    <author>
+      <name>Jiaheng Liu</name>
+    </author>
+    <author>
+      <name>Xintao Wang</name>
+    </author>
+    <author>
+      <name>Pengfei Wan</name>
+    </author>
+    <author>
+      <name>Di Zhang</name>
+    </author>
+    <author>
+      <name>Wanli Ouyang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/yifan123/flow_grpo</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05470v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05470v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05469v1</id>
+    <updated>2025-05-08T17:58:18Z</updated>
+    <published>2025-05-08T17:58:18Z</published>
+    <title>Generating Physically Stable and Buildable LEGO Designs from Text</title>
+    <summary>  We introduce LegoGPT, the first approach for generating physically stable
+LEGO brick models from text prompts. To achieve this, we construct a
+large-scale, physically stable dataset of LEGO designs, along with their
+associated captions, and train an autoregressive large language model to
+predict the next brick to add via next-token prediction. To improve the
+stability of the resulting designs, we employ an efficient validity check and
+physics-aware rollback during autoregressive inference, which prunes infeasible
+token predictions using physics laws and assembly constraints. Our experiments
+show that LegoGPT produces stable, diverse, and aesthetically pleasing LEGO
+designs that align closely with the input text prompts. We also develop a
+text-based LEGO texturing method to generate colored and textured designs. We
+show that our designs can be assembled manually by humans and automatically by
+robotic arms. We also release our new dataset, StableText2Lego, containing over
+47,000 LEGO structures of over 28,000 unique 3D objects accompanied by detailed
+captions, along with our code and models at the project website:
+https://avalovelace1.github.io/LegoGPT/.
+</summary>
+    <author>
+      <name>Ava Pun</name>
+    </author>
+    <author>
+      <name>Kangle Deng</name>
+    </author>
+    <author>
+      <name>Ruixuan Liu</name>
+    </author>
+    <author>
+      <name>Deva Ramanan</name>
+    </author>
+    <author>
+      <name>Changliu Liu</name>
+    </author>
+    <author>
+      <name>Jun-Yan Zhu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://avalovelace1.github.io/LegoGPT/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05469v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05469v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05454v1</id>
+    <updated>2025-05-08T17:45:17Z</updated>
+    <published>2025-05-08T17:45:17Z</published>
+    <title>Resolution of the Solar Convective Conundrum? New Results Using the
+  Time-Distance Deep-Focus Method</title>
+    <summary>  We re-examine the deep-focus methodology of time-distance helioseismology
+previously used to estimate the power spectrum of the solar convection at a
+depth of about 30 Mm, which was found to be significantly weaker than predicted
+by theory and simulations. The Global Acoustic, Linearized Euler (GALE) and
+Eulerian Lagrangian (EULAG) codes are used to generate ground-truth simulations
+through which the accuracy of the convective power spectrum can be evaluated.
+This validation process shows that the power spectrum diverges significantly
+from ground truth beyond spatial scales corresponding to the spherical harmonic
+degree $\ell=15$ - $30$ because of the limited resolution of helioseismic
+measurements. However, the power estimated at larger spatial scales ($\ell&lt;15$)
+is sufficiently accurate. We then apply the methodology to solar data and find
+a spectrum that is substantially stronger than previously reported. We discuss
+some possible differences in methodology that might have led to the initial
+under-estimation of solar convective power. The new spectra are in line with
+recent hydrodynamic and magnetohydrodynamic simulations of solar convection and
+also consistent with the previous inferences obtained by the ring-diagram
+local-helioseismology method.
+</summary>
+    <author>
+      <name>John T. Stefan</name>
+    </author>
+    <author>
+      <name>Alexander G. Kosovichev</name>
+    </author>
+    <author>
+      <name>Gustavo Guerrero</name>
+    </author>
+    <author>
+      <name>Andrey M. Stejko</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.05454v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05454v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05438v1</id>
+    <updated>2025-05-08T17:27:44Z</updated>
+    <published>2025-05-08T17:27:44Z</published>
+    <title>Scalable Bernoulli factories for Bayesian inference with intractable
+  likelihoods</title>
+    <summary>  Bernoulli factory MCMC algorithms implement accept-reject Markov chains
+without explicit computation of acceptance probabilities, and are used to
+target posterior distributions associated with intractable likelihood models.
+These algorithms often mix better than alternatives based on data augmentation
+or acceptance probability estimation. However, we show that their computational
+performance typically deteriorates exponentially with data size. To address
+this, we propose a simple divide-and-conquer Bernoulli factory MCMC algorithm
+and prove that it has polynomial complexity of degree between 1 and 2, with the
+exact degree depending on the existence of efficient unbiased estimators of the
+intractable likelihood ratio. We demonstrate the effectiveness of our approach
+with applications to Bayesian inference in two intractable likelihood models,
+and observe respective polynomial cost of degree 1.2 and 1 in the data size.
+</summary>
+    <author>
+      <name>Timothée Stumpf-Fétizon</name>
+    </author>
+    <author>
+      <name>Flávio B. Gonçalves</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.05438v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05438v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="62-08" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="G.3" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.04608v1</id>
-    <updated>2025-05-07T17:53:47Z</updated>
-    <published>2025-05-07T17:53:47Z</published>
-    <title>WATCH: Weighted Adaptive Testing for Changepoint Hypotheses via
-  Weighted-Conformal Martingales</title>
-    <summary>  Responsibly deploying artificial intelligence (AI) / machine learning (ML)
-systems in high-stakes settings arguably requires not only proof of system
-reliability, but moreover continual, post-deployment monitoring to quickly
-detect and address any unsafe behavior. Statistical methods for nonparametric
-change-point detection -- especially the tools of conformal test martingales
-(CTMs) and anytime-valid inference -- offer promising approaches to this
-monitoring task. However, existing methods are restricted to monitoring limited
-hypothesis classes or ``alarm criteria,'' such as data shifts that violate
-certain exchangeability assumptions, or do not allow for online adaptation in
-response to shifts. In this paper, we expand the scope of these monitoring
-methods by proposing a weighted generalization of conformal test martingales
-(WCTMs), which lay a theoretical foundation for online monitoring for any
-unexpected changepoints in the data distribution while controlling
-false-alarms. For practical applications, we propose specific WCTM algorithms
-that accommodate online adaptation to mild covariate shifts (in the marginal
-input distribution) while raising alarms in response to more severe shifts,
-such as concept shifts (in the conditional label distribution) or extreme
-(out-of-support) covariate shifts that cannot be easily adapted to. On
-real-world datasets, we demonstrate improved performance relative to
-state-of-the-art baselines.
+    <id>http://arxiv.org/abs/2505.05429v1</id>
+    <updated>2025-05-08T17:19:11Z</updated>
+    <published>2025-05-08T17:19:11Z</published>
+    <title>Theoretical modeling of approximate universality of tidally deformed
+  neutron stars</title>
+    <summary>  Quasi-universal relations are known to exist among various neutron star
+observables that do not depend sensitively on the underlying nuclear matter
+equations of state. For example, some of these relations imply that the tidally
+induced multipole moments are approximately characterized by the electric-type
+quadrupolar tidal deformability. Such relations can be used to reduce the
+number of independent tidal parameters in gravitational-waveform modeling,
+thereby allowing us to infer extreme nuclear matter properties more accurately
+and test General Relativity in an insensitive manner to uncertainties in
+nuclear physics. We present a comprehensive theoretical investigation into
+approximate universality of neutron stars. Our approach employs a semi-analytic
+relativistic stellar interior model, which extends the Tolman VII solution,
+thereby enabling a refined exploration of the tidal properties of nonrotating
+stars within a semi-analytic framework. The derived power-law relations among
+various tidal deformabilities -- referred to as the universal Love relations --
+agree well with expressions in previous work found empirically. We elucidate
+how the equation-of-state dependence is suppressed in a particular combination
+of macroscopic physical parameters induced by perturbations and demonstrate
+that the relation between the moment of inertia and electric-type quadrupolar
+tidal deformability (I-Love relation) rests on the same underlying mechanism.
+Our findings indicate that the approximate universality of neutron stars can be
+attributed to low compressibility, consistent with some of the previous studies
+on the possible origin of the universality.
 </summary>
     <author>
-      <name>Drew Prinster</name>
+      <name>Takuya Katagiri</name>
     </author>
     <author>
-      <name>Xing Han</name>
+      <name>Gowtham Rishi Mukkamala</name>
     </author>
     <author>
-      <name>Anqi Liu</name>
+      <name>Kent Yagi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22pages, 16figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05429v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05429v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05427v1</id>
+    <updated>2025-05-08T17:15:20Z</updated>
+    <published>2025-05-08T17:15:20Z</published>
+    <title>Ultra-FineWeb: Efficient Data Filtering and Verification for
+  High-Quality LLM Training Data</title>
+    <summary>  Data quality has become a key factor in enhancing model performance with the
+rapid development of large language models (LLMs). Model-driven data filtering
+has increasingly become a primary approach for acquiring high-quality data.
+However, it still faces two main challenges: (1) the lack of an efficient data
+verification strategy makes it difficult to provide timely feedback on data
+quality; and (2) the selection of seed data for training classifiers lacks
+clear criteria and relies heavily on human expertise, introducing a degree of
+subjectivity. To address the first challenge, we introduce an efficient
+verification strategy that enables rapid evaluation of the impact of data on
+LLM training with minimal computational cost. To tackle the second challenge,
+we build upon the assumption that high-quality seed data is beneficial for LLM
+training, and by integrating the proposed verification strategy, we optimize
+the selection of positive and negative samples and propose an efficient data
+filtering pipeline. This pipeline not only improves filtering efficiency,
+classifier quality, and robustness, but also significantly reduces experimental
+and inference costs. In addition, to efficiently filter high-quality data, we
+employ a lightweight classifier based on fastText, and successfully apply the
+filtering pipeline to two widely-used pre-training corpora, FineWeb and Chinese
+FineWeb datasets, resulting in the creation of the higher-quality Ultra-FineWeb
+dataset. Ultra-FineWeb contains approximately 1 trillion English tokens and 120
+billion Chinese tokens. Empirical results demonstrate that the LLMs trained on
+Ultra-FineWeb exhibit significant performance improvements across multiple
+benchmark tasks, validating the effectiveness of our pipeline in enhancing both
+data quality and training efficiency.
+</summary>
+    <author>
+      <name>Yudong Wang</name>
     </author>
     <author>
-      <name>Suchi Saria</name>
+      <name>Zixuan Fu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">To be published in The International Conference on Machine Learning
-  (ICML), 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04608v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04608v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Jie Cai</name>
+    </author>
+    <author>
+      <name>Peijun Tang</name>
+    </author>
+    <author>
+      <name>Hongya Lyu</name>
+    </author>
+    <author>
+      <name>Yewei Fang</name>
+    </author>
+    <author>
+      <name>Zhi Zheng</name>
+    </author>
+    <author>
+      <name>Jie Zhou</name>
+    </author>
+    <author>
+      <name>Guoyang Zeng</name>
+    </author>
+    <author>
+      <name>Chaojun Xiao</name>
+    </author>
+    <author>
+      <name>Xu Han</name>
+    </author>
+    <author>
+      <name>Zhiyuan Liu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The datasets are available on
+  https://huggingface.co/datasets/openbmb/UltraFineWeb</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05427v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05427v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05420v1</id>
+    <updated>2025-05-08T17:09:14Z</updated>
+    <published>2025-05-08T17:09:14Z</published>
+    <title>Robustly optimal dynamics for active matter reservoir computing</title>
+    <summary>  We study the information processing abilities of active matter in the
+reservoir computing (RC) paradigm, using a model that is externally driven to
+infer the future state of a chaotic signal. The simulated system closely
+follows a previously reported model. We uncover an exceptional dynamical regime
+of agent dynamics that has been overlooked heretofore. It appears robustly
+optimal across varying physical parameters and inference tasks, thus providing
+valuable insights into computation and inference with physical systems more
+generally. The ability to form effective mechanisms for information processing
+are primarily determined by the system's own intrinsic relaxation abilities.
+These are identifiable when probing the system without a specific inference
+goal and manifest when testing minimalistic single-particle reservoirs. The
+regime that achieves optimal computation is situated just below the critical
+damping threshold, involving a microscopic dynamical relaxation with multiple
+stages. The optimal system is adaptable under chaotic external driving, due to
+a diversity in response mechanisms that emerge like rapid alternations between
+quasi-stationary and highly nonlinear dynamical states. Both coherent and
+incoherent dynamics contribute to their operation, partly at dissimilar scales
+of space and delay time. Correlations on agent dynamics can indicate the
+best-performing regimes and onsets of tight relationships between the
+responding system and the fluctuating driver. As this model of computation is
+interpretable in physical terms, it facilitates re-framing inquiries regarding
+learning and unconventional computing with a fresh rationale for many-body
+physics out of equilibrium.
+</summary>
+    <author>
+      <name>Mario U. Gaimann</name>
+    </author>
+    <author>
+      <name>Miriam Klopotek</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">55 pages, 30 figures. Supplementary Videos:
+  https://doi.org/10.18419/DARUS-4619. Replication Data:
+  https://doi.org/10.18419/DARUS-4620</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.05420v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05420v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="nlin.AO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.AO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05413v1</id>
+    <updated>2025-05-08T16:54:48Z</updated>
+    <published>2025-05-08T16:54:48Z</published>
+    <title>DPQ-HD: Post-Training Compression for Ultra-Low Power Hyperdimensional
+  Computing</title>
+    <summary>  Hyperdimensional Computing (HDC) is emerging as a promising approach for edge
+AI, offering a balance between accuracy and efficiency. However, current
+HDC-based applications often rely on high-precision models and/or encoding
+matrices to achieve competitive performance, which imposes significant
+computational and memory demands, especially for ultra-low power devices. While
+recent efforts use techniques like precision reduction and pruning to increase
+the efficiency, most require retraining to maintain performance, making them
+expensive and impractical. To address this issue, we propose a novel Post
+Training Compression algorithm, Decomposition-Pruning-Quantization (DPQ-HD),
+which aims at compressing the end-to-end HDC system, achieving near floating
+point performance without the need of retraining. DPQ-HD reduces computational
+and memory overhead by uniquely combining the above three compression
+techniques and efficiently adapts to hardware constraints. Additionally, we
+introduce an energy-efficient inference approach that progressively evaluates
+similarity scores such as cosine similarity and performs early exit to reduce
+the computation, accelerating prediction inference while maintaining accuracy.
+We demonstrate that DPQ-HD achieves up to 20-100x reduction in memory for image
+and graph classification tasks with only a 1-2% drop in accuracy compared to
+uncompressed workloads. Lastly, we show that DPQ-HD outperforms the existing
+post-training compression methods and performs better or at par with
+retraining-based state-of-the-art techniques, requiring significantly less
+overall optimization time (up to 100x) and faster inference (up to 56x) on a
+microcontroller
+</summary>
+    <author>
+      <name>Nilesh Prasad Pandey</name>
+    </author>
+    <author>
+      <name>Shriniwas Kulkarni</name>
+    </author>
+    <author>
+      <name>David Wang</name>
+    </author>
+    <author>
+      <name>Onat Gungor</name>
+    </author>
+    <author>
+      <name>Flavio Ponzina</name>
+    </author>
+    <author>
+      <name>Tajana Rosing</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.05413v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.05413v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04603v1</id>
-    <updated>2025-05-07T17:50:14Z</updated>
-    <published>2025-05-07T17:50:14Z</published>
-    <title>Likelihood-Free Adaptive Bayesian Inference via Nonparametric
-  Distribution Matching</title>
-    <summary>  When the likelihood is analytically unavailable and computationally
-intractable, approximate Bayesian computation (ABC) has emerged as a widely
-used methodology for approximate posterior inference; however, it suffers from
-severe computational inefficiency in high-dimensional settings or under diffuse
-priors. To overcome these limitations, we propose Adaptive Bayesian Inference
-(ABI), a framework that bypasses traditional data-space discrepancies and
-instead compares distributions directly in posterior space through
-nonparametric distribution matching. By leveraging a novel Marginally-augmented
-Sliced Wasserstein (MSW) distance on posterior measures and exploiting its
-quantile representation, ABI transforms the challenging problem of measuring
-divergence between posterior distributions into a tractable sequence of
-one-dimensional conditional quantile regression tasks. Moreover, we introduce a
-new adaptive rejection sampling scheme that iteratively refines the posterior
-approximation by updating the proposal distribution via generative density
-estimation. Theoretically, we establish parametric convergence rates for the
-trimmed MSW distance and prove that the ABI posterior converges to the true
-posterior as the tolerance threshold vanishes. Through extensive empirical
-evaluation, we demonstrate that ABI significantly outperforms data-based
-Wasserstein ABC, summary-based ABC, and state-of-the-art likelihood-free
-simulators, especially in high-dimensional or dependent observation regimes.
-</summary>
-    <author>
-      <name>Wenhui Sophia Lu</name>
-    </author>
-    <author>
-      <name>Wing Hung Wong</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.04603v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04603v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04602v1</id>
-    <updated>2025-05-07T17:48:56Z</updated>
-    <published>2025-05-07T17:48:56Z</published>
-    <title>Extracting local velocity from cosmic dipole using simulations</title>
-    <summary>  Our velocity with respect to the cosmic frame of rest leads to a dipole in
-the number count distribution of galaxies. The dipole depends on the source
-spectrum, which is usually assumed to be a power law, $S(\nu) \propto
-\nu^{-\alpha}$ and on the flux dependence of the number density of sources. The
-latter is also generally assumed to be a power law, parametrised with exponent
-$x$. The velocity can be extracted from the observed dipole once the two
-parameters $x$ and $\alpha$ are known. The standard procedure uses the mean
-value of $\alpha$ across the entire sample, and the parameter $x$ is inferred
-by fitting the cumulative number count, $\frac{dN}{d\Omega}(&gt;S_*) \propto
-S_*^{-x}$, near the flux limit $S_*$ of the survey. Here, we introduce a
-simulation procedure to extract the velocity which directly uses the $\alpha$
-values of each source rather than their mean and does not rely on the
-functional form of the cumulative number count near the flux limit. We apply
-this to the quasar sample in CatWISE2020 data and find that the final results
-differ from the standard procedure by approximately one sigma.
-</summary>
-    <author>
-      <name>Mohit Panwar</name>
-    </author>
-    <author>
-      <name>Akash Gandhi</name>
-    </author>
-    <author>
-      <name>Pankaj Jain</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">5 pages, 2 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04602v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04602v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04586v1</id>
-    <updated>2025-05-07T17:27:51Z</updated>
-    <published>2025-05-07T17:27:51Z</published>
-    <title>Active Sampling for MRI-based Sequential Decision Making</title>
-    <summary>  Despite the superior diagnostic capability of Magnetic Resonance Imaging
-(MRI), its use as a Point-of-Care (PoC) device remains limited by high cost and
-complexity. To enable such a future by reducing the magnetic field strength,
-one key approach will be to improve sampling strategies. Previous work has
-shown that it is possible to make diagnostic decisions directly from k-space
-with fewer samples. Such work shows that single diagnostic decisions can be
-made, but if we aspire to see MRI as a true PoC, multiple and sequential
-decisions are necessary while minimizing the number of samples acquired. We
-present a novel multi-objective reinforcement learning framework enabling
-comprehensive, sequential, diagnostic evaluation from undersampled k-space
-data. Our approach during inference actively adapts to sequential decisions to
-optimally sample. To achieve this, we introduce a training methodology that
-identifies the samples that contribute the best to each diagnostic objective
-using a step-wise weighting reward function. We evaluate our approach in two
-sequential knee pathology assessment tasks: ACL sprain detection and cartilage
-thickness loss assessment. Our framework achieves diagnostic performance
-competitive with various policy-based benchmarks on disease detection, severity
-quantification, and overall sequential diagnosis, while substantially saving
-k-space samples. Our approach paves the way for the future of MRI as a
-comprehensive and affordable PoC device. Our code is publicly available at
-https://github.com/vios-s/MRI_Sequential_Active_Sampling
-</summary>
-    <author>
-      <name>Yuning Du</name>
-    </author>
-    <author>
-      <name>Jingshuai Liu</name>
-    </author>
-    <author>
-      <name>Rohan Dharmakumar</name>
-    </author>
-    <author>
-      <name>Sotirios A. Tsaftaris</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Under Review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04586v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04586v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04583v1</id>
-    <updated>2025-05-07T17:21:45Z</updated>
-    <published>2025-05-07T17:21:45Z</published>
-    <title>Modeling Personalized Difficulty of Rehabilitation Exercises Using
-  Causal Trees</title>
-    <summary>  Rehabilitation robots are often used in game-like interactions for
-rehabilitation to increase a person's motivation to complete rehabilitation
-exercises. By adjusting exercise difficulty for a specific user throughout the
-exercise interaction, robots can maximize both the user's rehabilitation
-outcomes and the their motivation throughout the exercise. Previous approaches
-have assumed exercises have generic difficulty values that apply to all users
-equally, however, we identified that stroke survivors have varied and unique
-perceptions of exercise difficulty. For example, some stroke survivors found
-reaching vertically more difficult than reaching farther but lower while others
-found reaching farther more challenging than reaching vertically. In this
-paper, we formulate a causal tree-based method to calculate exercise difficulty
-based on the user's performance. We find that this approach accurately models
-exercise difficulty and provides a readily interpretable model of why that
-exercise is difficult for both users and caretakers.
-</summary>
-    <author>
-      <name>Nathaniel Dennler</name>
-    </author>
-    <author>
-      <name>Zhonghao Shi</name>
-    </author>
-    <author>
-      <name>Uksang Yoo</name>
-    </author>
-    <author>
-      <name>Stefanos Nikolaidis</name>
-    </author>
-    <author>
-      <name>Maja Matarić</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to IEEE/RAS-EMBS International Conference on Rehabilitation
-  Robotics (ICORR 2025)</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04583v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04583v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04575v1</id>
-    <updated>2025-05-07T17:12:15Z</updated>
-    <published>2025-05-07T17:12:15Z</published>
-    <title>Componential Prompt-Knowledge Alignment for Domain Incremental Learning</title>
-    <summary>  Domain Incremental Learning (DIL) aims to learn from non-stationary data
-streams across domains while retaining and utilizing past knowledge. Although
-prompt-based methods effectively store multi-domain knowledge in prompt
-parameters and obtain advanced performance through cross-domain prompt fusion,
-we reveal an intrinsic limitation: component-wise misalignment between
-domain-specific prompts leads to conflicting knowledge integration and degraded
-predictions. This arises from the random positioning of knowledge components
-within prompts, where irrelevant component fusion introduces interference.To
-address this, we propose Componential Prompt-Knowledge Alignment (KA-Prompt), a
-novel prompt-based DIL method that introduces component-aware prompt-knowledge
-alignment during training, significantly improving both the learning and
-inference capacity of the model. KA-Prompt operates in two phases: (1) Initial
-Componential Structure Configuring, where a set of old prompts containing
-knowledge relevant to the new domain are mined via greedy search, which is then
-exploited to initialize new prompts to achieve reusable knowledge transfer and
-establish intrinsic alignment between new and old prompts. (2) Online Alignment
-Preservation, which dynamically identifies the target old prompts and applies
-adaptive componential consistency constraints as new prompts evolve. Extensive
-experiments on DIL benchmarks demonstrate the effectiveness of our KA-Prompt.
-Our source code is available at
-https://github.com/zhoujiahuan1991/ICML2025-KA-Prompt
-</summary>
-    <author>
-      <name>Kunlun Xu</name>
-    </author>
-    <author>
-      <name>Xu Zou</name>
-    </author>
-    <author>
-      <name>Gang Hua</name>
-    </author>
-    <author>
-      <name>Jiahuan Zhou</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accpted by ICML2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04575v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04575v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04568v1</id>
-    <updated>2025-05-07T17:03:22Z</updated>
-    <published>2025-05-07T17:03:22Z</published>
-    <title>Conformal Survival Bands for Risk Screening under Right-Censoring</title>
-    <summary>  We propose a method to quantify uncertainty around individual survival
-distribution estimates using right-censored data, compatible with any survival
-model. Unlike classical confidence intervals, the survival bands produced by
-this method offer predictive rather than population-level inference, making
-them useful for personalized risk screening. For example, in a low-risk
-screening scenario, they can be applied to flag patients whose survival band at
-12 months lies entirely above 50\%, while ensuring that at least half of
-flagged individuals will survive past that time on average. Our approach builds
-on recent advances in conformal inference and integrates ideas from inverse
-probability of censoring weighting and multiple testing with false discovery
-rate control. We provide asymptotic guarantees and show promising performance
-in finite samples with both simulated and real data.
-</summary>
-    <author>
-      <name>Matteo Sesia</name>
-    </author>
-    <author>
-      <name>Vladimir Svetnik</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.04568v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04568v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.04565v1</id>
-    <updated>2025-05-07T16:57:51Z</updated>
-    <published>2025-05-07T16:57:51Z</published>
-    <title>Hierarchical Task Decomposition for Execution Monitoring and Error
-  Recovery: Understanding the Rationale Behind Task Demonstrations</title>
-    <summary>  Multi-step manipulation tasks where robots interact with their environment
-and must apply process forces based on the perceived situation remain
-challenging to learn and prone to execution errors. Accurately simulating these
-tasks is also difficult. Hence, it is crucial for robust task performance to
-learn how to coordinate end-effector pose and applied force, monitor execution,
-and react to deviations. To address these challenges, we propose a learning
-approach that directly infers both low- and high-level task representations
-from user demonstrations on the real system. We developed an unsupervised task
-segmentation algorithm that combines intention recognition and feature
-clustering to infer the skills of a task. We leverage the inferred
-characteristic features of each skill in a novel unsupervised anomaly detection
-approach to identify deviations from the intended task execution. Together,
-these components form a comprehensive framework capable of incrementally
-learning task decisions and new behaviors as new situations arise. Compared to
-state-of-the-art learning techniques, our approach significantly reduces the
-required amount of training data and computational complexity while efficiently
-learning complex in-contact behaviors and recovery strategies. Our proposed
-task segmentation and anomaly detection approaches outperform state-of-the-art
-methods on force-based tasks evaluated on two different robotic systems.
-</summary>
-    <author>
-      <name>Christoph Willibald</name>
-    </author>
-    <author>
-      <name>Dongheui Lee</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The paper has been accepted for publication by the International
-  Journal of Robotics Research (IJRR), 26 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.04565v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.04565v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
