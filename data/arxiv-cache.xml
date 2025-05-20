@@ -1,488 +1,433 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-05-19T00:59:23Z -->
+<!-- Last updated: 2025-05-20T00:57:36Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-05-18T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">112298</opensearch:totalResults>
+  <updated>2025-05-19T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">112369</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.10566v1</id>
-    <updated>2025-05-15T17:59:51Z</updated>
-    <published>2025-05-15T17:59:51Z</published>
-    <title>3D-Fixup: Advancing Photo Editing with 3D Priors</title>
-    <summary>  Despite significant advances in modeling image priors via diffusion models,
-3D-aware image editing remains challenging, in part because the object is only
-specified via a single image. To tackle this challenge, we propose 3D-Fixup, a
-new framework for editing 2D images guided by learned 3D priors. The framework
-supports difficult editing situations such as object translation and 3D
-rotation. To achieve this, we leverage a training-based approach that harnesses
-the generative power of diffusion models. As video data naturally encodes
-real-world physical dynamics, we turn to video data for generating training
-data pairs, i.e., a source and a target frame. Rather than relying solely on a
-single trained model to infer transformations between source and target frames,
-we incorporate 3D guidance from an Image-to-3D model, which bridges this
-challenging task by explicitly projecting 2D information into 3D space. We
-design a data generation pipeline to ensure high-quality 3D guidance throughout
-training. Results show that by integrating these 3D priors, 3D-Fixup
-effectively supports complex, identity coherent 3D-aware edits, achieving
-high-quality results and advancing the application of diffusion models in
-realistic image manipulation. The code is provided at
-https://3dfixup.github.io/
+    <id>http://arxiv.org/abs/2505.11497v1</id>
+    <updated>2025-05-16T17:59:40Z</updated>
+    <published>2025-05-16T17:59:40Z</published>
+    <title>QVGen: Pushing the Limit of Quantized Video Generative Models</title>
+    <summary>  Video diffusion models (DMs) have enabled high-quality video synthesis. Yet,
+their substantial computational and memory demands pose serious challenges to
+real-world deployment, even on high-end GPUs. As a commonly adopted solution,
+quantization has proven notable success in reducing cost for image DMs, while
+its direct application to video DMs remains ineffective. In this paper, we
+present QVGen, a novel quantization-aware training (QAT) framework tailored for
+high-performance and inference-efficient video DMs under extremely low-bit
+quantization (e.g., 4-bit or below). We begin with a theoretical analysis
+demonstrating that reducing the gradient norm is essential to facilitate
+convergence for QAT. To this end, we introduce auxiliary modules ($\Phi$) to
+mitigate large quantization errors, leading to significantly enhanced
+convergence. To eliminate the inference overhead of $\Phi$, we propose a
+rank-decay strategy that progressively eliminates $\Phi$. Specifically, we
+repeatedly employ singular value decomposition (SVD) and a proposed rank-based
+regularization $\mathbf{\gamma}$ to identify and decay low-contributing
+components. This strategy retains performance while zeroing out inference
+overhead. Extensive experiments across $4$ state-of-the-art (SOTA) video DMs,
+with parameter sizes ranging from $1.3$B $\sim14$B, show that QVGen is the
+first to reach full-precision comparable quality under 4-bit settings.
+Moreover, it significantly outperforms existing methods. For instance, our
+3-bit CogVideoX-2B achieves improvements of $+25.28$ in Dynamic Degree and
+$+8.43$ in Scene Consistency on VBench.
 </summary>
     <author>
-      <name>Yen-Chi Cheng</name>
+      <name>Yushi Huang</name>
     </author>
     <author>
-      <name>Krishna Kumar Singh</name>
+      <name>Ruihao Gong</name>
     </author>
     <author>
-      <name>Jae Shin Yoon</name>
+      <name>Jing Liu</name>
     </author>
     <author>
-      <name>Alex Schwing</name>
+      <name>Yifu Ding</name>
     </author>
     <author>
-      <name>Liangyan Gui</name>
+      <name>Chengtao Lv</name>
     </author>
     <author>
-      <name>Matheus Gadelha</name>
+      <name>Haotong Qin</name>
     </author>
     <author>
-      <name>Paul Guerrero</name>
+      <name>Jun Zhang</name>
     </author>
-    <author>
-      <name>Nanxuan Zhao</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3721238.3730695</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.1145/3721238.3730695" rel="related"/>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">SIGGRAPH 2025. Project page: https://3dfixup.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.10566v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10566v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Our code will be released upon acceptance</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.11497v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11497v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.10547v1</id>
-    <updated>2025-05-15T17:55:28Z</updated>
-    <published>2025-05-15T17:55:28Z</published>
-    <title>Real-Time Out-of-Distribution Failure Prevention via Multi-Modal
-  Reasoning</title>
-    <summary>  Foundation models can provide robust high-level reasoning on appropriate
-safety interventions in hazardous scenarios beyond a robot's training data,
-i.e. out-of-distribution (OOD) failures. However, due to the high inference
-latency of Large Vision and Language Models, current methods rely on manually
-defined intervention policies to enact fallbacks, thereby lacking the ability
-to plan generalizable, semantically safe motions. To overcome these challenges
-we present FORTRESS, a framework that generates and reasons about semantically
-safe fallback strategies in real time to prevent OOD failures. At a low
-frequency in nominal operations, FORTRESS uses multi-modal reasoners to
-identify goals and anticipate failure modes. When a runtime monitor triggers a
-fallback response, FORTRESS rapidly synthesizes plans to fallback goals while
-inferring and avoiding semantically unsafe regions in real time. By bridging
-open-world, multi-modal reasoning with dynamics-aware planning, we eliminate
-the need for hard-coded fallbacks and human safety interventions. FORTRESS
-outperforms on-the-fly prompting of slow reasoning models in safety
-classification accuracy on synthetic benchmarks and real-world ANYmal robot
-data, and further improves system safety and planning success in simulation and
-on quadrotor hardware for urban navigation.
+    <id>http://arxiv.org/abs/2505.11484v1</id>
+    <updated>2025-05-16T17:47:50Z</updated>
+    <published>2025-05-16T17:47:50Z</published>
+    <title>SoftCoT++: Test-Time Scaling with Soft Chain-of-Thought Reasoning</title>
+    <summary>  Test-Time Scaling (TTS) refers to approaches that improve reasoning
+performance by allocating extra computation during inference, without altering
+the model's parameters. While existing TTS methods operate in a discrete token
+space by generating more intermediate steps, recent studies in Coconut and
+SoftCoT have demonstrated that thinking in the continuous latent space can
+further enhance the reasoning performance. Such latent thoughts encode
+informative thinking without the information loss associated with
+autoregressive token generation, sparking increased interest in
+continuous-space reasoning. Unlike discrete decoding, where repeated sampling
+enables exploring diverse reasoning paths, latent representations in continuous
+space are fixed for a given input, which limits diverse exploration, as all
+decoded paths originate from the same latent thought. To overcome this
+limitation, we introduce SoftCoT++ to extend SoftCoT to the Test-Time Scaling
+paradigm by enabling diverse exploration of thinking paths. Specifically, we
+perturb latent thoughts via multiple specialized initial tokens and apply
+contrastive learning to promote diversity among soft thought representations.
+Experiments across five reasoning benchmarks and two distinct LLM architectures
+demonstrate that SoftCoT++ significantly boosts SoftCoT and also outperforms
+SoftCoT with self-consistency scaling. Moreover, it shows strong compatibility
+with conventional scaling techniques such as self-consistency. Source code is
+available at https://github.com/xuyige/SoftCoT.
 </summary>
     <author>
-      <name>Milan Ganai</name>
+      <name>Yige Xu</name>
     </author>
     <author>
-      <name>Rohan Sinha</name>
+      <name>Xu Guo</name>
     </author>
     <author>
-      <name>Christopher Agia</name>
+      <name>Zhiwei Zeng</name>
     </author>
     <author>
-      <name>Daniel Morton</name>
+      <name>Chunyan Miao</name>
     </author>
-    <author>
-      <name>Marco Pavone</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Website: https://milanganai.github.io/fortress/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.10547v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10547v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.11484v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11484v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.10541v1</id>
-    <updated>2025-05-15T17:52:40Z</updated>
-    <published>2025-05-15T17:52:40Z</published>
-    <title>Exploring Implicit Visual Misunderstandings in Multimodal Large Language
-  Models through Attention Analysis</title>
-    <summary>  Recent advancements have enhanced the capability of Multimodal Large Language
-Models (MLLMs) to comprehend multi-image information. However, existing
-benchmarks primarily evaluate answer correctness, overlooking whether models
-genuinely comprehend the visual input. To address this, we define implicit
-visual misunderstanding (IVM), where MLLMs provide correct answers without
-fully comprehending the visual input. Through our analysis, we decouple the
-visual and textual modalities within the causal attention module, revealing
-that attention distribution increasingly converges on the image associated with
-the correct answer as the network layers deepen. This insight leads to the
-introduction of a scale-agnostic metric, \textit{attention accuracy}, and a
-novel benchmark for quantifying IVMs. Attention accuracy directly evaluates the
-model's visual understanding via internal mechanisms, remaining robust to
-positional biases for more reliable assessments. Furthermore, we extend our
-approach to finer granularities and demonstrate its effectiveness in unimodal
-scenarios, underscoring its versatility and generalizability.
+    <id>http://arxiv.org/abs/2505.11483v1</id>
+    <updated>2025-05-16T17:47:15Z</updated>
+    <published>2025-05-16T17:47:15Z</published>
+    <title>msf-CNN: Patch-based Multi-Stage Fusion with Convolutional Neural
+  Networks for TinyML</title>
+    <summary>  AI spans from large language models to tiny models running on
+microcontrollers (MCUs). Extremely memory-efficient model architectures are
+decisive to fit within an MCU's tiny memory budget e.g., 128kB of RAM. However,
+inference latency must remain small to fit real-time constraints. An approach
+to tackle this is patch-based fusion, which aims to optimize data flows across
+neural network layers. In this paper, we introduce msf-CNN, a novel technique
+that efficiently finds optimal fusion settings for convolutional neural
+networks (CNNs) by walking through the fusion solution space represented as a
+directed acyclic graph. Compared to previous work on CNN fusion for MCUs,
+msf-CNN identifies a wider set of solutions. We published an implementation of
+msf-CNN running on various microcontrollers (ARM Cortex-M, RISC-V, ESP32). We
+show that msf-CNN can achieve inference using 50% less RAM compared to the
+prior art (MCUNetV2 and StreamNet). We thus demonstrate how msf-CNN offers
+additional flexibility for system designers.
 </summary>
     <author>
-      <name>Pengfei Wang</name>
+      <name>Zhaolan Huang</name>
     </author>
     <author>
-      <name>Guohai Xu</name>
+      <name>Emmanuel Baccelli</name>
     </author>
-    <author>
-      <name>Weinong Wang</name>
-    </author>
-    <author>
-      <name>Junjie Yang</name>
-    </author>
-    <author>
-      <name>Jie Lou</name>
-    </author>
-    <author>
-      <name>Yunhua Xue</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.10541v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10541v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.10539v1</id>
-    <updated>2025-05-15T17:48:51Z</updated>
-    <published>2025-05-15T17:48:51Z</published>
-    <title>A Systematic Search for Trace Molecules in Exoplanet K2-18 b</title>
-    <summary>  The first transmission spectrum of the habitable-zone sub-Neptune K2-18 b
-with JWST has opened a new avenue for atmospheric characterisation of temperate
-low-mass exoplanets. The observations led to inferences of methane and carbon
-dioxide, as well as of dimethyl sulfide (DMS) and/or dimethyl disulfide (DMDS),
-both potential biosignatures. However, robust identification of DMS and/or DMDS
-requires further observations to increase the detection significances. More
-theoretical studies are also needed to identify potential false positives and
-possible abiotic sources for these molecules. In the present work we
-demonstrate the next step in this direction with a comprehensive and agnostic
-search for other chemical species in the atmosphere of K2-18 b. Our exploration
-includes 650 molecules, spanning a wide range of trace gases, including biotic,
-abiotic, and anthropogenic gases on Earth. We investigate possible evidence for
-any of these gases using three metrics: (a) evidence in the JWST mid-infrared
-spectrum, (b) evidence in the JWST near-infrared spectrum, and (c) plausible
-sources of production. We find three molecules, including DMS, which appear
-promising across the datasets considered. The two molecules besides DMS are
-diethyl sulfide and methyl acrylonitrile, which are more complex than DMS,
-biogenic on Earth, and have no significant sources known beyond Earth. A few
-other gases also provide comparable fits to a subset of the data considered but
-again with limited known plausible sources. Our study highlights the need for
-further observations to distinguish between possible trace gases in K2-18 b and
-theoretical work to establish their plausible sources if confirmed on this
-planet.
-</summary>
-    <author>
-      <name>Lorenzo Pica-Ciamarra</name>
-    </author>
-    <author>
-      <name>Nikku Madhusudhan</name>
-    </author>
-    <author>
-      <name>Gregory J. Cooke</name>
-    </author>
-    <author>
-      <name>Savvas Constantinou</name>
-    </author>
-    <author>
-      <name>Martin Binet</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted for publication</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.10539v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10539v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.10526v1</id>
-    <updated>2025-05-15T17:37:00Z</updated>
-    <published>2025-05-15T17:37:00Z</published>
-    <title>MASSV: Multimodal Adaptation and Self-Data Distillation for Speculative
-  Decoding of Vision-Language Models</title>
-    <summary>  Speculative decoding significantly accelerates language model inference by
-enabling a lightweight draft model to propose multiple tokens that a larger
-target model verifies simultaneously. However, applying this technique to
-vision-language models (VLMs) presents two fundamental challenges: small
-language models that could serve as efficient drafters lack the architectural
-components to process visual inputs, and their token predictions fail to match
-those of VLM target models that consider visual context. We introduce
-Multimodal Adaptation and Self-Data Distillation for Speculative Decoding of
-Vision-Language Models (MASSV), which transforms existing small language models
-into effective multimodal drafters through a two-phase approach. MASSV first
-connects the target VLM's vision encoder to the draft model via a lightweight
-trainable projector, then applies self-distilled visual instruction tuning
-using responses generated by the target VLM to align token predictions.
-Comprehensive experiments across the Qwen2.5-VL and Gemma3 model families
-demonstrate that MASSV increases accepted length by up to 30% and delivers
-end-to-end inference speedups of up to 1.46x on visually-grounded tasks. MASSV
-provides a scalable, architecture-compatible method for accelerating both
-current and future VLMs.
-</summary>
-    <author>
-      <name>Mugilan Ganesan</name>
-    </author>
-    <author>
-      <name>Shane Segal</name>
-    </author>
-    <author>
-      <name>Ankur Aggarwal</name>
-    </author>
-    <author>
-      <name>Nish Sinnadurai</name>
-    </author>
-    <author>
-      <name>Sean Lie</name>
-    </author>
-    <author>
-      <name>Vithursan Thangarasa</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Main paper: 11 pp., 4 figs., 3 tabs.; Supplementary: 2 pp</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.10526v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10526v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2505.11483v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11483v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.10519v1</id>
-    <updated>2025-05-15T17:26:43Z</updated>
-    <published>2025-05-15T17:26:43Z</published>
-    <title>On the Foundations of the Design-Based Approach</title>
-    <summary>  The design-based paradigm may be adopted in causal queries and survey
-sampling when we assume Rubin's stable unit treatment value assumption (SUTVA)
-or impose similar frameworks. While often taken for granted, such assumptions
-entail strong claims about the data generating process. We develop an
-alternative design-based approach: we first invoke a generalized,
-non-parametric model that allows for unrestricted forms of interference, such
-as spillover. We define a new set of inferential targets and discuss their
-interpretation under SUTVA and a weaker assumption that we call the No
-Unmodeled Revealable Variation Assumption (NURVA). We then reconstruct the
-standard paradigm, reconsidering SUTVA at the end rather than assuming it at
-the beginning. Despite its similarity to SUTVA, we demonstrate the practical
-insufficiency of NURVA in identifying substantively interesting quantities. In
-so doing, we provide clarity on the nature and importance of SUTVA for applied
+    <id>http://arxiv.org/abs/2505.11470v1</id>
+    <updated>2025-05-16T17:25:40Z</updated>
+    <published>2025-05-16T17:25:40Z</published>
+    <title>No Gold Standard, No Problem: Reference-Free Evaluation of Taxonomies</title>
+    <summary>  We introduce two reference-free metrics for quality evaluation of taxonomies.
+The first metric evaluates robustness by calculating the correlation between
+semantic and taxonomic similarity, covering a type of error not handled by
+existing metrics. The second uses Natural Language Inference to assess logical
+adequacy. Both metrics are tested on five taxonomies and are shown to correlate
+well with F1 against gold-standard taxonomies.
+</summary>
+    <author>
+      <name>Pascal Wullschleger</name>
+    </author>
+    <author>
+      <name>Majid Zarharan</name>
+    </author>
+    <author>
+      <name>Donnacha Daly</name>
+    </author>
+    <author>
+      <name>Marc Pouly</name>
+    </author>
+    <author>
+      <name>Jennifer Foster</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.11470v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11470v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11460v1</id>
+    <updated>2025-05-16T17:14:31Z</updated>
+    <published>2025-05-16T17:14:31Z</published>
+    <title>Mechanistic inference of stochastic gene expression from structured
+  single-cell data</title>
+    <summary>  Single-cell gene expression measurements encode variability spanning
+molecular noise, cellular heterogeneity, and technical artifacts. Mechanistic
+models provide a principled framework to disentangle these sources and extract
+insight, but inferring underlying dynamics from standard sequencing count data
+faces fundamental limitations. Structured datasets with temporal, spatial, or
+multimodal features offer constraints that help resolve these ambiguities, but
+demand more complex models and advanced inference strategies, including machine
+learning techniques with associated tradeoffs. This review highlights recent
+progress in the judicious integration of structured single-cell data,
+stochastic model development, and innovative inference strategies to extract
+gene-level insights. These approaches lay the foundation for mechanistic
+understanding of regulatory networks and multicellular systems.
+</summary>
+    <author>
+      <name>Christopher E. Miles</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.11460v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11460v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11444v1</id>
+    <updated>2025-05-16T17:00:52Z</updated>
+    <published>2025-05-16T17:00:52Z</published>
+    <title>A Generative Framework for Causal Estimation via Importance-Weighted
+  Diffusion Distillation</title>
+    <summary>  Estimating individualized treatment effects from observational data is a
+central challenge in causal inference, largely due to covariate imbalance and
+confounding bias from non-randomized treatment assignment. While inverse
+probability weighting (IPW) is a well-established solution to this problem, its
+integration into modern deep learning frameworks remains limited. In this work,
+we propose Importance-Weighted Diffusion Distillation (IWDD), a novel
+generative framework that combines the pretraining of diffusion models with
+importance-weighted score distillation to enable accurate and fast causal
+estimation-including potential outcome prediction and treatment effect
+estimation. We demonstrate how IPW can be naturally incorporated into the
+distillation of pretrained diffusion models, and further introduce a
+randomization-based adjustment that eliminates the need to compute IPW
+explicitly-thereby simplifying computation and, more importantly, provably
+reducing the variance of gradient estimates. Empirical results show that IWDD
+achieves state-of-the-art out-of-sample prediction performance, with the
+highest win rates compared to other baselines, significantly improving causal
+estimation and supporting the development of individualized treatment
+strategies. We will release our PyTorch code for reproducibility and future
 research.
 </summary>
     <author>
-      <name>P. M. Aronow</name>
+      <name>Xinran Song</name>
     </author>
     <author>
-      <name>Austin Jang</name>
+      <name>Tianyu Chen</name>
     </author>
     <author>
-      <name>Molly Offer-Westort</name>
+      <name>Mingyuan Zhou</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.10519v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10519v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.10510v1</id>
-    <updated>2025-05-15T17:14:21Z</updated>
-    <published>2025-05-15T17:14:21Z</published>
-    <title>Efficient Uncertainty Propagation in Bayesian Two-Step Procedures</title>
-    <summary>  Bayesian inference provides a principled framework for probabilistic
-reasoning. If inference is performed in two steps, uncertainty propagation
-plays a crucial role in accounting for all sources of uncertainty and
-variability. This becomes particularly important when both aleatoric
-uncertainty, caused by data variability, and epistemic uncertainty, arising
-from incomplete knowledge or missing data, are present. Examples include
-surrogate models and missing data problems. In surrogate modeling, the
-surrogate is used as a simplified approximation of a resource-heavy and costly
-simulation. The uncertainty from the surrogate-fitting process can be
-propagated using a two-step procedure. For modeling with missing data, methods
-like Multivariate Imputation by Chained Equations (MICE) generate multiple
-datasets to account for imputation uncertainty. These approaches, however, are
-computationally expensive, as multiple models must be fitted separately to
-surrogate parameters respectively imputed datasets.
-  To address these challenges, we propose an efficient two-step approach that
-reduces computational overhead while maintaining accuracy. By selecting a
-representative subset of draws or imputations, we construct a mixture
-distribution to approximate the desired posteriors using Pareto smoothed
-importance sampling. For more complex scenarios, this is further refined with
-importance weighted moment matching and an iterative procedure that broadens
-the mixture distribution to better capture diverse posterior distributions.
-</summary>
-    <author>
-      <name>Svenja Jedhoff</name>
-    </author>
-    <author>
-      <name>Hadi Kutabi</name>
-    </author>
-    <author>
-      <name>Anne Meyer</name>
-    </author>
-    <author>
-      <name>Paul-Christian Bürkner</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.10510v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10510v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.10476v1</id>
-    <updated>2025-05-15T16:24:46Z</updated>
-    <published>2025-05-15T16:24:46Z</published>
-    <title>Causal discovery on vector-valued variables and consistency-guided
-  aggregation</title>
-    <summary>  Causal discovery (CD) aims to discover the causal graph underlying the data
-generation mechanism of observed variables. In many real-world applications,
-the observed variables are vector-valued, such as in climate science where
-variables are defined over a spatial grid and the task is called
-spatio-temporal causal discovery. We motivate CD in vector-valued variable
-setting while considering different possibilities for the underlying model, and
-highlight the pitfalls of commonly-used approaches when compared to a fully
-vectorized approach. Furthermore, often the vector-valued variables are
-high-dimensional, and aggregations of the variables, such as averages, are
-considered in interest of efficiency and robustness. In the absence of
-interventional data, testing for the soundness of aggregate variables as
-consistent abstractions that map a low-level to a high-level structural causal
-model (SCM) is hard, and recent works have illustrated the stringency of
-conditions required for testing consistency. In this work, we take a careful
-look at the task of vector-valued CD via constraint-based methods, focusing on
-the problem of consistency of aggregation for this task. We derive three
-aggregation consistency scores, based on compatibility of independence models
-and (partial) aggregation, that quantify different aspects of the soundness of
-an aggregation map for the CD problem. We present the argument that the
-consistency of causal abstractions must be separated from the task-dependent
-consistency of aggregation maps. As an actionable conclusion of our findings,
-we propose a wrapper Adag to optimize a chosen aggregation consistency score
-for aggregate-CD, to make the output of CD over aggregate variables more
-reliable. We supplement all our findings with experimental evaluations on
-synthetic non-time series and spatio-temporal data.
-</summary>
-    <author>
-      <name>Urmi Ninad</name>
-    </author>
-    <author>
-      <name>Jonas Wahl</name>
-    </author>
-    <author>
-      <name>Andreas Gerhardus</name>
-    </author>
-    <author>
-      <name>Jakob Runge</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.10476v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10476v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.10475v1</id>
-    <updated>2025-05-15T16:24:45Z</updated>
-    <published>2025-05-15T16:24:45Z</published>
-    <title>Parallel Scaling Law for Language Models</title>
-    <summary>  It is commonly believed that scaling language models should commit a
-significant space or time cost, by increasing the parameters (parameter
-scaling) or output tokens (inference-time scaling). We introduce the third and
-more inference-efficient scaling paradigm: increasing the model's parallel
-computation during both training and inference time. We apply $P$ diverse and
-learnable transformations to the input, execute forward passes of the model in
-parallel, and dynamically aggregate the $P$ outputs. This method, namely
-parallel scaling (ParScale), scales parallel computation by reusing existing
-parameters and can be applied to any model structure, optimization procedure,
-data, or task. We theoretically propose a new scaling law and validate it
-through large-scale pre-training, which shows that a model with $P$ parallel
-streams is similar to scaling the parameters by $O(\log P)$ while showing
-superior inference efficiency. For example, ParScale can use up to 22$\times$
-less memory increase and 6$\times$ less latency increase compared to parameter
-scaling that achieves the same performance improvement. It can also recycle an
-off-the-shelf pre-trained model into a parallelly scaled one by post-training
-on a small amount of tokens, further reducing the training budget. The new
-scaling law we discovered potentially facilitates the deployment of more
-powerful models in low-resource scenarios, and provides an alternative
-perspective for the role of computation in machine learning.
-</summary>
-    <author>
-      <name>Mouxiang Chen</name>
-    </author>
-    <author>
-      <name>Binyuan Hui</name>
-    </author>
-    <author>
-      <name>Zeyu Cui</name>
-    </author>
-    <author>
-      <name>Jiaxi Yang</name>
-    </author>
-    <author>
-      <name>Dayiheng Liu</name>
-    </author>
-    <author>
-      <name>Jianling Sun</name>
-    </author>
-    <author>
-      <name>Junyang Lin</name>
-    </author>
-    <author>
-      <name>Zhongxin Liu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.10475v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10475v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2505.11444v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11444v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.10468v1</id>
-    <updated>2025-05-15T16:21:33Z</updated>
-    <published>2025-05-15T16:21:33Z</published>
-    <title>AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and
-  Challenge</title>
-    <summary>  This study critically distinguishes between AI Agents and Agentic AI,
-offering a structured conceptual taxonomy, application mapping, and challenge
-analysis to clarify their divergent design philosophies and capabilities. We
-begin by outlining the search strategy and foundational definitions,
-characterizing AI Agents as modular systems driven by Large Language Models
-(LLMs) and Large Image Models (LIMs) for narrow, task-specific automation.
-Generative AI is positioned as a precursor, with AI Agents advancing through
-tool integration, prompt engineering, and reasoning enhancements. In contrast,
-Agentic AI systems represent a paradigmatic shift marked by multi-agent
-collaboration, dynamic task decomposition, persistent memory, and orchestrated
-autonomy. Through a sequential evaluation of architectural evolution,
-operational mechanisms, interaction styles, and autonomy levels, we present a
-comparative analysis across both paradigms. Application domains such as
-customer support, scheduling, and data summarization are contrasted with
-Agentic AI deployments in research automation, robotic coordination, and
-medical decision support. We further examine unique challenges in each paradigm
-including hallucination, brittleness, emergent behavior, and coordination
-failure and propose targeted solutions such as ReAct loops, RAG, orchestration
-layers, and causal modeling. This work aims to provide a definitive roadmap for
-developing robust, scalable, and explainable AI agent and Agentic AI-driven
-systems. &gt;AI Agents, Agent-driven, Vision-Language-Models, Agentic AI Decision
-Support System, Agentic-AI Applications
+    <id>http://arxiv.org/abs/2505.11438v1</id>
+    <updated>2025-05-16T16:57:42Z</updated>
+    <published>2025-05-16T16:57:42Z</published>
+    <title>Inferring correlated distributions: boosted top jets</title>
+    <summary>  Improving the understanding of signal and background distributions in
+signal-region is a valuable key to enhance any analysis in collider physics.
+This is usually a difficult task because -- among others -- signal and
+backgrounds are hard to discriminate in signal-region, simulations may reach a
+limit of reliability if they need to model non-perturbative QCD, and
+distributions are multi-dimensional and many times may be correlated within
+each class. Bayesian density estimation is a technique that leverages prior
+knowledge and data correlations to effectively extract information from data in
+signal-region. In this work we extend previous works on data-driven mixture
+models for meaningful unsupervised signal extraction in collider physics to
+incorporate correlations between features. Using a standard dataset of top and
+QCD jets, we show how simulators, despite having an expected bias, can be used
+to inject sufficient inductive nuance into an inference model in terms of
+priors to then be corrected by data and estimate the true correlated
+distributions between features within each class. We compare the model with and
+without correlations to show how the signal extraction is sensitive to their
+inclusion and we quantify the improvement due to the inclusion of correlations
+using both supervised and unsupervised metrics.
 </summary>
     <author>
-      <name>Ranjan Sapkota</name>
+      <name>Ezequiel Alvarez</name>
     </author>
     <author>
-      <name>Konstantinos I. Roumeliotis</name>
+      <name>Manuel Szewc</name>
     </author>
     <author>
-      <name>Manoj Karkee</name>
+      <name>Alejandro Szynkman</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">32 pages, 14 figures, 11 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.10468v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.10468v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Santiago Tanco</name>
+    </author>
+    <author>
+      <name>Tatiana Tarutina</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages, 12 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.11438v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11438v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11417v1</id>
+    <updated>2025-05-16T16:29:21Z</updated>
+    <published>2025-05-16T16:29:21Z</published>
+    <title>EdgeWisePersona: A Dataset for On-Device User Profiling from Natural
+  Language Interactions</title>
+    <summary>  This paper introduces a novel dataset and evaluation benchmark designed to
+assess and improve small language models deployable on edge devices, with a
+focus on user profiling from multi-session natural language interactions in
+smart home environments. At the core of the dataset are structured user
+profiles, each defined by a set of routines - context-triggered, repeatable
+patterns of behavior that govern how users interact with their home systems.
+Using these profiles as input, a large language model (LLM) generates
+corresponding interaction sessions that simulate realistic, diverse, and
+context-aware dialogues between users and their devices.
+  The primary task supported by this dataset is profile reconstruction:
+inferring user routines and preferences solely from interactions history. To
+assess how well current models can perform this task under realistic
+conditions, we benchmarked several state-of-the-art compact language models and
+compared their performance against large foundation models. Our results show
+that while small models demonstrate some capability in reconstructing profiles,
+they still fall significantly short of large models in accurately capturing
+user behavior. This performance gap poses a major challenge - particularly
+because on-device processing offers critical advantages, such as preserving
+user privacy, minimizing latency, and enabling personalized experiences without
+reliance on the cloud. By providing a realistic, structured testbed for
+developing and evaluating behavioral modeling under these constraints, our
+dataset represents a key step toward enabling intelligent, privacy-respecting
+AI systems that learn and adapt directly on user-owned devices.
+</summary>
+    <author>
+      <name>Patryk Bartkowiak</name>
+    </author>
+    <author>
+      <name>Michal Podstawski</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.11417v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11417v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11416v1</id>
+    <updated>2025-05-16T16:29:19Z</updated>
+    <published>2025-05-16T16:29:19Z</published>
+    <title>MID-L: Matrix-Interpolated Dropout Layer with Layer-wise Neuron
+  Selection</title>
+    <summary>  Modern neural networks often activate all neurons for every input, leading to
+unnecessary computation and inefficiency. We introduce Matrix-Interpolated
+Dropout Layer (MID-L), a novel module that dynamically selects and activates
+only the most informative neurons by interpolating between two transformation
+paths via a learned, input-dependent gating vector. Unlike conventional dropout
+or static sparsity methods, MID-L employs a differentiable Top-k masking
+strategy, enabling per-input adaptive computation while maintaining end-to-end
+differentiability. MID-L is model-agnostic and integrates seamlessly into
+existing architectures. Extensive experiments on six benchmarks, including
+MNIST, CIFAR-10, CIFAR-100, SVHN, UCI Adult, and IMDB, show that MID-L achieves
+up to average 55\% reduction in active neurons, 1.7$\times$ FLOPs savings, and
+maintains or exceeds baseline accuracy. We further validate the informativeness
+and selectivity of the learned neurons via Sliced Mutual Information (SMI) and
+observe improved robustness under overfitting and noisy data conditions.
+Additionally, MID-L demonstrates favorable inference latency and memory usage
+profiles, making it suitable for both research exploration and deployment on
+compute-constrained systems. These results position MID-L as a general-purpose,
+plug-and-play dynamic computation layer, bridging the gap between dropout
+regularization and efficient inference.
+</summary>
+    <author>
+      <name>Pouya Shaeri</name>
+    </author>
+    <author>
+      <name>Ariane Middel</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted in a Computer Science Conference, currently in Review</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.11416v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11416v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11409v1</id>
+    <updated>2025-05-16T16:17:22Z</updated>
+    <published>2025-05-16T16:17:22Z</published>
+    <title>Visual Planning: Let's Think Only with Images</title>
+    <summary>  Recent advancements in Large Language Models (LLMs) and their multimodal
+extensions (MLLMs) have substantially enhanced machine reasoning across diverse
+tasks. However, these models predominantly rely on pure text as the medium for
+both expressing and structuring reasoning, even when visual information is
+present. In this work, we argue that language may not always be the most
+natural or effective modality for reasoning, particularly in tasks involving
+spatial and geometrical information. Motivated by this, we propose a new
+paradigm, Visual Planning, which enables planning through purely visual
+representations, independent of text. In this paradigm, planning is executed
+via sequences of images that encode step-by-step inference in the visual
+domain, akin to how humans sketch or visualize future actions. We introduce a
+novel reinforcement learning framework, Visual Planning via Reinforcement
+Learning (VPRL), empowered by GRPO for post-training large vision models,
+leading to substantial improvements in planning in a selection of
+representative visual navigation tasks, FrozenLake, Maze, and MiniBehavior. Our
+visual planning paradigm outperforms all other planning variants that conduct
+reasoning in the text-only space. Our results establish Visual Planning as a
+viable and promising alternative to language-based reasoning, opening new
+avenues for tasks that benefit from intuitive, image-based inference.
+</summary>
+    <author>
+      <name>Yi Xu</name>
+    </author>
+    <author>
+      <name>Chengzu Li</name>
+    </author>
+    <author>
+      <name>Han Zhou</name>
+    </author>
+    <author>
+      <name>Xingchen Wan</name>
+    </author>
+    <author>
+      <name>Caiqi Zhang</name>
+    </author>
+    <author>
+      <name>Anna Korhonen</name>
+    </author>
+    <author>
+      <name>Ivan Vulić</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 6 figures, 1 table (26 pages, 12 figures, 8 tables
+  including references and appendices)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.11409v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.11409v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
