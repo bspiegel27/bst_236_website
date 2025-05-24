@@ -1,504 +1,483 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-05-23T00:56:37Z -->
+<!-- Last updated: 2025-05-24T00:54:17Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-05-22T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">112812</opensearch:totalResults>
+  <updated>2025-05-23T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">112934</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.15818v1</id>
-    <updated>2025-05-21T17:59:56Z</updated>
-    <published>2025-05-21T17:59:56Z</published>
-    <title>InstructSAM: A Training-Free Framework for Instruction-Oriented Remote
-  Sensing Object Recognition</title>
-    <summary>  Language-Guided object recognition in remote sensing imagery is crucial for
-large-scale mapping and automated data annotation. However, existing
-open-vocabulary and visual grounding methods rely on explicit category cues,
-limiting their ability to handle complex or implicit queries that require
-advanced reasoning. To address this issue, we introduce a new suite of tasks,
-including Instruction-Oriented Object Counting, Detection, and Segmentation
-(InstructCDS), covering open-vocabulary, open-ended, and open-subclass
-scenarios. We further present EarthInstruct, the first InstructCDS benchmark
-for earth observation. It is constructed from two diverse remote sensing
-datasets with varying spatial resolutions and annotation rules across 20
-categories, necessitating models to interpret dataset-specific instructions.
-Given the scarcity of semantically rich labeled data in remote sensing, we
-propose InstructSAM, a training-free framework for instruction-driven object
-recognition. InstructSAM leverages large vision-language models to interpret
-user instructions and estimate object counts, employs SAM2 for mask proposal,
-and formulates mask-label assignment as a binary integer programming problem.
-By integrating semantic similarity with counting constraints, InstructSAM
-efficiently assigns categories to predicted masks without relying on confidence
-thresholds. Experiments demonstrate that InstructSAM matches or surpasses
-specialized baselines across multiple tasks while maintaining near-constant
-inference time regardless of object count, reducing output tokens by 89% and
-overall runtime by over 32% compared to direct generation approaches. We
-believe the contributions of the proposed tasks, benchmark, and effective
-approach will advance future research in developing versatile object
-recognition systems.
+    <id>http://arxiv.org/abs/2505.17011v1</id>
+    <updated>2025-05-22T17:59:02Z</updated>
+    <published>2025-05-22T17:59:02Z</published>
+    <title>Learning Adaptive and Temporally Causal Video Tokenization in a 1D
+  Latent Space</title>
+    <summary>  We propose AdapTok, an adaptive temporal causal video tokenizer that can
+flexibly allocate tokens for different frames based on video content. AdapTok
+is equipped with a block-wise masking strategy that randomly drops tail tokens
+of each block during training, and a block causal scorer to predict the
+reconstruction quality of video frames using different numbers of tokens.
+During inference, an adaptive token allocation strategy based on integer linear
+programming is further proposed to adjust token usage given predicted scores.
+Such design allows for sample-wise, content-aware, and temporally dynamic token
+allocation under a controllable overall budget. Extensive experiments for video
+reconstruction and generation on UCF-101 and Kinetics-600 demonstrate the
+effectiveness of our approach. Without additional image data, AdapTok
+consistently improves reconstruction quality and generation performance under
+different token budgets, allowing for more scalable and token-efficient
+generative video modeling.
 </summary>
     <author>
-      <name>Yijie Zheng</name>
+      <name>Yan Li</name>
     </author>
     <author>
-      <name>Weijie Wu</name>
+      <name>Changyao Tian</name>
     </author>
     <author>
-      <name>Qingyun Li</name>
+      <name>Renqiu Xia</name>
     </author>
     <author>
-      <name>Xuehui Wang</name>
+      <name>Ning Liao</name>
     </author>
     <author>
-      <name>Xu Zhou</name>
+      <name>Weiwei Guo</name>
     </author>
     <author>
-      <name>Aiai Ren</name>
+      <name>Junchi Yan</name>
     </author>
     <author>
-      <name>Jun Shen</name>
+      <name>Hongsheng Li</name>
     </author>
     <author>
-      <name>Long Zhao</name>
+      <name>Jifeng Dai</name>
     </author>
     <author>
-      <name>Guoqing Li</name>
+      <name>Hao Li</name>
     </author>
     <author>
       <name>Xue Yang</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.15818v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15818v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/VisionXLab/AdapTok</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.17011v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.17011v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.15817v1</id>
-    <updated>2025-05-21T17:59:54Z</updated>
-    <published>2025-05-21T17:59:54Z</published>
-    <title>Learning to Reason via Mixture-of-Thought for Logical Reasoning</title>
-    <summary>  Human beings naturally utilize multiple reasoning modalities to learn and
-solve logical problems, i.e., different representational formats such as
-natural language, code, and symbolic logic. In contrast, most existing
-LLM-based approaches operate with a single reasoning modality during training,
-typically natural language. Although some methods explored modality selection
-or augmentation at inference time, the training process remains modality-blind,
-limiting synergy among modalities. To fill in this gap, we propose
-Mixture-of-Thought (MoT), a framework that enables LLMs to reason across three
-complementary modalities: natural language, code, and a newly introduced
-symbolic modality, truth-table, which systematically enumerates logical cases
-and partially mitigates key failure modes in natural language reasoning. MoT
-adopts a two-phase design: (1) self-evolving MoT training, which jointly learns
-from filtered, self-generated rationales across modalities; and (2) MoT
-inference, which fully leverages the synergy of three modalities to produce
-better predictions. Experiments on logical reasoning benchmarks including FOLIO
-and ProofWriter demonstrate that our MoT framework consistently and
-significantly outperforms strong LLM baselines with single-modality
-chain-of-thought approaches, achieving up to +11.7pp average accuracy gain.
-Further analyses show that our MoT framework benefits both training and
-inference stages; that it is particularly effective on harder logical reasoning
-problems; and that different modalities contribute complementary strengths,
-with truth-table reasoning helping to overcome key bottlenecks in natural
-language inference.
+    <id>http://arxiv.org/abs/2505.17004v1</id>
+    <updated>2025-05-22T17:58:12Z</updated>
+    <published>2025-05-22T17:58:12Z</published>
+    <title>Guided Diffusion Sampling on Function Spaces with Applications to PDEs</title>
+    <summary>  We propose a general framework for conditional sampling in PDE-based inverse
+problems, targeting the recovery of whole solutions from extremely sparse or
+noisy measurements. This is accomplished by a function-space diffusion model
+and plug-and-play guidance for conditioning. Our method first trains an
+unconditional discretization-agnostic denoising model using neural operator
+architectures. At inference, we refine the samples to satisfy sparse
+observation data via a gradient-based guidance mechanism. Through rigorous
+mathematical analysis, we extend Tweedie's formula to infinite-dimensional
+Hilbert spaces, providing the theoretical foundation for our posterior sampling
+approach. Our method (FunDPS) accurately captures posterior distributions in
+function spaces under minimal supervision and severe data scarcity. Across five
+PDE tasks with only 3% observation, our method achieves an average 32% accuracy
+improvement over state-of-the-art fixed-resolution diffusion baselines while
+reducing sampling steps by 4x. Furthermore, multi-resolution fine-tuning
+ensures strong cross-resolution generalizability. To the best of our knowledge,
+this is the first diffusion-based framework to operate independently of
+discretization, offering a practical and flexible solution for forward and
+inverse problems in the context of PDEs. Code is available at
+https://github.com/neuraloperator/FunDPS
 </summary>
     <author>
-      <name>Tong Zheng</name>
+      <name>Jiachen Yao</name>
     </author>
     <author>
-      <name>Lichang Chen</name>
+      <name>Abbas Mammadov</name>
     </author>
     <author>
-      <name>Simeng Han</name>
+      <name>Julius Berner</name>
     </author>
     <author>
-      <name>R. Thomas McCoy</name>
+      <name>Gavin Kerrigan</name>
     </author>
     <author>
-      <name>Heng Huang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">38 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.15817v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15817v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.15807v1</id>
-    <updated>2025-05-21T17:59:01Z</updated>
-    <published>2025-05-21T17:59:01Z</published>
-    <title>The Atlas of In-Context Learning: How Attention Heads Shape In-Context
-  Retrieval Augmentation</title>
-    <summary>  Large language models are able to exploit in-context learning to access
-external knowledge beyond their training data through retrieval-augmentation.
-While promising, its inner workings remain unclear. In this work, we shed light
-on the mechanism of in-context retrieval augmentation for question answering by
-viewing a prompt as a composition of informational components. We propose an
-attribution-based method to identify specialized attention heads, revealing
-in-context heads that comprehend instructions and retrieve relevant contextual
-information, and parametric heads that store entities' relational knowledge. To
-better understand their roles, we extract function vectors and modify their
-attention weights to show how they can influence the answer generation process.
-Finally, we leverage the gained insights to trace the sources of knowledge used
-during inference, paving the way towards more safe and transparent language
-models.
-</summary>
-    <author>
-      <name>Patrick Kahardipraja</name>
+      <name>Jong Chul Ye</name>
     </author>
     <author>
-      <name>Reduan Achtibat</name>
+      <name>Kamyar Azizzadenesheli</name>
     </author>
     <author>
-      <name>Thomas Wiegand</name>
+      <name>Anima Anandkumar</name>
     </author>
-    <author>
-      <name>Wojciech Samek</name>
-    </author>
-    <author>
-      <name>Sebastian Lapuschkin</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">work in progress</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.15807v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15807v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2505.17004v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.17004v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.15781v1</id>
-    <updated>2025-05-21T17:32:10Z</updated>
-    <published>2025-05-21T17:32:10Z</published>
-    <title>dKV-Cache: The Cache for Diffusion Language Models</title>
-    <summary>  Diffusion Language Models (DLMs) have been seen as a promising competitor for
-autoregressive language models. However, diffusion language models have long
-been constrained by slow inference. A core challenge is that their
-non-autoregressive architecture and bidirectional attention preclude the
-key-value cache that accelerates decoding. We address this bottleneck by
-proposing a KV-cache-like mechanism, delayed KV-Cache, for the denoising
-process of DLMs. Our approach is motivated by the observation that different
-tokens have distinct representation dynamics throughout the diffusion process.
-Accordingly, we propose a delayed and conditioned caching strategy for key and
-value states. We design two complementary variants to cache key and value
-step-by-step: (1) dKV-Cache-Decode, which provides almost lossless
-acceleration, and even improves performance on long sequences, suggesting that
-existing DLMs may under-utilise contextual information during inference. (2)
-dKV-Cache-Greedy, which has aggressive caching with reduced lifespan, achieving
-higher speed-ups with quadratic time complexity at the cost of some performance
-degradation. dKV-Cache, in final, achieves from 2-10x speedup in inference,
-largely narrowing the gap between ARs and DLMs. We evaluate our dKV-Cache on
-several benchmarks, delivering acceleration across general language
-understanding, mathematical, and code-generation benchmarks. Experiments
-demonstrate that cache can also be used in DLMs, even in a training-free manner
-from current DLMs.
+    <id>http://arxiv.org/abs/2505.16990v1</id>
+    <updated>2025-05-22T17:55:04Z</updated>
+    <published>2025-05-22T17:55:04Z</published>
+    <title>Dimple: Discrete Diffusion Multimodal Large Language Model with Parallel
+  Decoding</title>
+    <summary>  In this work, we propose Dimple, the first Discrete Diffusion Multimodal
+Large Language Model (DMLLM). We observe that training with a purely discrete
+diffusion approach leads to significant training instability, suboptimal
+performance, and severe length bias issues. To address these challenges, we
+design a novel training paradigm that combines an initial autoregressive phase
+with a subsequent diffusion phase. This approach yields the Dimple-7B model,
+trained on the same dataset and using a similar training pipeline as
+LLaVA-NEXT. Dimple-7B ultimately surpasses LLaVA-NEXT in performance by 3.9%,
+demonstrating that DMLLM can achieve performance comparable to that of
+autoregressive models. To improve inference efficiency, we propose a decoding
+strategy termed confident decoding, which dynamically adjusts the number of
+tokens generated at each step, significantly reducing the number of generation
+iterations. In autoregressive models, the number of forward iterations during
+generation equals the response length. With confident decoding, however, the
+number of iterations needed by Dimple is even only $\frac{\text{response
+length}}{3}$. We also re-implement the prefilling technique in autoregressive
+models and demonstrate that it does not significantly impact performance on
+most benchmark evaluations, while offering a speedup of 1.5x to 7x.
+Additionally, we explore Dimple's capability to precisely control its response
+using structure priors. These priors enable structured responses in a manner
+distinct from instruction-based or chain-of-thought prompting, and allow
+fine-grained control over response format and length, which is difficult to
+achieve in autoregressive models. Overall, this work validates the feasibility
+and advantages of DMLLM and enhances its inference efficiency and
+controllability. Code and models are available at
+https://github.com/yu-rp/Dimple.
 </summary>
-    <author>
-      <name>Xinyin Ma</name>
-    </author>
     <author>
       <name>Runpeng Yu</name>
     </author>
     <author>
-      <name>Gongfan Fang</name>
+      <name>Xinyin Ma</name>
     </author>
     <author>
       <name>Xinchao Wang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The code is available at https://github.com/horseee/dKV-Cache</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.15781v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15781v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2505.16990v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16990v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.15777v1</id>
-    <updated>2025-05-21T17:28:14Z</updated>
-    <published>2025-05-21T17:28:14Z</published>
-    <title>Projection-Based Correction for Enhancing Deep Inverse Networks</title>
-    <summary>  Deep learning-based models have demonstrated remarkable success in solving
-illposed inverse problems; however, many fail to strictly adhere to the
-physical constraints imposed by the measurement process. In this work, we
-introduce a projection-based correction method to enhance the inference of deep
-inverse networks by ensuring consistency with the forward model. Specifically,
-given an initial estimate from a learned reconstruction network, we apply a
-projection step that constrains the solution to lie within the valid solution
-space of the inverse problem. We theoretically demonstrate that if the recovery
-model is a well-trained deep inverse network, the solution can be decomposed
-into range-space and null-space components, where the projection-based
-correction reduces to an identity transformation. Extensive simulations and
-experiments validate the proposed method, demonstrating improved reconstruction
-accuracy across diverse inverse problems and deep network architectures.
+    <id>http://arxiv.org/abs/2505.16982v1</id>
+    <updated>2025-05-22T17:52:59Z</updated>
+    <published>2025-05-22T17:52:59Z</published>
+    <title>Beyond Correlation: Towards Causal Large Language Model Agents in
+  Biomedicine</title>
+    <summary>  Large Language Models (LLMs) show promise in biomedicine but lack true causal
+understanding, relying instead on correlations. This paper envisions causal LLM
+agents that integrate multimodal data (text, images, genomics, etc.) and
+perform intervention-based reasoning to infer cause-and-effect. Addressing this
+requires overcoming key challenges: designing safe, controllable agentic
+frameworks; developing rigorous benchmarks for causal evaluation; integrating
+heterogeneous data sources; and synergistically combining LLMs with structured
+knowledge (KGs) and formal causal inference tools. Such agents could unlock
+transformative opportunities, including accelerating drug discovery through
+automated hypothesis generation and simulation, enabling personalized medicine
+through patient-specific causal models. This research agenda aims to foster
+interdisciplinary efforts, bridging causal concepts and foundation models to
+develop reliable AI partners for biomedical progress.
 </summary>
     <author>
-      <name>Jorge Bacca</name>
+      <name>Adib Bazgir</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.15777v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15777v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Amir Habibdoust Lafmajani</name>
+    </author>
+    <author>
+      <name>Yuwen Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.16982v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16982v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16978v1</id>
+    <updated>2025-05-22T17:52:31Z</updated>
+    <published>2025-05-22T17:52:31Z</published>
+    <title>HyGenar: An LLM-Driven Hybrid Genetic Algorithm for Few-Shot Grammar
+  Generation</title>
+    <summary>  Grammar plays a critical role in natural language processing and text/code
+generation by enabling the definition of syntax, the creation of parsers, and
+guiding structured outputs. Although large language models (LLMs) demonstrate
+impressive capabilities across domains, their ability to infer and generate
+grammars has not yet been thoroughly explored. In this paper, we aim to study
+and improve the ability of LLMs for few-shot grammar generation, where grammars
+are inferred from sets of a small number of positive and negative examples and
+generated in Backus-Naur Form. To explore this, we introduced a novel dataset
+comprising 540 structured grammar generation challenges, devised 6 metrics, and
+evaluated 8 various LLMs against it. Our findings reveal that existing LLMs
+perform sub-optimally in grammar generation. To address this, we propose an
+LLM-driven hybrid genetic algorithm, namely HyGenar, to optimize grammar
+generation. HyGenar achieves substantial improvements in both the syntactic and
+semantic correctness of generated grammars across LLMs.
+</summary>
+    <author>
+      <name>Weizhi Tang</name>
+    </author>
+    <author>
+      <name>Yixuan Li</name>
+    </author>
+    <author>
+      <name>Chris Sypherd</name>
+    </author>
+    <author>
+      <name>Elizabeth Polgreen</name>
+    </author>
+    <author>
+      <name>Vaishak Belle</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to ACL 2025 Findings. Code available at
+  https://github.com/RutaTang/HyGenar</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.16978v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16978v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16974v1</id>
+    <updated>2025-05-22T17:51:48Z</updated>
+    <published>2025-05-22T17:51:48Z</published>
+    <title>OpenSeg-R: Improving Open-Vocabulary Segmentation via Step-by-Step
+  Visual Reasoning</title>
+    <summary>  Open-Vocabulary Segmentation (OVS) has drawn increasing attention for its
+capacity to generalize segmentation beyond predefined categories. However,
+existing methods typically predict segmentation masks with simple forward
+inference, lacking explicit reasoning and interpretability. This makes it
+challenging for OVS model to distinguish similar categories in open-world
+settings due to the lack of contextual understanding and discriminative visual
+cues. To address this limitation, we propose a step-by-step visual reasoning
+framework for open-vocabulary segmentation, named OpenSeg-R. The proposed
+OpenSeg-R leverages Large Multimodal Models (LMMs) to perform hierarchical
+visual reasoning before segmentation. Specifically, we generate both generic
+and image-specific reasoning for each image, forming structured triplets that
+explain the visual reason for objects in a coarse-to-fine manner. Based on
+these reasoning steps, we can compose detailed description prompts, and feed
+them to the segmentor to produce more accurate segmentation masks. To the best
+of our knowledge, OpenSeg-R is the first framework to introduce explicit
+step-by-step visual reasoning into OVS. Experimental results demonstrate that
+OpenSeg-R significantly outperforms state-of-the-art methods on open-vocabulary
+semantic segmentation across five benchmark datasets. Moreover, it achieves
+consistent gains across all metrics on open-vocabulary panoptic segmentation.
+Qualitative results further highlight the effectiveness of our reasoning-guided
+framework in improving both segmentation precision and interpretability. Our
+code is publicly available at https://github.com/Hanzy1996/OpenSeg-R.
+</summary>
+    <author>
+      <name>Zongyan Han</name>
+    </author>
+    <author>
+      <name>Jiale Cao</name>
+    </author>
+    <author>
+      <name>Shuo Chen</name>
+    </author>
+    <author>
+      <name>Tong Wang</name>
+    </author>
+    <author>
+      <name>Jorma Laaksonen</name>
+    </author>
+    <author>
+      <name>Rao Muhammad Anwer</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.16974v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16974v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16971v1</id>
+    <updated>2025-05-22T17:50:52Z</updated>
+    <published>2025-05-22T17:50:52Z</published>
+    <title>UniPhy: Learning a Unified Constitutive Model for Inverse Physics
+  Simulation</title>
+    <summary>  We propose UniPhy, a common latent-conditioned neural constitutive model that
+can encode the physical properties of diverse materials. At inference UniPhy
+allows `inverse simulation' i.e. inferring material properties by optimizing
+the scene-specific latent to match the available observations via
+differentiable simulation. In contrast to existing methods that treat such
+inference as system identification, UniPhy does not rely on user-specified
+material type information. Compared to prior neural constitutive modeling
+approaches which learn instance specific networks, the shared training across
+materials improves both, robustness and accuracy of the estimates. We train
+UniPhy using simulated trajectories across diverse geometries and materials --
+elastic, plasticine, sand, and fluids (Newtonian &amp; non-Newtonian). At
+inference, given an object with unknown material properties, UniPhy can infer
+the material properties via latent optimization to match the motion
+observations, and can then allow re-simulating the object under diverse
+scenarios. We compare UniPhy against prior inverse simulation methods, and show
+that the inference from UniPhy enables more accurate replay and re-simulation
+under novel conditions.
+</summary>
+    <author>
+      <name>Himangi Mittal</name>
+    </author>
+    <author>
+      <name>Peiye Zhuang</name>
+    </author>
+    <author>
+      <name>Hsin-Ying Lee</name>
+    </author>
+    <author>
+      <name>Shubham Tulsiani</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">CVPR 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.16971v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16971v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16943v1</id>
+    <updated>2025-05-22T17:30:58Z</updated>
+    <published>2025-05-22T17:30:58Z</published>
+    <title>Sliding Friction of Hard Sliders on Rubber: Theory and Experiment</title>
+    <summary>  We present a study of sliding friction for rigid triangular steel sliders on
+soft rubber substrates under both lubricated and dry conditions. For rubber
+surfaces lubricated with a thin film of silicone oil, the measured sliding
+friction at room temperature agrees well with theoretical predictions obtained
+from a viscoelastic model originally developed for rolling friction. On the
+lubricated surface, the sliding friction is primarily due to bulk viscoelastic
+energy dissipation in the rubber. The model, which includes strain-dependent
+softening of the rubber modulus, accurately predicts the experimental friction
+curves. At lower temperatures ($T = -20^\circ {\rm C}$ and $-40^\circ {\rm
+C}$), the measured friction exceeds the theoretical prediction. We attribute
+this increase to penetration of the lubricant film by surface asperities,
+leading to a larger adhesive contribution. For dry surfaces, the adhesive
+contribution becomes dominant. By subtracting the viscoelastic component
+inferred from the lubricated case, we estimate the interfacial frictional shear
+stress. This shear stress increases approximately linearly with the logarithm
+of the sliding speed, consistent with stress-augmented thermal activation
+mechanisms.
+</summary>
+    <author>
+      <name>R. Xu</name>
+    </author>
+    <author>
+      <name>B. N. J Persson</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.16943v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16943v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16942v1</id>
+    <updated>2025-05-22T17:30:38Z</updated>
+    <published>2025-05-22T17:30:38Z</published>
+    <title>Efficient Correlation Volume Sampling for Ultra-High-Resolution Optical
+  Flow Estimation</title>
+    <summary>  Recent optical flow estimation methods often employ local cost sampling from
+a dense all-pairs correlation volume. This results in quadratic computational
+and memory complexity in the number of pixels. Although an alternative
+memory-efficient implementation with on-demand cost computation exists, this is
+slower in practice and therefore prior methods typically process images at
+reduced resolutions, missing fine-grained details.
+  To address this, we propose a more efficient implementation of the all-pairs
+correlation volume sampling, still matching the exact mathematical operator as
+defined by RAFT. Our approach outperforms on-demand sampling by up to 90% while
+maintaining low memory usage, and performs on par with the default
+implementation with up to 95% lower memory usage. As cost sampling makes up a
+significant portion of the overall runtime, this can translate to up to 50%
+savings for the total end-to-end model inference in memory-constrained
+environments. Our evaluation of existing methods includes an 8K
+ultra-high-resolution dataset and an additional inference-time modification of
+the recent SEA-RAFT method. With this, we achieve state-of-the-art results at
+high resolutions both in accuracy and efficiency.
+</summary>
+    <author>
+      <name>Karlis Martins Briedis</name>
+    </author>
+    <author>
+      <name>Markus Gross</name>
+    </author>
+    <author>
+      <name>Christopher Schroers</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.16942v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16942v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16936v1</id>
+    <updated>2025-05-22T17:26:23Z</updated>
+    <published>2025-05-22T17:26:23Z</published>
+    <title>SPAR: Self-supervised Placement-Aware Representation Learning for
+  Multi-Node IoT Systems</title>
+    <summary>  This work develops the underpinnings of self-supervised placement-aware
+representation learning given spatially-distributed (multi-view and multimodal)
+sensor observations, motivated by the need to represent external environmental
+state in multi-sensor IoT systems in a manner that correctly distills spatial
+phenomena from the distributed multi-vantage observations. The objective of
+sensing in IoT systems is, in general, to collectively represent an externally
+observed environment given multiple vantage points from which sensory
+observations occur. Pretraining of models that help interpret sensor data must
+therefore encode the relation between signals observed by sensors and the
+observers' vantage points in order to attain a representation that encodes the
+observed spatial phenomena in a manner informed by the specific placement of
+the measuring instruments, while allowing arbitrary placement. The work
+significantly advances self-supervised model pretraining from IoT signals
+beyond current solutions that often overlook the distinctive spatial nature of
+IoT data. Our framework explicitly learns the dependencies between measurements
+and geometric observer layouts and structural characteristics, guided by a core
+design principle: the duality between signals and observer positions. We
+further provide theoretical analyses from the perspectives of information
+theory and occlusion-invariant representation learning to offer insight into
+the rationale behind our design. Experiments on three real-world
+datasets--covering vehicle monitoring, human activity recognition, and
+earthquake localization--demonstrate the superior generalizability and
+robustness of our method across diverse modalities, sensor placements,
+application-level inference tasks, and spatial scales.
+</summary>
+    <author>
+      <name>Yizhuo Chen</name>
+    </author>
+    <author>
+      <name>Tianchen Wang</name>
+    </author>
+    <author>
+      <name>You Lyu</name>
+    </author>
+    <author>
+      <name>Yanlan Hu</name>
+    </author>
+    <author>
+      <name>Jinyang Li</name>
+    </author>
+    <author>
+      <name>Tomoyoshi Kimura</name>
+    </author>
+    <author>
+      <name>Hongjue Zhao</name>
+    </author>
+    <author>
+      <name>Yigong Hu</name>
+    </author>
+    <author>
+      <name>Denizhan Kara</name>
+    </author>
+    <author>
+      <name>Tarek Abdelzaher</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.16936v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.16936v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.15774v1</id>
-    <updated>2025-05-21T17:26:11Z</updated>
-    <published>2025-05-21T17:26:11Z</published>
-    <title>Beyond Hard and Soft: Hybrid Context Compression for Balancing Local and
-  Global Information Retention</title>
-    <summary>  Large Language Models (LLMs) encounter significant challenges in
-long-sequence inference due to computational inefficiency and redundant
-processing, driving interest in context compression techniques. Existing
-methods often rely on token importance to perform hard local compression or
-encode context into latent representations for soft global compression.
-However, the uneven distribution of textual content relevance and the diversity
-of demands for user instructions mean these approaches frequently lead to the
-loss of potentially valuable information. To address this, we propose
-$\textbf{Hy}$brid $\textbf{Co}$ntext $\textbf{Co}$mpression (HyCo$_2$) for
-LLMs, which integrates both global and local perspectives to guide context
-compression while retaining both the essential semantics and critical details
-for task completion. Specifically, we employ a hybrid adapter to refine global
-semantics with the global view, based on the observation that different
-adapters excel at different tasks. Then we incorporate a classification layer
-that assigns a retention probability to each context token based on the local
-view, determining whether it should be retained or discarded. To foster a
-balanced integration of global and local compression, we introduce auxiliary
-paraphrasing and completion pretraining before instruction tuning. This
-promotes a synergistic integration that emphasizes instruction-relevant
-information while preserving essential local details, ultimately balancing
-local and global information retention in context compression. Experiments show
-that our HyCo$_2$ method significantly enhances long-text reasoning while
-reducing token usage. It improves the performance of various LLM series by an
-average of 13.1\% across seven knowledge-intensive QA benchmarks. Moreover,
-HyCo$_2$ matches the performance of uncompressed methods while reducing token
-consumption by 88.8\%.
-</summary>
-    <author>
-      <name>Huanxuan Liao</name>
-    </author>
-    <author>
-      <name>Wen Hu</name>
-    </author>
-    <author>
-      <name>Yao Xu</name>
-    </author>
-    <author>
-      <name>Shizhu He</name>
-    </author>
-    <author>
-      <name>Jun Zhao</name>
-    </author>
-    <author>
-      <name>Kang Liu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.15774v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15774v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.15766v1</id>
-    <updated>2025-05-21T17:13:09Z</updated>
-    <published>2025-05-21T17:13:09Z</published>
-    <title>Quasar radiation transforms the gas in a merging companion galaxy</title>
-    <summary>  Quasars, powered by gas accretion onto supermassive black holes, rank among
-the most energetic objects of the Universe. While they are thought to be
-ignited by galaxy mergers and affect the surrounding gas, observational
-constraints on both processes remain scarce. Here we unveil a major merging
-system at redshift $z \approx 2.7$, and demonstrate that radiation from the
-quasar in one galaxy directly alters the gas properties in the other galaxy.
-Our findings reveal that the galaxies, with centroids separated by only a few
-kiloparsecs and approaching each other at speed $\approx550\,$km$\,$s$^{-1}$,
-are massive, form stars, and contain a substantial molecular mass. Yet, dusty
-molecular gas seen in absorption against the quasar nucleus is highly excited
-and confined within cloudlets with densities $\sim 10^5$ - $10^6$ cm$^{-3}$ and
-sizes $&lt;$0.02 pc, several orders of magnitude more compact than those observed
-in intervening (non-quasar) environments. This is also approximately 10$^5$
-times smaller than currently resolvable through molecular-line emission at high
-redshifts. We infer that, wherever exposed to the quasar radiation, molecular
-gas is disrupted, leaving behind surviving dense clouds too small to give birth
-to new stars. Our results not only underscore the role of major galaxy mergers
-in triggering quasar activity, but also reveal localized negative feedback as a
-profound alteration of internal gas structure which likely hampers star
-formation.
-</summary>
-    <author>
-      <name>Sergei Balashev</name>
-    </author>
-    <author>
-      <name>Pasquier Noterdaeme</name>
-    </author>
-    <author>
-      <name>Neeraj Gupta</name>
-    </author>
-    <author>
-      <name>Jens-Kristian Krogager</name>
-    </author>
-    <author>
-      <name>Francoise Combes</name>
-    </author>
-    <author>
-      <name>Sebastian Lopez</name>
-    </author>
-    <author>
-      <name>Patrick Petitjean</name>
-    </author>
-    <author>
-      <name>Alain Omont</name>
-    </author>
-    <author>
-      <name>Raghunathan Srianand</name>
-    </author>
-    <author>
-      <name>Rodrigo Cuellar</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1038/s41586-025-08966-4</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.1038/s41586-025-08966-4" rel="related"/>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 12 figures, published in Nature on May 21th, 2025,
-  https://www.nature.com/articles/s41586-025-08966-4</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.15766v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15766v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.15759v1</id>
-    <updated>2025-05-21T17:03:34Z</updated>
-    <published>2025-05-21T17:03:34Z</published>
-    <title>Estimating Associations Between Cumulative Exposure and Health via
-  Generalized Distributed Lag Non-Linear Models using Penalized Splines</title>
-    <summary>  Quantifying associations between short-term exposure to ambient air pollution
-and health outcomes is an important public health priority. Many studies have
-investigated the association considering delayed effects within the past few
-days. Adaptive cumulative exposure distributed lag non-linear models
-(ACE-DLNMs) quantify associations between health outcomes and cumulative
-exposure that is specified in a data-adaptive way. While the ACE-DLNM framework
-is highly interpretable, it is limited to continuous outcomes and does not
-scale well to large datasets. Motivated by a large analysis of daily pollution
-and respiratory hospitalization counts in Canada between 2001 and 2018, we
-propose a generalized ACE-DLNM incorporating penalized splines, improving upon
-existing ACE-DLNM methods to accommodate general response types. We then
-develop a computationally efficient estimation strategy based on profile
-likelihood and Laplace approximate marginal likelihood with Newton-type
-methods. We demonstrate the performance and practical advantages of the
-proposed method through simulations. In application to the motivating analysis,
-the proposed method yields more stable inferences compared to generalized
-additive models with fixed exposures, while retaining interpretability.
-</summary>
-    <author>
-      <name>Tianyi Pan</name>
-    </author>
-    <author>
-      <name>Hwashin Hyun Shin</name>
-    </author>
-    <author>
-      <name>Glen McGee</name>
-    </author>
-    <author>
-      <name>Alex Stringer</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.15759v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15759v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.15692v1</id>
-    <updated>2025-05-21T16:06:10Z</updated>
-    <published>2025-05-21T16:06:10Z</published>
-    <title>Thought-Augmented Policy Optimization: Bridging External Guidance and
-  Internal Capabilities</title>
-    <summary>  Reinforcement learning (RL) has emerged as an effective method for training
-reasoning models. However, existing RL approaches typically bias the model's
-output distribution toward reward-maximizing paths without introducing external
-knowledge. This limits their exploration capacity and results in a narrower
-reasoning capability boundary compared to base models. To address this
-limitation, we propose TAPO (Thought-Augmented Policy Optimization), a novel
-framework that augments RL by incorporating external high-level guidance
-("thought patterns"). By adaptively integrating structured thoughts during
-training, TAPO effectively balances model-internal exploration and external
-guidance exploitation. Extensive experiments show that our approach
-significantly outperforms GRPO by 99% on AIME, 41% on AMC, and 17% on Minerva
-Math. Notably, these high-level thought patterns, abstracted from only 500
-prior samples, generalize effectively across various tasks and models. This
-highlights TAPO's potential for broader applications across multiple tasks and
-domains. Our further analysis reveals that introducing external guidance
-produces powerful reasoning models with superior explainability of inference
-behavior and enhanced output readability.
-</summary>
-    <author>
-      <name>Jinyang Wu</name>
-    </author>
-    <author>
-      <name>Chonghua Liao</name>
-    </author>
-    <author>
-      <name>Mingkuan Feng</name>
-    </author>
-    <author>
-      <name>Shuai Zhang</name>
-    </author>
-    <author>
-      <name>Zhengqi Wen</name>
-    </author>
-    <author>
-      <name>Pengpeng Shao</name>
-    </author>
-    <author>
-      <name>Huazhe Xu</name>
-    </author>
-    <author>
-      <name>Jianhua Tao</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.15692v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15692v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.15690v1</id>
-    <updated>2025-05-21T16:05:29Z</updated>
-    <published>2025-05-21T16:05:29Z</published>
-    <title>Toward Open Earth Science as Fast and Accessible as Natural Language</title>
-    <summary>  Is natural-language-driven earth observation data analysis now feasible with
-the assistance of Large Language Models (LLMs)? For open science in service of
-public interest, feasibility requires reliably high accuracy, interactive
-latencies, low (sustainable) costs, open LLMs, and openly maintainable software
--- hence, the challenge. What are the techniques and programming system
-requirements necessary for satisfying these constraints, and what is the
-corresponding development and maintenance burden in practice? This study lays
-the groundwork for exploring these questions, introducing an impactful earth
-science use-case, and providing a software framework with evaluation data and
-metrics, along with initial results from employing model scaling,
-prompt-optimization, and inference-time scaling optimization techniques. While
-we attain high accuracy (near 100%) across 10 of 11 metrics, the analysis
-further considers cost (token-spend), latency, and maintainability across this
-space of techniques. Finally, we enumerate opportunities for further research,
-general programming and evaluation framework development, and ongoing work for
-a comprehensive, deployable solution. This is a call for collaboration and
-contribution.
-</summary>
-    <author>
-      <name>Marquita Ellis</name>
-    </author>
-    <author>
-      <name>Iksha Gurung</name>
-    </author>
-    <author>
-      <name>Muthukumaran Ramasubramanian</name>
-    </author>
-    <author>
-      <name>Rahul Ramachandran</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.15690v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.15690v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="J.2; H.5.2; H.3.3" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
