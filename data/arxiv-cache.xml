@@ -1,565 +1,489 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-05-29T00:57:20Z -->
+<!-- Last updated: 2025-05-30T00:56:39Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-05-28T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">113446</opensearch:totalResults>
+  <updated>2025-05-29T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">113562</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.21505v1</id>
-    <updated>2025-05-27T17:59:52Z</updated>
-    <published>2025-05-27T17:59:52Z</published>
-    <title>How does Alignment Enhance LLMs' Multilingual Capabilities? A Language
-  Neurons Perspective</title>
-    <summary>  Multilingual Alignment is an effective and representative paradigm to enhance
-LLMs' multilingual capabilities, which transfers the capabilities from the
-high-resource languages to the low-resource languages. Meanwhile, some
-researches on language-specific neurons reveal that there are language-specific
-neurons that are selectively activated in LLMs when processing different
-languages. This provides a new perspective to analyze and understand LLMs'
-mechanisms more specifically in multilingual scenarios. In this work, we
-propose a new finer-grained neuron identification algorithm, which detects
-language neurons~(including language-specific neurons and language-related
-neurons) and language-agnostic neurons. Furthermore, based on the
-distributional characteristics of different types of neurons, we divide the
-LLMs' internal process for multilingual inference into four parts: (1)
-multilingual understanding, (2) shared semantic space reasoning, (3)
-multilingual output space transformation, and (4) vocabulary space outputting.
-Additionally, we systematically analyze the models before and after alignment
-with a focus on different types of neurons. We also analyze the phenomenon of
-''Spontaneous Multilingual Alignment''. Overall, our work conducts a
-comprehensive investigation based on different types of neurons, providing
-empirical results and valuable insights for better understanding multilingual
-alignment and multilingual capabilities of LLMs.
+    <id>http://arxiv.org/abs/2505.22663v1</id>
+    <updated>2025-05-28T17:59:57Z</updated>
+    <published>2025-05-28T17:59:57Z</published>
+    <title>Training Free Stylized Abstraction</title>
+    <summary>  Stylized abstraction synthesizes visually exaggerated yet semantically
+faithful representations of subjects, balancing recognizability with perceptual
+distortion. Unlike image-to-image translation, which prioritizes structural
+fidelity, stylized abstraction demands selective retention of identity cues
+while embracing stylistic divergence, especially challenging for
+out-of-distribution individuals. We propose a training-free framework that
+generates stylized abstractions from a single image using inference-time
+scaling in vision-language models (VLLMs) to extract identity-relevant
+features, and a novel cross-domain rectified flow inversion strategy that
+reconstructs structure based on style-dependent priors. Our method adapts
+structural restoration dynamically through style-aware temporal scheduling,
+enabling high-fidelity reconstructions that honor both subject and style. It
+supports multi-round abstraction-aware generation without fine-tuning. To
+evaluate this task, we introduce StyleBench, a GPT-based human-aligned metric
+suited for abstract styles where pixel-level similarity fails. Experiments
+across diverse abstraction (e.g., LEGO, knitted dolls, South Park) show strong
+generalization to unseen identities and styles in a fully open-source setup.
 </summary>
     <author>
-      <name>Shimao Zhang</name>
+      <name>Aimon Rahman</name>
     </author>
     <author>
-      <name>Zhejian Lai</name>
+      <name>Kartik Narayan</name>
     </author>
     <author>
-      <name>Xiang Liu</name>
+      <name>Vishal M. Patel</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://kartik-3004.github.io/TF-SA/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.22663v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22663v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22662v1</id>
+    <updated>2025-05-28T17:59:53Z</updated>
+    <published>2025-05-28T17:59:53Z</published>
+    <title>AutoL2S: Auto Long-Short Reasoning for Efficient Large Language Models</title>
+    <summary>  The reasoning-capable large language models (LLMs) demonstrate strong
+performance on complex reasoning tasks but often suffer from overthinking,
+generating unnecessarily long chain-of-thought (CoT) reasoning paths for easy
+reasoning questions, thereby increasing inference cost and latency. Recent
+approaches attempt to address this challenge by manually deciding when to apply
+long or short reasoning. However, they lack the flexibility to adapt CoT length
+dynamically based on question complexity. In this paper, we propose Auto
+Long-Short Reasoning (AutoL2S), a dynamic and model-agnostic framework that
+enables LLMs to dynamically compress their generated reasoning path based on
+the complexity of the reasoning question. AutoL2S enables a learned paradigm,
+in which LLMs themselves can decide when longer reasoning is necessary and when
+shorter reasoning suffices, by training on data annotated with our proposed
+method, which includes both long and short CoT paths and a special &lt;EASY&gt;
+token. We then use &lt;EASY&gt; token to indicate when the model can skip generating
+lengthy CoT reasoning. This proposed annotation strategy can enhance the LLMs'
+ability to generate shorter CoT reasoning paths with improved quality after
+training. Extensive evaluation results show that AutoL2S reduces the length of
+reasoning generation by up to 57% without compromising performance,
+demonstrating the effectiveness of AutoL2S for scalable and efficient LLM
+reasoning.
+</summary>
+    <author>
+      <name>Feng Luo</name>
     </author>
     <author>
-      <name>Shuaijie She</name>
+      <name>Yu-Neng Chuang</name>
     </author>
     <author>
-      <name>Xiao Liu</name>
+      <name>Guanchu Wang</name>
     </author>
     <author>
-      <name>Yeyun Gong</name>
+      <name>Hoang Anh Duy Le</name>
     </author>
     <author>
-      <name>Shujian Huang</name>
+      <name>Shaochen Zhong</name>
     </author>
     <author>
-      <name>Jiajun Chen</name>
+      <name>Hongyi Liu</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.21505v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21505v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Jiayi Yuan</name>
+    </author>
+    <author>
+      <name>Yang Sui</name>
+    </author>
+    <author>
+      <name>Vladimir Braverman</name>
+    </author>
+    <author>
+      <name>Vipin Chaudhary</name>
+    </author>
+    <author>
+      <name>Xia Hu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.22662v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22662v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.21499v1</id>
-    <updated>2025-05-27T17:59:05Z</updated>
-    <published>2025-05-27T17:59:05Z</published>
-    <title>AdInject: Real-World Black-Box Attacks on Web Agents via Advertising
-  Delivery</title>
-    <summary>  Vision-Language Model (VLM) based Web Agents represent a significant step
-towards automating complex tasks by simulating human-like interaction with
-websites. However, their deployment in uncontrolled web environments introduces
-significant security vulnerabilities. Existing research on adversarial
-environmental injection attacks often relies on unrealistic assumptions, such
-as direct HTML manipulation, knowledge of user intent, or access to agent model
-parameters, limiting their practical applicability. In this paper, we propose
-AdInject, a novel and real-world black-box attack method that leverages the
-internet advertising delivery to inject malicious content into the Web Agent's
-environment. AdInject operates under a significantly more realistic threat
-model than prior work, assuming a black-box agent, static malicious content
-constraints, and no specific knowledge of user intent. AdInject includes
-strategies for designing malicious ad content aimed at misleading agents into
-clicking, and a VLM-based ad content optimization technique that infers
-potential user intents from the target website's context and integrates these
-intents into the ad content to make it appear more relevant or critical to the
-agent's task, thus enhancing attack effectiveness. Experimental evaluations
-demonstrate the effectiveness of AdInject, attack success rates exceeding 60%
-in most scenarios and approaching 100% in certain cases. This strongly
-demonstrates that prevalent advertising delivery constitutes a potent and
-real-world vector for environment injection attacks against Web Agents. This
-work highlights a critical vulnerability in Web Agent security arising from
-real-world environment manipulation channels, underscoring the urgent need for
-developing robust defense mechanisms against such threats. Our code is
-available at https://github.com/NicerWang/AdInject.
+    <id>http://arxiv.org/abs/2505.22659v1</id>
+    <updated>2025-05-28T17:59:29Z</updated>
+    <published>2025-05-28T17:59:29Z</published>
+    <title>Network Generating Processes With Self Exciting Arrival Times</title>
+    <summary>  In this paper, we propose a novel modeling framework for time-evolving
+networks allowing for long-term dependence in network features that update in
+continuous time. Dynamic network growth is functionally parameterized via the
+conditional intensity of a marked point process. This characterization enables
+flexible modeling of both the time of updates and the network updates
+themselves, dependent on the entire left-continuous sample path. We propose a
+path-dependent nonlinear marked Hawkes process as an expressive platform for
+modeling such data; its dynamic mark space embeds the time-evolving network. We
+establish stability conditions, demonstrate simulation and subsequent feasible
+likelihood-based inference through numerical study, and present an application
+to conference attendee social network data. The resulting methodology serves as
+a general framework that can be readily adapted to a wide range of network
+topologies and point process model specifications.
 </summary>
     <author>
-      <name>Haowei Wang</name>
+      <name>Duncan A Clark</name>
     </author>
     <author>
-      <name>Junjie Wang</name>
+      <name>Conor J. Kresin</name>
     </author>
     <author>
-      <name>Xiaojun Jia</name>
+      <name>Charlotte M. Jones-Todd</name>
     </author>
-    <author>
-      <name>Rupeng Zhang</name>
-    </author>
-    <author>
-      <name>Mingyang Li</name>
-    </author>
-    <author>
-      <name>Zhe Liu</name>
-    </author>
-    <author>
-      <name>Yang Liu</name>
-    </author>
-    <author>
-      <name>Qing Wang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.21499v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21499v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.21495v1</id>
-    <updated>2025-05-27T17:58:00Z</updated>
-    <published>2025-05-27T17:58:00Z</published>
-    <title>CLAMP: Crowdsourcing a LArge-scale in-the-wild haptic dataset with an
-  open-source device for Multimodal robot Perception</title>
-    <summary>  Robust robot manipulation in unstructured environments often requires
-understanding object properties that extend beyond geometry, such as material
-or compliance-properties that can be challenging to infer using vision alone.
-Multimodal haptic sensing provides a promising avenue for inferring such
-properties, yet progress has been constrained by the lack of large, diverse,
-and realistic haptic datasets. In this work, we introduce the CLAMP device, a
-low-cost (&lt;\$200) sensorized reacher-grabber designed to collect large-scale,
-in-the-wild multimodal haptic data from non-expert users in everyday settings.
-We deployed 16 CLAMP devices to 41 participants, resulting in the CLAMP
-dataset, the largest open-source multimodal haptic dataset to date, comprising
-12.3 million datapoints across 5357 household objects. Using this dataset, we
-train a haptic encoder that can infer material and compliance object properties
-from multimodal haptic data. We leverage this encoder to create the CLAMP
-model, a visuo-haptic perception model for material recognition that
-generalizes to novel objects and three robot embodiments with minimal
-finetuning. We also demonstrate the effectiveness of our model in three
-real-world robot manipulation tasks: sorting recyclable and non-recyclable
-waste, retrieving objects from a cluttered bag, and distinguishing overripe
-from ripe bananas. Our results show that large-scale, in-the-wild haptic data
-collection can unlock new capabilities for generalizable robot manipulation.
-Website: https://emprise.cs.cornell.edu/clamp/
-</summary>
-    <author>
-      <name>Pranav N. Thakkar</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Anjelica</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Shubhangi Sinha</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Anjelica</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Karan Baijal</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Anjelica</arxiv:affiliation>
-    </author>
-    <author>
-      <name> Yuhan</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Anjelica</arxiv:affiliation>
-    </author>
-    <author>
-      <name> Bian</name>
-    </author>
-    <author>
-      <name>Leah Lackey</name>
-    </author>
-    <author>
-      <name>Ben Dodson</name>
-    </author>
-    <author>
-      <name>Heisen Kong</name>
-    </author>
-    <author>
-      <name>Jueun Kwon</name>
-    </author>
-    <author>
-      <name>Amber Li</name>
-    </author>
-    <author>
-      <name>Yifei Hu</name>
-    </author>
-    <author>
-      <name>Alexios Rekoutis</name>
-    </author>
-    <author>
-      <name>Tom Silver</name>
-    </author>
-    <author>
-      <name>Tapomayukh Bhattacharjee</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.21495v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21495v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.21492v1</id>
-    <updated>2025-05-27T17:56:11Z</updated>
-    <published>2025-05-27T17:56:11Z</published>
-    <title>Dust removal timescale in galaxies across cosmic time</title>
-    <summary>  Understanding the evolution of dust in galaxies is crucial because it affects
-the dynamics and cooling of gas, star formation, and chemical evolution. Recent
-work on dust removal in galaxies indicates timescales of gigayears, with old
-stellar populations and AGNs as the primary drivers of this process. However,
-most statistically significant studies are focused on low redshifts $z &lt; 0.4$.
-Here, we determine the dust removal timescale in galaxies over a wide range of
-redshifts, up to $z \sim 5$. We use publicly available catalogue data of
-infrared-selected galaxies, observed by \textit{Herschel}. Using the inferred
-dust masses, stellar masses, and stellar ages, we calculate the dust removal
-timescale in a sample of more than 120,000 galaxies. We find that, with
-increasing redshift, the dust removal timescale decreases from 1.8 Gyr at
-redshift $z \sim 0.05$ to less than 500\,Myr at $z &gt; 3$. Galaxies at higher
-redshifts undergo more efficient dust removal than galaxies at lower redshift,
-likely driven by AGN activity, supernova shocks, and astration. These findings
-indicate that dust removal evolves over cosmic time, reflecting the changing
-mechanisms regulating dust content of galaxies as the Universe evolves.
-</summary>
-    <author>
-      <name>Aleksandra Leśniewska</name>
-    </author>
-    <author>
-      <name>Jens Hjorth</name>
-    </author>
-    <author>
-      <name>Christa Gall</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">submitted to A&amp;A, under review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.21492v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21492v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.21482v1</id>
-    <updated>2025-05-27T17:52:42Z</updated>
-    <published>2025-05-27T17:52:42Z</published>
-    <title>Tissue-specific predictive performance: A unified estimation and
-  inference framework for multi-category screening tests</title>
-    <summary>  Multi-Cancer Early Detection (MCED) testing with tissue localization aims to
-detect and identify multiple cancer types from a single blood sample. Such
-tests have the potential to aid clinical decisions and significantly improve
-health outcomes. Despite this promise, MCED testing has not yet achieved
-regulatory approval, reimbursement or broad clinical adoption. One major reason
-for this shortcoming is uncertainty about test performance resulting from the
-reporting of clinically obtuse metrics. Traditionally, MCED tests report
-aggregate measures of test performance, disregarding cancer type, that obscure
-biological variability and underlying differences in the test's behavior,
-limiting insight into true effectiveness. Clinically informative evaluation of
-an MCED test's performance requires metrics that are specific to cancer types.
-In the context of a case-control sampling design, this paper derives analytical
-methods that estimate cancer-specific intrinsic accuracy, tissue localization
-readout-specific predictive value and the marginal test classification
-distribution, each with corresponding confidence interval formulae. A
-simulation study is presented that evaluates performance of the proposed
-methodology and provides guidance for implementation. An application to a
-published MCED test dataset is given. These statistical approaches allow for
-estimation and inference for the pointed metric of an MCED test that allow its
-evaluation to support a potential role in early cancer detection. This
-framework enables more precise clinical decision-making, supports optimized
-trial designs across classical, digital, AI-driven, and hybrid stratified
-diagnostic screening platforms, and facilitates informed healthcare decisions
-by clinicians, policymakers, regulators, scientists, and patients.
-</summary>
-    <author>
-      <name>A. Gregory DiRienzo</name>
-    </author>
-    <author>
-      <name>Elie Massaad</name>
-    </author>
-    <author>
-      <name>Hutan Ashrafian</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.21482v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21482v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2505.22659v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22659v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.21479v1</id>
-    <updated>2025-05-27T17:51:18Z</updated>
-    <published>2025-05-27T17:51:18Z</published>
-    <title>Are Language Models Consequentialist or Deontological Moral Reasoners?</title>
-    <summary>  As AI systems increasingly navigate applications in healthcare, law, and
-governance, understanding how they handle ethically complex scenarios becomes
-critical. Previous work has mainly examined the moral judgments in large
-language models (LLMs), rather than their underlying moral reasoning process.
-In contrast, we focus on a large-scale analysis of the moral reasoning traces
-provided by LLMs. Furthermore, unlike prior work that attempted to draw
-inferences from only a handful of moral dilemmas, our study leverages over 600
-distinct trolley problems as probes for revealing the reasoning patterns that
-emerge within different LLMs. We introduce and test a taxonomy of moral
-rationales to systematically classify reasoning traces according to two main
-normative ethical theories: consequentialism and deontology. Our analysis
-reveals that LLM chains-of-thought tend to favor deontological principles based
-on moral obligations, while post-hoc explanations shift notably toward
-consequentialist rationales that emphasize utility. Our framework provides a
-foundation for understanding how LLMs process and articulate ethical
-considerations, an important step toward safe and interpretable deployment of
-LLMs in high-stakes decision-making environments. Our code is available at
-https://github.com/keenansamway/moral-lens .
+    <id>http://arxiv.org/abs/2505.22654v1</id>
+    <updated>2025-05-28T17:59:08Z</updated>
+    <published>2025-05-28T17:59:08Z</published>
+    <title>VScan: Rethinking Visual Token Reduction for Efficient Large
+  Vision-Language Models</title>
+    <summary>  Recent Large Vision-Language Models (LVLMs) have advanced multi-modal
+understanding by incorporating finer-grained visual perception and encoding.
+However, such methods incur significant computational costs due to longer
+visual token sequences, posing challenges for real-time deployment. To mitigate
+this, prior studies have explored pruning unimportant visual tokens either at
+the output layer of the visual encoder or at the early layers of the language
+model. In this work, we revisit these design choices and reassess their
+effectiveness through comprehensive empirical studies of how visual tokens are
+processed throughout the visual encoding and language decoding stages. Guided
+by these insights, we propose VScan, a two-stage visual token reduction
+framework that addresses token redundancy by: (1) integrating complementary
+global and local scans with token merging during visual encoding, and (2)
+introducing pruning at intermediate layers of the language model. Extensive
+experimental results across four LVLMs validate the effectiveness of VScan in
+accelerating inference and demonstrate its superior performance over current
+state-of-the-arts on sixteen benchmarks. Notably, when applied to
+LLaVA-NeXT-7B, VScan achieves a 2.91$\times$ speedup in prefilling and a
+10$\times$ reduction in FLOPs, while retaining 95.4% of the original
+performance.
 </summary>
     <author>
-      <name>Keenan Samway</name>
+      <name>Ce Zhang</name>
     </author>
     <author>
-      <name>Max Kleiman-Weiner</name>
+      <name>Kaixin Ma</name>
     </author>
     <author>
-      <name>David Guzman Piedrahita</name>
+      <name>Tianqing Fang</name>
     </author>
     <author>
-      <name>Rada Mihalcea</name>
+      <name>Wenhao Yu</name>
     </author>
     <author>
-      <name>Bernhard Schölkopf</name>
+      <name>Hongming Zhang</name>
     </author>
     <author>
-      <name>Zhijing Jin</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.21479v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21479v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.21472v1</id>
-    <updated>2025-05-27T17:45:21Z</updated>
-    <published>2025-05-27T17:45:21Z</published>
-    <title>Mitigating Hallucination in Large Vision-Language Models via Adaptive
-  Attention Calibration</title>
-    <summary>  Large vision-language models (LVLMs) achieve impressive performance on
-multimodal tasks but often suffer from hallucination, and confidently describe
-objects or attributes not present in the image. Current inference-time
-interventions, while training-free, struggle to maintain accuracy in open-ended
-and long-form generation scenarios. We introduce the Confidence-Aware Attention
-Calibration (CAAC) framework to address this challenge by targeting two key
-biases: spatial perception bias, which distributes attention disproportionately
-across image tokens, and modality bias, which shifts focus from visual to
-textual inputs over time. CAAC employs a two-step approach: Visual-Token
-Calibration (VTC) to balance attention across visual tokens, and Adaptive
-Attention Re-Scaling (AAR) to reinforce visual grounding based on the model's
-confidence. This confidence-driven adjustment ensures consistent visual
-alignment during generation. Experiments on CHAIR, AMBER, and POPE benchmarks
-demonstrate that CAAC outperforms baselines, particularly in long-form
-generations, effectively reducing hallucination.
-</summary>
-    <author>
-      <name>Mehrdad Fazli</name>
+      <name>Zhisong Zhang</name>
     </author>
     <author>
-      <name>Bowen Wei</name>
+      <name>Yaqi Xie</name>
     </author>
     <author>
-      <name>Ziwei Zhu</name>
+      <name>Katia Sycara</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.21472v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21472v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Haitao Mi</name>
+    </author>
+    <author>
+      <name>Dong Yu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.22654v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22654v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.21473v1</id>
-    <updated>2025-05-27T17:45:21Z</updated>
-    <published>2025-05-27T17:45:21Z</published>
-    <title>DetailFlow: 1D Coarse-to-Fine Autoregressive Image Generation via
-  Next-Detail Prediction</title>
-    <summary>  This paper presents DetailFlow, a coarse-to-fine 1D autoregressive (AR) image
-generation method that models images through a novel next-detail prediction
-strategy. By learning a resolution-aware token sequence supervised with
-progressively degraded images, DetailFlow enables the generation process to
-start from the global structure and incrementally refine details. This
-coarse-to-fine 1D token sequence aligns well with the autoregressive inference
-mechanism, providing a more natural and efficient way for the AR model to
-generate complex visual content. Our compact 1D AR model achieves high-quality
-image synthesis with significantly fewer tokens than previous approaches, i.e.
-VAR/VQGAN. We further propose a parallel inference mechanism with
-self-correction that accelerates generation speed by approximately 8x while
-reducing accumulation sampling error inherent in teacher-forcing supervision.
-On the ImageNet 256x256 benchmark, our method achieves 2.96 gFID with 128
-tokens, outperforming VAR (3.3 FID) and FlexVAR (3.05 FID), which both require
-680 tokens in their AR models. Moreover, due to the significantly reduced token
-count and parallel inference mechanism, our method runs nearly 2x faster
-inference speed compared to VAR and FlexVAR. Extensive experimental results
-demonstrate DetailFlow's superior generation quality and efficiency compared to
-existing state-of-the-art methods.
+    <id>http://arxiv.org/abs/2505.22650v1</id>
+    <updated>2025-05-28T17:57:29Z</updated>
+    <published>2025-05-28T17:57:29Z</published>
+    <title>On Learning Verifiers for Chain-of-Thought Reasoning</title>
+    <summary>  Chain-of-Thought reasoning has emerged as a powerful approach for solving
+complex mathematical and logical problems. However, it can often veer off track
+through incorrect or unsubstantiated inferences. Formal mathematical reasoning,
+which can be checked with a formal verifier, is one approach to addressing this
+issue. However, currently LLMs are simply not good enough to solve complex
+problems in a formal way, and even just formalizing an informal problem
+statement can be challenging. Motivated by this fact, in this work we consider
+the problem of learning reliable verifiers for natural language
+Chain-of-Thought reasoning. That is, given a problem statement and step-by-step
+solution in natural language, the aim of the verifier is to output [Yes] if the
+reasoning steps in the solution are all valid, and [No] otherwise. In this work
+we give a formal PAC-learning framework for studying this problem. We propose
+and analyze several natural verification goals, at different levels of
+strength, in this framework. We provide sample complexity upper-bounds for
+learning verifiers satisfying these goals, as well as lower-bound and
+impossibility results for learning other natural verification objectives
+without additional assumptions.
 </summary>
     <author>
-      <name>Yiheng Liu</name>
+      <name>Maria-Florina Balcan</name>
     </author>
     <author>
-      <name>Liao Qu</name>
+      <name>Avrim Blum</name>
     </author>
     <author>
-      <name>Huichao Zhang</name>
+      <name>Zhiyuan Li</name>
     </author>
     <author>
-      <name>Xu Wang</name>
+      <name>Dravyansh Sharma</name>
+    </author>
+    <link href="http://arxiv.org/abs/2505.22650v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22650v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22646v1</id>
+    <updated>2025-05-28T17:56:53Z</updated>
+    <published>2025-05-28T17:56:53Z</published>
+    <title>Path-Dependent SDEs: Solutions and Parameter Estimation</title>
+    <summary>  We develop a consistent method for estimating the parameters of a rich class
+of path-dependent SDEs, called signature SDEs, which can model general
+path-dependent phenomena. Path signatures are iterated integrals of a given
+path with the property that any sufficiently nice function of the path can be
+approximated by a linear functional of its signatures. This is why we model the
+drift and diffusion of our signature SDE as linear functions of path
+signatures. We provide conditions that ensure the existence and uniqueness of
+solutions to a general signature SDE. We then introduce the Expected Signature
+Matching Method (ESMM) for linear signature SDEs, which enables inference of
+the signature-dependent drift and diffusion coefficients from observed
+trajectories. Furthermore, we prove that ESMM is consistent: given sufficiently
+many samples and Picard iterations used by the method, the parameters estimated
+by the ESMM approach the true parameter with arbitrary precision. Finally, we
+demonstrate on a variety of empirical simulations that our ESMM accurately
+infers the drift and diffusion parameters from observed trajectories. While
+parameter estimation is often restricted by the need for a suitable parametric
+model, this work makes progress toward a completely general framework for SDE
+parameter estimation, using signature terms to model arbitrary path-independent
+and path-dependent processes.
+</summary>
+    <author>
+      <name>Pardis Semnani</name>
     </author>
     <author>
-      <name>Yi Jiang</name>
+      <name>Vincent Guan</name>
     </author>
     <author>
-      <name>Yiming Gao</name>
+      <name>Elina Robeva</name>
     </author>
     <author>
-      <name>Hu Ye</name>
+      <name>Darrick Lee</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">41 pages, 4 figures, 4 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.22646v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22646v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="60L20, 60L90, 62M99, 62M09" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22637v1</id>
+    <updated>2025-05-28T17:53:31Z</updated>
+    <published>2025-05-28T17:53:31Z</published>
+    <title>Understanding (Un)Reliability of Steering Vectors in Language Models</title>
+    <summary>  Steering vectors are a lightweight method to control language model behavior
+by adding a learned bias to the activations at inference time. Although
+steering demonstrates promising performance, recent work shows that it can be
+unreliable or even counterproductive in some cases. This paper studies the
+influence of prompt types and the geometry of activation differences on
+steering reliability. First, we find that all seven prompt types used in our
+experiments produce a net positive steering effect, but exhibit high variance
+across samples, and often give an effect opposite of the desired one. No prompt
+type clearly outperforms the others, and yet the steering vectors resulting
+from the different prompt types often differ directionally (as measured by
+cosine similarity). Second, we show that higher cosine similarity between
+training set activation differences predicts more effective steering. Finally,
+we observe that datasets where positive and negative activations are better
+separated are more steerable. Our results suggest that vector steering is
+unreliable when the target behavior is not represented by a coherent direction.
+</summary>
+    <author>
+      <name>Joschka Braun</name>
     </author>
     <author>
-      <name>Xian Li</name>
+      <name>Carsten Eickhoff</name>
     </author>
     <author>
-      <name>Shuai Wang</name>
+      <name>David Krueger</name>
     </author>
     <author>
-      <name>Daniel K. Du</name>
+      <name>Seyed Ali Bahrainian</name>
     </author>
     <author>
-      <name>Shu Cheng</name>
+      <name>Dmitrii Krasheninnikov</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">17 pages, 10 figures. Presented at the ICLR 2025 Workshop on
+  Foundation Models in the Wild</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.22637v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22637v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22636v1</id>
+    <updated>2025-05-28T17:51:17Z</updated>
+    <published>2025-05-28T17:51:17Z</published>
+    <title>ObjectClear: Complete Object Removal via Object-Effect Attention</title>
+    <summary>  Object removal requires eliminating not only the target object but also its
+effects, such as shadows and reflections. However, diffusion-based inpainting
+methods often produce artifacts, hallucinate content, alter background, and
+struggle to remove object effects accurately. To address this challenge, we
+introduce a new dataset for OBject-Effect Removal, named OBER, which provides
+paired images with and without object effects, along with precise masks for
+both objects and their associated visual artifacts. The dataset comprises
+high-quality captured and simulated data, covering diverse object categories
+and complex multi-object scenes. Building on OBER, we propose a novel
+framework, ObjectClear, which incorporates an object-effect attention mechanism
+to guide the model toward the foreground removal regions by learning attention
+masks, effectively decoupling foreground removal from background
+reconstruction. Furthermore, the predicted attention map enables an
+attention-guided fusion strategy during inference, greatly preserving
+background details. Extensive experiments demonstrate that ObjectClear
+outperforms existing methods, achieving improved object-effect removal quality
+and background fidelity, especially in complex scenarios.
+</summary>
+    <author>
+      <name>Jixin Zhao</name>
     </author>
     <author>
-      <name>Zehuan Yuan</name>
+      <name>Shangchen Zhou</name>
     </author>
     <author>
-      <name>Xinglong Wu</name>
+      <name>Zhouxia Wang</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.21473v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21473v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Peiqing Yang</name>
+    </author>
+    <author>
+      <name>Chen Change Loy</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://zjx0101.github.io/projects/ObjectClear/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2505.22636v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22636v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.21471v1</id>
-    <updated>2025-05-27T17:45:04Z</updated>
-    <published>2025-05-27T17:45:04Z</published>
-    <title>Scaling External Knowledge Input Beyond Context Windows of LLMs via
-  Multi-Agent Collaboration</title>
-    <summary>  With the rapid advancement of post-training techniques for reasoning and
-information seeking, large language models (LLMs) can incorporate a large
-quantity of retrieved knowledge to solve complex tasks. However, the limited
-context window of LLMs obstructs scaling the amount of external knowledge
-input, prohibiting further improvement, especially for tasks requiring
-significant amount of external knowledge. Existing context window extension
-methods inevitably cause information loss. LLM-based multi-agent methods emerge
-as a new paradigm to handle massive input in a distributional manner, where we
-identify two core bottlenecks in existing knowledge synchronization and
-reasoning processes. In this work, we develop a multi-agent framework,
-$\textbf{ExtAgents}$, to overcome the bottlenecks and enable better scalability
-in inference-time knowledge integration without longer-context training.
-Benchmarked with our enhanced multi-hop question answering test,
-$\textbf{$\boldsymbol{\infty}$Bench+}$, and other public test sets including
-long survey generation, ExtAgents significantly enhances the performance over
-existing non-training methods with the same amount of external knowledge input,
-regardless of whether it falls $\textit{within or exceeds the context window}$.
-Moreover, the method maintains high efficiency due to high parallelism. Further
-study in the coordination of LLM agents on increasing external knowledge input
-could benefit real-world applications.
+    <id>http://arxiv.org/abs/2505.22632v1</id>
+    <updated>2025-05-28T17:50:20Z</updated>
+    <published>2025-05-28T17:50:20Z</published>
+    <title>Towards the Efficient Inference by Incorporating Automated Computational
+  Phenotypes under Covariate Shift</title>
+    <summary>  Collecting gold-standard phenotype data via manual extraction is typically
+labor-intensive and slow, whereas automated computational phenotypes (ACPs)
+offer a systematic and much faster alternative. However, simply replacing the
+gold-standard with ACPs, without acknowledging their differences, could lead to
+biased results and misleading conclusions. Motivated by the complexity of
+incorporating ACPs while maintaining the validity of downstream analyses, in
+this paper, we consider a semi-supervised learning setting that consists of
+both labeled data (with gold-standard) and unlabeled data (without
+gold-standard), under the covariate shift framework. We develop doubly robust
+and semiparametrically efficient estimators that leverage ACPs for general
+target parameters in the unlabeled and combined populations. In addition, we
+carefully analyze the efficiency gains achieved by incorporating ACPs,
+comparing scenarios with and without their inclusion. Notably, we identify that
+ACPs for the unlabeled data, instead of for the labeled data, drive the
+enhanced efficiency gains. To validate our theoretical findings, we conduct
+comprehensive synthetic experiments and apply our method to multiple real-world
+datasets, confirming the practical advantages of our approach.
+\hfill{\texttt{Code}:
+\href{https://github.com/brucejunjin/ICML2025-ACPCS}{\faGithub}}
 </summary>
     <author>
-      <name>Zijun Liu</name>
+      <name>Chao Ying</name>
     </author>
     <author>
-      <name>Zhennan Wan</name>
+      <name>Jun Jin</name>
     </author>
     <author>
-      <name>Peng Li</name>
+      <name>Yi Guo</name>
     </author>
     <author>
-      <name>Ming Yan</name>
+      <name>Xiudi Li</name>
     </author>
     <author>
-      <name>Ji Zhang</name>
+      <name>Muxuan Liang</name>
     </author>
     <author>
-      <name>Fei Huang</name>
+      <name>Jiwei Zhao</name>
     </author>
-    <author>
-      <name>Yang Liu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">30 pages, 9 figures. Code and data are available at
-  https://github.com/THUNLP-MT/ExtAgents</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.21471v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21471v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">2025 ICML</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2505.22632v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22632v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.21469v1</id>
-    <updated>2025-05-27T17:42:22Z</updated>
-    <published>2025-05-27T17:42:22Z</published>
-    <title>PropMolFlow: Property-guided Molecule Generation with Geometry-Complete
-  Flow Matching</title>
-    <summary>  Molecule generation is advancing rapidly in chemical discovery and drug
-design. Flow matching methods have recently set the state of the art (SOTA) in
-unconditional molecule generation, surpassing score-based diffusion models.
-However, diffusion models still lead in property-guided generation. In this
-work, we introduce PropMolFlow, a novel approach for property-guided molecule
-generation based on geometry-complete SE(3)-equivariant flow matching.
-Integrating five different property embedding methods with a Gaussian expansion
-of scalar properties, PropMolFlow outperforms previous SOTA diffusion models in
-conditional molecule generation across various properties while preserving the
-stability and validity of the generated molecules, consistent with its
-unconditional counterpart. Additionally, it enables faster inference with
-significantly fewer time steps compared to baseline models. We highlight the
-importance of validating the properties of generated molecules through DFT
-calculations performed at the same level of theory as the training data.
-Specifically, our analysis identifies properties that require DFT validation
-and others where a pretrained SE(3) geometric vector perceptron regressors
-provide sufficiently accurate predictions on generated molecules. Furthermore,
-we introduce a new property metric designed to assess the model's ability to
-propose molecules with underrepresented property values, assessing its capacity
-for out-of-distribution generalization. Our findings reveal shortcomings in
-existing structural metrics, which mistakenly validate open-shell molecules or
-molecules with invalid valence-charge configurations, underscoring the need for
-improved evaluation frameworks. Overall, this work paves the way for developing
-targeted property-guided generation methods, enhancing the design of molecular
-generative models for diverse applications.
+    <id>http://arxiv.org/abs/2505.22618v1</id>
+    <updated>2025-05-28T17:39:15Z</updated>
+    <published>2025-05-28T17:39:15Z</published>
+    <title>Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV
+  Cache and Parallel Decoding</title>
+    <summary>  Diffusion-based large language models (Diffusion LLMs) have shown promise for
+non-autoregressive text generation with parallel decoding capabilities.
+However, the practical inference speed of open-sourced Diffusion LLMs often
+lags behind autoregressive models due to the lack of Key-Value (KV) Cache and
+quality degradation when decoding multiple tokens simultaneously. To bridge
+this gap, we introduce a novel block-wise approximate KV Cache mechanism
+tailored for bidirectional diffusion models, enabling cache reuse with
+negligible performance drop. Additionally, we identify the root cause of
+generation quality degradation in parallel decoding as the disruption of token
+dependencies under the conditional independence assumption. To address this, we
+propose a confidence-aware parallel decoding strategy that selectively decodes
+tokens exceeding a confidence threshold, mitigating dependency violations and
+maintaining generation quality. Experimental results on LLaDA and Dream models
+across multiple LLM benchmarks demonstrate up to \textbf{27.6$\times$
+throughput} improvement with minimal accuracy loss, closing the performance gap
+with autoregressive models and paving the way for practical deployment of
+Diffusion LLMs.
 </summary>
     <author>
-      <name>Cheng Zeng</name>
+      <name>Chengyue Wu</name>
     </author>
     <author>
-      <name>Jirui Jin</name>
+      <name>Hao Zhang</name>
     </author>
     <author>
-      <name>George Karypis</name>
+      <name>Shuchen Xue</name>
     </author>
     <author>
-      <name>Mark Transtrum</name>
+      <name>Zhijian Liu</name>
     </author>
     <author>
-      <name>Ellad B. Tadmor</name>
+      <name>Shizhe Diao</name>
     </author>
     <author>
-      <name>Richard G. Hennig</name>
+      <name>Ligeng Zhu</name>
     </author>
     <author>
-      <name>Adrian Roitberg</name>
+      <name>Ping Luo</name>
     </author>
     <author>
-      <name>Stefano Martiniani</name>
+      <name>Song Han</name>
     </author>
     <author>
-      <name>Mingjie Liu</name>
+      <name>Enze Xie</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.21469v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.21469v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2505.22618v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2505.22618v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
