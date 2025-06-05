@@ -1,460 +1,482 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-04T00:57:57Z -->
+<!-- Last updated: 2025-06-05T00:57:21Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-03T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">113805</opensearch:totalResults>
+  <updated>2025-06-04T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114132</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2505.24873v1</id>
-    <updated>2025-05-30T17:59:45Z</updated>
-    <published>2025-05-30T17:59:45Z</published>
-    <title>MiniMax-Remover: Taming Bad Noise Helps Video Object Removal</title>
-    <summary>  Recent advances in video diffusion models have driven rapid progress in video
-editing techniques. However, video object removal, a critical subtask of video
-editing, remains challenging due to issues such as hallucinated objects and
-visual artifacts. Furthermore, existing methods often rely on computationally
-expensive sampling procedures and classifier-free guidance (CFG), resulting in
-slow inference. To address these limitations, we propose MiniMax-Remover, a
-novel two-stage video object removal approach. Motivated by the observation
-that text condition is not best suited for this task, we simplify the
-pretrained video generation model by removing textual input and cross-attention
-layers, resulting in a more lightweight and efficient model architecture in the
-first stage. In the second stage, we distilled our remover on successful videos
-produced by the stage-1 model and curated by human annotators, using a minimax
-optimization strategy to further improve editing quality and inference speed.
-Specifically, the inner maximization identifies adversarial input noise ("bad
-noise") that makes failure removals, while the outer minimization step trains
-the model to generate high-quality removal results even under such challenging
-conditions. As a result, our method achieves a state-of-the-art video object
-removal results with as few as 6 sampling steps and doesn't rely on CFG,
-significantly improving inference efficiency. Extensive experiments demonstrate
-the effectiveness and superiority of MiniMax-Remover compared to existing
-methods. Codes and Videos are available at: https://minimax-remover.github.io.
+    <id>http://arxiv.org/abs/2506.03149v1</id>
+    <updated>2025-06-03T17:59:47Z</updated>
+    <published>2025-06-03T17:59:47Z</published>
+    <title>Causal Estimation of Tokenisation Bias</title>
+    <summary>  Modern language models are typically trained over subword sequences, but
+ultimately define probabilities over character-strings. Ideally, the choice of
+the tokeniser -- which maps character-strings to subwords -- should not affect
+the probability assigned to the underlying character-string; in practice, it
+does. We define this mismatch as tokenisation bias. In this work, we quantify
+one particular type of tokenisation bias: the effect of including or not a
+subword (e.g., $\langle hello \rangle$) in a tokeniser's vocabulary on the
+probability a trained model assigns to the corresponding characters (i.e.,
+\textit{``hello''}). Estimating this effect is challenging because each model
+is trained with only one tokeniser. We address this by framing tokenisation
+bias as a causal effect and estimating it using the regression discontinuity
+design. Specifically, we exploit the fact that tokenisation algorithms rank
+subwords and add the first $K$ to a tokeniser's vocabulary, where $K$ is an
+arbitrary cutoff point. As such, we can estimate a causal effect by comparing
+similar subwords around this cutoff. Experimentally, we find that tokenisation
+consistently affects models' outputs across scales, vocabularies, and
+tokenisers. Notably, a subword's presence in a small model's vocabulary may
+increase its characters' probability by up to 17 times, highlighting
+tokenisation as a key design choice in language modelling.
 </summary>
     <author>
-      <name>Bojia Zi</name>
+      <name>Pietro Lesci</name>
     </author>
     <author>
-      <name>Weixuan Peng</name>
+      <name>Clara Meister</name>
     </author>
     <author>
-      <name>Xianbiao Qi</name>
+      <name>Thomas Hofmann</name>
     </author>
     <author>
-      <name>Jianan Wang</name>
+      <name>Andreas Vlachos</name>
     </author>
     <author>
-      <name>Shihao Zhao</name>
+      <name>Tiago Pimentel</name>
     </author>
-    <author>
-      <name>Rong Xiao</name>
-    </author>
-    <author>
-      <name>Kam-Fai Wong</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.24873v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24873v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Published as a conference paper at ACL 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.03149v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03149v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.24872v1</id>
-    <updated>2025-05-30T17:59:43Z</updated>
-    <published>2025-05-30T17:59:43Z</published>
-    <title>ProxyThinker: Test-Time Guidance through Small Visual Reasoners</title>
-    <summary>  Recent advancements in reinforcement learning with verifiable rewards have
-pushed the boundaries of the visual reasoning capabilities in large
-vision-language models (LVLMs). However, training LVLMs with reinforcement
-fine-tuning (RFT) is computationally expensive, posing a significant challenge
-to scaling model size. In this work, we propose ProxyThinker, an inference-time
-technique that enables large models to inherit the visual reasoning
-capabilities from small, slow-thinking visual reasoners without any training.
-By subtracting the output distributions of base models from those of RFT
-reasoners, ProxyThinker modifies the decoding dynamics and successfully elicits
-the slow-thinking reasoning demonstrated by the emerged sophisticated behaviors
-such as self-verification and self-correction. ProxyThinker consistently boosts
-performance on challenging visual benchmarks on spatial, mathematical, and
-multi-disciplinary reasoning, enabling untuned base models to compete with the
-performance of their full-scale RFT counterparts. Furthermore, our
-implementation efficiently coordinates multiple language models with
-parallelism techniques and achieves up to 38 $\times$ faster inference compared
-to previous decoding-time methods, paving the way for the practical deployment
-of ProxyThinker. Code is available at
-https://github.com/MrZilinXiao/ProxyThinker.
+    <id>http://arxiv.org/abs/2506.03147v2</id>
+    <updated>2025-06-04T14:45:58Z</updated>
+    <published>2025-06-03T17:59:33Z</published>
+    <title>UniWorld: High-Resolution Semantic Encoders for Unified Visual
+  Understanding and Generation</title>
+    <summary>  Although existing unified models achieve strong performance in
+vision-language understanding and text-to-image generation, they remain limited
+in addressing image perception and manipulation -- capabilities increasingly
+demanded in practical applications. Recently, OpenAI introduced the powerful
+GPT-4o-Image model, which showcases advanced capabilities in comprehensive
+image perception and manipulation, sparking widespread interest. Through
+carefully designed experiments, we observe that GPT-4o-Image likely relies on
+semantic encoders rather than VAEs for feature extraction, despite VAEs being
+commonly regarded as crucial for image manipulation tasks. Inspired by this
+insight, we propose UniWorld, a unified generative framework built upon
+semantic features extracted from powerful multimodal large language models and
+contrastive semantic encoders. Using only 2.7M training data, UniWorld achieves
+impressive performance across diverse tasks, including image understanding,
+generation, manipulation, and perception. We fully open-source the UniWorld
+framework, including model weights, training and evaluation scripts, and
+datasets to promote reproducibility and further research.
 </summary>
     <author>
-      <name>Zilin Xiao</name>
+      <name>Bin Lin</name>
     </author>
     <author>
-      <name>Jaywon Koo</name>
+      <name>Zongjian Li</name>
     </author>
     <author>
-      <name>Siru Ouyang</name>
+      <name>Xinhua Cheng</name>
     </author>
     <author>
-      <name>Jefferson Hernandez</name>
+      <name>Yuwei Niu</name>
     </author>
     <author>
-      <name>Yu Meng</name>
+      <name>Yang Ye</name>
     </author>
     <author>
-      <name>Vicente Ordonez</name>
+      <name>Xianyi He</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.24872v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24872v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Shenghai Yuan</name>
+    </author>
+    <author>
+      <name>Wangbo Yu</name>
+    </author>
+    <author>
+      <name>Shaodong Wang</name>
+    </author>
+    <author>
+      <name>Yunyang Ge</name>
+    </author>
+    <author>
+      <name>Yatian Pang</name>
+    </author>
+    <author>
+      <name>Li Yuan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.03147v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03147v2" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.24869v1</id>
-    <updated>2025-05-30T17:59:19Z</updated>
-    <published>2025-05-30T17:59:19Z</published>
-    <title>SiLVR: A Simple Language-based Video Reasoning Framework</title>
-    <summary>  Recent advances in test-time optimization have led to remarkable reasoning
-capabilities in Large Language Models (LLMs), enabling them to solve highly
-complex problems in math and coding. However, the reasoning capabilities of
-multimodal LLMs (MLLMs) still significantly lag, especially for complex
-video-language tasks. To address this issue, we present SiLVR, a Simple
-Language-based Video Reasoning framework that decomposes complex video
-understanding into two stages. In the first stage, SiLVR transforms raw video
-into language-based representations using multisensory inputs, such as short
-clip captions and audio/speech subtitles. In the second stage, language
-descriptions are fed into a powerful reasoning LLM to solve complex
-video-language understanding tasks. To handle long-context multisensory inputs,
-we use an adaptive token reduction scheme, which dynamically determines the
-temporal granularity with which to sample the tokens. Our simple, modular, and
-training-free video reasoning framework achieves the best-reported results on
-Video-MME (long), Video-MMMU (comprehension), Video-MMLU, CGBench, and EgoLife.
-Furthermore, our empirical study focused on video reasoning capabilities shows
-that, despite not being explicitly trained on video, strong reasoning LLMs can
-effectively aggregate multisensory input information from video, speech, and
-audio for complex temporal, causal, long-context, and knowledge acquisition
-reasoning tasks in video. Code is available at https://github.com/CeeZh/SILVR.
+    <id>http://arxiv.org/abs/2506.03136v1</id>
+    <updated>2025-06-03T17:58:42Z</updated>
+    <published>2025-06-03T17:58:42Z</published>
+    <title>Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning</title>
+    <summary>  We propose CURE, a novel reinforcement learning framework with a dedicated
+reward design that co-evolves coding and unit test generation capabilities
+based on their interaction outcomes, without any ground-truth code as
+supervision. This approach enables flexible and scalable training and allows
+the unit tester to learn directly from the coder's mistakes. Our derived
+ReasonFlux-Coder-7B and 14B models improve code generation accuracy by 5.3% and
+Best-of-N accuracy by 9.0% after optimization on Qwen2.5-Instruct models,
+outperforming similarly sized Qwen-Coder, DeepSeek-Coder, and Seed-Coder. They
+naturally extend to downstream tasks such as test-time scaling and agentic
+coding-achieving a 8.1% improvement over the base model. For the long-CoT
+model, our ReasonFlux-Coder-4B consistently outperforms Qwen3-4B while
+achieving 64.8% inference efficiency in unit test generation. Notably, we also
+find that our model can serve as an effective reward model for reinforcement
+learning on base models. Project: https://github.com/Gen-Verse/CURE
 </summary>
     <author>
-      <name>Ce Zhang</name>
+      <name>Yinjie Wang</name>
     </author>
     <author>
-      <name>Yan-Bo Lin</name>
+      <name>Ling Yang</name>
     </author>
     <author>
-      <name>Ziyang Wang</name>
+      <name>Ye Tian</name>
     </author>
     <author>
-      <name>Mohit Bansal</name>
+      <name>Ke Shen</name>
     </author>
     <author>
-      <name>Gedas Bertasius</name>
+      <name>Mengdi Wang</name>
     </author>
-    <link href="http://arxiv.org/abs/2505.24869v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24869v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.24859v1</id>
-    <updated>2025-05-30T17:57:15Z</updated>
-    <published>2025-05-30T17:57:15Z</published>
-    <title>Beyond Multiple Choice: Evaluating Steering Vectors for Adaptive
-  Free-Form Summarization</title>
-    <summary>  Steering vectors are a lightweight method for controlling text properties by
-adding a learned bias to language model activations at inference time. So far,
-steering vectors have predominantly been evaluated in multiple-choice settings,
-while their effectiveness in free-form generation tasks remains understudied.
-Moving "Beyond Multiple Choice," we thoroughly evaluate the effectiveness of
-steering vectors in adaptively controlling topical focus, sentiment, toxicity,
-and readability in abstractive summaries of the NEWTS dataset. We find that
-steering effectively controls the targeted summary properties, but high
-steering strengths consistently degrade both intrinsic and extrinsic text
-quality. Compared to steering, prompting offers weaker control, while
-preserving text quality. Combining steering and prompting yields the strongest
-control over text properties and offers the most favorable efficacy-quality
-trade-off at moderate steering strengths. Our results underscore the practical
-trade-off between control strength and text quality preservation when applying
-steering vectors to free-form generation tasks.
-</summary>
-    <author>
-      <name>Joschka Braun</name>
-    </author>
-    <author>
-      <name>Carsten Eickhoff</name>
-    </author>
-    <author>
-      <name>Seyed Ali Bahrainian</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 21 figures, preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.24859v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24859v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.24855v1</id>
-    <updated>2025-05-30T17:51:29Z</updated>
-    <published>2025-05-30T17:51:29Z</published>
-    <title>Active Gaussian Network Model: a non-equilibrium description of protein
-  fluctuations and allosteric behavior</title>
-    <summary>  Understanding the link between structure and function in proteins is
-fundamental in molecular biology and proteomics. A central question in this
-context is whether allostery - where the binding of a molecule at one site
-affects the activity of a distant site - emerges as a further manifestation of
-the intricate interplay between structure, function, and intrinsic dynamics.
-This study explores how allosteric regulation is modified when intrinsic
-protein dynamics operate under out-of-equilibrium conditions. To this purpose,
-we introduce a simple nonequilibrium model of protein dynamics, inspired by
-active matter systems, by generalizing the widely employed Gaussian Network
-Model (GNM) to incorporate non-thermal effects. Our approach underscores the
-advantage of framing allostery as a causal process by using, as a benchmark
-system, the second PDZ domain of the human phosphatase hPT1E that mediates
-protein-protein interactions. We employ causal indicators, such as response
-functions and transfer entropy, to identify the network of PDZ2 residues
-through which the allosteric signal propagates across the protein structure.
-These indicators reveal specific regions that align well with experimental
-observations. Furthermore, our results suggest that deviations from purely
-thermal fluctuations can significantly influence allosteric communication by
-introducing distinct timescales and memory effects. This influence is
-particularly relevant when the allosteric response unfolds on timescales
-incompatible with relaxation to equilibrium. Accordingly, non-thermal
-fluctuations may become essential for accurately describing protein responses
-to ligand binding and developing a comprehensive understanding of allosteric
-regulation.
-</summary>
-    <author>
-      <name>Giulio Costantini</name>
-    </author>
-    <author>
-      <name>Lorenzo Caprini</name>
-    </author>
-    <author>
-      <name>Umberto Marini Bettolo Marconi</name>
-    </author>
-    <author>
-      <name>Fabio Cecconi</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.24855v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24855v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.24852v1</id>
-    <updated>2025-05-30T17:49:30Z</updated>
-    <published>2025-05-30T17:49:30Z</published>
-    <title>Chameleon: A MatMul-Free Temporal Convolutional Network Accelerator for
-  End-to-End Few-Shot and Continual Learning from Sequential Data</title>
-    <summary>  On-device learning at the edge enables low-latency, private personalization
-with improved long-term robustness and reduced maintenance costs. Yet,
-achieving scalable, low-power end-to-end on-chip learning, especially from
-real-world sequential data with a limited number of examples, is an open
-challenge. Indeed, accelerators supporting error backpropagation optimize for
-learning performance at the expense of inference efficiency, while simplified
-learning algorithms often fail to reach acceptable accuracy targets. In this
-work, we present Chameleon, leveraging three key contributions to solve these
-challenges. (i) A unified learning and inference architecture supports few-shot
-learning (FSL), continual learning (CL) and inference at only 0.5% area
-overhead to the inference logic. (ii) Long temporal dependencies are
-efficiently captured with temporal convolutional networks (TCNs), enabling the
-first demonstration of end-to-end on-chip FSL and CL on sequential data and
-inference on 16-kHz raw audio. (iii) A dual-mode, matrix-multiplication-free
-compute array allows either matching the power consumption of state-of-the-art
-inference-only keyword spotting (KWS) accelerators or enabling $4.3\times$
-higher peak GOPS. Fabricated in 40-nm CMOS, Chameleon sets new accuracy records
-on Omniglot for end-to-end on-chip FSL (96.8%, 5-way 1-shot, 98.8%, 5-way
-5-shot) and CL (82.2% final accuracy for learning 250 classes with 10 shots),
-while maintaining an inference accuracy of 93.3% on the 12-class Google Speech
-Commands dataset at an extreme-edge power budget of 3.1 $\mu$W.
-</summary>
-    <author>
-      <name>Douwe den Blanken</name>
-    </author>
-    <author>
-      <name>Charlotte Frenkel</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.24852v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24852v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="C.3; B.6.0; B.7.0; I.2.6; B.5.0" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.24843v1</id>
-    <updated>2025-05-30T17:42:32Z</updated>
-    <published>2025-05-30T17:42:32Z</published>
-    <title>From Invariant Representations to Invariant Data: Provable Robustness to
-  Spurious Correlations via Noisy Counterfactual Matching</title>
-    <summary>  Spurious correlations can cause model performance to degrade in new
-environments. Prior causality-inspired works aim to learn invariant
-representations (e.g., IRM) but typically underperform empirical risk
-minimization (ERM). Recent alternatives improve robustness by leveraging
-test-time data, but such data may be unavailable in practice. To address these
-issues, we take a data-centric approach by leveraging invariant data pairs,
-pairs of samples that would have the same prediction with the optimally robust
-classifier. We prove that certain counterfactual pairs will naturally satisfy
-this invariance property and introduce noisy counterfactual matching (NCM), a
-simple constraint-based method for leveraging invariant pairs for enhanced
-robustness, even with a small set of noisy pairs-in the ideal case, each pair
-can eliminate one spurious feature. For linear causal models, we prove that the
-test domain error can be upper bounded by the in-domain error and a term that
-depends on the counterfactuals' diversity and quality. We validate on a
-synthetic dataset and demonstrate on real-world benchmarks that linear probing
-on a pretrained backbone improves robustness.
-</summary>
-    <author>
-      <name>Ruqi Bai</name>
-    </author>
-    <author>
-      <name>Yao Ji</name>
-    </author>
-    <author>
-      <name>Zeyu Zhou</name>
-    </author>
-    <author>
-      <name>David I. Inouye</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.24843v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24843v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2505.24832v2</id>
-    <updated>2025-06-02T14:13:41Z</updated>
-    <published>2025-05-30T17:34:03Z</published>
-    <title>How much do language models memorize?</title>
-    <summary>  We propose a new method for estimating how much a model ``knows'' about a
-datapoint and use it to measure the capacity of modern language models. Prior
-studies of language model memorization have struggled to disentangle
-memorization from generalization. We formally separate memorization into two
-components: \textit{unintended memorization}, the information a model contains
-about a specific dataset, and \textit{generalization}, the information a model
-contains about the true data-generation process. When we completely eliminate
-generalization, we can compute the total memorization, which provides an
-estimate of model capacity: our measurements estimate that GPT-style models
-have a capacity of approximately 3.6 bits per parameter. We train language
-models on datasets of increasing size and observe that models memorize until
-their capacity fills, at which point ``grokking'' begins, and unintended
-memorization decreases as models begin to generalize. We train hundreds of
-transformer language models ranging from $500K$ to $1.5B$ parameters and
-produce a series of scaling laws relating model capacity and data size to
-membership inference.
-</summary>
-    <author>
-      <name>John X. Morris</name>
-    </author>
-    <author>
-      <name>Chawin Sitawarin</name>
-    </author>
-    <author>
-      <name>Chuan Guo</name>
-    </author>
-    <author>
-      <name>Narine Kokhlikyan</name>
-    </author>
-    <author>
-      <name>G. Edward Suh</name>
-    </author>
-    <author>
-      <name>Alexander M. Rush</name>
-    </author>
-    <author>
-      <name>Kamalika Chaudhuri</name>
-    </author>
-    <author>
-      <name>Saeed Mahloujifar</name>
-    </author>
-    <link href="http://arxiv.org/abs/2505.24832v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24832v2" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project: https://github.com/Gen-Verse/CURE</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.03136v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03136v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.24816v1</id>
-    <updated>2025-05-30T17:19:52Z</updated>
-    <published>2025-05-30T17:19:52Z</published>
-    <title>CL-LoRA: Continual Low-Rank Adaptation for Rehearsal-Free
-  Class-Incremental Learning</title>
-    <summary>  Class-Incremental Learning (CIL) aims to learn new classes sequentially while
-retaining the knowledge of previously learned classes. Recently, pre-trained
-models (PTMs) combined with parameter-efficient fine-tuning (PEFT) have shown
-remarkable performance in rehearsal-free CIL without requiring exemplars from
-previous tasks. However, existing adapter-based methods, which incorporate
-lightweight learnable modules into PTMs for CIL, create new adapters for each
-new task, leading to both parameter redundancy and failure to leverage shared
-knowledge across tasks. In this work, we propose ContinuaL Low-Rank Adaptation
-(CL-LoRA), which introduces a novel dual-adapter architecture combining
-\textbf{task-shared adapters} to learn cross-task knowledge and
-\textbf{task-specific adapters} to capture unique features of each new task.
-Specifically, the shared adapters utilize random orthogonal matrices and
-leverage knowledge distillation with gradient reassignment to preserve
-essential shared knowledge. In addition, we introduce learnable block-wise
-weights for task-specific adapters, which mitigate inter-task interference
-while maintaining the model's plasticity. We demonstrate CL-LoRA consistently
-achieves promising performance under multiple benchmarks with reduced training
-and inference computation, establishing a more efficient and scalable paradigm
-for continual learning with pre-trained models.
+    <id>http://arxiv.org/abs/2506.03111v1</id>
+    <updated>2025-06-03T17:40:39Z</updated>
+    <published>2025-06-03T17:40:39Z</published>
+    <title>Rectified Flows for Fast Multiscale Fluid Flow Modeling</title>
+    <summary>  The statistical modeling of fluid flows is very challenging due to their
+multiscale dynamics and extreme sensitivity to initial conditions. While
+recently proposed conditional diffusion models achieve high fidelity, they
+typically require hundreds of stochastic sampling steps at inference. We
+introduce a rectified flow framework that learns a time-dependent velocity
+field, transporting input to output distributions along nearly straight
+trajectories. By casting sampling as solving an ordinary differential equation
+(ODE) along this straighter flow field, our method makes each integration step
+much more effective, using as few as eight steps versus (more than) 128 steps
+in standard score-based diffusion, without sacrificing predictive fidelity.
+Experiments on challenging multiscale flow benchmarks show that rectified flows
+recover the same posterior distributions as diffusion models, preserve
+fine-scale features that MSE-trained baselines miss, and deliver
+high-resolution samples in a fraction of inference time.
 </summary>
     <author>
-      <name>Jiangpeng He</name>
+      <name>Victor Armegioiu</name>
     </author>
     <author>
-      <name>Zhihao Duan</name>
+      <name>Yannick Ramic</name>
     </author>
     <author>
-      <name>Fengqing Zhu</name>
+      <name>Siddhartha Mishra</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to CVPR 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.24816v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24816v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.03111v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03111v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03104v1</id>
+    <updated>2025-06-03T17:37:15Z</updated>
+    <published>2025-06-03T17:37:15Z</published>
+    <title>Two-Phase Treatment with Noncompliance: Identifying the Cumulative
+  Average Treatment Effect via Multisite Instrumental Variables</title>
+    <summary>  In evaluating a multi-phase intervention, the cumulative average treatment
+effect (ATE) is often the causal estimand of key interest. Yet some individuals
+who do not respond well to the Phase-I treatment may subsequently display
+noncompliant behaviors. However, noncompliance tends to be constrained by the
+stochastic availability of slots under the alternative treatment condition in
+Phase II, which makes the notion of the "complier average treatment effect"
+problematic. Moreover, the Phase-I treatment is expected to affect an
+individual's potential outcomes through additional pathways that violate the
+exclusion restriction. Extending an instrumental variable (IV) strategy for
+multisite trials, we clarify conditions for identifying the cumulative ATE of a
+two-phase treatment by employing the random assignment of the Phase-I treatment
+as the IV. Our strategy relaxes the exclusion restriction and the sequential
+ignorability in their conventional forms. We evaluate the performance of the
+new strategy through simulations. Reanalyzing data from the Tennessee class
+size study in which students and teachers were assigned at random to either a
+small or a regular class in kindergarten (Phase I) yet noncompliance occurred
+in Grade 1 (Phase II), we estimate the cumulative ATE of receiving two years of
+instruction in a small class versus a regular class.
+</summary>
+    <author>
+      <name>Guanglei Hong</name>
+    </author>
+    <author>
+      <name>Xu Qin</name>
+    </author>
+    <author>
+      <name>Zhengyan Xu</name>
+    </author>
+    <author>
+      <name>Fan Yang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">37 pages; 1 figure; 4 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.03104v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03104v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03099v1</id>
+    <updated>2025-06-03T17:29:28Z</updated>
+    <published>2025-06-03T17:29:28Z</published>
+    <title>TalkingMachines: Real-Time Audio-Driven FaceTime-Style Video via
+  Autoregressive Diffusion Models</title>
+    <summary>  In this paper, we present TalkingMachines -- an efficient framework that
+transforms pretrained video generation models into real-time, audio-driven
+character animators. TalkingMachines enables natural conversational experiences
+by integrating an audio large language model (LLM) with our video generation
+foundation model. Our primary contributions include: (1) We adapt a pretrained
+SOTA image-to-video DiT into an audio-driven avatar generation model of 18
+billion parameters; (2) We enable infinite video streaming without error
+accumulation through asymmetric knowledge distillation from a bidirectional
+teacher model into a sparse causal, autoregressive student model; (3) We design
+a high-throughput, low-latency inference pipeline incorporating several key
+engineering optimizations such as: (a) disaggregation of the DiT and VAE
+decoder across separate devices, (b) efficient overlap of inter-device
+communication and computation using CUDA streams, (c) elimination of redundant
+recomputations to maximize frame-generation throughput. Please see demo videos
+here - https://aaxwaz.github.io/TalkingMachines/
+</summary>
+    <author>
+      <name>Chetwin Low</name>
+    </author>
+    <author>
+      <name>Weimin Wang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.03099v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03099v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03095v1</id>
+    <updated>2025-06-03T17:27:04Z</updated>
+    <published>2025-06-03T17:27:04Z</published>
+    <title>DPO Learning with LLMs-Judge Signal for Computer Use Agents</title>
+    <summary>  Computer use agents (CUA) are systems that automatically interact with
+graphical user interfaces (GUIs) to complete tasks. CUA have made significant
+progress with the advent of large vision-language models (VLMs). However, these
+agents typically rely on cloud-based inference with substantial compute
+demands, raising critical privacy and scalability concerns, especially when
+operating on personal devices. In this work, we take a step toward
+privacy-preserving and resource-efficient agents by developing a lightweight
+vision-language model that runs entirely on local machines. To train this
+compact agent, we introduce an LLM-as-Judge framework that automatically
+evaluates and filters synthetic interaction trajectories, producing
+high-quality data for reinforcement learning without human annotation.
+Experiments on the OS-World benchmark demonstrate that our fine-tuned local
+model outperforms existing baselines, highlighting a promising path toward
+private, efficient, and generalizable GUI agents.
+</summary>
+    <author>
+      <name>Man Luo</name>
+    </author>
+    <author>
+      <name>David Cobbley</name>
+    </author>
+    <author>
+      <name>Xin Su</name>
+    </author>
+    <author>
+      <name>Shachar Rosenman</name>
+    </author>
+    <author>
+      <name>Vasudev Lal</name>
+    </author>
+    <author>
+      <name>Shao-Yen Tseng</name>
+    </author>
+    <author>
+      <name>Phillip Howard</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.03095v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03095v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2505.24795v1</id>
-    <updated>2025-05-30T16:56:47Z</updated>
-    <published>2025-05-30T16:56:47Z</published>
-    <title>Early warning signals in rumor models</title>
-    <summary>  We study the emission and control of a rumor using the modified Maki-Thomson
-model. A key challenge in social networks is distinguishing between natural
-increases in transmissibility and artificial injections of rumor spreaders,
-such as through broadcast events or astroturfing. Using stochastic simulations,
-we compare two scenarios: one with organic growth in transmissibility, and
-another with externally injected spreaders. Although both lead to high
-autocorrelation, only the organic growth produces oscillatory patterns in
-autocorrelation at multiple lags, an effect we can analytically explain using
-the N-intertwined mean-field (NIMFA) approximation. This distinction offers a
-practical tool to identify the origin of rumor virality and also infer its
-transmissibility. Our approach is validated analytically and tested on
-real-world data from Twitter during the announcement of the Higgs boson
-discovery. In addition to detection, we also explore control strategies. We
-show that the average lifetime of a rumor can be manipulated through targeted
-interventions: placing spreaders at specific locations in the network.
-Depending on their placement, these interventions can either extend or shorten
-the lifespan of the rumor.
+    <id>http://arxiv.org/abs/2506.03093v1</id>
+    <updated>2025-06-03T17:24:55Z</updated>
+    <published>2025-06-03T17:24:55Z</published>
+    <title>From Flat to Hierarchical: Extracting Sparse Representations with
+  Matching Pursuit</title>
+    <summary>  Motivated by the hypothesis that neural network representations encode
+abstract, interpretable features as linearly accessible, approximately
+orthogonal directions, sparse autoencoders (SAEs) have become a popular tool in
+interpretability. However, recent work has demonstrated phenomenology of model
+representations that lies outside the scope of this hypothesis, showing
+signatures of hierarchical, nonlinear, and multi-dimensional features. This
+raises the question: do SAEs represent features that possess structure at odds
+with their motivating hypothesis? If not, does avoiding this mismatch help
+identify said features and gain further insights into neural network
+representations? To answer these questions, we take a construction-based
+approach and re-contextualize the popular matching pursuits (MP) algorithm from
+sparse coding to design MP-SAE -- an SAE that unrolls its encoder into a
+sequence of residual-guided steps, allowing it to capture hierarchical and
+nonlinearly accessible features. Comparing this architecture with existing SAEs
+on a mixture of synthetic and natural data settings, we show: (i) hierarchical
+concepts induce conditionally orthogonal features, which existing SAEs are
+unable to faithfully capture, and (ii) the nonlinear encoding step of MP-SAE
+recovers highly meaningful features, helping us unravel shared structure in the
+seemingly dichotomous representation spaces of different modalities in a
+vision-language model, hence demonstrating the assumption that useful features
+are solely linearly accessible is insufficient. We also show that the
+sequential encoder principle of MP-SAE affords an additional benefit of
+adaptive sparsity at inference time, which may be of independent interest.
+Overall, we argue our results provide credence to the idea that
+interpretability should begin with the phenomenology of representations, with
+methods emerging from assumptions that fit it.
 </summary>
     <author>
-      <name>Eva Rifà</name>
+      <name>Valérie Costa</name>
     </author>
     <author>
-      <name>Julian Vicens</name>
+      <name>Thomas Fel</name>
     </author>
     <author>
-      <name>Emanuele Cozzo</name>
+      <name>Ekdeep Singh Lubana</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Working paper</arxiv:comment>
-    <link href="http://arxiv.org/abs/2505.24795v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2505.24795v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Bahareh Tolooshams</name>
+    </author>
+    <author>
+      <name>Demba Ba</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.03093v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03093v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03092v1</id>
+    <updated>2025-06-03T17:24:08Z</updated>
+    <published>2025-06-03T17:24:08Z</published>
+    <title>Thin coronal jets and plasmoid-mediated reconnection: Insights from
+  Solar Orbiter observations and Bifrost simulations</title>
+    <summary>  Coronal jets are ubiquitous, collimated million-degree ejections that
+contribute to the energy and mass supply of the upper solar atmosphere and the
+solar wind. Solar Orbiter provides an unprecedented opportunity to observe
+fine-scale jets from a unique vantage point close to the Sun. We aim to (1)
+uncover thin jets originating from Coronal Bright Points (CBPs), revealing
+previously unresolved contributions to coronal upflows; and (2) improve our
+understanding of plasmoid-mediated reconnection and its observable signatures.
+We analyze eleven datasets from the High Resolution Imager 174 \r{A} of the
+Extreme Ultraviolet Imager (HRIEUV) onboard Solar Orbiter, focusing on narrow
+jets from CBPs and signatures of magnetic reconnection within current sheets
+and outflow regions. To support the observations, we compare with CBP
+simulations performed with the Bifrost code. We have identified thin coronal
+jets originating from CBPs with widths ranging from 253 km to 706 km: scales
+that could not be resolved with previous EUV imaging instruments. Remarkably,
+these jets are 30-85% brighter than their surroundings and can extend up to 22
+Mm while maintaining their narrow form. In one of the datasets, we directly
+identify plasmoid-mediated reconnection through the development within the
+current sheet of a small-scale plasmoid that reaches a size of 332 km and
+propagates at 40 km/s. In another dataset, we infer plasmoid signatures through
+the intermittent boomerang-like pattern that appears in the outflow region.
+Both direct and indirect plasmoid-mediated reconnection signatures are
+supported by comparisons with the synthetic HRIEUV emission from the
+simulations.
+</summary>
+    <author>
+      <name>D. Nóbrega-Siverio</name>
+    </author>
+    <author>
+      <name>R. Joshi</name>
+    </author>
+    <author>
+      <name>E. Sola-Viladesau</name>
+    </author>
+    <author>
+      <name>D. Berghmans</name>
+    </author>
+    <author>
+      <name>D. Lim</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to A&amp;A, 15 pages, 9 figures, movies available upon request</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.03092v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03092v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03084v1</id>
+    <updated>2025-06-03T17:05:06Z</updated>
+    <published>2025-06-03T17:05:06Z</published>
+    <title>InterMamba: Efficient Human-Human Interaction Generation with Adaptive
+  Spatio-Temporal Mamba</title>
+    <summary>  Human-human interaction generation has garnered significant attention in
+motion synthesis due to its vital role in understanding humans as social
+beings. However, existing methods typically rely on transformer-based
+architectures, which often face challenges related to scalability and
+efficiency. To address these issues, we propose a novel, efficient human-human
+interaction generation method based on the Mamba framework, designed to meet
+the demands of effectively capturing long-sequence dependencies while providing
+real-time feedback. Specifically, we introduce an adaptive spatio-temporal
+Mamba framework that utilizes two parallel SSM branches with an adaptive
+mechanism to integrate the spatial and temporal features of motion sequences.
+To further enhance the model's ability to capture dependencies within
+individual motion sequences and the interactions between different individual
+sequences, we develop two key modules: the self-adaptive spatio-temporal Mamba
+module and the cross-adaptive spatio-temporal Mamba module, enabling efficient
+feature learning. Extensive experiments demonstrate that our method achieves
+state-of-the-art results on two interaction datasets with remarkable quality
+and efficiency. Compared to the baseline method InterGen, our approach not only
+improves accuracy but also requires a minimal parameter size of just 66M ,only
+36% of InterGen's, while achieving an average inference speed of 0.57 seconds,
+which is 46% of InterGen's execution time.
+</summary>
+    <author>
+      <name>Zizhao Wu</name>
+    </author>
+    <author>
+      <name>Yingying Sun</name>
+    </author>
+    <author>
+      <name>Yiming Chen</name>
+    </author>
+    <author>
+      <name>Xiaoling Gu</name>
+    </author>
+    <author>
+      <name>Ruyu Liu</name>
+    </author>
+    <author>
+      <name>Jiazhou Chen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.03084v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.03084v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
