@@ -1,482 +1,585 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-05T00:57:21Z -->
+<!-- Last updated: 2025-06-06T00:57:15Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-04T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114132</opensearch:totalResults>
+  <updated>2025-06-05T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114224</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.03149v1</id>
-    <updated>2025-06-03T17:59:47Z</updated>
-    <published>2025-06-03T17:59:47Z</published>
-    <title>Causal Estimation of Tokenisation Bias</title>
-    <summary>  Modern language models are typically trained over subword sequences, but
-ultimately define probabilities over character-strings. Ideally, the choice of
-the tokeniser -- which maps character-strings to subwords -- should not affect
-the probability assigned to the underlying character-string; in practice, it
-does. We define this mismatch as tokenisation bias. In this work, we quantify
-one particular type of tokenisation bias: the effect of including or not a
-subword (e.g., $\langle hello \rangle$) in a tokeniser's vocabulary on the
-probability a trained model assigns to the corresponding characters (i.e.,
-\textit{``hello''}). Estimating this effect is challenging because each model
-is trained with only one tokeniser. We address this by framing tokenisation
-bias as a causal effect and estimating it using the regression discontinuity
-design. Specifically, we exploit the fact that tokenisation algorithms rank
-subwords and add the first $K$ to a tokeniser's vocabulary, where $K$ is an
-arbitrary cutoff point. As such, we can estimate a causal effect by comparing
-similar subwords around this cutoff. Experimentally, we find that tokenisation
-consistently affects models' outputs across scales, vocabularies, and
-tokenisers. Notably, a subword's presence in a small model's vocabulary may
-increase its characters' probability by up to 17 times, highlighting
-tokenisation as a key design choice in language modelling.
+    <id>http://arxiv.org/abs/2506.04228v1</id>
+    <updated>2025-06-04T17:59:58Z</updated>
+    <published>2025-06-04T17:59:58Z</published>
+    <title>LayerFlow: A Unified Model for Layer-aware Video Generation</title>
+    <summary>  We present LayerFlow, a unified solution for layer-aware video generation.
+Given per-layer prompts, LayerFlow generates videos for the transparent
+foreground, clean background, and blended scene. It also supports versatile
+variants like decomposing a blended video or generating the background for the
+given foreground and vice versa. Starting from a text-to-video diffusion
+transformer, we organize the videos for different layers as sub-clips, and
+leverage layer embeddings to distinguish each clip and the corresponding
+layer-wise prompts. In this way, we seamlessly support the aforementioned
+variants in one unified framework. For the lack of high-quality layer-wise
+training videos, we design a multi-stage training strategy to accommodate
+static images with high-quality layer annotations. Specifically, we first train
+the model with low-quality video data. Then, we tune a motion LoRA to make the
+model compatible with static frames. Afterward, we train the content LoRA on
+the mixture of image data with high-quality layered images along with
+copy-pasted video data. During inference, we remove the motion LoRA thus
+generating smooth videos with desired layers.
 </summary>
     <author>
-      <name>Pietro Lesci</name>
+      <name>Sihui Ji</name>
     </author>
     <author>
-      <name>Clara Meister</name>
+      <name>Hao Luo</name>
     </author>
     <author>
-      <name>Thomas Hofmann</name>
+      <name>Xi Chen</name>
     </author>
     <author>
-      <name>Andreas Vlachos</name>
+      <name>Yuanpeng Tu</name>
     </author>
     <author>
-      <name>Tiago Pimentel</name>
+      <name>Yiyang Wang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Published as a conference paper at ACL 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.03149v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03149v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Hengshuang Zhao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://sihuiji.github.io/LayerFlow-Page/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.04228v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04228v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.04225v1</id>
+    <updated>2025-06-04T17:59:04Z</updated>
+    <published>2025-06-04T17:59:04Z</published>
+    <title>Voyager: Long-Range and World-Consistent Video Diffusion for Explorable
+  3D Scene Generation</title>
+    <summary>  Real-world applications like video gaming and virtual reality often demand
+the ability to model 3D scenes that users can explore along custom camera
+trajectories. While significant progress has been made in generating 3D objects
+from text or images, creating long-range, 3D-consistent, explorable 3D scenes
+remains a complex and challenging problem. In this work, we present Voyager, a
+novel video diffusion framework that generates world-consistent 3D point-cloud
+sequences from a single image with user-defined camera path. Unlike existing
+approaches, Voyager achieves end-to-end scene generation and reconstruction
+with inherent consistency across frames, eliminating the need for 3D
+reconstruction pipelines (e.g., structure-from-motion or multi-view stereo).
+Our method integrates three key components: 1) World-Consistent Video
+Diffusion: A unified architecture that jointly generates aligned RGB and depth
+video sequences, conditioned on existing world observation to ensure global
+coherence 2) Long-Range World Exploration: An efficient world cache with point
+culling and an auto-regressive inference with smooth video sampling for
+iterative scene extension with context-aware consistency, and 3) Scalable Data
+Engine: A video reconstruction pipeline that automates camera pose estimation
+and metric depth prediction for arbitrary videos, enabling large-scale, diverse
+training data curation without manual 3D annotations. Collectively, these
+designs result in a clear improvement over existing methods in visual quality
+and geometric accuracy, with versatile applications.
+</summary>
+    <author>
+      <name>Tianyu Huang</name>
+    </author>
+    <author>
+      <name>Wangguandong Zheng</name>
+    </author>
+    <author>
+      <name>Tengfei Wang</name>
+    </author>
+    <author>
+      <name>Yuhao Liu</name>
+    </author>
+    <author>
+      <name>Zhenwei Wang</name>
+    </author>
+    <author>
+      <name>Junta Wu</name>
+    </author>
+    <author>
+      <name>Jie Jiang</name>
+    </author>
+    <author>
+      <name>Hui Li</name>
+    </author>
+    <author>
+      <name>Rynson W. H. Lau</name>
+    </author>
+    <author>
+      <name>Wangmeng Zuo</name>
+    </author>
+    <author>
+      <name>Chunchao Guo</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.04225v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04225v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.04218v1</id>
+    <updated>2025-06-04T17:57:53Z</updated>
+    <published>2025-06-04T17:57:53Z</published>
+    <title>Pseudo-Simulation for Autonomous Driving</title>
+    <summary>  Existing evaluation paradigms for Autonomous Vehicles (AVs) face critical
+limitations. Real-world evaluation is often challenging due to safety concerns
+and a lack of reproducibility, whereas closed-loop simulation can face
+insufficient realism or high computational costs. Open-loop evaluation, while
+being efficient and data-driven, relies on metrics that generally overlook
+compounding errors. In this paper, we propose pseudo-simulation, a novel
+paradigm that addresses these limitations. Pseudo-simulation operates on real
+datasets, similar to open-loop evaluation, but augments them with synthetic
+observations generated prior to evaluation using 3D Gaussian Splatting. Our key
+idea is to approximate potential future states the AV might encounter by
+generating a diverse set of observations that vary in position, heading, and
+speed. Our method then assigns a higher importance to synthetic observations
+that best match the AV's likely behavior using a novel proximity-based
+weighting scheme. This enables evaluating error recovery and the mitigation of
+causal confusion, as in closed-loop benchmarks, without requiring sequential
+interactive simulation. We show that pseudo-simulation is better correlated
+with closed-loop simulations (R^2=0.8) than the best existing open-loop
+approach (R^2=0.7). We also establish a public leaderboard for the community to
+benchmark new methodologies with pseudo-simulation. Our code is available at
+https://github.com/autonomousvision/navsim.
+</summary>
+    <author>
+      <name>Wei Cao</name>
+    </author>
+    <author>
+      <name>Marcel Hallgarten</name>
+    </author>
+    <author>
+      <name>Tianyu Li</name>
+    </author>
+    <author>
+      <name>Daniel Dauner</name>
+    </author>
+    <author>
+      <name>Xunjiang Gu</name>
+    </author>
+    <author>
+      <name>Caojun Wang</name>
+    </author>
+    <author>
+      <name>Yakov Miron</name>
+    </author>
+    <author>
+      <name>Marco Aiello</name>
+    </author>
+    <author>
+      <name>Hongyang Li</name>
+    </author>
+    <author>
+      <name>Igor Gilitschenski</name>
+    </author>
+    <author>
+      <name>Boris Ivanovic</name>
+    </author>
+    <author>
+      <name>Marco Pavone</name>
+    </author>
+    <author>
+      <name>Andreas Geiger</name>
+    </author>
+    <author>
+      <name>Kashyap Chitta</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.04218v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04218v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.03147v2</id>
-    <updated>2025-06-04T14:45:58Z</updated>
-    <published>2025-06-03T17:59:33Z</published>
-    <title>UniWorld: High-Resolution Semantic Encoders for Unified Visual
-  Understanding and Generation</title>
-    <summary>  Although existing unified models achieve strong performance in
-vision-language understanding and text-to-image generation, they remain limited
-in addressing image perception and manipulation -- capabilities increasingly
-demanded in practical applications. Recently, OpenAI introduced the powerful
-GPT-4o-Image model, which showcases advanced capabilities in comprehensive
-image perception and manipulation, sparking widespread interest. Through
-carefully designed experiments, we observe that GPT-4o-Image likely relies on
-semantic encoders rather than VAEs for feature extraction, despite VAEs being
-commonly regarded as crucial for image manipulation tasks. Inspired by this
-insight, we propose UniWorld, a unified generative framework built upon
-semantic features extracted from powerful multimodal large language models and
-contrastive semantic encoders. Using only 2.7M training data, UniWorld achieves
-impressive performance across diverse tasks, including image understanding,
-generation, manipulation, and perception. We fully open-source the UniWorld
-framework, including model weights, training and evaluation scripts, and
-datasets to promote reproducibility and further research.
+    <id>http://arxiv.org/abs/2506.04211v1</id>
+    <updated>2025-06-04T17:56:46Z</updated>
+    <published>2025-06-04T17:56:46Z</published>
+    <title>Diffusion Domain Teacher: Diffusion Guided Domain Adaptive Object
+  Detector</title>
+    <summary>  Object detectors often suffer a decrease in performance due to the large
+domain gap between the training data (source domain) and real-world data
+(target domain). Diffusion-based generative models have shown remarkable
+abilities in generating high-quality and diverse images, suggesting their
+potential for extracting valuable feature from various domains. To effectively
+leverage the cross-domain feature representation of diffusion models, in this
+paper, we train a detector with frozen-weight diffusion model on the source
+domain, then employ it as a teacher model to generate pseudo labels on the
+unlabeled target domain, which are used to guide the supervised learning of the
+student model on the target domain. We refer to this approach as Diffusion
+Domain Teacher (DDT). By employing this straightforward yet potent framework,
+we significantly improve cross-domain object detection performance without
+compromising the inference speed. Our method achieves an average mAP
+improvement of 21.2% compared to the baseline on 6 datasets from three common
+cross-domain detection benchmarks (Cross-Camera, Syn2Real, Real2Artistic},
+surpassing the current state-of-the-art (SOTA) methods by an average of 5.7%
+mAP. Furthermore, extensive experiments demonstrate that our method
+consistently brings improvements even in more powerful and complex models,
+highlighting broadly applicable and effective domain adaptation capability of
+our DDT. The code is available at
+https://github.com/heboyong/Diffusion-Domain-Teacher.
 </summary>
     <author>
-      <name>Bin Lin</name>
+      <name>Boyong He</name>
     </author>
     <author>
-      <name>Zongjian Li</name>
+      <name>Yuxiang Ji</name>
     </author>
     <author>
-      <name>Xinhua Cheng</name>
+      <name>Zhuoyue Tan</name>
     </author>
     <author>
-      <name>Yuwei Niu</name>
+      <name>Liaoni Wu</name>
     </author>
-    <author>
-      <name>Yang Ye</name>
-    </author>
-    <author>
-      <name>Xianyi He</name>
-    </author>
-    <author>
-      <name>Shenghai Yuan</name>
-    </author>
-    <author>
-      <name>Wangbo Yu</name>
-    </author>
-    <author>
-      <name>Shaodong Wang</name>
-    </author>
-    <author>
-      <name>Yunyang Ge</name>
-    </author>
-    <author>
-      <name>Yatian Pang</name>
-    </author>
-    <author>
-      <name>Li Yuan</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.03147v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03147v2" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">MM2024 poster, with appendix and codes</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.04211v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04211v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.03136v1</id>
-    <updated>2025-06-03T17:58:42Z</updated>
-    <published>2025-06-03T17:58:42Z</published>
-    <title>Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning</title>
-    <summary>  We propose CURE, a novel reinforcement learning framework with a dedicated
-reward design that co-evolves coding and unit test generation capabilities
-based on their interaction outcomes, without any ground-truth code as
-supervision. This approach enables flexible and scalable training and allows
-the unit tester to learn directly from the coder's mistakes. Our derived
-ReasonFlux-Coder-7B and 14B models improve code generation accuracy by 5.3% and
-Best-of-N accuracy by 9.0% after optimization on Qwen2.5-Instruct models,
-outperforming similarly sized Qwen-Coder, DeepSeek-Coder, and Seed-Coder. They
-naturally extend to downstream tasks such as test-time scaling and agentic
-coding-achieving a 8.1% improvement over the base model. For the long-CoT
-model, our ReasonFlux-Coder-4B consistently outperforms Qwen3-4B while
-achieving 64.8% inference efficiency in unit test generation. Notably, we also
-find that our model can serve as an effective reward model for reinforcement
-learning on base models. Project: https://github.com/Gen-Verse/CURE
+    <id>http://arxiv.org/abs/2506.04210v1</id>
+    <updated>2025-06-04T17:55:09Z</updated>
+    <published>2025-06-04T17:55:09Z</published>
+    <title>Does Thinking More always Help? Understanding Test-Time Scaling in
+  Reasoning Models</title>
+    <summary>  Recent trends in test-time scaling for reasoning models (e.g., OpenAI o1,
+DeepSeek R1) have led to a popular belief that extending thinking traces using
+prompts like "Wait" or "Let me rethink" can improve performance. This raises a
+natural question: Does thinking more at test-time truly lead to better
+reasoning? To answer this question, we perform a detailed empirical study
+across models and benchmarks, which reveals a consistent pattern of initial
+performance improvements from additional thinking followed by a decline, due to
+"overthinking". To understand this non-monotonic trend, we consider a simple
+probabilistic model, which reveals that additional thinking increases output
+variance-creating an illusion of improved reasoning while ultimately
+undermining precision. Thus, observed gains from "more thinking" are not true
+indicators of improved reasoning, but artifacts stemming from the connection
+between model uncertainty and evaluation metric. This suggests that test-time
+scaling through extended thinking is not an effective way to utilize the
+inference thinking budget. Recognizing these limitations, we introduce an
+alternative test-time scaling approach, parallel thinking, inspired by
+Best-of-N sampling. Our method generates multiple independent reasoning paths
+within the same inference budget and selects the most consistent response via
+majority vote, achieving up to 20% higher accuracy compared to extended
+thinking. This provides a simple yet effective mechanism for test-time scaling
+of reasoning models.
 </summary>
     <author>
-      <name>Yinjie Wang</name>
+      <name>Soumya Suvra Ghosal</name>
     </author>
     <author>
-      <name>Ling Yang</name>
+      <name>Souradip Chakraborty</name>
     </author>
     <author>
-      <name>Ye Tian</name>
+      <name>Avinash Reddy</name>
     </author>
     <author>
-      <name>Ke Shen</name>
+      <name>Yifu Lu</name>
     </author>
     <author>
       <name>Mengdi Wang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project: https://github.com/Gen-Verse/CURE</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.03136v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03136v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Dinesh Manocha</name>
+    </author>
+    <author>
+      <name>Furong Huang</name>
+    </author>
+    <author>
+      <name>Mohammad Ghavamzadeh</name>
+    </author>
+    <author>
+      <name>Amrit Singh Bedi</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.04210v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04210v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.03111v1</id>
-    <updated>2025-06-03T17:40:39Z</updated>
-    <published>2025-06-03T17:40:39Z</published>
-    <title>Rectified Flows for Fast Multiscale Fluid Flow Modeling</title>
-    <summary>  The statistical modeling of fluid flows is very challenging due to their
-multiscale dynamics and extreme sensitivity to initial conditions. While
-recently proposed conditional diffusion models achieve high fidelity, they
-typically require hundreds of stochastic sampling steps at inference. We
-introduce a rectified flow framework that learns a time-dependent velocity
-field, transporting input to output distributions along nearly straight
-trajectories. By casting sampling as solving an ordinary differential equation
-(ODE) along this straighter flow field, our method makes each integration step
-much more effective, using as few as eight steps versus (more than) 128 steps
-in standard score-based diffusion, without sacrificing predictive fidelity.
-Experiments on challenging multiscale flow benchmarks show that rectified flows
-recover the same posterior distributions as diffusion models, preserve
-fine-scale features that MSE-trained baselines miss, and deliver
-high-resolution samples in a fraction of inference time.
+    <id>http://arxiv.org/abs/2506.04203v1</id>
+    <updated>2025-06-04T17:48:38Z</updated>
+    <published>2025-06-04T17:48:38Z</published>
+    <title>Cascadia: A Cascade Serving System for Large Language Models</title>
+    <summary>  Recent advances in large language models (LLMs) have intensified the need to
+deliver both rapid responses and high-quality answers. More powerful models
+yield better results but incur higher inference latency, whereas smaller models
+are faster yet less capable. Recent work proposes balancing this
+latency-quality trade-off using model cascades, which route simpler queries to
+smaller models and more complex ones to larger models. However, enabling
+efficient cascade serving remains challenging. Current frameworks lack
+effective mechanisms for handling (i) the huge and varying resource demands of
+different LLMs, (ii) the inherent heterogeneity of LLM workloads, and (iii) the
+co-optimization of system deployment and routing strategy. Motivated by these
+observations, we introduce Cascadia, a novel cascade serving framework designed
+explicitly to schedule request routing and deploy model cascades for fast,
+quality-preserving LLM serving. Cascadia employs a bi-level optimization
+method: at the inner level, it uses a mixed-integer linear program to select
+resource allocations and parallelism strategies based on LLM information and
+workload characteristics; at the outer level, it applies a weighted Tchebycheff
+algorithm to iteratively co-optimize the routing strategy and the system
+deployment produced by the inner level. Our extensive evaluation on diverse
+workload traces and different model cascades (DeepSeek and the Llama series)
+demonstrates that Cascadia significantly outperforms both single-model
+deployments and the state-of-the-art cascade serving baseline, achieving up to
+4x (2.3x on average) tighter latency SLOs and up to 5x (2.4x on average) higher
+throughput while maintaining target answer quality.
 </summary>
     <author>
-      <name>Victor Armegioiu</name>
+      <name>Youhe Jiang</name>
     </author>
     <author>
-      <name>Yannick Ramic</name>
+      <name>Fangcheng Fu</name>
     </author>
     <author>
-      <name>Siddhartha Mishra</name>
+      <name>Wanru Zhao</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.03111v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03111v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Stephan Rabanser</name>
+    </author>
+    <author>
+      <name>Nicholas D. Lane</name>
+    </author>
+    <author>
+      <name>Binhang Yuan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.04203v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04203v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.03104v1</id>
-    <updated>2025-06-03T17:37:15Z</updated>
-    <published>2025-06-03T17:37:15Z</published>
-    <title>Two-Phase Treatment with Noncompliance: Identifying the Cumulative
-  Average Treatment Effect via Multisite Instrumental Variables</title>
-    <summary>  In evaluating a multi-phase intervention, the cumulative average treatment
-effect (ATE) is often the causal estimand of key interest. Yet some individuals
-who do not respond well to the Phase-I treatment may subsequently display
-noncompliant behaviors. However, noncompliance tends to be constrained by the
-stochastic availability of slots under the alternative treatment condition in
-Phase II, which makes the notion of the "complier average treatment effect"
-problematic. Moreover, the Phase-I treatment is expected to affect an
-individual's potential outcomes through additional pathways that violate the
-exclusion restriction. Extending an instrumental variable (IV) strategy for
-multisite trials, we clarify conditions for identifying the cumulative ATE of a
-two-phase treatment by employing the random assignment of the Phase-I treatment
-as the IV. Our strategy relaxes the exclusion restriction and the sequential
-ignorability in their conventional forms. We evaluate the performance of the
-new strategy through simulations. Reanalyzing data from the Tennessee class
-size study in which students and teachers were assigned at random to either a
-small or a regular class in kindergarten (Phase I) yet noncompliance occurred
-in Grade 1 (Phase II), we estimate the cumulative ATE of receiving two years of
-instruction in a small class versus a regular class.
+    <id>http://arxiv.org/abs/2506.04201v1</id>
+    <updated>2025-06-04T17:46:02Z</updated>
+    <published>2025-06-04T17:46:02Z</published>
+    <title>Analyzing Line-of-sight selection biases in galaxy-scale strong lensing
+  with external convergence and shear</title>
+    <summary>  The upcoming Vera Rubin Observatory Legacy Survey of Space and Time (LSST)
+will dramatically increase the number of strong gravitational lensing systems,
+requiring precise modeling of line-of-sight (LOS) effects to mitigate biases in
+lensing observations and cosmological inferences. We develop a method to
+construct joint distributions of external convergence ($\kappa_{\mathrm{ext}}$)
+and shear ($\gamma_{\mathrm{ext}}$) for strong lensing LOS by aggregating
+large-scale structure simulations with high-resolution halo renderings and
+non-linear correction. Our approach captures both smooth background matter and
+perturbations from halos, enabling accurate modeling of LOS effects. We apply
+non-linear LOS corrections to $\kappa_{\mathrm{ext}}$ and
+$\gamma_{\mathrm{ext}}$ that address the non-additive lensing effects caused by
+objects along the LOS in strong lensing. We find that, with a minimum image
+separation of $1.0^{\prime\prime}$, non-linear LOS correction due to the
+presence of a dominant deflector slightly increases the ratio of quadruple to
+double lenses; this non-linear LOS correction also introduces systematic biases
+of $\sim 0.1\%$ for galaxy-AGN lenses in the inferred Hubble constant ($H_0$)
+if not accounted for. We also observe a $0.66\%$ bias for galaxy-galaxy lenses
+on $H_0$, and even larger biases up to $1.02\%$ for galaxy-AGN systems if LOS
+effects are not accounted for. These results highlight the importance of LOS
+for precision cosmology. The publicly available code and datasets provide tools
+for incorporating LOS effects in future analyses.
 </summary>
     <author>
-      <name>Guanglei Hong</name>
+      <name>Xianzhe TZ Tang</name>
     </author>
     <author>
-      <name>Xu Qin</name>
+      <name>Simon Birrer</name>
     </author>
     <author>
-      <name>Zhengyan Xu</name>
+      <name>Anowar J. Shajib</name>
     </author>
     <author>
-      <name>Fan Yang</name>
+      <name>Narayan Khadka</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">37 pages; 1 figure; 4 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.03104v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03104v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>the LSST Strong Gravitational Lensing Science Collaboration</name>
+    </author>
+    <author>
+      <name>the LSST Dark Energy Science Collaboration</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">27 pages, 8 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.04201v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04201v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.04194v1</id>
+    <updated>2025-06-04T17:40:55Z</updated>
+    <published>2025-06-04T17:40:55Z</published>
+    <title>What Makes Treatment Effects Identifiable? Characterizations and
+  Estimators Beyond Unconfoundedness</title>
+    <summary>  Most of the widely used estimators of the average treatment effect (ATE) in
+causal inference rely on the assumptions of unconfoundedness and overlap.
+Unconfoundedness requires that the observed covariates account for all
+correlations between the outcome and treatment. Overlap requires the existence
+of randomness in treatment decisions for all individuals. Nevertheless, many
+types of studies frequently violate unconfoundedness or overlap, for instance,
+observational studies with deterministic treatment decisions -- popularly known
+as Regression Discontinuity designs -- violate overlap.
+  In this paper, we initiate the study of general conditions that enable the
+identification of the average treatment effect, extending beyond
+unconfoundedness and overlap. In particular, following the paradigm of
+statistical learning theory, we provide an interpretable condition that is
+sufficient and nearly necessary for the identification of ATE. Moreover, this
+condition characterizes the identification of the average treatment effect on
+the treated (ATT) and can be used to characterize other treatment effects as
+well. To illustrate the utility of our condition, we present several
+well-studied scenarios where our condition is satisfied and, hence, we prove
+that ATE can be identified in regimes that prior works could not capture. For
+example, under mild assumptions on the data distributions, this holds for the
+models proposed by Tan (2006) and Rosenbaum (2002), and the Regression
+Discontinuity design model introduced by Thistlethwaite and Campbell (1960).
+For each of these scenarios, we also show that, under natural additional
+assumptions, ATE can be estimated from finite samples.
+  We believe these findings open new avenues for bridging learning-theoretic
+insights and causal inference methodologies, particularly in observational
+studies with complex treatment mechanisms.
+</summary>
+    <author>
+      <name>Yang Cai</name>
+    </author>
+    <author>
+      <name>Alkis Kalavasis</name>
+    </author>
+    <author>
+      <name>Katerina Mamali</name>
+    </author>
+    <author>
+      <name>Anay Mehrotra</name>
+    </author>
+    <author>
+      <name>Manolis Zampetakis</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for presentation at the 38th Conference on Learning Theory
+  (COLT) 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.04194v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04194v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.03099v1</id>
-    <updated>2025-06-03T17:29:28Z</updated>
-    <published>2025-06-03T17:29:28Z</published>
-    <title>TalkingMachines: Real-Time Audio-Driven FaceTime-Style Video via
-  Autoregressive Diffusion Models</title>
-    <summary>  In this paper, we present TalkingMachines -- an efficient framework that
-transforms pretrained video generation models into real-time, audio-driven
-character animators. TalkingMachines enables natural conversational experiences
-by integrating an audio large language model (LLM) with our video generation
-foundation model. Our primary contributions include: (1) We adapt a pretrained
-SOTA image-to-video DiT into an audio-driven avatar generation model of 18
-billion parameters; (2) We enable infinite video streaming without error
-accumulation through asymmetric knowledge distillation from a bidirectional
-teacher model into a sparse causal, autoregressive student model; (3) We design
-a high-throughput, low-latency inference pipeline incorporating several key
-engineering optimizations such as: (a) disaggregation of the DiT and VAE
-decoder across separate devices, (b) efficient overlap of inter-device
-communication and computation using CUDA streams, (c) elimination of redundant
-recomputations to maximize frame-generation throughput. Please see demo videos
-here - https://aaxwaz.github.io/TalkingMachines/
+    <id>http://arxiv.org/abs/2506.04193v1</id>
+    <updated>2025-06-04T17:40:31Z</updated>
+    <published>2025-06-04T17:40:31Z</published>
+    <title>Understanding challenges to the interpretation of disaggregated
+  evaluations of algorithmic fairness</title>
+    <summary>  Disaggregated evaluation across subgroups is critical for assessing the
+fairness of machine learning models, but its uncritical use can mislead
+practitioners. We show that equal performance across subgroups is an unreliable
+measure of fairness when data are representative of the relevant populations
+but reflective of real-world disparities. Furthermore, when data are not
+representative due to selection bias, both disaggregated evaluation and
+alternative approaches based on conditional independence testing may be invalid
+without explicit assumptions regarding the bias mechanism. We use causal
+graphical models to predict metric stability across subgroups under different
+data generating processes. Our framework suggests complementing disaggregated
+evaluations with explicit causal assumptions and analysis to control for
+confounding and distribution shift, including conditional independence testing
+and weighted performance estimation. These findings have broad implications for
+how practitioners design and interpret model assessments given the ubiquity of
+disaggregated evaluation.
 </summary>
     <author>
-      <name>Chetwin Low</name>
+      <name>Stephen R. Pfohl</name>
     </author>
     <author>
-      <name>Weimin Wang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.03099v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03099v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.03095v1</id>
-    <updated>2025-06-03T17:27:04Z</updated>
-    <published>2025-06-03T17:27:04Z</published>
-    <title>DPO Learning with LLMs-Judge Signal for Computer Use Agents</title>
-    <summary>  Computer use agents (CUA) are systems that automatically interact with
-graphical user interfaces (GUIs) to complete tasks. CUA have made significant
-progress with the advent of large vision-language models (VLMs). However, these
-agents typically rely on cloud-based inference with substantial compute
-demands, raising critical privacy and scalability concerns, especially when
-operating on personal devices. In this work, we take a step toward
-privacy-preserving and resource-efficient agents by developing a lightweight
-vision-language model that runs entirely on local machines. To train this
-compact agent, we introduce an LLM-as-Judge framework that automatically
-evaluates and filters synthetic interaction trajectories, producing
-high-quality data for reinforcement learning without human annotation.
-Experiments on the OS-World benchmark demonstrate that our fine-tuned local
-model outperforms existing baselines, highlighting a promising path toward
-private, efficient, and generalizable GUI agents.
-</summary>
-    <author>
-      <name>Man Luo</name>
+      <name>Natalie Harris</name>
     </author>
     <author>
-      <name>David Cobbley</name>
+      <name>Chirag Nagpal</name>
     </author>
     <author>
-      <name>Xin Su</name>
+      <name>David Madras</name>
     </author>
     <author>
-      <name>Shachar Rosenman</name>
+      <name>Vishwali Mhasawade</name>
     </author>
     <author>
-      <name>Vasudev Lal</name>
+      <name>Olawale Salaudeen</name>
     </author>
     <author>
-      <name>Shao-Yen Tseng</name>
+      <name>Awa Dieng</name>
     </author>
     <author>
-      <name>Phillip Howard</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.03095v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03095v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.03093v1</id>
-    <updated>2025-06-03T17:24:55Z</updated>
-    <published>2025-06-03T17:24:55Z</published>
-    <title>From Flat to Hierarchical: Extracting Sparse Representations with
-  Matching Pursuit</title>
-    <summary>  Motivated by the hypothesis that neural network representations encode
-abstract, interpretable features as linearly accessible, approximately
-orthogonal directions, sparse autoencoders (SAEs) have become a popular tool in
-interpretability. However, recent work has demonstrated phenomenology of model
-representations that lies outside the scope of this hypothesis, showing
-signatures of hierarchical, nonlinear, and multi-dimensional features. This
-raises the question: do SAEs represent features that possess structure at odds
-with their motivating hypothesis? If not, does avoiding this mismatch help
-identify said features and gain further insights into neural network
-representations? To answer these questions, we take a construction-based
-approach and re-contextualize the popular matching pursuits (MP) algorithm from
-sparse coding to design MP-SAE -- an SAE that unrolls its encoder into a
-sequence of residual-guided steps, allowing it to capture hierarchical and
-nonlinearly accessible features. Comparing this architecture with existing SAEs
-on a mixture of synthetic and natural data settings, we show: (i) hierarchical
-concepts induce conditionally orthogonal features, which existing SAEs are
-unable to faithfully capture, and (ii) the nonlinear encoding step of MP-SAE
-recovers highly meaningful features, helping us unravel shared structure in the
-seemingly dichotomous representation spaces of different modalities in a
-vision-language model, hence demonstrating the assumption that useful features
-are solely linearly accessible is insufficient. We also show that the
-sequential encoder principle of MP-SAE affords an additional benefit of
-adaptive sparsity at inference time, which may be of independent interest.
-Overall, we argue our results provide credence to the idea that
-interpretability should begin with the phenomenology of representations, with
-methods emerging from assumptions that fit it.
-</summary>
-    <author>
-      <name>Valérie Costa</name>
+      <name>Shannon Sequeira</name>
     </author>
     <author>
-      <name>Thomas Fel</name>
+      <name>Santiago Arciniegas</name>
     </author>
     <author>
-      <name>Ekdeep Singh Lubana</name>
+      <name>Lillian Sung</name>
     </author>
     <author>
-      <name>Bahareh Tolooshams</name>
+      <name>Nnamdi Ezeanochie</name>
     </author>
     <author>
-      <name>Demba Ba</name>
+      <name>Heather Cole-Lewis</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.03093v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03093v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Katherine Heller</name>
+    </author>
+    <author>
+      <name>Sanmi Koyejo</name>
+    </author>
+    <author>
+      <name>Alexander D'Amour</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.04193v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04193v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.03092v1</id>
-    <updated>2025-06-03T17:24:08Z</updated>
-    <published>2025-06-03T17:24:08Z</published>
-    <title>Thin coronal jets and plasmoid-mediated reconnection: Insights from
-  Solar Orbiter observations and Bifrost simulations</title>
-    <summary>  Coronal jets are ubiquitous, collimated million-degree ejections that
-contribute to the energy and mass supply of the upper solar atmosphere and the
-solar wind. Solar Orbiter provides an unprecedented opportunity to observe
-fine-scale jets from a unique vantage point close to the Sun. We aim to (1)
-uncover thin jets originating from Coronal Bright Points (CBPs), revealing
-previously unresolved contributions to coronal upflows; and (2) improve our
-understanding of plasmoid-mediated reconnection and its observable signatures.
-We analyze eleven datasets from the High Resolution Imager 174 \r{A} of the
-Extreme Ultraviolet Imager (HRIEUV) onboard Solar Orbiter, focusing on narrow
-jets from CBPs and signatures of magnetic reconnection within current sheets
-and outflow regions. To support the observations, we compare with CBP
-simulations performed with the Bifrost code. We have identified thin coronal
-jets originating from CBPs with widths ranging from 253 km to 706 km: scales
-that could not be resolved with previous EUV imaging instruments. Remarkably,
-these jets are 30-85% brighter than their surroundings and can extend up to 22
-Mm while maintaining their narrow form. In one of the datasets, we directly
-identify plasmoid-mediated reconnection through the development within the
-current sheet of a small-scale plasmoid that reaches a size of 332 km and
-propagates at 40 km/s. In another dataset, we infer plasmoid signatures through
-the intermittent boomerang-like pattern that appears in the outflow region.
-Both direct and indirect plasmoid-mediated reconnection signatures are
-supported by comparisons with the synthetic HRIEUV emission from the
-simulations.
+    <id>http://arxiv.org/abs/2506.04182v1</id>
+    <updated>2025-06-04T17:28:38Z</updated>
+    <published>2025-06-04T17:28:38Z</published>
+    <title>Long or short CoT? Investigating Instance-level Switch of Large
+  Reasoning Models</title>
+    <summary>  With the rapid advancement of large reasoning models, long Chain-of-Thought
+(CoT) prompting has demonstrated strong performance on complex tasks. However,
+this often comes with a significant increase in token usage. In this paper, we
+conduct a comprehensive empirical analysis comparing long and short CoT
+strategies. Our findings reveal that while long CoT can lead to performance
+improvements, its benefits are often marginal relative to its significantly
+higher token consumption. Specifically, long CoT tends to outperform when ample
+generation budgets are available, whereas short CoT is more effective under
+tighter budget constraints. These insights underscore the need for a dynamic
+approach that selects the proper CoT strategy based on task context and
+resource availability. To address this, we propose SwitchCoT, an automatic
+framework that adaptively chooses between long and short CoT strategies to
+balance reasoning accuracy and computational efficiency. Moreover, SwitchCoT is
+designed to be budget-aware, making it broadly applicable across scenarios with
+varying resource constraints. Experimental results demonstrate that SwitchCoT
+can reduce inference costs by up to 50% while maintaining high accuracy.
+Notably, under limited token budgets, it achieves performance comparable to, or
+even exceeding, that of using either long or short CoT alone.
 </summary>
     <author>
-      <name>D. Nóbrega-Siverio</name>
+      <name>Ruiqi Zhang</name>
     </author>
     <author>
-      <name>R. Joshi</name>
+      <name>Changyi Xiao</name>
     </author>
     <author>
-      <name>E. Sola-Viladesau</name>
+      <name>Yixin Cao</name>
     </author>
-    <author>
-      <name>D. Berghmans</name>
-    </author>
-    <author>
-      <name>D. Lim</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to A&amp;A, 15 pages, 9 figures, movies available upon request</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.03092v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03092v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.03084v1</id>
-    <updated>2025-06-03T17:05:06Z</updated>
-    <published>2025-06-03T17:05:06Z</published>
-    <title>InterMamba: Efficient Human-Human Interaction Generation with Adaptive
-  Spatio-Temporal Mamba</title>
-    <summary>  Human-human interaction generation has garnered significant attention in
-motion synthesis due to its vital role in understanding humans as social
-beings. However, existing methods typically rely on transformer-based
-architectures, which often face challenges related to scalability and
-efficiency. To address these issues, we propose a novel, efficient human-human
-interaction generation method based on the Mamba framework, designed to meet
-the demands of effectively capturing long-sequence dependencies while providing
-real-time feedback. Specifically, we introduce an adaptive spatio-temporal
-Mamba framework that utilizes two parallel SSM branches with an adaptive
-mechanism to integrate the spatial and temporal features of motion sequences.
-To further enhance the model's ability to capture dependencies within
-individual motion sequences and the interactions between different individual
-sequences, we develop two key modules: the self-adaptive spatio-temporal Mamba
-module and the cross-adaptive spatio-temporal Mamba module, enabling efficient
-feature learning. Extensive experiments demonstrate that our method achieves
-state-of-the-art results on two interaction datasets with remarkable quality
-and efficiency. Compared to the baseline method InterGen, our approach not only
-improves accuracy but also requires a minimal parameter size of just 66M ,only
-36% of InterGen's, while achieving an average inference speed of 0.57 seconds,
-which is 46% of InterGen's execution time.
-</summary>
-    <author>
-      <name>Zizhao Wu</name>
-    </author>
-    <author>
-      <name>Yingying Sun</name>
-    </author>
-    <author>
-      <name>Yiming Chen</name>
-    </author>
-    <author>
-      <name>Xiaoling Gu</name>
-    </author>
-    <author>
-      <name>Ruyu Liu</name>
-    </author>
-    <author>
-      <name>Jiazhou Chen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.03084v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.03084v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.04182v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.04182v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
