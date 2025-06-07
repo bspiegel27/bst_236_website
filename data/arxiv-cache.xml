@@ -1,585 +1,587 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-06T00:57:15Z -->
+<!-- Last updated: 2025-06-07T00:56:47Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-05T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114224</opensearch:totalResults>
+  <updated>2025-06-06T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114325</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.04228v1</id>
-    <updated>2025-06-04T17:59:58Z</updated>
-    <published>2025-06-04T17:59:58Z</published>
-    <title>LayerFlow: A Unified Model for Layer-aware Video Generation</title>
-    <summary>  We present LayerFlow, a unified solution for layer-aware video generation.
-Given per-layer prompts, LayerFlow generates videos for the transparent
-foreground, clean background, and blended scene. It also supports versatile
-variants like decomposing a blended video or generating the background for the
-given foreground and vice versa. Starting from a text-to-video diffusion
-transformer, we organize the videos for different layers as sub-clips, and
-leverage layer embeddings to distinguish each clip and the corresponding
-layer-wise prompts. In this way, we seamlessly support the aforementioned
-variants in one unified framework. For the lack of high-quality layer-wise
-training videos, we design a multi-stage training strategy to accommodate
-static images with high-quality layer annotations. Specifically, we first train
-the model with low-quality video data. Then, we tune a motion LoRA to make the
-model compatible with static frames. Afterward, we train the content LoRA on
-the mixture of image data with high-quality layered images along with
-copy-pasted video data. During inference, we remove the motion LoRA thus
-generating smooth videos with desired layers.
+    <id>http://arxiv.org/abs/2506.05344v1</id>
+    <updated>2025-06-05T17:59:55Z</updated>
+    <published>2025-06-05T17:59:55Z</published>
+    <title>SparseMM: Head Sparsity Emerges from Visual Concept Responses in MLLMs</title>
+    <summary>  Multimodal Large Language Models (MLLMs) are commonly derived by extending
+pre-trained Large Language Models (LLMs) with visual capabilities. In this
+work, we investigate how MLLMs process visual inputs by analyzing their
+attention mechanisms. We reveal a surprising sparsity phenomenon: only a small
+subset (approximately less than 5%) of attention heads in LLMs actively
+contribute to visual understanding, termed visual heads. To identify these
+heads efficiently, we design a training-free framework that quantifies
+head-level visual relevance through targeted response analysis. Building on
+this discovery, we introduce SparseMM, a KV-Cache optimization strategy that
+allocates asymmetric computation budgets to heads in LLMs based on their visual
+scores, leveraging the sparity of visual heads for accelerating the inference
+of MLLMs. Compared with prior KV-Cache acceleration methods that ignore the
+particularity of visual, SparseMM prioritizes stress and retaining visual
+semantics during decoding. Extensive evaluations across mainstream multimodal
+benchmarks demonstrate that SparseMM achieves superior accuracy-efficiency
+trade-offs. Notably, SparseMM delivers 1.38x real-time acceleration and 52%
+memory reduction during generation while maintaining performance parity on
+efficiency test. Our project is open sourced at
+https://github.com/CR400AF-A/SparseMM.
 </summary>
     <author>
-      <name>Sihui Ji</name>
+      <name>Jiahui Wang</name>
     </author>
     <author>
-      <name>Hao Luo</name>
+      <name>Zuyan Liu</name>
     </author>
     <author>
-      <name>Xi Chen</name>
+      <name>Yongming Rao</name>
     </author>
     <author>
-      <name>Yuanpeng Tu</name>
+      <name>Jiwen Lu</name>
     </author>
-    <author>
-      <name>Yiyang Wang</name>
-    </author>
-    <author>
-      <name>Hengshuang Zhao</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://sihuiji.github.io/LayerFlow-Page/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.04228v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04228v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2506.05344v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05344v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.04225v1</id>
-    <updated>2025-06-04T17:59:04Z</updated>
-    <published>2025-06-04T17:59:04Z</published>
-    <title>Voyager: Long-Range and World-Consistent Video Diffusion for Explorable
-  3D Scene Generation</title>
-    <summary>  Real-world applications like video gaming and virtual reality often demand
-the ability to model 3D scenes that users can explore along custom camera
-trajectories. While significant progress has been made in generating 3D objects
-from text or images, creating long-range, 3D-consistent, explorable 3D scenes
-remains a complex and challenging problem. In this work, we present Voyager, a
-novel video diffusion framework that generates world-consistent 3D point-cloud
-sequences from a single image with user-defined camera path. Unlike existing
-approaches, Voyager achieves end-to-end scene generation and reconstruction
-with inherent consistency across frames, eliminating the need for 3D
-reconstruction pipelines (e.g., structure-from-motion or multi-view stereo).
-Our method integrates three key components: 1) World-Consistent Video
-Diffusion: A unified architecture that jointly generates aligned RGB and depth
-video sequences, conditioned on existing world observation to ensure global
-coherence 2) Long-Range World Exploration: An efficient world cache with point
-culling and an auto-regressive inference with smooth video sampling for
-iterative scene extension with context-aware consistency, and 3) Scalable Data
-Engine: A video reconstruction pipeline that automates camera pose estimation
-and metric depth prediction for arbitrary videos, enabling large-scale, diverse
-training data curation without manual 3D annotations. Collectively, these
-designs result in a clear improvement over existing methods in visual quality
-and geometric accuracy, with versatile applications.
+    <id>http://arxiv.org/abs/2506.05345v1</id>
+    <updated>2025-06-05T17:59:55Z</updated>
+    <published>2025-06-05T17:59:55Z</published>
+    <title>Inference-Time Hyper-Scaling with KV Cache Compression</title>
+    <summary>  Inference-time scaling trades efficiency for increased reasoning accuracy by
+generating longer or more parallel sequences. However, in Transformer LLMs,
+generation cost is bottlenecked by the size of the key-value (KV) cache, rather
+than the number of generated tokens. Hence, we explore inference-time
+hyper-scaling: by compressing the KV cache, we can generate more tokens within
+the same compute budget and further improve the accuracy of scaled inference.
+The success of this approach, however, hinges on the ability of compression
+methods to preserve accuracy even at high compression ratios. To make
+hyper-scaling practical, we introduce Dynamic Memory Sparsification (DMS), a
+novel method for sparsifying KV caches that only requires 1K training steps to
+achieve 8$\times$ compression, while maintaining better accuracy than
+training-free sparse attention. Instead of prematurely discarding cached
+tokens, DMS delays token eviction, implicitly merging representations and
+preserving critical information. We demonstrate the effectiveness of
+inference-time hyper-scaling with DMS on multiple families of LLMs, showing
+that it boosts accuracy for comparable inference runtime and memory load. For
+instance, we enhance Qwen-R1 32B by an average of 9.1 points on AIME 24, 7.6 on
+GPQA, and 9.6 on LiveCodeBench across compute budgets.
 </summary>
     <author>
-      <name>Tianyu Huang</name>
+      <name>Adrian Łańcucki</name>
     </author>
     <author>
-      <name>Wangguandong Zheng</name>
+      <name>Konrad Staniszewski</name>
     </author>
     <author>
-      <name>Tengfei Wang</name>
+      <name>Piotr Nawrot</name>
     </author>
     <author>
-      <name>Yuhao Liu</name>
+      <name>Edoardo M. Ponti</name>
     </author>
-    <author>
-      <name>Zhenwei Wang</name>
-    </author>
-    <author>
-      <name>Junta Wu</name>
-    </author>
-    <author>
-      <name>Jie Jiang</name>
-    </author>
-    <author>
-      <name>Hui Li</name>
-    </author>
-    <author>
-      <name>Rynson W. H. Lau</name>
-    </author>
-    <author>
-      <name>Wangmeng Zuo</name>
-    </author>
-    <author>
-      <name>Chunchao Guo</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.04225v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04225v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.04218v1</id>
-    <updated>2025-06-04T17:57:53Z</updated>
-    <published>2025-06-04T17:57:53Z</published>
-    <title>Pseudo-Simulation for Autonomous Driving</title>
-    <summary>  Existing evaluation paradigms for Autonomous Vehicles (AVs) face critical
-limitations. Real-world evaluation is often challenging due to safety concerns
-and a lack of reproducibility, whereas closed-loop simulation can face
-insufficient realism or high computational costs. Open-loop evaluation, while
-being efficient and data-driven, relies on metrics that generally overlook
-compounding errors. In this paper, we propose pseudo-simulation, a novel
-paradigm that addresses these limitations. Pseudo-simulation operates on real
-datasets, similar to open-loop evaluation, but augments them with synthetic
-observations generated prior to evaluation using 3D Gaussian Splatting. Our key
-idea is to approximate potential future states the AV might encounter by
-generating a diverse set of observations that vary in position, heading, and
-speed. Our method then assigns a higher importance to synthetic observations
-that best match the AV's likely behavior using a novel proximity-based
-weighting scheme. This enables evaluating error recovery and the mitigation of
-causal confusion, as in closed-loop benchmarks, without requiring sequential
-interactive simulation. We show that pseudo-simulation is better correlated
-with closed-loop simulations (R^2=0.8) than the best existing open-loop
-approach (R^2=0.7). We also establish a public leaderboard for the community to
-benchmark new methodologies with pseudo-simulation. Our code is available at
-https://github.com/autonomousvision/navsim.
-</summary>
-    <author>
-      <name>Wei Cao</name>
-    </author>
-    <author>
-      <name>Marcel Hallgarten</name>
-    </author>
-    <author>
-      <name>Tianyu Li</name>
-    </author>
-    <author>
-      <name>Daniel Dauner</name>
-    </author>
-    <author>
-      <name>Xunjiang Gu</name>
-    </author>
-    <author>
-      <name>Caojun Wang</name>
-    </author>
-    <author>
-      <name>Yakov Miron</name>
-    </author>
-    <author>
-      <name>Marco Aiello</name>
-    </author>
-    <author>
-      <name>Hongyang Li</name>
-    </author>
-    <author>
-      <name>Igor Gilitschenski</name>
-    </author>
-    <author>
-      <name>Boris Ivanovic</name>
-    </author>
-    <author>
-      <name>Marco Pavone</name>
-    </author>
-    <author>
-      <name>Andreas Geiger</name>
-    </author>
-    <author>
-      <name>Kashyap Chitta</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.04218v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04218v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.05345v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05345v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.04211v1</id>
-    <updated>2025-06-04T17:56:46Z</updated>
-    <published>2025-06-04T17:56:46Z</published>
-    <title>Diffusion Domain Teacher: Diffusion Guided Domain Adaptive Object
-  Detector</title>
-    <summary>  Object detectors often suffer a decrease in performance due to the large
-domain gap between the training data (source domain) and real-world data
-(target domain). Diffusion-based generative models have shown remarkable
-abilities in generating high-quality and diverse images, suggesting their
-potential for extracting valuable feature from various domains. To effectively
-leverage the cross-domain feature representation of diffusion models, in this
-paper, we train a detector with frozen-weight diffusion model on the source
-domain, then employ it as a teacher model to generate pseudo labels on the
-unlabeled target domain, which are used to guide the supervised learning of the
-student model on the target domain. We refer to this approach as Diffusion
-Domain Teacher (DDT). By employing this straightforward yet potent framework,
-we significantly improve cross-domain object detection performance without
-compromising the inference speed. Our method achieves an average mAP
-improvement of 21.2% compared to the baseline on 6 datasets from three common
-cross-domain detection benchmarks (Cross-Camera, Syn2Real, Real2Artistic},
-surpassing the current state-of-the-art (SOTA) methods by an average of 5.7%
-mAP. Furthermore, extensive experiments demonstrate that our method
-consistently brings improvements even in more powerful and complex models,
-highlighting broadly applicable and effective domain adaptation capability of
-our DDT. The code is available at
-https://github.com/heboyong/Diffusion-Domain-Teacher.
-</summary>
-    <author>
-      <name>Boyong He</name>
-    </author>
-    <author>
-      <name>Yuxiang Ji</name>
-    </author>
-    <author>
-      <name>Zhuoyue Tan</name>
-    </author>
-    <author>
-      <name>Liaoni Wu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">MM2024 poster, with appendix and codes</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.04211v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04211v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.04210v1</id>
-    <updated>2025-06-04T17:55:09Z</updated>
-    <published>2025-06-04T17:55:09Z</published>
-    <title>Does Thinking More always Help? Understanding Test-Time Scaling in
-  Reasoning Models</title>
-    <summary>  Recent trends in test-time scaling for reasoning models (e.g., OpenAI o1,
-DeepSeek R1) have led to a popular belief that extending thinking traces using
-prompts like "Wait" or "Let me rethink" can improve performance. This raises a
-natural question: Does thinking more at test-time truly lead to better
-reasoning? To answer this question, we perform a detailed empirical study
-across models and benchmarks, which reveals a consistent pattern of initial
-performance improvements from additional thinking followed by a decline, due to
-"overthinking". To understand this non-monotonic trend, we consider a simple
-probabilistic model, which reveals that additional thinking increases output
-variance-creating an illusion of improved reasoning while ultimately
-undermining precision. Thus, observed gains from "more thinking" are not true
-indicators of improved reasoning, but artifacts stemming from the connection
-between model uncertainty and evaluation metric. This suggests that test-time
-scaling through extended thinking is not an effective way to utilize the
-inference thinking budget. Recognizing these limitations, we introduce an
-alternative test-time scaling approach, parallel thinking, inspired by
-Best-of-N sampling. Our method generates multiple independent reasoning paths
-within the same inference budget and selects the most consistent response via
-majority vote, achieving up to 20% higher accuracy compared to extended
-thinking. This provides a simple yet effective mechanism for test-time scaling
-of reasoning models.
-</summary>
-    <author>
-      <name>Soumya Suvra Ghosal</name>
-    </author>
-    <author>
-      <name>Souradip Chakraborty</name>
-    </author>
-    <author>
-      <name>Avinash Reddy</name>
-    </author>
-    <author>
-      <name>Yifu Lu</name>
-    </author>
-    <author>
-      <name>Mengdi Wang</name>
-    </author>
-    <author>
-      <name>Dinesh Manocha</name>
-    </author>
-    <author>
-      <name>Furong Huang</name>
-    </author>
-    <author>
-      <name>Mohammad Ghavamzadeh</name>
-    </author>
-    <author>
-      <name>Amrit Singh Bedi</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.04210v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04210v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.04203v1</id>
-    <updated>2025-06-04T17:48:38Z</updated>
-    <published>2025-06-04T17:48:38Z</published>
-    <title>Cascadia: A Cascade Serving System for Large Language Models</title>
-    <summary>  Recent advances in large language models (LLMs) have intensified the need to
-deliver both rapid responses and high-quality answers. More powerful models
-yield better results but incur higher inference latency, whereas smaller models
-are faster yet less capable. Recent work proposes balancing this
-latency-quality trade-off using model cascades, which route simpler queries to
-smaller models and more complex ones to larger models. However, enabling
-efficient cascade serving remains challenging. Current frameworks lack
-effective mechanisms for handling (i) the huge and varying resource demands of
-different LLMs, (ii) the inherent heterogeneity of LLM workloads, and (iii) the
-co-optimization of system deployment and routing strategy. Motivated by these
-observations, we introduce Cascadia, a novel cascade serving framework designed
-explicitly to schedule request routing and deploy model cascades for fast,
-quality-preserving LLM serving. Cascadia employs a bi-level optimization
-method: at the inner level, it uses a mixed-integer linear program to select
-resource allocations and parallelism strategies based on LLM information and
-workload characteristics; at the outer level, it applies a weighted Tchebycheff
-algorithm to iteratively co-optimize the routing strategy and the system
-deployment produced by the inner level. Our extensive evaluation on diverse
-workload traces and different model cascades (DeepSeek and the Llama series)
-demonstrates that Cascadia significantly outperforms both single-model
-deployments and the state-of-the-art cascade serving baseline, achieving up to
-4x (2.3x on average) tighter latency SLOs and up to 5x (2.4x on average) higher
-throughput while maintaining target answer quality.
+    <id>http://arxiv.org/abs/2506.05341v1</id>
+    <updated>2025-06-05T17:59:42Z</updated>
+    <published>2025-06-05T17:59:42Z</published>
+    <title>Direct Numerical Layout Generation for 3D Indoor Scene Synthesis via
+  Spatial Reasoning</title>
+    <summary>  Realistic 3D indoor scene synthesis is vital for embodied AI and digital
+content creation. It can be naturally divided into two subtasks: object
+generation and layout generation. While recent generative models have
+significantly advanced object-level quality and controllability, layout
+generation remains challenging due to limited datasets. Existing methods either
+overfit to these datasets or rely on predefined constraints to optimize
+numerical layout that sacrifice flexibility. As a result, they fail to generate
+scenes that are both open-vocabulary and aligned with fine-grained user
+instructions. We introduce DirectLayout, a framework that directly generates
+numerical 3D layouts from text descriptions using generalizable spatial
+reasoning of large language models (LLMs). DirectLayout decomposes the
+generation into three stages: producing a Bird's-Eye View (BEV) layout, lifting
+it into 3D space, and refining object placements. To enable explicit spatial
+reasoning and help the model grasp basic principles of object placement, we
+employ Chain-of-Thought (CoT) Activation based on the 3D-Front dataset.
+Additionally, we design CoT-Grounded Generative Layout Reward to enhance
+generalization and spatial planning. During inference, DirectLayout addresses
+asset-layout mismatches via Iterative Asset-Layout Alignment through in-context
+learning. Extensive experiments demonstrate that DirectLayout achieves
+impressive semantic consistency, generalization and physical plausibility.
 </summary>
     <author>
-      <name>Youhe Jiang</name>
+      <name>Xingjian Ran</name>
     </author>
     <author>
-      <name>Fangcheng Fu</name>
+      <name>Yixuan Li</name>
     </author>
     <author>
-      <name>Wanru Zhao</name>
+      <name>Linning Xu</name>
     </author>
     <author>
-      <name>Stephan Rabanser</name>
+      <name>Mulin Yu</name>
     </author>
     <author>
-      <name>Nicholas D. Lane</name>
+      <name>Bo Dai</name>
     </author>
-    <author>
-      <name>Binhang Yuan</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.04203v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04203v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://directlayout.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.05341v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05341v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.04201v1</id>
-    <updated>2025-06-04T17:46:02Z</updated>
-    <published>2025-06-04T17:46:02Z</published>
-    <title>Analyzing Line-of-sight selection biases in galaxy-scale strong lensing
-  with external convergence and shear</title>
-    <summary>  The upcoming Vera Rubin Observatory Legacy Survey of Space and Time (LSST)
-will dramatically increase the number of strong gravitational lensing systems,
-requiring precise modeling of line-of-sight (LOS) effects to mitigate biases in
-lensing observations and cosmological inferences. We develop a method to
-construct joint distributions of external convergence ($\kappa_{\mathrm{ext}}$)
-and shear ($\gamma_{\mathrm{ext}}$) for strong lensing LOS by aggregating
-large-scale structure simulations with high-resolution halo renderings and
-non-linear correction. Our approach captures both smooth background matter and
-perturbations from halos, enabling accurate modeling of LOS effects. We apply
-non-linear LOS corrections to $\kappa_{\mathrm{ext}}$ and
-$\gamma_{\mathrm{ext}}$ that address the non-additive lensing effects caused by
-objects along the LOS in strong lensing. We find that, with a minimum image
-separation of $1.0^{\prime\prime}$, non-linear LOS correction due to the
-presence of a dominant deflector slightly increases the ratio of quadruple to
-double lenses; this non-linear LOS correction also introduces systematic biases
-of $\sim 0.1\%$ for galaxy-AGN lenses in the inferred Hubble constant ($H_0$)
-if not accounted for. We also observe a $0.66\%$ bias for galaxy-galaxy lenses
-on $H_0$, and even larger biases up to $1.02\%$ for galaxy-AGN systems if LOS
-effects are not accounted for. These results highlight the importance of LOS
-for precision cosmology. The publicly available code and datasets provide tools
-for incorporating LOS effects in future analyses.
+    <id>http://arxiv.org/abs/2506.05333v1</id>
+    <updated>2025-06-05T17:59:24Z</updated>
+    <published>2025-06-05T17:59:24Z</published>
+    <title>Kinetics: Rethinking Test-Time Scaling Laws</title>
+    <summary>  We rethink test-time scaling laws from a practical efficiency perspective,
+revealing that the effectiveness of smaller models is significantly
+overestimated. Prior work, grounded in compute-optimality, overlooks critical
+memory access bottlenecks introduced by inference-time strategies (e.g.,
+Best-of-$N$, long CoTs). Our holistic analysis, spanning models from 0.6B to
+32B parameters, reveals a new Kinetics Scaling Law that better guides resource
+allocation by incorporating both computation and memory access costs. Kinetics
+Scaling Law suggests that test-time compute is more effective when used on
+models above a threshold than smaller ones. A key reason is that in TTS,
+attention, rather than parameter count, emerges as the dominant cost factor.
+Motivated by this, we propose a new scaling paradigm centered on sparse
+attention, which lowers per-token cost and enables longer generations and more
+parallel samples within the same resource budget. Empirically, we show that
+sparse attention models consistently outperform dense counterparts, achieving
+over 60 points gains in low-cost regimes and over 5 points gains in high-cost
+regimes for problem-solving accuracy on AIME, encompassing evaluations on
+state-of-the-art MoEs. These results suggest that sparse attention is essential
+for realizing the full potential of test-time scaling because, unlike training,
+where parameter scaling saturates, test-time accuracy continues to improve
+through increased generation. The code is available at
+https://github.com/Infini-AI-Lab/Kinetics.
 </summary>
     <author>
-      <name>Xianzhe TZ Tang</name>
+      <name>Ranajoy Sadhukhan</name>
     </author>
     <author>
-      <name>Simon Birrer</name>
+      <name>Zhuoming Chen</name>
     </author>
     <author>
-      <name>Anowar J. Shajib</name>
+      <name>Haizhong Zheng</name>
     </author>
     <author>
-      <name>Narayan Khadka</name>
+      <name>Yang Zhou</name>
     </author>
     <author>
-      <name>the LSST Strong Gravitational Lensing Science Collaboration</name>
+      <name>Emma Strubell</name>
     </author>
     <author>
-      <name>the LSST Dark Energy Science Collaboration</name>
+      <name>Beidi Chen</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">27 pages, 8 figures, 2 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.04201v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04201v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.04194v1</id>
-    <updated>2025-06-04T17:40:55Z</updated>
-    <published>2025-06-04T17:40:55Z</published>
-    <title>What Makes Treatment Effects Identifiable? Characterizations and
-  Estimators Beyond Unconfoundedness</title>
-    <summary>  Most of the widely used estimators of the average treatment effect (ATE) in
-causal inference rely on the assumptions of unconfoundedness and overlap.
-Unconfoundedness requires that the observed covariates account for all
-correlations between the outcome and treatment. Overlap requires the existence
-of randomness in treatment decisions for all individuals. Nevertheless, many
-types of studies frequently violate unconfoundedness or overlap, for instance,
-observational studies with deterministic treatment decisions -- popularly known
-as Regression Discontinuity designs -- violate overlap.
-  In this paper, we initiate the study of general conditions that enable the
-identification of the average treatment effect, extending beyond
-unconfoundedness and overlap. In particular, following the paradigm of
-statistical learning theory, we provide an interpretable condition that is
-sufficient and nearly necessary for the identification of ATE. Moreover, this
-condition characterizes the identification of the average treatment effect on
-the treated (ATT) and can be used to characterize other treatment effects as
-well. To illustrate the utility of our condition, we present several
-well-studied scenarios where our condition is satisfied and, hence, we prove
-that ATE can be identified in regimes that prior works could not capture. For
-example, under mild assumptions on the data distributions, this holds for the
-models proposed by Tan (2006) and Rosenbaum (2002), and the Regression
-Discontinuity design model introduced by Thistlethwaite and Campbell (1960).
-For each of these scenarios, we also show that, under natural additional
-assumptions, ATE can be estimated from finite samples.
-  We believe these findings open new avenues for bridging learning-theoretic
-insights and causal inference methodologies, particularly in observational
-studies with complex treatment mechanisms.
-</summary>
-    <author>
-      <name>Yang Cai</name>
-    </author>
-    <author>
-      <name>Alkis Kalavasis</name>
-    </author>
-    <author>
-      <name>Katerina Mamali</name>
-    </author>
-    <author>
-      <name>Anay Mehrotra</name>
-    </author>
-    <author>
-      <name>Manolis Zampetakis</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for presentation at the 38th Conference on Learning Theory
-  (COLT) 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.04194v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04194v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.05333v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05333v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.04193v1</id>
-    <updated>2025-06-04T17:40:31Z</updated>
-    <published>2025-06-04T17:40:31Z</published>
-    <title>Understanding challenges to the interpretation of disaggregated
-  evaluations of algorithmic fairness</title>
-    <summary>  Disaggregated evaluation across subgroups is critical for assessing the
-fairness of machine learning models, but its uncritical use can mislead
-practitioners. We show that equal performance across subgroups is an unreliable
-measure of fairness when data are representative of the relevant populations
-but reflective of real-world disparities. Furthermore, when data are not
-representative due to selection bias, both disaggregated evaluation and
-alternative approaches based on conditional independence testing may be invalid
-without explicit assumptions regarding the bias mechanism. We use causal
-graphical models to predict metric stability across subgroups under different
-data generating processes. Our framework suggests complementing disaggregated
-evaluations with explicit causal assumptions and analysis to control for
-confounding and distribution shift, including conditional independence testing
-and weighted performance estimation. These findings have broad implications for
-how practitioners design and interpret model assessments given the ubiquity of
-disaggregated evaluation.
+    <id>http://arxiv.org/abs/2506.05332v1</id>
+    <updated>2025-06-05T17:59:04Z</updated>
+    <published>2025-06-05T17:59:04Z</published>
+    <title>Unleashing Hour-Scale Video Training for Long Video-Language
+  Understanding</title>
+    <summary>  Recent long-form video-language understanding benchmarks have driven progress
+in video large multimodal models (Video-LMMs). However, the scarcity of
+well-annotated long videos has left the training of hour-long Video-LLMs
+underexplored. To close this gap, we present VideoMarathon, a large-scale
+hour-long video instruction-following dataset. This dataset includes around
+9,700 hours of long videos sourced from diverse domains, ranging from 3 to 60
+minutes per video. Specifically, it contains 3.3M high-quality QA pairs,
+spanning six fundamental topics: temporality, spatiality, object, action,
+scene, and event. Compared to existing video instruction datasets,
+VideoMarathon significantly extends training video durations up to 1 hour, and
+supports 22 diverse tasks requiring both short- and long-term video
+comprehension. Building on VideoMarathon, we propose Hour-LLaVA, a powerful and
+efficient Video-LMM for hour-scale video-language modeling. It enables
+hour-long video training and inference at 1-FPS sampling by leveraging a memory
+augmentation module, which adaptively integrates user question-relevant and
+spatiotemporal-informative semantics from a cached full video context. In our
+experiments, Hour-LLaVA achieves the best performance on multiple long
+video-language benchmarks, demonstrating the high quality of the VideoMarathon
+dataset and the superiority of the Hour-LLaVA model.
 </summary>
     <author>
-      <name>Stephen R. Pfohl</name>
+      <name>Jingyang Lin</name>
     </author>
     <author>
-      <name>Natalie Harris</name>
+      <name>Jialian Wu</name>
     </author>
     <author>
-      <name>Chirag Nagpal</name>
+      <name>Ximeng Sun</name>
     </author>
     <author>
-      <name>David Madras</name>
+      <name>Ze Wang</name>
     </author>
     <author>
-      <name>Vishwali Mhasawade</name>
+      <name>Jiang Liu</name>
     </author>
     <author>
-      <name>Olawale Salaudeen</name>
+      <name>Yusheng Su</name>
     </author>
     <author>
-      <name>Awa Dieng</name>
+      <name>Xiaodong Yu</name>
     </author>
     <author>
-      <name>Shannon Sequeira</name>
+      <name>Hao Chen</name>
     </author>
     <author>
-      <name>Santiago Arciniegas</name>
+      <name>Jiebo Luo</name>
     </author>
     <author>
-      <name>Lillian Sung</name>
+      <name>Zicheng Liu</name>
     </author>
     <author>
-      <name>Nnamdi Ezeanochie</name>
+      <name>Emad Barsoum</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://videomarathon.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.05332v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05332v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.05325v1</id>
+    <updated>2025-06-05T17:58:09Z</updated>
+    <published>2025-06-05T17:58:09Z</published>
+    <title>Seeing the Invisible: Machine learning-Based QPI Kernel Extraction via
+  Latent Alignment</title>
+    <summary>  Quasiparticle interference (QPI) imaging is a powerful tool for probing
+electronic structures in quantum materials, but extracting the single-scatterer
+QPI pattern (i.e., the kernel) from a multi-scatterer image remains a
+fundamentally ill-posed inverse problem. In this work, we propose the first
+AI-based framework for QPI kernel extraction. We introduce a two-step learning
+strategy that decouples kernel representation learning from
+observation-to-kernel inference. In the first step, we train a variational
+autoencoder to learn a compact latent space of scattering kernels. In the
+second step, we align the latent representation of QPI observations with those
+of the pre-learned kernels using a dedicated encoder. This design enables the
+model to infer kernels robustly even under complex, entangled scattering
+conditions. We construct a diverse and physically realistic QPI dataset
+comprising 100 unique kernels and evaluate our method against a direct one-step
+baseline. Experimental results demonstrate that our approach achieves
+significantly higher extraction accuracy, and improved generalization to unseen
+kernels.
+</summary>
+    <author>
+      <name>Yingshuai Ji</name>
     </author>
     <author>
-      <name>Heather Cole-Lewis</name>
+      <name>Haomin Zhuang</name>
     </author>
     <author>
-      <name>Katherine Heller</name>
+      <name>Matthew Toole</name>
     </author>
     <author>
-      <name>Sanmi Koyejo</name>
+      <name>James McKenzie</name>
     </author>
     <author>
-      <name>Alexander D'Amour</name>
+      <name>Xiaolong Liu</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.04193v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04193v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Xiangliang Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.05325v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05325v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.04182v1</id>
-    <updated>2025-06-04T17:28:38Z</updated>
-    <published>2025-06-04T17:28:38Z</published>
-    <title>Long or short CoT? Investigating Instance-level Switch of Large
-  Reasoning Models</title>
-    <summary>  With the rapid advancement of large reasoning models, long Chain-of-Thought
-(CoT) prompting has demonstrated strong performance on complex tasks. However,
-this often comes with a significant increase in token usage. In this paper, we
-conduct a comprehensive empirical analysis comparing long and short CoT
-strategies. Our findings reveal that while long CoT can lead to performance
-improvements, its benefits are often marginal relative to its significantly
-higher token consumption. Specifically, long CoT tends to outperform when ample
-generation budgets are available, whereas short CoT is more effective under
-tighter budget constraints. These insights underscore the need for a dynamic
-approach that selects the proper CoT strategy based on task context and
-resource availability. To address this, we propose SwitchCoT, an automatic
-framework that adaptively chooses between long and short CoT strategies to
-balance reasoning accuracy and computational efficiency. Moreover, SwitchCoT is
-designed to be budget-aware, making it broadly applicable across scenarios with
-varying resource constraints. Experimental results demonstrate that SwitchCoT
-can reduce inference costs by up to 50% while maintaining high accuracy.
-Notably, under limited token budgets, it achieves performance comparable to, or
-even exceeding, that of using either long or short CoT alone.
+    <id>http://arxiv.org/abs/2506.05321v1</id>
+    <updated>2025-06-05T17:57:11Z</updated>
+    <published>2025-06-05T17:57:11Z</published>
+    <title>LSM-2: Learning from Incomplete Wearable Sensor Data</title>
+    <summary>  Foundation models, a cornerstone of recent advancements in machine learning,
+have predominantly thrived on complete and well-structured data. Wearable
+sensor data frequently suffers from significant missingness, posing a
+substantial challenge for self-supervised learning (SSL) models that typically
+assume complete data inputs. This paper introduces the second generation of
+Large Sensor Model (LSM-2) with Adaptive and Inherited Masking (AIM), a novel
+SSL approach that learns robust representations directly from incomplete data
+without requiring explicit imputation. AIM's core novelty lies in its use of
+learnable mask tokens to model both existing ("inherited") and artificially
+introduced missingness, enabling it to robustly handle fragmented real-world
+data during inference. Pre-trained on an extensive dataset of 40M hours of
+day-long multimodal sensor data, our LSM-2 with AIM achieves the best
+performance across a diverse range of tasks, including classification,
+regression and generative modeling. Furthermore, LSM-2 with AIM exhibits
+superior scaling performance, and critically, maintains high performance even
+under targeted missingness scenarios, reflecting clinically coherent patterns,
+such as the diagnostic value of nighttime biosignals for hypertension
+prediction. This makes AIM a more reliable choice for real-world wearable data
+applications.
 </summary>
     <author>
-      <name>Ruiqi Zhang</name>
+      <name>Maxwell A. Xu</name>
     </author>
     <author>
-      <name>Changyi Xiao</name>
+      <name>Girish Narayanswamy</name>
     </author>
     <author>
-      <name>Yixin Cao</name>
+      <name>Kumar Ayush</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.04182v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.04182v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Dimitris Spathis</name>
+    </author>
+    <author>
+      <name>Shun Liao</name>
+    </author>
+    <author>
+      <name>Shyam A. Tailor</name>
+    </author>
+    <author>
+      <name>Ahmed Metwally</name>
+    </author>
+    <author>
+      <name>A. Ali Heydari</name>
+    </author>
+    <author>
+      <name>Yuwei Zhang</name>
+    </author>
+    <author>
+      <name>Jake Garrison</name>
+    </author>
+    <author>
+      <name>Samy Abdel-Ghaffar</name>
+    </author>
+    <author>
+      <name>Xuhai Xu</name>
+    </author>
+    <author>
+      <name>Ken Gu</name>
+    </author>
+    <author>
+      <name>Jacob Sunshine</name>
+    </author>
+    <author>
+      <name>Ming-Zher Poh</name>
+    </author>
+    <author>
+      <name>Yun Liu</name>
+    </author>
+    <author>
+      <name>Tim Althoff</name>
+    </author>
+    <author>
+      <name>Shrikanth Narayanan</name>
+    </author>
+    <author>
+      <name>Pushmeet Kohli</name>
+    </author>
+    <author>
+      <name>Mark Malhotra</name>
+    </author>
+    <author>
+      <name>Shwetak Patel</name>
+    </author>
+    <author>
+      <name>Yuzhe Yang</name>
+    </author>
+    <author>
+      <name>James M. Rehg</name>
+    </author>
+    <author>
+      <name>Xin Liu</name>
+    </author>
+    <author>
+      <name>Daniel McDuff</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Xu and Narayanswamy are co-first authors. McDuff and Liu are co-last
+  authors</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.05321v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05321v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.05320v1</id>
+    <updated>2025-06-05T17:57:08Z</updated>
+    <published>2025-06-05T17:57:08Z</published>
+    <title>Generalizable, real-time neural decoding with hybrid state-space models</title>
+    <summary>  Real-time decoding of neural activity is central to neuroscience and
+neurotechnology applications, from closed-loop experiments to brain-computer
+interfaces, where models are subject to strict latency constraints. Traditional
+methods, including simple recurrent neural networks, are fast and lightweight
+but often struggle to generalize to unseen data. In contrast, recent
+Transformer-based approaches leverage large-scale pretraining for strong
+generalization performance, but typically have much larger computational
+requirements and are not always suitable for low-resource or real-time
+settings. To address these shortcomings, we present POSSM, a novel hybrid
+architecture that combines individual spike tokenization via a cross-attention
+module with a recurrent state-space model (SSM) backbone to enable (1) fast and
+causal online prediction on neural activity and (2) efficient generalization to
+new sessions, individuals, and tasks through multi-dataset pretraining. We
+evaluate POSSM's decoding performance and inference speed on intracortical
+decoding of monkey motor tasks, and show that it extends to clinical
+applications, namely handwriting and speech decoding in human subjects.
+Notably, we demonstrate that pretraining on monkey motor-cortical recordings
+improves decoding performance on the human handwriting task, highlighting the
+exciting potential for cross-species transfer. In all of these tasks, we find
+that POSSM achieves decoding accuracy comparable to state-of-the-art
+Transformers, at a fraction of the inference cost (up to 9x faster on GPU).
+These results suggest that hybrid SSMs are a promising approach to bridging the
+gap between accuracy, inference speed, and generalization when training neural
+decoders for real-time, closed-loop applications.
+</summary>
+    <author>
+      <name>Avery Hee-Woon Ryoo</name>
+    </author>
+    <author>
+      <name>Nanda H. Krishna</name>
+    </author>
+    <author>
+      <name>Ximeng Mao</name>
+    </author>
+    <author>
+      <name>Mehdi Azabou</name>
+    </author>
+    <author>
+      <name>Eva L. Dyer</name>
+    </author>
+    <author>
+      <name>Matthew G. Perich</name>
+    </author>
+    <author>
+      <name>Guillaume Lajoie</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Under review</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.05320v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05320v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.05305v1</id>
+    <updated>2025-06-05T17:52:30Z</updated>
+    <published>2025-06-05T17:52:30Z</published>
+    <title>ProRefine: Inference-time Prompt Refinement with Textual Feedback</title>
+    <summary>  Agentic workflows, where multiple AI agents collaborate to accomplish complex
+tasks like reasoning or planning, are becoming increasingly prevalent. However,
+these workflows often suffer from error propagation and sub-optimal
+performance, largely due to poorly designed prompts that fail to effectively
+guide individual agents. This is a critical problem because it limits the
+reliability and scalability of these powerful systems. We introduce ProRefine,
+an innovative inference-time prompt optimization method that leverages textual
+feedback from large language models (LLMs) to address this challenge. ProRefine
+dynamically refines prompts for multi-step reasoning tasks without additional
+training or ground truth labels. Evaluated on five benchmark mathematical
+reasoning datasets, ProRefine significantly surpasses zero-shot
+Chain-of-Thought baselines by 3 to 37 percentage points. This approach not only
+boosts accuracy but also allows smaller models to match the performance of
+larger ones, highlighting its potential for efficient and scalable AI
+deployment, and democratizing access to high-performing AI.
+</summary>
+    <author>
+      <name>Deepak Pandita</name>
+    </author>
+    <author>
+      <name>Tharindu Cyril Weerasooriya</name>
+    </author>
+    <author>
+      <name>Ankit Parag Shah</name>
+    </author>
+    <author>
+      <name>Christopher M. Homan</name>
+    </author>
+    <author>
+      <name>Wei Wei</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.05305v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05305v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.05301v1</id>
+    <updated>2025-06-05T17:51:05Z</updated>
+    <published>2025-06-05T17:51:05Z</published>
+    <title>SeedVR2: One-Step Video Restoration via Diffusion Adversarial
+  Post-Training</title>
+    <summary>  Recent advances in diffusion-based video restoration (VR) demonstrate
+significant improvement in visual quality, yet yield a prohibitive
+computational cost during inference. While several distillation-based
+approaches have exhibited the potential of one-step image restoration,
+extending existing approaches to VR remains challenging and underexplored,
+particularly when dealing with high-resolution video in real-world settings. In
+this work, we propose a one-step diffusion-based VR model, termed as SeedVR2,
+which performs adversarial VR training against real data. To handle the
+challenging high-resolution VR within a single step, we introduce several
+enhancements to both model architecture and training procedures. Specifically,
+an adaptive window attention mechanism is proposed, where the window size is
+dynamically adjusted to fit the output resolutions, avoiding window
+inconsistency observed under high-resolution VR using window attention with a
+predefined window size. To stabilize and improve the adversarial post-training
+towards VR, we further verify the effectiveness of a series of losses,
+including a proposed feature matching loss without significantly sacrificing
+training efficiency. Extensive experiments show that SeedVR2 can achieve
+comparable or even better performance compared with existing VR approaches in a
+single step.
+</summary>
+    <author>
+      <name>Jianyi Wang</name>
+    </author>
+    <author>
+      <name>Shanchuan Lin</name>
+    </author>
+    <author>
+      <name>Zhijie Lin</name>
+    </author>
+    <author>
+      <name>Yuxi Ren</name>
+    </author>
+    <author>
+      <name>Meng Wei</name>
+    </author>
+    <author>
+      <name>Zongsheng Yue</name>
+    </author>
+    <author>
+      <name>Shangchen Zhou</name>
+    </author>
+    <author>
+      <name>Hao Chen</name>
+    </author>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <author>
+      <name>Ceyuan Yang</name>
+    </author>
+    <author>
+      <name>Xuefeng Xiao</name>
+    </author>
+    <author>
+      <name>Chen Change Loy</name>
+    </author>
+    <author>
+      <name>Lu Jiang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Draft Ver. Project page: https://iceclear.github.io/projects/seedvr2/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.05301v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.05301v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
