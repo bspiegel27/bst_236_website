@@ -1,588 +1,639 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-09T01:00:54Z -->
+<!-- Last updated: 2025-06-10T00:58:22Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-08T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114325</opensearch:totalResults>
+  <updated>2025-06-09T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114436</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.05344v1</id>
-    <updated>2025-06-05T17:59:55Z</updated>
-    <published>2025-06-05T17:59:55Z</published>
-    <title>SparseMM: Head Sparsity Emerges from Visual Concept Responses in MLLMs</title>
-    <summary>  Multimodal Large Language Models (MLLMs) are commonly derived by extending
-pre-trained Large Language Models (LLMs) with visual capabilities. In this
-work, we investigate how MLLMs process visual inputs by analyzing their
-attention mechanisms. We reveal a surprising sparsity phenomenon: only a small
-subset (approximately less than 5%) of attention heads in LLMs actively
-contribute to visual understanding, termed visual heads. To identify these
-heads efficiently, we design a training-free framework that quantifies
-head-level visual relevance through targeted response analysis. Building on
-this discovery, we introduce SparseMM, a KV-Cache optimization strategy that
-allocates asymmetric computation budgets to heads in LLMs based on their visual
-scores, leveraging the sparity of visual heads for accelerating the inference
-of MLLMs. Compared with prior KV-Cache acceleration methods that ignore the
-particularity of visual, SparseMM prioritizes stress and retaining visual
-semantics during decoding. Extensive evaluations across mainstream multimodal
-benchmarks demonstrate that SparseMM achieves superior accuracy-efficiency
-trade-offs. Notably, SparseMM delivers 1.38x real-time acceleration and 52%
-memory reduction during generation while maintaining performance parity on
-efficiency test. Our project is open sourced at
-https://github.com/CR400AF-A/SparseMM.
+    <id>http://arxiv.org/abs/2506.06275v1</id>
+    <updated>2025-06-06T17:58:36Z</updated>
+    <published>2025-06-06T17:58:36Z</published>
+    <title>Movie Facts and Fibs (MF$^2$): A Benchmark for Long Movie Understanding</title>
+    <summary>  Despite recent progress in vision-language models (VLMs), holistic
+understanding of long-form video content remains a significant challenge,
+partly due to limitations in current benchmarks. Many focus on peripheral,
+``needle-in-a-haystack'' details, encouraging context-insensitive retrieval
+over deep comprehension. Others rely on large-scale, semi-automatically
+generated questions (often produced by language models themselves) that are
+easier for models to answer but fail to reflect genuine understanding. In this
+paper, we introduce MF$^2$, a new benchmark for evaluating whether models can
+comprehend, consolidate, and recall key narrative information from full-length
+movies (50-170 minutes long). MF$^2$ includes over 50 full-length,
+open-licensed movies, each paired with manually constructed sets of claim pairs
+-- one true (fact) and one plausible but false (fib), totalling over 850 pairs.
+These claims target core narrative elements such as character motivations and
+emotions, causal chains, and event order, and refer to memorable moments that
+humans can recall without rewatching the movie. Instead of multiple-choice
+formats, we adopt a binary claim evaluation protocol: for each pair, models
+must correctly identify both the true and false claims. This reduces biases
+like answer ordering and enables a more precise assessment of reasoning. Our
+experiments demonstrate that both open-weight and closed state-of-the-art
+models fall well short of human performance, underscoring the relative ease of
+the task for humans and their superior ability to retain and reason over
+critical narrative information -- an ability current VLMs lack.
 </summary>
     <author>
-      <name>Jiahui Wang</name>
+      <name>Emmanouil Zaranis</name>
     </author>
     <author>
-      <name>Zuyan Liu</name>
+      <name>António Farinhas</name>
     </author>
     <author>
-      <name>Yongming Rao</name>
+      <name>Saul Santos</name>
     </author>
     <author>
-      <name>Jiwen Lu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.05344v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05344v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.05345v1</id>
-    <updated>2025-06-05T17:59:55Z</updated>
-    <published>2025-06-05T17:59:55Z</published>
-    <title>Inference-Time Hyper-Scaling with KV Cache Compression</title>
-    <summary>  Inference-time scaling trades efficiency for increased reasoning accuracy by
-generating longer or more parallel sequences. However, in Transformer LLMs,
-generation cost is bottlenecked by the size of the key-value (KV) cache, rather
-than the number of generated tokens. Hence, we explore inference-time
-hyper-scaling: by compressing the KV cache, we can generate more tokens within
-the same compute budget and further improve the accuracy of scaled inference.
-The success of this approach, however, hinges on the ability of compression
-methods to preserve accuracy even at high compression ratios. To make
-hyper-scaling practical, we introduce Dynamic Memory Sparsification (DMS), a
-novel method for sparsifying KV caches that only requires 1K training steps to
-achieve 8$\times$ compression, while maintaining better accuracy than
-training-free sparse attention. Instead of prematurely discarding cached
-tokens, DMS delays token eviction, implicitly merging representations and
-preserving critical information. We demonstrate the effectiveness of
-inference-time hyper-scaling with DMS on multiple families of LLMs, showing
-that it boosts accuracy for comparable inference runtime and memory load. For
-instance, we enhance Qwen-R1 32B by an average of 9.1 points on AIME 24, 7.6 on
-GPQA, and 9.6 on LiveCodeBench across compute budgets.
-</summary>
-    <author>
-      <name>Adrian Łańcucki</name>
+      <name>Beatriz Canaverde</name>
     </author>
     <author>
-      <name>Konrad Staniszewski</name>
+      <name>Miguel Moura Ramos</name>
     </author>
     <author>
-      <name>Piotr Nawrot</name>
+      <name>Aditya K Surikuchi</name>
     </author>
     <author>
-      <name>Edoardo M. Ponti</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.05345v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05345v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.05341v1</id>
-    <updated>2025-06-05T17:59:42Z</updated>
-    <published>2025-06-05T17:59:42Z</published>
-    <title>Direct Numerical Layout Generation for 3D Indoor Scene Synthesis via
-  Spatial Reasoning</title>
-    <summary>  Realistic 3D indoor scene synthesis is vital for embodied AI and digital
-content creation. It can be naturally divided into two subtasks: object
-generation and layout generation. While recent generative models have
-significantly advanced object-level quality and controllability, layout
-generation remains challenging due to limited datasets. Existing methods either
-overfit to these datasets or rely on predefined constraints to optimize
-numerical layout that sacrifice flexibility. As a result, they fail to generate
-scenes that are both open-vocabulary and aligned with fine-grained user
-instructions. We introduce DirectLayout, a framework that directly generates
-numerical 3D layouts from text descriptions using generalizable spatial
-reasoning of large language models (LLMs). DirectLayout decomposes the
-generation into three stages: producing a Bird's-Eye View (BEV) layout, lifting
-it into 3D space, and refining object placements. To enable explicit spatial
-reasoning and help the model grasp basic principles of object placement, we
-employ Chain-of-Thought (CoT) Activation based on the 3D-Front dataset.
-Additionally, we design CoT-Grounded Generative Layout Reward to enhance
-generalization and spatial planning. During inference, DirectLayout addresses
-asset-layout mismatches via Iterative Asset-Layout Alignment through in-context
-learning. Extensive experiments demonstrate that DirectLayout achieves
-impressive semantic consistency, generalization and physical plausibility.
-</summary>
-    <author>
-      <name>Xingjian Ran</name>
+      <name>André Viveiros</name>
     </author>
     <author>
-      <name>Yixuan Li</name>
+      <name>Baohao Liao</name>
     </author>
     <author>
-      <name>Linning Xu</name>
+      <name>Elena Bueno-Benito</name>
     </author>
     <author>
-      <name>Mulin Yu</name>
+      <name>Nithin Sivakumaran</name>
     </author>
     <author>
-      <name>Bo Dai</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://directlayout.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.05341v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05341v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.05333v2</id>
-    <updated>2025-06-06T16:11:19Z</updated>
-    <published>2025-06-05T17:59:24Z</published>
-    <title>Kinetics: Rethinking Test-Time Scaling Laws</title>
-    <summary>  We rethink test-time scaling laws from a practical efficiency perspective,
-revealing that the effectiveness of smaller models is significantly
-overestimated. Prior work, grounded in compute-optimality, overlooks critical
-memory access bottlenecks introduced by inference-time strategies (e.g.,
-Best-of-$N$, long CoTs). Our holistic analysis, spanning models from 0.6B to
-32B parameters, reveals a new Kinetics Scaling Law that better guides resource
-allocation by incorporating both computation and memory access costs. Kinetics
-Scaling Law suggests that test-time compute is more effective when used on
-models above a threshold than smaller ones. A key reason is that in TTS,
-attention, rather than parameter count, emerges as the dominant cost factor.
-Motivated by this, we propose a new scaling paradigm centered on sparse
-attention, which lowers per-token cost and enables longer generations and more
-parallel samples within the same resource budget. Empirically, we show that
-sparse attention models consistently outperform dense counterparts, achieving
-over 60 points gains in low-cost regimes and over 5 points gains in high-cost
-regimes for problem-solving accuracy on AIME, encompassing evaluations on
-state-of-the-art MoEs. These results suggest that sparse attention is essential
-and increasingly important with more computing invested, for realizing the full
-potential of test-time scaling where, unlike training, accuracy has yet to
-saturate as a function of computation, and continues to improve through
-increased generation. The code is available at
-https://github.com/Infini-AI-Lab/Kinetics.
-</summary>
-    <author>
-      <name>Ranajoy Sadhukhan</name>
+      <name>Pavlo Vasylenko</name>
     </author>
     <author>
-      <name>Zhuoming Chen</name>
+      <name>Shoubin Yu</name>
     </author>
     <author>
-      <name>Haizhong Zheng</name>
+      <name>Sonal Sannigrahi</name>
     </author>
     <author>
-      <name>Yang Zhou</name>
+      <name>Wafaa Mohammed</name>
     </author>
     <author>
-      <name>Emma Strubell</name>
+      <name>Ben Peters</name>
     </author>
     <author>
-      <name>Beidi Chen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.05333v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05333v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.05332v1</id>
-    <updated>2025-06-05T17:59:04Z</updated>
-    <published>2025-06-05T17:59:04Z</published>
-    <title>Unleashing Hour-Scale Video Training for Long Video-Language
-  Understanding</title>
-    <summary>  Recent long-form video-language understanding benchmarks have driven progress
-in video large multimodal models (Video-LMMs). However, the scarcity of
-well-annotated long videos has left the training of hour-long Video-LLMs
-underexplored. To close this gap, we present VideoMarathon, a large-scale
-hour-long video instruction-following dataset. This dataset includes around
-9,700 hours of long videos sourced from diverse domains, ranging from 3 to 60
-minutes per video. Specifically, it contains 3.3M high-quality QA pairs,
-spanning six fundamental topics: temporality, spatiality, object, action,
-scene, and event. Compared to existing video instruction datasets,
-VideoMarathon significantly extends training video durations up to 1 hour, and
-supports 22 diverse tasks requiring both short- and long-term video
-comprehension. Building on VideoMarathon, we propose Hour-LLaVA, a powerful and
-efficient Video-LMM for hour-scale video-language modeling. It enables
-hour-long video training and inference at 1-FPS sampling by leveraging a memory
-augmentation module, which adaptively integrates user question-relevant and
-spatiotemporal-informative semantics from a cached full video context. In our
-experiments, Hour-LLaVA achieves the best performance on multiple long
-video-language benchmarks, demonstrating the high quality of the VideoMarathon
-dataset and the superiority of the Hour-LLaVA model.
-</summary>
-    <author>
-      <name>Jingyang Lin</name>
+      <name>Danae Sánchez Villegas</name>
     </author>
     <author>
-      <name>Jialian Wu</name>
+      <name>Elias Stengel-Eskin</name>
     </author>
     <author>
-      <name>Ximeng Sun</name>
+      <name>Giuseppe Attanasio</name>
     </author>
     <author>
-      <name>Ze Wang</name>
+      <name>Jaehong Yoon</name>
     </author>
     <author>
-      <name>Jiang Liu</name>
+      <name>Stella Frank</name>
     </author>
     <author>
-      <name>Yusheng Su</name>
+      <name>Alessandro Suglia</name>
     </author>
     <author>
-      <name>Xiaodong Yu</name>
+      <name>Chrysoula Zerva</name>
     </author>
     <author>
-      <name>Hao Chen</name>
+      <name>Desmond Elliott</name>
     </author>
     <author>
-      <name>Jiebo Luo</name>
+      <name>Mariella Dimiccoli</name>
     </author>
     <author>
-      <name>Zicheng Liu</name>
+      <name>Mohit Bansal</name>
     </author>
     <author>
-      <name>Emad Barsoum</name>
+      <name>Oswald Lanz</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://videomarathon.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.05332v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05332v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Raffaella Bernardi</name>
+    </author>
+    <author>
+      <name>Raquel Fernández</name>
+    </author>
+    <author>
+      <name>Sandro Pezzelle</name>
+    </author>
+    <author>
+      <name>Vlad Niculae</name>
+    </author>
+    <author>
+      <name>André F. T. Martins</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Under Review</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.06275v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06275v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.05325v1</id>
-    <updated>2025-06-05T17:58:09Z</updated>
-    <published>2025-06-05T17:58:09Z</published>
-    <title>Seeing the Invisible: Machine learning-Based QPI Kernel Extraction via
-  Latent Alignment</title>
-    <summary>  Quasiparticle interference (QPI) imaging is a powerful tool for probing
-electronic structures in quantum materials, but extracting the single-scatterer
-QPI pattern (i.e., the kernel) from a multi-scatterer image remains a
-fundamentally ill-posed inverse problem. In this work, we propose the first
-AI-based framework for QPI kernel extraction. We introduce a two-step learning
-strategy that decouples kernel representation learning from
-observation-to-kernel inference. In the first step, we train a variational
-autoencoder to learn a compact latent space of scattering kernels. In the
-second step, we align the latent representation of QPI observations with those
-of the pre-learned kernels using a dedicated encoder. This design enables the
-model to infer kernels robustly even under complex, entangled scattering
-conditions. We construct a diverse and physically realistic QPI dataset
-comprising 100 unique kernels and evaluate our method against a direct one-step
-baseline. Experimental results demonstrate that our approach achieves
-significantly higher extraction accuracy, and improved generalization to unseen
-kernels.
-</summary>
-    <author>
-      <name>Yingshuai Ji</name>
-    </author>
-    <author>
-      <name>Haomin Zhuang</name>
-    </author>
-    <author>
-      <name>Matthew Toole</name>
-    </author>
-    <author>
-      <name>James McKenzie</name>
-    </author>
-    <author>
-      <name>Xiaolong Liu</name>
-    </author>
-    <author>
-      <name>Xiangliang Zhang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.05325v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05325v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.05321v1</id>
-    <updated>2025-06-05T17:57:11Z</updated>
-    <published>2025-06-05T17:57:11Z</published>
-    <title>LSM-2: Learning from Incomplete Wearable Sensor Data</title>
-    <summary>  Foundation models, a cornerstone of recent advancements in machine learning,
-have predominantly thrived on complete and well-structured data. Wearable
-sensor data frequently suffers from significant missingness, posing a
-substantial challenge for self-supervised learning (SSL) models that typically
-assume complete data inputs. This paper introduces the second generation of
-Large Sensor Model (LSM-2) with Adaptive and Inherited Masking (AIM), a novel
-SSL approach that learns robust representations directly from incomplete data
-without requiring explicit imputation. AIM's core novelty lies in its use of
-learnable mask tokens to model both existing ("inherited") and artificially
-introduced missingness, enabling it to robustly handle fragmented real-world
-data during inference. Pre-trained on an extensive dataset of 40M hours of
-day-long multimodal sensor data, our LSM-2 with AIM achieves the best
-performance across a diverse range of tasks, including classification,
-regression and generative modeling. Furthermore, LSM-2 with AIM exhibits
-superior scaling performance, and critically, maintains high performance even
-under targeted missingness scenarios, reflecting clinically coherent patterns,
-such as the diagnostic value of nighttime biosignals for hypertension
-prediction. This makes AIM a more reliable choice for real-world wearable data
-applications.
+    <id>http://arxiv.org/abs/2506.06270v1</id>
+    <updated>2025-06-06T17:53:02Z</updated>
+    <published>2025-06-06T17:53:02Z</published>
+    <title>RecGPT: A Foundation Model for Sequential Recommendation</title>
+    <summary>  This work addresses a fundamental barrier in recommender systems: the
+inability to generalize across domains without extensive retraining.
+Traditional ID-based approaches fail entirely in cold-start and cross-domain
+scenarios where new users or items lack sufficient interaction history.
+Inspired by foundation models' cross-domain success, we develop a foundation
+model for sequential recommendation that achieves genuine zero-shot
+generalization capabilities. Our approach fundamentally departs from existing
+ID-based methods by deriving item representations exclusively from textual
+features. This enables immediate embedding of any new item without model
+retraining. We introduce unified item tokenization with Finite Scalar
+Quantization that transforms heterogeneous textual descriptions into
+standardized discrete tokens. This eliminates domain barriers that plague
+existing systems. Additionally, the framework features hybrid
+bidirectional-causal attention that captures both intra-item token coherence
+and inter-item sequential dependencies. An efficient catalog-aware beam search
+decoder enables real-time token-to-item mapping. Unlike conventional approaches
+confined to their training domains, RecGPT naturally bridges diverse
+recommendation contexts through its domain-invariant tokenization mechanism.
+Comprehensive evaluations across six datasets and industrial scenarios
+demonstrate consistent performance advantages.
 </summary>
     <author>
-      <name>Maxwell A. Xu</name>
+      <name>Yangqin Jiang</name>
     </author>
     <author>
-      <name>Girish Narayanswamy</name>
+      <name>Xubin Ren</name>
     </author>
     <author>
-      <name>Kumar Ayush</name>
+      <name>Lianghao Xia</name>
     </author>
     <author>
-      <name>Dimitris Spathis</name>
+      <name>Da Luo</name>
     </author>
     <author>
-      <name>Shun Liao</name>
+      <name>Kangyi Lin</name>
     </author>
     <author>
-      <name>Shyam A. Tailor</name>
+      <name>Chao Huang</name>
     </author>
-    <author>
-      <name>Ahmed Metwally</name>
-    </author>
-    <author>
-      <name>A. Ali Heydari</name>
-    </author>
-    <author>
-      <name>Yuwei Zhang</name>
-    </author>
-    <author>
-      <name>Jake Garrison</name>
-    </author>
-    <author>
-      <name>Samy Abdel-Ghaffar</name>
-    </author>
-    <author>
-      <name>Xuhai Xu</name>
-    </author>
-    <author>
-      <name>Ken Gu</name>
-    </author>
-    <author>
-      <name>Jacob Sunshine</name>
-    </author>
-    <author>
-      <name>Ming-Zher Poh</name>
-    </author>
-    <author>
-      <name>Yun Liu</name>
-    </author>
-    <author>
-      <name>Tim Althoff</name>
-    </author>
-    <author>
-      <name>Shrikanth Narayanan</name>
-    </author>
-    <author>
-      <name>Pushmeet Kohli</name>
-    </author>
-    <author>
-      <name>Mark Malhotra</name>
-    </author>
-    <author>
-      <name>Shwetak Patel</name>
-    </author>
-    <author>
-      <name>Yuzhe Yang</name>
-    </author>
-    <author>
-      <name>James M. Rehg</name>
-    </author>
-    <author>
-      <name>Xin Liu</name>
-    </author>
-    <author>
-      <name>Daniel McDuff</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Xu and Narayanswamy are co-first authors. McDuff and Liu are co-last
-  authors</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.05321v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05321v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.06270v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06270v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.05320v1</id>
-    <updated>2025-06-05T17:57:08Z</updated>
-    <published>2025-06-05T17:57:08Z</published>
-    <title>Generalizable, real-time neural decoding with hybrid state-space models</title>
-    <summary>  Real-time decoding of neural activity is central to neuroscience and
-neurotechnology applications, from closed-loop experiments to brain-computer
-interfaces, where models are subject to strict latency constraints. Traditional
-methods, including simple recurrent neural networks, are fast and lightweight
-but often struggle to generalize to unseen data. In contrast, recent
-Transformer-based approaches leverage large-scale pretraining for strong
-generalization performance, but typically have much larger computational
-requirements and are not always suitable for low-resource or real-time
-settings. To address these shortcomings, we present POSSM, a novel hybrid
-architecture that combines individual spike tokenization via a cross-attention
-module with a recurrent state-space model (SSM) backbone to enable (1) fast and
-causal online prediction on neural activity and (2) efficient generalization to
-new sessions, individuals, and tasks through multi-dataset pretraining. We
-evaluate POSSM's decoding performance and inference speed on intracortical
-decoding of monkey motor tasks, and show that it extends to clinical
-applications, namely handwriting and speech decoding in human subjects.
-Notably, we demonstrate that pretraining on monkey motor-cortical recordings
-improves decoding performance on the human handwriting task, highlighting the
-exciting potential for cross-species transfer. In all of these tasks, we find
-that POSSM achieves decoding accuracy comparable to state-of-the-art
-Transformers, at a fraction of the inference cost (up to 9x faster on GPU).
-These results suggest that hybrid SSMs are a promising approach to bridging the
-gap between accuracy, inference speed, and generalization when training neural
-decoders for real-time, closed-loop applications.
+    <id>http://arxiv.org/abs/2506.06267v1</id>
+    <updated>2025-06-06T17:49:44Z</updated>
+    <published>2025-06-06T17:49:44Z</published>
+    <title>When Measurement Mediates the Effect of Interest</title>
+    <summary>  Many health promotion strategies aim to improve reach into the target
+population and outcomes among those reached. For example, an HIV prevention
+strategy could expand the reach of risk screening and the delivery of
+biomedical prevention to persons with HIV risk. This setting creates a complex
+missing data problem: the strategy improves health outcomes directly and
+indirectly through expanded reach, while outcomes are only measured among those
+reached. To formally define the total causal effect in such settings, we use
+Counterfactual Strata Effects: causal estimands where the outcome is only
+relevant for a group whose membership is subject to missingness and/or impacted
+by the exposure. To identify and estimate the corresponding statistical
+estimand, we propose a novel extension of Two-Stage targeted minimum loss-based
+estimation (TMLE). Simulations demonstrate the practical performance of our
+approach as well as the limitations of existing approaches.
 </summary>
     <author>
-      <name>Avery Hee-Woon Ryoo</name>
+      <name>Joy Zora Nakato</name>
     </author>
     <author>
-      <name>Nanda H. Krishna</name>
+      <name>Janice Litunya</name>
     </author>
     <author>
-      <name>Ximeng Mao</name>
+      <name>Brian Beesiga</name>
     </author>
     <author>
-      <name>Mehdi Azabou</name>
+      <name>Jane Kabami</name>
     </author>
     <author>
-      <name>Eva L. Dyer</name>
+      <name>James Ayieko</name>
     </author>
     <author>
-      <name>Matthew G. Perich</name>
+      <name>Moses R. Kamya</name>
     </author>
     <author>
-      <name>Guillaume Lajoie</name>
+      <name>Gabriel Chamie</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Under review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.05320v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05320v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Laura B. Balzer</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 3 figures, to be published in 'Statistics in Medicine"</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.06267v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06267v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.05305v1</id>
-    <updated>2025-06-05T17:52:30Z</updated>
-    <published>2025-06-05T17:52:30Z</published>
-    <title>ProRefine: Inference-time Prompt Refinement with Textual Feedback</title>
-    <summary>  Agentic workflows, where multiple AI agents collaborate to accomplish complex
-tasks like reasoning or planning, are becoming increasingly prevalent. However,
-these workflows often suffer from error propagation and sub-optimal
-performance, largely due to poorly designed prompts that fail to effectively
-guide individual agents. This is a critical problem because it limits the
-reliability and scalability of these powerful systems. We introduce ProRefine,
-an innovative inference-time prompt optimization method that leverages textual
-feedback from large language models (LLMs) to address this challenge. ProRefine
-dynamically refines prompts for multi-step reasoning tasks without additional
-training or ground truth labels. Evaluated on five benchmark mathematical
-reasoning datasets, ProRefine significantly surpasses zero-shot
-Chain-of-Thought baselines by 3 to 37 percentage points. This approach not only
-boosts accuracy but also allows smaller models to match the performance of
-larger ones, highlighting its potential for efficient and scalable AI
-deployment, and democratizing access to high-performing AI.
+    <id>http://arxiv.org/abs/2506.06266v1</id>
+    <updated>2025-06-06T17:48:23Z</updated>
+    <published>2025-06-06T17:48:23Z</published>
+    <title>Cartridges: Lightweight and general-purpose long context representations
+  via self-study</title>
+    <summary>  Large language models are often used to answer queries grounded in large text
+corpora (e.g. codebases, legal documents, or chat histories) by placing the
+entire corpus in the context window and leveraging in-context learning (ICL).
+Although current models support contexts of 100K-1M tokens, this setup is
+costly to serve because the memory consumption of the KV cache scales with
+input length. We explore an alternative: training a smaller KV cache offline on
+each corpus. At inference time, we load this trained KV cache, which we call a
+Cartridge, and decode a response. Critically, the cost of training a Cartridge
+can be amortized across all the queries referencing the same corpus. However,
+we find that the naive approach of training the Cartridge with next-token
+prediction on the corpus is not competitive with ICL. Instead, we propose
+self-study, a training recipe in which we generate synthetic conversations
+about the corpus and train the Cartridge with a context-distillation objective.
+We find that Cartridges trained with self-study replicate the functionality of
+ICL, while being significantly cheaper to serve. On challenging long-context
+benchmarks, Cartridges trained with self-study match ICL performance while
+using 38.6x less memory and enabling 26.4x higher throughput. Self-study also
+extends the model's effective context length (e.g. from 128k to 484k tokens on
+MTOB) and surprisingly, leads to Cartridges that can be composed at inference
+time without retraining.
 </summary>
     <author>
-      <name>Deepak Pandita</name>
+      <name>Sabri Eyuboglu</name>
     </author>
     <author>
-      <name>Tharindu Cyril Weerasooriya</name>
+      <name>Ryan Ehrlich</name>
     </author>
     <author>
-      <name>Ankit Parag Shah</name>
+      <name>Simran Arora</name>
     </author>
     <author>
-      <name>Christopher M. Homan</name>
+      <name>Neel Guha</name>
     </author>
     <author>
-      <name>Wei Wei</name>
+      <name>Dylan Zinsley</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.05305v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05305v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Emily Liu</name>
+    </author>
+    <author>
+      <name>Will Tennien</name>
+    </author>
+    <author>
+      <name>Atri Rudra</name>
+    </author>
+    <author>
+      <name>James Zou</name>
+    </author>
+    <author>
+      <name>Azalia Mirhoseini</name>
+    </author>
+    <author>
+      <name>Christopher Re</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.06266v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06266v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.05301v1</id>
-    <updated>2025-06-05T17:51:05Z</updated>
-    <published>2025-06-05T17:51:05Z</published>
-    <title>SeedVR2: One-Step Video Restoration via Diffusion Adversarial
-  Post-Training</title>
-    <summary>  Recent advances in diffusion-based video restoration (VR) demonstrate
-significant improvement in visual quality, yet yield a prohibitive
-computational cost during inference. While several distillation-based
-approaches have exhibited the potential of one-step image restoration,
-extending existing approaches to VR remains challenging and underexplored,
-particularly when dealing with high-resolution video in real-world settings. In
-this work, we propose a one-step diffusion-based VR model, termed as SeedVR2,
-which performs adversarial VR training against real data. To handle the
-challenging high-resolution VR within a single step, we introduce several
-enhancements to both model architecture and training procedures. Specifically,
-an adaptive window attention mechanism is proposed, where the window size is
-dynamically adjusted to fit the output resolutions, avoiding window
-inconsistency observed under high-resolution VR using window attention with a
-predefined window size. To stabilize and improve the adversarial post-training
-towards VR, we further verify the effectiveness of a series of losses,
-including a proposed feature matching loss without significantly sacrificing
-training efficiency. Extensive experiments show that SeedVR2 can achieve
-comparable or even better performance compared with existing VR approaches in a
-single step.
+    <id>http://arxiv.org/abs/2506.06259v1</id>
+    <updated>2025-06-06T17:39:32Z</updated>
+    <published>2025-06-06T17:39:32Z</published>
+    <title>An Optimized Franz-Parisi Criterion and its Equivalence with SQ Lower
+  Bounds</title>
+    <summary>  Bandeira et al. (2022) introduced the Franz-Parisi (FP) criterion for
+characterizing the computational hard phases in statistical detection problems.
+The FP criterion, based on an annealed version of the celebrated Franz-Parisi
+potential from statistical physics, was shown to be equivalent to low-degree
+polynomial (LDP) lower bounds for Gaussian additive models, thereby connecting
+two distinct approaches to understanding the computational hardness in
+statistical inference. In this paper, we propose a refined FP criterion that
+aims to better capture the geometric ``overlap" structure of statistical
+models. Our main result establishes that this optimized FP criterion is
+equivalent to Statistical Query (SQ) lower bounds -- another foundational
+framework in computational complexity of statistical inference. Crucially, this
+equivalence holds under a mild, verifiable assumption satisfied by a broad
+class of statistical models, including Gaussian additive models, planted sparse
+models, as well as non-Gaussian component analysis (NGCA), single-index (SI)
+models, and convex truncation detection settings. For instance, in the case of
+convex truncation tasks, the assumption is equivalent with the Gaussian
+correlation inequality (Royen, 2014) from convex geometry.
+  In addition to the above, our equivalence not only unifies and simplifies the
+derivation of several known SQ lower bounds -- such as for the NGCA model
+(Diakonikolas et al., 2017) and the SI model (Damian et al., 2024) -- but also
+yields new SQ lower bounds of independent interest, including for the
+computational gaps in mixed sparse linear regression (Arpino et al., 2023) and
+convex truncation (De et al., 2023).
 </summary>
     <author>
-      <name>Jianyi Wang</name>
+      <name>Siyu Chen</name>
     </author>
     <author>
-      <name>Shanchuan Lin</name>
+      <name>Theodor Misiakiewicz</name>
     </author>
     <author>
-      <name>Zhijie Lin</name>
+      <name>Ilias Zadik</name>
     </author>
     <author>
-      <name>Yuxi Ren</name>
+      <name>Peiyuan Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.06259v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06259v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06248v1</id>
+    <updated>2025-06-06T17:17:40Z</updated>
+    <published>2025-06-06T17:17:40Z</published>
+    <title>Lagrangian-based Equilibrium Propagation: generalisation to arbitrary
+  boundary conditions &amp; equivalence with Hamiltonian Echo Learning</title>
+    <summary>  Equilibrium Propagation (EP) is a learning algorithm for training
+Energy-based Models (EBMs) on static inputs which leverages the variational
+description of their fixed points. Extending EP to time-varying inputs is a
+challenging problem, as the variational description must apply to the entire
+system trajectory rather than just fixed points, and careful consideration of
+boundary conditions becomes essential. In this work, we present Generalized
+Lagrangian Equilibrium Propagation (GLEP), which extends the variational
+formulation of EP to time-varying inputs. We demonstrate that GLEP yields
+different learning algorithms depending on the boundary conditions of the
+system, many of which are impractical for implementation. We then show that
+Hamiltonian Echo Learning (HEL) -- which includes the recently proposed
+Recurrent HEL (RHEL) and the earlier known Hamiltonian Echo Backpropagation
+(HEB) algorithms -- can be derived as a special case of GLEP. Notably, HEL is
+the only instance of GLEP we found that inherits the properties that make EP a
+desirable alternative to backpropagation for hardware implementations: it
+operates in a "forward-only" manner (i.e. using the same system for both
+inference and learning), it scales efficiently (requiring only two or more
+passes through the system regardless of model size), and enables local
+learning.
+</summary>
+    <author>
+      <name>Guillaume Pourcel</name>
     </author>
     <author>
-      <name>Meng Wei</name>
+      <name>Debabrota Basu</name>
     </author>
     <author>
-      <name>Zongsheng Yue</name>
+      <name>Maxence Ernoult</name>
     </author>
     <author>
-      <name>Shangchen Zhou</name>
+      <name>Aditya Gilra</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.06248v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06248v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06233v1</id>
+    <updated>2025-06-06T16:53:16Z</updated>
+    <published>2025-06-06T16:53:16Z</published>
+    <title>Bayesian variable selection in a Cox proportional hazards model with the
+  "Sum of Single Effects" prior</title>
+    <summary>  Motivated by genetic fine-mapping applications, we introduce a new approach
+to Bayesian variable selection regression (BVSR) for time-to-event (TTE)
+outcomes. This new approach is designed to deal with the specific challenges
+that arise in genetic fine-mapping, including: the presence of very strong
+correlations among the covariates, often exceeding 0.99; very large data sets
+containing potentially thousands of covariates and hundreds of thousands of
+samples. We accomplish this by extending the "Sum of Single Effects" (SuSiE)
+method to the Cox proportional hazards (CoxPH) model. We demonstrate the
+benefits of the new method, "CoxPH-SuSiE", over existing BVSR methods for TTE
+outcomes in simulated fine-mapping data sets. We also illustrate CoxPH-SuSiE on
+real data by fine-mapping asthma loci using data from UK Biobank. This
+fine-mapping identified 14 asthma risk SNPs in 8 asthma risk loci, among which
+6 had strong evidence for being causal (posterior inclusion probability greater
+than 50%). Two of the 6 putatively causal variants are known to be pathogenic,
+and others lie within a genomic sequence that is known to regulate the
+expression of GATA3.
+</summary>
+    <author>
+      <name>Yunqi Yang</name>
     </author>
     <author>
-      <name>Hao Chen</name>
+      <name>Karl Tayeb</name>
     </author>
     <author>
-      <name>Yang Zhao</name>
+      <name>Peter Carbonetto</name>
     </author>
     <author>
-      <name>Ceyuan Yang</name>
+      <name>Xiaoyuan Zhong</name>
     </author>
     <author>
-      <name>Xuefeng Xiao</name>
+      <name>Carole Ober</name>
     </author>
     <author>
-      <name>Chen Change Loy</name>
+      <name>Matthew Stephens</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.06233v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06233v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06211v1</id>
+    <updated>2025-06-06T16:17:09Z</updated>
+    <published>2025-06-06T16:17:09Z</published>
+    <title>PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in
+  Puzzlehunts</title>
+    <summary>  Puzzlehunts are a genre of complex, multi-step puzzles lacking well-defined
+problem definitions. In contrast to conventional reasoning benchmarks
+consisting of tasks with clear instructions, puzzlehunts require models to
+discover the underlying problem structure from multimodal evidence and
+iterative reasoning, mirroring real-world domains such as scientific discovery,
+exploratory data analysis, or investigative problem-solving. Despite recent
+progress in foundation models, their performance on such open-ended settings
+remains largely untested. In this paper, we introduce PuzzleWorld, a
+large-scale benchmark of 667 puzzlehunt-style problems designed to assess
+step-by-step, open-ended, and creative multimodal reasoning. Each puzzle is
+annotated with the final solution, detailed reasoning traces, and cognitive
+skill labels, enabling holistic benchmarking and fine-grained diagnostic
+analysis. Most state-of-the-art models achieve only 1-2% final answer accuracy,
+with the best model solving only 14% of puzzles and reaching 40% stepwise
+accuracy. To demonstrate the value of our reasoning annotations, we show that
+fine-tuning a small model on reasoning traces improves stepwise reasoning from
+4% to 11%, while training on final answers alone degrades performance to near
+zero. Our error analysis reveals that current models exhibit myopic reasoning,
+are bottlenecked by the limitations of language-based inference, and lack
+sketching capabilities crucial for visual and spatial reasoning. We release
+PuzzleWorld at https://github.com/MIT-MI/PuzzleWorld to support future work on
+building more general, open-ended, and creative reasoning systems.
+</summary>
+    <author>
+      <name>Hengzhi Li</name>
     </author>
     <author>
-      <name>Lu Jiang</name>
+      <name>Brendon Jiang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Draft Ver. Project page: https://iceclear.github.io/projects/seedvr2/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.05301v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.05301v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Alexander Naehu</name>
+    </author>
+    <author>
+      <name>Regan Song</name>
+    </author>
+    <author>
+      <name>Justin Zhang</name>
+    </author>
+    <author>
+      <name>Megan Tjandrasuwita</name>
+    </author>
+    <author>
+      <name>Chanakya Ekbote</name>
+    </author>
+    <author>
+      <name>Steven-Shine Chen</name>
+    </author>
+    <author>
+      <name>Adithya Balachandran</name>
+    </author>
+    <author>
+      <name>Wei Dai</name>
+    </author>
+    <author>
+      <name>Rebecca Chang</name>
+    </author>
+    <author>
+      <name>Paul Pu Liang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.06211v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06211v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06158v1</id>
+    <updated>2025-06-06T15:25:14Z</updated>
+    <published>2025-06-06T15:25:14Z</published>
+    <title>ENMA: Tokenwise Autoregression for Generative Neural PDE Operators</title>
+    <summary>  Solving time-dependent parametric partial differential equations (PDEs)
+remains a fundamental challenge for neural solvers, particularly when
+generalizing across a wide range of physical parameters and dynamics. When data
+is uncertain or incomplete-as is often the case-a natural approach is to turn
+to generative models. We introduce ENMA, a generative neural operator designed
+to model spatio-temporal dynamics arising from physical phenomena. ENMA
+predicts future dynamics in a compressed latent space using a generative masked
+autoregressive transformer trained with flow matching loss, enabling tokenwise
+generation. Irregularly sampled spatial observations are encoded into uniform
+latent representations via attention mechanisms and further compressed through
+a spatio-temporal convolutional encoder. This allows ENMA to perform in-context
+learning at inference time by conditioning on either past states of the target
+trajectory or auxiliary context trajectories with similar dynamics. The result
+is a robust and adaptable framework that generalizes to new PDE regimes and
+supports one-shot surrogate modeling of time-dependent parametric PDEs.
+</summary>
+    <author>
+      <name>Armand Kassaï Koupaï</name>
+    </author>
+    <author>
+      <name>Lise Le Boudec</name>
+    </author>
+    <author>
+      <name>Louis Serrano</name>
+    </author>
+    <author>
+      <name>Patrick Gallinari</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.06158v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06158v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06139v1</id>
+    <updated>2025-06-06T14:56:24Z</updated>
+    <published>2025-06-06T14:56:24Z</published>
+    <title>Impact of initial mass function on the chemical evolution of
+  high-redshift galaxies</title>
+    <summary>  Star formation and metal enrichment in galaxies are regulated by supernova
+(SN) explosions and metal yields from massive stars, which are sensitive to the
+high-mass end of the initial mass function (IMF). Recent JWST observations have
+reached a consensus on an invariant relation between stellar mass, metallicity,
+and star formation rate up to $z\sim 8$ and its breakdown at higher redshifts.
+It is crucial to understand the underlying physics, especially the role played
+by the IMF. We explore the impact of IMF on the chemical evolution of
+high-redshift galaxies and the interplay between IMF and galactic outflows. The
+ultimate goal is to constrain the high-mass end of the IMF by the cosmic star
+formation history and stellar mass-metallicity-star formation rate relation
+(MZSFR) inferred from observations at $z\sim 4-10$. Using the semi-analytical
+galaxy evolution code A-SLOTH, we follow galactic baryon cycles along merger
+trees built from cosmological simulations. Stellar feedback is modeled with
+up-to-date stellar evolution tracks covering the full metallicity range ($Z
+\sim 10^{-11} - 0.03$) and a broad stellar mass range ($m_\star\sim2 - 600\ \rm
+M_\odot$) including the metal yields from stellar winds, core-collapse SNe,
+(pulsational) pair-instability SNe, and Type Ia SNe. Assuming that the IMF
+follows a Kroupa-like shape with a varying upper mass limit $m_{\max}$, we find
+$m_{\max} \gtrsim 200\ \rm M_\odot$ is required to reproduce the observed
+MZSFR. Observational data at $z\gtrsim 6$ favor a galactic outflow model where
+the outflow mass is proportional to the ratio of supernova energy to halo
+binding energy. We conclude that very massive ($\gtrsim 200\ \rm M_\odot$)
+stars can play important roles in the star formation and chemical enrichment
+histories of high-$z$ galaxies. We also discuss their implications for
+transient sources of both electromagnetic waves and gravitational waves.
+</summary>
+    <author>
+      <name>Boyuan Liu</name>
+    </author>
+    <author>
+      <name>Michela Mapelli</name>
+    </author>
+    <author>
+      <name>Volker Bromm</name>
+    </author>
+    <author>
+      <name>Ralf S. Klessen</name>
+    </author>
+    <author>
+      <name>Lumen Boco</name>
+    </author>
+    <author>
+      <name>Tilman Hartwig</name>
+    </author>
+    <author>
+      <name>Simon C. O. Glover</name>
+    </author>
+    <author>
+      <name>Veronika Lipatova</name>
+    </author>
+    <author>
+      <name>Guglielmo Costa</name>
+    </author>
+    <author>
+      <name>Marco Dall'Amico</name>
+    </author>
+    <author>
+      <name>Giuliano Iorio</name>
+    </author>
+    <author>
+      <name>Kendall Shepherd</name>
+    </author>
+    <author>
+      <name>Alessandro Bressan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19+7 pages, 12+4 figures, to be submitted to A&amp;A, comments are
+  welcome</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.06139v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.06139v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
