@@ -1,639 +1,508 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-10T00:58:22Z -->
+<!-- Last updated: 2025-06-11T00:58:09Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-09T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114436</opensearch:totalResults>
+  <updated>2025-06-10T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114627</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.06275v1</id>
-    <updated>2025-06-06T17:58:36Z</updated>
-    <published>2025-06-06T17:58:36Z</published>
-    <title>Movie Facts and Fibs (MF$^2$): A Benchmark for Long Movie Understanding</title>
-    <summary>  Despite recent progress in vision-language models (VLMs), holistic
-understanding of long-form video content remains a significant challenge,
-partly due to limitations in current benchmarks. Many focus on peripheral,
-``needle-in-a-haystack'' details, encouraging context-insensitive retrieval
-over deep comprehension. Others rely on large-scale, semi-automatically
-generated questions (often produced by language models themselves) that are
-easier for models to answer but fail to reflect genuine understanding. In this
-paper, we introduce MF$^2$, a new benchmark for evaluating whether models can
-comprehend, consolidate, and recall key narrative information from full-length
-movies (50-170 minutes long). MF$^2$ includes over 50 full-length,
-open-licensed movies, each paired with manually constructed sets of claim pairs
--- one true (fact) and one plausible but false (fib), totalling over 850 pairs.
-These claims target core narrative elements such as character motivations and
-emotions, causal chains, and event order, and refer to memorable moments that
-humans can recall without rewatching the movie. Instead of multiple-choice
-formats, we adopt a binary claim evaluation protocol: for each pair, models
-must correctly identify both the true and false claims. This reduces biases
-like answer ordering and enables a more precise assessment of reasoning. Our
-experiments demonstrate that both open-weight and closed state-of-the-art
-models fall well short of human performance, underscoring the relative ease of
-the task for humans and their superior ability to retain and reason over
-critical narrative information -- an ability current VLMs lack.
+    <id>http://arxiv.org/abs/2506.08015v1</id>
+    <updated>2025-06-09T17:59:59Z</updated>
+    <published>2025-06-09T17:59:59Z</published>
+    <title>4DGT: Learning a 4D Gaussian Transformer Using Real-World Monocular
+  Videos</title>
+    <summary>  We propose 4DGT, a 4D Gaussian-based Transformer model for dynamic scene
+reconstruction, trained entirely on real-world monocular posed videos. Using 4D
+Gaussian as an inductive bias, 4DGT unifies static and dynamic components,
+enabling the modeling of complex, time-varying environments with varying object
+lifespans. We proposed a novel density control strategy in training, which
+enables our 4DGT to handle longer space-time input and remain efficient
+rendering at runtime. Our model processes 64 consecutive posed frames in a
+rolling-window fashion, predicting consistent 4D Gaussians in the scene. Unlike
+optimization-based methods, 4DGT performs purely feed-forward inference,
+reducing reconstruction time from hours to seconds and scaling effectively to
+long video sequences. Trained only on large-scale monocular posed video
+datasets, 4DGT can outperform prior Gaussian-based networks significantly in
+real-world videos and achieve on-par accuracy with optimization-based methods
+on cross-domain videos. Project page: https://4dgt.github.io
 </summary>
     <author>
-      <name>Emmanouil Zaranis</name>
+      <name>Zhen Xu</name>
     </author>
     <author>
-      <name>António Farinhas</name>
+      <name>Zhengqin Li</name>
     </author>
     <author>
-      <name>Saul Santos</name>
+      <name>Zhao Dong</name>
     </author>
     <author>
-      <name>Beatriz Canaverde</name>
+      <name>Xiaowei Zhou</name>
     </author>
     <author>
-      <name>Miguel Moura Ramos</name>
+      <name>Richard Newcombe</name>
     </author>
     <author>
-      <name>Aditya K Surikuchi</name>
+      <name>Zhaoyang Lv</name>
     </author>
-    <author>
-      <name>André Viveiros</name>
-    </author>
-    <author>
-      <name>Baohao Liao</name>
-    </author>
-    <author>
-      <name>Elena Bueno-Benito</name>
-    </author>
-    <author>
-      <name>Nithin Sivakumaran</name>
-    </author>
-    <author>
-      <name>Pavlo Vasylenko</name>
-    </author>
-    <author>
-      <name>Shoubin Yu</name>
-    </author>
-    <author>
-      <name>Sonal Sannigrahi</name>
-    </author>
-    <author>
-      <name>Wafaa Mohammed</name>
-    </author>
-    <author>
-      <name>Ben Peters</name>
-    </author>
-    <author>
-      <name>Danae Sánchez Villegas</name>
-    </author>
-    <author>
-      <name>Elias Stengel-Eskin</name>
-    </author>
-    <author>
-      <name>Giuseppe Attanasio</name>
-    </author>
-    <author>
-      <name>Jaehong Yoon</name>
-    </author>
-    <author>
-      <name>Stella Frank</name>
-    </author>
-    <author>
-      <name>Alessandro Suglia</name>
-    </author>
-    <author>
-      <name>Chrysoula Zerva</name>
-    </author>
-    <author>
-      <name>Desmond Elliott</name>
-    </author>
-    <author>
-      <name>Mariella Dimiccoli</name>
-    </author>
-    <author>
-      <name>Mohit Bansal</name>
-    </author>
-    <author>
-      <name>Oswald Lanz</name>
-    </author>
-    <author>
-      <name>Raffaella Bernardi</name>
-    </author>
-    <author>
-      <name>Raquel Fernández</name>
-    </author>
-    <author>
-      <name>Sandro Pezzelle</name>
-    </author>
-    <author>
-      <name>Vlad Niculae</name>
-    </author>
-    <author>
-      <name>André F. T. Martins</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Under Review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.06275v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06275v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://4dgt.github.io</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.08015v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.08015v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.06270v1</id>
-    <updated>2025-06-06T17:53:02Z</updated>
-    <published>2025-06-06T17:53:02Z</published>
-    <title>RecGPT: A Foundation Model for Sequential Recommendation</title>
-    <summary>  This work addresses a fundamental barrier in recommender systems: the
-inability to generalize across domains without extensive retraining.
-Traditional ID-based approaches fail entirely in cold-start and cross-domain
-scenarios where new users or items lack sufficient interaction history.
-Inspired by foundation models' cross-domain success, we develop a foundation
-model for sequential recommendation that achieves genuine zero-shot
-generalization capabilities. Our approach fundamentally departs from existing
-ID-based methods by deriving item representations exclusively from textual
-features. This enables immediate embedding of any new item without model
-retraining. We introduce unified item tokenization with Finite Scalar
-Quantization that transforms heterogeneous textual descriptions into
-standardized discrete tokens. This eliminates domain barriers that plague
-existing systems. Additionally, the framework features hybrid
-bidirectional-causal attention that captures both intra-item token coherence
-and inter-item sequential dependencies. An efficient catalog-aware beam search
-decoder enables real-time token-to-item mapping. Unlike conventional approaches
-confined to their training domains, RecGPT naturally bridges diverse
-recommendation contexts through its domain-invariant tokenization mechanism.
-Comprehensive evaluations across six datasets and industrial scenarios
-demonstrate consistent performance advantages.
+    <id>http://arxiv.org/abs/2506.08009v1</id>
+    <updated>2025-06-09T17:59:55Z</updated>
+    <published>2025-06-09T17:59:55Z</published>
+    <title>Self Forcing: Bridging the Train-Test Gap in Autoregressive Video
+  Diffusion</title>
+    <summary>  We introduce Self Forcing, a novel training paradigm for autoregressive video
+diffusion models. It addresses the longstanding issue of exposure bias, where
+models trained on ground-truth context must generate sequences conditioned on
+their own imperfect outputs during inference. Unlike prior methods that denoise
+future frames based on ground-truth context frames, Self Forcing conditions
+each frame's generation on previously self-generated outputs by performing
+autoregressive rollout with key-value (KV) caching during training. This
+strategy enables supervision through a holistic loss at the video level that
+directly evaluates the quality of the entire generated sequence, rather than
+relying solely on traditional frame-wise objectives. To ensure training
+efficiency, we employ a few-step diffusion model along with a stochastic
+gradient truncation strategy, effectively balancing computational cost and
+performance. We further introduce a rolling KV cache mechanism that enables
+efficient autoregressive video extrapolation. Extensive experiments demonstrate
+that our approach achieves real-time streaming video generation with sub-second
+latency on a single GPU, while matching or even surpassing the generation
+quality of significantly slower and non-causal diffusion models. Project
+website: http://self-forcing.github.io/
 </summary>
     <author>
-      <name>Yangqin Jiang</name>
+      <name>Xun Huang</name>
     </author>
     <author>
-      <name>Xubin Ren</name>
+      <name>Zhengqi Li</name>
     </author>
     <author>
-      <name>Lianghao Xia</name>
+      <name>Guande He</name>
     </author>
     <author>
-      <name>Da Luo</name>
+      <name>Mingyuan Zhou</name>
     </author>
     <author>
-      <name>Kangyi Lin</name>
+      <name>Eli Shechtman</name>
     </author>
-    <author>
-      <name>Chao Huang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.06270v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06270v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.06267v1</id>
-    <updated>2025-06-06T17:49:44Z</updated>
-    <published>2025-06-06T17:49:44Z</published>
-    <title>When Measurement Mediates the Effect of Interest</title>
-    <summary>  Many health promotion strategies aim to improve reach into the target
-population and outcomes among those reached. For example, an HIV prevention
-strategy could expand the reach of risk screening and the delivery of
-biomedical prevention to persons with HIV risk. This setting creates a complex
-missing data problem: the strategy improves health outcomes directly and
-indirectly through expanded reach, while outcomes are only measured among those
-reached. To formally define the total causal effect in such settings, we use
-Counterfactual Strata Effects: causal estimands where the outcome is only
-relevant for a group whose membership is subject to missingness and/or impacted
-by the exposure. To identify and estimate the corresponding statistical
-estimand, we propose a novel extension of Two-Stage targeted minimum loss-based
-estimation (TMLE). Simulations demonstrate the practical performance of our
-approach as well as the limitations of existing approaches.
-</summary>
-    <author>
-      <name>Joy Zora Nakato</name>
-    </author>
-    <author>
-      <name>Janice Litunya</name>
-    </author>
-    <author>
-      <name>Brian Beesiga</name>
-    </author>
-    <author>
-      <name>Jane Kabami</name>
-    </author>
-    <author>
-      <name>James Ayieko</name>
-    </author>
-    <author>
-      <name>Moses R. Kamya</name>
-    </author>
-    <author>
-      <name>Gabriel Chamie</name>
-    </author>
-    <author>
-      <name>Laura B. Balzer</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 3 figures, to be published in 'Statistics in Medicine"</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.06267v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06267v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.06266v1</id>
-    <updated>2025-06-06T17:48:23Z</updated>
-    <published>2025-06-06T17:48:23Z</published>
-    <title>Cartridges: Lightweight and general-purpose long context representations
-  via self-study</title>
-    <summary>  Large language models are often used to answer queries grounded in large text
-corpora (e.g. codebases, legal documents, or chat histories) by placing the
-entire corpus in the context window and leveraging in-context learning (ICL).
-Although current models support contexts of 100K-1M tokens, this setup is
-costly to serve because the memory consumption of the KV cache scales with
-input length. We explore an alternative: training a smaller KV cache offline on
-each corpus. At inference time, we load this trained KV cache, which we call a
-Cartridge, and decode a response. Critically, the cost of training a Cartridge
-can be amortized across all the queries referencing the same corpus. However,
-we find that the naive approach of training the Cartridge with next-token
-prediction on the corpus is not competitive with ICL. Instead, we propose
-self-study, a training recipe in which we generate synthetic conversations
-about the corpus and train the Cartridge with a context-distillation objective.
-We find that Cartridges trained with self-study replicate the functionality of
-ICL, while being significantly cheaper to serve. On challenging long-context
-benchmarks, Cartridges trained with self-study match ICL performance while
-using 38.6x less memory and enabling 26.4x higher throughput. Self-study also
-extends the model's effective context length (e.g. from 128k to 484k tokens on
-MTOB) and surprisingly, leads to Cartridges that can be composed at inference
-time without retraining.
-</summary>
-    <author>
-      <name>Sabri Eyuboglu</name>
-    </author>
-    <author>
-      <name>Ryan Ehrlich</name>
-    </author>
-    <author>
-      <name>Simran Arora</name>
-    </author>
-    <author>
-      <name>Neel Guha</name>
-    </author>
-    <author>
-      <name>Dylan Zinsley</name>
-    </author>
-    <author>
-      <name>Emily Liu</name>
-    </author>
-    <author>
-      <name>Will Tennien</name>
-    </author>
-    <author>
-      <name>Atri Rudra</name>
-    </author>
-    <author>
-      <name>James Zou</name>
-    </author>
-    <author>
-      <name>Azalia Mirhoseini</name>
-    </author>
-    <author>
-      <name>Christopher Re</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.06266v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06266v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project website: http://self-forcing.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.08009v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.08009v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.06259v1</id>
-    <updated>2025-06-06T17:39:32Z</updated>
-    <published>2025-06-06T17:39:32Z</published>
-    <title>An Optimized Franz-Parisi Criterion and its Equivalence with SQ Lower
-  Bounds</title>
-    <summary>  Bandeira et al. (2022) introduced the Franz-Parisi (FP) criterion for
-characterizing the computational hard phases in statistical detection problems.
-The FP criterion, based on an annealed version of the celebrated Franz-Parisi
-potential from statistical physics, was shown to be equivalent to low-degree
-polynomial (LDP) lower bounds for Gaussian additive models, thereby connecting
-two distinct approaches to understanding the computational hardness in
-statistical inference. In this paper, we propose a refined FP criterion that
-aims to better capture the geometric ``overlap" structure of statistical
-models. Our main result establishes that this optimized FP criterion is
-equivalent to Statistical Query (SQ) lower bounds -- another foundational
-framework in computational complexity of statistical inference. Crucially, this
-equivalence holds under a mild, verifiable assumption satisfied by a broad
-class of statistical models, including Gaussian additive models, planted sparse
-models, as well as non-Gaussian component analysis (NGCA), single-index (SI)
-models, and convex truncation detection settings. For instance, in the case of
-convex truncation tasks, the assumption is equivalent with the Gaussian
-correlation inequality (Royen, 2014) from convex geometry.
-  In addition to the above, our equivalence not only unifies and simplifies the
-derivation of several known SQ lower bounds -- such as for the NGCA model
-(Diakonikolas et al., 2017) and the SI model (Damian et al., 2024) -- but also
-yields new SQ lower bounds of independent interest, including for the
-computational gaps in mixed sparse linear regression (Arpino et al., 2023) and
-convex truncation (De et al., 2023).
+    <id>http://arxiv.org/abs/2506.07999v1</id>
+    <updated>2025-06-09T17:59:01Z</updated>
+    <published>2025-06-09T17:59:01Z</published>
+    <title>MADFormer: Mixed Autoregressive and Diffusion Transformers for
+  Continuous Image Generation</title>
+    <summary>  Recent progress in multimodal generation has increasingly combined
+autoregressive (AR) and diffusion-based approaches, leveraging their
+complementary strengths: AR models capture long-range dependencies and produce
+fluent, context-aware outputs, while diffusion models operate in continuous
+latent spaces to refine high-fidelity visual details. However, existing hybrids
+often lack systematic guidance on how and why to allocate model capacity
+between these paradigms. In this work, we introduce MADFormer, a Mixed
+Autoregressive and Diffusion Transformer that serves as a testbed for analyzing
+AR-diffusion trade-offs. MADFormer partitions image generation into spatial
+blocks, using AR layers for one-pass global conditioning across blocks and
+diffusion layers for iterative local refinement within each block. Through
+controlled experiments on FFHQ-1024 and ImageNet, we identify two key insights:
+(1) block-wise partitioning significantly improves performance on
+high-resolution images, and (2) vertically mixing AR and diffusion layers
+yields better quality-efficiency balances--improving FID by up to 75% under
+constrained inference compute. Our findings offer practical design principles
+for future hybrid generative models.
 </summary>
     <author>
-      <name>Siyu Chen</name>
+      <name>Junhao Chen</name>
     </author>
     <author>
-      <name>Theodor Misiakiewicz</name>
+      <name>Yulia Tsvetkov</name>
     </author>
     <author>
-      <name>Ilias Zadik</name>
+      <name>Xiaochuang Han</name>
     </author>
-    <author>
-      <name>Peiyuan Zhang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.06259v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06259v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.07999v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07999v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.06248v1</id>
-    <updated>2025-06-06T17:17:40Z</updated>
-    <published>2025-06-06T17:17:40Z</published>
-    <title>Lagrangian-based Equilibrium Propagation: generalisation to arbitrary
-  boundary conditions &amp; equivalence with Hamiltonian Echo Learning</title>
-    <summary>  Equilibrium Propagation (EP) is a learning algorithm for training
-Energy-based Models (EBMs) on static inputs which leverages the variational
-description of their fixed points. Extending EP to time-varying inputs is a
-challenging problem, as the variational description must apply to the entire
-system trajectory rather than just fixed points, and careful consideration of
-boundary conditions becomes essential. In this work, we present Generalized
-Lagrangian Equilibrium Propagation (GLEP), which extends the variational
-formulation of EP to time-varying inputs. We demonstrate that GLEP yields
-different learning algorithms depending on the boundary conditions of the
-system, many of which are impractical for implementation. We then show that
-Hamiltonian Echo Learning (HEL) -- which includes the recently proposed
-Recurrent HEL (RHEL) and the earlier known Hamiltonian Echo Backpropagation
-(HEB) algorithms -- can be derived as a special case of GLEP. Notably, HEL is
-the only instance of GLEP we found that inherits the properties that make EP a
-desirable alternative to backpropagation for hardware implementations: it
-operates in a "forward-only" manner (i.e. using the same system for both
-inference and learning), it scales efficiently (requiring only two or more
-passes through the system regardless of model size), and enables local
-learning.
+    <id>http://arxiv.org/abs/2506.07998v1</id>
+    <updated>2025-06-09T17:58:36Z</updated>
+    <published>2025-06-09T17:58:36Z</published>
+    <title>Generative Modeling of Weights: Generalization or Memorization?</title>
+    <summary>  Generative models, with their success in image and video generation, have
+recently been explored for synthesizing effective neural network weights. These
+approaches take trained neural network checkpoints as training data, and aim to
+generate high-performing neural network weights during inference. In this work,
+we examine four representative methods on their ability to generate novel model
+weights, i.e., weights that are different from the checkpoints seen during
+training. Surprisingly, we find that these methods synthesize weights largely
+by memorization: they produce either replicas, or at best simple
+interpolations, of the training checkpoints. Current methods fail to outperform
+simple baselines, such as adding noise to the weights or taking a simple weight
+ensemble, in obtaining different and simultaneously high-performing models. We
+further show that this memorization cannot be effectively mitigated by
+modifying modeling factors commonly associated with memorization in image
+diffusion models, or applying data augmentations. Our findings provide a
+realistic assessment of what types of data current generative models can model,
+and highlight the need for more careful evaluation of generative models in new
+domains. Our code is available at
+https://github.com/boyazeng/weight_memorization.
 </summary>
     <author>
-      <name>Guillaume Pourcel</name>
+      <name>Boya Zeng</name>
     </author>
     <author>
-      <name>Debabrota Basu</name>
+      <name>Yida Yin</name>
     </author>
     <author>
-      <name>Maxence Ernoult</name>
+      <name>Zhiqiu Xu</name>
     </author>
     <author>
-      <name>Aditya Gilra</name>
+      <name>Zhuang Liu</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.06248v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06248v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page at https://boyazeng.github.io/weight_memorization</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.07998v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07998v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.06233v1</id>
-    <updated>2025-06-06T16:53:16Z</updated>
-    <published>2025-06-06T16:53:16Z</published>
-    <title>Bayesian variable selection in a Cox proportional hazards model with the
-  "Sum of Single Effects" prior</title>
-    <summary>  Motivated by genetic fine-mapping applications, we introduce a new approach
-to Bayesian variable selection regression (BVSR) for time-to-event (TTE)
-outcomes. This new approach is designed to deal with the specific challenges
-that arise in genetic fine-mapping, including: the presence of very strong
-correlations among the covariates, often exceeding 0.99; very large data sets
-containing potentially thousands of covariates and hundreds of thousands of
-samples. We accomplish this by extending the "Sum of Single Effects" (SuSiE)
-method to the Cox proportional hazards (CoxPH) model. We demonstrate the
-benefits of the new method, "CoxPH-SuSiE", over existing BVSR methods for TTE
-outcomes in simulated fine-mapping data sets. We also illustrate CoxPH-SuSiE on
-real data by fine-mapping asthma loci using data from UK Biobank. This
-fine-mapping identified 14 asthma risk SNPs in 8 asthma risk loci, among which
-6 had strong evidence for being causal (posterior inclusion probability greater
-than 50%). Two of the 6 putatively causal variants are known to be pathogenic,
-and others lie within a genomic sequence that is known to regulate the
-expression of GATA3.
-</summary>
-    <author>
-      <name>Yunqi Yang</name>
-    </author>
-    <author>
-      <name>Karl Tayeb</name>
-    </author>
-    <author>
-      <name>Peter Carbonetto</name>
-    </author>
-    <author>
-      <name>Xiaoyuan Zhong</name>
-    </author>
-    <author>
-      <name>Carole Ober</name>
-    </author>
-    <author>
-      <name>Matthew Stephens</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.06233v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06233v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.06211v1</id>
-    <updated>2025-06-06T16:17:09Z</updated>
-    <published>2025-06-06T16:17:09Z</published>
-    <title>PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in
-  Puzzlehunts</title>
-    <summary>  Puzzlehunts are a genre of complex, multi-step puzzles lacking well-defined
-problem definitions. In contrast to conventional reasoning benchmarks
-consisting of tasks with clear instructions, puzzlehunts require models to
-discover the underlying problem structure from multimodal evidence and
-iterative reasoning, mirroring real-world domains such as scientific discovery,
-exploratory data analysis, or investigative problem-solving. Despite recent
-progress in foundation models, their performance on such open-ended settings
-remains largely untested. In this paper, we introduce PuzzleWorld, a
-large-scale benchmark of 667 puzzlehunt-style problems designed to assess
-step-by-step, open-ended, and creative multimodal reasoning. Each puzzle is
-annotated with the final solution, detailed reasoning traces, and cognitive
-skill labels, enabling holistic benchmarking and fine-grained diagnostic
-analysis. Most state-of-the-art models achieve only 1-2% final answer accuracy,
-with the best model solving only 14% of puzzles and reaching 40% stepwise
-accuracy. To demonstrate the value of our reasoning annotations, we show that
-fine-tuning a small model on reasoning traces improves stepwise reasoning from
-4% to 11%, while training on final answers alone degrades performance to near
-zero. Our error analysis reveals that current models exhibit myopic reasoning,
-are bottlenecked by the limitations of language-based inference, and lack
-sketching capabilities crucial for visual and spatial reasoning. We release
-PuzzleWorld at https://github.com/MIT-MI/PuzzleWorld to support future work on
-building more general, open-ended, and creative reasoning systems.
-</summary>
-    <author>
-      <name>Hengzhi Li</name>
-    </author>
-    <author>
-      <name>Brendon Jiang</name>
-    </author>
-    <author>
-      <name>Alexander Naehu</name>
-    </author>
-    <author>
-      <name>Regan Song</name>
-    </author>
-    <author>
-      <name>Justin Zhang</name>
-    </author>
-    <author>
-      <name>Megan Tjandrasuwita</name>
-    </author>
-    <author>
-      <name>Chanakya Ekbote</name>
-    </author>
-    <author>
-      <name>Steven-Shine Chen</name>
-    </author>
-    <author>
-      <name>Adithya Balachandran</name>
-    </author>
-    <author>
-      <name>Wei Dai</name>
-    </author>
-    <author>
-      <name>Rebecca Chang</name>
-    </author>
-    <author>
-      <name>Paul Pu Liang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.06211v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06211v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.06158v1</id>
-    <updated>2025-06-06T15:25:14Z</updated>
-    <published>2025-06-06T15:25:14Z</published>
-    <title>ENMA: Tokenwise Autoregression for Generative Neural PDE Operators</title>
-    <summary>  Solving time-dependent parametric partial differential equations (PDEs)
-remains a fundamental challenge for neural solvers, particularly when
-generalizing across a wide range of physical parameters and dynamics. When data
-is uncertain or incomplete-as is often the case-a natural approach is to turn
-to generative models. We introduce ENMA, a generative neural operator designed
-to model spatio-temporal dynamics arising from physical phenomena. ENMA
-predicts future dynamics in a compressed latent space using a generative masked
-autoregressive transformer trained with flow matching loss, enabling tokenwise
-generation. Irregularly sampled spatial observations are encoded into uniform
-latent representations via attention mechanisms and further compressed through
-a spatio-temporal convolutional encoder. This allows ENMA to perform in-context
-learning at inference time by conditioning on either past states of the target
-trajectory or auxiliary context trajectories with similar dynamics. The result
-is a robust and adaptable framework that generalizes to new PDE regimes and
-supports one-shot surrogate modeling of time-dependent parametric PDEs.
+    <id>http://arxiv.org/abs/2506.07978v1</id>
+    <updated>2025-06-09T17:50:57Z</updated>
+    <published>2025-06-09T17:50:57Z</published>
+    <title>Not so dark, not so dense: an alternative explanation for the lensing
+  subhalo in SDSSJ0946+1006</title>
+    <summary>  Previous studies of the strong lens system SDSSJ0946+1006 have reported a
+dark matter subhalo with an unusually high central density, potentially
+challenging the standard cold dark matter (CDM) paradigm. However, these
+analyses assumed the subhalo to be completely dark, neglecting the possibility
+that it may host a faint galaxy. In this work, we revisit the lensing analysis
+of SDSSJ0946+1006, explicitly modelling the subhalo as a luminous satellite.
+Incorporating light from the perturber broadens the range of allowed subhalo
+properties, revealing solutions with significantly lower central densities that
+are consistent with CDM expectations. The inferred luminosity of the satellite
+also aligns with predictions from hydrodynamical simulations. While
+high-concentration subhaloes remain allowed, they are no longer statistically
+preferred. The luminous subhalo model yields a better fit to the data, while
+also offering a more plausible explanation that is in line with theoretical
+expectations. We validate our methodology using mock data, demonstrating that
+neglecting subhalo light can lead to inferred mass distributions that are
+artificially compact.
 </summary>
     <author>
-      <name>Armand Kassaï Koupaï</name>
+      <name>Qiuhan He</name>
     </author>
     <author>
-      <name>Lise Le Boudec</name>
+      <name>Andrew Robertson</name>
     </author>
     <author>
-      <name>Louis Serrano</name>
+      <name>James W. Nightingale</name>
     </author>
     <author>
-      <name>Patrick Gallinari</name>
+      <name>Aristeidis Amvrosiadis</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.06158v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06158v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Shaun Cole</name>
+    </author>
+    <author>
+      <name>Carlos S. Frenk</name>
+    </author>
+    <author>
+      <name>Samuel C. Lange</name>
+    </author>
+    <author>
+      <name>Shubo Li</name>
+    </author>
+    <author>
+      <name>Ran Li</name>
+    </author>
+    <author>
+      <name>Xiaoyue Cao</name>
+    </author>
+    <author>
+      <name>Leo W. H. Fung</name>
+    </author>
+    <author>
+      <name>Xianghao Ma</name>
+    </author>
+    <author>
+      <name>Richard Massey</name>
+    </author>
+    <author>
+      <name>Kaihao Wang</name>
+    </author>
+    <author>
+      <name>Maximilian von Wietersheim-Kramsta</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Comments Welcome!</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.07978v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07978v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.07971v1</id>
+    <updated>2025-06-09T17:45:18Z</updated>
+    <published>2025-06-09T17:45:18Z</published>
+    <title>CyberV: Cybernetics for Test-time Scaling in Video Understanding</title>
+    <summary>  Current Multimodal Large Language Models (MLLMs) may struggle with
+understanding long or complex videos due to computational demands at test time,
+lack of robustness, and limited accuracy, primarily stemming from their
+feed-forward processing nature. These limitations could be more severe for
+models with fewer parameters. To address these limitations, we propose a novel
+framework inspired by cybernetic principles, redesigning video MLLMs as
+adaptive systems capable of self-monitoring, self-correction, and dynamic
+resource allocation during inference. Our approach, CyberV, introduces a
+cybernetic loop consisting of an MLLM Inference System, a Sensor, and a
+Controller. Specifically, the sensor monitors forward processes of the MLLM and
+collects intermediate interpretations, such as attention drift, then the
+controller determines when and how to trigger self-correction and generate
+feedback to guide the next round. This test-time adaptive scaling framework
+enhances frozen MLLMs without requiring retraining or additional components.
+Experiments demonstrate significant improvements: CyberV boosts Qwen2.5-VL-7B
+by 8.3% and InternVL3-8B by 5.5% on VideoMMMU, surpassing the competitive
+proprietary model GPT-4o. When applied to Qwen2.5-VL-72B, it yields a 10.0%
+improvement, achieving performance even comparable to human experts.
+Furthermore, our method demonstrates consistent gains on general-purpose
+benchmarks, such as VideoMME and WorldSense, highlighting its effectiveness and
+generalization capabilities in making MLLMs more robust and accurate for
+dynamic video understanding. The code is released at
+https://github.com/marinero4972/CyberV.
+</summary>
+    <author>
+      <name>Jiahao Meng</name>
+    </author>
+    <author>
+      <name>Shuyang Sun</name>
+    </author>
+    <author>
+      <name>Yue Tan</name>
+    </author>
+    <author>
+      <name>Lu Qi</name>
+    </author>
+    <author>
+      <name>Yunhai Tong</name>
+    </author>
+    <author>
+      <name>Xiangtai Li</name>
+    </author>
+    <author>
+      <name>Longyin Wen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.07971v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07971v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.07956v1</id>
+    <updated>2025-06-09T17:26:14Z</updated>
+    <published>2025-06-09T17:26:14Z</published>
+    <title>Language Models over Canonical Byte-Pair Encodings</title>
+    <summary>  Modern language models represent probability distributions over character
+strings as distributions over (shorter) token strings derived via a
+deterministic tokenizer, such as byte-pair encoding. While this approach is
+highly effective at scaling up language models to large corpora, its current
+incarnations have a concerning property: the model assigns nonzero probability
+mass to an exponential number of $\it{noncanonical}$ token encodings of each
+character string -- these are token strings that decode to valid character
+strings but are impossible under the deterministic tokenizer (i.e., they will
+never be seen in any training corpus, no matter how large). This misallocation
+is both erroneous, as noncanonical strings never appear in training data, and
+wasteful, diverting probability mass away from plausible outputs. These are
+avoidable mistakes! In this work, we propose methods to enforce canonicality in
+token-level language models, ensuring that only canonical token strings are
+assigned positive probability. We present two approaches: (1) canonicality by
+conditioning, leveraging test-time inference strategies without additional
+training, and (2) canonicality by construction, a model parameterization that
+guarantees canonical outputs but requires training. We demonstrate that fixing
+canonicality mistakes improves the likelihood of held-out data for several
+models and corpora.
+</summary>
+    <author>
+      <name>Tim Vieira</name>
+    </author>
+    <author>
+      <name>Tianyu Liu</name>
+    </author>
+    <author>
+      <name>Clemente Pasti</name>
+    </author>
+    <author>
+      <name>Yahya Emara</name>
+    </author>
+    <author>
+      <name>Brian DuSell</name>
+    </author>
+    <author>
+      <name>Benjamin LeBrun</name>
+    </author>
+    <author>
+      <name>Mario Giulianelli</name>
+    </author>
+    <author>
+      <name>Juan Luis Gastaldi</name>
+    </author>
+    <author>
+      <name>Timothy J. O'Donnell</name>
+    </author>
+    <author>
+      <name>Ryan Cotterell</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICML 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.07956v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07956v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.07949v1</id>
+    <updated>2025-06-09T17:14:41Z</updated>
+    <published>2025-06-09T17:14:41Z</published>
+    <title>Cost-Optimal Active AI Model Evaluation</title>
+    <summary>  The development lifecycle of generative AI systems requires continual
+evaluation, data acquisition, and annotation, which is costly in both resources
+and time. In practice, rapid iteration often makes it necessary to rely on
+synthetic annotation data because of the low cost, despite the potential for
+substantial bias. In this paper, we develop novel, cost-aware methods for
+actively balancing the use of a cheap, but often inaccurate, weak rater -- such
+as a model-based autorater that is designed to automatically assess the quality
+of generated content -- with a more expensive, but also more accurate, strong
+rater alternative such as a human. More specifically, the goal of our approach
+is to produce a low variance, unbiased estimate of the mean of the target
+"strong" rating, subject to some total annotation budget. Building on recent
+work in active and prediction-powered statistical inference, we derive a family
+of cost-optimal policies for allocating a given annotation budget between weak
+and strong raters so as to maximize statistical efficiency. Using synthetic and
+real-world data, we empirically characterize the conditions under which these
+policies yield improvements over prior methods. We find that, especially in
+tasks where there is high variability in the difficulty of examples, our
+policies can achieve the same estimation precision at a far lower total
+annotation budget than standard evaluation methods.
+</summary>
+    <author>
+      <name>Anastasios N. Angelopoulos</name>
+    </author>
+    <author>
+      <name>Jacob Eisenstein</name>
+    </author>
+    <author>
+      <name>Jonathan Berant</name>
+    </author>
+    <author>
+      <name>Alekh Agarwal</name>
+    </author>
+    <author>
+      <name>Adam Fisch</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.07949v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07949v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.06139v1</id>
-    <updated>2025-06-06T14:56:24Z</updated>
-    <published>2025-06-06T14:56:24Z</published>
-    <title>Impact of initial mass function on the chemical evolution of
-  high-redshift galaxies</title>
-    <summary>  Star formation and metal enrichment in galaxies are regulated by supernova
-(SN) explosions and metal yields from massive stars, which are sensitive to the
-high-mass end of the initial mass function (IMF). Recent JWST observations have
-reached a consensus on an invariant relation between stellar mass, metallicity,
-and star formation rate up to $z\sim 8$ and its breakdown at higher redshifts.
-It is crucial to understand the underlying physics, especially the role played
-by the IMF. We explore the impact of IMF on the chemical evolution of
-high-redshift galaxies and the interplay between IMF and galactic outflows. The
-ultimate goal is to constrain the high-mass end of the IMF by the cosmic star
-formation history and stellar mass-metallicity-star formation rate relation
-(MZSFR) inferred from observations at $z\sim 4-10$. Using the semi-analytical
-galaxy evolution code A-SLOTH, we follow galactic baryon cycles along merger
-trees built from cosmological simulations. Stellar feedback is modeled with
-up-to-date stellar evolution tracks covering the full metallicity range ($Z
-\sim 10^{-11} - 0.03$) and a broad stellar mass range ($m_\star\sim2 - 600\ \rm
-M_\odot$) including the metal yields from stellar winds, core-collapse SNe,
-(pulsational) pair-instability SNe, and Type Ia SNe. Assuming that the IMF
-follows a Kroupa-like shape with a varying upper mass limit $m_{\max}$, we find
-$m_{\max} \gtrsim 200\ \rm M_\odot$ is required to reproduce the observed
-MZSFR. Observational data at $z\gtrsim 6$ favor a galactic outflow model where
-the outflow mass is proportional to the ratio of supernova energy to halo
-binding energy. We conclude that very massive ($\gtrsim 200\ \rm M_\odot$)
-stars can play important roles in the star formation and chemical enrichment
-histories of high-$z$ galaxies. We also discuss their implications for
-transient sources of both electromagnetic waves and gravitational waves.
+    <id>http://arxiv.org/abs/2506.07948v1</id>
+    <updated>2025-06-09T17:11:28Z</updated>
+    <published>2025-06-09T17:11:28Z</published>
+    <title>TokenBreak: Bypassing Text Classification Models Through Token
+  Manipulation</title>
+    <summary>  Natural Language Processing (NLP) models are used for text-related tasks such
+as classification and generation. To complete these tasks, input data is first
+tokenized from human-readable text into a format the model can understand,
+enabling it to make inferences and understand context. Text classification
+models can be implemented to guard against threats such as prompt injection
+attacks against Large Language Models (LLMs), toxic input and cybersecurity
+risks such as spam emails. In this paper, we introduce TokenBreak: a novel
+attack that can bypass these protection models by taking advantage of the
+tokenization strategy they use. This attack technique manipulates input text in
+such a way that certain models give an incorrect classification. Importantly,
+the end target (LLM or email recipient) can still understand and respond to the
+manipulated text and therefore be vulnerable to the very attack the protection
+model was put in place to prevent. The tokenizer is tied to model architecture,
+meaning it is possible to predict whether or not a model is vulnerable to
+attack based on family. We also present a defensive strategy as an added layer
+of protection that can be implemented without having to retrain the defensive
+model.
 </summary>
     <author>
-      <name>Boyuan Liu</name>
+      <name>Kasimir Schulz</name>
     </author>
     <author>
-      <name>Michela Mapelli</name>
+      <name>Kenneth Yeung</name>
     </author>
     <author>
-      <name>Volker Bromm</name>
+      <name>Kieran Evans</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.07948v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07948v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.07947v1</id>
+    <updated>2025-06-09T17:11:07Z</updated>
+    <published>2025-06-09T17:11:07Z</published>
+    <title>Statistical Hypothesis Testing for Auditing Robustness in Language
+  Models</title>
+    <summary>  Consider the problem of testing whether the outputs of a large language model
+(LLM) system change under an arbitrary intervention, such as an input
+perturbation or changing the model variant. We cannot simply compare two LLM
+outputs since they might differ due to the stochastic nature of the system, nor
+can we compare the entire output distribution due to computational
+intractability. While existing methods for analyzing text-based outputs exist,
+they focus on fundamentally different problems, such as measuring bias or
+fairness. To this end, we introduce distribution-based perturbation analysis, a
+framework that reformulates LLM perturbation analysis as a frequentist
+hypothesis testing problem. We construct empirical null and alternative output
+distributions within a low-dimensional semantic similarity space via Monte
+Carlo sampling, enabling tractable inference without restrictive distributional
+assumptions. The framework is (i) model-agnostic, (ii) supports the evaluation
+of arbitrary input perturbations on any black-box LLM, (iii) yields
+interpretable p-values; (iv) supports multiple perturbations via controlled
+error rates; and (v) provides scalar effect sizes. We demonstrate the
+usefulness of the framework across multiple case studies, showing how we can
+quantify response changes, measure true/false positive rates, and evaluate
+alignment with reference models. Above all, we see this as a reliable
+frequentist hypothesis testing framework for LLM auditing.
+</summary>
+    <author>
+      <name>Paulius Rauba</name>
     </author>
     <author>
-      <name>Ralf S. Klessen</name>
+      <name>Qiyao Wei</name>
     </author>
     <author>
-      <name>Lumen Boco</name>
+      <name>Mihaela van der Schaar</name>
     </author>
-    <author>
-      <name>Tilman Hartwig</name>
-    </author>
-    <author>
-      <name>Simon C. O. Glover</name>
-    </author>
-    <author>
-      <name>Veronika Lipatova</name>
-    </author>
-    <author>
-      <name>Guglielmo Costa</name>
-    </author>
-    <author>
-      <name>Marco Dall'Amico</name>
-    </author>
-    <author>
-      <name>Giuliano Iorio</name>
-    </author>
-    <author>
-      <name>Kendall Shepherd</name>
-    </author>
-    <author>
-      <name>Alessandro Bressan</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19+7 pages, 12+4 figures, to be submitted to A&amp;A, comments are
-  welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.06139v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.06139v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">arXiv admin note: substantial text overlap with arXiv:2412.00868</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Forty-second International Conference on Machine Learning. ICML
+  2025</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2506.07947v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.07947v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
