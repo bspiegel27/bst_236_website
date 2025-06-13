@@ -1,508 +1,505 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-11T00:58:09Z -->
+<!-- Last updated: 2025-06-13T00:58:10Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-10T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114627</opensearch:totalResults>
+  <updated>2025-06-12T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114828</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.08015v1</id>
-    <updated>2025-06-09T17:59:59Z</updated>
-    <published>2025-06-09T17:59:59Z</published>
-    <title>4DGT: Learning a 4D Gaussian Transformer Using Real-World Monocular
-  Videos</title>
-    <summary>  We propose 4DGT, a 4D Gaussian-based Transformer model for dynamic scene
-reconstruction, trained entirely on real-world monocular posed videos. Using 4D
-Gaussian as an inductive bias, 4DGT unifies static and dynamic components,
-enabling the modeling of complex, time-varying environments with varying object
-lifespans. We proposed a novel density control strategy in training, which
-enables our 4DGT to handle longer space-time input and remain efficient
-rendering at runtime. Our model processes 64 consecutive posed frames in a
-rolling-window fashion, predicting consistent 4D Gaussians in the scene. Unlike
-optimization-based methods, 4DGT performs purely feed-forward inference,
-reducing reconstruction time from hours to seconds and scaling effectively to
-long video sequences. Trained only on large-scale monocular posed video
-datasets, 4DGT can outperform prior Gaussian-based networks significantly in
-real-world videos and achieve on-par accuracy with optimization-based methods
-on cross-domain videos. Project page: https://4dgt.github.io
+    <id>http://arxiv.org/abs/2506.09996v1</id>
+    <updated>2025-06-11T17:59:58Z</updated>
+    <published>2025-06-11T17:59:58Z</published>
+    <title>From Judgment to Interference: Early Stopping LLM Harmful Outputs via
+  Streaming Content Monitoring</title>
+    <summary>  Though safety alignment has been applied to most large language models
+(LLMs), LLM service providers generally deploy a subsequent moderation as the
+external safety guardrail in real-world products. Existing moderators mainly
+practice a conventional full detection, which determines the harmfulness based
+on the complete LLM output, causing high service latency. Recent works pay more
+attention to partial detection where moderators oversee the generation midway
+and early stop the output if harmfulness is detected, but they directly apply
+moderators trained with the full detection paradigm to incomplete outputs,
+introducing a training-inference gap that lowers the performance. In this
+paper, we explore how to form a data-and-model solution that natively supports
+partial detection. For the data, we construct FineHarm, a dataset consisting of
+29K prompt-response pairs with fine-grained annotations to provide reasonable
+supervision for token-level training. Then, we propose the streaming content
+monitor, which is trained with dual supervision of response- and token-level
+labels and can follow the output stream of LLM to make a timely judgment of
+harmfulness. Experiments show that SCM gains 0.95+ in macro F1 score that is
+comparable to full detection, by only seeing the first 18% of tokens in
+responses on average. Moreover, the SCM can serve as a pseudo-harmfulness
+annotator for improving safety alignment and lead to a higher harmlessness
+score than DPO.
 </summary>
     <author>
-      <name>Zhen Xu</name>
+      <name>Yang Li</name>
     </author>
     <author>
-      <name>Zhengqin Li</name>
+      <name>Qiang Sheng</name>
     </author>
     <author>
-      <name>Zhao Dong</name>
+      <name>Yehan Yang</name>
     </author>
     <author>
-      <name>Xiaowei Zhou</name>
+      <name>Xueyao Zhang</name>
     </author>
     <author>
-      <name>Richard Newcombe</name>
+      <name>Juan Cao</name>
     </author>
-    <author>
-      <name>Zhaoyang Lv</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://4dgt.github.io</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.08015v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.08015v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 7 figures, and 9 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.09996v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09996v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.08009v1</id>
-    <updated>2025-06-09T17:59:55Z</updated>
-    <published>2025-06-09T17:59:55Z</published>
-    <title>Self Forcing: Bridging the Train-Test Gap in Autoregressive Video
-  Diffusion</title>
-    <summary>  We introduce Self Forcing, a novel training paradigm for autoregressive video
-diffusion models. It addresses the longstanding issue of exposure bias, where
-models trained on ground-truth context must generate sequences conditioned on
-their own imperfect outputs during inference. Unlike prior methods that denoise
-future frames based on ground-truth context frames, Self Forcing conditions
-each frame's generation on previously self-generated outputs by performing
-autoregressive rollout with key-value (KV) caching during training. This
-strategy enables supervision through a holistic loss at the video level that
-directly evaluates the quality of the entire generated sequence, rather than
-relying solely on traditional frame-wise objectives. To ensure training
-efficiency, we employ a few-step diffusion model along with a stochastic
-gradient truncation strategy, effectively balancing computational cost and
-performance. We further introduce a rolling KV cache mechanism that enables
-efficient autoregressive video extrapolation. Extensive experiments demonstrate
-that our approach achieves real-time streaming video generation with sub-second
-latency on a single GPU, while matching or even surpassing the generation
-quality of significantly slower and non-causal diffusion models. Project
-website: http://self-forcing.github.io/
+    <id>http://arxiv.org/abs/2506.09991v1</id>
+    <updated>2025-06-11T17:59:23Z</updated>
+    <published>2025-06-11T17:59:23Z</published>
+    <title>Multiverse: Your Language Models Secretly Decide How to Parallelize and
+  Merge Generation</title>
+    <summary>  Autoregressive Large Language Models (AR-LLMs) frequently exhibit implicit
+parallelism in sequential generation. Inspired by this, we introduce
+Multiverse, a new generative model that enables natively parallel generation.
+Multiverse internalizes a MapReduce paradigm, generating automatically through
+three stages: (i) a Map stage for adaptive task decomposition, (ii) a Process
+stage for parallel subtask execution, and (iii) a Reduce stage for lossless
+result synthesis. Next, we build a real-world Multiverse reasoning model with
+co-design of data, algorithm, and system, enabling rapid and seamless transfer
+from frontier AR-LLMs. Starting from sequential reasoning chains, we create
+Multiverse 1K by converting them into structured training data using an
+automated LLM-assisted pipeline, avoiding costly human annotations.
+Algorithmically, we design Multiverse Attention to separate parallel reasoning
+steps while keeping compatibility with causal attention for efficient training.
+Systematically, we implement Multiverse Engine to enable parallel inference. It
+features a dedicated scheduler that dynamically switches between sequential and
+parallel generation, triggered directly by the model. After a 3-hour
+fine-tuning with 1K examples, our Multiverse-32B stands as the only
+open-sourced non-AR model achieving performance on par with leading AR-LLMs of
+the same scale, evidenced by AIME24 &amp; 25 scores of 54% and 46%, respectively.
+Moreover, our budget control experiments show that Multiverse-32B exhibits
+superior scaling, outperforming AR-LLMs by 1.87% on average using the same
+context length. Such scaling further leads to practical efficiency gain,
+achieving up to 2x speedup across varying batch sizes. We have open-sourced the
+entire Multiverse ecosystem, including data, model weights, engine, supporting
+tools, as well as complete data curation prompts and detailed training and
+evaluation recipes.
 </summary>
     <author>
-      <name>Xun Huang</name>
+      <name>Xinyu Yang</name>
     </author>
     <author>
-      <name>Zhengqi Li</name>
+      <name>Yuwei An</name>
     </author>
     <author>
-      <name>Guande He</name>
+      <name>Hongyi Liu</name>
     </author>
     <author>
-      <name>Mingyuan Zhou</name>
+      <name>Tianqi Chen</name>
     </author>
     <author>
-      <name>Eli Shechtman</name>
+      <name>Beidi Chen</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project website: http://self-forcing.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.08009v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.08009v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2506.09991v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09991v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09984v1</id>
+    <updated>2025-06-11T17:57:09Z</updated>
+    <published>2025-06-11T17:57:09Z</published>
+    <title>InterActHuman: Multi-Concept Human Animation with Layout-Aligned Audio
+  Conditions</title>
+    <summary>  End-to-end human animation with rich multi-modal conditions, e.g., text,
+image and audio has achieved remarkable advancements in recent years. However,
+most existing methods could only animate a single subject and inject conditions
+in a global manner, ignoring scenarios that multiple concepts could appears in
+the same video with rich human-human interactions and human-object
+interactions. Such global assumption prevents precise and per-identity control
+of multiple concepts including humans and objects, therefore hinders
+applications. In this work, we discard the single-entity assumption and
+introduce a novel framework that enforces strong, region-specific binding of
+conditions from modalities to each identity's spatiotemporal footprint. Given
+reference images of multiple concepts, our method could automatically infer
+layout information by leveraging a mask predictor to match appearance cues
+between the denoised video and each reference appearance. Furthermore, we
+inject local audio condition into its corresponding region to ensure
+layout-aligned modality matching in a iterative manner. This design enables the
+high-quality generation of controllable multi-concept human-centric videos.
+Empirical results and ablation studies validate the effectiveness of our
+explicit layout control for multi-modal conditions compared to implicit
+counterparts and other existing methods.
+</summary>
+    <author>
+      <name>Zhenzhi Wang</name>
+    </author>
+    <author>
+      <name>Jiaqi Yang</name>
+    </author>
+    <author>
+      <name>Jianwen Jiang</name>
+    </author>
+    <author>
+      <name>Chao Liang</name>
+    </author>
+    <author>
+      <name>Gaojie Lin</name>
+    </author>
+    <author>
+      <name>Zerong Zheng</name>
+    </author>
+    <author>
+      <name>Ceyuan Yang</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">TL;DR: The first multi-person dialogue video generation method from
+  pairs of reference image and audio via explicit layout-aligned condition
+  injection. See project page https://zhenzhiwang.github.io/interacthuman/ for
+  more details</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.09984v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09984v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.07999v1</id>
-    <updated>2025-06-09T17:59:01Z</updated>
-    <published>2025-06-09T17:59:01Z</published>
-    <title>MADFormer: Mixed Autoregressive and Diffusion Transformers for
-  Continuous Image Generation</title>
-    <summary>  Recent progress in multimodal generation has increasingly combined
-autoregressive (AR) and diffusion-based approaches, leveraging their
-complementary strengths: AR models capture long-range dependencies and produce
-fluent, context-aware outputs, while diffusion models operate in continuous
-latent spaces to refine high-fidelity visual details. However, existing hybrids
-often lack systematic guidance on how and why to allocate model capacity
-between these paradigms. In this work, we introduce MADFormer, a Mixed
-Autoregressive and Diffusion Transformer that serves as a testbed for analyzing
-AR-diffusion trade-offs. MADFormer partitions image generation into spatial
-blocks, using AR layers for one-pass global conditioning across blocks and
-diffusion layers for iterative local refinement within each block. Through
-controlled experiments on FFHQ-1024 and ImageNet, we identify two key insights:
-(1) block-wise partitioning significantly improves performance on
-high-resolution images, and (2) vertically mixing AR and diffusion layers
-yields better quality-efficiency balances--improving FID by up to 75% under
-constrained inference compute. Our findings offer practical design principles
-for future hybrid generative models.
+    <id>http://arxiv.org/abs/2506.09958v1</id>
+    <updated>2025-06-11T17:31:38Z</updated>
+    <published>2025-06-11T17:31:38Z</published>
+    <title>Kvasir-VQA-x1: A Multimodal Dataset for Medical Reasoning and Robust
+  MedVQA in Gastrointestinal Endoscopy</title>
+    <summary>  Medical Visual Question Answering (MedVQA) is a promising field for
+developing clinical decision support systems, yet progress is often limited by
+the available datasets, which can lack clinical complexity and visual
+diversity. To address these gaps, we introduce Kvasir-VQA-x1, a new,
+large-scale dataset for gastrointestinal (GI) endoscopy. Our work significantly
+expands upon the original Kvasir-VQA by incorporating 159,549 new
+question-answer pairs that are designed to test deeper clinical reasoning. We
+developed a systematic method using large language models to generate these
+questions, which are stratified by complexity to better assess a model's
+inference capabilities. To ensure our dataset prepares models for real-world
+clinical scenarios, we have also introduced a variety of visual augmentations
+that mimic common imaging artifacts. The dataset is structured to support two
+main evaluation tracks: one for standard VQA performance and another to test
+model robustness against these visual perturbations. By providing a more
+challenging and clinically relevant benchmark, Kvasir-VQA-x1 aims to accelerate
+the development of more reliable and effective multimodal AI systems for use in
+clinical settings. The dataset is fully accessible and adheres to FAIR data
+principles, making it a valuable resource for the wider research community.
+Code and data: https://github.com/Simula/Kvasir-VQA-x1 and
+https://huggingface.co/datasets/SimulaMet/Kvasir-VQA-x1
 </summary>
     <author>
-      <name>Junhao Chen</name>
+      <name>Sushant Gautam</name>
     </author>
     <author>
-      <name>Yulia Tsvetkov</name>
+      <name>Michael A. Riegler</name>
     </author>
     <author>
-      <name>Xiaochuang Han</name>
+      <name>Pål Halvorsen</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.07999v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07999v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2506.09958v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09958v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68T45 (Machine learning), 92C55 (Biomedical imaging and signal&#10;  processing) 68T45 (Machine learning), 92C55 (Biomedical imaging and signal&#10;  processing)" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.2.10; I.2.6; J.3" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.07998v1</id>
-    <updated>2025-06-09T17:58:36Z</updated>
-    <published>2025-06-09T17:58:36Z</published>
-    <title>Generative Modeling of Weights: Generalization or Memorization?</title>
-    <summary>  Generative models, with their success in image and video generation, have
-recently been explored for synthesizing effective neural network weights. These
-approaches take trained neural network checkpoints as training data, and aim to
-generate high-performing neural network weights during inference. In this work,
-we examine four representative methods on their ability to generate novel model
-weights, i.e., weights that are different from the checkpoints seen during
-training. Surprisingly, we find that these methods synthesize weights largely
-by memorization: they produce either replicas, or at best simple
-interpolations, of the training checkpoints. Current methods fail to outperform
-simple baselines, such as adding noise to the weights or taking a simple weight
-ensemble, in obtaining different and simultaneously high-performing models. We
-further show that this memorization cannot be effectively mitigated by
-modifying modeling factors commonly associated with memorization in image
-diffusion models, or applying data augmentations. Our findings provide a
-realistic assessment of what types of data current generative models can model,
-and highlight the need for more careful evaluation of generative models in new
-domains. Our code is available at
-https://github.com/boyazeng/weight_memorization.
-</summary>
-    <author>
-      <name>Boya Zeng</name>
-    </author>
-    <author>
-      <name>Yida Yin</name>
-    </author>
-    <author>
-      <name>Zhiqiu Xu</name>
-    </author>
-    <author>
-      <name>Zhuang Liu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page at https://boyazeng.github.io/weight_memorization</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.07998v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07998v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.07978v1</id>
-    <updated>2025-06-09T17:50:57Z</updated>
-    <published>2025-06-09T17:50:57Z</published>
-    <title>Not so dark, not so dense: an alternative explanation for the lensing
-  subhalo in SDSSJ0946+1006</title>
-    <summary>  Previous studies of the strong lens system SDSSJ0946+1006 have reported a
-dark matter subhalo with an unusually high central density, potentially
-challenging the standard cold dark matter (CDM) paradigm. However, these
-analyses assumed the subhalo to be completely dark, neglecting the possibility
-that it may host a faint galaxy. In this work, we revisit the lensing analysis
-of SDSSJ0946+1006, explicitly modelling the subhalo as a luminous satellite.
-Incorporating light from the perturber broadens the range of allowed subhalo
-properties, revealing solutions with significantly lower central densities that
-are consistent with CDM expectations. The inferred luminosity of the satellite
-also aligns with predictions from hydrodynamical simulations. While
-high-concentration subhaloes remain allowed, they are no longer statistically
-preferred. The luminous subhalo model yields a better fit to the data, while
-also offering a more plausible explanation that is in line with theoretical
-expectations. We validate our methodology using mock data, demonstrating that
-neglecting subhalo light can lead to inferred mass distributions that are
-artificially compact.
-</summary>
-    <author>
-      <name>Qiuhan He</name>
-    </author>
-    <author>
-      <name>Andrew Robertson</name>
-    </author>
-    <author>
-      <name>James W. Nightingale</name>
-    </author>
-    <author>
-      <name>Aristeidis Amvrosiadis</name>
-    </author>
-    <author>
-      <name>Shaun Cole</name>
-    </author>
-    <author>
-      <name>Carlos S. Frenk</name>
-    </author>
-    <author>
-      <name>Samuel C. Lange</name>
-    </author>
-    <author>
-      <name>Shubo Li</name>
-    </author>
-    <author>
-      <name>Ran Li</name>
-    </author>
-    <author>
-      <name>Xiaoyue Cao</name>
-    </author>
-    <author>
-      <name>Leo W. H. Fung</name>
-    </author>
-    <author>
-      <name>Xianghao Ma</name>
-    </author>
-    <author>
-      <name>Richard Massey</name>
-    </author>
-    <author>
-      <name>Kaihao Wang</name>
-    </author>
-    <author>
-      <name>Maximilian von Wietersheim-Kramsta</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Comments Welcome!</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.07978v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07978v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.07971v1</id>
-    <updated>2025-06-09T17:45:18Z</updated>
-    <published>2025-06-09T17:45:18Z</published>
-    <title>CyberV: Cybernetics for Test-time Scaling in Video Understanding</title>
-    <summary>  Current Multimodal Large Language Models (MLLMs) may struggle with
-understanding long or complex videos due to computational demands at test time,
-lack of robustness, and limited accuracy, primarily stemming from their
-feed-forward processing nature. These limitations could be more severe for
-models with fewer parameters. To address these limitations, we propose a novel
-framework inspired by cybernetic principles, redesigning video MLLMs as
-adaptive systems capable of self-monitoring, self-correction, and dynamic
-resource allocation during inference. Our approach, CyberV, introduces a
-cybernetic loop consisting of an MLLM Inference System, a Sensor, and a
-Controller. Specifically, the sensor monitors forward processes of the MLLM and
-collects intermediate interpretations, such as attention drift, then the
-controller determines when and how to trigger self-correction and generate
-feedback to guide the next round. This test-time adaptive scaling framework
-enhances frozen MLLMs without requiring retraining or additional components.
-Experiments demonstrate significant improvements: CyberV boosts Qwen2.5-VL-7B
-by 8.3% and InternVL3-8B by 5.5% on VideoMMMU, surpassing the competitive
-proprietary model GPT-4o. When applied to Qwen2.5-VL-72B, it yields a 10.0%
-improvement, achieving performance even comparable to human experts.
-Furthermore, our method demonstrates consistent gains on general-purpose
-benchmarks, such as VideoMME and WorldSense, highlighting its effectiveness and
-generalization capabilities in making MLLMs more robust and accurate for
-dynamic video understanding. The code is released at
-https://github.com/marinero4972/CyberV.
-</summary>
-    <author>
-      <name>Jiahao Meng</name>
-    </author>
-    <author>
-      <name>Shuyang Sun</name>
-    </author>
-    <author>
-      <name>Yue Tan</name>
-    </author>
-    <author>
-      <name>Lu Qi</name>
-    </author>
-    <author>
-      <name>Yunhai Tong</name>
-    </author>
-    <author>
-      <name>Xiangtai Li</name>
-    </author>
-    <author>
-      <name>Longyin Wen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.07971v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07971v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.07956v1</id>
-    <updated>2025-06-09T17:26:14Z</updated>
-    <published>2025-06-09T17:26:14Z</published>
-    <title>Language Models over Canonical Byte-Pair Encodings</title>
-    <summary>  Modern language models represent probability distributions over character
-strings as distributions over (shorter) token strings derived via a
-deterministic tokenizer, such as byte-pair encoding. While this approach is
-highly effective at scaling up language models to large corpora, its current
-incarnations have a concerning property: the model assigns nonzero probability
-mass to an exponential number of $\it{noncanonical}$ token encodings of each
-character string -- these are token strings that decode to valid character
-strings but are impossible under the deterministic tokenizer (i.e., they will
-never be seen in any training corpus, no matter how large). This misallocation
-is both erroneous, as noncanonical strings never appear in training data, and
-wasteful, diverting probability mass away from plausible outputs. These are
-avoidable mistakes! In this work, we propose methods to enforce canonicality in
-token-level language models, ensuring that only canonical token strings are
-assigned positive probability. We present two approaches: (1) canonicality by
-conditioning, leveraging test-time inference strategies without additional
-training, and (2) canonicality by construction, a model parameterization that
-guarantees canonical outputs but requires training. We demonstrate that fixing
-canonicality mistakes improves the likelihood of held-out data for several
-models and corpora.
-</summary>
-    <author>
-      <name>Tim Vieira</name>
-    </author>
-    <author>
-      <name>Tianyu Liu</name>
-    </author>
-    <author>
-      <name>Clemente Pasti</name>
-    </author>
-    <author>
-      <name>Yahya Emara</name>
-    </author>
-    <author>
-      <name>Brian DuSell</name>
-    </author>
-    <author>
-      <name>Benjamin LeBrun</name>
-    </author>
-    <author>
-      <name>Mario Giulianelli</name>
-    </author>
-    <author>
-      <name>Juan Luis Gastaldi</name>
-    </author>
-    <author>
-      <name>Timothy J. O'Donnell</name>
-    </author>
-    <author>
-      <name>Ryan Cotterell</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICML 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.07956v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07956v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.07949v1</id>
-    <updated>2025-06-09T17:14:41Z</updated>
-    <published>2025-06-09T17:14:41Z</published>
-    <title>Cost-Optimal Active AI Model Evaluation</title>
-    <summary>  The development lifecycle of generative AI systems requires continual
-evaluation, data acquisition, and annotation, which is costly in both resources
-and time. In practice, rapid iteration often makes it necessary to rely on
-synthetic annotation data because of the low cost, despite the potential for
-substantial bias. In this paper, we develop novel, cost-aware methods for
-actively balancing the use of a cheap, but often inaccurate, weak rater -- such
-as a model-based autorater that is designed to automatically assess the quality
-of generated content -- with a more expensive, but also more accurate, strong
-rater alternative such as a human. More specifically, the goal of our approach
-is to produce a low variance, unbiased estimate of the mean of the target
-"strong" rating, subject to some total annotation budget. Building on recent
-work in active and prediction-powered statistical inference, we derive a family
-of cost-optimal policies for allocating a given annotation budget between weak
-and strong raters so as to maximize statistical efficiency. Using synthetic and
-real-world data, we empirically characterize the conditions under which these
-policies yield improvements over prior methods. We find that, especially in
-tasks where there is high variability in the difficulty of examples, our
-policies can achieve the same estimation precision at a far lower total
-annotation budget than standard evaluation methods.
-</summary>
-    <author>
-      <name>Anastasios N. Angelopoulos</name>
-    </author>
-    <author>
-      <name>Jacob Eisenstein</name>
-    </author>
-    <author>
-      <name>Jonathan Berant</name>
-    </author>
-    <author>
-      <name>Alekh Agarwal</name>
-    </author>
-    <author>
-      <name>Adam Fisch</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.07949v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07949v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.07948v1</id>
-    <updated>2025-06-09T17:11:28Z</updated>
-    <published>2025-06-09T17:11:28Z</published>
-    <title>TokenBreak: Bypassing Text Classification Models Through Token
-  Manipulation</title>
-    <summary>  Natural Language Processing (NLP) models are used for text-related tasks such
-as classification and generation. To complete these tasks, input data is first
-tokenized from human-readable text into a format the model can understand,
-enabling it to make inferences and understand context. Text classification
-models can be implemented to guard against threats such as prompt injection
-attacks against Large Language Models (LLMs), toxic input and cybersecurity
-risks such as spam emails. In this paper, we introduce TokenBreak: a novel
-attack that can bypass these protection models by taking advantage of the
-tokenization strategy they use. This attack technique manipulates input text in
-such a way that certain models give an incorrect classification. Importantly,
-the end target (LLM or email recipient) can still understand and respond to the
-manipulated text and therefore be vulnerable to the very attack the protection
-model was put in place to prevent. The tokenizer is tied to model architecture,
-meaning it is possible to predict whether or not a model is vulnerable to
-attack based on family. We also present a defensive strategy as an added layer
-of protection that can be implemented without having to retrain the defensive
-model.
-</summary>
-    <author>
-      <name>Kasimir Schulz</name>
-    </author>
-    <author>
-      <name>Kenneth Yeung</name>
-    </author>
-    <author>
-      <name>Kieran Evans</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.07948v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07948v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.07947v1</id>
-    <updated>2025-06-09T17:11:07Z</updated>
-    <published>2025-06-09T17:11:07Z</published>
-    <title>Statistical Hypothesis Testing for Auditing Robustness in Language
+    <id>http://arxiv.org/abs/2506.09943v1</id>
+    <updated>2025-06-11T17:10:36Z</updated>
+    <published>2025-06-11T17:10:36Z</published>
+    <title>CausalVQA: A Physically Grounded Causal Reasoning Benchmark for Video
   Models</title>
-    <summary>  Consider the problem of testing whether the outputs of a large language model
-(LLM) system change under an arbitrary intervention, such as an input
-perturbation or changing the model variant. We cannot simply compare two LLM
-outputs since they might differ due to the stochastic nature of the system, nor
-can we compare the entire output distribution due to computational
-intractability. While existing methods for analyzing text-based outputs exist,
-they focus on fundamentally different problems, such as measuring bias or
-fairness. To this end, we introduce distribution-based perturbation analysis, a
-framework that reformulates LLM perturbation analysis as a frequentist
-hypothesis testing problem. We construct empirical null and alternative output
-distributions within a low-dimensional semantic similarity space via Monte
-Carlo sampling, enabling tractable inference without restrictive distributional
-assumptions. The framework is (i) model-agnostic, (ii) supports the evaluation
-of arbitrary input perturbations on any black-box LLM, (iii) yields
-interpretable p-values; (iv) supports multiple perturbations via controlled
-error rates; and (v) provides scalar effect sizes. We demonstrate the
-usefulness of the framework across multiple case studies, showing how we can
-quantify response changes, measure true/false positive rates, and evaluate
-alignment with reference models. Above all, we see this as a reliable
-frequentist hypothesis testing framework for LLM auditing.
+    <summary>  We introduce CausalVQA, a benchmark dataset for video question answering
+(VQA) composed of question-answer pairs that probe models' understanding of
+causality in the physical world. Existing VQA benchmarks either tend to focus
+on surface perceptual understanding of real-world videos, or on narrow physical
+reasoning questions created using simulation environments. CausalVQA fills an
+important gap by presenting challenging questions that are grounded in
+real-world scenarios, while focusing on models' ability to predict the likely
+outcomes of different actions and events through five question types:
+counterfactual, hypothetical, anticipation, planning and descriptive. We
+designed quality control mechanisms that prevent models from exploiting trivial
+shortcuts, requiring models to base their answers on deep visual understanding
+instead of linguistic cues. We find that current frontier multimodal models
+fall substantially below human performance on the benchmark, especially on
+anticipation and hypothetical questions. This highlights a challenge for
+current systems to leverage spatial-temporal reasoning, understanding of
+physical principles, and comprehension of possible alternatives to make
+accurate predictions in real-world settings.
 </summary>
     <author>
-      <name>Paulius Rauba</name>
+      <name>Aaron Foss</name>
     </author>
     <author>
-      <name>Qiyao Wei</name>
+      <name>Chloe Evans</name>
     </author>
     <author>
-      <name>Mihaela van der Schaar</name>
+      <name>Sasha Mitts</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">arXiv admin note: substantial text overlap with arXiv:2412.00868</arxiv:comment>
-    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Forty-second International Conference on Machine Learning. ICML
-  2025</arxiv:journal_ref>
-    <link href="http://arxiv.org/abs/2506.07947v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.07947v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Koustuv Sinha</name>
+    </author>
+    <author>
+      <name>Ammar Rizvi</name>
+    </author>
+    <author>
+      <name>Justine T. Kao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">35 pages, 3 figures, Submitted to NeurIPS2025 benchmark track</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.09943v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09943v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.2.10; I.4.8" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09928v1</id>
+    <updated>2025-06-11T16:51:07Z</updated>
+    <published>2025-06-11T16:51:07Z</published>
+    <title>Bayesian Probabilistic Matrix Factorization</title>
+    <summary>  Matrix factorization is a widely used technique in recommendation systems.
+Probabilistic Matrix Factorization (PMF) [1] extends traditional matrix
+factorization by incorporating probability distributions over latent factors,
+allowing for uncertainty quantification. However, computing the posterior
+distribution is intractable due to the high-dimensional integral. To address
+this, we employ two Bayesian inference methods: Markov Chain Monte Carlo (MCMC)
+[2] and Variational Inference (VI) [3] to approximate the posterior. We
+evaluate their performance on MovieLens dataset and compare their convergence
+speed, predictive accuracy, and computational efficiency. Experimental results
+demonstrate that VI offers faster convergence, while MCMC provides more
+accurate posterior estimates.
+</summary>
+    <author>
+      <name>Ruixuan Xu</name>
+    </author>
+    <author>
+      <name>Xiangxiang Weng</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.09928v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09928v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09925v1</id>
+    <updated>2025-06-11T16:49:15Z</updated>
+    <published>2025-06-11T16:49:15Z</published>
+    <title>Emergent anisotropic three-phase order in critically doped
+  superconducting diamond films</title>
+    <summary>  Two decades since its discovery, superconducting heavily boron-doped diamond
+(HBDD) still presents unresolved fundamental questions whose resolution is
+relevant to the development of this material for quantum technologies. We use
+electrical magnetotransport measurements of critically-doped homoepitaxial
+single crystal HBDD films to reveal signatures of intrinsic (electronic)
+granular superconductivity. By studying the dependence of electrical
+resistivity on temperature and magnetic field vector, we infer that this
+granularity arises from electron correlations. This is revealed by a striking
+three-phase anisotropy in the magnetoresistance, accompanied by a spontaneous
+transverse voltage (Hall anomaly). Our findings indicate an emergent
+magnetically tunable intrinsic order in an otherwise isotropic three
+dimensional single crystal HBDD film, offering new insights into the mechanism
+of superconductivity in this quantum material.
+</summary>
+    <author>
+      <name>Jyotirmay Dwivedi</name>
+    </author>
+    <author>
+      <name>Jake Morris</name>
+    </author>
+    <author>
+      <name>Saurav Islam</name>
+    </author>
+    <author>
+      <name>Kalana D. Halanayake</name>
+    </author>
+    <author>
+      <name>Gabriel A. Vazquez-Lizardi</name>
+    </author>
+    <author>
+      <name>David Snyder</name>
+    </author>
+    <author>
+      <name>Anthony Richardella</name>
+    </author>
+    <author>
+      <name>Luke Lyle</name>
+    </author>
+    <author>
+      <name>Danielle Reifsnyder Hickey</name>
+    </author>
+    <author>
+      <name>Nazar Delegan</name>
+    </author>
+    <author>
+      <name>F. Joseph Heremans</name>
+    </author>
+    <author>
+      <name>David D. Awschalom</name>
+    </author>
+    <author>
+      <name>Nitin Samarth</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.09925v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09925v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09923v1</id>
+    <updated>2025-06-11T16:43:36Z</updated>
+    <published>2025-06-11T16:43:36Z</published>
+    <title>Apollo: A Posteriori Label-Only Membership Inference Attack Towards
+  Machine Unlearning</title>
+    <summary>  Machine Unlearning (MU) aims to update Machine Learning (ML) models following
+requests to remove training samples and their influences on a trained model
+efficiently without retraining the original ML model from scratch. While MU
+itself has been employed to provide privacy protection and regulatory
+compliance, it can also increase the attack surface of the model. Existing
+privacy inference attacks towards MU that aim to infer properties of the
+unlearned set rely on the weaker threat model that assumes the attacker has
+access to both the unlearned model and the original model, limiting their
+feasibility toward real-life scenarios. We propose a novel privacy attack, A
+Posteriori Label-Only Membership Inference Attack towards MU, Apollo, that
+infers whether a data sample has been unlearned, following a strict threat
+model where an adversary has access to the label-output of the unlearned model
+only. We demonstrate that our proposed attack, while requiring less access to
+the target model compared to previous attacks, can achieve relatively high
+precision on the membership status of the unlearned samples.
+</summary>
+    <author>
+      <name>Liou Tang</name>
+    </author>
+    <author>
+      <name>James Joshi</name>
+    </author>
+    <author>
+      <name>Ashish Kundu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.09923v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09923v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09916v1</id>
+    <updated>2025-06-11T16:33:09Z</updated>
+    <published>2025-06-11T16:33:09Z</published>
+    <title>Only-Style: Stylistic Consistency in Image Generation without Content
+  Leakage</title>
+    <summary>  Generating images in a consistent reference visual style remains a
+challenging computer vision task. State-of-the-art methods aiming for
+style-consistent generation struggle to effectively separate semantic content
+from stylistic elements, leading to content leakage from the image provided as
+a reference to the targets. To address this challenge, we propose Only-Style: a
+method designed to mitigate content leakage in a semantically coherent manner
+while preserving stylistic consistency. Only-Style works by localizing content
+leakage during inference, allowing the adaptive tuning of a parameter that
+controls the style alignment process, specifically within the image patches
+containing the subject in the reference image. This adaptive process best
+balances stylistic consistency with leakage elimination. Moreover, the
+localization of content leakage can function as a standalone component, given a
+reference-target image pair, allowing the adaptive tuning of any
+method-specific parameter that provides control over the impact of the
+stylistic reference. In addition, we propose a novel evaluation framework to
+quantify the success of style-consistent generations in avoiding undesired
+content leakage. Our approach demonstrates a significant improvement over
+state-of-the-art methods through extensive evaluation across diverse instances,
+consistently achieving robust stylistic consistency without undesired content
+leakage.
+</summary>
+    <author>
+      <name>Tilemachos Aravanis</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">School of Electrical &amp; Computer Engineering, National Technical University of Athens, Greece</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Panagiotis Filntisis</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Robotics Institute, Athena Research Center, Maroussi, Greece</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">HERON - Center of Excellence in Robotics, Athens, Greece</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Petros Maragos</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">School of Electrical &amp; Computer Engineering, National Technical University of Athens, Greece</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Robotics Institute, Athena Research Center, Maroussi, Greece</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">HERON - Center of Excellence in Robotics, Athens, Greece</arxiv:affiliation>
+    </author>
+    <author>
+      <name>George Retsinas</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Robotics Institute, Athena Research Center, Maroussi, Greece</arxiv:affiliation>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">HERON - Center of Excellence in Robotics, Athens, Greece</arxiv:affiliation>
+    </author>
+    <link href="http://arxiv.org/abs/2506.09916v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09916v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09891v1</id>
+    <updated>2025-06-11T16:00:55Z</updated>
+    <published>2025-06-11T16:00:55Z</published>
+    <title>Causal Climate Emulation with Bayesian Filtering</title>
+    <summary>  Traditional models of climate change use complex systems of coupled equations
+to simulate physical processes across the Earth system. These simulations are
+highly computationally expensive, limiting our predictions of climate change
+and analyses of its causes and effects. Machine learning has the potential to
+quickly emulate data from climate models, but current approaches are not able
+to incorporate physics-informed causal relationships. Here, we develop an
+interpretable climate model emulator based on causal representation learning.
+We derive a physics-informed approach including a Bayesian filter for stable
+long-term autoregressive emulation. We demonstrate that our emulator learns
+accurate climate dynamics, and we show the importance of each one of its
+components on a realistic synthetic dataset and data from two widely deployed
+climate models.
+</summary>
+    <author>
+      <name>Sebastian Hickman</name>
+    </author>
+    <author>
+      <name>Ilija Trajkovic</name>
+    </author>
+    <author>
+      <name>Julia Kaltenborn</name>
+    </author>
+    <author>
+      <name>Francis Pelletier</name>
+    </author>
+    <author>
+      <name>Alex Archibald</name>
+    </author>
+    <author>
+      <name>Yaniv Gurwicz</name>
+    </author>
+    <author>
+      <name>Peer Nowack</name>
+    </author>
+    <author>
+      <name>David Rolnick</name>
+    </author>
+    <author>
+      <name>Julien Boussard</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">32 pages, 21 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.09891v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.09891v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
