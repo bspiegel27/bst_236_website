@@ -1,505 +1,498 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-13T00:58:10Z -->
+<!-- Last updated: 2025-06-14T00:55:55Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-12T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114828</opensearch:totalResults>
+  <updated>2025-06-13T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114917</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.09996v1</id>
-    <updated>2025-06-11T17:59:58Z</updated>
-    <published>2025-06-11T17:59:58Z</published>
-    <title>From Judgment to Interference: Early Stopping LLM Harmful Outputs via
-  Streaming Content Monitoring</title>
-    <summary>  Though safety alignment has been applied to most large language models
-(LLMs), LLM service providers generally deploy a subsequent moderation as the
-external safety guardrail in real-world products. Existing moderators mainly
-practice a conventional full detection, which determines the harmfulness based
-on the complete LLM output, causing high service latency. Recent works pay more
-attention to partial detection where moderators oversee the generation midway
-and early stop the output if harmfulness is detected, but they directly apply
-moderators trained with the full detection paradigm to incomplete outputs,
-introducing a training-inference gap that lowers the performance. In this
-paper, we explore how to form a data-and-model solution that natively supports
-partial detection. For the data, we construct FineHarm, a dataset consisting of
-29K prompt-response pairs with fine-grained annotations to provide reasonable
-supervision for token-level training. Then, we propose the streaming content
-monitor, which is trained with dual supervision of response- and token-level
-labels and can follow the output stream of LLM to make a timely judgment of
-harmfulness. Experiments show that SCM gains 0.95+ in macro F1 score that is
-comparable to full detection, by only seeing the first 18% of tokens in
-responses on average. Moreover, the SCM can serve as a pseudo-harmfulness
-annotator for improving safety alignment and lead to a higher harmlessness
-score than DPO.
+    <id>http://arxiv.org/abs/2506.10981v1</id>
+    <updated>2025-06-12T17:59:56Z</updated>
+    <published>2025-06-12T17:59:56Z</published>
+    <title>SceneCompleter: Dense 3D Scene Completion for Generative Novel View
+  Synthesis</title>
+    <summary>  Generative models have gained significant attention in novel view synthesis
+(NVS) by alleviating the reliance on dense multi-view captures. However,
+existing methods typically fall into a conventional paradigm, where generative
+models first complete missing areas in 2D, followed by 3D recovery techniques
+to reconstruct the scene, which often results in overly smooth surfaces and
+distorted geometry, as generative models struggle to infer 3D structure solely
+from RGB data. In this paper, we propose SceneCompleter, a novel framework that
+achieves 3D-consistent generative novel view synthesis through dense 3D scene
+completion. SceneCompleter achieves both visual coherence and 3D-consistent
+generative scene completion through two key components: (1) a
+geometry-appearance dual-stream diffusion model that jointly synthesizes novel
+views in RGBD space; (2) a scene embedder that encodes a more holistic scene
+understanding from the reference image. By effectively fusing structural and
+textural information, our method demonstrates superior coherence and
+plausibility in generative novel view synthesis across diverse datasets.
+Project Page: https://chen-wl20.github.io/SceneCompleter
 </summary>
     <author>
-      <name>Yang Li</name>
+      <name>Weiliang Chen</name>
     </author>
     <author>
-      <name>Qiang Sheng</name>
+      <name>Jiayi Bi</name>
     </author>
     <author>
-      <name>Yehan Yang</name>
+      <name>Yuanhui Huang</name>
     </author>
     <author>
-      <name>Xueyao Zhang</name>
+      <name>Wenzhao Zheng</name>
     </author>
     <author>
-      <name>Juan Cao</name>
+      <name>Yueqi Duan</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 7 figures, and 9 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.09996v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09996v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2506.10981v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10981v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10967v1</id>
+    <updated>2025-06-12T17:59:09Z</updated>
+    <published>2025-06-12T17:59:09Z</published>
+    <title>Beyond Attention or Similarity: Maximizing Conditional Diversity for
+  Token Pruning in MLLMs</title>
+    <summary>  In multimodal large language models (MLLMs), the length of input visual
+tokens is often significantly greater than that of their textual counterparts,
+leading to a high inference cost. Many works aim to address this issue by
+removing redundant visual tokens. However, current approaches either rely on
+attention-based pruning, which retains numerous duplicate tokens, or use
+similarity-based pruning, overlooking the instruction relevance, consequently
+causing suboptimal performance. In this paper, we go beyond attention or
+similarity by proposing a novel visual token pruning method named CDPruner,
+which maximizes the conditional diversity of retained tokens. We first define
+the conditional similarity between visual tokens conditioned on the
+instruction, and then reformulate the token pruning problem with determinantal
+point process (DPP) to maximize the conditional diversity of the selected
+subset. The proposed CDPruner is training-free and model-agnostic, allowing
+easy application to various MLLMs. Extensive experiments across diverse MLLMs
+show that CDPruner establishes new state-of-the-art on various vision-language
+benchmarks. By maximizing conditional diversity through DPP, the selected
+subset better represents the input images while closely adhering to user
+instructions, thereby preserving strong performance even with high reduction
+ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\% and CUDA latency
+by 78\%, while maintaining 94\% of the original accuracy. Our code is available
+at https://github.com/Theia-4869/CDPruner.
+</summary>
+    <author>
+      <name>Qizhe Zhang</name>
+    </author>
+    <author>
+      <name>Mengzhen Liu</name>
+    </author>
+    <author>
+      <name>Lichen Li</name>
+    </author>
+    <author>
+      <name>Ming Lu</name>
+    </author>
+    <author>
+      <name>Yuan Zhang</name>
+    </author>
+    <author>
+      <name>Junwen Pan</name>
+    </author>
+    <author>
+      <name>Qi She</name>
+    </author>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 5 figures, code: https://github.com/Theia-4869/CDPruner,
+  project page: https://theia-4869.github.io/CDPruner</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.10967v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10967v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10965v1</id>
+    <updated>2025-06-12T17:59:02Z</updated>
+    <published>2025-06-12T17:59:02Z</published>
+    <title>Apparent inconsistency between Streda formula and Hall conductivity in
+  reentrant integer quantum anomalous Hall effect in twisted MoTe$_2$</title>
+    <summary>  Recent experiments in twisted bilayer MoTe$_2$ (tMoTe$_2$) have uncovered a
+rich landscape of correlated phases. In this work, we investigate the reentrant
+integer quantum anomalous Hall (RIQAH) states reported in F. Xu, et. al.,
+arXiv:2504.06972 which displays a notable mismatch between the Hall
+conductivity measured via transport and that inferred from the Streda formula.
+We argue that this discrepancy can be explained if the RIQAH state is a quantum
+Hall bubble phase, analogous to similar well-established phenomena in 2D GaAs
+quantum wells. While this explains the RIQAH state at a filling $\nu = -0.63$,
+the other RIQAH state at $\nu = -0.7$ has a smaller slope necessitating a
+different interpretation. We propose that this discrepancy arises due to a
+nearby resistive peak masking the true slope. Furthermore, we identify this
+resistive peak as a signature of a magnetic phase transition near $\nu =
+-0.75$, possibly driven by a Van Hove singularity. The anomalous Hall response
+and Landau fan evolution across this transition suggest a change in Fermi
+surface topology and a phase with zero Chern number, potentially corresponding
+to an inter-valley coherent state. These observations offer new insights into
+the nature of the RIQAH states and raise the possibility that the nearby
+superconducting phase may have an inter-valley coherent normal state.
+</summary>
+    <author>
+      <name>Yi Huang</name>
+    </author>
+    <author>
+      <name>Seth Musser</name>
+    </author>
+    <author>
+      <name>Jihang Zhu</name>
+    </author>
+    <author>
+      <name>Yang-Zhi Chou</name>
+    </author>
+    <author>
+      <name>Sankar Das Sarma</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.10965v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10965v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10962v1</id>
+    <updated>2025-06-12T17:57:44Z</updated>
+    <published>2025-06-12T17:57:44Z</published>
+    <title>SpectralAR: Spectral Autoregressive Visual Generation</title>
+    <summary>  Autoregressive visual generation has garnered increasing attention due to its
+scalability and compatibility with other modalities compared with diffusion
+models. Most existing methods construct visual sequences as spatial patches for
+autoregressive generation. However, image patches are inherently parallel,
+contradicting the causal nature of autoregressive modeling. To address this, we
+propose a Spectral AutoRegressive (SpectralAR) visual generation framework,
+which realizes causality for visual sequences from the spectral perspective.
+Specifically, we first transform an image into ordered spectral tokens with
+Nested Spectral Tokenization, representing lower to higher frequency
+components. We then perform autoregressive generation in a coarse-to-fine
+manner with the sequences of spectral tokens. By considering different levels
+of detail in images, our SpectralAR achieves both sequence causality and token
+efficiency without bells and whistles. We conduct extensive experiments on
+ImageNet-1K for image reconstruction and autoregressive generation, and
+SpectralAR achieves 3.02 gFID with only 64 tokens and 310M parameters. Project
+page: https://huang-yh.github.io/spectralar/.
+</summary>
+    <author>
+      <name>Yuanhui Huang</name>
+    </author>
+    <author>
+      <name>Weiliang Chen</name>
+    </author>
+    <author>
+      <name>Wenzhao Zheng</name>
+    </author>
+    <author>
+      <name>Yueqi Duan</name>
+    </author>
+    <author>
+      <name>Jie Zhou</name>
+    </author>
+    <author>
+      <name>Jiwen Lu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://huang-yh.github.io/spectralar/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.10962v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10962v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10948v1</id>
+    <updated>2025-06-12T17:50:05Z</updated>
+    <published>2025-06-12T17:50:05Z</published>
+    <title>Execution Guided Line-by-Line Code Generation</title>
+    <summary>  We present a novel approach to neural code generation that incorporates
+real-time execution signals into the language model generation process. While
+large language models (LLMs) have demonstrated impressive code generation
+capabilities, they typically do not utilize execution feedback during
+inference, a critical signal that human programmers regularly leverage. Our
+method, Execution-Guided Classifier-Free Guidance (EG-CFG), dynamically
+incorporates execution signals as the model generates code, providing
+line-by-line feedback that guides the generation process toward executable
+solutions. EG-CFG employs a multi-stage process: first, we conduct beam search
+to sample candidate program completions for each line; second, we extract
+execution signals by executing these candidates against test cases; and
+finally, we incorporate these signals into the prompt during generation. By
+maintaining consistent signals across tokens within the same line and
+refreshing signals at line boundaries, our approach provides coherent guidance
+while preserving syntactic structure. Moreover, the method naturally supports
+native parallelism at the task level in which multiple agents operate in
+parallel, exploring diverse reasoning paths and collectively generating a broad
+set of candidate solutions. Our experiments across diverse coding tasks
+demonstrate that EG-CFG significantly improves code generation performance
+compared to standard approaches, achieving state-of-the-art results across
+various levels of complexity, from foundational problems to challenging
+competitive programming tasks. Our code is available at:
+https://github.com/boazlavon/eg_cfg
+</summary>
+    <author>
+      <name>Boaz Lavon</name>
+    </author>
+    <author>
+      <name>Shahar Katz</name>
+    </author>
+    <author>
+      <name>Lior Wolf</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.10948v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10948v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10941v1</id>
+    <updated>2025-06-12T17:46:54Z</updated>
+    <published>2025-06-12T17:46:54Z</published>
+    <title>VINCIE: Unlocking In-context Image Editing from Video</title>
+    <summary>  In-context image editing aims to modify images based on a contextual sequence
+comprising text and previously generated images. Existing methods typically
+depend on task-specific pipelines and expert models (e.g., segmentation and
+inpainting) to curate training data. In this work, we explore whether an
+in-context image editing model can be learned directly from videos. We
+introduce a scalable approach to annotate videos as interleaved multimodal
+sequences. To effectively learn from this data, we design a block-causal
+diffusion transformer trained on three proxy tasks: next-image prediction,
+current segmentation prediction, and next-segmentation prediction.
+Additionally, we propose a novel multi-turn image editing benchmark to advance
+research in this area. Extensive experiments demonstrate that our model
+exhibits strong in-context image editing capabilities and achieves
+state-of-the-art results on two multi-turn image editing benchmarks. Despite
+being trained exclusively on videos, our model also shows promising abilities
+in multi-concept composition, story generation, and chain-of-editing
+applications.
+</summary>
+    <author>
+      <name>Leigang Qu</name>
+    </author>
+    <author>
+      <name>Feng Cheng</name>
+    </author>
+    <author>
+      <name>Ziyan Yang</name>
+    </author>
+    <author>
+      <name>Qi Zhao</name>
+    </author>
+    <author>
+      <name>Shanchuan Lin</name>
+    </author>
+    <author>
+      <name>Yichun Shi</name>
+    </author>
+    <author>
+      <name>Yicong Li</name>
+    </author>
+    <author>
+      <name>Wenjie Wang</name>
+    </author>
+    <author>
+      <name>Tat-Seng Chua</name>
+    </author>
+    <author>
+      <name>Lu Jiang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://vincie2025.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.10941v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10941v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10922v1</id>
+    <updated>2025-06-12T17:34:38Z</updated>
+    <published>2025-06-12T17:34:38Z</published>
+    <title>Robustly Improving LLM Fairness in Realistic Settings via
+  Interpretability</title>
+    <summary>  Large language models (LLMs) are increasingly deployed in high-stakes hiring
+applications, making decisions that directly impact people's careers and
+livelihoods. While prior studies suggest simple anti-bias prompts can eliminate
+demographic biases in controlled evaluations, we find these mitigations fail
+when realistic contextual details are introduced. We address these failures
+through internal bias mitigation: by identifying and neutralizing sensitive
+attribute directions within model activations, we achieve robust bias reduction
+across all tested scenarios. Across leading commercial (GPT-4o, Claude 4
+Sonnet, Gemini 2.5 Flash) and open-source models (Gemma-2 27B, Gemma-3,
+Mistral-24B), we find that adding realistic context such as company names,
+culture descriptions from public careers pages, and selective hiring
+constraints (e.g.,``only accept candidates in the top 10\%") induces
+significant racial and gender biases (up to 12\% differences in interview
+rates). When these biases emerge, they consistently favor Black over White
+candidates and female over male candidates across all tested models and
+scenarios. Moreover, models can infer demographics and become biased from
+subtle cues like college affiliations, with these biases remaining invisible
+even when inspecting the model's chain-of-thought reasoning. To address these
+limitations, our internal bias mitigation identifies race and gender-correlated
+directions and applies affine concept editing at inference time. Despite using
+directions from a simple synthetic dataset, the intervention generalizes
+robustly, consistently reducing bias to very low levels (typically under 1\%,
+always below 2.5\%) while largely maintaining model performance. Our findings
+suggest that practitioners deploying LLMs for hiring should adopt more
+realistic evaluation methodologies and consider internal mitigation strategies
+for equitable outcomes.
+</summary>
+    <author>
+      <name>Adam Karvonen</name>
+    </author>
+    <author>
+      <name>Samuel Marks</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.10922v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10922v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10920v1</id>
+    <updated>2025-06-12T17:33:29Z</updated>
+    <published>2025-06-12T17:33:29Z</published>
+    <title>Decomposing MLP Activations into Interpretable Features via
+  Semi-Nonnegative Matrix Factorization</title>
+    <summary>  A central goal for mechanistic interpretability has been to identify the
+right units of analysis in large language models (LLMs) that causally explain
+their outputs. While early work focused on individual neurons, evidence that
+neurons often encode multiple concepts has motivated a shift toward analyzing
+directions in activation space. A key question is how to find directions that
+capture interpretable features in an unsupervised manner. Current methods rely
+on dictionary learning with sparse autoencoders (SAEs), commonly trained over
+residual stream activations to learn directions from scratch. However, SAEs
+often struggle in causal evaluations and lack intrinsic interpretability, as
+their learning is not explicitly tied to the computations of the model. Here,
+we tackle these limitations by directly decomposing MLP activations with
+semi-nonnegative matrix factorization (SNMF), such that the learned features
+are (a) sparse linear combinations of co-activated neurons, and (b) mapped to
+their activating inputs, making them directly interpretable. Experiments on
+Llama 3.1, Gemma 2 and GPT-2 show that SNMF derived features outperform SAEs
+and a strong supervised baseline (difference-in-means) on causal steering,
+while aligning with human-interpretable concepts. Further analysis reveals that
+specific neuron combinations are reused across semantically-related features,
+exposing a hierarchical structure in the MLP's activation space. Together,
+these results position SNMF as a simple and effective tool for identifying
+interpretable features and dissecting concept representations in LLMs.
+</summary>
+    <author>
+      <name>Or Shafran</name>
+    </author>
+    <author>
+      <name>Atticus Geiger</name>
+    </author>
+    <author>
+      <name>Mor Geva</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.10920v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10920v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.09991v1</id>
-    <updated>2025-06-11T17:59:23Z</updated>
-    <published>2025-06-11T17:59:23Z</published>
-    <title>Multiverse: Your Language Models Secretly Decide How to Parallelize and
-  Merge Generation</title>
-    <summary>  Autoregressive Large Language Models (AR-LLMs) frequently exhibit implicit
-parallelism in sequential generation. Inspired by this, we introduce
-Multiverse, a new generative model that enables natively parallel generation.
-Multiverse internalizes a MapReduce paradigm, generating automatically through
-three stages: (i) a Map stage for adaptive task decomposition, (ii) a Process
-stage for parallel subtask execution, and (iii) a Reduce stage for lossless
-result synthesis. Next, we build a real-world Multiverse reasoning model with
-co-design of data, algorithm, and system, enabling rapid and seamless transfer
-from frontier AR-LLMs. Starting from sequential reasoning chains, we create
-Multiverse 1K by converting them into structured training data using an
-automated LLM-assisted pipeline, avoiding costly human annotations.
-Algorithmically, we design Multiverse Attention to separate parallel reasoning
-steps while keeping compatibility with causal attention for efficient training.
-Systematically, we implement Multiverse Engine to enable parallel inference. It
-features a dedicated scheduler that dynamically switches between sequential and
-parallel generation, triggered directly by the model. After a 3-hour
-fine-tuning with 1K examples, our Multiverse-32B stands as the only
-open-sourced non-AR model achieving performance on par with leading AR-LLMs of
-the same scale, evidenced by AIME24 &amp; 25 scores of 54% and 46%, respectively.
-Moreover, our budget control experiments show that Multiverse-32B exhibits
-superior scaling, outperforming AR-LLMs by 1.87% on average using the same
-context length. Such scaling further leads to practical efficiency gain,
-achieving up to 2x speedup across varying batch sizes. We have open-sourced the
-entire Multiverse ecosystem, including data, model weights, engine, supporting
-tools, as well as complete data curation prompts and detailed training and
-evaluation recipes.
+    <id>http://arxiv.org/abs/2506.10918v1</id>
+    <updated>2025-06-12T17:32:02Z</updated>
+    <published>2025-06-12T17:32:02Z</published>
+    <title>Sequential-Parallel Duality in Prefix Scannable Models</title>
+    <summary>  Modern neural sequence models are designed to meet the dual mandate of
+parallelizable training and fast sequential inference. Recent developments have
+given rise to various models, such as Gated Linear Attention (GLA) and Mamba,
+that achieve such ``sequential-parallel duality.'' This raises a natural
+question: can we characterize the full class of neural sequence models that
+support near-constant-time parallel evaluation and linear-time, constant-space
+sequential inference? We begin by describing a broad class of such models --
+state space models -- as those whose state updates can be computed using the
+classic parallel prefix scan algorithm with a custom associative aggregation
+operator. We then define a more general class, Prefix-Scannable Models (PSMs),
+by relaxing the state aggregation operator to allow arbitrary (potentially
+non-associative) functions such as softmax attention. This generalization
+unifies many existing architectures, including element-wise RNNs (e.g., Mamba)
+and linear transformers (e.g., GLA, Mamba2, mLSTM), while also introducing new
+models with softmax-like operators that achieve O(1) amortized compute per
+token and log(N) memory for sequence length N. We empirically evaluate such
+models on illustrative small-scale language modeling and canonical synthetic
+tasks, including state tracking and associative recall. Empirically, we find
+that PSMs retain the expressivity of transformer-based architectures while
+matching the inference efficiency of state space models -- in some cases
+exhibiting better length generalization than either.
 </summary>
     <author>
-      <name>Xinyu Yang</name>
+      <name>Morris Yau</name>
     </author>
     <author>
-      <name>Yuwei An</name>
+      <name>Sharut Gupta</name>
     </author>
     <author>
-      <name>Hongyi Liu</name>
+      <name>Valerie Engelmayer</name>
     </author>
     <author>
-      <name>Tianqi Chen</name>
+      <name>Kazuki Irie</name>
     </author>
     <author>
-      <name>Beidi Chen</name>
+      <name>Stefanie Jegelka</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.09991v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09991v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Jacob Andreas</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.10918v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10918v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.09984v1</id>
-    <updated>2025-06-11T17:57:09Z</updated>
-    <published>2025-06-11T17:57:09Z</published>
-    <title>InterActHuman: Multi-Concept Human Animation with Layout-Aligned Audio
-  Conditions</title>
-    <summary>  End-to-end human animation with rich multi-modal conditions, e.g., text,
-image and audio has achieved remarkable advancements in recent years. However,
-most existing methods could only animate a single subject and inject conditions
-in a global manner, ignoring scenarios that multiple concepts could appears in
-the same video with rich human-human interactions and human-object
-interactions. Such global assumption prevents precise and per-identity control
-of multiple concepts including humans and objects, therefore hinders
-applications. In this work, we discard the single-entity assumption and
-introduce a novel framework that enforces strong, region-specific binding of
-conditions from modalities to each identity's spatiotemporal footprint. Given
-reference images of multiple concepts, our method could automatically infer
-layout information by leveraging a mask predictor to match appearance cues
-between the denoised video and each reference appearance. Furthermore, we
-inject local audio condition into its corresponding region to ensure
-layout-aligned modality matching in a iterative manner. This design enables the
-high-quality generation of controllable multi-concept human-centric videos.
-Empirical results and ablation studies validate the effectiveness of our
-explicit layout control for multi-modal conditions compared to implicit
-counterparts and other existing methods.
+    <id>http://arxiv.org/abs/2506.10914v1</id>
+    <updated>2025-06-12T17:29:29Z</updated>
+    <published>2025-06-12T17:29:29Z</published>
+    <title>Foundation Models for Causal Inference via Prior-Data Fitted Networks</title>
+    <summary>  Prior-data fitted networks (PFNs) have recently been proposed as a promising
+way to train tabular foundation models. PFNs are transformers that are
+pre-trained on synthetic data generated from a prespecified prior distribution
+and that enable Bayesian inference through in-context learning. In this paper,
+we introduce CausalFM, a comprehensive framework for training PFN-based
+foundation models in various causal inference settings. First, we formalize the
+construction of Bayesian priors for causal inference based on structural causal
+models (SCMs) in a principled way and derive necessary criteria for the
+validity of such priors. Building on this, we propose a novel family of prior
+distributions using causality-inspired Bayesian neural networks that enable
+CausalFM to perform Bayesian causal inference in various settings, including
+back-door, front-door, and instrumental variable adjustment. Finally, we
+instantiate CausalFM and explicitly train a foundation model for estimating
+conditional average treatment effects (CATEs) using back-door adjustment. We
+show that CausalFM performs competitively for CATE estimation using various
+synthetic and semi-synthetic benchmarks. In sum, our framework can be used as a
+general recipe to train foundation models for various causal inference
+settings. In contrast to the current state-of-the-art in causal inference,
+CausalFM offers a novel paradigm with the potential to fundamentally change how
+practitioners perform causal inference in medicine, economics, and other
+disciplines.
 </summary>
     <author>
-      <name>Zhenzhi Wang</name>
+      <name>Yuchen Ma</name>
     </author>
     <author>
-      <name>Jiaqi Yang</name>
+      <name>Dennis Frauen</name>
     </author>
     <author>
-      <name>Jianwen Jiang</name>
+      <name>Emil Javurek</name>
     </author>
     <author>
-      <name>Chao Liang</name>
+      <name>Stefan Feuerriegel</name>
     </author>
-    <author>
-      <name>Gaojie Lin</name>
-    </author>
-    <author>
-      <name>Zerong Zheng</name>
-    </author>
-    <author>
-      <name>Ceyuan Yang</name>
-    </author>
-    <author>
-      <name>Dahua Lin</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">TL;DR: The first multi-person dialogue video generation method from
-  pairs of reference image and audio via explicit layout-aligned condition
-  injection. See project page https://zhenzhiwang.github.io/interacthuman/ for
-  more details</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.09984v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09984v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09958v1</id>
-    <updated>2025-06-11T17:31:38Z</updated>
-    <published>2025-06-11T17:31:38Z</published>
-    <title>Kvasir-VQA-x1: A Multimodal Dataset for Medical Reasoning and Robust
-  MedVQA in Gastrointestinal Endoscopy</title>
-    <summary>  Medical Visual Question Answering (MedVQA) is a promising field for
-developing clinical decision support systems, yet progress is often limited by
-the available datasets, which can lack clinical complexity and visual
-diversity. To address these gaps, we introduce Kvasir-VQA-x1, a new,
-large-scale dataset for gastrointestinal (GI) endoscopy. Our work significantly
-expands upon the original Kvasir-VQA by incorporating 159,549 new
-question-answer pairs that are designed to test deeper clinical reasoning. We
-developed a systematic method using large language models to generate these
-questions, which are stratified by complexity to better assess a model's
-inference capabilities. To ensure our dataset prepares models for real-world
-clinical scenarios, we have also introduced a variety of visual augmentations
-that mimic common imaging artifacts. The dataset is structured to support two
-main evaluation tracks: one for standard VQA performance and another to test
-model robustness against these visual perturbations. By providing a more
-challenging and clinically relevant benchmark, Kvasir-VQA-x1 aims to accelerate
-the development of more reliable and effective multimodal AI systems for use in
-clinical settings. The dataset is fully accessible and adheres to FAIR data
-principles, making it a valuable resource for the wider research community.
-Code and data: https://github.com/Simula/Kvasir-VQA-x1 and
-https://huggingface.co/datasets/SimulaMet/Kvasir-VQA-x1
-</summary>
-    <author>
-      <name>Sushant Gautam</name>
-    </author>
-    <author>
-      <name>Michael A. Riegler</name>
-    </author>
-    <author>
-      <name>Pål Halvorsen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.09958v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09958v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="68T45 (Machine learning), 92C55 (Biomedical imaging and signal&#10;  processing) 68T45 (Machine learning), 92C55 (Biomedical imaging and signal&#10;  processing)" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.10; I.2.6; J.3" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09943v1</id>
-    <updated>2025-06-11T17:10:36Z</updated>
-    <published>2025-06-11T17:10:36Z</published>
-    <title>CausalVQA: A Physically Grounded Causal Reasoning Benchmark for Video
-  Models</title>
-    <summary>  We introduce CausalVQA, a benchmark dataset for video question answering
-(VQA) composed of question-answer pairs that probe models' understanding of
-causality in the physical world. Existing VQA benchmarks either tend to focus
-on surface perceptual understanding of real-world videos, or on narrow physical
-reasoning questions created using simulation environments. CausalVQA fills an
-important gap by presenting challenging questions that are grounded in
-real-world scenarios, while focusing on models' ability to predict the likely
-outcomes of different actions and events through five question types:
-counterfactual, hypothetical, anticipation, planning and descriptive. We
-designed quality control mechanisms that prevent models from exploiting trivial
-shortcuts, requiring models to base their answers on deep visual understanding
-instead of linguistic cues. We find that current frontier multimodal models
-fall substantially below human performance on the benchmark, especially on
-anticipation and hypothetical questions. This highlights a challenge for
-current systems to leverage spatial-temporal reasoning, understanding of
-physical principles, and comprehension of possible alternatives to make
-accurate predictions in real-world settings.
-</summary>
-    <author>
-      <name>Aaron Foss</name>
-    </author>
-    <author>
-      <name>Chloe Evans</name>
-    </author>
-    <author>
-      <name>Sasha Mitts</name>
-    </author>
-    <author>
-      <name>Koustuv Sinha</name>
-    </author>
-    <author>
-      <name>Ammar Rizvi</name>
-    </author>
-    <author>
-      <name>Justine T. Kao</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">35 pages, 3 figures, Submitted to NeurIPS2025 benchmark track</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.09943v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09943v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.10; I.4.8" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09928v1</id>
-    <updated>2025-06-11T16:51:07Z</updated>
-    <published>2025-06-11T16:51:07Z</published>
-    <title>Bayesian Probabilistic Matrix Factorization</title>
-    <summary>  Matrix factorization is a widely used technique in recommendation systems.
-Probabilistic Matrix Factorization (PMF) [1] extends traditional matrix
-factorization by incorporating probability distributions over latent factors,
-allowing for uncertainty quantification. However, computing the posterior
-distribution is intractable due to the high-dimensional integral. To address
-this, we employ two Bayesian inference methods: Markov Chain Monte Carlo (MCMC)
-[2] and Variational Inference (VI) [3] to approximate the posterior. We
-evaluate their performance on MovieLens dataset and compare their convergence
-speed, predictive accuracy, and computational efficiency. Experimental results
-demonstrate that VI offers faster convergence, while MCMC provides more
-accurate posterior estimates.
-</summary>
-    <author>
-      <name>Ruixuan Xu</name>
-    </author>
-    <author>
-      <name>Xiangxiang Weng</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 4 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.09928v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09928v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2506.10914v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.10914v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09925v1</id>
-    <updated>2025-06-11T16:49:15Z</updated>
-    <published>2025-06-11T16:49:15Z</published>
-    <title>Emergent anisotropic three-phase order in critically doped
-  superconducting diamond films</title>
-    <summary>  Two decades since its discovery, superconducting heavily boron-doped diamond
-(HBDD) still presents unresolved fundamental questions whose resolution is
-relevant to the development of this material for quantum technologies. We use
-electrical magnetotransport measurements of critically-doped homoepitaxial
-single crystal HBDD films to reveal signatures of intrinsic (electronic)
-granular superconductivity. By studying the dependence of electrical
-resistivity on temperature and magnetic field vector, we infer that this
-granularity arises from electron correlations. This is revealed by a striking
-three-phase anisotropy in the magnetoresistance, accompanied by a spontaneous
-transverse voltage (Hall anomaly). Our findings indicate an emergent
-magnetically tunable intrinsic order in an otherwise isotropic three
-dimensional single crystal HBDD film, offering new insights into the mechanism
-of superconductivity in this quantum material.
-</summary>
-    <author>
-      <name>Jyotirmay Dwivedi</name>
-    </author>
-    <author>
-      <name>Jake Morris</name>
-    </author>
-    <author>
-      <name>Saurav Islam</name>
-    </author>
-    <author>
-      <name>Kalana D. Halanayake</name>
-    </author>
-    <author>
-      <name>Gabriel A. Vazquez-Lizardi</name>
-    </author>
-    <author>
-      <name>David Snyder</name>
-    </author>
-    <author>
-      <name>Anthony Richardella</name>
-    </author>
-    <author>
-      <name>Luke Lyle</name>
-    </author>
-    <author>
-      <name>Danielle Reifsnyder Hickey</name>
-    </author>
-    <author>
-      <name>Nazar Delegan</name>
-    </author>
-    <author>
-      <name>F. Joseph Heremans</name>
-    </author>
-    <author>
-      <name>David D. Awschalom</name>
-    </author>
-    <author>
-      <name>Nitin Samarth</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.09925v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09925v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09923v1</id>
-    <updated>2025-06-11T16:43:36Z</updated>
-    <published>2025-06-11T16:43:36Z</published>
-    <title>Apollo: A Posteriori Label-Only Membership Inference Attack Towards
-  Machine Unlearning</title>
-    <summary>  Machine Unlearning (MU) aims to update Machine Learning (ML) models following
-requests to remove training samples and their influences on a trained model
-efficiently without retraining the original ML model from scratch. While MU
-itself has been employed to provide privacy protection and regulatory
-compliance, it can also increase the attack surface of the model. Existing
-privacy inference attacks towards MU that aim to infer properties of the
-unlearned set rely on the weaker threat model that assumes the attacker has
-access to both the unlearned model and the original model, limiting their
-feasibility toward real-life scenarios. We propose a novel privacy attack, A
-Posteriori Label-Only Membership Inference Attack towards MU, Apollo, that
-infers whether a data sample has been unlearned, following a strict threat
-model where an adversary has access to the label-output of the unlearned model
-only. We demonstrate that our proposed attack, while requiring less access to
-the target model compared to previous attacks, can achieve relatively high
-precision on the membership status of the unlearned samples.
-</summary>
-    <author>
-      <name>Liou Tang</name>
-    </author>
-    <author>
-      <name>James Joshi</name>
-    </author>
-    <author>
-      <name>Ashish Kundu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.09923v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09923v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09916v1</id>
-    <updated>2025-06-11T16:33:09Z</updated>
-    <published>2025-06-11T16:33:09Z</published>
-    <title>Only-Style: Stylistic Consistency in Image Generation without Content
-  Leakage</title>
-    <summary>  Generating images in a consistent reference visual style remains a
-challenging computer vision task. State-of-the-art methods aiming for
-style-consistent generation struggle to effectively separate semantic content
-from stylistic elements, leading to content leakage from the image provided as
-a reference to the targets. To address this challenge, we propose Only-Style: a
-method designed to mitigate content leakage in a semantically coherent manner
-while preserving stylistic consistency. Only-Style works by localizing content
-leakage during inference, allowing the adaptive tuning of a parameter that
-controls the style alignment process, specifically within the image patches
-containing the subject in the reference image. This adaptive process best
-balances stylistic consistency with leakage elimination. Moreover, the
-localization of content leakage can function as a standalone component, given a
-reference-target image pair, allowing the adaptive tuning of any
-method-specific parameter that provides control over the impact of the
-stylistic reference. In addition, we propose a novel evaluation framework to
-quantify the success of style-consistent generations in avoiding undesired
-content leakage. Our approach demonstrates a significant improvement over
-state-of-the-art methods through extensive evaluation across diverse instances,
-consistently achieving robust stylistic consistency without undesired content
-leakage.
-</summary>
-    <author>
-      <name>Tilemachos Aravanis</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">School of Electrical &amp; Computer Engineering, National Technical University of Athens, Greece</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Panagiotis Filntisis</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Robotics Institute, Athena Research Center, Maroussi, Greece</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">HERON - Center of Excellence in Robotics, Athens, Greece</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Petros Maragos</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">School of Electrical &amp; Computer Engineering, National Technical University of Athens, Greece</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Robotics Institute, Athena Research Center, Maroussi, Greece</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">HERON - Center of Excellence in Robotics, Athens, Greece</arxiv:affiliation>
-    </author>
-    <author>
-      <name>George Retsinas</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Robotics Institute, Athena Research Center, Maroussi, Greece</arxiv:affiliation>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">HERON - Center of Excellence in Robotics, Athens, Greece</arxiv:affiliation>
-    </author>
-    <link href="http://arxiv.org/abs/2506.09916v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09916v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.09891v1</id>
-    <updated>2025-06-11T16:00:55Z</updated>
-    <published>2025-06-11T16:00:55Z</published>
-    <title>Causal Climate Emulation with Bayesian Filtering</title>
-    <summary>  Traditional models of climate change use complex systems of coupled equations
-to simulate physical processes across the Earth system. These simulations are
-highly computationally expensive, limiting our predictions of climate change
-and analyses of its causes and effects. Machine learning has the potential to
-quickly emulate data from climate models, but current approaches are not able
-to incorporate physics-informed causal relationships. Here, we develop an
-interpretable climate model emulator based on causal representation learning.
-We derive a physics-informed approach including a Bayesian filter for stable
-long-term autoregressive emulation. We demonstrate that our emulator learns
-accurate climate dynamics, and we show the importance of each one of its
-components on a realistic synthetic dataset and data from two widely deployed
-climate models.
-</summary>
-    <author>
-      <name>Sebastian Hickman</name>
-    </author>
-    <author>
-      <name>Ilija Trajkovic</name>
-    </author>
-    <author>
-      <name>Julia Kaltenborn</name>
-    </author>
-    <author>
-      <name>Francis Pelletier</name>
-    </author>
-    <author>
-      <name>Alex Archibald</name>
-    </author>
-    <author>
-      <name>Yaniv Gurwicz</name>
-    </author>
-    <author>
-      <name>Peer Nowack</name>
-    </author>
-    <author>
-      <name>David Rolnick</name>
-    </author>
-    <author>
-      <name>Julien Boussard</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">32 pages, 21 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.09891v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.09891v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
