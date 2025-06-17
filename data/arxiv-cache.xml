@@ -1,498 +1,502 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-16T01:00:04Z -->
+<!-- Last updated: 2025-06-17T00:58:02Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-15T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">114917</opensearch:totalResults>
+  <updated>2025-06-16T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115012</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.10981v1</id>
-    <updated>2025-06-12T17:59:56Z</updated>
-    <published>2025-06-12T17:59:56Z</published>
-    <title>SceneCompleter: Dense 3D Scene Completion for Generative Novel View
-  Synthesis</title>
-    <summary>  Generative models have gained significant attention in novel view synthesis
-(NVS) by alleviating the reliance on dense multi-view captures. However,
-existing methods typically fall into a conventional paradigm, where generative
-models first complete missing areas in 2D, followed by 3D recovery techniques
-to reconstruct the scene, which often results in overly smooth surfaces and
-distorted geometry, as generative models struggle to infer 3D structure solely
-from RGB data. In this paper, we propose SceneCompleter, a novel framework that
-achieves 3D-consistent generative novel view synthesis through dense 3D scene
-completion. SceneCompleter achieves both visual coherence and 3D-consistent
-generative scene completion through two key components: (1) a
-geometry-appearance dual-stream diffusion model that jointly synthesizes novel
-views in RGBD space; (2) a scene embedder that encodes a more holistic scene
-understanding from the reference image. By effectively fusing structural and
-textural information, our method demonstrates superior coherence and
-plausibility in generative novel view synthesis across diverse datasets.
-Project Page: https://chen-wl20.github.io/SceneCompleter
+    <id>http://arxiv.org/abs/2506.12015v1</id>
+    <updated>2025-06-13T17:59:58Z</updated>
+    <published>2025-06-13T17:59:58Z</published>
+    <title>EMLoC: Emulator-based Memory-efficient Fine-tuning with LoRA Correction</title>
+    <summary>  Open-source foundation models have seen rapid adoption and development,
+enabling powerful general-purpose capabilities across diverse domains. However,
+fine-tuning large foundation models for domain-specific or personalized tasks
+remains prohibitively expensive for most users due to the significant memory
+overhead beyond that of inference. We introduce EMLoC, an Emulator-based
+Memory-efficient fine-tuning framework with LoRA Correction, which enables
+model fine-tuning within the same memory budget required for inference. EMLoC
+constructs a task-specific light-weight emulator using activation-aware
+singular value decomposition (SVD) on a small downstream calibration set.
+Fine-tuning then is performed on this lightweight emulator via LoRA. To tackle
+the misalignment between the original model and the compressed emulator, we
+propose a novel compensation algorithm to correct the fine-tuned LoRA module,
+which thus can be merged into the original model for inference. EMLoC supports
+flexible compression ratios and standard training pipelines, making it
+adaptable to a wide range of applications. Extensive experiments demonstrate
+that EMLoC outperforms other baselines across multiple datasets and modalities.
+Moreover, without quantization, EMLoC enables fine-tuning of a 38B model on a
+single 24GB consumer GPU-bringing efficient and practical model adaptation to
+individual users.
 </summary>
     <author>
-      <name>Weiliang Chen</name>
+      <name>Hsi-Che Lin</name>
     </author>
     <author>
-      <name>Jiayi Bi</name>
+      <name>Yu-Chu Yu</name>
     </author>
     <author>
-      <name>Yuanhui Huang</name>
+      <name>Kai-Po Chang</name>
     </author>
     <author>
-      <name>Wenzhao Zheng</name>
+      <name>Yu-Chiang Frank Wang</name>
     </author>
-    <author>
-      <name>Yueqi Duan</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.10981v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10981v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.10967v1</id>
-    <updated>2025-06-12T17:59:09Z</updated>
-    <published>2025-06-12T17:59:09Z</published>
-    <title>Beyond Attention or Similarity: Maximizing Conditional Diversity for
-  Token Pruning in MLLMs</title>
-    <summary>  In multimodal large language models (MLLMs), the length of input visual
-tokens is often significantly greater than that of their textual counterparts,
-leading to a high inference cost. Many works aim to address this issue by
-removing redundant visual tokens. However, current approaches either rely on
-attention-based pruning, which retains numerous duplicate tokens, or use
-similarity-based pruning, overlooking the instruction relevance, consequently
-causing suboptimal performance. In this paper, we go beyond attention or
-similarity by proposing a novel visual token pruning method named CDPruner,
-which maximizes the conditional diversity of retained tokens. We first define
-the conditional similarity between visual tokens conditioned on the
-instruction, and then reformulate the token pruning problem with determinantal
-point process (DPP) to maximize the conditional diversity of the selected
-subset. The proposed CDPruner is training-free and model-agnostic, allowing
-easy application to various MLLMs. Extensive experiments across diverse MLLMs
-show that CDPruner establishes new state-of-the-art on various vision-language
-benchmarks. By maximizing conditional diversity through DPP, the selected
-subset better represents the input images while closely adhering to user
-instructions, thereby preserving strong performance even with high reduction
-ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\% and CUDA latency
-by 78\%, while maintaining 94\% of the original accuracy. Our code is available
-at https://github.com/Theia-4869/CDPruner.
-</summary>
-    <author>
-      <name>Qizhe Zhang</name>
-    </author>
-    <author>
-      <name>Mengzhen Liu</name>
-    </author>
-    <author>
-      <name>Lichen Li</name>
-    </author>
-    <author>
-      <name>Ming Lu</name>
-    </author>
-    <author>
-      <name>Yuan Zhang</name>
-    </author>
-    <author>
-      <name>Junwen Pan</name>
-    </author>
-    <author>
-      <name>Qi She</name>
-    </author>
-    <author>
-      <name>Shanghang Zhang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 5 figures, code: https://github.com/Theia-4869/CDPruner,
-  project page: https://theia-4869.github.io/CDPruner</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.10967v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10967v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.10965v1</id>
-    <updated>2025-06-12T17:59:02Z</updated>
-    <published>2025-06-12T17:59:02Z</published>
-    <title>Apparent inconsistency between Streda formula and Hall conductivity in
-  reentrant integer quantum anomalous Hall effect in twisted MoTe$_2$</title>
-    <summary>  Recent experiments in twisted bilayer MoTe$_2$ (tMoTe$_2$) have uncovered a
-rich landscape of correlated phases. In this work, we investigate the reentrant
-integer quantum anomalous Hall (RIQAH) states reported in F. Xu, et. al.,
-arXiv:2504.06972 which displays a notable mismatch between the Hall
-conductivity measured via transport and that inferred from the Streda formula.
-We argue that this discrepancy can be explained if the RIQAH state is a quantum
-Hall bubble phase, analogous to similar well-established phenomena in 2D GaAs
-quantum wells. While this explains the RIQAH state at a filling $\nu = -0.63$,
-the other RIQAH state at $\nu = -0.7$ has a smaller slope necessitating a
-different interpretation. We propose that this discrepancy arises due to a
-nearby resistive peak masking the true slope. Furthermore, we identify this
-resistive peak as a signature of a magnetic phase transition near $\nu =
--0.75$, possibly driven by a Van Hove singularity. The anomalous Hall response
-and Landau fan evolution across this transition suggest a change in Fermi
-surface topology and a phase with zero Chern number, potentially corresponding
-to an inter-valley coherent state. These observations offer new insights into
-the nature of the RIQAH states and raise the possibility that the nearby
-superconducting phase may have an inter-valley coherent normal state.
-</summary>
-    <author>
-      <name>Yi Huang</name>
-    </author>
-    <author>
-      <name>Seth Musser</name>
-    </author>
-    <author>
-      <name>Jihang Zhu</name>
-    </author>
-    <author>
-      <name>Yang-Zhi Chou</name>
-    </author>
-    <author>
-      <name>Sankar Das Sarma</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 3 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.10965v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10965v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.10962v1</id>
-    <updated>2025-06-12T17:57:44Z</updated>
-    <published>2025-06-12T17:57:44Z</published>
-    <title>SpectralAR: Spectral Autoregressive Visual Generation</title>
-    <summary>  Autoregressive visual generation has garnered increasing attention due to its
-scalability and compatibility with other modalities compared with diffusion
-models. Most existing methods construct visual sequences as spatial patches for
-autoregressive generation. However, image patches are inherently parallel,
-contradicting the causal nature of autoregressive modeling. To address this, we
-propose a Spectral AutoRegressive (SpectralAR) visual generation framework,
-which realizes causality for visual sequences from the spectral perspective.
-Specifically, we first transform an image into ordered spectral tokens with
-Nested Spectral Tokenization, representing lower to higher frequency
-components. We then perform autoregressive generation in a coarse-to-fine
-manner with the sequences of spectral tokens. By considering different levels
-of detail in images, our SpectralAR achieves both sequence causality and token
-efficiency without bells and whistles. We conduct extensive experiments on
-ImageNet-1K for image reconstruction and autoregressive generation, and
-SpectralAR achieves 3.02 gFID with only 64 tokens and 310M parameters. Project
-page: https://huang-yh.github.io/spectralar/.
-</summary>
-    <author>
-      <name>Yuanhui Huang</name>
-    </author>
-    <author>
-      <name>Weiliang Chen</name>
-    </author>
-    <author>
-      <name>Wenzhao Zheng</name>
-    </author>
-    <author>
-      <name>Yueqi Duan</name>
-    </author>
-    <author>
-      <name>Jie Zhou</name>
-    </author>
-    <author>
-      <name>Jiwen Lu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://huang-yh.github.io/spectralar/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.10962v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10962v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.10948v1</id>
-    <updated>2025-06-12T17:50:05Z</updated>
-    <published>2025-06-12T17:50:05Z</published>
-    <title>Execution Guided Line-by-Line Code Generation</title>
-    <summary>  We present a novel approach to neural code generation that incorporates
-real-time execution signals into the language model generation process. While
-large language models (LLMs) have demonstrated impressive code generation
-capabilities, they typically do not utilize execution feedback during
-inference, a critical signal that human programmers regularly leverage. Our
-method, Execution-Guided Classifier-Free Guidance (EG-CFG), dynamically
-incorporates execution signals as the model generates code, providing
-line-by-line feedback that guides the generation process toward executable
-solutions. EG-CFG employs a multi-stage process: first, we conduct beam search
-to sample candidate program completions for each line; second, we extract
-execution signals by executing these candidates against test cases; and
-finally, we incorporate these signals into the prompt during generation. By
-maintaining consistent signals across tokens within the same line and
-refreshing signals at line boundaries, our approach provides coherent guidance
-while preserving syntactic structure. Moreover, the method naturally supports
-native parallelism at the task level in which multiple agents operate in
-parallel, exploring diverse reasoning paths and collectively generating a broad
-set of candidate solutions. Our experiments across diverse coding tasks
-demonstrate that EG-CFG significantly improves code generation performance
-compared to standard approaches, achieving state-of-the-art results across
-various levels of complexity, from foundational problems to challenging
-competitive programming tasks. Our code is available at:
-https://github.com/boazlavon/eg_cfg
-</summary>
-    <author>
-      <name>Boaz Lavon</name>
-    </author>
-    <author>
-      <name>Shahar Katz</name>
-    </author>
-    <author>
-      <name>Lior Wolf</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.10948v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10948v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Under review. Project page: https://hsi-che-lin.github.io/EMLoC/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.12015v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.12015v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.10941v1</id>
-    <updated>2025-06-12T17:46:54Z</updated>
-    <published>2025-06-12T17:46:54Z</published>
-    <title>VINCIE: Unlocking In-context Image Editing from Video</title>
-    <summary>  In-context image editing aims to modify images based on a contextual sequence
-comprising text and previously generated images. Existing methods typically
-depend on task-specific pipelines and expert models (e.g., segmentation and
-inpainting) to curate training data. In this work, we explore whether an
-in-context image editing model can be learned directly from videos. We
-introduce a scalable approach to annotate videos as interleaved multimodal
-sequences. To effectively learn from this data, we design a block-causal
-diffusion transformer trained on three proxy tasks: next-image prediction,
-current segmentation prediction, and next-segmentation prediction.
-Additionally, we propose a novel multi-turn image editing benchmark to advance
-research in this area. Extensive experiments demonstrate that our model
-exhibits strong in-context image editing capabilities and achieves
-state-of-the-art results on two multi-turn image editing benchmarks. Despite
-being trained exclusively on videos, our model also shows promising abilities
-in multi-concept composition, story generation, and chain-of-editing
-applications.
+    <id>http://arxiv.org/abs/2506.12004v1</id>
+    <updated>2025-06-13T17:56:04Z</updated>
+    <published>2025-06-13T17:56:04Z</published>
+    <title>Bayesian and frequentist perspectives agree on dynamical dark energy</title>
+    <summary>  Baryon acoustic oscillation data from the Dark Energy Spectroscopic
+Instrument (DESI) show evidence of a deviation from a cosmological constant
+$\Lambda$ within a Bayesian analysis. In this work, we validate that
+frequentist constraints from profile likelihoods on the
+Chevallier-Polarski-Linder parameters $w_0$, $w_a$ are in excellent agreement
+with the Bayesian constraints when combining with Planck cosmic microwave
+background, Planck and Atacama Cosmology Telescope lensing, and either
+Pantheon+ or Dark Energy Survey Y5 supernova data. Further, we assess which
+datasets drive these constraints by considering the contributions to the
+$\chi^2$ from the individual datasets. For profile likelihoods of the matter
+fraction $\Omega_\mathrm{m}$, such an investigation shows internal
+inconsistencies when assuming $\Lambda$, which are resolved when assuming a
+$w_0w_a$ dark-energy model. We infer the equations of state $w(z)$ at the pivot
+redshifts, supporting previous interpretations that current data appears to be
+more sensitive to the derivative of $w(z)$ rather than a mean offset from
+$\Lambda$. Thus our frequentist analysis corroborates previous findings on
+dynamical DE.
 </summary>
     <author>
-      <name>Leigang Qu</name>
+      <name>Laura Herold</name>
     </author>
     <author>
-      <name>Feng Cheng</name>
+      <name>Tanvi Karwal</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 8 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.12004v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.12004v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11994v1</id>
+    <updated>2025-06-13T17:49:25Z</updated>
+    <published>2025-06-13T17:49:25Z</published>
+    <title>Spectral Estimation with Free Decompression</title>
+    <summary>  Computing eigenvalues of very large matrices is a critical task in many
+machine learning applications, including the evaluation of log-determinants,
+the trace of matrix functions, and other important metrics. As datasets
+continue to grow in scale, the corresponding covariance and kernel matrices
+become increasingly large, often reaching magnitudes that make their direct
+formation impractical or impossible. Existing techniques typically rely on
+matrix-vector products, which can provide efficient approximations, if the
+matrix spectrum behaves well. However, in settings like distributed learning,
+or when the matrix is defined only indirectly, access to the full data set can
+be restricted to only very small sub-matrices of the original matrix. In these
+cases, the matrix of nominal interest is not even available as an implicit
+operator, meaning that even matrix-vector products may not be available. In
+such settings, the matrix is "impalpable," in the sense that we have access to
+only masked snapshots of it. We draw on principles from free probability theory
+to introduce a novel method of "free decompression" to estimate the spectrum of
+such matrices. Our method can be used to extrapolate from the empirical
+spectral densities of small submatrices to infer the eigenspectrum of extremely
+large (impalpable) matrices (that we cannot form or even evaluate with full
+matrix-vector products). We demonstrate the effectiveness of this approach
+through a series of examples, comparing its performance against known limiting
+distributions from random matrix theory in synthetic settings, as well as
+applying it to submatrices of real-world datasets, matching them with their
+full empirical eigenspectra.
+</summary>
+    <author>
+      <name>Siavash Ameli</name>
     </author>
     <author>
-      <name>Ziyan Yang</name>
+      <name>Chris van der Heide</name>
     </author>
     <author>
-      <name>Qi Zhao</name>
+      <name>Liam Hodgkinson</name>
     </author>
     <author>
-      <name>Shanchuan Lin</name>
+      <name>Michael W. Mahoney</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.11994v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11994v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11991v1</id>
+    <updated>2025-06-13T17:47:43Z</updated>
+    <published>2025-06-13T17:47:43Z</published>
+    <title>VGR: Visual Grounded Reasoning</title>
+    <summary>  In the field of multimodal chain-of-thought (CoT) reasoning, existing
+approaches predominantly rely on reasoning on pure language space, which
+inherently suffers from language bias and is largely confined to math or
+science domains. This narrow focus limits their ability to handle complex
+visual reasoning tasks that demand comprehensive understanding of image
+details. To address these limitations, this paper introduces VGR, a novel
+reasoning multimodal large language model (MLLM) with enhanced fine-grained
+visual perception capabilities. Unlike traditional MLLMs that answer the
+question or reasoning solely on the language space, our VGR first detects
+relevant regions that may help to solve problems, and then provides precise
+answers based on replayed image regions. To achieve this, we conduct a
+large-scale SFT dataset called VGR -SFT that contains reasoning data with mixed
+vision grounding and language deduction. The inference pipeline of VGR allows
+the model to choose bounding boxes for visual reference and a replay stage is
+introduced to integrates the corresponding regions into the reasoning process,
+enhancing multimodel comprehension. Experiments on the LLaVA-NeXT-7B baseline
+show that VGR achieves superior performance on multi-modal benchmarks requiring
+comprehensive image detail understanding. Compared to the baseline, VGR uses
+only 30\% of the image token count while delivering scores of +4.1 on MMStar,
++7.1 on AI2D, and a +12.9 improvement on ChartQA.
+</summary>
+    <author>
+      <name>Jiacong Wang</name>
     </author>
     <author>
-      <name>Yichun Shi</name>
+      <name>Zijiang Kang</name>
     </author>
     <author>
-      <name>Yicong Li</name>
+      <name>Haochen Wang</name>
     </author>
     <author>
-      <name>Wenjie Wang</name>
+      <name>Haiyong Jiang</name>
     </author>
     <author>
-      <name>Tat-Seng Chua</name>
+      <name>Jiawen Li</name>
     </author>
     <author>
-      <name>Lu Jiang</name>
+      <name>Bohong Wu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://vincie2025.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.10941v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10941v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Ya Wang</name>
+    </author>
+    <author>
+      <name>Jiao Ran</name>
+    </author>
+    <author>
+      <name>Xiao Liang</name>
+    </author>
+    <author>
+      <name>Chao Feng</name>
+    </author>
+    <author>
+      <name>Jun Xiao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.11991v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11991v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.10922v1</id>
-    <updated>2025-06-12T17:34:38Z</updated>
-    <published>2025-06-12T17:34:38Z</published>
-    <title>Robustly Improving LLM Fairness in Realistic Settings via
-  Interpretability</title>
-    <summary>  Large language models (LLMs) are increasingly deployed in high-stakes hiring
-applications, making decisions that directly impact people's careers and
-livelihoods. While prior studies suggest simple anti-bias prompts can eliminate
-demographic biases in controlled evaluations, we find these mitigations fail
-when realistic contextual details are introduced. We address these failures
-through internal bias mitigation: by identifying and neutralizing sensitive
-attribute directions within model activations, we achieve robust bias reduction
-across all tested scenarios. Across leading commercial (GPT-4o, Claude 4
-Sonnet, Gemini 2.5 Flash) and open-source models (Gemma-2 27B, Gemma-3,
-Mistral-24B), we find that adding realistic context such as company names,
-culture descriptions from public careers pages, and selective hiring
-constraints (e.g.,``only accept candidates in the top 10\%") induces
-significant racial and gender biases (up to 12\% differences in interview
-rates). When these biases emerge, they consistently favor Black over White
-candidates and female over male candidates across all tested models and
-scenarios. Moreover, models can infer demographics and become biased from
-subtle cues like college affiliations, with these biases remaining invisible
-even when inspecting the model's chain-of-thought reasoning. To address these
-limitations, our internal bias mitigation identifies race and gender-correlated
-directions and applies affine concept editing at inference time. Despite using
-directions from a simple synthetic dataset, the intervention generalizes
-robustly, consistently reducing bias to very low levels (typically under 1\%,
-always below 2.5\%) while largely maintaining model performance. Our findings
-suggest that practitioners deploying LLMs for hiring should adopt more
-realistic evaluation methodologies and consider internal mitigation strategies
-for equitable outcomes.
+    <id>http://arxiv.org/abs/2506.11989v1</id>
+    <updated>2025-06-13T17:46:14Z</updated>
+    <published>2025-06-13T17:46:14Z</published>
+    <title>Simple Radiology VLLM Test-time Scaling with Thought Graph Traversal</title>
+    <summary>  Test-time scaling offers a promising way to improve the reasoning performance
+of vision-language large models (VLLMs) without additional training. In this
+paper, we explore a simple but effective approach for applying test-time
+scaling to radiology report generation. Specifically, we introduce a
+lightweight Thought Graph Traversal (TGT) framework that guides the model to
+reason through organ-specific findings in a medically coherent order. This
+framework integrates structured medical priors into the prompt, enabling deeper
+and more logical analysis with no changes to the underlying model. To further
+enhance reasoning depth, we apply a reasoning budget forcing strategy that
+adjusts the model's inference depth at test time by dynamically extending its
+generation process. This simple yet powerful combination allows a frozen
+radiology VLLM to self-correct and generate more accurate, consistent chest
+X-ray reports. Our method outperforms baseline prompting approaches on standard
+benchmarks, and also reveals dataset biases through traceable reasoning paths.
+Code and prompts are open-sourced for reproducibility at
+https://github.com/glerium/Thought-Graph-Traversal.
 </summary>
     <author>
-      <name>Adam Karvonen</name>
+      <name>Yue Yao</name>
     </author>
     <author>
-      <name>Samuel Marks</name>
+      <name>Zelin Wen</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.10922v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10922v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Yan Tong</name>
+    </author>
+    <author>
+      <name>Xinyu Tian</name>
+    </author>
+    <author>
+      <name>Xuqing Li</name>
+    </author>
+    <author>
+      <name>Xiao Ma</name>
+    </author>
+    <author>
+      <name>Dongliang Xu</name>
+    </author>
+    <author>
+      <name>Tom Gedeon</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">arXiv admin note: text overlap with arXiv:2404.11209 by other authors</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.11989v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11989v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11949v1</id>
+    <updated>2025-06-13T16:58:31Z</updated>
+    <published>2025-06-13T16:58:31Z</published>
+    <title>Modeling Complex Life Systems: Bayesian Inference for Weibull Failure
+  Times Using Adaptive MCMC</title>
+    <summary>  This research develops a Bayesian framework for analyzing failure times using
+the Weibull distribution, addressing challenges in prior selection due to the
+lack of conjugate priors and multi-dimensional sufficient statistics. We
+propose an adaptive semi-parametric MCMC algorithm for lifetime data analysis,
+employing a hierarchical Bayesian model and the No-U-Turn Sampler (NUTS) in
+STAN. Twenty-four combinations of prior distributions are evaluated, with a
+noninformative LogNormal hyper-prior ensuring flexibility. A simulation study
+of seventy-two datasets with varying structures compares MCMC and classical
+methods, identifying optimal priors for Bayesian regularization. The approach
+effectively handles the Increasing Hazard Rate (IHR) and Decreasing Hazard Rate
+(DHR) scenarios. Finally, we demonstrate the algorithm's utility by predicting
+the remaining lifetime of prostate cancer patients, showcasing its practical
+application. This work advances Bayesian methodologies for modeling complex
+life systems and testing processes.
+</summary>
+    <author>
+      <name>Tobias Oketch</name>
+    </author>
+    <author>
+      <name>Mohammad Sepehrifar</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.11949v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11949v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="62C10" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11948v1</id>
+    <updated>2025-06-13T16:58:20Z</updated>
+    <published>2025-06-13T16:58:20Z</published>
+    <title>SAIL: Faster-than-Demonstration Execution of Imitation Learning Policies</title>
+    <summary>  Offline Imitation Learning (IL) methods such as Behavior Cloning are
+effective at acquiring complex robotic manipulation skills. However, existing
+IL-trained policies are confined to executing the task at the same speed as
+shown in demonstration data. This limits the task throughput of a robotic
+system, a critical requirement for applications such as industrial automation.
+In this paper, we introduce and formalize the novel problem of enabling
+faster-than-demonstration execution of visuomotor policies and identify
+fundamental challenges in robot dynamics and state-action distribution shifts.
+We instantiate the key insights as SAIL (Speed Adaptation for Imitation
+Learning), a full-stack system integrating four tightly-connected components:
+(1) a consistency-preserving action inference algorithm for smooth motion at
+high speed, (2) high-fidelity tracking of controller-invariant motion targets,
+(3) adaptive speed modulation that dynamically adjusts execution speed based on
+motion complexity, and (4) action scheduling to handle real-world system
+latencies. Experiments on 12 tasks across simulation and two real, distinct
+robot platforms show that SAIL achieves up to a 4x speedup over demonstration
+speed in simulation and up to 3.2x speedup in the real world. Additional detail
+is available at https://nadunranawaka1.github.io/sail-policy
+</summary>
+    <author>
+      <name>Nadun Ranawaka Arachchige</name>
+    </author>
+    <author>
+      <name>Zhenyang Chen</name>
+    </author>
+    <author>
+      <name>Wonsuhk Jung</name>
+    </author>
+    <author>
+      <name>Woo Chul Shin</name>
+    </author>
+    <author>
+      <name>Rohan Bansal</name>
+    </author>
+    <author>
+      <name>Pierre Barroso</name>
+    </author>
+    <author>
+      <name>Yu Hang He</name>
+    </author>
+    <author>
+      <name>Yingyang Celine Lin</name>
+    </author>
+    <author>
+      <name>Benjamin Joffe</name>
+    </author>
+    <author>
+      <name>Shreyas Kousik</name>
+    </author>
+    <author>
+      <name>Danfei Xu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The first two authors contributed equally</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.11948v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11948v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.10920v1</id>
-    <updated>2025-06-12T17:33:29Z</updated>
-    <published>2025-06-12T17:33:29Z</published>
-    <title>Decomposing MLP Activations into Interpretable Features via
-  Semi-Nonnegative Matrix Factorization</title>
-    <summary>  A central goal for mechanistic interpretability has been to identify the
-right units of analysis in large language models (LLMs) that causally explain
-their outputs. While early work focused on individual neurons, evidence that
-neurons often encode multiple concepts has motivated a shift toward analyzing
-directions in activation space. A key question is how to find directions that
-capture interpretable features in an unsupervised manner. Current methods rely
-on dictionary learning with sparse autoencoders (SAEs), commonly trained over
-residual stream activations to learn directions from scratch. However, SAEs
-often struggle in causal evaluations and lack intrinsic interpretability, as
-their learning is not explicitly tied to the computations of the model. Here,
-we tackle these limitations by directly decomposing MLP activations with
-semi-nonnegative matrix factorization (SNMF), such that the learned features
-are (a) sparse linear combinations of co-activated neurons, and (b) mapped to
-their activating inputs, making them directly interpretable. Experiments on
-Llama 3.1, Gemma 2 and GPT-2 show that SNMF derived features outperform SAEs
-and a strong supervised baseline (difference-in-means) on causal steering,
-while aligning with human-interpretable concepts. Further analysis reveals that
-specific neuron combinations are reused across semantically-related features,
-exposing a hierarchical structure in the MLP's activation space. Together,
-these results position SNMF as a simple and effective tool for identifying
-interpretable features and dissecting concept representations in LLMs.
+    <id>http://arxiv.org/abs/2506.11936v1</id>
+    <updated>2025-06-13T16:38:51Z</updated>
+    <published>2025-06-13T16:38:51Z</published>
+    <title>Bubble Dynamics Transformer: Microrheology at Ultra-High Strain Rates</title>
+    <summary>  Laser-induced inertial cavitation (LIC)-where microscale vapor bubbles
+nucleate due to a focused high-energy pulsed laser and then violently collapse
+under surrounding high local pressures-offers a unique opportunity to
+investigate soft biological material mechanics at extremely high strain rates
+(&gt;1000 1/s). Traditional rheological tools are often limited in these regimes
+by loading speed, resolution, or invasiveness. Here we introduce novel machine
+learning (ML) based microrheological frameworks that leverage LIC to
+characterize the viscoelastic properties of biological materials at ultra-high
+strain rates. We utilize ultra-high-speed imaging to capture time-resolved
+bubble radius dynamics during LIC events in various soft viscoelastic
+materials. These bubble radius versus time measurements are then analyzed using
+a newly developed Bubble Dynamics Transformer (BDT), a neural network trained
+on physics-based simulation data. The BDT accurately infers material
+viscoelastic parameters, eliminating the need for iterative fitting or complex
+inversion processes. This enables fast, accurate, and non-contact
+characterization of soft materials under extreme loading conditions, with
+significant implications for biomedical applications and materials science.
 </summary>
     <author>
-      <name>Or Shafran</name>
+      <name>Lehu Bu</name>
     </author>
     <author>
-      <name>Atticus Geiger</name>
+      <name>Zhaohan Yu</name>
     </author>
     <author>
-      <name>Mor Geva</name>
+      <name>Shaoting Lin</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.10920v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10920v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Jan N. Fuhg</name>
+    </author>
+    <author>
+      <name>Jin Yang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.11936v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11936v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.10918v1</id>
-    <updated>2025-06-12T17:32:02Z</updated>
-    <published>2025-06-12T17:32:02Z</published>
-    <title>Sequential-Parallel Duality in Prefix Scannable Models</title>
-    <summary>  Modern neural sequence models are designed to meet the dual mandate of
-parallelizable training and fast sequential inference. Recent developments have
-given rise to various models, such as Gated Linear Attention (GLA) and Mamba,
-that achieve such ``sequential-parallel duality.'' This raises a natural
-question: can we characterize the full class of neural sequence models that
-support near-constant-time parallel evaluation and linear-time, constant-space
-sequential inference? We begin by describing a broad class of such models --
-state space models -- as those whose state updates can be computed using the
-classic parallel prefix scan algorithm with a custom associative aggregation
-operator. We then define a more general class, Prefix-Scannable Models (PSMs),
-by relaxing the state aggregation operator to allow arbitrary (potentially
-non-associative) functions such as softmax attention. This generalization
-unifies many existing architectures, including element-wise RNNs (e.g., Mamba)
-and linear transformers (e.g., GLA, Mamba2, mLSTM), while also introducing new
-models with softmax-like operators that achieve O(1) amortized compute per
-token and log(N) memory for sequence length N. We empirically evaluate such
-models on illustrative small-scale language modeling and canonical synthetic
-tasks, including state tracking and associative recall. Empirically, we find
-that PSMs retain the expressivity of transformer-based architectures while
-matching the inference efficiency of state space models -- in some cases
-exhibiting better length generalization than either.
+    <id>http://arxiv.org/abs/2506.11925v1</id>
+    <updated>2025-06-13T16:24:28Z</updated>
+    <published>2025-06-13T16:24:28Z</published>
+    <title>Real-World Deployment of a Lane Change Prediction Architecture Based on
+  Knowledge Graph Embeddings and Bayesian Inference</title>
+    <summary>  Research on lane change prediction has gained a lot of momentum in the last
+couple of years. However, most research is confined to simulation or results
+obtained from datasets, leaving a gap between algorithmic advances and on-road
+deployment. This work closes that gap by demonstrating, on real hardware, a
+lane-change prediction system based on Knowledge Graph Embeddings (KGEs) and
+Bayesian inference. Moreover, the ego-vehicle employs a longitudinal braking
+action to ensure the safety of both itself and the surrounding vehicles. Our
+architecture consists of two modules: (i) a perception module that senses the
+environment, derives input numerical features, and converts them into
+linguistic categories; and communicates them to the prediction module; (ii) a
+pretrained prediction module that executes a KGE and Bayesian inference model
+to anticipate the target vehicle's maneuver and transforms the prediction into
+longitudinal braking action. Real-world hardware experimental validation
+demonstrates that our prediction system anticipates the target vehicle's lane
+change three to four seconds in advance, providing the ego vehicle sufficient
+time to react and allowing the target vehicle to make the lane change safely.
 </summary>
     <author>
-      <name>Morris Yau</name>
+      <name>M. Manzour</name>
     </author>
     <author>
-      <name>Sharut Gupta</name>
+      <name>Catherine M. Elias</name>
     </author>
     <author>
-      <name>Valerie Engelmayer</name>
+      <name>Omar M. Shehata</name>
     </author>
     <author>
-      <name>Kazuki Irie</name>
+      <name>R. Izquierdo</name>
     </author>
     <author>
-      <name>Stefanie Jegelka</name>
+      <name>M. A. Sotelo</name>
     </author>
-    <author>
-      <name>Jacob Andreas</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.10918v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10918v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.11925v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11925v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.10914v1</id>
-    <updated>2025-06-12T17:29:29Z</updated>
-    <published>2025-06-12T17:29:29Z</published>
-    <title>Foundation Models for Causal Inference via Prior-Data Fitted Networks</title>
-    <summary>  Prior-data fitted networks (PFNs) have recently been proposed as a promising
-way to train tabular foundation models. PFNs are transformers that are
-pre-trained on synthetic data generated from a prespecified prior distribution
-and that enable Bayesian inference through in-context learning. In this paper,
-we introduce CausalFM, a comprehensive framework for training PFN-based
-foundation models in various causal inference settings. First, we formalize the
-construction of Bayesian priors for causal inference based on structural causal
-models (SCMs) in a principled way and derive necessary criteria for the
-validity of such priors. Building on this, we propose a novel family of prior
-distributions using causality-inspired Bayesian neural networks that enable
-CausalFM to perform Bayesian causal inference in various settings, including
-back-door, front-door, and instrumental variable adjustment. Finally, we
-instantiate CausalFM and explicitly train a foundation model for estimating
-conditional average treatment effects (CATEs) using back-door adjustment. We
-show that CausalFM performs competitively for CATE estimation using various
-synthetic and semi-synthetic benchmarks. In sum, our framework can be used as a
-general recipe to train foundation models for various causal inference
-settings. In contrast to the current state-of-the-art in causal inference,
-CausalFM offers a novel paradigm with the potential to fundamentally change how
-practitioners perform causal inference in medicine, economics, and other
-disciplines.
+    <id>http://arxiv.org/abs/2506.11924v1</id>
+    <updated>2025-06-13T16:19:00Z</updated>
+    <published>2025-06-13T16:19:00Z</published>
+    <title>Aligned Novel View Image and Geometry Synthesis via Cross-modal
+  Attention Instillation</title>
+    <summary>  We introduce a diffusion-based framework that performs aligned novel view
+image and geometry generation via a warping-and-inpainting methodology. Unlike
+prior methods that require dense posed images or pose-embedded generative
+models limited to in-domain views, our method leverages off-the-shelf geometry
+predictors to predict partial geometries viewed from reference images, and
+formulates novel-view synthesis as an inpainting task for both image and
+geometry. To ensure accurate alignment between generated images and geometry,
+we propose cross-modal attention distillation, where attention maps from the
+image diffusion branch are injected into a parallel geometry diffusion branch
+during both training and inference. This multi-task approach achieves
+synergistic effects, facilitating geometrically robust image synthesis as well
+as well-defined geometry prediction. We further introduce proximity-based mesh
+conditioning to integrate depth and normal cues, interpolating between point
+cloud and filtering erroneously predicted geometry from influencing the
+generation process. Empirically, our method achieves high-fidelity
+extrapolative view synthesis on both image and geometry across a range of
+unseen scenes, delivers competitive reconstruction quality under interpolation
+settings, and produces geometrically aligned colored point clouds for
+comprehensive 3D completion. Project page is available at
+https://cvlab-kaist.github.io/MoAI.
 </summary>
     <author>
-      <name>Yuchen Ma</name>
+      <name>Min-Seop Kwak</name>
     </author>
     <author>
-      <name>Dennis Frauen</name>
+      <name>Junho Kim</name>
     </author>
     <author>
-      <name>Emil Javurek</name>
+      <name>Sangdoo Yun</name>
     </author>
     <author>
-      <name>Stefan Feuerriegel</name>
+      <name>Dongyoon Han</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.10914v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.10914v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Taekyoung Kim</name>
+    </author>
+    <author>
+      <name>Seungryong Kim</name>
+    </author>
+    <author>
+      <name>Jin-Hwa Kim</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.11924v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.11924v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
