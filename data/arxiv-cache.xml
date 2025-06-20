@@ -1,2 +1,479 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-19T00:58:15Z -->
+<!-- Last updated: 2025-06-20T00:57:53Z -->
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
+  <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
+  <updated>2025-06-19T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115350</opensearch:totalResults>
+  <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+  <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15682v1</id>
+    <updated>2025-06-18T17:59:50Z</updated>
+    <published>2025-06-18T17:59:50Z</published>
+    <title>Evolutionary Caching to Accelerate Your Off-the-Shelf Diffusion Model</title>
+    <summary>  Diffusion-based image generation models excel at producing high-quality
+synthetic content, but suffer from slow and computationally expensive
+inference. Prior work has attempted to mitigate this by caching and reusing
+features within diffusion transformers across inference steps. These methods,
+however, often rely on rigid heuristics that result in limited acceleration or
+poor generalization across architectures. We propose Evolutionary Caching to
+Accelerate Diffusion models (ECAD), a genetic algorithm that learns efficient,
+per-model, caching schedules forming a Pareto frontier, using only a small set
+of calibration prompts. ECAD requires no modifications to network parameters or
+reference images. It offers significant inference speedups, enables
+fine-grained control over the quality-latency trade-off, and adapts seamlessly
+to different diffusion models. Notably, ECAD's learned schedules can generalize
+effectively to resolutions and model variants not seen during calibration. We
+evaluate ECAD on PixArt-alpha, PixArt-Sigma, and FLUX-1.dev using multiple
+metrics (FID, CLIP, Image Reward) across diverse benchmarks (COCO, MJHQ-30k,
+PartiPrompts), demonstrating consistent improvements over previous approaches.
+On PixArt-alpha, ECAD identifies a schedule that outperforms the previous
+state-of-the-art method by 4.47 COCO FID while increasing inference speedup
+from 2.35x to 2.58x. Our results establish ECAD as a scalable and generalizable
+approach for accelerating diffusion inference. Our project website is available
+at https://aniaggarwal.github.io/ecad and our code is available at
+https://github.com/aniaggarwal/ecad.
+</summary>
+    <author>
+      <name>Anirud Aggarwal</name>
+    </author>
+    <author>
+      <name>Abhinav Shrivastava</name>
+    </author>
+    <author>
+      <name>Matthew Gwilliam</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 22 figures, 9 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.15682v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15682v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15649v1</id>
+    <updated>2025-06-18T17:23:36Z</updated>
+    <published>2025-06-18T17:23:36Z</published>
+    <title>Dual-Stage Value-Guided Inference with Margin-Based Reward Adjustment
+  for Fast and Faithful VLM Captioning</title>
+    <summary>  Despite significant advances in inference-time search for vision-language
+models (VLMs), existing approaches remain both computationally expensive and
+prone to unpenalized, low-confidence generations which often lead to persistent
+hallucinations. We introduce \textbf{Value-guided Inference with Margin-based
+Reward (ViMaR)}, a two-stage inference framework that improves both efficiency
+and output fidelity by combining a temporal-difference value model with a
+margin-aware reward adjustment. In the first stage, we perform a single pass to
+identify the highest-value caption among diverse candidates. In the second
+stage, we selectively refine only those segments that were overlooked or
+exhibit weak visual grounding, thereby eliminating frequently rewarded
+evaluations. A calibrated margin-based penalty discourages low-confidence
+continuations while preserving descriptive richness. Extensive experiments
+across multiple VLM architectures demonstrate that ViMaR generates captions
+that are significantly more reliable, factually accurate, detailed, and
+explanatory, while achieving over 4$\times$ speedup compared to existing
+value-guided methods. Specifically, we show that ViMaR trained solely on LLaVA
+Mistral-7B, \textit{generalizes effectively to guide decoding in a stronger
+unseen model}. To further validate this, we adapt the ViMaR to steer generation
+in LLaVA-OneVision-Qwen2-7B, leading to consistent improvements in caption
+quality and demonstrating robust cross-model guidance. This cross-model
+generalization highlights ViMaR's flexibility and modularity, positioning it as
+a scalable and transferable inference-time decoding strategy. Furthermore, when
+ViMaR-generated captions are used for self-training, the underlying models
+achieve substantial gains across a broad suite of visual comprehension
+benchmarks, underscoring the potential of fast, accurate, and self-improving
+VLM pipelines.
+</summary>
+    <author>
+      <name>Ankan Deria</name>
+    </author>
+    <author>
+      <name>Adinath Madhavrao Dukre</name>
+    </author>
+    <author>
+      <name>Feilong Tang</name>
+    </author>
+    <author>
+      <name>Sara Atito</name>
+    </author>
+    <author>
+      <name>Sudipta Roy</name>
+    </author>
+    <author>
+      <name>Muhammad Awais</name>
+    </author>
+    <author>
+      <name>Muhammad Haris Khan</name>
+    </author>
+    <author>
+      <name>Imran Razzak</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.15649v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15649v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15647v1</id>
+    <updated>2025-06-18T17:18:12Z</updated>
+    <published>2025-06-18T17:18:12Z</published>
+    <title>Exploring and Exploiting the Inherent Efficiency within Large Reasoning
+  Models for Self-Guided Efficiency Enhancement</title>
+    <summary>  Recent advancements in large reasoning models (LRMs) have significantly
+enhanced language models' capabilities in complex problem-solving by emulating
+human-like deliberative thinking. However, these models often exhibit
+overthinking (i.e., the generation of unnecessarily verbose and redundant
+content), which hinders efficiency and inflates inference cost. In this work,
+we explore the representational and behavioral origins of this inefficiency,
+revealing that LRMs inherently possess the capacity for more concise reasoning.
+Empirical analyses show that correct reasoning paths vary significantly in
+length, and the shortest correct responses often suffice, indicating untapped
+efficiency potential. Exploiting these findings, we propose two lightweight
+methods to enhance LRM efficiency. First, we introduce Efficiency Steering, a
+training-free activation steering technique that modulates reasoning behavior
+via a single direction in the model's representation space. Second, we develop
+Self-Rewarded Efficiency RL, a reinforcement learning framework that
+dynamically balances task accuracy and brevity by rewarding concise correct
+solutions. Extensive experiments on seven LRM backbones across multiple
+mathematical reasoning benchmarks demonstrate that our methods significantly
+reduce reasoning length while preserving or improving task performance. Our
+results highlight that reasoning efficiency can be improved by leveraging and
+guiding the intrinsic capabilities of existing models in a self-guided manner.
+</summary>
+    <author>
+      <name>Weixiang Zhao</name>
+    </author>
+    <author>
+      <name>Jiahe Guo</name>
+    </author>
+    <author>
+      <name>Yang Deng</name>
+    </author>
+    <author>
+      <name>Xingyu Sui</name>
+    </author>
+    <author>
+      <name>Yulin Hu</name>
+    </author>
+    <author>
+      <name>Yanyan Zhao</name>
+    </author>
+    <author>
+      <name>Wanxiang Che</name>
+    </author>
+    <author>
+      <name>Bing Qin</name>
+    </author>
+    <author>
+      <name>Tat-Seng Chua</name>
+    </author>
+    <author>
+      <name>Ting Liu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.15647v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15647v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15622v1</id>
+    <updated>2025-06-18T16:51:34Z</updated>
+    <published>2025-06-18T16:51:34Z</published>
+    <title>Models for cyclic infinity operads</title>
+    <summary>  We construct model structures on cyclic dendroidal sets and cyclic dendroidal
+spaces for cyclic quasi-operads and complete cyclic dendroidal Segal spaces,
+respectively. We show these models are Quillen equivalent to the model
+structure for simplicial cyclic operads. This answers in the affirmative a
+question of the second author and Drummond-Cole concerning model structures for
+cyclic $\infty$-operads. We infer similar statements for planar cyclic
+$\infty$-operads, providing the model-categorical foundation needed to complete
+Walde's program on the relationship between cyclic 2-Segal spaces and planar
+cyclic $\infty$-operads.
+</summary>
+    <author>
+      <name>Brandon Doherty</name>
+    </author>
+    <author>
+      <name>Philip Hackney</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">41 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.15622v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15622v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="18M85, 18N40, 55U35, 18N70" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15619v1</id>
+    <updated>2025-06-18T16:51:21Z</updated>
+    <published>2025-06-18T16:51:21Z</published>
+    <title>Further Evidence for a Direct-Collapse Origin of the Supermassive Black
+  Hole at the Center of the Infinity Galaxy</title>
+    <summary>  The z=1.14 $\infty$ galaxy consists of two ringed nuclei with an active
+supermassive black hole (SMBH) in between them. The system is likely the result
+of a nearly face-on collision between two disk galaxies with massive bulges. In
+van Dokkum et al. (2025) we suggested that the SMBH may have formed from
+shocked and compressed gas at the collision site, in a runaway gravitational
+collapse. Here we test this hypothesis using newly obtained NIRSpec IFU
+observations. We first confirm that the system has a cloud of gas in between
+the nuclei that is photo-ionized by an AGN-like object near its center. Next,
+we constrain the origin of the SMBH from its radial velocity. If it formed in
+the cloud its velocity should be similar to the surrounding gas, whereas it
+would be offset if the SMBH had escaped from one of the nuclei or were
+associated with a faint galaxy. We find that the radial velocity of the SMBH is
+within $\sim 50$ km/s of that of the surrounding gas, as expected if the SMBH
+formed within the cloud. Unexpectedly, we find that both nuclei have active
+SMBHs as well, as inferred from very broad H$\alpha$ emission with FWHM $\sim
+3000$ km/s. This rules out scenarios where the central SMBH was ejected from
+one of the nuclei in a gravitational recoil. Taken together, these results
+strengthen the hypothesis that the object at the center of the $\infty$ galaxy
+is a newly formed SMBH.
+</summary>
+    <author>
+      <name>Pieter van Dokkum</name>
+    </author>
+    <author>
+      <name>Gabriel Brammer</name>
+    </author>
+    <author>
+      <name>Connor Jennings</name>
+    </author>
+    <author>
+      <name>Imad Pasha</name>
+    </author>
+    <author>
+      <name>Josephine F. W. Baggen</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to ApJ Letters</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.15619v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15619v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15618v1</id>
+    <updated>2025-06-18T16:51:15Z</updated>
+    <published>2025-06-18T16:51:15Z</published>
+    <title>The Infinity Galaxy: a Candidate Direct-Collapse Supermassive Black Hole
+  Between Two Massive, Ringed Nuclei</title>
+    <summary>  We report the discovery of an unusual z=1.14 object, dubbed the $\infty$
+galaxy, in JWST imaging of the COSMOS field. Its rest-frame near-IR light is
+dominated by two compact nuclei with stellar masses of $\sim 10^{11}$ Msun and
+a projected separation of 10 kpc. Both nuclei have a prominent ring or shell
+around them, giving the galaxy the appearance of a figure eight or an $\infty$
+symbol. The morphology resembles that of the nearby system II Hz 4, where the
+head-on collision of two galaxies with parallel disks led to the formation of
+collisional rings around both of their bulges. Keck spectroscopy, VLA radio
+data, and Chandra X-ray data show that the $\infty$ galaxy hosts an actively
+accreting supermassive black hole (SMBH), with quasar-like radio and X-ray
+luminosity. Remarkably, the SMBH is not associated with either of the two
+nuclei, but is in between them in both position and radial velocity.
+Furthermore, from excess emission in the NIRCAM F150W filter we infer that the
+SMBH is embedded in an extended distribution of H$\alpha$-emitting gas, with a
+rest-frame equivalent width ranging from 400 - 2000 Angstrom. The gas spans the
+entire width of the system and was likely shocked and compressed at the
+collision site, in a galaxy-scale equivalent of what happened in the bullet
+cluster. We suggest that the SMBH formed within this gas in the immediate
+aftermath of the collision, when it was dense and highly turbulent. If
+corroborated with simulations and follow-up JWST spectroscopy, this would
+demonstrate that `direct' SMBH formation by a runaway gravitational collapse is
+possible in extreme conditions.
+</summary>
+    <author>
+      <name>Pieter van Dokkum</name>
+    </author>
+    <author>
+      <name>Gabriel Brammer</name>
+    </author>
+    <author>
+      <name>Josephine F. W. Baggen</name>
+    </author>
+    <author>
+      <name>Michael A. Keim</name>
+    </author>
+    <author>
+      <name>Priyamvada Natarajan</name>
+    </author>
+    <author>
+      <name>Imad Pasha</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ApJ Letters, in press</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.15618v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15618v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15591v1</id>
+    <updated>2025-06-18T16:06:30Z</updated>
+    <published>2025-06-18T16:06:30Z</published>
+    <title>One-Step Diffusion for Detail-Rich and Temporally Consistent Video
+  Super-Resolution</title>
+    <summary>  It is a challenging problem to reproduce rich spatial details while
+maintaining temporal consistency in real-world video super-resolution
+(Real-VSR), especially when we leverage pre-trained generative models such as
+stable diffusion (SD) for realistic details synthesis. Existing SD-based
+Real-VSR methods often compromise spatial details for temporal coherence,
+resulting in suboptimal visual quality. We argue that the key lies in how to
+effectively extract the degradation-robust temporal consistency priors from the
+low-quality (LQ) input video and enhance the video details while maintaining
+the extracted consistency priors. To achieve this, we propose a Dual LoRA
+Learning (DLoRAL) paradigm to train an effective SD-based one-step diffusion
+model, achieving realistic frame details and temporal consistency
+simultaneously. Specifically, we introduce a Cross-Frame Retrieval (CFR) module
+to aggregate complementary information across frames, and train a
+Consistency-LoRA (C-LoRA) to learn robust temporal representations from
+degraded inputs. After consistency learning, we fix the CFR and C-LoRA modules
+and train a Detail-LoRA (D-LoRA) to enhance spatial details while aligning with
+the temporal space defined by C-LoRA to keep temporal coherence. The two phases
+alternate iteratively for optimization, collaboratively delivering consistent
+and detail-rich outputs. During inference, the two LoRA branches are merged
+into the SD model, allowing efficient and high-quality video restoration in a
+single diffusion step. Experiments show that DLoRAL achieves strong performance
+in both accuracy and speed. Code and models are available at
+https://github.com/yjsunnn/DLoRAL.
+</summary>
+    <author>
+      <name>Yujing Sun</name>
+    </author>
+    <author>
+      <name>Lingchen Sun</name>
+    </author>
+    <author>
+      <name>Shuaizheng Liu</name>
+    </author>
+    <author>
+      <name>Rongyuan Wu</name>
+    </author>
+    <author>
+      <name>Zhengqiang Zhang</name>
+    </author>
+    <author>
+      <name>Lei Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.15591v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15591v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15583v1</id>
+    <updated>2025-06-18T16:00:19Z</updated>
+    <published>2025-06-18T16:00:19Z</published>
+    <title>DiscoSG: Towards Discourse-Level Text Scene Graph Parsing through
+  Iterative Graph Refinement</title>
+    <summary>  Vision-Language Models (VLMs) now generate discourse-level, multi-sentence
+visual descriptions, challenging text scene graph parsers originally designed
+for single-sentence caption-to-graph mapping. Current approaches typically
+merge sentence-level parsing outputs for discourse input, often missing
+phenomena like cross-sentence coreference, resulting in fragmented graphs and
+degraded downstream VLM task performance. To address this, we introduce a new
+task, Discourse-level text Scene Graph parsing (DiscoSG), supported by our
+dataset DiscoSG-DS, which comprises 400 expert-annotated and 8,430 synthesised
+multi-sentence caption-graph pairs for images. Each caption averages 9
+sentences, and each graph contains at least 3 times more triples than those in
+existing datasets. While fine-tuning large PLMs (i.e., GPT-4) on DiscoSG-DS
+improves SPICE by approximately 48% over the best sentence-merging baseline,
+high inference cost and restrictive licensing hinder its open-source use, and
+smaller fine-tuned PLMs struggle with complex graphs. We propose
+DiscoSG-Refiner, which drafts a base graph using one small PLM, then employs a
+second PLM to iteratively propose graph edits, reducing full-graph generation
+overhead. Using two Flan-T5-Base models, DiscoSG-Refiner still improves SPICE
+by approximately 30% over the best baseline while achieving 86 times faster
+inference than GPT-4. It also consistently improves downstream VLM tasks like
+discourse-level caption evaluation and hallucination detection. Code and data
+are available at: https://github.com/ShaoqLin/DiscoSG
+</summary>
+    <author>
+      <name>Shaoqing Lin</name>
+    </author>
+    <author>
+      <name>Chong Teng</name>
+    </author>
+    <author>
+      <name>Fei Li</name>
+    </author>
+    <author>
+      <name>Donghong Ji</name>
+    </author>
+    <author>
+      <name>Lizhen Qu</name>
+    </author>
+    <author>
+      <name>Zhuang Li</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.15583v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15583v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15564v1</id>
+    <updated>2025-06-18T15:39:15Z</updated>
+    <published>2025-06-18T15:39:15Z</published>
+    <title>Show-o2: Improved Native Unified Multimodal Models</title>
+    <summary>  This paper presents improved native unified multimodal models, \emph{i.e.,}
+Show-o2, that leverage autoregressive modeling and flow matching. Built upon a
+3D causal variational autoencoder space, unified visual representations are
+constructed through a dual-path of spatial (-temporal) fusion, enabling
+scalability across image and video modalities while ensuring effective
+multimodal understanding and generation. Based on a language model,
+autoregressive modeling and flow matching are natively applied to the language
+head and flow head, respectively, to facilitate text token prediction and
+image/video generation. A two-stage training recipe is designed to effectively
+learn and scale to larger models. The resulting Show-o2 models demonstrate
+versatility in handling a wide range of multimodal understanding and generation
+tasks across diverse modalities, including text, images, and videos. Code and
+models are released at https://github.com/showlab/Show-o.
+</summary>
+    <author>
+      <name>Jinheng Xie</name>
+    </author>
+    <author>
+      <name>Zhenheng Yang</name>
+    </author>
+    <author>
+      <name>Mike Zheng Shou</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Technical report</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.15564v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15564v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15561v1</id>
+    <updated>2025-06-18T15:35:53Z</updated>
+    <published>2025-06-18T15:35:53Z</published>
+    <title>Towards Robust Causal Effect Identification Beyond Markov Equivalence</title>
+    <summary>  Causal effect identification typically requires a fully specified causal
+graph, which can be difficult to obtain in practice. We provide a sufficient
+criterion for identifying causal effects from a candidate set of Markov
+equivalence classes with added background knowledge, which represents cases
+where determining the causal graph up to a single Markov equivalence class is
+challenging. Such cases can happen, for example, when the untestable
+assumptions (e.g. faithfulness) that underlie causal discovery algorithms do
+not hold.
+</summary>
+    <author>
+      <name>Kai Z. Teh</name>
+    </author>
+    <author>
+      <name>Kayvan Sadeghi</name>
+    </author>
+    <author>
+      <name>Terry Soo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICML 2025 workshop - Scaling Up Intervention Models</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.15561v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.15561v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+</feed>
