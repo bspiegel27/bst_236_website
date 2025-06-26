@@ -1,485 +1,556 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-25T00:59:03Z -->
+<!-- Last updated: 2025-06-26T00:58:26Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-24T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115621</opensearch:totalResults>
+  <updated>2025-06-25T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115710</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.18906v1</id>
-    <updated>2025-06-23T17:59:59Z</updated>
-    <published>2025-06-23T17:59:59Z</published>
-    <title>State updates and useful qubits in relativistic quantum information</title>
-    <summary>  We address the longstanding challenge of consistently updating quantum states
-after selective measurements in a relativistic spacetime. Standard updates
-along the future lightcones preserve causality but break correlations between
-causally disconnected parties, whereas updates along the past lightcone either
-imply retrocausality or do not respect the causal propagation of information.
-We introduce a minimal extension of multipartite states to encode
-subsystem-specific contextual information. This "polyperspective" formalism
-ensures causally consistent covariant state updates, preserves multipartite
-correlations, and respects conservation laws.
+    <id>http://arxiv.org/abs/2506.19852v1</id>
+    <updated>2025-06-24T17:59:59Z</updated>
+    <published>2025-06-24T17:59:59Z</published>
+    <title>Radial Attention: $O(n\log n)$ Sparse Attention with Energy Decay for
+  Long Video Generation</title>
+    <summary>  Recent advances in diffusion models have enabled high-quality video
+generation, but the additional temporal dimension significantly increases
+computational costs, making training and inference on long videos prohibitively
+expensive. In this paper, we identify a phenomenon we term Spatiotemporal
+Energy Decay in video diffusion models: post-softmax attention scores diminish
+as spatial and temporal distance between tokens increase, akin to the physical
+decay of signal or waves over space and time in nature. Motivated by this, we
+propose Radial Attention, a scalable sparse attention mechanism with $O(n \log
+n)$ complexity that translates energy decay into exponentially decaying compute
+density, which is significantly more efficient than standard $O(n^2)$ dense
+attention and more expressive than linear attention. Specifically, Radial
+Attention employs a simple, static attention mask where each token attends to
+spatially nearby tokens, with the attention window size shrinking with temporal
+distance. Moreover, it allows pre-trained video diffusion models to extend
+their generation length with efficient LoRA-based fine-tuning. Extensive
+experiments show that Radial Attention maintains video quality across
+Wan2.1-14B, HunyuanVideo, and Mochi 1, achieving up to a 1.9$\times$ speedup
+over the original dense attention. With minimal tuning, it enables video
+generation up to 4$\times$ longer while reducing training costs by up to
+4.4$\times$ compared to direct fine-tuning and accelerating inference by up to
+3.7$\times$ compared to dense attention inference.
 </summary>
     <author>
-      <name>José Polo-Gómez</name>
+      <name>Xingyang Li</name>
     </author>
     <author>
-      <name>T. Rick Perche</name>
-    </author>
-    <author>
-      <name>Eduardo Martín-Martínez</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 2 figures. RevTeX 4.2</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18906v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18906v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.18887v1</id>
-    <updated>2025-06-23T17:56:34Z</updated>
-    <published>2025-06-23T17:56:34Z</published>
-    <title>Steering Conceptual Bias via Transformer Latent-Subspace Activation</title>
-    <summary>  This work examines whether activating latent subspaces in language models
-(LLMs) can steer scientific code generation toward a specific programming
-language. Five causal LLMs were first evaluated on scientific coding prompts to
-quantify their baseline bias among four programming languages. A static
-neuron-attribution method, perturbing the highest activated MLP weight for a
-C++ or CPP token, proved brittle and exhibited limited generalization across
-prompt styles and model scales. To address these limitations, a
-gradient-refined adaptive activation steering framework (G-ACT) was developed:
-per-prompt activation differences are clustered into a small set of steering
-directions, and lightweight per-layer probes are trained and refined online to
-select the appropriate steering vector. In LLaMA-3.2 3B, this approach reliably
-biases generation towards the CPP language by increasing the average probe
-classification accuracy by 15% and the early layers (0-6) improving the probe
-classification accuracy by 61.5% compared to the standard ACT framework. For
-LLaMA-3.3 70B, where attention-head signals become more diffuse, targeted
-injections at key layers still improve language selection. Although per-layer
-probing introduces a modest inference overhead, it remains practical by
-steering only a subset of layers and enables reproducible model behavior. These
-results demonstrate a scalable, interpretable and efficient mechanism for
-concept-level control for practical agentic systems.
-</summary>
-    <author>
-      <name>Vansh Sharma</name>
-    </author>
-    <author>
-      <name>Venkat Raman</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.18887v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18887v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.7; I.2.6; I.2.1; D.3.3; C.4" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.18881v1</id>
-    <updated>2025-06-23T17:52:16Z</updated>
-    <published>2025-06-23T17:52:16Z</published>
-    <title>Let Your Video Listen to Your Music!</title>
-    <summary>  Aligning the rhythm of visual motion in a video with a given music track is a
-practical need in multimedia production, yet remains an underexplored task in
-autonomous video editing. Effective alignment between motion and musical beats
-enhances viewer engagement and visual appeal, particularly in music videos,
-promotional content, and cinematic editing. Existing methods typically depend
-on labor-intensive manual cutting, speed adjustments, or heuristic-based
-editing techniques to achieve synchronization. While some generative models
-handle joint video and music generation, they often entangle the two
-modalities, limiting flexibility in aligning video to music beats while
-preserving the full visual content. In this paper, we propose a novel and
-efficient framework, termed MVAA (Music-Video Auto-Alignment), that
-automatically edits video to align with the rhythm of a given music track while
-preserving the original visual content. To enhance flexibility, we modularize
-the task into a two-step process in our MVAA: aligning motion keyframes with
-audio beats, followed by rhythm-aware video inpainting. Specifically, we first
-insert keyframes at timestamps aligned with musical beats, then use a
-frame-conditioned diffusion model to generate coherent intermediate frames,
-preserving the original video's semantic content. Since comprehensive test-time
-training can be time-consuming, we adopt a two-stage strategy: pretraining the
-inpainting module on a small video set to learn general motion priors, followed
-by rapid inference-time fine-tuning for video-specific adaptation. This hybrid
-approach enables adaptation within 10 minutes with one epoch on a single NVIDIA
-4090 GPU using CogVideoX-5b-I2V as the backbone. Extensive experiments show
-that our approach can achieve high-quality beat alignment and visual
-smoothness.
-</summary>
-    <author>
-      <name>Xinyu Zhang</name>
-    </author>
-    <author>
-      <name>Dong Gong</name>
-    </author>
-    <author>
-      <name>Zicheng Duan</name>
-    </author>
-    <author>
-      <name>Anton van den Hengel</name>
-    </author>
-    <author>
-      <name>Lingqiao Liu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">project page: https://zhangxinyu-xyz.github.io/MVAA/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18881v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18881v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.18879v1</id>
-    <updated>2025-06-23T17:50:11Z</updated>
-    <published>2025-06-23T17:50:11Z</published>
-    <title>CommVQ: Commutative Vector Quantization for KV Cache Compression</title>
-    <summary>  Large Language Models (LLMs) are increasingly used in applications requiring
-long context lengths, but the key-value (KV) cache often becomes a memory
-bottleneck on GPUs as context grows. To address this, we propose Commutative
-Vector Quantization (CommVQ) to significantly reduce memory usage for
-long-context LLM inference. We first introduce additive quantization with a
-lightweight encoder and codebook to compress the KV cache, which can be decoded
-via simple matrix multiplication. To further reduce computational costs during
-decoding, we design the codebook to be commutative with Rotary Position
-Embedding (RoPE) and train it using an Expectation-Maximization (EM) algorithm.
-This enables efficient integration of decoding into the self-attention
-mechanism. Our approach achieves high accuracy with additive quantization and
-low overhead via the RoPE-commutative codebook. Experiments on long-context
-benchmarks and GSM8K show that our method reduces FP16 KV cache size by 87.5%
-with 2-bit quantization, while outperforming state-of-the-art KV cache
-quantization methods. Notably, it enables 1-bit KV cache quantization with
-minimal accuracy loss, allowing a LLaMA-3.1 8B model to run with a 128K context
-length on a single RTX 4090 GPU. The source code is available at:
-https://github.com/UMass-Embodied-AGI/CommVQ.
-</summary>
-    <author>
-      <name>Junyan Li</name>
-    </author>
-    <author>
-      <name>Yang Zhang</name>
-    </author>
-    <author>
-      <name>Muhammad Yusuf Hassan</name>
-    </author>
-    <author>
-      <name>Talha Chafekar</name>
+      <name>Muyang Li</name>
     </author>
     <author>
       <name>Tianle Cai</name>
     </author>
     <author>
-      <name>Zhile Ren</name>
+      <name>Haocheng Xi</name>
     </author>
     <author>
-      <name>Pengsheng Guo</name>
+      <name>Shuo Yang</name>
     </author>
     <author>
-      <name>Foroozan Karimzadeh</name>
+      <name>Yujun Lin</name>
     </author>
     <author>
-      <name>Colorado Reed</name>
+      <name>Lvmin Zhang</name>
     </author>
     <author>
-      <name>Chong Wang</name>
+      <name>Songlin Yang</name>
     </author>
     <author>
-      <name>Chuang Gan</name>
+      <name>Jinbo Hu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICML 2025 poster</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18879v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18879v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Kelly Peng</name>
+    </author>
+    <author>
+      <name>Maneesh Agrawala</name>
+    </author>
+    <author>
+      <name>Ion Stoica</name>
+    </author>
+    <author>
+      <name>Kurt Keutzer</name>
+    </author>
+    <author>
+      <name>Song Han</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/mit-han-lab/radial-attention</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.19852v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19852v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.18876v1</id>
-    <updated>2025-06-23T17:48:23Z</updated>
-    <published>2025-06-23T17:48:23Z</published>
-    <title>A field-level reaction for screened modified gravity</title>
-    <summary>  We present a field-level reaction framework to emulate the nonlinear effects
-of screened modified gravity on the cosmic web. This approach is designed to
-enable field-level inference with data from Stage IV cosmological surveys.
-Building on the reaction method, which models the nonlinear matter power
-spectrum in modified gravity as corrections to a "pseudo" $\Lambda$CDM
-cosmology, we extend the method to full field-level predictions by applying it
-to the output of $N$-body simulations, including both positions and velocities.
-We focus on modifications to gravity that are scale-independent at the linear
-level, allowing us to isolate and emulate nonlinear deviations, particularly
-screening effects. Our neural network predicts the field-level correction
-("reaction") to a pseudo$\Lambda$CDM simulation whose linear clustering matches
-that of the target. The emulator achieves sub-percent accuracy across a broad
-range of summary statistics, including 0.4\% agreement in the matter power
-spectrum at scales $k &lt; 1$ Mpc$/h$, and 2\% accuracy in redshift-space
-distortion multipoles at $k &lt; 0.3$ Mpc$/h$. We also validate the emulator
-against $N$-body simulations with increased force resolution and time steps,
-confirming the robustness of its performance. These results demonstrate that
-our framework is a practical and reliable tool for incorporating screened
-modified gravity models into field-level cosmological inference, enabling
-stringent tests of extra fundamental forces at cosmological scales.
+    <id>http://arxiv.org/abs/2506.19850v1</id>
+    <updated>2025-06-24T17:59:57Z</updated>
+    <published>2025-06-24T17:59:57Z</published>
+    <title>Unified Vision-Language-Action Model</title>
+    <summary>  Vision-language-action models (VLAs) have garnered significant attention for
+their potential in advancing robotic manipulation. However, previous approaches
+predominantly rely on the general comprehension capabilities of vision-language
+models (VLMs) to generate action signals, often overlooking the rich temporal
+and causal structure embedded in visual observations. In this paper, we present
+UniVLA, a unified and native multimodal VLA model that autoregressively models
+vision, language, and action signals as discrete token sequences. This
+formulation enables flexible multimodal tasks learning, particularly from
+large-scale video data. By incorporating world modeling during post-training,
+UniVLA captures causal dynamics from videos, facilitating effective transfer to
+downstream policy learning--especially for long-horizon tasks. Our approach
+sets new state-of-the-art results across several widely used simulation
+benchmarks, including CALVIN, LIBERO, and Simplenv-Bridge, significantly
+surpassing previous methods. For example, UniVLA achieves 95.5% average success
+rate on LIBERO benchmark, surpassing pi0-FAST's 85.5%. We further demonstrate
+its broad applicability on real-world ALOHA manipulation and autonomous
+driving.
 </summary>
     <author>
-      <name>Daniela Saadeh</name>
+      <name>Yuqi Wang</name>
     </author>
     <author>
-      <name>Kazuya Koyama</name>
+      <name>Xinghang Li</name>
     </author>
     <author>
-      <name>Xan Morice-Atkinson</name>
+      <name>Wenxuan Wang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 9 figures, to be submitted to MNRAS</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18876v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18876v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Junbo Zhang</name>
+    </author>
+    <author>
+      <name>Yingyan Li</name>
+    </author>
+    <author>
+      <name>Yuntao Chen</name>
+    </author>
+    <author>
+      <name>Xinlong Wang</name>
+    </author>
+    <author>
+      <name>Zhaoxiang Zhang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">technical report</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.19850v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19850v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.18870v1</id>
-    <updated>2025-06-23T17:38:48Z</updated>
-    <published>2025-06-23T17:38:48Z</published>
-    <title>Amplifying Machine Learning Attacks Through Strategic Compositions</title>
-    <summary>  Machine learning (ML) models are proving to be vulnerable to a variety of
-attacks that allow the adversary to learn sensitive information, cause
-mispredictions, and more. While these attacks have been extensively studied,
-current research predominantly focuses on analyzing each attack type
-individually. In practice, however, adversaries may employ multiple attack
-strategies simultaneously rather than relying on a single approach. This
-prompts a crucial yet underexplored question: When the adversary has multiple
-attacks at their disposal, are they able to mount or amplify the effect of one
-attack with another? In this paper, we take the first step in studying the
-strategic interactions among different attacks, which we define as attack
-compositions. Specifically, we focus on four well-studied attacks during the
-model's inference phase: adversarial examples, attribute inference, membership
-inference, and property inference. To facilitate the study of their
-interactions, we propose a taxonomy based on three stages of the attack
-pipeline: preparation, execution, and evaluation. Using this taxonomy, we
-identify four effective attack compositions, such as property inference
-assisting attribute inference at its preparation level and adversarial examples
-assisting property inference at its execution level. We conduct extensive
-experiments on the attack compositions using three ML model architectures and
-three benchmark image datasets. Empirical results demonstrate the effectiveness
-of these four attack compositions. We implement and release a modular reusable
-toolkit, COAT. Arguably, our work serves as a call for researchers and
-practitioners to consider advanced adversarial settings involving multiple
-attack strategies, aiming to strengthen the security and robustness of AI
-systems.
+    <id>http://arxiv.org/abs/2506.19848v1</id>
+    <updated>2025-06-24T17:59:55Z</updated>
+    <published>2025-06-24T17:59:55Z</published>
+    <title>ScaleCap: Inference-Time Scalable Image Captioning via Dual-Modality
+  Debiasing</title>
+    <summary>  This paper presents ScaleCap, an inference-time scalable image captioning
+strategy that generates comprehensive and detailed image captions. The key
+challenges of high-quality image captioning lie in the inherent biases of
+LVLMs: multimodal bias resulting in imbalanced descriptive granularity,
+offering detailed accounts of some elements while merely skimming over others;
+linguistic bias leading to hallucinated descriptions of non-existent objects.
+To address these issues, we propose a scalable debiased captioning strategy,
+which continuously enriches and calibrates the caption with increased inference
+budget. Specifically, we propose two novel components: heuristic question
+answering and contrastive sentence rating. The former generates
+content-specific questions based on the image and answers them to progressively
+inject relevant information into the caption. The latter employs sentence-level
+offline contrastive decoding to effectively identify and eliminate
+hallucinations caused by linguistic biases. With increased inference cost, more
+heuristic questions are raised by ScaleCap to progressively capture additional
+visual details, generating captions that are more accurate, balanced, and
+informative. Extensive modality alignment experiments demonstrate the
+effectiveness of ScaleCap. Annotating 450K images with ScaleCap and using them
+for LVLM pretraining leads to consistent performance gains across 11 widely
+used benchmarks. Furthermore, ScaleCap showcases superb richness and fidelity
+of generated captions with two additional tasks: replacing images with captions
+in VQA task, and reconstructing images from captions to assess semantic
+coverage. Code is available at https://github.com/Cooperx521/ScaleCap.
 </summary>
     <author>
-      <name>Yugeng Liu</name>
+      <name>Long Xing</name>
     </author>
     <author>
-      <name>Zheng Li</name>
+      <name>Qidong Huang</name>
     </author>
     <author>
-      <name>Hai Huang</name>
+      <name>Xiaoyi Dong</name>
     </author>
     <author>
-      <name>Michael Backes</name>
+      <name>Pan Zhang</name>
     </author>
     <author>
-      <name>Yang Zhang</name>
+      <name>Yuhang Zang</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.18870v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18870v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Yuhang Cao</name>
+    </author>
+    <author>
+      <name>Jinsong Li</name>
+    </author>
+    <author>
+      <name>Shuangrui Ding</name>
+    </author>
+    <author>
+      <name>Weiming Zhang</name>
+    </author>
+    <author>
+      <name>Nenghai Yu</name>
+    </author>
+    <author>
+      <name>Jiaqi Wang</name>
+    </author>
+    <author>
+      <name>Feng Wu</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code is available at https://github.com/Cooperx521/ScaleCap</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.19848v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19848v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19838v1</id>
+    <updated>2025-06-24T17:57:26Z</updated>
+    <published>2025-06-24T17:57:26Z</published>
+    <title>SimpleGVR: A Simple Baseline for Latent-Cascaded Video Super-Resolution</title>
+    <summary>  Latent diffusion models have emerged as a leading paradigm for efficient
+video generation. However, as user expectations shift toward higher-resolution
+outputs, relying solely on latent computation becomes inadequate. A promising
+approach involves decoupling the process into two stages: semantic content
+generation and detail synthesis. The former employs a computationally intensive
+base model at lower resolutions, while the latter leverages a lightweight
+cascaded video super-resolution (VSR) model to achieve high-resolution output.
+In this work, we focus on studying key design principles for latter cascaded
+VSR models, which are underexplored currently. First, we propose two
+degradation strategies to generate training pairs that better mimic the output
+characteristics of the base model, ensuring alignment between the VSR model and
+its upstream generator. Second, we provide critical insights into VSR model
+behavior through systematic analysis of (1) timestep sampling strategies, (2)
+noise augmentation effects on low-resolution (LR) inputs. These findings
+directly inform our architectural and training innovations. Finally, we
+introduce interleaving temporal unit and sparse local attention to achieve
+efficient training and inference, drastically reducing computational overhead.
+Extensive experiments demonstrate the superiority of our framework over
+existing methods, with ablation studies confirming the efficacy of each design
+choice. Our work establishes a simple yet effective baseline for cascaded video
+super-resolution generation, offering practical insights to guide future
+advancements in efficient cascaded synthesis systems.
+</summary>
+    <author>
+      <name>Liangbin Xie</name>
+    </author>
+    <author>
+      <name>Yu Li</name>
+    </author>
+    <author>
+      <name>Shian Du</name>
+    </author>
+    <author>
+      <name>Menghan Xia</name>
+    </author>
+    <author>
+      <name>Xintao Wang</name>
+    </author>
+    <author>
+      <name>Fanghua Yu</name>
+    </author>
+    <author>
+      <name>Ziyan Chen</name>
+    </author>
+    <author>
+      <name>Pengfei Wan</name>
+    </author>
+    <author>
+      <name>Jiantao Zhou</name>
+    </author>
+    <author>
+      <name>Chao Dong</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project webpage available at https://simplegvr.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.19838v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19838v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19836v1</id>
+    <updated>2025-06-24T17:53:28Z</updated>
+    <published>2025-06-24T17:53:28Z</published>
+    <title>Machine Learning with Privacy for Protected Attributes</title>
+    <summary>  Differential privacy (DP) has become the standard for private data analysis.
+Certain machine learning applications only require privacy protection for
+specific protected attributes. Using naive variants of differential privacy in
+such use cases can result in unnecessary degradation of utility. In this work,
+we refine the definition of DP to create a more general and flexible framework
+that we call feature differential privacy (FDP). Our definition is
+simulation-based and allows for both addition/removal and replacement variants
+of privacy, and can handle arbitrary and adaptive separation of protected and
+non-protected features. We prove the properties of FDP, such as adaptive
+composition, and demonstrate its implications for limiting attribute inference
+attacks. We also propose a modification of the standard DP-SGD algorithm that
+satisfies FDP while leveraging desirable properties such as amplification via
+sub-sampling. We apply our framework to various machine learning tasks and show
+that it can significantly improve the utility of DP-trained models when public
+features are available. For example, we train diffusion models on the AFHQ
+dataset of animal faces and observe a drastic improvement in FID compared to
+DP, from 286.7 to 101.9 at $\epsilon=8$, assuming that the blurred version of a
+training image is available as a public feature. Overall, our work provides a
+new approach to private data analysis that can help reduce the utility cost of
+DP while still providing strong privacy guarantees.
+</summary>
+    <author>
+      <name>Saeed Mahloujifar</name>
+    </author>
+    <author>
+      <name>Chuan Guo</name>
+    </author>
+    <author>
+      <name>G. Edward Suh</name>
+    </author>
+    <author>
+      <name>Kamalika Chaudhuri</name>
+    </author>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">2025 IEEE Symposium on Security and Privacy (SP)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2506.19836v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19836v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.18863v1</id>
-    <updated>2025-06-23T17:26:40Z</updated>
-    <published>2025-06-23T17:26:40Z</published>
-    <title>Variational Bayesian Channel Estimation and Data Detection for Cell-Free
-  Massive MIMO with Low-Resolution Quantized Fronthaul Links</title>
-    <summary>  We study the joint channel estimation and data detection (JED) problem in a
-cell-free massive multiple-input multiple-output (CF-mMIMO) network, where
-access points (APs) communicate with a central processing unit (CPU) over
-fronthaul links. However, the bandwidth of these links is limited, and thus,
-presents challenges to the applicability of CF-mMIMO, especially with an
-ever-increasing number of users. To address this, we propose a method based on
-variational Bayesian (VB) inference for performing the JED process, where the
-APs forward low-resolution quantized versions of the signals to the CPU. We
-consider two approaches: \emph{quantization-and-estimation} (Q-E) and
-\emph{estimation-and-quantization} (E-Q). In the Q-E approach, each AP uses a
-low-bit quantizer to quantize the signal before forwarding it to the CPU, while
-in the E-Q approach, each AP first performs local channel estimation and then
-sends a low-bit quantized version of the estimated channel to the CPU. We
-evaluate the performance of our VB-based approach under perfect fronthaul link
-(PFL) with unquantized received signals, Q-E, and E-Q in terms of symbol error
-rate (SER), normalized mean square error (NMSE) of the channel estimation,
-computational complexity, and fronthaul signaling overhead. We also compare
-these results with those of the linear minimum mean squared error (LMMSE)
-method under the PFL scenario. Our numerical results show that both the VB(Q-E)
-and VB(E-Q) approaches achieve superior performance compared to LMMSE(PFL),
-benefiting from the nonlinear modeling inherent in VB. Furthermore, the VB(Q-E)
-method outperforms VB(E-Q) due to errors in the local channel estimation
-process at the APs within the VB(E-Q) approach.
+    <id>http://arxiv.org/abs/2506.19816v1</id>
+    <updated>2025-06-24T17:30:27Z</updated>
+    <published>2025-06-24T17:30:27Z</published>
+    <title>CronusVLA: Transferring Latent Motion Across Time for Multi-Frame
+  Prediction in Manipulation</title>
+    <summary>  Recent vision-language-action (VLA) models built on pretrained
+vision-language models (VLMs) have demonstrated strong generalization across
+manipulation tasks. However, they remain constrained by a single-frame
+observation paradigm and cannot fully benefit from the motion information
+offered by aggregated multi-frame historical observations, as the large
+vision-language backbone introduces substantial computational cost and
+inference latency. We propose CronusVLA, a unified framework that extends
+single-frame VLA models to the multi-frame paradigm through an efficient
+post-training stage. CronusVLA comprises three key components: (1) single-frame
+pretraining on large-scale embodied datasets with autoregressive action tokens
+prediction, which establishes an embodied vision-language foundation; (2)
+multi-frame encoding, adapting the prediction of vision-language backbones from
+discrete action tokens to motion features during post-training, and aggregating
+motion features from historical frames into a feature chunking; (3) cross-frame
+decoding, which maps the feature chunking to accurate actions via a shared
+decoder with cross-attention. By reducing redundant token computation and
+caching past motion features, CronusVLA achieves efficient inference. As an
+application of motion features, we further propose an action adaptation
+mechanism based on feature-action retrieval to improve model performance during
+finetuning. CronusVLA achieves state-of-the-art performance on SimplerEnv with
+70.9% success rate, and 12.7% improvement over OpenVLA on LIBERO. Real-world
+Franka experiments also show the strong performance and robustness.
 </summary>
     <author>
-      <name>Sajjad Nassirpour</name>
+      <name>Hao Li</name>
     </author>
     <author>
-      <name>Toan-Van Nguyen</name>
+      <name>Shuai Yang</name>
     </author>
     <author>
-      <name>Hien Q. Ngo</name>
+      <name>Yilun Chen</name>
     </author>
     <author>
-      <name>Le-Nam Tran</name>
+      <name>Yang Tian</name>
     </author>
     <author>
-      <name>Tharmalingam Ratnarajah</name>
+      <name>Xiaoda Yang</name>
     </author>
     <author>
-      <name>Duy H. N. Nguyen</name>
+      <name>Xinyi Chen</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 10 figures, accepted for journal publication</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18863v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18863v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Hanqing Wang</name>
+    </author>
+    <author>
+      <name>Tai Wang</name>
+    </author>
+    <author>
+      <name>Feng Zhao</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <author>
+      <name>Jiangmiao Pang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">36 pages, 21 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.19816v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19816v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.18852v1</id>
-    <updated>2025-06-23T17:13:30Z</updated>
-    <published>2025-06-23T17:13:30Z</published>
-    <title>Mechanistic Interpretability Needs Philosophy</title>
-    <summary>  Mechanistic interpretability (MI) aims to explain how neural networks work by
-uncovering their underlying causal mechanisms. As the field grows in influence,
-it is increasingly important to examine not just models themselves, but the
-assumptions, concepts and explanatory strategies implicit in MI research. We
-argue that mechanistic interpretability needs philosophy: not as an
-afterthought, but as an ongoing partner in clarifying its concepts, refining
-its methods, and assessing the epistemic and ethical stakes of interpreting AI
-systems. Taking three open problems from the MI literature as examples, this
-position paper illustrates the value philosophy can add to MI research, and
-outlines a path toward deeper interdisciplinary dialogue.
+    <id>http://arxiv.org/abs/2506.19786v1</id>
+    <updated>2025-06-24T16:52:49Z</updated>
+    <published>2025-06-24T16:52:49Z</published>
+    <title>The perfect spinfluid</title>
+    <summary>  We present a new formulation of non-dissipative relativistic spin
+hydrodynamics that incorporates spin degrees of freedom into the
+divergence-type theory framework. Due to the divergence-type structure, it is
+straightforward to enforce non-linear causality and symmetric hyperbolicity of
+the equations of motion, ensuring local well-posedness of the initial-value
+problem and stability of the theory. Furthermore, in a specific realization
+based on spin kinetic theory, we prove that the equations of motion remain
+non-linearly causal and symmetric-hyperbolic to all orders in the spin
+potential, provided a specific thermodynamic constraint is satisfied. This
+framework can be applied for numerical simulations to study the dynamics of
+spin-polarized fluids, such as the quark-gluon plasma in heavy-ion collisions.
 </summary>
     <author>
-      <name>Iwan Williams</name>
+      <name>Nick Abboud</name>
     </author>
     <author>
-      <name>Ninell Oldenburg</name>
+      <name>Lorenzo Gavassino</name>
     </author>
     <author>
-      <name>Ruchira Dhar</name>
+      <name>Rajeev Singh</name>
     </author>
     <author>
-      <name>Joshua Hatherley</name>
+      <name>Enrico Speranza</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">26 pages, 2 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.19786v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19786v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19782v1</id>
+    <updated>2025-06-24T16:50:51Z</updated>
+    <published>2025-06-24T16:50:51Z</published>
+    <title>'Mic drop': on estimating the size of sub-mm droplets using a simple
+  condenser microphone</title>
+    <summary>  The size distribution of aerosol droplets is a key parameter in a myriad of
+processes, and it is typically measured with optical aids (e.g., lasers or
+cameras) that require sophisticated calibration, thus making the measurement
+cost intensive. We developed a new method to indirectly measure the size of
+small droplets using off-the-shelf &lt;\$1 electret microphones. In this method we
+exploit the natural oscillations that small droplets undergo after impacting a
+flat surface: by allowing droplets to land directly on a microphone diaphragm,
+we record the impact force they exert onto it and calculate the complex
+resonant frequencies of oscillations, from which their size can be inferred. To
+test this method, we recorded the impact signals of droplets of varying sizes
+and extracted the resonant frequencies that characterize each signal. Various
+sources of uncertainty in the experiments led to a range of frequencies that
+can characterize each droplet size, and hence a data-driven approach was taken
+to estimate the size from each set of measured frequencies. We employed a
+simple setting of neural network and trained it on the frequencies we measured
+from impact of droplets of prescribed radius. The network was then able to
+predict the droplet radius in the test group with an average relative error of
+2.7\% and a maximum of 8.6\%. These results, achieved with a data set of only
+320 measurements, demonstrate the potential for reliable size-distribution
+measurements via a simple and inexpensive method.
+</summary>
+    <author>
+      <name>Avshalom Offner</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.19782v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19782v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19783v1</id>
+    <updated>2025-06-24T16:50:51Z</updated>
+    <published>2025-06-24T16:50:51Z</published>
+    <title>SAGE: Strategy-Adaptive Generation Engine for Query Rewriting</title>
+    <summary>  Query rewriting is pivotal for enhancing dense retrieval, yet current methods
+demand large-scale supervised data or suffer from inefficient reinforcement
+learning (RL) exploration. In this work, we first establish that guiding Large
+Language Models (LLMs) with a concise set of expert-crafted strategies, such as
+semantic expansion and entity disambiguation, substantially improves retrieval
+effectiveness on challenging benchmarks, including HotpotQA, FEVER, NFCorpus,
+and SciFact. Building on this insight, we introduce the Strategy-Adaptive
+Generation Engine (SAGE), which operationalizes these strategies in an RL
+framework. SAGE introduces two novel reward shaping mechanisms-Strategic Credit
+Shaping (SCS) and Contrastive Reward Shaping (CRS)-to deliver more informative
+learning signals. This strategy-guided approach not only achieves new
+state-of-the-art NDCG@10 results, but also uncovers a compelling emergent
+behavior: the agent learns to select optimal strategies, reduces unnecessary
+exploration, and generates concise rewrites, lowering inference cost without
+sacrificing performance. Our findings demonstrate that strategy-guided RL,
+enhanced with nuanced reward shaping, offers a scalable, efficient, and more
+interpretable paradigm for developing the next generation of robust information
+retrieval systems.
+</summary>
+    <author>
+      <name>Teng Wang</name>
     </author>
     <author>
-      <name>Constanza Fierro</name>
+      <name>Hailei Gong</name>
     </author>
     <author>
-      <name>Nina Rajcic</name>
+      <name>Changwang Zhang</name>
     </author>
     <author>
-      <name>Sandrine R. Schiller</name>
+      <name>Jun Wang</name>
     </author>
-    <author>
-      <name>Filippos Stamatiou</name>
-    </author>
-    <author>
-      <name>Anders Søgaard</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.18852v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18852v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.19783v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19783v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.18846v1</id>
-    <updated>2025-06-23T17:07:04Z</updated>
-    <published>2025-06-23T17:07:04Z</published>
-    <title>Bayesian decomposition using Besov priors</title>
-    <summary>  In many inverse problems, the unknown is composed of multiple components with
-different regularities, for example, in imaging problems, where the unknown can
-have both rough and smooth features. We investigate linear Bayesian inverse
-problems, where the unknown consists of two components: one smooth and one
-piecewise constant. We model the unknown as a sum of two components and assign
-individual priors on each component to impose the assumed behavior. We propose
-and compare two prior models: (i) a combination of a Haar wavelet-based Besov
-prior and a smoothing Besov prior, and (ii) a hierarchical Gaussian prior on
-the gradient coupled with a smoothing Besov prior. To achieve a balanced
-reconstruction, we place hyperpriors on the prior parameters and jointly infer
-both the components and the hyperparameters. We propose Gibbs sampling schemes
-for posterior inference in both prior models. We demonstrate the capabilities
-of our approach on 1D and 2D deconvolution problems, where the unknown consists
-of smooth parts with jumps. The numerical results indicate that our methods
-improve the reconstruction quality compared to single-prior approaches and that
-the prior parameters can be successfully estimated to yield a balanced
-decomposition.
+    <id>http://arxiv.org/abs/2506.19777v1</id>
+    <updated>2025-06-24T16:42:46Z</updated>
+    <published>2025-06-24T16:42:46Z</published>
+    <title>Alleviating User-Sensitive bias with Fair Generative Sequential
+  Recommendation Model</title>
+    <summary>  Recommendation fairness has recently attracted much attention. In the real
+world, recommendation systems are driven by user behavior, and since users with
+the same sensitive feature (e.g., gender and age) tend to have the same
+patterns, recommendation models can easily capture the strong correlation
+preference of sensitive features and thus cause recommendation unfairness.
+Diffusion model (DM) as a new generative model paradigm has achieved great
+success in recommendation systems. DM's ability to model uncertainty and
+represent diversity, and its modeling mechanism has a high degree of
+adaptability with the real-world recommendation process with bias. Therefore,
+we use DM to effectively model the fairness of recommendation and enhance the
+diversity. This paper proposes a FairGENerative sequential Recommendation model
+based on DM, FairGENRec. In the training phase, we inject random noise into the
+original distribution under the guidance of the sensitive feature recognition
+model, and a sequential denoise model is designed for the reverse
+reconstruction of items. Simultaneously, recommendation fairness modeling is
+completed by injecting multi-interests representational information that
+eliminates the bias of sensitive user features into the generated results. In
+the inference phase, the model obtains the noise in the form of noise addition
+by using the history interactions which is followed by reverse iteration to
+reconstruct the target item representation. Finally, our extensive experiments
+on three datasets demonstrate the dual enhancement effect of FairGENRec on
+accuracy and fairness, while the statistical analysis of the cases visualizes
+the degree of improvement on the fairness of the recommendation.
 </summary>
     <author>
-      <name>Andreas Horst</name>
+      <name>Yang Liu</name>
     </author>
     <author>
-      <name>Babak Maboudi Afkham</name>
+      <name>Feng Wu</name>
     </author>
     <author>
-      <name>Yiqiu Dong</name>
+      <name>Xuefang Zhu</name>
     </author>
-    <author>
-      <name>Jakob Lemvig</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 13 figures, this is a preprint of an article submitted to
-  the IOP journal on inverse problems</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18846v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18846v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="G.3; G.4" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.18842v1</id>
-    <updated>2025-06-23T17:00:34Z</updated>
-    <published>2025-06-23T17:00:34Z</published>
-    <title>LIGHTHOUSE: Fast and precise distance to shoreline calculations from
-  anywhere on earth</title>
-    <summary>  We introduce a new dataset and algorithm for fast and efficient coastal
-distance calculations from Anywhere on Earth (AoE). Existing global coastal
-datasets are only available at coarse resolution (e.g. 1-4 km) which limits
-their utility. Publicly available satellite imagery combined with computer
-vision enable much higher precision. We provide a global coastline dataset at
-10 meter resolution, a 100+ fold improvement in precision over existing data.
-To handle the computational challenge of querying at such an increased scale,
-we introduce a new library: Layered Iterative Geospatial Hierarchical
-Terrain-Oriented Unified Search Engine (Lighthouse). Lighthouse is both
-exceptionally fast and resource-efficient, requiring only 1 CPU and 2 GB of RAM
-to achieve millisecond online inference, making it well suited for real-time
-applications in resource-constrained environments.
-</summary>
-    <author>
-      <name>Patrick Beukema</name>
-    </author>
-    <author>
-      <name>Henry Herzog</name>
-    </author>
-    <author>
-      <name>Yawen Zhang</name>
-    </author>
-    <author>
-      <name>Hunter Pitelka</name>
-    </author>
-    <author>
-      <name>Favyen Bastani</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 7 figures, 1 table, ICML 2025 ML4RS</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.18842v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.18842v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.19777v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.19777v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
