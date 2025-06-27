@@ -1,556 +1,497 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-06-26T00:58:26Z -->
+<!-- Last updated: 2025-06-27T00:59:01Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-25T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115710</opensearch:totalResults>
+  <updated>2025-06-26T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115772</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.19852v1</id>
-    <updated>2025-06-24T17:59:59Z</updated>
-    <published>2025-06-24T17:59:59Z</published>
-    <title>Radial Attention: $O(n\log n)$ Sparse Attention with Energy Decay for
-  Long Video Generation</title>
-    <summary>  Recent advances in diffusion models have enabled high-quality video
-generation, but the additional temporal dimension significantly increases
-computational costs, making training and inference on long videos prohibitively
-expensive. In this paper, we identify a phenomenon we term Spatiotemporal
-Energy Decay in video diffusion models: post-softmax attention scores diminish
-as spatial and temporal distance between tokens increase, akin to the physical
-decay of signal or waves over space and time in nature. Motivated by this, we
-propose Radial Attention, a scalable sparse attention mechanism with $O(n \log
-n)$ complexity that translates energy decay into exponentially decaying compute
-density, which is significantly more efficient than standard $O(n^2)$ dense
-attention and more expressive than linear attention. Specifically, Radial
-Attention employs a simple, static attention mask where each token attends to
-spatially nearby tokens, with the attention window size shrinking with temporal
-distance. Moreover, it allows pre-trained video diffusion models to extend
-their generation length with efficient LoRA-based fine-tuning. Extensive
-experiments show that Radial Attention maintains video quality across
-Wan2.1-14B, HunyuanVideo, and Mochi 1, achieving up to a 1.9$\times$ speedup
-over the original dense attention. With minimal tuning, it enables video
-generation up to 4$\times$ longer while reducing training costs by up to
-4.4$\times$ compared to direct fine-tuning and accelerating inference by up to
-3.7$\times$ compared to dense attention inference.
+    <id>http://arxiv.org/abs/2506.20657v1</id>
+    <updated>2025-06-25T17:52:26Z</updated>
+    <published>2025-06-25T17:52:26Z</published>
+    <title>SuperSONIC: Cloud-Native Infrastructure for ML Inferencing</title>
+    <summary>  The increasing computational demand from growing data rates and complex
+machine learning (ML) algorithms in large-scale scientific experiments has
+driven the adoption of the Services for Optimized Network Inference on
+Coprocessors (SONIC) approach. SONIC accelerates ML inference by offloading it
+to local or remote coprocessors to optimize resource utilization. Leveraging
+its portability to different types of coprocessors, SONIC enhances data
+processing and model deployment efficiency for cutting-edge research in high
+energy physics (HEP) and multi-messenger astrophysics (MMA). We developed the
+SuperSONIC project, a scalable server infrastructure for SONIC, enabling the
+deployment of computationally intensive tasks to Kubernetes clusters equipped
+with graphics processing units (GPUs). Using NVIDIA Triton Inference Server,
+SuperSONIC decouples client workflows from server infrastructure, standardizing
+communication, optimizing throughput, load balancing, and monitoring.
+SuperSONIC has been successfully deployed for the CMS and ATLAS experiments at
+the CERN Large Hadron Collider (LHC), the IceCube Neutrino Observatory
+(IceCube), and the Laser Interferometer Gravitational-Wave Observatory (LIGO)
+and tested on Kubernetes clusters at Purdue University, the National Research
+Platform (NRP), and the University of Chicago. SuperSONIC addresses the
+challenges of the Cloud-native era by providing a reusable, configurable
+framework that enhances the efficiency of accelerator-based inference
+deployment across diverse scientific domains and industries.
 </summary>
     <author>
-      <name>Xingyang Li</name>
+      <name>Dmitry Kondratyev</name>
     </author>
     <author>
-      <name>Muyang Li</name>
+      <name>Benedikt Riedel</name>
     </author>
     <author>
-      <name>Tianle Cai</name>
+      <name>Yuan-Tang Chou</name>
     </author>
     <author>
-      <name>Haocheng Xi</name>
+      <name>Miles Cochran-Branson</name>
     </author>
     <author>
-      <name>Shuo Yang</name>
+      <name>Noah Paladino</name>
     </author>
     <author>
-      <name>Yujun Lin</name>
+      <name>David Schultz</name>
     </author>
     <author>
-      <name>Lvmin Zhang</name>
+      <name>Mia Liu</name>
     </author>
     <author>
-      <name>Songlin Yang</name>
+      <name>Javier Duarte</name>
     </author>
     <author>
-      <name>Jinbo Hu</name>
+      <name>Philip Harris</name>
     </author>
     <author>
-      <name>Kelly Peng</name>
+      <name>Shih-Chieh Hsu</name>
     </author>
-    <author>
-      <name>Maneesh Agrawala</name>
-    </author>
-    <author>
-      <name>Ion Stoica</name>
-    </author>
-    <author>
-      <name>Kurt Keutzer</name>
-    </author>
-    <author>
-      <name>Song Han</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/mit-han-lab/radial-attention</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.19852v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19852v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3708035.3736049</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/3708035.3736049" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submission to PEARC25 Conference</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.20657v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20657v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ins-det" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.19850v1</id>
-    <updated>2025-06-24T17:59:57Z</updated>
-    <published>2025-06-24T17:59:57Z</published>
-    <title>Unified Vision-Language-Action Model</title>
-    <summary>  Vision-language-action models (VLAs) have garnered significant attention for
-their potential in advancing robotic manipulation. However, previous approaches
-predominantly rely on the general comprehension capabilities of vision-language
-models (VLMs) to generate action signals, often overlooking the rich temporal
-and causal structure embedded in visual observations. In this paper, we present
-UniVLA, a unified and native multimodal VLA model that autoregressively models
-vision, language, and action signals as discrete token sequences. This
-formulation enables flexible multimodal tasks learning, particularly from
-large-scale video data. By incorporating world modeling during post-training,
-UniVLA captures causal dynamics from videos, facilitating effective transfer to
-downstream policy learning--especially for long-horizon tasks. Our approach
-sets new state-of-the-art results across several widely used simulation
-benchmarks, including CALVIN, LIBERO, and Simplenv-Bridge, significantly
-surpassing previous methods. For example, UniVLA achieves 95.5% average success
-rate on LIBERO benchmark, surpassing pi0-FAST's 85.5%. We further demonstrate
-its broad applicability on real-world ALOHA manipulation and autonomous
-driving.
+    <id>http://arxiv.org/abs/2506.20639v2</id>
+    <updated>2025-06-26T15:46:40Z</updated>
+    <published>2025-06-25T17:35:47Z</published>
+    <title>DiffuCoder: Understanding and Improving Masked Diffusion Models for Code
+  Generation</title>
+    <summary>  Diffusion large language models (dLLMs) are compelling alternatives to
+autoregressive (AR) models because their denoising models operate over the
+entire sequence. The global planning and iterative refinement features of dLLMs
+are particularly useful for code generation. However, current training and
+inference mechanisms for dLLMs in coding are still under-explored. To demystify
+the decoding behavior of dLLMs and unlock their potential for coding, we
+systematically investigate their denoising processes and reinforcement learning
+(RL) methods. We train a 7B dLLM, \textbf{DiffuCoder}, on 130B tokens of code.
+Using this model as a testbed, we analyze its decoding behavior, revealing how
+it differs from that of AR models: (1) dLLMs can decide how causal their
+generation should be without relying on semi-AR decoding, and (2) increasing
+the sampling temperature diversifies not only token choices but also their
+generation order. This diversity creates a rich search space for RL rollouts.
+For RL training, to reduce the variance of token log-likelihood estimates and
+maintain training efficiency, we propose \textbf{coupled-GRPO}, a novel
+sampling scheme that constructs complementary mask noise for completions used
+in training. In our experiments, coupled-GRPO significantly improves
+DiffuCoder's performance on code generation benchmarks (+4.4\% on EvalPlus) and
+reduces reliance on AR bias during decoding. Our work provides deeper insight
+into the machinery of dLLM generation and offers an effective, diffusion-native
+RL training framework. https://github.com/apple/ml-diffucoder.
 </summary>
     <author>
-      <name>Yuqi Wang</name>
+      <name>Shansan Gong</name>
     </author>
     <author>
-      <name>Xinghang Li</name>
+      <name>Ruixiang Zhang</name>
     </author>
     <author>
-      <name>Wenxuan Wang</name>
+      <name>Huangjie Zheng</name>
     </author>
     <author>
-      <name>Junbo Zhang</name>
+      <name>Jiatao Gu</name>
     </author>
     <author>
-      <name>Yingyan Li</name>
+      <name>Navdeep Jaitly</name>
     </author>
     <author>
-      <name>Yuntao Chen</name>
+      <name>Lingpeng Kong</name>
     </author>
     <author>
-      <name>Xinlong Wang</name>
+      <name>Yizhe Zhang</name>
     </author>
-    <author>
-      <name>Zhaoxiang Zhang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">technical report</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.19850v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19850v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.19848v1</id>
-    <updated>2025-06-24T17:59:55Z</updated>
-    <published>2025-06-24T17:59:55Z</published>
-    <title>ScaleCap: Inference-Time Scalable Image Captioning via Dual-Modality
-  Debiasing</title>
-    <summary>  This paper presents ScaleCap, an inference-time scalable image captioning
-strategy that generates comprehensive and detailed image captions. The key
-challenges of high-quality image captioning lie in the inherent biases of
-LVLMs: multimodal bias resulting in imbalanced descriptive granularity,
-offering detailed accounts of some elements while merely skimming over others;
-linguistic bias leading to hallucinated descriptions of non-existent objects.
-To address these issues, we propose a scalable debiased captioning strategy,
-which continuously enriches and calibrates the caption with increased inference
-budget. Specifically, we propose two novel components: heuristic question
-answering and contrastive sentence rating. The former generates
-content-specific questions based on the image and answers them to progressively
-inject relevant information into the caption. The latter employs sentence-level
-offline contrastive decoding to effectively identify and eliminate
-hallucinations caused by linguistic biases. With increased inference cost, more
-heuristic questions are raised by ScaleCap to progressively capture additional
-visual details, generating captions that are more accurate, balanced, and
-informative. Extensive modality alignment experiments demonstrate the
-effectiveness of ScaleCap. Annotating 450K images with ScaleCap and using them
-for LVLM pretraining leads to consistent performance gains across 11 widely
-used benchmarks. Furthermore, ScaleCap showcases superb richness and fidelity
-of generated captions with two additional tasks: replacing images with captions
-in VQA task, and reconstructing images from captions to assess semantic
-coverage. Code is available at https://github.com/Cooperx521/ScaleCap.
-</summary>
-    <author>
-      <name>Long Xing</name>
-    </author>
-    <author>
-      <name>Qidong Huang</name>
-    </author>
-    <author>
-      <name>Xiaoyi Dong</name>
-    </author>
-    <author>
-      <name>Pan Zhang</name>
-    </author>
-    <author>
-      <name>Yuhang Zang</name>
-    </author>
-    <author>
-      <name>Yuhang Cao</name>
-    </author>
-    <author>
-      <name>Jinsong Li</name>
-    </author>
-    <author>
-      <name>Shuangrui Ding</name>
-    </author>
-    <author>
-      <name>Weiming Zhang</name>
-    </author>
-    <author>
-      <name>Nenghai Yu</name>
-    </author>
-    <author>
-      <name>Jiaqi Wang</name>
-    </author>
-    <author>
-      <name>Feng Wu</name>
-    </author>
-    <author>
-      <name>Dahua Lin</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code is available at https://github.com/Cooperx521/ScaleCap</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.19848v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19848v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">minor update</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.20639v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20639v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.19838v1</id>
-    <updated>2025-06-24T17:57:26Z</updated>
-    <published>2025-06-24T17:57:26Z</published>
-    <title>SimpleGVR: A Simple Baseline for Latent-Cascaded Video Super-Resolution</title>
-    <summary>  Latent diffusion models have emerged as a leading paradigm for efficient
-video generation. However, as user expectations shift toward higher-resolution
-outputs, relying solely on latent computation becomes inadequate. A promising
-approach involves decoupling the process into two stages: semantic content
-generation and detail synthesis. The former employs a computationally intensive
-base model at lower resolutions, while the latter leverages a lightweight
-cascaded video super-resolution (VSR) model to achieve high-resolution output.
-In this work, we focus on studying key design principles for latter cascaded
-VSR models, which are underexplored currently. First, we propose two
-degradation strategies to generate training pairs that better mimic the output
-characteristics of the base model, ensuring alignment between the VSR model and
-its upstream generator. Second, we provide critical insights into VSR model
-behavior through systematic analysis of (1) timestep sampling strategies, (2)
-noise augmentation effects on low-resolution (LR) inputs. These findings
-directly inform our architectural and training innovations. Finally, we
-introduce interleaving temporal unit and sparse local attention to achieve
-efficient training and inference, drastically reducing computational overhead.
-Extensive experiments demonstrate the superiority of our framework over
-existing methods, with ablation studies confirming the efficacy of each design
-choice. Our work establishes a simple yet effective baseline for cascaded video
-super-resolution generation, offering practical insights to guide future
-advancements in efficient cascaded synthesis systems.
+    <id>http://arxiv.org/abs/2506.20596v1</id>
+    <updated>2025-06-25T16:36:02Z</updated>
+    <published>2025-06-25T16:36:02Z</published>
+    <title>Inference for Error-Prone Count Data: Estimation under a Binomial
+  Convolution Framework</title>
+    <summary>  Measurement error in count data is common but underexplored in the
+literature, particularly in contexts where observed scores are bounded and
+arise from discrete scoring processes. Motivated by applications in oral
+reading fluency assessment, we propose a binomial convolution framework that
+extends binary misclassification models to settings where only the aggregate
+number of correct responses is observed, and errors may involve both
+overcounting and undercounting the number of events. The model accommodates
+distinct true positive and true negative accuracy rates and preserves the
+bounded nature of the data.
+  Assuming the availability of both contaminated and error-free scores on a
+subset of items, we develop and compare three estimation strategies: maximum
+likelihood estimation (MLE), linear regression, and generalized method of
+moments (GMM). Extensive simulations show that MLE is most accurate when the
+model is correctly specified but is computationally intensive and less robust
+to misspecification. Regression is simple and stable but less precise, while
+GMM offers a compromise in model dependence, though it is sensitive to
+outliers.
+  In practice, this framework supports improved inference in unsupervised
+settings where contaminated scores serve as inputs to downstream analyses. By
+quantifying accuracy rates, the model enables score corrections even when no
+specific outcome is yet defined. We demonstrate its utility using real oral
+reading fluency data, comparing human and AI-generated scores. Findings
+highlight the practical implications of estimator choice and underscore the
+importance of explicitly modeling asymmetric measurement error in count data.
 </summary>
     <author>
-      <name>Liangbin Xie</name>
+      <name>Yuqiu Yang</name>
     </author>
     <author>
-      <name>Yu Li</name>
+      <name>Christina Vu</name>
     </author>
     <author>
-      <name>Shian Du</name>
+      <name>Cornelis J. Potgieter</name>
     </author>
     <author>
-      <name>Menghan Xia</name>
+      <name>Xinlei Wang</name>
     </author>
     <author>
-      <name>Xintao Wang</name>
+      <name>Akihito Kamata</name>
     </author>
-    <author>
-      <name>Fanghua Yu</name>
-    </author>
-    <author>
-      <name>Ziyan Chen</name>
-    </author>
-    <author>
-      <name>Pengfei Wan</name>
-    </author>
-    <author>
-      <name>Jiantao Zhou</name>
-    </author>
-    <author>
-      <name>Chao Dong</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project webpage available at https://simplegvr.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.19838v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19838v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">40 pages, 6 figures, 3 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.20596v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20596v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.19836v1</id>
-    <updated>2025-06-24T17:53:28Z</updated>
-    <published>2025-06-24T17:53:28Z</published>
-    <title>Machine Learning with Privacy for Protected Attributes</title>
-    <summary>  Differential privacy (DP) has become the standard for private data analysis.
-Certain machine learning applications only require privacy protection for
-specific protected attributes. Using naive variants of differential privacy in
-such use cases can result in unnecessary degradation of utility. In this work,
-we refine the definition of DP to create a more general and flexible framework
-that we call feature differential privacy (FDP). Our definition is
-simulation-based and allows for both addition/removal and replacement variants
-of privacy, and can handle arbitrary and adaptive separation of protected and
-non-protected features. We prove the properties of FDP, such as adaptive
-composition, and demonstrate its implications for limiting attribute inference
-attacks. We also propose a modification of the standard DP-SGD algorithm that
-satisfies FDP while leveraging desirable properties such as amplification via
-sub-sampling. We apply our framework to various machine learning tasks and show
-that it can significantly improve the utility of DP-trained models when public
-features are available. For example, we train diffusion models on the AFHQ
-dataset of animal faces and observe a drastic improvement in FID compared to
-DP, from 286.7 to 101.9 at $\epsilon=8$, assuming that the blurred version of a
-training image is available as a public feature. Overall, our work provides a
-new approach to private data analysis that can help reduce the utility cost of
-DP while still providing strong privacy guarantees.
+    <id>http://arxiv.org/abs/2506.20586v1</id>
+    <updated>2025-06-25T16:26:55Z</updated>
+    <published>2025-06-25T16:26:55Z</published>
+    <title>Learning-Based Distance Estimation for 360° Single-Sensor Setups</title>
+    <summary>  Accurate distance estimation is a fundamental challenge in robotic
+perception, particularly in omnidirectional imaging, where traditional
+geometric methods struggle with lens distortions and environmental variability.
+In this work, we propose a neural network-based approach for monocular distance
+estimation using a single 360{\deg} fisheye lens camera. Unlike classical
+trigonometric techniques that rely on precise lens calibration, our method
+directly learns and infers the distance of objects from raw omnidirectional
+inputs, offering greater robustness and adaptability across diverse conditions.
+We evaluate our approach on three 360{\deg} datasets (LOAF, ULM360, and a newly
+captured dataset Boat360), each representing distinct environmental and sensor
+setups. Our experimental results demonstrate that the proposed learning-based
+model outperforms traditional geometry-based methods and other learning
+baselines in both accuracy and robustness. These findings highlight the
+potential of deep learning for real-time omnidirectional distance estimation,
+making our approach particularly well-suited for low-cost applications in
+robotics, autonomous navigation, and surveillance.
 </summary>
     <author>
-      <name>Saeed Mahloujifar</name>
+      <name>Yitong Quan</name>
     </author>
     <author>
-      <name>Chuan Guo</name>
+      <name>Benjamin Kiefer</name>
     </author>
     <author>
-      <name>G. Edward Suh</name>
+      <name>Martin Messmer</name>
     </author>
     <author>
-      <name>Kamalika Chaudhuri</name>
+      <name>Andreas Zell</name>
     </author>
-    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">2025 IEEE Symposium on Security and Privacy (SP)</arxiv:journal_ref>
-    <link href="http://arxiv.org/abs/2506.19836v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19836v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to ECMR 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.20586v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20586v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.20585v1</id>
+    <updated>2025-06-25T16:26:01Z</updated>
+    <published>2025-06-25T16:26:01Z</published>
+    <title>On the Impact of Sybil-based Attacks on Mobile Crowdsensing for
+  Transportation</title>
+    <summary>  Mobile Crowd-Sensing (MCS) enables users with personal mobile devices (PMDs)
+to gain information on their surroundings. Users collect and contribute data on
+different phenomena using their PMD sensors, and the MCS system processes this
+data to extract valuable information for end users. Navigation MCS-based
+applications (N-MCS) are prevalent and important for transportation: users
+share their location and speed while driving and, in return, find efficient
+routes to their destinations. However, N-MCS are currently vulnerable to
+malicious contributors, often termed Sybils: submitting falsified data,
+seemingly from many devices that are not truly present on target roads, falsely
+reporting congestion when there is none, thus changing the road status the
+N-MCS infers. The attack effect is that the N-MCS returns suboptimal routes to
+users, causing late arrival and, overall, deteriorating road traffic flow. We
+investigate exactly the impact of Sybil-based attacks on N-MCS: we design an
+N-MCS system that offers efficient routing on top of the vehicular simulator
+SUMO, using the InTAS road network as our scenario. We design experiments
+attacking an individual N-MCS user as well as a larger population of users,
+selecting the adversary targets based on graph-theoretical arguments. Our
+experiments show that the resources required for a successful attack depend on
+the location of the attack (i.e., the surrounding road network and traffic) and
+the extent of Sybil contributed data for the targeted road(s). We demonstrate
+that Sybil attacks can alter the route of N-MCS users, increasing average
+travel time by 20% with Sybils 3% of the N-MCS user population.
+</summary>
+    <author>
+      <name>Alexander Söderhäll</name>
+    </author>
+    <author>
+      <name>Zahra Alimadadi</name>
+    </author>
+    <author>
+      <name>Panos Papadimitratos</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1109/PerComWorkshops65533.2025.00113</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1109/PerComWorkshops65533.2025.00113" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, 5 figures, 2 tables, TrustSense workshop of PerCom 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.20585v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20585v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.20582v1</id>
+    <updated>2025-06-25T16:17:36Z</updated>
+    <published>2025-06-25T16:17:36Z</published>
+    <title>Causal Representation Learning with Observational Grouping for CXR
+  Classification</title>
+    <summary>  Identifiable causal representation learning seeks to uncover the true causal
+relationships underlying a data generation process. In medical imaging, this
+presents opportunities to improve the generalisability and robustness of
+task-specific latent features. This work introduces the concept of grouping
+observations to learn identifiable representations for disease classification
+in chest X-rays via an end-to-end framework. Our experiments demonstrate that
+these causal representations improve generalisability and robustness across
+multiple classification tasks when grouping is used to enforce invariance w.r.t
+race, sex, and imaging views.
+</summary>
+    <author>
+      <name>Rajat Rasal</name>
+    </author>
+    <author>
+      <name>Avinash Kori</name>
+    </author>
+    <author>
+      <name>Ben Glocker</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.20582v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20582v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.19816v1</id>
-    <updated>2025-06-24T17:30:27Z</updated>
-    <published>2025-06-24T17:30:27Z</published>
-    <title>CronusVLA: Transferring Latent Motion Across Time for Multi-Frame
-  Prediction in Manipulation</title>
-    <summary>  Recent vision-language-action (VLA) models built on pretrained
-vision-language models (VLMs) have demonstrated strong generalization across
-manipulation tasks. However, they remain constrained by a single-frame
-observation paradigm and cannot fully benefit from the motion information
-offered by aggregated multi-frame historical observations, as the large
-vision-language backbone introduces substantial computational cost and
-inference latency. We propose CronusVLA, a unified framework that extends
-single-frame VLA models to the multi-frame paradigm through an efficient
-post-training stage. CronusVLA comprises three key components: (1) single-frame
-pretraining on large-scale embodied datasets with autoregressive action tokens
-prediction, which establishes an embodied vision-language foundation; (2)
-multi-frame encoding, adapting the prediction of vision-language backbones from
-discrete action tokens to motion features during post-training, and aggregating
-motion features from historical frames into a feature chunking; (3) cross-frame
-decoding, which maps the feature chunking to accurate actions via a shared
-decoder with cross-attention. By reducing redundant token computation and
-caching past motion features, CronusVLA achieves efficient inference. As an
-application of motion features, we further propose an action adaptation
-mechanism based on feature-action retrieval to improve model performance during
-finetuning. CronusVLA achieves state-of-the-art performance on SimplerEnv with
-70.9% success rate, and 12.7% improvement over OpenVLA on LIBERO. Real-world
-Franka experiments also show the strong performance and robustness.
+    <id>http://arxiv.org/abs/2506.20579v1</id>
+    <updated>2025-06-25T16:14:17Z</updated>
+    <published>2025-06-25T16:14:17Z</published>
+    <title>Communication-Aware Map Compression for Online Path-Planning: A
+  Rate-Distortion Approach</title>
+    <summary>  This paper addresses the problem of collaborative navigation in an unknown
+environment, where two robots, referred to in the sequel as the Seeker and the
+Supporter, traverse the space simultaneously. The Supporter assists the Seeker
+by transmitting a compressed representation of its local map under bandwidth
+constraints to support the Seeker's path-planning task. We introduce a bit-rate
+metric based on the expected binary codeword length to quantify communication
+cost. Using this metric, we formulate the compression design problem as a
+rate-distortion optimization problem that determines when to communicate, which
+regions of the map should be included in the compressed representation, and at
+what resolution (i.e., quantization level) they should be encoded. Our
+formulation allows different map regions to be encoded at varying quantization
+levels based on their relevance to the Seeker's path-planning task. We
+demonstrate that the resulting optimization problem is convex, and admits a
+closed-form solution known in the information theory literature as reverse
+water-filling, enabling efficient, low-computation, and real-time
+implementation. Additionally, we show that the Seeker can infer the compression
+decisions of the Supporter independently, requiring only the encoded map
+content and not the encoding policy itself to be transmitted, thereby reducing
+communication overhead. Simulation results indicate that our method effectively
+constructs compressed, task-relevant map representations, both in content and
+resolution, that guide the Seeker's planning decisions even under tight
+bandwidth limitations.
 </summary>
     <author>
-      <name>Hao Li</name>
+      <name>Ali Reza Pedram</name>
     </author>
     <author>
-      <name>Shuai Yang</name>
+      <name>Evangelos Psomiadis</name>
     </author>
     <author>
-      <name>Yilun Chen</name>
+      <name>Dipankar Maity</name>
     </author>
     <author>
-      <name>Yang Tian</name>
+      <name>Panagiotis Tsiotras</name>
     </author>
-    <author>
-      <name>Xiaoda Yang</name>
-    </author>
-    <author>
-      <name>Xinyi Chen</name>
-    </author>
-    <author>
-      <name>Hanqing Wang</name>
-    </author>
-    <author>
-      <name>Tai Wang</name>
-    </author>
-    <author>
-      <name>Feng Zhao</name>
-    </author>
-    <author>
-      <name>Dahua Lin</name>
-    </author>
-    <author>
-      <name>Jiangmiao Pang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">36 pages, 21 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.19816v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19816v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2506.20579v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20579v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.19786v1</id>
-    <updated>2025-06-24T16:52:49Z</updated>
-    <published>2025-06-24T16:52:49Z</published>
-    <title>The perfect spinfluid</title>
-    <summary>  We present a new formulation of non-dissipative relativistic spin
-hydrodynamics that incorporates spin degrees of freedom into the
-divergence-type theory framework. Due to the divergence-type structure, it is
-straightforward to enforce non-linear causality and symmetric hyperbolicity of
-the equations of motion, ensuring local well-posedness of the initial-value
-problem and stability of the theory. Furthermore, in a specific realization
-based on spin kinetic theory, we prove that the equations of motion remain
-non-linearly causal and symmetric-hyperbolic to all orders in the spin
-potential, provided a specific thermodynamic constraint is satisfied. This
-framework can be applied for numerical simulations to study the dynamics of
-spin-polarized fluids, such as the quark-gluon plasma in heavy-ion collisions.
+    <id>http://arxiv.org/abs/2506.20576v1</id>
+    <updated>2025-06-25T16:10:20Z</updated>
+    <published>2025-06-25T16:10:20Z</published>
+    <title>Vulnerability Disclosure through Adaptive Black-Box Adversarial Attacks
+  on NIDS</title>
+    <summary>  Adversarial attacks, wherein slight inputs are carefully crafted to mislead
+intelligent models, have attracted increasing attention. However, a critical
+gap persists between theoretical advancements and practical application,
+particularly in structured data like network traffic, where interdependent
+features complicate effective adversarial manipulations. Moreover, ambiguity in
+current approaches restricts reproducibility and limits progress in this field.
+Hence, existing defenses often fail to handle evolving adversarial attacks.
+This paper proposes a novel approach for black-box adversarial attacks, that
+addresses these limitations. Unlike prior work, which often assumes system
+access or relies on repeated probing, our method strictly respect black-box
+constraints, reducing interaction to avoid detection and better reflect
+real-world scenarios. We present an adaptive feature selection strategy using
+change-point detection and causality analysis to identify and target sensitive
+features to perturbations. This lightweight design ensures low computational
+cost and high deployability. Our comprehensive experiments show the attack's
+effectiveness in evading detection with minimal interaction, enhancing its
+adaptability and applicability in real-world scenarios. By advancing the
+understanding of adversarial attacks in network traffic, this work lays a
+foundation for developing robust defenses.
 </summary>
     <author>
-      <name>Nick Abboud</name>
+      <name>Sabrine Ennaji</name>
     </author>
     <author>
-      <name>Lorenzo Gavassino</name>
+      <name>Elhadj Benkhelifa</name>
     </author>
     <author>
-      <name>Rajeev Singh</name>
+      <name>Luigi V. Mancini</name>
     </author>
-    <author>
-      <name>Enrico Speranza</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">26 pages, 2 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.19786v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19786v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.19782v1</id>
-    <updated>2025-06-24T16:50:51Z</updated>
-    <published>2025-06-24T16:50:51Z</published>
-    <title>'Mic drop': on estimating the size of sub-mm droplets using a simple
-  condenser microphone</title>
-    <summary>  The size distribution of aerosol droplets is a key parameter in a myriad of
-processes, and it is typically measured with optical aids (e.g., lasers or
-cameras) that require sophisticated calibration, thus making the measurement
-cost intensive. We developed a new method to indirectly measure the size of
-small droplets using off-the-shelf &lt;\$1 electret microphones. In this method we
-exploit the natural oscillations that small droplets undergo after impacting a
-flat surface: by allowing droplets to land directly on a microphone diaphragm,
-we record the impact force they exert onto it and calculate the complex
-resonant frequencies of oscillations, from which their size can be inferred. To
-test this method, we recorded the impact signals of droplets of varying sizes
-and extracted the resonant frequencies that characterize each signal. Various
-sources of uncertainty in the experiments led to a range of frequencies that
-can characterize each droplet size, and hence a data-driven approach was taken
-to estimate the size from each set of measured frequencies. We employed a
-simple setting of neural network and trained it on the frequencies we measured
-from impact of droplets of prescribed radius. The network was then able to
-predict the droplet radius in the test group with an average relative error of
-2.7\% and a maximum of 8.6\%. These results, achieved with a data set of only
-320 measurements, demonstrate the potential for reliable size-distribution
-measurements via a simple and inexpensive method.
-</summary>
-    <author>
-      <name>Avshalom Offner</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.19782v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19782v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.19783v1</id>
-    <updated>2025-06-24T16:50:51Z</updated>
-    <published>2025-06-24T16:50:51Z</published>
-    <title>SAGE: Strategy-Adaptive Generation Engine for Query Rewriting</title>
-    <summary>  Query rewriting is pivotal for enhancing dense retrieval, yet current methods
-demand large-scale supervised data or suffer from inefficient reinforcement
-learning (RL) exploration. In this work, we first establish that guiding Large
-Language Models (LLMs) with a concise set of expert-crafted strategies, such as
-semantic expansion and entity disambiguation, substantially improves retrieval
-effectiveness on challenging benchmarks, including HotpotQA, FEVER, NFCorpus,
-and SciFact. Building on this insight, we introduce the Strategy-Adaptive
-Generation Engine (SAGE), which operationalizes these strategies in an RL
-framework. SAGE introduces two novel reward shaping mechanisms-Strategic Credit
-Shaping (SCS) and Contrastive Reward Shaping (CRS)-to deliver more informative
-learning signals. This strategy-guided approach not only achieves new
-state-of-the-art NDCG@10 results, but also uncovers a compelling emergent
-behavior: the agent learns to select optimal strategies, reduces unnecessary
-exploration, and generates concise rewrites, lowering inference cost without
-sacrificing performance. Our findings demonstrate that strategy-guided RL,
-enhanced with nuanced reward shaping, offers a scalable, efficient, and more
-interpretable paradigm for developing the next generation of robust information
-retrieval systems.
-</summary>
-    <author>
-      <name>Teng Wang</name>
-    </author>
-    <author>
-      <name>Hailei Gong</name>
-    </author>
-    <author>
-      <name>Changwang Zhang</name>
-    </author>
-    <author>
-      <name>Jun Wang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.19783v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19783v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.20576v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20576v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.19777v1</id>
-    <updated>2025-06-24T16:42:46Z</updated>
-    <published>2025-06-24T16:42:46Z</published>
-    <title>Alleviating User-Sensitive bias with Fair Generative Sequential
-  Recommendation Model</title>
-    <summary>  Recommendation fairness has recently attracted much attention. In the real
-world, recommendation systems are driven by user behavior, and since users with
-the same sensitive feature (e.g., gender and age) tend to have the same
-patterns, recommendation models can easily capture the strong correlation
-preference of sensitive features and thus cause recommendation unfairness.
-Diffusion model (DM) as a new generative model paradigm has achieved great
-success in recommendation systems. DM's ability to model uncertainty and
-represent diversity, and its modeling mechanism has a high degree of
-adaptability with the real-world recommendation process with bias. Therefore,
-we use DM to effectively model the fairness of recommendation and enhance the
-diversity. This paper proposes a FairGENerative sequential Recommendation model
-based on DM, FairGENRec. In the training phase, we inject random noise into the
-original distribution under the guidance of the sensitive feature recognition
-model, and a sequential denoise model is designed for the reverse
-reconstruction of items. Simultaneously, recommendation fairness modeling is
-completed by injecting multi-interests representational information that
-eliminates the bias of sensitive user features into the generated results. In
-the inference phase, the model obtains the noise in the form of noise addition
-by using the history interactions which is followed by reverse iteration to
-reconstruct the target item representation. Finally, our extensive experiments
-on three datasets demonstrate the dual enhancement effect of FairGENRec on
-accuracy and fairness, while the statistical analysis of the cases visualizes
-the degree of improvement on the fairness of the recommendation.
+    <id>http://arxiv.org/abs/2506.20573v1</id>
+    <updated>2025-06-25T16:07:59Z</updated>
+    <published>2025-06-25T16:07:59Z</published>
+    <title>LARP: Learner-Agnostic Robust Data Prefiltering</title>
+    <summary>  The widespread availability of large public datasets is a key factor behind
+the recent successes of statistical inference and machine learning methods.
+However, these datasets often contain some low-quality or contaminated data, to
+which many learning procedures are sensitive. Therefore, the question of
+whether and how public datasets should be prefiltered to facilitate accurate
+downstream learning arises. On a technical level this requires the construction
+of principled data prefiltering methods which are learner-agnostic robust, in
+the sense of provably protecting a set of pre-specified downstream learners
+from corrupted data. In this work, we formalize the problem of Learner-Agnostic
+Robust data Prefiltering (LARP), which aims at finding prefiltering procedures
+that minimize a worst-case loss over a pre-specified set of learners. We first
+instantiate our framework in the context of scalar mean estimation with Huber
+estimators under the Huber data contamination model. We provide a hardness
+result on a specific problem instance and analyze several natural prefiltering
+procedures. Our theoretical results indicate that performing LARP on a
+heterogeneous set of learners leads to some loss in model performance compared
+to the alternative of prefiltering data for each learner/use-case individually.
+We explore the resulting utility loss and its dependence on the problem
+parameters via extensive experiments on real-world image and tabular data,
+observing statistically significant reduction in utility. Finally, we model the
+trade-off between the utility drop and the cost of repeated (learner-specific)
+prefiltering within a game-theoretic framework and showcase benefits of LARP
+for large datasets.
 </summary>
     <author>
-      <name>Yang Liu</name>
+      <name>Kristian Minchev</name>
     </author>
     <author>
-      <name>Feng Wu</name>
+      <name>Dimitar Iliev Dimitrov</name>
     </author>
     <author>
-      <name>Xuefang Zhu</name>
+      <name>Nikola Konstantinov</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.19777v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.19777v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.20573v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20573v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.20558v1</id>
+    <updated>2025-06-25T15:56:07Z</updated>
+    <published>2025-06-25T15:56:07Z</published>
+    <title>CCISolver: End-to-End Detection and Repair of Method-Level Code-Comment
+  Inconsistency</title>
+    <summary>  Comments within code serve as a crucial foundation for software
+documentation, facilitating developers to communicate and understand the code
+effectively. However, code-comment inconsistency (CCI) can negatively affect
+software development, testing, and maintenance. Recent efforts to mitigate this
+issue have emerged, but existing studies often suffer from inaccurate datasets
+and inadequate solutions, weakening their practical effectiveness. In this
+study, we first conduct a quantitative analysis of existing datasets, revealing
+a substantial portion of sampled data are mislabeled. To address these data
+limitations, we introduce CCIBench, a refined dataset comprising high-quality
+data, to support the training and evaluation of method-level CCI methods.
+Furthermore, we present an innovative end-to-end LLM-based framework,
+CCISolver, designed to improve code quality by identifying and rectifying CCIs.
+Comprehensive evaluations demonstrate CCISolver's superior performance. For
+detection, it establishes a new state-of-the-art with an F1-score of 89.54%. In
+fixing task, it achieves a remarkable 18.84% relative improvement in GLEU score
+over the strongest baseline. This superiority is confirmed by human evaluation,
+where CCISolver's fixing success rate of 0.6533 significantly surpasses
+existing methods. Critically, in a practical end-to-end setting, CCISolver's
+innovative architecture is approximately 36% faster for inference than the
+baseline model, underscoring its scalability and real-world applicability.
+</summary>
+    <author>
+      <name>Renyi Zhong</name>
+    </author>
+    <author>
+      <name>Yintong Huo</name>
+    </author>
+    <author>
+      <name>Wenwei Gu</name>
+    </author>
+    <author>
+      <name>Jinxi Kuang</name>
+    </author>
+    <author>
+      <name>Zhihan Jiang</name>
+    </author>
+    <author>
+      <name>Guangba Yu</name>
+    </author>
+    <author>
+      <name>Yichen Li</name>
+    </author>
+    <author>
+      <name>David Lo</name>
+    </author>
+    <author>
+      <name>Michael R. Lyu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This manuscript is under review</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.20558v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.20558v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
