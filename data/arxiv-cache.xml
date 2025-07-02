@@ -1,652 +1,533 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-01T01:05:23Z -->
+<!-- Last updated: 2025-07-02T00:58:52Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-06-30T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">115928</opensearch:totalResults>
+  <updated>2025-07-01T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116069</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2506.22432v1</id>
-    <updated>2025-06-27T17:59:01Z</updated>
-    <published>2025-06-27T17:59:01Z</published>
-    <title>Shape-for-Motion: Precise and Consistent Video Editing with 3D Proxy</title>
-    <summary>  Recent advances in deep generative modeling have unlocked unprecedented
-opportunities for video synthesis. In real-world applications, however, users
-often seek tools to faithfully realize their creative editing intentions with
-precise and consistent control. Despite the progress achieved by existing
-methods, ensuring fine-grained alignment with user intentions remains an open
-and challenging problem. In this work, we present Shape-for-Motion, a novel
-framework that incorporates a 3D proxy for precise and consistent video
-editing. Shape-for-Motion achieves this by converting the target object in the
-input video to a time-consistent mesh, i.e., a 3D proxy, allowing edits to be
-performed directly on the proxy and then inferred back to the video frames. To
-simplify the editing process, we design a novel Dual-Propagation Strategy that
-allows users to perform edits on the 3D mesh of a single frame, and the edits
-are then automatically propagated to the 3D meshes of the other frames. The 3D
-meshes for different frames are further projected onto the 2D space to produce
-the edited geometry and texture renderings, which serve as inputs to a
-decoupled video diffusion model for generating edited results. Our framework
-supports various precise and physically-consistent manipulations across the
-video frames, including pose editing, rotation, scaling, translation, texture
-modification, and object composition. Our approach marks a key step toward
-high-quality, controllable video editing workflows. Extensive experiments
-demonstrate the superiority and effectiveness of our approach. Project page:
-https://shapeformotion.github.io/
+    <id>http://arxiv.org/abs/2506.24062v1</id>
+    <updated>2025-06-30T17:13:00Z</updated>
+    <published>2025-06-30T17:13:00Z</published>
+    <title>Scout-Dose-TCM: Direct and Prospective Scout-Based Estimation of
+  Personalized Organ Doses from Tube Current Modulated CT Exams</title>
+    <summary>  This study proposes Scout-Dose-TCM for direct, prospective estimation of
+organ-level doses under tube current modulation (TCM) and compares its
+performance to two established methods. We analyzed contrast-enhanced
+chest-abdomen-pelvis CT scans from 130 adults (120 kVp, TCM). Reference doses
+for six organs (lungs, kidneys, liver, pancreas, bladder, spleen) were
+calculated using MC-GPU and TotalSegmentator. Based on these, we trained
+Scout-Dose-TCM, a deep learning model that predicts organ doses corresponding
+to discrete cosine transform (DCT) basis functions, enabling real-time
+estimates for any TCM profile. The model combines a feature learning module
+that extracts contextual information from lateral and frontal scouts and scan
+range with a dose learning module that output DCT-based dose estimates. A
+customized loss function incorporated the DCT formulation during training. For
+comparison, we implemented size-specific dose estimation per AAPM TG 204
+(Global CTDIvol) and its organ-level TCM-adapted version (Organ CTDIvol). A
+5-fold cross-validation assessed generalizability by comparing mean absolute
+percentage dose errors and r-squared correlations with benchmark doses. Average
+absolute percentage errors were 13% (Global CTDIvol), 9% (Organ CTDIvol), and
+7% (Scout-Dose-TCM), with bladder showing the largest discrepancies (15%, 13%,
+and 9%). Statistical tests confirmed Scout-Dose-TCM significantly reduced
+errors vs. Global CTDIvol across most organs and improved over Organ CTDIvol
+for the liver, bladder, and pancreas. It also achieved higher r-squared values,
+indicating stronger agreement with Monte Carlo benchmarks. Scout-Dose-TCM
+outperformed Global CTDIvol and was comparable to or better than Organ CTDIvol,
+without requiring organ segmentations at inference, demonstrating its promise
+as a tool for prospective organ-level dose estimation in CT.
 </summary>
     <author>
-      <name>Yuhao Liu</name>
+      <name>Maria Jose Medrano</name>
     </author>
     <author>
-      <name>Tengfei Wang</name>
+      <name>Sen Wang</name>
     </author>
     <author>
-      <name>Fang Liu</name>
+      <name>Liyan Sun</name>
     </author>
     <author>
-      <name>Zhenwei Wang</name>
+      <name>Abdullah-Al-Zubaer Imran</name>
     </author>
     <author>
-      <name>Rynson W. H. Lau</name>
+      <name>Jennie Cao</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.22432v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22432v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Grant Stevens</name>
+    </author>
+    <author>
+      <name>Justin Ruey Tse</name>
+    </author>
+    <author>
+      <name>Adam S. Wang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.24062v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24062v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.22421v1</id>
-    <updated>2025-06-27T17:46:13Z</updated>
-    <published>2025-06-27T17:46:13Z</published>
-    <title>Estimating causal distances with non-causal ones</title>
-    <summary>  The adapted Wasserstein ($AW$) distance refines the classical Wasserstein
-($W$) distance by incorporating the temporal structure of stochastic processes.
-This makes the $AW$-distance well-suited as a robust distance for many dynamic
-stochastic optimization problems where the classical $W$-distance fails.
-However, estimating the $AW$-distance is a notably challenging task, compared
-to the classical $W$-distance. In the present work, we build a sharp estimate
-for the $AW$-distance in terms of the $W$-distance, for smooth measures. This
-reduces estimating the $AW$-distance to estimating the $W$-distance, where many
-well-established classical results can be leveraged. As an application, we
-prove a fast convergence rate of the kernel-based empirical estimator under the
-$AW$-distance, which approaches the Monte-Carlo rate ($n^{-1/2}$) in the regime
-of highly regular densities. These results are accomplished by deriving a sharp
-bi-Lipschitz estimate of the adapted total variation distance by the classical
-total variation distance.
+    <id>http://arxiv.org/abs/2506.24045v1</id>
+    <updated>2025-06-30T16:50:48Z</updated>
+    <published>2025-06-30T16:50:48Z</published>
+    <title>Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on
+  Heterogeneous SoC</title>
+    <summary>  The proliferation of agentic Large Language Models (LLMs) on personal devices
+introduces a new class of workloads characterized by a dichotomy of objectives.
+Reactive tasks, initiated by users, demand immediate, low-latency responses,
+while proactive tasks operate invisibly and prioritize throughput. Existing
+on-device LLM engines, designed for isolated inferences, fail to efficiently
+manage these concurrent and conflicting requests on consumer-grade
+heterogeneous SoCs with CPU, integrated GPU, and NPU. This paper introduces
+Agent.xpu, an efficient serving system for agentic LLM workloads on
+memory-unified heterogeneous SoCs. With dedicated offline profiling, Agent.xpu
+first constructs a heterogeneous execution graph, which fuses and chunks model
+kernels for affinity-guided, elastic accelerator mapping with predictive kernel
+annotation. At runtime, its online scheduler enables fine-grained, kernel-level
+preemption to guarantee the responsiveness of reactive tasks. To maximize SoC
+utilization, it adopts slack-aware kernel backfill to opportunistically append
+proactive tasks, and mitigates NPU-iGPU contention via bandwidth-aware
+dispatch. Evaluation on an Intel Core Ultra SoC shows that Agent.xpu achieves
+4.6$\times$ lower latency for reactive tasks and sustains
+1.6$\times$-6.8$\times$ higher throughput for proactive tasks compared to
+state-of-the-art inference engines.
 </summary>
     <author>
-      <name>Beatrice Acciaio</name>
+      <name>Xinming Wei</name>
     </author>
     <author>
-      <name>Songyan Hou</name>
+      <name>Jiahao Zhang</name>
     </author>
     <author>
-      <name>Gudmund Pammer</name>
+      <name>Haoran Li</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">30 pages, 3 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.22421v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22421v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.22396v1</id>
-    <updated>2025-06-27T17:10:32Z</updated>
-    <published>2025-06-27T17:10:32Z</published>
-    <title>QuickSilver -- Speeding up LLM Inference through Dynamic Token Halting,
-  KV Skipping, Contextual Token Fusion, and Adaptive Matryoshka Quantization</title>
-    <summary>  Inference accounts for the majority of latency and energy consumption in
-large language model (LLM) deployments, often exceeding 90% of total cost.
-While training-time efficiency has seen extensive progress, runtime
-optimization remains a key bottleneck, particularly under autoregressive
-decoding. Existing approaches -- such as pruning, quantization, early exits,
-and speculative decoding -- often require retraining, architectural changes, or
-disrupt decoding compatibility. We introduce QuickSilver, a modular,
-token-level framework that enables semantic adaptivity at inference time
-without altering model weights or structure. QuickSilver integrates four
-synergistic mechanisms:
-  (i) Dynamic Token Halting, which halts computation for tokens with converged
-representations; (ii) KV Cache Skipping, which selectively suppresses memory
-writes to reduce attention overhead; and (iii) Contextual Token Fusion, which
-collapses redundant tokens into shared paths to shrink sequence length.
-  Unlike speculative decoding or MoE routing, QuickSilver operates entirely on
-frozen, dense models and requires no auxiliary networks. Applied to GPT-2 and
-Llama-2 across WikiText-103 and C4, QuickSilver achieves up to 39.6% FLOP
-reduction with negligible perplexity degradation (&lt;=0.2).
-</summary>
     <author>
-      <name>Danush Khanna</name>
+      <name>Jiayu Chen</name>
     </author>
     <author>
-      <name>Aditya Kumar Guru</name>
+      <name>Rui Qu</name>
     </author>
     <author>
-      <name>Srivarshinee Sridhar</name>
+      <name>Maoliang Li</name>
     </author>
     <author>
-      <name>Zidan Ahmed</name>
+      <name>Xiang Chen</name>
     </author>
     <author>
-      <name>Rubhav Bahirwani</name>
+      <name>Guojie Luo</name>
     </author>
-    <author>
-      <name>Meetu Malhotra</name>
-    </author>
-    <author>
-      <name>Vinija Jain</name>
-    </author>
-    <author>
-      <name>Aman Chadha</name>
-    </author>
-    <author>
-      <name>Amitava Das</name>
-    </author>
-    <author>
-      <name>Kripabandhu Ghosh</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Under submission</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.22396v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22396v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.0; I.2.7" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.22395v1</id>
-    <updated>2025-06-27T17:09:44Z</updated>
-    <published>2025-06-27T17:09:44Z</published>
-    <title>Test-Time Consistency in Vision Language Models</title>
-    <summary>  Vision-Language Models (VLMs) have achieved impressive performance across a
-wide range of multimodal tasks, yet they often exhibit inconsistent behavior
-when faced with semantically equivalent inputs, undermining their reliability
-and robustness. Recent benchmarks, such as MM-R3, highlight that even
-state-of-the-art VLMs can produce divergent predictions across semantically
-equivalent inputs, despite maintaining high average accuracy. Prior work
-addresses this issue by modifying model architectures or conducting large-scale
-fine-tuning on curated datasets. In contrast, we propose a simple and effective
-test-time consistency framework that enhances semantic consistency without
-supervised re-training. Our method is entirely post-hoc, model-agnostic, and
-applicable to any VLM with access to its weights. Given a single test point, we
-enforce consistent predictions via two complementary objectives: (i) a
-Cross-Entropy Agreement Loss that aligns predictive distributions across
-semantically equivalent inputs, and (ii) a Pseudo-Label Consistency Loss that
-draws outputs toward a self-averaged consensus. Our method is plug-and-play and
-leverages information from a single test input itself to improve consistency.
-Experiments on the MM-R3 benchmark show that our framework yields substantial
-gains in consistency across state-of-the-art models, establishing a new
-direction for inference-time adaptation in multimodal learning.
-</summary>
-    <author>
-      <name>Shih-Han Chou</name>
-    </author>
-    <author>
-      <name>Shivam Chandhok</name>
-    </author>
-    <author>
-      <name>James J. Little</name>
-    </author>
-    <author>
-      <name>Leonid Sigal</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.22395v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22395v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.22385v1</id>
-    <updated>2025-06-27T16:51:15Z</updated>
-    <published>2025-06-27T16:51:15Z</published>
-    <title>Can Video Large Multimodal Models Think Like Doubters-or Double-Down: A
-  Study on Defeasible Video Entailment</title>
-    <summary>  Video Large Multimodal Models (VLMMs) have made impressive strides in
-understanding video content, but they often struggle with abstract and adaptive
-reasoning-the ability to revise their interpretations when new information
-emerges. In reality, conclusions are rarely set in stone; additional context
-can strengthen or weaken an initial inference. To address this, we introduce
-Defeasible Video Entailment (DVidE), a new task that challenges models to think
-like doubters, constantly updating their reasoning based on evolving evidence.
-In DVidE, given a video premise and a textual hypothesis, models must determine
-whether a new update strengthens or weakens the hypothesis (classification
-version) or generate a coherent update that modifies the entailment
-relationship (generation version). For solving the classification task, we
-propose the Chain of Counterfactual Thought framework, utilizing counterfactual
-reasoning, ASR-enhanced video content, and rationale refinement to reduce
-inference bias. For the generation task, we develop a framework that combines
-ASR output with a Large Language Model (LLM) to produce coherent, contextually
-relevant updates aligned with the intended strengthener or weakener goals.
-Additionally, we introduce a novel benchmark dataset, with
-strengthener/weakener annotations and an LLM-based evaluation metric
-specifically designed for assessing generative performance. Experimental
-results demonstrate significant improvements, highlighting our proposed method
-in enhancing dynamic reasoning capabilities of VLMMs.
-</summary>
-    <author>
-      <name>Yue Zhang</name>
-    </author>
-    <author>
-      <name>Jilei Sun</name>
-    </author>
-    <author>
-      <name>Yunhui Guo</name>
-    </author>
-    <author>
-      <name>Vibhav Gogate</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.22385v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22385v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.22376v1</id>
-    <updated>2025-06-27T16:44:11Z</updated>
-    <published>2025-06-27T16:44:11Z</published>
-    <title>Probabilistic Optimality for Inference-time Scaling</title>
-    <summary>  Inference-time scaling has emerged as a powerful technique for enhancing the
-reasoning performance of Large Language Models (LLMs). However, existing
-approaches often rely on heuristic strategies for parallel sampling, lacking a
-principled foundation. To address this gap, we propose a probabilistic
-framework that formalizes the optimality of inference-time scaling under the
-assumption that parallel samples are independently and identically distributed
-(i.i.d.), and where the Best-of-N selection strategy follows a probability
-distribution that can be estimated. Within this framework, we derive a
-theoretical lower bound on the required number of samples to achieve a target
-performance level, providing the first principled guidance for
-compute-efficient scaling. Leveraging this insight, we develop
-\textsc{OptScale}, a practical algorithm that dynamically determines the
-optimal number of sampled responses. \textsc{OptScale} employs a language
-model-based predictor to estimate probabilistic prior parameters, enabling the
-decision of the minimal number of samples needed that satisfy predefined
-performance thresholds and confidence levels. Extensive experiments on
-mathematical reasoning benchmarks (including MATH-500, GSM8K, AIME, and AMC)
-demonstrate that \textsc{OptScale} significantly reduces sampling overhead
-while remaining better or on par with state-of-the-art reasoning performance.
-Our work offers both a theoretical foundation and a practical solution for
-principled inference-time scaling, addressing a critical gap in the efficient
-deployment of LLMs for complex reasoning.
-</summary>
-    <author>
-      <name>Youkang Wang</name>
-    </author>
-    <author>
-      <name>Jian Wang</name>
-    </author>
-    <author>
-      <name>Rubing Chen</name>
-    </author>
-    <author>
-      <name>Xiao-Yong Wei</name>
-    </author>
-    <author>
-      <name>Qing Li</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.22376v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22376v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.22367v1</id>
-    <updated>2025-06-27T16:29:25Z</updated>
-    <published>2025-06-27T16:29:25Z</published>
-    <title>Constraining the Stellar-to-Halo Mass Relation with Galaxy Clustering
-  and Weak Lensing from DES Year 3 Data</title>
-    <summary>  We develop a framework to study the relation between the stellar mass of a
-galaxy and the total mass of its host dark matter halo using galaxy clustering
-and galaxy-galaxy lensing measurements. We model a wide range of scales,
-roughly from $\sim 100 \; {\rm kpc}$ to $\sim 100 \; {\rm Mpc}$, using a
-theoretical framework based on the Halo Occupation Distribution and data from
-Year 3 of the Dark Energy Survey (DES) dataset. The new advances of this work
-include: 1) the generation and validation of a new stellar mass-selected galaxy
-sample in the range of $\log M_\star/M_\odot \sim 9.6$ to $\sim 11.5$; 2) the
-joint-modeling framework of galaxy clustering and galaxy-galaxy lensing that is
-able to describe our stellar mass-selected sample deep into the 1-halo regime;
-and 3) stellar-to-halo mass relation (SHMR) constraints from this dataset. In
-general, our SHMR constraints agree well with existing literature with various
-weak lensing measurements. We constrain the free parameters in the SHMR
-functional form $\log M_\star (M_h) = \log(\epsilon M_1) + f\left[ \log\left(
-M_h / M_1 \right) \right] - f(0)$, with $f(x) \equiv -\log(10^{\alpha x}+1) +
-\delta [\log(1+\exp(x))]^\gamma / [1+\exp(10^{-x})]$, to be $\log M_1 =
-11.559^{+0.334}_{-0.415}$, $\log \epsilon = -1.689^{+0.333}_{-0.220}$, $\alpha
-= -1.637^{+0.107}_{-0.096}$, $\gamma = 0.588^{+0.265}_{-0.220}$ and $\delta =
-4.227^{+2.223}_{-1.776}$. The inferred average satellite fraction is within
-$\sim 5-35\%$ for our fiducial results and we do not see any clear trends with
-redshift or stellar mass. Furthermore, we find that the inferred average galaxy
-bias values follow the generally expected trends with stellar mass and
-redshift. Our study is the first SHMR in DES in this mass range, and we expect
-the stellar mass sample to be of general interest for other science cases.
-</summary>
-    <author>
-      <name>G. Zacharegkas</name>
-    </author>
-    <author>
-      <name>C. Chang</name>
-    </author>
-    <author>
-      <name>J. Prat</name>
-    </author>
-    <author>
-      <name>W. Hartley</name>
-    </author>
-    <author>
-      <name>S. Mucesh</name>
-    </author>
-    <author>
-      <name>A. Alarcon</name>
-    </author>
-    <author>
-      <name>O. Alves</name>
-    </author>
-    <author>
-      <name>A. Amon</name>
-    </author>
-    <author>
-      <name>K. Bechtol</name>
-    </author>
-    <author>
-      <name>M. R. Becker</name>
-    </author>
-    <author>
-      <name>G. Bernstein</name>
-    </author>
-    <author>
-      <name>J. Blazek</name>
-    </author>
-    <author>
-      <name>A. Campos</name>
-    </author>
-    <author>
-      <name>A. Carnero Rosell</name>
-    </author>
-    <author>
-      <name>M. Carrasco Kind</name>
-    </author>
-    <author>
-      <name>R. Cawthon</name>
-    </author>
-    <author>
-      <name>R. Chen</name>
-    </author>
-    <author>
-      <name>A. Choi</name>
-    </author>
-    <author>
-      <name>J. Cordero</name>
-    </author>
-    <author>
-      <name>C. Davis</name>
-    </author>
-    <author>
-      <name>J. Derose</name>
-    </author>
-    <author>
-      <name>H. Diehl</name>
-    </author>
-    <author>
-      <name>S. Dodelson</name>
-    </author>
-    <author>
-      <name>C. Doux</name>
-    </author>
-    <author>
-      <name>A. Drlica-Wagner</name>
-    </author>
-    <author>
-      <name>K. Eckert</name>
-    </author>
-    <author>
-      <name>T. F. Eifler</name>
-    </author>
-    <author>
-      <name>J. Elvin-Poole</name>
-    </author>
-    <author>
-      <name>S. Everett</name>
-    </author>
-    <author>
-      <name>X. Fang</name>
-    </author>
-    <author>
-      <name>A. Ferte</name>
-    </author>
-    <author>
-      <name>M. Gatti</name>
-    </author>
-    <author>
-      <name>G. Giannini</name>
-    </author>
-    <author>
-      <name>D. Gruen</name>
-    </author>
-    <author>
-      <name>R. A. Gruendl</name>
-    </author>
-    <author>
-      <name>I. Harrison</name>
-    </author>
-    <author>
-      <name>H. Huang</name>
-    </author>
-    <author>
-      <name>E. M. Huff</name>
-    </author>
-    <author>
-      <name>M. Jarvis</name>
-    </author>
-    <author>
-      <name>E. Krause</name>
-    </author>
-    <author>
-      <name>N. Kuropatkin</name>
-    </author>
-    <author>
-      <name>P. F. Leget</name>
-    </author>
-    <author>
-      <name>N. Maccrann</name>
-    </author>
-    <author>
-      <name>J. McCullough</name>
-    </author>
-    <author>
-      <name>J. Myles</name>
-    </author>
-    <author>
-      <name>A. N. Alsina</name>
-    </author>
-    <author>
-      <name>S. Pandey</name>
-    </author>
-    <author>
-      <name>M. Raveri</name>
-    </author>
-    <author>
-      <name>R. P. Rollins</name>
-    </author>
-    <author>
-      <name>A. Roodman</name>
-    </author>
-    <author>
-      <name>A. J. Ross</name>
-    </author>
-    <author>
-      <name>E. S. Rykoff</name>
-    </author>
-    <author>
-      <name>C. Sanchez</name>
-    </author>
-    <author>
-      <name>L. F. Secco</name>
-    </author>
-    <author>
-      <name>I. Sevilla-Noarbe</name>
-    </author>
-    <author>
-      <name>E. Sheldon</name>
-    </author>
-    <author>
-      <name>T. Shin</name>
-    </author>
-    <author>
-      <name>M. A. Troxel</name>
-    </author>
-    <author>
-      <name>I. Tutusaus</name>
-    </author>
-    <author>
-      <name>B. Yanny</name>
-    </author>
-    <author>
-      <name>B. Yin</name>
-    </author>
-    <author>
-      <name>Y. Zhang</name>
-    </author>
-    <author>
-      <name>J. Zuntz</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">34 pages, main text ends at page 24, 6 appendices, 19 figures, 4
-  tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.22367v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22367v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2506.22362v1</id>
-    <updated>2025-06-27T16:23:07Z</updated>
-    <published>2025-06-27T16:23:07Z</published>
-    <title>DiffSoundStream: Efficient Speech Tokenization via Diffusion Decoding</title>
-    <summary>  Token-based language modeling is a prominent approach for speech generation,
-where tokens are obtained by quantizing features from self-supervised learning
-(SSL) models and extracting codes from neural speech codecs, generally referred
-to as semantic tokens and acoustic tokens. These tokens are often modeled
-autoregressively, with the inference speed being constrained by the token rate.
-In this work, we propose DiffSoundStream, a solution that improves the
-efficiency of speech tokenization in non-streaming scenarios through two
-techniques: (1) conditioning the neural codec on semantic tokens to minimize
-redundancy between semantic and acoustic tokens, and (2) leveraging latent
-diffusion models to synthesize high-quality waveforms from semantic and
-coarse-level acoustic tokens. Experiments show that at 50 tokens per second,
-DiffSoundStream achieves speech quality on par with a standard SoundStream
-model operating at twice the token rate. Additionally, we achieve step-size
-distillation using just four diffusion sampling steps with only a minor quality
-loss.
-</summary>
-    <author>
-      <name>Yang Yang</name>
-    </author>
-    <author>
-      <name>Yunpeng Li</name>
-    </author>
-    <author>
-      <name>George Sung</name>
-    </author>
-    <author>
-      <name>Shao-Fu Shih</name>
-    </author>
-    <author>
-      <name>Craig Dooley</name>
-    </author>
-    <author>
-      <name>Alessio Centazzo</name>
-    </author>
-    <author>
-      <name>Ramanan Rajeswaran</name>
-    </author>
-    <link href="http://arxiv.org/abs/2506.22362v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22362v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2506.24045v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24045v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.22334v1</id>
-    <updated>2025-06-27T15:40:42Z</updated>
-    <published>2025-06-27T15:40:42Z</published>
-    <title>Linking climate and dengue in the Philippines using a two-stage Bayesian
-  spatio-temporal model</title>
-    <summary>  Dengue is an infectious disease which poses significant socioeconomic and
-disease burden in many tropical and subtropical regions of the world. This work
-aims to provide additional insight into the association between dengue and
-climate in the Philippines. We employ a two-stage modelling framework: the
-first stage fits climate models, while the second stage fits a health model
-that uses the climate predictions from the first stage as inputs. We postulate
-a Bayesian spatio-temporal model and use the integrated nested Laplace
-approximation (INLA) approach for inference. To account for the uncertainty in
-the climate models, we perform posterior sampling and then perform Bayesian
-model averaging to compute the final posterior estimates of second-stage model
-parameters. The results indicate that temperature is positively associated with
-dengue, although extremely hot conditions tend to have a negative effect.
-Moreover, the relationship between rainfall and dengue varies in space. In
-areas with uniform amounts of rainfall all year round, rainfall is negatively
-associated with dengue. In contrast, in regions with pronounced dry and wet
-season, rainfall shows a positive association with dengue. Finally, there
-remains unexplained structured variation in space and time after accounting for
-the impact of climate variables and other covariates.
+    <id>http://arxiv.org/abs/2506.24041v1</id>
+    <updated>2025-06-30T16:48:49Z</updated>
+    <published>2025-06-30T16:48:49Z</published>
+    <title>Unsupervised Sparse Coding-based Spiking Neural Network for Real-time
+  Spike Sorting</title>
+    <summary>  Spike sorting is a crucial step in decoding multichannel extracellular neural
+signals, enabling the identification of individual neuronal activity. A key
+challenge in brain-machine interfaces (BMIs) is achieving real-time, low-power
+spike sorting at the edge while keeping high neural decoding performance. This
+study introduces the Neuromorphic Sparse Sorter (NSS), a compact two-layer
+spiking neural network optimized for efficient spike sorting. NSS leverages the
+Locally Competitive Algorithm (LCA) for sparse coding to extract relevant
+features from noisy events with reduced computational demands. NSS learns to
+sort detected spike waveforms in an online fashion and operates entirely
+unsupervised. To exploit multi-bit spike coding capabilities of neuromorphic
+platforms like Intel's Loihi 2, a custom neuron model was implemented, enabling
+flexible power-performance trade-offs via adjustable spike bit-widths.
+Evaluations on simulated and real-world tetrode signals with biological drift
+showed NSS outperformed established pipelines such as WaveClus3 and PCA+KMeans.
+With 2-bit graded spikes, NSS on Loihi 2 outperformed NSS implemented with
+leaky integrate-and-fire neuron and achieved an F1-score of 77% (+10%
+improvement) while consuming 8.6mW (+1.65mW) when tested on a drifting
+recording, with a computational processing time of 0.25ms (+60 us) per
+inference.
 </summary>
     <author>
-      <name>Stephen Jun Villejo</name>
+      <name>Alexis Melot</name>
     </author>
     <author>
-      <name>Sara Martino</name>
+      <name>Sean U. N. Wood</name>
     </author>
     <author>
-      <name>Janine Illian</name>
+      <name>Yannick Coffinier</name>
     </author>
-    <link href="http://arxiv.org/abs/2506.22334v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22334v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Pierre Yger</name>
+    </author>
+    <author>
+      <name>Fabien Alibart</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Main article : 16 pages, 7 figures and 4 tables. Supplementary
+  Material starts at page 17 with 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.24041v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24041v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.24024v1</id>
+    <updated>2025-06-30T16:31:26Z</updated>
+    <published>2025-06-30T16:31:26Z</published>
+    <title>Post-processing of EEG-based Auditory Attention Decoding Decisions via
+  Hidden Markov Models</title>
+    <summary>  Auditory attention decoding (AAD) algorithms exploit brain signals, such as
+electroencephalography (EEG), to identify which speaker a listener is focusing
+on in a multi-speaker environment. While state-of-the-art AAD algorithms can
+identify the attended speaker on short time windows, their predictions are
+often too inaccurate for practical use. In this work, we propose augmenting AAD
+with a hidden Markov model (HMM) that models the temporal structure of
+attention. More specifically, the HMM relies on the fact that a subject is much
+less likely to switch attention than to keep attending the same speaker at any
+moment in time. We show how a HMM can significantly improve existing AAD
+algorithms in both causal (real-time) and non-causal (offline) settings. We
+further demonstrate that HMMs outperform existing postprocessing approaches in
+both accuracy and responsiveness, and explore how various factors such as
+window length, switching frequency, and AAD accuracy influence overall
+performance. The proposed method is computationally efficient, intuitive to use
+and applicable in both real-time and offline settings.
+</summary>
+    <author>
+      <name>Nicolas Heintz</name>
+    </author>
+    <author>
+      <name>Tom Francart</name>
+    </author>
+    <author>
+      <name>Alexander Bertrand</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.24024v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24024v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.24013v1</id>
+    <updated>2025-06-30T16:18:06Z</updated>
+    <published>2025-06-30T16:18:06Z</published>
+    <title>CoMMiT: Co-informed inference of microbiome-metabolome interactions via
+  transfer learning</title>
+    <summary>  Recent multi-omic microbiome studies enable integrative analysis of microbes
+and metabolites, uncovering their associations with various host conditions.
+Such analyses require multivariate models capable of accounting for the complex
+correlation structures between microbes and metabolites. However, existing
+multivariate models often suffer from low statistical power for detecting
+microbiome-metabolome interactions due to small sample sizes and weak
+biological signals. To address these challenges, we introduce CoMMiT,
+Co-informed inference of Microbiome-Metabolome Interactions via novel Transfer
+learning models. Unlike conventional transfer-learning methods that borrow
+information from external datasets, CoMMiT leverages similarities across
+metabolites within a single cohort, reducing the risk of negative transfer
+often caused by differences in sequencing platforms and bioinformatic pipelines
+across studies. CoMMiT operates under the flexible assumption that auxiliary
+metabolites are collectively informative for the target metabolite, without
+requiring individual auxiliary metabolites to be informative. CoMMiT uses a
+novel data-driven approach to selecting the optimal set of auxiliary
+metabolites. Using this optimal set, CoMMiT employs a de-biasing framework to
+enable efficient calculation of p-values, facilitating the identification of
+statistically significant microbiome-metabolome interactions. Applying CoMMiT
+to a feeding study reveals biologically meaningful microbiome-metabolome
+interactions under a low glycemic load diet, demonstrating the diet-host link
+through gut metabolism.
+</summary>
+    <author>
+      <name>Leiyue Li</name>
+    </author>
+    <author>
+      <name>Chenglong Ye</name>
+    </author>
+    <author>
+      <name>Tim Randolph</name>
+    </author>
+    <author>
+      <name>Meredith Hullar</name>
+    </author>
+    <author>
+      <name>Johanna Lampe</name>
+    </author>
+    <author>
+      <name>Marian Neuhouser</name>
+    </author>
+    <author>
+      <name>Daniel Raftery</name>
+    </author>
+    <author>
+      <name>Yue Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">38 pages, 5 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.24013v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24013v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2506.22331v1</id>
-    <updated>2025-06-27T15:39:48Z</updated>
-    <published>2025-06-27T15:39:48Z</published>
-    <title>Less Greedy Equivalence Search</title>
-    <summary>  Greedy Equivalence Search (GES) is a classic score-based algorithm for causal
-discovery from observational data. In the sample limit, it recovers the Markov
-equivalence class of graphs that describe the data. Still, it faces two
-challenges in practice: computational cost and finite-sample accuracy. In this
-paper, we develop Less Greedy Equivalence Search (LGES), a variant of GES that
-retains its theoretical guarantees while partially addressing these
-limitations. LGES modifies the greedy step: rather than always applying the
-highest-scoring insertion, it avoids edge insertions between variables for
-which the score implies some conditional independence. This more targeted
-search yields up to a \(10\)-fold speed-up and a substantial reduction in
-structural error relative to GES. Moreover, LGES can guide the search using
-prior assumptions, while correcting these assumptions when contradicted by the
-data. Finally, LGES can exploit interventional data to refine the learned
-observational equivalence class. We prove that LGES recovers the true
-equivalence class in the sample limit from observational and interventional
-data, even with misspecified prior assumptions. Experiments demonstrate that
-LGES outperforms GES and other baselines in speed, accuracy, and robustness to
-misspecified assumptions. Our code is available at
-https://github.com/CausalAILab/lges.
+    <id>http://arxiv.org/abs/2506.24010v1</id>
+    <updated>2025-06-30T16:14:09Z</updated>
+    <published>2025-06-30T16:14:09Z</published>
+    <title>Anchoring Stellar Age Indicators: A Cross-Calibration of [C/N] and
+  Gyrochronology Ages via the Age-Velocity-Dispersion Relation</title>
+    <summary>  Determining stellar ages is challenging, as it depends on other stellar
+parameters in a non-linear way and often relies on stellar evolution models to
+infer the underlying relation between these parameters and age. This complexity
+increases when comparing different age-dating methods, as they rely on distinct
+indicators and are often applicable to non-overlapping regions of the
+color-magnitude diagram. Moreover, many empirical calibration methods rely on
+pre-determined ages, often from open clusters or asteroseismology, which only
+cover a limited parameter space. Fortunately, the age-velocity-dispersion
+relation (AVR), in which the velocity dispersion increases with age, is a
+universal feature among stars of all evolutionary stages. In this paper, we 1)
+explore the parameter space in which [C/N] and gyrochronology are applicable,
+extending beyond the domains probed by asteroseismology and open clusters, and
+2) assess whether the traditionally assumed [C/N] and gyrochronology relations
+yield ages on a consistent physical scale, after calibrating both using the
+same AVR. We find gyrochronology can be applied to all partially convective
+stars after they have converged onto the slow rotating sequence and before they
+experience weakened magnetic braking; [C/N] can be used to infer ages for all
+giants with metallicity &gt; -0.8 dex and [C/N] &lt; -0.05 dex, and can be used as an
+age-indicator down to [Fe/H] of -1 dex if only selecting the low-$\alpha$ disk.
+Lastly, ages obtained from [C/N] and gyrochronology agree within uncertainty
+after accounting for systematic offsets.
 </summary>
     <author>
-      <name>Adiba Ejaz</name>
+      <name>Yuxi Lu</name>
     </author>
     <author>
-      <name>Elias Bareinboim</name>
+      <name>Marc H. Pinsonneault</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">35 total pages. 14 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2506.22331v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2506.22331v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Yuan-Sen Ting</name>
+    </author>
+    <author>
+      <name>Phil R. Van-Lane</name>
+    </author>
+    <author>
+      <name>John D Roberts</name>
+    </author>
+    <author>
+      <name>Jamie Tayar</name>
+    </author>
+    <author>
+      <name>Alexander Stone-Martinez</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.24010v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24010v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.24000v1</id>
+    <updated>2025-06-30T16:05:55Z</updated>
+    <published>2025-06-30T16:05:55Z</published>
+    <title>The Illusion of Progress? A Critical Look at Test-Time Adaptation for
+  Vision-Language Models</title>
+    <summary>  Test-time adaptation (TTA) methods have gained significant attention for
+enhancing the performance of vision-language models (VLMs) such as CLIP during
+inference, without requiring additional labeled data. However, current TTA
+researches generally suffer from major limitations such as duplication of
+baseline results, limited evaluation metrics, inconsistent experimental
+settings, and insufficient analysis. These problems hinder fair comparisons
+between TTA methods and obscure their practical strengths and weaknesses. To
+address these challenges, we introduce TTA-VLM, a comprehensive benchmark for
+evaluating TTA methods on VLMs. Our benchmark implements 8 episodic TTA and 7
+online TTA methods within a unified and reproducible framework, and evaluates
+them across 15 widely used datasets. Unlike prior studies focused solely on
+CLIP, we extend the evaluation to SigLIP--a model trained with a Sigmoid
+loss--and include training-time tuning methods such as CoOp, MaPLe, and TeCoA
+to assess generality. Beyond classification accuracy, TTA-VLM incorporates
+various evaluation metrics, including robustness, calibration,
+out-of-distribution detection, and stability, enabling a more holistic
+assessment of TTA methods. Through extensive experiments, we find that 1)
+existing TTA methods produce limited gains compared to the previous pioneering
+work; 2) current TTA methods exhibit poor collaboration with training-time
+fine-tuning methods; 3) accuracy gains frequently come at the cost of reduced
+model trustworthiness. We release TTA-VLM to provide fair comparison and
+comprehensive evaluation of TTA methods for VLMs, and we hope it encourages the
+community to develop more reliable and generalizable TTA strategies.
+</summary>
+    <author>
+      <name>Lijun Sheng</name>
+    </author>
+    <author>
+      <name>Jian Liang</name>
+    </author>
+    <author>
+      <name>Ran He</name>
+    </author>
+    <author>
+      <name>Zilei Wang</name>
+    </author>
+    <author>
+      <name>Tieniu Tan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Github link: https://github.com/TomSheng21/tta-vlm</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.24000v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.24000v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.23986v2</id>
+    <updated>2025-07-01T16:23:28Z</updated>
+    <published>2025-06-30T15:50:08Z</published>
+    <title>StreamFlow: Streaming Flow Matching with Block-wise Guided Attention
+  Mask for Speech Token Decoding</title>
+    <summary>  Recent advancements in discrete token-based speech generation have
+highlighted the importance of token-to-waveform generation for audio quality,
+particularly in real-time interactions. Traditional frameworks integrating
+semantic tokens with flow matching (FM) struggle with streaming capabilities
+due to their reliance on a global receptive field. Additionally, directly
+implementing token-by-token streaming speech generation often results in
+degraded audio quality. To address these challenges, we propose StreamFlow, a
+novel neural architecture that facilitates streaming flow matching with
+diffusion transformers (DiT). To mitigate the long-sequence extrapolation
+issues arising from lengthy historical dependencies, we design a local
+block-wise receptive field strategy. Specifically, the sequence is first
+segmented into blocks, and we introduce block-wise attention masks that enable
+the current block to receive information from the previous or subsequent block.
+These attention masks are combined hierarchically across different DiT-blocks
+to regulate the receptive field of DiTs. Both subjective and objective
+experimental results demonstrate that our approach achieves performance
+comparable to non-streaming methods while surpassing other streaming methods in
+terms of speech quality, all the while effectively managing inference time
+during long-sequence generation. Furthermore, our method achieves a notable
+first-packet latency of only 180 ms.\footnote{Speech samples:
+https://dukguo.github.io/StreamFlow/}
+</summary>
+    <author>
+      <name>Dake Guo</name>
+    </author>
+    <author>
+      <name>Jixun Yao</name>
+    </author>
+    <author>
+      <name>Linhan Ma</name>
+    </author>
+    <author>
+      <name>He Wang</name>
+    </author>
+    <author>
+      <name>Lei Xie</name>
+    </author>
+    <link href="http://arxiv.org/abs/2506.23986v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.23986v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.23982v1</id>
+    <updated>2025-06-30T15:48:38Z</updated>
+    <published>2025-06-30T15:48:38Z</published>
+    <title>StyleDrive: Towards Driving-Style Aware Benchmarking of End-To-End
+  Autonomous Driving</title>
+    <summary>  While personalization has been explored in traditional autonomous driving
+systems, it remains largely overlooked in end-to-end autonomous driving
+(E2EAD), despite its growing prominence. This gap is critical, as user-aligned
+behavior is essential for trust, comfort, and widespread adoption of autonomous
+vehicles. A core challenge is the lack of large-scale real-world datasets
+annotated with diverse and fine-grained driving preferences, hindering the
+development and evaluation of personalized E2EAD models. In this work, we
+present the first large-scale real-world dataset enriched with annotations
+capturing diverse driving preferences, establishing a foundation for
+personalization in E2EAD. We extract static environmental features from
+real-world road topology and infer dynamic contextual cues using a fine-tuned
+visual language model (VLM), enabling consistent and fine-grained scenario
+construction. Based on these scenarios, we derive objective preference
+annotations through behavioral distribution analysis and rule-based heuristics.
+To address the inherent subjectivity of driving style, we further employ the
+VLM to generate subjective annotations by jointly modeling scene semantics and
+driver behavior. Final high-quality labels are obtained through a
+human-in-the-loop verification process that fuses both perspectives. Building
+on this dataset, we propose the first benchmark for evaluating personalized
+E2EAD models. We assess several state-of-the-art models with and without
+preference conditioning, demonstrating that incorporating personalized
+preferences results in behavior more aligned with human driving. Our work lays
+the foundation for personalized E2EAD by providing a standardized platform to
+systematically integrate human preferences into data-driven E2EAD systems,
+catalyzing future research in human-centric autonomy.
+</summary>
+    <author>
+      <name>Ruiyang Hao</name>
+    </author>
+    <author>
+      <name>Bowen Jing</name>
+    </author>
+    <author>
+      <name>Haibao Yu</name>
+    </author>
+    <author>
+      <name>Zaiqing Nie</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.23982v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.23982v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.4.9" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.23964v1</id>
+    <updated>2025-06-30T15:36:22Z</updated>
+    <published>2025-06-30T15:36:22Z</published>
+    <title>Learning Constraints Directly from Network Data</title>
+    <summary>  Network data conforms to a wide range of rules that arise from protocols,
+design principles, and deployment decisions (e.g., a packet's queuing delay
+must be less than its end-to-end delay). Formalizing such rules as logic
+constraints can (i) improve the quality of synthetic data, (ii) reduce the
+brittleness of machine learning (ML) models, and (iii) improve semantic
+understanding of network measurements. However, these benefits remain out of
+reach if rule extraction is manual or solely reliant on ML, as both approaches
+yield incomplete, unreliable, and/or inaccurate rules.
+  This paper formulates rule extraction as a constraint modeling problem and
+introduces NetNomos that learns propositional logic constraints directly from
+raw network measurements. Constraint modeling in this domain is uniquely
+challenging due to the scale of the data, the inherent learning complexity and
+passive environment, and the lack of ground truth supervision. NetNomos
+addresses these challenges via a lattice-based search structured by constraint
+specificity and succinctness. Our approach reduces learning complexity from
+superquadratic to logarithmic and enables efficient traversal in combinatorial
+search space.
+  Our evaluations on diverse network datasets show that NetNomos learns all
+benchmark rules, including those associated with as little as 0.01% of data
+points, in under three hours. In contrast, baseline methods discover less than
+25% of the rules and require several days to run. Through three case studies,
+we show that: NetNomos (i) finds rule violations in the outputs of all seven
+synthetic traffic generators, hence can be used to assess and guide their
+generation process; (ii) detects semantic differences in traffic, hence can be
+used for anomaly detection; and (iii) automatically finds rules used for
+telemetry imputation, hence can support monitoring through inference.
+</summary>
+    <author>
+      <name>Hongyu Hè</name>
+    </author>
+    <author>
+      <name>Minhao Jin</name>
+    </author>
+    <author>
+      <name>Maria Apostolaki</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 15 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2506.23964v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2506.23964v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="C.2.3; I.2.6; I.2.3" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
