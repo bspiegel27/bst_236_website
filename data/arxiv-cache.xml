@@ -1,539 +1,1146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-08T00:59:04Z -->
+<!-- Last updated: 2025-07-09T01:00:01Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-07T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116303</opensearch:totalResults>
+  <updated>2025-07-08T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116481</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.02860v1</id>
-    <updated>2025-07-03T17:59:54Z</updated>
-    <published>2025-07-03T17:59:54Z</published>
-    <title>Less is Enough: Training-Free Video Diffusion Acceleration via
-  Runtime-Adaptive Caching</title>
-    <summary>  Video generation models have demonstrated remarkable performance, yet their
-broader adoption remains constrained by slow inference speeds and substantial
-computational costs, primarily due to the iterative nature of the denoising
-process. Addressing this bottleneck is essential for democratizing advanced
-video synthesis technologies and enabling their integration into real-world
-applications. This work proposes EasyCache, a training-free acceleration
-framework for video diffusion models. EasyCache introduces a lightweight,
-runtime-adaptive caching mechanism that dynamically reuses previously computed
-transformation vectors, avoiding redundant computations during inference.
-Unlike prior approaches, EasyCache requires no offline profiling,
-pre-computation, or extensive parameter tuning. We conduct comprehensive
-studies on various large-scale video generation models, including OpenSora,
-Wan2.1, and HunyuanVideo. Our method achieves leading acceleration performance,
-reducing inference time by up to 2.1-3.3$\times$ compared to the original
-baselines while maintaining high visual fidelity with a significant up to 36%
-PSNR improvement compared to the previous SOTA method. This improvement makes
-our EasyCache a efficient and highly accessible solution for high-quality video
-generation in both research and practical applications. The code is available
-at https://github.com/H-EmbodVis/EasyCache.
+    <id>http://arxiv.org/abs/2507.05254v1</id>
+    <updated>2025-07-07T17:58:53Z</updated>
+    <published>2025-07-07T17:58:53Z</published>
+    <title>From Marginal to Joint Predictions: Evaluating Scene-Consistent
+  Trajectory Prediction Approaches for Automated Driving</title>
+    <summary>  Accurate motion prediction of surrounding traffic participants is crucial for
+the safe and efficient operation of automated vehicles in dynamic environments.
+Marginal prediction models commonly forecast each agent's future trajectories
+independently, often leading to sub-optimal planning decisions for an automated
+vehicle. In contrast, joint prediction models explicitly account for the
+interactions between agents, yielding socially and physically consistent
+predictions on a scene level. However, existing approaches differ not only in
+their problem formulation but also in the model architectures and
+implementation details used, making it difficult to compare them. In this work,
+we systematically investigate different approaches to joint motion prediction,
+including post-processing of the marginal predictions, explicitly training the
+model for joint predictions, and framing the problem as a generative task. We
+evaluate each approach in terms of prediction accuracy, multi-modality, and
+inference efficiency, offering a comprehensive analysis of the strengths and
+limitations of each approach. Several prediction examples are available at
+https://frommarginaltojointpred.github.io/.
 </summary>
     <author>
-      <name>Xin Zhou</name>
+      <name>Fabian Konstantinidis</name>
     </author>
     <author>
-      <name>Dingkang Liang</name>
+      <name>Ariel Dallari Guerreiro</name>
     </author>
     <author>
-      <name>Kaijin Chen</name>
+      <name>Raphael Trumpp</name>
     </author>
     <author>
-      <name>Tianrui Feng</name>
+      <name>Moritz Sackmann</name>
     </author>
     <author>
-      <name>Xiwu Chen</name>
+      <name>Ulrich Hofmann</name>
     </author>
     <author>
-      <name>Hongkai Lin</name>
+      <name>Marco Caccamo</name>
     </author>
     <author>
-      <name>Yikang Ding</name>
+      <name>Christoph Stiller</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at International Conference on Intelligent Transportation
+  Systems 2025 (ITSC 2025)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05254v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05254v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05244v1</id>
+    <updated>2025-07-07T17:53:13Z</updated>
+    <published>2025-07-07T17:53:13Z</published>
+    <title>Modeling Latent Partner Strategies for Adaptive Zero-Shot Human-Agent
+  Collaboration</title>
+    <summary>  In collaborative tasks, being able to adapt to your teammates is a necessary
+requirement for success. When teammates are heterogeneous, such as in
+human-agent teams, agents need to be able to observe, recognize, and adapt to
+their human partners in real time. This becomes particularly challenging in
+tasks with time pressure and complex strategic spaces where the dynamics can
+change rapidly. In this work, we introduce TALENTS, a strategy-conditioned
+cooperator framework that learns to represent, categorize, and adapt to a range
+of partner strategies, enabling ad-hoc teamwork. Our approach utilizes a
+variational autoencoder to learn a latent strategy space from trajectory data.
+This latent space represents the underlying strategies that agents employ.
+Subsequently, the system identifies different types of strategy by clustering
+the data. Finally, a cooperator agent is trained to generate partners for each
+type of strategy, conditioned on these clusters. In order to adapt to
+previously unseen partners, we leverage a fixed-share regret minimization
+algorithm that infers and adjusts the estimated partner strategy dynamically.
+We assess our approach in a customized version of the Overcooked environment,
+posing a challenging cooperative cooking task that demands strong coordination
+across a wide range of possible strategies. Using an online user study, we show
+that our agent outperforms current baselines when working with unfamiliar human
+partners.
+</summary>
+    <author>
+      <name>Benjamin Li</name>
     </author>
     <author>
-      <name>Feiyang Tan</name>
+      <name>Shuyang Shi</name>
     </author>
     <author>
-      <name>Hengshuang Zhao</name>
+      <name>Lucia Romero</name>
     </author>
     <author>
-      <name>Xiang Bai</name>
+      <name>Huao Li</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The code is made available at
-  https://github.com/H-EmbodVis/EasyCache. Project page:
-  https://h-embodvis.github.io/EasyCache/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.02860v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02860v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Yaqi Xie</name>
+    </author>
+    <author>
+      <name>Woojun Kim</name>
+    </author>
+    <author>
+      <name>Stefanos Nikolaidis</name>
+    </author>
+    <author>
+      <name>Michael Lewis</name>
+    </author>
+    <author>
+      <name>Katia Sycara</name>
+    </author>
+    <author>
+      <name>Simon Stepputtis</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Best Paper Award at the RSS 2025 Generative Models x HRI (GenAI-HRI)
+  Workshop</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05244v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05244v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05240v1</id>
+    <updated>2025-07-07T17:49:41Z</updated>
+    <published>2025-07-07T17:49:41Z</published>
+    <title>StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context
+  Modeling</title>
+    <summary>  Vision-and-Language Navigation (VLN) in real-world settings requires agents
+to process continuous visual streams and generate actions with low latency
+grounded in language instructions. While Video-based Large Language Models
+(Video-LLMs) have driven recent progress, current VLN methods based on
+Video-LLM often face trade-offs among fine-grained visual understanding,
+long-term context modeling and computational efficiency. We introduce
+StreamVLN, a streaming VLN framework that employs a hybrid slow-fast context
+modeling strategy to support multi-modal reasoning over interleaved vision,
+language and action inputs. The fast-streaming dialogue context facilitates
+responsive action generation through a sliding-window of active dialogues,
+while the slow-updating memory context compresses historical visual states
+using a 3D-aware token pruning strategy. With this slow-fast design, StreamVLN
+achieves coherent multi-turn dialogue through efficient KV cache reuse,
+supporting long video streams with bounded context size and inference cost.
+Experiments on VLN-CE benchmarks demonstrate state-of-the-art performance with
+stable low latency, ensuring robustness and efficiency in real-world
+deployment. The project page is:
+\href{https://streamvln.github.io/}{https://streamvln.github.io/}.
+</summary>
+    <author>
+      <name>Meng Wei</name>
+    </author>
+    <author>
+      <name>Chenyang Wan</name>
+    </author>
+    <author>
+      <name>Xiqian Yu</name>
+    </author>
+    <author>
+      <name>Tai Wang</name>
+    </author>
+    <author>
+      <name>Yuqiang Yang</name>
+    </author>
+    <author>
+      <name>Xiaohan Mao</name>
+    </author>
+    <author>
+      <name>Chenming Zhu</name>
+    </author>
+    <author>
+      <name>Wenzhe Cai</name>
+    </author>
+    <author>
+      <name>Hanqing Wang</name>
+    </author>
+    <author>
+      <name>Yilun Chen</name>
+    </author>
+    <author>
+      <name>Xihui Liu</name>
+    </author>
+    <author>
+      <name>Jiangmiao Pang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.05240v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05240v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05229v1</id>
+    <updated>2025-07-07T17:39:11Z</updated>
+    <published>2025-07-07T17:39:11Z</published>
+    <title>Self-Supervised Real-Time Tracking of Military Vehicles in Low-FPS UAV
+  Footage</title>
+    <summary>  Multi-object tracking (MOT) aims to maintain consistent identities of objects
+across video frames. Associating objects in low-frame-rate videos captured by
+moving unmanned aerial vehicles (UAVs) in actual combat scenarios is complex
+due to rapid changes in object appearance and position within the frame. The
+task becomes even more challenging due to image degradation caused by cloud
+video streaming and compression algorithms. We present how instance association
+learning from single-frame annotations can overcome these challenges. We show
+that global features of the scene provide crucial context for low-FPS instance
+association, allowing our solution to be robust to distractors and gaps in
+detections. We also demonstrate that such a tracking approach maintains high
+association quality even when reducing the input image resolution and latent
+representation size for faster inference. Finally, we present a benchmark
+dataset of annotated military vehicles collected from publicly available data
+sources. This paper was initially presented at the NATO Science and Technology
+Organization Symposium (ICMCIS) organized by the Information Systems Technology
+(IST)Scientific and Technical Committee, IST-209-RSY - the ICMCIS, held in
+Oeiras, Portugal, 13-14 May 2025.
+</summary>
+    <author>
+      <name>Markiyan Kostiv</name>
+    </author>
+    <author>
+      <name>Anatolii Adamovskyi</name>
+    </author>
+    <author>
+      <name>Yevhen Cherniavskyi</name>
+    </author>
+    <author>
+      <name>Mykyta Varenyk</name>
+    </author>
+    <author>
+      <name>Ostap Viniavskyi</name>
+    </author>
+    <author>
+      <name>Igor Krashenyi</name>
+    </author>
+    <author>
+      <name>Oles Dobosevych</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1109/ICMCIS64378.2025.11047873</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1109/ICMCIS64378.2025.11047873" rel="related"/>
+    <link href="http://arxiv.org/abs/2507.05229v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05229v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.02843v1</id>
-    <updated>2025-07-03T17:52:27Z</updated>
-    <published>2025-07-03T17:52:27Z</published>
-    <title>LLM-Driven Treatment Effect Estimation Under Inference Time Text
-  Confounding</title>
-    <summary>  Estimating treatment effects is crucial for personalized decision-making in
-medicine, but this task faces unique challenges in clinical practice. At
-training time, models for estimating treatment effects are typically trained on
-well-structured medical datasets that contain detailed patient information.
-However, at inference time, predictions are often made using textual
-descriptions (e.g., descriptions with self-reported symptoms), which are
-incomplete representations of the original patient information. In this work,
-we make three contributions. (1) We show that the discrepancy between the data
-available during training time and inference time can lead to biased estimates
-of treatment effects. We formalize this issue as an inference time text
-confounding problem, where confounders are fully observed during training time
-but only partially available through text at inference time. (2) To address
-this problem, we propose a novel framework for estimating treatment effects
-that explicitly accounts for inference time text confounding. Our framework
-leverages large language models together with a custom doubly robust learner to
-mitigate biases caused by the inference time text confounding. (3) Through a
-series of experiments, we demonstrate the effectiveness of our framework in
-real-world applications.
+    <id>http://arxiv.org/abs/2507.05228v1</id>
+    <updated>2025-07-07T17:37:16Z</updated>
+    <published>2025-07-07T17:37:16Z</published>
+    <title>Cascade: Token-Sharded Private LLM Inference</title>
+    <summary>  As LLMs continue to increase in parameter size, the computational resources
+required to run them are available to fewer parties. Therefore, third-party
+inference services -- where LLMs are hosted by third parties with significant
+computational resources -- are becoming increasingly popular. However, third
+party inference raises critical concerns about user data privacy. To mitigate
+these risks, privacy researchers have developed provably secure schemes for
+third-party inference, such as Secure Multi-Party Computation (SMPC). However,
+SMPC protocols have significant computational and communication overhead, and
+do not scale to large models. In this work, we propose a new multi-party
+inference protocol, Cascade, that avoids these punitive costs by leveraging
+sharding in the sequence dimension to maintain privacy, trading off
+cryptographic privacy guarantees for increased performance and scalability. We
+demonstrate that Cascade is resistant to a generalization of a recent attack
+that is highly effective against other statistical privacy schemes, and that it
+is further resistant to learning-based attacks. As Cascade is orders of
+magnitude faster than existing schemes, our findings offer practical solutions
+for secure deployment of modern state-of-the-art LLMs.
 </summary>
     <author>
-      <name>Yuchen Ma</name>
+      <name>Rahul Thomas</name>
     </author>
     <author>
-      <name>Dennis Frauen</name>
+      <name>Louai Zahran</name>
     </author>
     <author>
-      <name>Jonas Schweisthal</name>
+      <name>Erica Choi</name>
     </author>
     <author>
-      <name>Stefan Feuerriegel</name>
+      <name>Akilesh Potti</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.02843v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02843v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Micah Goldblum</name>
+    </author>
+    <author>
+      <name>Arka Pal</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">To be published in ICML 2025 Main Proceedings as "Hidden No More:
+  Attacking and Defending Private Third-Party LLM Inference", together with
+  arXiv:2505.18332</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05228v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05228v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.02827v1</id>
-    <updated>2025-07-03T17:38:44Z</updated>
-    <published>2025-07-03T17:38:44Z</published>
-    <title>USAD: An Unsupervised Data Augmentation Spatio-Temporal Attention
-  Diffusion Network</title>
-    <summary>  The primary objective of human activity recognition (HAR) is to infer ongoing
-human actions from sensor data, a task that finds broad applications in health
-monitoring, safety protection, and sports analysis. Despite proliferating
-research, HAR still faces key challenges, including the scarcity of labeled
-samples for rare activities, insufficient extraction of high-level features,
-and suboptimal model performance on lightweight devices. To address these
-issues, this paper proposes a comprehensive optimization approach centered on
-multi-attention interaction mechanisms. First, an unsupervised,
-statistics-guided diffusion model is employed to perform data augmentation,
-thereby alleviating the problems of labeled data scarcity and severe class
-imbalance. Second, a multi-branch spatio-temporal interaction network is
-designed, which captures multi-scale features of sequential data through
-parallel residual branches with 3*3, 5*5, and 7*7 convolutional kernels.
-Simultaneously, temporal attention mechanisms are incorporated to identify
-critical time points, while spatial attention enhances inter-sensor
-interactions. A cross-branch feature fusion unit is further introduced to
-improve the overall feature representation capability. Finally, an adaptive
-multi-loss function fusion strategy is integrated, allowing for dynamic
-adjustment of loss weights and overall model optimization. Experimental results
-on three public datasets, WISDM, PAMAP2, and OPPORTUNITY, demonstrate that the
-proposed unsupervised data augmentation spatio-temporal attention diffusion
-network (USAD) achieves accuracies of 98.84%, 93.81%, and 80.92% respectively,
-significantly outperforming existing approaches. Furthermore, practical
-deployment on embedded devices verifies the efficiency and feasibility of the
-proposed method.
+    <id>http://arxiv.org/abs/2507.05220v1</id>
+    <updated>2025-07-07T17:33:18Z</updated>
+    <published>2025-07-07T17:33:18Z</published>
+    <title>QuEst: Enhancing Estimates of Quantile-Based Distributional Measures
+  Using Model Predictions</title>
+    <summary>  As machine learning models grow increasingly competent, their predictions can
+supplement scarce or expensive data in various important domains. In support of
+this paradigm, algorithms have emerged to combine a small amount of
+high-fidelity observed data with a much larger set of imputed model outputs to
+estimate some quantity of interest. Yet current hybrid-inference tools target
+only means or single quantiles, limiting their applicability for many critical
+domains and use cases. We present QuEst, a principled framework to merge
+observed and imputed data to deliver point estimates and rigorous confidence
+intervals for a wide family of quantile-based distributional measures. QuEst
+covers a range of measures, from tail risk (CVaR) to population segments such
+as quartiles, that are central to fields such as economics, sociology,
+education, medicine, and more. We extend QuEst to multidimensional metrics, and
+introduce an additional optimization technique to further reduce variance in
+this and other hybrid estimators. We demonstrate the utility of our framework
+through experiments in economic modeling, opinion polling, and language model
+auto-evaluation.
 </summary>
     <author>
-      <name>Ying Yu</name>
+      <name>Zhun Deng</name>
     </author>
     <author>
-      <name>Hang Xiao</name>
+      <name>Thomas P Zollo</name>
     </author>
     <author>
-      <name>Siyao Li</name>
+      <name>Benjamin Eyre</name>
     </author>
     <author>
-      <name>Jiarui Li</name>
+      <name>Amogh Inamdar</name>
     </author>
     <author>
-      <name>Haotian Tang</name>
+      <name>David Madras</name>
     </author>
     <author>
-      <name>Hanyu Liu</name>
+      <name>Richard Zemel</name>
     </author>
-    <author>
-      <name>Chao Li</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.02827v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02827v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.02822v1</id>
-    <updated>2025-07-03T17:33:58Z</updated>
-    <published>2025-07-03T17:33:58Z</published>
-    <title>SynapseRoute: An Auto-Route Switching Framework on Dual-State Large
-  Language Model</title>
-    <summary>  With the widespread adoption of large language models (LLMs) in practical
-applications, selecting an appropriate model requires balancing not only
-performance but also operational cost. The emergence of reasoning-capable
-models has further widened the cost gap between "thinking" (high reasoning) and
-"non-thinking" (fast, low-cost) modes. In this work, we reveal that
-approximately 58% of medical questions can be accurately answered by the
-non-thinking mode alone, without requiring the high-cost reasoning process.
-This highlights a clear dichotomy in problem complexity and suggests that
-dynamically routing queries to the appropriate mode based on complexity could
-optimize accuracy, cost-efficiency, and overall user experience. Based on this,
-we further propose SynapseRoute, a machine learning-based dynamic routing
-framework that intelligently assigns input queries to either thinking or
-non-thinking modes. Experimental results on several medical datasets
-demonstrate that SynapseRoute not only improves overall accuracy (0.8390 vs.
-0.8272) compared to the thinking mode alone but also reduces inference time by
-36.8% and token consumption by 39.66%. Importantly, qualitative analysis
-indicates that over-reasoning on simpler queries can lead to unnecessary delays
-and even decreased accuracy, a pitfall avoided by our adaptive routing.
-Finally, this work further introduces the Accuracy-Inference-Token (AIT) index
-to comprehensively evaluate the trade-offs among accuracy, latency, and token
-cost.
-</summary>
-    <author>
-      <name>Wencheng Zhang</name>
-    </author>
-    <author>
-      <name>Shiqin Qiao</name>
-    </author>
-    <author>
-      <name>Lingjie Luo</name>
-    </author>
-    <author>
-      <name>Yinfeng Li</name>
-    </author>
-    <author>
-      <name>Chuanyang Zheng</name>
-    </author>
-    <author>
-      <name>Qian Xu</name>
-    </author>
-    <author>
-      <name>Meng Li</name>
-    </author>
-    <author>
-      <name>Yong Gui</name>
-    </author>
-    <author>
-      <name>Yijun He</name>
-    </author>
-    <author>
-      <name>Jianing Qiu</name>
-    </author>
-    <author>
-      <name>Jindong Hong</name>
-    </author>
-    <author>
-      <name>Jiankai Sun</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.02822v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02822v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.02799v1</id>
-    <updated>2025-07-03T17:01:53Z</updated>
-    <published>2025-07-03T17:01:53Z</published>
-    <title>Is Reasoning All You Need? Probing Bias in the Age of Reasoning Language
-  Models</title>
-    <summary>  Reasoning Language Models (RLMs) have gained traction for their ability to
-perform complex, multi-step reasoning tasks through mechanisms such as
-Chain-of-Thought (CoT) prompting or fine-tuned reasoning traces. While these
-capabilities promise improved reliability, their impact on robustness to social
-biases remains unclear. In this work, we leverage the CLEAR-Bias benchmark,
-originally designed for Large Language Models (LLMs), to investigate the
-adversarial robustness of RLMs to bias elicitation. We systematically evaluate
-state-of-the-art RLMs across diverse sociocultural dimensions, using an
-LLM-as-a-judge approach for automated safety scoring and leveraging jailbreak
-techniques to assess the strength of built-in safety mechanisms. Our evaluation
-addresses three key questions: (i) how the introduction of reasoning
-capabilities affects model fairness and robustness; (ii) whether models
-fine-tuned for reasoning exhibit greater safety than those relying on CoT
-prompting at inference time; and (iii) how the success rate of jailbreak
-attacks targeting bias elicitation varies with the reasoning mechanisms
-employed. Our findings reveal a nuanced relationship between reasoning
-capabilities and bias safety. Surprisingly, models with explicit reasoning,
-whether via CoT prompting or fine-tuned reasoning traces, are generally more
-vulnerable to bias elicitation than base models without such mechanisms,
-suggesting reasoning may unintentionally open new pathways for stereotype
-reinforcement. Reasoning-enabled models appear somewhat safer than those
-relying on CoT prompting, which are particularly prone to contextual reframing
-attacks through storytelling prompts, fictional personas, or reward-shaped
-instructions. These results challenge the assumption that reasoning inherently
-improves robustness and underscore the need for more bias-aware approaches to
-reasoning design.
-</summary>
-    <author>
-      <name>Riccardo Cantini</name>
-    </author>
-    <author>
-      <name>Nicola Gabriele</name>
-    </author>
-    <author>
-      <name>Alessio Orsino</name>
-    </author>
-    <author>
-      <name>Domenico Talia</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.02799v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02799v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.02791v2</id>
-    <updated>2025-07-05T07:54:28Z</updated>
-    <published>2025-07-03T16:54:56Z</published>
-    <title>Self-Steering Deep Non-Linear Spatially Selective Filters for Efficient
-  Extraction of Moving Speakers under Weak Guidance</title>
-    <summary>  Recent works on deep non-linear spatially selective filters demonstrate
-exceptional enhancement performance with computationally lightweight
-architectures for stationary speakers of known directions. However, to maintain
-this performance in dynamic scenarios, resource-intensive data-driven tracking
-algorithms become necessary to provide precise spatial guidance conditioned on
-the initial direction of a target speaker. As this additional computational
-overhead hinders application in resource-constrained scenarios such as
-real-time speech enhancement, we present a novel strategy utilizing a
-low-complexity tracking algorithm in the form of a particle filter instead.
-Assuming a causal, sequential processing style, we introduce temporal feedback
-to leverage the enhanced speech signal of the spatially selective filter to
-compensate for the limited modeling capabilities of the particle filter.
-Evaluation on a synthetic dataset illustrates how the autoregressive interplay
-between both algorithms drastically improves tracking accuracy and leads to
-strong enhancement performance. A listening test with real-world recordings
-complements these findings by indicating a clear trend towards our proposed
-self-steering pipeline as preferred choice over comparable methods.
-</summary>
-    <author>
-      <name>Jakob Kienegger</name>
-    </author>
-    <author>
-      <name>Alina Mannanova</name>
-    </author>
-    <author>
-      <name>Huajian Fang</name>
-    </author>
-    <author>
-      <name>Timo Gerkmann</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at IEEE Workshop on Applications of Signal Processing to
-  Audio and Acoustics (WASPAA) 2025. Video demonstration:
-  https://youtu.be/aSKOSh5JZ3o</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.02791v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02791v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.02734v1</id>
-    <updated>2025-07-03T15:45:35Z</updated>
-    <published>2025-07-03T15:45:35Z</published>
-    <title>Leveraging Transformer Models to Capture Multi-Scale Dynamics in
-  Biomolecules by nano-GPT</title>
-    <summary>  Long-term biomolecular dynamics are critical for understanding key
-evolutionary transformations in molecular systems. However, capturing these
-processes requires extended simulation timescales that often exceed the
-practical limits of conventional models. To address this, shorter simulations,
-initialized with diverse perturbations, are commonly used to sample phase space
-and explore a wide range of behaviors. Recent advances have leveraged language
-models to infer long-term behavior from short trajectories, but methods such as
-long short-term memory (LSTM) networks are constrained to low-dimensional
-reaction coordinates, limiting their applicability to complex systems. In this
-work, we present nano-GPT, a novel deep learning model inspired by the GPT
-architecture, specifically designed to capture long-term dynamics in molecular
-systems with fine-grained conformational states and complex transitions. The
-model employs a two-pass training mechanism that incrementally replaces
-molecular dynamics (MD) tokens with model-generated predictions, effectively
-mitigating accumulation errors inherent in the training window. We validate
-nano-GPT on three distinct systems: a four-state model potential, the alanine
-dipeptide, a well-studied simple molecule, and the Fip35 WW domain, a complex
-biomolecular system. Our results show that nano-GPT effectively captures
-long-timescale dynamics by learning high-order dependencies through attention
-mechanism, offering a novel perspective for interpreting biomolecular
-processes.
-</summary>
-    <author>
-      <name>Wenqi Zeng</name>
-    </author>
-    <author>
-      <name>Lu Zhang</name>
-    </author>
-    <author>
-      <name>Yuan Yao</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.02734v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02734v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.02731v1</id>
-    <updated>2025-07-03T15:43:06Z</updated>
-    <published>2025-07-03T15:43:06Z</published>
-    <title>RIS-Aided Cooperative ISAC Networks for Structural Health Monitoring</title>
-    <summary>  Integrated sensing and communication (ISAC) is a key feature of future
-cellular systems, enabling applications such as intruder detection, monitoring,
-and tracking using the same infrastructure. However, its potential for
-structural health monitoring (SHM), which requires the detection of slow and
-subtle structural changes, remains largely unexplored due to challenges such as
-multipath interference and the need for ultra-high sensing precision. This
-study introduces a novel theoretical framework for SHM via ISAC by leveraging
-reconfigurable intelligent surfaces (RIS) as reference points in collaboration
-with base stations and users. By dynamically adjusting RIS phases to generate
-distinct radio signals that suppress background multipath interference,
-measurement accuracy at these reference points is enhanced. We theoretically
-analyze RIS-aided collaborative sensing in three-dimensional cellular networks
-using Fisher information theory, demonstrating how increasing observation time,
-incorporating additional receivers (even with self-positioning errors),
-optimizing RIS phases, and refining collaborative node selection can reduce the
-position error bound to meet SHM's stringent accuracy requirements.
-Furthermore, we develop a Bayesian inference model to identify structural
-states and validate damage detection probabilities. Both theoretical and
-numerical analyses confirm ISAC's capability for millimeter-level deformation
-detection, highlighting its potential for high-precision SHM applications.
-</summary>
-    <author>
-      <name>Jie Yang</name>
-    </author>
-    <author>
-      <name>Chao-Kai Wen</name>
-    </author>
-    <author>
-      <name>Xiao Li</name>
-    </author>
-    <author>
-      <name>Shi Jin</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This work has been submitted to the IEEE for possible publication</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.02731v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02731v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.02724v1</id>
-    <updated>2025-07-03T15:41:04Z</updated>
-    <published>2025-07-03T15:41:04Z</published>
-    <title>Hierarchical Multi-Label Contrastive Learning for Protein-Protein
-  Interaction Prediction Across Organisms</title>
-    <summary>  Recent advances in AI for science have highlighted the power of contrastive
-learning in bridging heterogeneous biological data modalities. Building on this
-paradigm, we propose HIPPO (HIerarchical Protein-Protein interaction prediction
-across Organisms), a hierarchical contrastive framework for protein-protein
-interaction(PPI) prediction, where protein sequences and their hierarchical
-attributes are aligned through multi-tiered biological representation matching.
-The proposed approach incorporates hierarchical contrastive loss functions that
-emulate the structured relationship among functional classes of proteins. The
-framework adaptively incorporates domain and family knowledge through a
-data-driven penalty mechanism, enforcing consistency between the learned
-embedding space and the intrinsic hierarchy of protein functions. Experiments
-on benchmark datasets demonstrate that HIPPO achieves state-of-the-art
-performance, outperforming existing methods and showing robustness in low-data
-regimes. Notably, the model demonstrates strong zero-shot transferability to
-other species without retraining, enabling reliable PPI prediction and
-functional inference even in less characterized or rare organisms where
-experimental data are limited. Further analysis reveals that hierarchical
-feature fusion is critical for capturing conserved interaction determinants,
-such as binding motifs and functional annotations. This work advances
-cross-species PPI prediction and provides a unified framework for interaction
-prediction in scenarios with sparse or imbalanced multi-species data.
-</summary>
-    <author>
-      <name>Shiyi Liu</name>
-    </author>
-    <author>
-      <name>Buwen Liang</name>
-    </author>
-    <author>
-      <name>Yuetong Fang</name>
-    </author>
-    <author>
-      <name>Zixuan Jiang</name>
-    </author>
-    <author>
-      <name>Renjing Xu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.02724v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02724v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Published as a conference paper at ICML 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05220v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05220v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.02690v1</id>
-    <updated>2025-07-03T15:01:08Z</updated>
-    <published>2025-07-03T15:01:08Z</published>
-    <title>RLHGNN: Reinforcement Learning-driven Heterogeneous Graph Neural Network
-  for Next Activity Prediction in Business Processes</title>
-    <summary>  Next activity prediction represents a fundamental challenge for optimizing
-business processes in service-oriented architectures such as microservices
-environments, distributed enterprise systems, and cloud-native platforms, which
-enables proactive resource allocation and dynamic service composition. Despite
-the prevalence of sequence-based methods, these approaches fail to capture
-non-sequential relationships that arise from parallel executions and
-conditional dependencies. Even though graph-based approaches address structural
-preservation, they suffer from homogeneous representations and static
-structures that apply uniform modeling strategies regardless of individual
-process complexity characteristics. To address these limitations, we introduce
-RLHGNN, a novel framework that transforms event logs into heterogeneous process
-graphs with three distinct edge types grounded in established process mining
-theory. Our approach creates four flexible graph structures by selectively
-combining these edges to accommodate different process complexities, and
-employs reinforcement learning formulated as a Markov Decision Process to
-automatically determine the optimal graph structure for each specific process
-instance. RLHGNN then applies heterogeneous graph convolution with
-relation-specific aggregation strategies to effectively predict the next
-activity. This adaptive methodology enables precise modeling of both sequential
-and non-sequential relationships in service interactions. Comprehensive
-evaluation on six real-world datasets demonstrates that RLHGNN consistently
-outperforms state-of-the-art approaches. Furthermore, it maintains an inference
-latency of approximately 1 ms per prediction, representing a highly practical
-solution suitable for real-time business process monitoring applications. The
-source code is available at https://github.com/Joker3993/RLHGNN.
+    <id>http://arxiv.org/abs/2507.05215v1</id>
+    <updated>2025-07-07T17:29:08Z</updated>
+    <published>2025-07-07T17:29:08Z</published>
+    <title>Testing the ubiquitous presence of very high energy emission in
+  gamma-ray bursts with the MAGIC telescopes</title>
+    <summary>  Gamma-ray bursts (GRBs) are the most powerful transient objects in the
+Universe, and they are a primary target for the MAGIC Collaboration.
+Recognizing the challenges of observing these elusive objects with Imaging
+Atmospheric Cherenkov Telescopes (IACTs), we implemented a dedicated
+observational strategy that included an automated procedure for rapid
+re-pointing to transient sources. Since 2013, this automated procedure has
+enabled MAGIC to observe GRBs at a rate of approximately ten per year, which
+led to the successful detection of two GRBs at very high energies (VHE; E &gt; 100
+GeV). We present a comprehensive analysis of 42 non-detected GRBs (4 short
+GRBs) observed by MAGIC from 2013 to 2019. We derived upper limits (ULs) on the
+observed energy flux as well as on the intrinsic energy flux corrected for
+absorption by the extragalactic background light (EBL) from the MAGIC
+observations in selected energy and time intervals. We conducted a
+comprehensive study of their properties to investigate the reasons for these
+non-detections, including the possible peculiar properties of TeV-detected
+GRBs. We find that strong EBL absorption significantly hinders TeV detection
+for the majority of GRBs in our sample. For a subset of 6 GRBs with redshift z
+&lt; 2, we compared the UL on the intrinsic flux in the VHE domain with the
+simultaneous X-ray flux, which is observed to be at the same level in the
+current population of TeV-detected GRBs. Based on these inferred MAGIC ULs, we
+conclude that a VHE component with a luminosity comparable to the
+simultaneously observed X-ray luminosity cannot be ruled out for this sample.
 </summary>
     <author>
-      <name>Jiaxing Wang</name>
+      <name>S. Abe</name>
     </author>
     <author>
-      <name>Yifeng Yu</name>
+      <name>J. Abhir</name>
     </author>
     <author>
-      <name>Jiahan Song</name>
+      <name>A. Abhishek</name>
     </author>
     <author>
-      <name>Bin Cao</name>
+      <name>V. A. Acciari</name>
     </author>
     <author>
-      <name>Jing Fan</name>
+      <name>A. Aguasca-Cabot</name>
     </author>
     <author>
-      <name>Ji Zhang</name>
+      <name>I. Agudo</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 7 figures. Business process prediction using reinforcement
-  learning and heterogeneous graph neural networks</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.02690v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.02690v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>T. Aniello</name>
+    </author>
+    <author>
+      <name>S. Ansoldi</name>
+    </author>
+    <author>
+      <name>L. A. Antonelli</name>
+    </author>
+    <author>
+      <name>A. Arbet Engels</name>
+    </author>
+    <author>
+      <name>C. Arcaro</name>
+    </author>
+    <author>
+      <name>T. T. H. Arnesen</name>
+    </author>
+    <author>
+      <name>K. Asano</name>
+    </author>
+    <author>
+      <name>A. Babic</name>
+    </author>
+    <author>
+      <name>C. Bakshi</name>
+    </author>
+    <author>
+      <name>U. Barres de Almeida</name>
+    </author>
+    <author>
+      <name>J. A. Barrio</name>
+    </author>
+    <author>
+      <name>L. Barrios-Jimenez</name>
+    </author>
+    <author>
+      <name>I. Batkovic</name>
+    </author>
+    <author>
+      <name>J. Baxter</name>
+    </author>
+    <author>
+      <name>J. Becerra Gonzalez</name>
+    </author>
+    <author>
+      <name>W. Bednarek</name>
+    </author>
+    <author>
+      <name>E. Bernardini</name>
+    </author>
+    <author>
+      <name>J. Bernete</name>
+    </author>
+    <author>
+      <name>A. Berti</name>
+    </author>
+    <author>
+      <name>J. Besenrieder</name>
+    </author>
+    <author>
+      <name>C. Bigongiari</name>
+    </author>
+    <author>
+      <name>A. Biland</name>
+    </author>
+    <author>
+      <name>O. Blanch</name>
+    </author>
+    <author>
+      <name>G. Bonnoli</name>
+    </author>
+    <author>
+      <name>Ž. Bošnjak</name>
+    </author>
+    <author>
+      <name>E. Bronzini</name>
+    </author>
+    <author>
+      <name>I. Burelli</name>
+    </author>
+    <author>
+      <name>A. Campoy-Ordaz</name>
+    </author>
+    <author>
+      <name>A. Carosi</name>
+    </author>
+    <author>
+      <name>R. Carosi</name>
+    </author>
+    <author>
+      <name>M. Carretero-Castrillo</name>
+    </author>
+    <author>
+      <name>A. J. Castro-Tirado</name>
+    </author>
+    <author>
+      <name>D. Cerasole</name>
+    </author>
+    <author>
+      <name>G. Ceribella</name>
+    </author>
+    <author>
+      <name>Y. Chai</name>
+    </author>
+    <author>
+      <name>A. Cifuentes</name>
+    </author>
+    <author>
+      <name>J. L. Contreras</name>
+    </author>
+    <author>
+      <name>J. Cortina</name>
+    </author>
+    <author>
+      <name>S. Covino</name>
+    </author>
+    <author>
+      <name>G. D'Amico</name>
+    </author>
+    <author>
+      <name>P. Da Vela</name>
+    </author>
+    <author>
+      <name>F. Dazzi</name>
+    </author>
+    <author>
+      <name>A. De Angelis</name>
+    </author>
+    <author>
+      <name>B. De Lotto</name>
+    </author>
+    <author>
+      <name>R. de Menezes</name>
+    </author>
+    <author>
+      <name>M. Delfino</name>
+    </author>
+    <author>
+      <name>J. Delgado</name>
+    </author>
+    <author>
+      <name>C. Delgado Mendez</name>
+    </author>
+    <author>
+      <name>F. Di Pierro</name>
+    </author>
+    <author>
+      <name>R. Di Tria</name>
+    </author>
+    <author>
+      <name>L. Di Venere</name>
+    </author>
+    <author>
+      <name>A. Dinesh</name>
+    </author>
+    <author>
+      <name>D. Dominis Prester</name>
+    </author>
+    <author>
+      <name>A. Donini</name>
+    </author>
+    <author>
+      <name>D. Dorner</name>
+    </author>
+    <author>
+      <name>M. Doro</name>
+    </author>
+    <author>
+      <name>L. Eisenberger</name>
+    </author>
+    <author>
+      <name>D. Elsaesser</name>
+    </author>
+    <author>
+      <name>J. Escudero</name>
+    </author>
+    <author>
+      <name>L. Fariña</name>
+    </author>
+    <author>
+      <name>A. Fattorini</name>
+    </author>
+    <author>
+      <name>L. Foffano</name>
+    </author>
+    <author>
+      <name>L. Font</name>
+    </author>
+    <author>
+      <name>S. Fröse</name>
+    </author>
+    <author>
+      <name>S. Fukami</name>
+    </author>
+    <author>
+      <name>Y. Fukazawa</name>
+    </author>
+    <author>
+      <name>R. J. García López</name>
+    </author>
+    <author>
+      <name>S. García Soto</name>
+    </author>
+    <author>
+      <name>M. Garczarczyk</name>
+    </author>
+    <author>
+      <name>S. Gasparyan</name>
+    </author>
+    <author>
+      <name>M. Gaug</name>
+    </author>
+    <author>
+      <name>J. G. Giesbrecht Paiva</name>
+    </author>
+    <author>
+      <name>N. Giglietto</name>
+    </author>
+    <author>
+      <name>F. Giordano</name>
+    </author>
+    <author>
+      <name>P. Gliwny</name>
+    </author>
+    <author>
+      <name>N. Godinovic</name>
+    </author>
+    <author>
+      <name>T. Gradetzke</name>
+    </author>
+    <author>
+      <name>R. Grau</name>
+    </author>
+    <author>
+      <name>D. Green</name>
+    </author>
+    <author>
+      <name>J. G. Green</name>
+    </author>
+    <author>
+      <name>P. Günther</name>
+    </author>
+    <author>
+      <name>D. Hadasch</name>
+    </author>
+    <author>
+      <name>A. Hahn</name>
+    </author>
+    <author>
+      <name>T. Hassan</name>
+    </author>
+    <author>
+      <name>L. Heckmann</name>
+    </author>
+    <author>
+      <name>J. Herrera Llorente</name>
+    </author>
+    <author>
+      <name>D. Hrupec</name>
+    </author>
+    <author>
+      <name>R. Imazawa</name>
+    </author>
+    <author>
+      <name>S. Inoue</name>
+    </author>
+    <author>
+      <name>D. Israyelyan</name>
+    </author>
+    <author>
+      <name>J. Jahanvi</name>
+    </author>
+    <author>
+      <name>I. Jiménez Martínez</name>
+    </author>
+    <author>
+      <name>J. Jiménez Quiles</name>
+    </author>
+    <author>
+      <name>J. Jormanainen</name>
+    </author>
+    <author>
+      <name>S. Kankkunen</name>
+    </author>
+    <author>
+      <name>T. Kayanoki</name>
+    </author>
+    <author>
+      <name>J. Konrad</name>
+    </author>
+    <author>
+      <name>P. M. Kouch</name>
+    </author>
+    <author>
+      <name>H. Kubo</name>
+    </author>
+    <author>
+      <name>J. Kushida</name>
+    </author>
+    <author>
+      <name>M. Láinez</name>
+    </author>
+    <author>
+      <name>A. Lamastra</name>
+    </author>
+    <author>
+      <name>E. Lindfors</name>
+    </author>
+    <author>
+      <name>S. Lombardi</name>
+    </author>
+    <author>
+      <name>F. Longo</name>
+    </author>
+    <author>
+      <name>R. López-Coto</name>
+    </author>
+    <author>
+      <name>M. López-Moya</name>
+    </author>
+    <author>
+      <name>A. López-Oramas</name>
+    </author>
+    <author>
+      <name>S. Loporchio</name>
+    </author>
+    <author>
+      <name>L. Lulic</name>
+    </author>
+    <author>
+      <name>E. Lyard</name>
+    </author>
+    <author>
+      <name>P. Majumdar</name>
+    </author>
+    <author>
+      <name>M. Makariev</name>
+    </author>
+    <author>
+      <name>M. Mallamaci</name>
+    </author>
+    <author>
+      <name>G. Maneva</name>
+    </author>
+    <author>
+      <name>M. Manganaro</name>
+    </author>
+    <author>
+      <name>S. Mangano</name>
+    </author>
+    <author>
+      <name>K. Mannheim</name>
+    </author>
+    <author>
+      <name>S. Marchesi</name>
+    </author>
+    <author>
+      <name>M. Mariotti</name>
+    </author>
+    <author>
+      <name>M. Martínez</name>
+    </author>
+    <author>
+      <name>P. Maruševec</name>
+    </author>
+    <author>
+      <name>A. Mas-Aguilar</name>
+    </author>
+    <author>
+      <name>D. Mazin</name>
+    </author>
+    <author>
+      <name>S. Menchiari</name>
+    </author>
+    <author>
+      <name>J. Méndez Gallego</name>
+    </author>
+    <author>
+      <name>S. Menon</name>
+    </author>
+    <author>
+      <name>D. Miceli</name>
+    </author>
+    <author>
+      <name>J. M. Miranda</name>
+    </author>
+    <author>
+      <name>R. Mirzoyan</name>
+    </author>
+    <author>
+      <name>M. Molero González</name>
+    </author>
+    <author>
+      <name>E. Molina</name>
+    </author>
+    <author>
+      <name>H. A. Mondal</name>
+    </author>
+    <author>
+      <name>A. Moralejo</name>
+    </author>
+    <author>
+      <name>E. Moretti</name>
+    </author>
+    <author>
+      <name>T. Nakamori</name>
+    </author>
+    <author>
+      <name>C. Nanci</name>
+    </author>
+    <author>
+      <name>L. Nava</name>
+    </author>
+    <author>
+      <name>V. Neustroev</name>
+    </author>
+    <author>
+      <name>L. Nickel</name>
+    </author>
+    <author>
+      <name>M. Nievas Rosillo</name>
+    </author>
+    <author>
+      <name>C. Nigro</name>
+    </author>
+    <author>
+      <name>L. Nikolic</name>
+    </author>
+    <author>
+      <name>K. Nilsson</name>
+    </author>
+    <author>
+      <name>K. Nishijima</name>
+    </author>
+    <author>
+      <name>K. Noda</name>
+    </author>
+    <author>
+      <name>S. Nozaki</name>
+    </author>
+    <author>
+      <name>A. Okumura</name>
+    </author>
+    <author>
+      <name>J. Otero-Santos</name>
+    </author>
+    <author>
+      <name>S. Paiano</name>
+    </author>
+    <author>
+      <name>D. Paneque</name>
+    </author>
+    <author>
+      <name>R. Paoletti</name>
+    </author>
+    <author>
+      <name>J. M. Paredes</name>
+    </author>
+    <author>
+      <name>M. Peresano</name>
+    </author>
+    <author>
+      <name>M. Persic</name>
+    </author>
+    <author>
+      <name>M. Pihet</name>
+    </author>
+    <author>
+      <name>G. Pirola</name>
+    </author>
+    <author>
+      <name>F. Podobnik</name>
+    </author>
+    <author>
+      <name>P. G. Prada Moroni</name>
+    </author>
+    <author>
+      <name>E. Prandini</name>
+    </author>
+    <author>
+      <name>M. Ribó</name>
+    </author>
+    <author>
+      <name>J. Rico</name>
+    </author>
+    <author>
+      <name>C. Righi</name>
+    </author>
+    <author>
+      <name>N. Sahakyan</name>
+    </author>
+    <author>
+      <name>T. Saito</name>
+    </author>
+    <author>
+      <name>F. G. Saturni</name>
+    </author>
+    <author>
+      <name>K. Schmitz</name>
+    </author>
+    <author>
+      <name>F. Schmuckermaier</name>
+    </author>
+    <author>
+      <name>A. Sciaccaluga</name>
+    </author>
+    <author>
+      <name>G. Silvestri</name>
+    </author>
+    <author>
+      <name>A. Simongini</name>
+    </author>
+    <author>
+      <name>J. Sitarek</name>
+    </author>
+    <author>
+      <name>V. Sliusar</name>
+    </author>
+    <author>
+      <name>D. Sobczynska</name>
+    </author>
+    <author>
+      <name>A. Stamerra</name>
+    </author>
+    <author>
+      <name>J. Striškovic</name>
+    </author>
+    <author>
+      <name>D. Strom</name>
+    </author>
+    <author>
+      <name>M. Strzys</name>
+    </author>
+    <author>
+      <name>Y. Suda</name>
+    </author>
+    <author>
+      <name>H. Tajima</name>
+    </author>
+    <author>
+      <name>M. Takahashi</name>
+    </author>
+    <author>
+      <name>R. Takeishi</name>
+    </author>
+    <author>
+      <name>P. Temnikov</name>
+    </author>
+    <author>
+      <name>K. Terauchi</name>
+    </author>
+    <author>
+      <name>T. Terzic</name>
+    </author>
+    <author>
+      <name>M. Teshima</name>
+    </author>
+    <author>
+      <name>A. Tutone</name>
+    </author>
+    <author>
+      <name>S. Ubach</name>
+    </author>
+    <author>
+      <name>J. van Scherpenberg</name>
+    </author>
+    <author>
+      <name>M. Vazquez Acosta</name>
+    </author>
+    <author>
+      <name>S. Ventura</name>
+    </author>
+    <author>
+      <name>G. Verna</name>
+    </author>
+    <author>
+      <name>I. Viale</name>
+    </author>
+    <author>
+      <name>A. Vigliano</name>
+    </author>
+    <author>
+      <name>C. F. Vigorito</name>
+    </author>
+    <author>
+      <name>E. Visentin</name>
+    </author>
+    <author>
+      <name>V. Vitale</name>
+    </author>
+    <author>
+      <name>I. Vovk</name>
+    </author>
+    <author>
+      <name>R. Walter</name>
+    </author>
+    <author>
+      <name>F. Wersig</name>
+    </author>
+    <author>
+      <name>M. Will</name>
+    </author>
+    <author>
+      <name>T. Yamamoto</name>
+    </author>
+    <author>
+      <name>P. K. H. Yeung</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in A&amp;A</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05215v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05215v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05210v1</id>
+    <updated>2025-07-07T17:20:34Z</updated>
+    <published>2025-07-07T17:20:34Z</published>
+    <title>Identification of Causal Effects with a Bunching Design</title>
+    <summary>  We show that causal effects can be identified when there is bunching in the
+distribution of a continuous treatment variable, without imposing any
+parametric assumptions. This yields a new nonparametric method for overcoming
+selection bias in the absence of instrumental variables, panel data, or other
+popular research designs for causal inference. The method leverages the change
+of variables theorem from integration theory, relating the selection bias to
+the ratio of the density of the treatment and the density of the part of the
+outcome that varies with confounders. At the bunching point, the treatment
+level is constant, so the variation in the outcomes is due entirely to
+unobservables, allowing us to identify the denominator. Our main result
+identifies the average causal response to the treatment among individuals who
+marginally select into the bunching point. We further show that under
+additional smoothness assumptions on the selection bias, treatment effects away
+from the bunching point may also be identified. We propose estimators based on
+standard software packages and apply the method to estimate the effect of
+maternal smoking during pregnancy on birth weight.
+</summary>
+    <author>
+      <name>Carolina Caetano</name>
+    </author>
+    <author>
+      <name>Gregorio Caetano</name>
+    </author>
+    <author>
+      <name>Leonard Goff</name>
+    </author>
+    <author>
+      <name>Eric Nielsen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.05210v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05210v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05209v1</id>
+    <updated>2025-07-07T17:19:21Z</updated>
+    <published>2025-07-07T17:19:21Z</published>
+    <title>Hierarchical Subtraction with Neural Density Estimators as a General
+  Solution to Overlapping Gravitational Wave Signals</title>
+    <summary>  Overlapping gravitational wave (GW) signals are expected in the
+third-generation (3G) GW detectors, leading to one of the major challenges in
+GW data analysis. Inference of overlapping GW sources is complicated - it has
+been reported that hierarchical inference with signal subtraction may amplify
+errors, while joint estimation, though more accurate, is computationally
+expensive. However, in this work, we show that hierarchical subtraction can
+achieve accurate results with a sufficient number of iterations, and on the
+other hand, neural density estimators, being able to generate posterior samples
+rapidly, make it possible to perform signal subtraction and inference
+repeatedly. We further develop likelihood-based resampling to accelerate the
+convergence of the iterative subtraction. Our method provides fast and accurate
+inference for overlapping GW signals and is highly adaptable to various source
+types and time separations, offering a potential general solution for
+overlapping GW signal analysis.
+</summary>
+    <author>
+      <name>Qian Hu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05209v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05209v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05176v1</id>
+    <updated>2025-07-07T16:31:07Z</updated>
+    <published>2025-07-07T16:31:07Z</published>
+    <title>Mass Proxy Quality of Massive Halo Properties in the IllustrisTNG and
+  FLAMINGO Simulations: I. Hot Gas</title>
+    <summary>  We examine scale and redshift dependence of mass-property relations (MPRs)
+for five hot gas properties of two large group- and cluster-scale halo samples
+realized by the IllustrisTNG, TNG-Cluster and FLAMINGO cosmological
+hydrodynamical simulations. For intrinsic properties of i) hot gas mass
+($M_{\rm gas}$), ii) spectroscopic-like temperature ($T_{\rm sl}$), iii)
+soft-band X-ray luminosity ($L_{\rm X}$), and iv) X-ray ($Y_{\rm X}$) and v)
+Sunyaev-Zel'dovich ($Y_{\rm SZ}$) thermal energies, we use MPR parameters to
+infer mass proxy quality (MPQ) -- the implied scatter in total halo mass
+conditioned on a property -- for halos with $M_{\rm 500c} \geq 10^{13}{\, {\rm
+M}_\odot}$ at redshifts, $z \in \{0, 0.5, 1, 2\}$. We find: (1) in general,
+scaling relation slopes and covariance display moderate to strong dependence on
+halo mass, with redshift dependence secondary, (2) for halos with $M_{\rm 500c}
+&gt; 10^{14}{\, {\rm M}_\odot}$, scalings of $M_{\rm gas}$ and $Y_{\rm SZ}$
+simplify toward self-similar slope and constant intrinsic scatter (5 and 10%,
+respectively) nearly independent of scale, making both measures ideal for
+cluster finding and characterization to $z=2$, (3) halo mass-conditioned
+likelihoods of hot gas mass and thermal energy at fixed halo mass closely
+follow a log-normal form, (4) despite normalization differences ranging up to
+$0.4$ dex, there is good qualitative, and often quantitative, agreement between
+the scale-dependent slopes and property covariance of the two simulations.
+Slopes show appreciable redshift dependence at the group scale, while redshift
+dependence of the scatter is exhibited by low mass FLAMINGO halos only, (5)
+property correlations are largely consistent between the simulations, with
+values that mainly agree with existing empirical measurements. We close with a
+literature survey placing our MPR slopes and intrinsic scatter estimates into
+context.
+</summary>
+    <author>
+      <name>Eddie Aljamal</name>
+    </author>
+    <author>
+      <name>August E. Evrard</name>
+    </author>
+    <author>
+      <name>Arya Farahi</name>
+    </author>
+    <author>
+      <name>Annalisa Pillepich</name>
+    </author>
+    <author>
+      <name>Dylan Nelson</name>
+    </author>
+    <author>
+      <name>Joop Schaye</name>
+    </author>
+    <author>
+      <name>Matthieu Schaller</name>
+    </author>
+    <author>
+      <name>Joey Braspenning</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">23 pages, 14 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.05176v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.05176v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
