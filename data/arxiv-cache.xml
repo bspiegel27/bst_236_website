@@ -1,813 +1,524 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-10T00:59:37Z -->
+<!-- Last updated: 2025-07-11T01:00:16Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-09T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116554</opensearch:totalResults>
+  <updated>2025-07-10T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116616</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.06230v1</id>
-    <updated>2025-07-08T17:59:50Z</updated>
-    <published>2025-07-08T17:59:50Z</published>
-    <title>Feed-Forward SceneDINO for Unsupervised Semantic Scene Completion</title>
-    <summary>  Semantic scene completion (SSC) aims to infer both the 3D geometry and
-semantics of a scene from single images. In contrast to prior work on SSC that
-heavily relies on expensive ground-truth annotations, we approach SSC in an
-unsupervised setting. Our novel method, SceneDINO, adapts techniques from
-self-supervised representation learning and 2D unsupervised scene understanding
-to SSC. Our training exclusively utilizes multi-view consistency
-self-supervision without any form of semantic or geometric ground truth. Given
-a single input image, SceneDINO infers the 3D geometry and expressive 3D DINO
-features in a feed-forward manner. Through a novel 3D feature distillation
-approach, we obtain unsupervised 3D semantics. In both 3D and 2D unsupervised
-scene understanding, SceneDINO reaches state-of-the-art segmentation accuracy.
-Linear probing our 3D features matches the segmentation accuracy of a current
-supervised SSC approach. Additionally, we showcase the domain generalization
-and multi-view consistency of SceneDINO, taking the first steps towards a
-strong foundation for single image 3D scene understanding.
+    <id>http://arxiv.org/abs/2507.07077v1</id>
+    <updated>2025-07-09T17:35:58Z</updated>
+    <published>2025-07-09T17:35:58Z</published>
+    <title>Reading a Ruler in the Wild</title>
+    <summary>  Accurately converting pixel measurements into absolute real-world dimensions
+remains a fundamental challenge in computer vision and limits progress in key
+applications such as biomedicine, forensics, nutritional analysis, and
+e-commerce. We introduce RulerNet, a deep learning framework that robustly
+infers scale "in the wild" by reformulating ruler reading as a unified
+keypoint-detection problem and by representing the ruler with
+geometric-progression parameters that are invariant to perspective
+transformations. Unlike traditional methods that rely on handcrafted thresholds
+or rigid, ruler-specific pipelines, RulerNet directly localizes centimeter
+marks using a distortion-invariant annotation and training strategy, enabling
+strong generalization across diverse ruler types and imaging conditions while
+mitigating data scarcity. We also present a scalable synthetic-data pipeline
+that combines graphics-based ruler generation with ControlNet to add
+photorealistic context, greatly increasing training diversity and improving
+performance. To further enhance robustness and efficiency, we propose DeepGP, a
+lightweight feed-forward network that regresses geometric-progression
+parameters from noisy marks and eliminates iterative optimization, enabling
+real-time scale estimation on mobile or edge devices. Experiments show that
+RulerNet delivers accurate, consistent, and efficient scale estimates under
+challenging real-world conditions. These results underscore its utility as a
+generalizable measurement tool and its potential for integration with other
+vision components for automated, scale-aware analysis in high-impact domains. A
+live demo is available at https://huggingface.co/spaces/ymp5078/RulerNet-Demo.
 </summary>
     <author>
-      <name>Aleksandar Jevtić</name>
+      <name>Yimu Pan</name>
     </author>
     <author>
-      <name>Christoph Reich</name>
+      <name>Manas Mehta</name>
     </author>
     <author>
-      <name>Felix Wimbauer</name>
+      <name>Gwen Sincerbeaux</name>
     </author>
     <author>
-      <name>Oliver Hahn</name>
+      <name>Jeffery A. Goldstein</name>
     </author>
     <author>
-      <name>Christian Rupprecht</name>
+      <name>Alison D. Gernand</name>
     </author>
     <author>
-      <name>Stefan Roth</name>
+      <name>James Z. Wang</name>
     </author>
-    <author>
-      <name>Daniel Cremers</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">To appear at ICCV 2025. Christoph Reich and Aleksandar Jevti\'c -
-  both authors contributed equally. Code:
-  https://github.com/tum-vision/scenedino Project page:
-  https://visinf.github.io/scenedino</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06230v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06230v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2507.07077v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07077v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06213v1</id>
-    <updated>2025-07-08T17:46:08Z</updated>
-    <published>2025-07-08T17:46:08Z</published>
-    <title>Identifiability in Causal Abstractions: A Hierarchy of Criteria</title>
-    <summary>  Identifying the effect of a treatment from observational data typically
-requires assuming a fully specified causal diagram. However, such diagrams are
-rarely known in practice, especially in complex or high-dimensional settings.
-To overcome this limitation, recent works have explored the use of causal
-abstractions-simplified representations that retain partial causal information.
-In this paper, we consider causal abstractions formalized as collections of
-causal diagrams, and focus on the identifiability of causal queries within such
-collections. We introduce and formalize several identifiability criteria under
-this setting. Our main contribution is to organize these criteria into a
-structured hierarchy, highlighting their relationships. This hierarchical view
-enables a clearer understanding of what can be identified under varying levels
-of causal knowledge. We illustrate our framework through examples from the
-literature and provide tools to reason about identifiability when full causal
-knowledge is unavailable.
+    <id>http://arxiv.org/abs/2507.07067v1</id>
+    <updated>2025-07-09T17:27:51Z</updated>
+    <published>2025-07-09T17:27:51Z</published>
+    <title>How to Bridge the Sim-to-Real Gap in Digital Twin-Aided
+  Telecommunication Networks</title>
+    <summary>  Training effective artificial intelligence models for telecommunications is
+challenging due to the scarcity of deployment-specific data. Real data
+collection is expensive, and available datasets often fail to capture the
+unique operational conditions and contextual variability of the network
+environment. Digital twinning provides a potential solution to this problem, as
+simulators tailored to the current network deployment can generate
+site-specific data to augment the available training datasets. However, there
+is a need to develop solutions to bridge the inherent simulation-to-reality
+(sim-to-real) gap between synthetic and real-world data. This paper reviews
+recent advances on two complementary strategies: 1) the calibration of digital
+twins (DTs) through real-world measurements, and 2) the use of sim-to-real
+gap-aware training strategies to robustly handle residual discrepancies between
+digital twin-generated and real data. For the latter, we evaluate two
+conceptually distinct methods that model the sim-to-real gap either at the
+level of the environment via Bayesian learning or at the level of the training
+loss via prediction-powered inference.
 </summary>
     <author>
-      <name>Clément Yvernes</name>
+      <name>Clement Ruah</name>
     </author>
     <author>
-      <name>Emilie Devijver</name>
+      <name>Houssem Sifaou</name>
     </author>
     <author>
-      <name>Marianne Clausel</name>
+      <name>Osvaldo Simeone</name>
     </author>
     <author>
-      <name>Eric Gaussier</name>
+      <name>Bashir M. Al-Hashimi</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at the CAR Workshop at UAI2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06213v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06213v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06206v1</id>
-    <updated>2025-07-08T17:30:59Z</updated>
-    <published>2025-07-08T17:30:59Z</published>
-    <title>Direct imaging discovery of a young giant planet orbiting on Solar
-  System scales</title>
-    <summary>  HD 135344 AB is a young visual binary system that is best known for the
-protoplanetary disk around the secondary star. The circumstellar environment of
-the A0-type primary star, on the other hand, is already depleted. HD 135344 A
-is therefore an ideal target for the exploration of recently formed giant
-planets because it is not obscured by dust. We searched for and characterized
-substellar companions to HD 135344 A down to separations of about 10 au. We
-observed HD 135344 A with VLT/SPHERE in the $H23$ and $K12$ bands and obtained
-$YJ$ and $YJH$ spectroscopy. In addition, we carried out VLTI/GRAVITY
-observations for the further astrometric and spectroscopic confirmation of a
-detected companion. We discovered a close-in young giant planet, HD 135344 Ab,
-with a mass of about 10 $M_\mathrm{J}$. The multi-epoch astrometry confirms the
-bound nature based on common parallax and common proper motion. This firmly
-rules out the scenario of a non-stationary background star. The semi-major axis
-of the planetary orbit is approximately 15-20 au, and the photometry is
-consistent with that of a mid L-type object. The inferred atmospheric and bulk
-parameters further confirm the young and planetary nature of the companion. HD
-135344 Ab is one of the youngest directly imaged planets that has fully formed
-and orbits on Solar System scales. It is a valuable target for studying the
-early evolution and atmosphere of a giant planet that could have formed in the
-vicinity of the snowline.
-</summary>
-    <author>
-      <name>T. Stolker</name>
-    </author>
-    <author>
-      <name>M. Samland</name>
-    </author>
-    <author>
-      <name>L. B. F. M. Waters</name>
-    </author>
-    <author>
-      <name>M. E. van den Ancker</name>
-    </author>
-    <author>
-      <name>W. O. Balmer</name>
-    </author>
-    <author>
-      <name>S. Lacour</name>
-    </author>
-    <author>
-      <name>M. L. Sitko</name>
-    </author>
-    <author>
-      <name>J. J. Wang</name>
-    </author>
-    <author>
-      <name>M. Nowak</name>
-    </author>
-    <author>
-      <name>A. -L. Maire</name>
-    </author>
-    <author>
-      <name>J. Kammerer</name>
-    </author>
-    <author>
-      <name>G. P. P. L. Otten</name>
-    </author>
-    <author>
-      <name>R. Abuter</name>
-    </author>
-    <author>
-      <name>A. Amorim</name>
-    </author>
-    <author>
-      <name>M. Benisty</name>
-    </author>
-    <author>
-      <name>J. -P. Berger</name>
-    </author>
-    <author>
-      <name>H. Beust</name>
-    </author>
-    <author>
-      <name>S. Blunt</name>
-    </author>
-    <author>
-      <name>A. Boccaletti</name>
-    </author>
-    <author>
-      <name>M. Bonnefoy</name>
-    </author>
-    <author>
-      <name>H. Bonnet</name>
-    </author>
-    <author>
-      <name>M. S. Bordoni</name>
-    </author>
-    <author>
-      <name>G. Bourdarot</name>
-    </author>
-    <author>
-      <name>W. Brandner</name>
-    </author>
-    <author>
-      <name>F. Cantalloube</name>
-    </author>
-    <author>
-      <name>P. Caselli</name>
-    </author>
-    <author>
-      <name>B. Charnay</name>
-    </author>
-    <author>
-      <name>G. Chauvin</name>
-    </author>
-    <author>
-      <name>A. Chavez</name>
-    </author>
-    <author>
-      <name>A. Chomez</name>
-    </author>
-    <author>
-      <name>E. Choquet</name>
-    </author>
-    <author>
-      <name>V. Christiaens</name>
-    </author>
-    <author>
-      <name>Y. Clénet</name>
-    </author>
-    <author>
-      <name>V. Coudé du Foresto</name>
-    </author>
-    <author>
-      <name>A. Cridland</name>
-    </author>
-    <author>
-      <name>R. Davies</name>
-    </author>
-    <author>
-      <name>R. Dembet</name>
-    </author>
-    <author>
-      <name>J. Dexter</name>
-    </author>
-    <author>
-      <name>C. Dominik</name>
-    </author>
-    <author>
-      <name>A. Drescher</name>
-    </author>
-    <author>
-      <name>G. Duvert</name>
-    </author>
-    <author>
-      <name>A. Eckart</name>
-    </author>
-    <author>
-      <name>F. Eisenhauer</name>
-    </author>
-    <author>
-      <name>N. M. Förster Schreiber</name>
-    </author>
-    <author>
-      <name>P. Garcia</name>
-    </author>
-    <author>
-      <name>R. Garcia Lopez</name>
-    </author>
-    <author>
-      <name>T. Gardner</name>
-    </author>
-    <author>
-      <name>E. Gendron</name>
-    </author>
-    <author>
-      <name>R. Genzel</name>
-    </author>
-    <author>
-      <name>S. Gillessen</name>
-    </author>
-    <author>
-      <name>J. H. Girard</name>
-    </author>
-    <author>
-      <name>S. Grant</name>
-    </author>
-    <author>
-      <name>X. Haubois</name>
-    </author>
-    <author>
-      <name>G. Heißel</name>
-    </author>
-    <author>
-      <name>Th. Henning</name>
-    </author>
-    <author>
-      <name>S. Hinkley</name>
-    </author>
-    <author>
-      <name>S. Hippler</name>
-    </author>
-    <author>
-      <name>M. Houllé</name>
-    </author>
-    <author>
-      <name>Z. Hubert</name>
-    </author>
-    <author>
-      <name>L. Jocou</name>
-    </author>
-    <author>
-      <name>M. Keppler</name>
-    </author>
-    <author>
-      <name>P. Kervella</name>
-    </author>
-    <author>
-      <name>L. Kreidberg</name>
-    </author>
-    <author>
-      <name>N. T. Kurtovic</name>
-    </author>
-    <author>
-      <name>A. -M. Lagrange</name>
-    </author>
-    <author>
-      <name>V. Lapeyrère</name>
-    </author>
-    <author>
-      <name>J. -B. Le Bouquin</name>
-    </author>
-    <author>
-      <name>D. Lutz</name>
-    </author>
-    <author>
-      <name>F. Mang</name>
-    </author>
-    <author>
-      <name>G. -D. Marleau</name>
-    </author>
-    <author>
-      <name>A. Mérand</name>
-    </author>
-    <author>
-      <name>M. Min</name>
-    </author>
-    <author>
-      <name>P. Mollière</name>
-    </author>
-    <author>
-      <name>J. D. Monnier</name>
-    </author>
-    <author>
-      <name>C. Mordasini</name>
-    </author>
-    <author>
-      <name>D. Mouillet</name>
-    </author>
-    <author>
-      <name>E. Nasedkin</name>
-    </author>
-    <author>
-      <name>T. Ott</name>
-    </author>
-    <author>
-      <name>C. Paladini</name>
-    </author>
-    <author>
-      <name>T. Paumard</name>
-    </author>
-    <author>
-      <name>K. Perraut</name>
-    </author>
-    <author>
-      <name>G. Perrin</name>
-    </author>
-    <author>
-      <name>O. Pfuhl</name>
-    </author>
-    <author>
-      <name>N. Pourré</name>
-    </author>
-    <author>
-      <name>L. Pueyo</name>
-    </author>
-    <author>
-      <name>S. P. Quanz</name>
-    </author>
-    <author>
-      <name>D. C. Ribeiro</name>
-    </author>
-    <author>
-      <name>E. Rickman</name>
-    </author>
-    <author>
-      <name>Z. Rustamkulov</name>
-    </author>
-    <author>
-      <name>J. Shangguan</name>
-    </author>
-    <author>
-      <name>T. Shimizu</name>
-    </author>
-    <author>
-      <name>D. Sing</name>
-    </author>
-    <author>
-      <name>J. Stadler</name>
-    </author>
-    <author>
-      <name>O. Straub</name>
-    </author>
-    <author>
-      <name>C. Straubmeier</name>
-    </author>
-    <author>
-      <name>E. Sturm</name>
-    </author>
-    <author>
-      <name>L. J. Tacconi</name>
-    </author>
-    <author>
-      <name>E. F. van Dishoeck</name>
-    </author>
-    <author>
-      <name>A. Vigan</name>
-    </author>
-    <author>
-      <name>F. Vincent</name>
-    </author>
-    <author>
-      <name>S. D. von Fellenberg</name>
-    </author>
-    <author>
-      <name>F. Widmann</name>
-    </author>
-    <author>
-      <name>T. O. Winterhalder</name>
-    </author>
-    <author>
-      <name>J. Woillez</name>
-    </author>
-    <author>
-      <name>S. Yazici</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 11 figures, accepted for publication in A&amp;A</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06206v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06206v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06203v1</id>
-    <updated>2025-07-08T17:29:07Z</updated>
-    <published>2025-07-08T17:29:07Z</published>
-    <title>A Survey on Latent Reasoning</title>
-    <summary>  Large Language Models (LLMs) have demonstrated impressive reasoning
-capabilities, especially when guided by explicit chain-of-thought (CoT)
-reasoning that verbalizes intermediate steps. While CoT improves both
-interpretability and accuracy, its dependence on natural language reasoning
-limits the model's expressive bandwidth. Latent reasoning tackles this
-bottleneck by performing multi-step inference entirely in the model's
-continuous hidden state, eliminating token-level supervision. To advance latent
-reasoning research, this survey provides a comprehensive overview of the
-emerging field of latent reasoning. We begin by examining the foundational role
-of neural network layers as the computational substrate for reasoning,
-highlighting how hierarchical representations support complex transformations.
-Next, we explore diverse latent reasoning methodologies, including
-activation-based recurrence, hidden state propagation, and fine-tuning
-strategies that compress or internalize explicit reasoning traces. Finally, we
-discuss advanced paradigms such as infinite-depth latent reasoning via masked
-diffusion models, which enable globally consistent and reversible reasoning
-processes. By unifying these perspectives, we aim to clarify the conceptual
-landscape of latent reasoning and chart future directions for research at the
-frontier of LLM cognition. An associated GitHub repository collecting the
-latest papers and repos is available at:
-https://github.com/multimodal-art-projection/LatentCoT-Horizon/.
-</summary>
-    <author>
-      <name>Rui-Jie Zhu</name>
-    </author>
-    <author>
-      <name>Tianhao Peng</name>
-    </author>
-    <author>
-      <name>Tianhao Cheng</name>
-    </author>
-    <author>
-      <name>Xingwei Qu</name>
-    </author>
-    <author>
-      <name>Jinfa Huang</name>
-    </author>
-    <author>
-      <name>Dawei Zhu</name>
-    </author>
-    <author>
-      <name>Hao Wang</name>
-    </author>
-    <author>
-      <name>Kaiwen Xue</name>
-    </author>
-    <author>
-      <name>Xuanliang Zhang</name>
-    </author>
-    <author>
-      <name>Yong Shan</name>
-    </author>
-    <author>
-      <name>Tianle Cai</name>
-    </author>
-    <author>
-      <name>Taylor Kergan</name>
-    </author>
-    <author>
-      <name>Assel Kembay</name>
-    </author>
-    <author>
-      <name>Andrew Smith</name>
-    </author>
-    <author>
-      <name>Chenghua Lin</name>
-    </author>
-    <author>
-      <name>Binh Nguyen</name>
-    </author>
-    <author>
-      <name>Yuqi Pan</name>
-    </author>
-    <author>
-      <name>Yuhong Chou</name>
-    </author>
-    <author>
-      <name>Zefan Cai</name>
-    </author>
-    <author>
-      <name>Zhenhe Wu</name>
-    </author>
-    <author>
-      <name>Yongchi Zhao</name>
-    </author>
-    <author>
-      <name>Tianyu Liu</name>
-    </author>
-    <author>
-      <name>Jian Yang</name>
-    </author>
-    <author>
-      <name>Wangchunshu Zhou</name>
-    </author>
-    <author>
-      <name>Chujie Zheng</name>
-    </author>
-    <author>
-      <name>Chongxuan Li</name>
-    </author>
-    <author>
-      <name>Yuyin Zhou</name>
-    </author>
-    <author>
-      <name>Zhoujun Li</name>
-    </author>
-    <author>
-      <name>Zhaoxiang Zhang</name>
-    </author>
-    <author>
-      <name>Jiaheng Liu</name>
-    </author>
-    <author>
-      <name>Ge Zhang</name>
-    </author>
-    <author>
-      <name>Wenhao Huang</name>
-    </author>
-    <author>
-      <name>Jason Eshraghian</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.06203v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06203v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06195v1</id>
-    <updated>2025-07-08T17:22:22Z</updated>
-    <published>2025-07-08T17:22:22Z</published>
-    <title>DS@GT at CheckThat! 2025: Evaluating Context and Tokenization Strategies
-  for Numerical Fact Verification</title>
-    <summary>  Numerical claims, statements involving quantities, comparisons, and temporal
-references, pose unique challenges for automated fact-checking systems. In this
-study, we evaluate modeling strategies for veracity prediction of such claims
-using the QuanTemp dataset and building our own evidence retrieval pipeline. We
-investigate three key factors: (1) the impact of more evidences with longer
-input context windows using ModernBERT, (2) the effect of right-to-left (R2L)
-tokenization, and (3) their combined influence on classification performance.
-Contrary to prior findings in arithmetic reasoning tasks, R2L tokenization does
-not boost natural language inference (NLI) of numerical tasks. A longer context
-window does also not enhance veracity performance either, highlighting evidence
-quality as the dominant bottleneck. Our best-performing system achieves
-competitive macro-average F1 score of 0.57 and places us among the Top-4
-submissions in Task 3 of CheckThat! 2025. Our code is available at
-https://github.com/dsgt-arc/checkthat-2025-numerical.
-</summary>
-    <author>
-      <name>Maximilian Heil</name>
-    </author>
-    <author>
-      <name>Aleksandar Pramov</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.06195v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06195v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06147v1</id>
-    <updated>2025-07-08T16:28:02Z</updated>
-    <published>2025-07-08T16:28:02Z</published>
-    <title>de Sitter Holography and Carrollian Brane Theories</title>
-    <summary>  It was discovered in recent months that the anti-de Sitter (AdS) backgrounds
-involved in all familiar top-down examples of AdS/CFT duality follow from
-applying a transverse nonrelativistic brane limit to string/M theory on
-(asymptotically) flat spacetime. In this note we show that an exactly analogous
-statement holds for de Sitter (dS) backgrounds relevant to particular instances
-of dS/CFT duality, which are obtained via a longitudinal Carrollian brane
-limit. This statement makes direct contact with the holographic duality
-inferred by Hull via temporal T-duality.
-</summary>
-    <author>
-      <name>Andrés Argandoña</name>
-    </author>
-    <author>
-      <name>Alberto Guijosa</name>
-    </author>
-    <author>
-      <name>Sergio Patiño-López</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, no figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06147v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06147v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06139v1</id>
-    <updated>2025-07-08T16:20:46Z</updated>
-    <published>2025-07-08T16:20:46Z</published>
-    <title>Topic Modeling and Link-Prediction for Material Property Discovery</title>
-    <summary>  Link prediction infers missing or future relations between graph nodes, based
-on connection patterns. Scientific literature networks and knowledge graphs are
-typically large, sparse, and noisy, and often contain missing links between
-entities. We present an AI-driven hierarchical link prediction framework that
-integrates matrix factorization to infer hidden associations and steer
-discovery in complex material domains. Our method combines Hierarchical
-Nonnegative Matrix Factorization (HNMFk) and Boolean matrix factorization
-(BNMFk) with automatic model selection, as well as Logistic matrix
-factorization (LMF), we use to construct a three-level topic tree from a
-46,862-document corpus focused on 73 transition-metal dichalcogenides (TMDs).
-These materials are studied in a variety of physics fields with many current
-and potential applications.
-  An ensemble BNMFk + LMF approach fuses discrete interpretability with
-probabilistic scoring. The resulting HNMFk clusters map each material onto
-coherent topics like superconductivity, energy storage, and tribology. Also,
-missing or weakly connected links are highlight between topics and materials,
-suggesting novel hypotheses for cross-disciplinary exploration. We validate our
-method by removing publications about superconductivity in well-known
-superconductors, and show the model predicts associations with the
-superconducting TMD clusters. This shows the method finds hidden connections in
-a graph of material to latent topic associations built from scientific
-literature, especially useful when examining a diverse corpus of scientific
-documents covering the same class of phenomena or materials but originating
-from distinct communities and perspectives. The inferred links generating new
-hypotheses, produced by our method, are exposed through an interactive
-Streamlit dashboard, designed for human-in-the-loop scientific discovery.
-</summary>
-    <author>
-      <name>Ryan C. Barron</name>
-    </author>
-    <author>
-      <name>Maksim E. Eren</name>
-    </author>
-    <author>
-      <name>Valentin Stanev</name>
-    </author>
-    <author>
-      <name>Cynthia Matuszek</name>
-    </author>
-    <author>
-      <name>Boian S. Alexandrov</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">4 pages, 3 figures, 1 table</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06139v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06139v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This work has been submitted to the IEEE for possible publication</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07067v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07067v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07031v1</id>
+    <updated>2025-07-09T17:03:21Z</updated>
+    <published>2025-07-09T17:03:21Z</published>
+    <title>ZKTorch: Compiling ML Inference to Zero-Knowledge Proofs via Parallel
+  Proof Accumulation</title>
+    <summary>  As AI models become ubiquitous in our daily lives, there has been an
+increasing demand for transparency in ML services. However, the model owner
+does not want to reveal the weights, as they are considered trade secrets. To
+solve this problem, researchers have turned to zero-knowledge proofs of ML
+model inference. These proofs convince the user that the ML model output is
+correct, without revealing the weights of the model to the user. Past work on
+these provers can be placed into two categories. The first method compiles the
+ML model into a low-level circuit, and proves the circuit using a ZK-SNARK. The
+second method uses custom cryptographic protocols designed only for a specific
+class of models. Unfortunately, the first method is highly inefficient, making
+it impractical for the large models used today, and the second method does not
+generalize well, making it difficult to update in the rapidly changing field of
+machine learning. To solve this, we propose ZKTorch, an open source end-to-end
+proving system that compiles ML models into base cryptographic operations
+called basic blocks, each proved using specialized protocols. ZKTorch is built
+on top of a novel parallel extension to the Mira accumulation scheme, enabling
+succinct proofs with minimal accumulation overhead. These contributions allow
+ZKTorch to achieve at least a $3\times$ reduction in the proof size compared to
+specialized protocols and up to a $6\times$ speedup in proving time over a
+general-purpose ZKML framework.
+</summary>
+    <author>
+      <name>Bing-Jyue Chen</name>
+    </author>
+    <author>
+      <name>Lilia Tang</name>
+    </author>
+    <author>
+      <name>Daniel Kang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 2 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07031v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07031v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07024v1</id>
+    <updated>2025-07-09T16:54:21Z</updated>
+    <published>2025-07-09T16:54:21Z</published>
+    <title>FlexOlmo: Open Language Models for Flexible Data Use</title>
+    <summary>  We introduce FlexOlmo, a new class of language models (LMs) that supports (1)
+distributed training without data sharing, where different model parameters are
+independently trained on closed datasets, and (2) data-flexible inference,
+where these parameters along with their associated data can be flexibly
+included or excluded from model inferences with no further training. FlexOlmo
+employs a mixture-of-experts (MoE) architecture where each expert is trained
+independently on closed datasets and later integrated through a new
+domain-informed routing without any joint training. FlexOlmo is trained on
+FlexMix, a corpus we curate comprising publicly available datasets alongside
+seven domain-specific sets, representing realistic approximations of closed
+sets. We evaluate models with up to 37 billion parameters (20 billion active)
+on 31 diverse downstream tasks. We show that a general expert trained on public
+data can be effectively combined with independently trained experts from other
+data owners, leading to an average 41% relative improvement while allowing
+users to opt out of certain data based on data licensing or permission
+requirements. Our approach also outperforms prior model merging methods by
+10.1% on average and surpasses the standard MoE trained without data
+restrictions using the same training FLOPs. Altogether, this research presents
+a solution for both data owners and researchers in regulated industries with
+sensitive or protected data. FlexOlmo enables benefiting from closed data while
+respecting data owners' preferences by keeping their data local and supporting
+fine-grained control of data access during inference.
+</summary>
+    <author>
+      <name>Weijia Shi</name>
+    </author>
+    <author>
+      <name>Akshita Bhagia</name>
+    </author>
+    <author>
+      <name>Kevin Farhat</name>
+    </author>
+    <author>
+      <name>Niklas Muennighoff</name>
+    </author>
+    <author>
+      <name>Pete Walsh</name>
+    </author>
+    <author>
+      <name>Jacob Morrison</name>
+    </author>
+    <author>
+      <name>Dustin Schwenk</name>
+    </author>
+    <author>
+      <name>Shayne Longpre</name>
+    </author>
+    <author>
+      <name>Jake Poznanski</name>
+    </author>
+    <author>
+      <name>Allyson Ettinger</name>
+    </author>
+    <author>
+      <name>Daogao Liu</name>
+    </author>
+    <author>
+      <name>Margaret Li</name>
+    </author>
+    <author>
+      <name>Dirk Groeneveld</name>
+    </author>
+    <author>
+      <name>Mike Lewis</name>
+    </author>
+    <author>
+      <name>Wen-tau Yih</name>
+    </author>
+    <author>
+      <name>Luca Soldaini</name>
+    </author>
+    <author>
+      <name>Kyle Lo</name>
+    </author>
+    <author>
+      <name>Noah A. Smith</name>
+    </author>
+    <author>
+      <name>Luke Zettlemoyer</name>
+    </author>
+    <author>
+      <name>Pang Wei Koh</name>
+    </author>
+    <author>
+      <name>Hannaneh Hajishirzi</name>
+    </author>
+    <author>
+      <name>Ali Farhadi</name>
+    </author>
+    <author>
+      <name>Sewon Min</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.07024v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07024v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06113v1</id>
-    <updated>2025-07-08T15:52:47Z</updated>
-    <published>2025-07-08T15:52:47Z</published>
-    <title>A Statistical Framework for Co-Mediators of Zero-Inflated Single-Cell
-  RNA-Seq Data</title>
-    <summary>  Single-cell RNA sequencing (scRNA-seq) has revolutionized the study of
-cellular heterogeneity, enabling detailed molecular profiling at the individual
-cell level. However, integrating high-dimensional single-cell data into causal
-mediation analysis remains challenging due to zero inflation and complex
-mediator structures. We propose a novel mediation framework leveraging
-zero-inflated negative binomial models to characterize cell-level mediator
-distributions and beta regression for zero-inflation proportions. Subject-level
-mediators are aggregated from cell-level data to perform mediation analysis
-assessing causal pathways linking gene expression to clinical outcomes.
-Extensive simulation studies demonstrate improved power and controlled false
-discovery rates. We further illustrate the utility of this approach through
-application to ROSMAP single-cell transcriptomic data, uncovering biologically
-meaningful mediation effects that enhance understanding of disease mechanisms.
+    <id>http://arxiv.org/abs/2507.06986v1</id>
+    <updated>2025-07-09T16:08:58Z</updated>
+    <published>2025-07-09T16:08:58Z</published>
+    <title>BarkBeetle: Stealing Decision Tree Models with Fault Injection</title>
+    <summary>  Machine learning models, particularly decision trees (DTs), are widely
+adopted across various domains due to their interpretability and efficiency.
+However, as ML models become increasingly integrated into privacy-sensitive
+applications, concerns about their confidentiality have grown, particularly in
+light of emerging threats such as model extraction and fault injection attacks.
+Assessing the vulnerability of DTs under such attacks is therefore important.
+In this work, we present BarkBeetle, a novel attack that leverages fault
+injection to extract internal structural information of DT models. BarkBeetle
+employs a bottom-up recovery strategy that uses targeted fault injection at
+specific nodes to efficiently infer feature splits and threshold values. Our
+proof-of-concept implementation demonstrates that BarkBeetle requires
+significantly fewer queries and recovers more structural information compared
+to prior approaches, when evaluated on DTs trained with public UCI datasets. To
+validate its practical feasibility, we implement BarkBeetle on a Raspberry Pi
+RP2350 board and perform fault injections using the Faultier voltage glitching
+tool. As BarkBeetle targets general DT models, we also provide an in-depth
+discussion on its applicability to a broader range of tree-based applications,
+including data stream classification, DT variants, and cryptography schemes.
 </summary>
     <author>
-      <name>Seungjun Ahn</name>
+      <name>Qifan Wang</name>
     </author>
     <author>
-      <name>Zhigang Li</name>
+      <name>Jonas Sander</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages and 1 figure. Supplementary materials available upon request</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06113v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06113v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Minmin Jiang</name>
+    </author>
+    <author>
+      <name>Thomas Eisenbarth</name>
+    </author>
+    <author>
+      <name>David Oswald</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.06986v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.06986v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06093v1</id>
-    <updated>2025-07-08T15:35:19Z</updated>
-    <published>2025-07-08T15:35:19Z</published>
-    <title>Tile-Based ViT Inference with Visual-Cluster Priors for Zero-Shot
-  Multi-Species Plant Identification</title>
-    <summary>  We describe DS@GT's second-place solution to the PlantCLEF 2025 challenge on
-multi-species plant identification in vegetation quadrat images. Our pipeline
-combines (i) a fine-tuned Vision Transformer ViTD2PC24All for patch-level
-inference, (ii) a 4x4 tiling strategy that aligns patch size with the network's
-518x518 receptive field, and (iii) domain-prior adaptation through PaCMAP +
-K-Means visual clustering and geolocation filtering. Tile predictions are
-aggregated by majority vote and re-weighted with cluster-specific Bayesian
-priors, yielding a macro-averaged F1 of 0.348 (private leaderboard) while
-requiring no additional training. All code, configuration files, and
-reproducibility scripts are publicly available at
-https://github.com/dsgt-arc/plantclef-2025.
+    <id>http://arxiv.org/abs/2507.06976v1</id>
+    <updated>2025-07-09T16:05:25Z</updated>
+    <published>2025-07-09T16:05:25Z</published>
+    <title>DenoiseCP-Net: Efficient Collective Perception in Adverse Weather via
+  Joint LiDAR-Based 3D Object Detection and Denoising</title>
+    <summary>  While automated vehicles hold the potential to significantly reduce traffic
+accidents, their perception systems remain vulnerable to sensor degradation
+caused by adverse weather and environmental occlusions. Collective perception,
+which enables vehicles to share information, offers a promising approach to
+overcoming these limitations. However, to this date collective perception in
+adverse weather is mostly unstudied. Therefore, we conduct the first study of
+LiDAR-based collective perception under diverse weather conditions and present
+a novel multi-task architecture for LiDAR-based collective perception under
+adverse weather. Adverse weather conditions can not only degrade perception
+capabilities, but also negatively affect bandwidth requirements and latency due
+to the introduced noise that is also transmitted and processed. Denoising prior
+to communication can effectively mitigate these issues. Therefore, we propose
+DenoiseCP-Net, a novel multi-task architecture for LiDAR-based collective
+perception under adverse weather conditions. DenoiseCP-Net integrates
+voxel-level noise filtering and object detection into a unified sparse
+convolution backbone, eliminating redundant computations associated with
+two-stage pipelines. This design not only reduces inference latency and
+computational cost but also minimizes communication overhead by removing
+non-informative noise. We extended the well-known OPV2V dataset by simulating
+rain, snow, and fog using our realistic weather simulation models. We
+demonstrate that DenoiseCP-Net achieves near-perfect denoising accuracy in
+adverse weather, reduces the bandwidth requirements by up to 23.6% while
+maintaining the same detection accuracy and reducing the inference latency for
+cooperative vehicles.
 </summary>
     <author>
-      <name>Murilo Gustineli</name>
+      <name>Sven Teufel</name>
     </author>
     <author>
-      <name>Anthony Miyaguchi</name>
+      <name>Dominique Mayer</name>
     </author>
     <author>
-      <name>Adrian Cheung</name>
+      <name>Jörg Gamerdinger</name>
     </author>
     <author>
-      <name>Divyansh Khattak</name>
+      <name>Oliver Bringmann</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.06093v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06093v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2507.06976v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.06976v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.06969v1</id>
+    <updated>2025-07-09T15:59:30Z</updated>
+    <published>2025-07-09T15:59:30Z</published>
+    <title>Unifying Re-Identification, Attribute Inference, and Data Reconstruction
+  Risks in Differential Privacy</title>
+    <summary>  Differentially private (DP) mechanisms are difficult to interpret and
+calibrate because existing methods for mapping standard privacy parameters to
+concrete privacy risks -- re-identification, attribute inference, and data
+reconstruction -- are both overly pessimistic and inconsistent. In this work,
+we use the hypothesis-testing interpretation of DP ($f$-DP), and determine that
+bounds on attack success can take the same unified form across
+re-identification, attribute inference, and data reconstruction risks. Our
+unified bounds are (1) consistent across a multitude of attack settings, and
+(2) tunable, enabling practitioners to evaluate risk with respect to arbitrary
+(including worst-case) levels of baseline risk. Empirically, our results are
+tighter than prior methods using $\varepsilon$-DP, R\'enyi DP, and concentrated
+DP. As a result, calibrating noise using our bounds can reduce the required
+noise by 20% at the same risk level, which yields, e.g., more than 15pp
+accuracy increase in a text classification task. Overall, this unifying
+perspective provides a principled framework for interpreting and calibrating
+the degree of protection in DP against specific levels of re-identification,
+attribute inference, or data reconstruction risk.
+</summary>
+    <author>
+      <name>Bogdan Kulynych</name>
+    </author>
+    <author>
+      <name>Juan Felipe Gomez</name>
+    </author>
+    <author>
+      <name>Georgios Kaissis</name>
+    </author>
+    <author>
+      <name>Jamie Hayes</name>
+    </author>
+    <author>
+      <name>Borja Balle</name>
+    </author>
+    <author>
+      <name>Flavio du Pin Calmon</name>
+    </author>
+    <author>
+      <name>Jean Louis Raisaro</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.06969v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.06969v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.06964v2</id>
+    <updated>2025-07-10T05:41:21Z</updated>
+    <published>2025-07-09T15:52:34Z</published>
+    <title>IdentityByDescentDispersal.jl: Inferring dispersal rates with
+  identity-by-descent blocks</title>
+    <summary>  The population density and per-generation dispersal rate of a population are
+central parameters in the study of evolution and ecology. The distribution of
+recent coalescent events between individuals in space can be used to estimate
+such quantities through the distribution of identity-by-descent (IBD) blocks.
+An IBD block is defined as a segment of DNA that has been inherited by a pair
+of individuals from a common ancestor without being broken by recombination. We
+introduce IdentityByDescentDispersal.jl, a Julia package for estimating
+effective population densities and dispersal rates from observed spatial
+patterns of IBD shared blocks. It implements the inference scheme proposed by
+Ringbauer, Coop, and Barton (2017). The package provides a user-friendly
+interface, supports efficient gradient-based optimization and accommodates
+arbitrary user-defined demographic models through numerical integration. This
+software aims to encourage a wider audience to utilize spatial genetic data for
+estimating dispersal rates, thereby motivating further research and expanding
+its applications.
+</summary>
+    <author>
+      <name>Francisco Campuzano Jiménez</name>
+    </author>
+    <author>
+      <name>Arthur Zwaenepoel</name>
+    </author>
+    <author>
+      <name>Els Lea R De Keyzer</name>
+    </author>
+    <author>
+      <name>Hannes Svardal</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.06964v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.06964v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.06961v1</id>
+    <updated>2025-07-09T15:46:39Z</updated>
+    <published>2025-07-09T15:46:39Z</published>
+    <title>Off-Policy Evaluation Under Nonignorable Missing Data</title>
+    <summary>  Off-Policy Evaluation (OPE) aims to estimate the value of a target policy
+using offline data collected from potentially different policies. In real-world
+applications, however, logged data often suffers from missingness. While OPE
+has been extensively studied in the literature, a theoretical understanding of
+how missing data affects OPE results remains unclear. In this paper, we
+investigate OPE in the presence of monotone missingness and theoretically
+demonstrate that the value estimates remain unbiased under ignorable
+missingness but can be biased under nonignorable (informative) missingness. To
+retain the consistency of value estimation, we propose an inverse probability
+weighted value estimator and conduct statistical inference to quantify the
+uncertainty of the estimates. Through a series of numerical experiments, we
+empirically demonstrate that our proposed estimator yields a more reliable
+value inference under missing data.
+</summary>
+    <author>
+      <name>Han Wang</name>
+    </author>
+    <author>
+      <name>Yang Xu</name>
+    </author>
+    <author>
+      <name>Wenbin Lu</name>
+    </author>
+    <author>
+      <name>Rui Song</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.06961v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.06961v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06087v1</id>
-    <updated>2025-07-08T15:28:48Z</updated>
-    <published>2025-07-08T15:28:48Z</published>
-    <title>CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs</title>
-    <summary>  Large reasoning models (LRMs) have demonstrated impressive capabilities in
-domains like mathematics and program synthesis. Despite their strong
-performance, LRMs often exhibit overthinking -- excessive and redundant
-reasoning steps that introduce inefficiencies during inference. This phenomenon
-raises an important question for LRM self-evaluation: How can a model
-autonomously assess the correctness of its own reasoning trajectory without
-external labels? To address this, we propose Chain-of-Reasoning Embedding
-(CoRE), a series of hidden states in latent space to enable label-free
-self-evaluation on intermediate reasoning steps of LRMs, so as to enhance
-metacognition abilities for improved reasoning efficiency. By analyzing the
-geometric properties of the CoRE trajectories, we reveal that redundant
-reasoning usually presents cyclical fluctuations, which correspond to
-repetitive and unconscious reflection/exploration. Leveraging this insight, we
-further introduce a training-free, label-free self-evaluation framework,
-CoRE-Eval, to detect such patterns and dynamically determine whether to
-terminate reasoning early. Extensive experiments on mathematical reasoning
-benchmarks (GSM8K, MATH-500, and AIME) and across model sizes from 7B to 32B
-demonstrate that CoRE-Eval reduces chain-of-thought length by 13.7% to 33.2%
-while improving answer accuracy by around 10%, achieving 70.0% accuracy on the
-challenging AIME benchmark with the 32B model.
+    <id>http://arxiv.org/abs/2507.06956v1</id>
+    <updated>2025-07-09T15:39:17Z</updated>
+    <published>2025-07-09T15:39:17Z</published>
+    <title>Investigating the Robustness of Retrieval-Augmented Generation at the
+  Query Level</title>
+    <summary>  Large language models (LLMs) are very costly and inefficient to update with
+new information. To address this limitation, retrieval-augmented generation
+(RAG) has been proposed as a solution that dynamically incorporates external
+knowledge during inference, improving factual consistency and reducing
+hallucinations. Despite its promise, RAG systems face practical challenges-most
+notably, a strong dependence on the quality of the input query for accurate
+retrieval. In this paper, we investigate the sensitivity of different
+components in the RAG pipeline to various types of query perturbations. Our
+analysis reveals that the performance of commonly used retrievers can degrade
+significantly even under minor query variations. We study each module in
+isolation as well as their combined effect in an end-to-end question answering
+setting, using both general-domain and domain-specific datasets. Additionally,
+we propose an evaluation framework to systematically assess the query-level
+robustness of RAG pipelines and offer actionable recommendations for
+practitioners based on the results of more than 1092 experiments we performed.
 </summary>
     <author>
-      <name>Haoxi Li</name>
+      <name>Sezen Perçin</name>
     </author>
     <author>
-      <name>Sikai Bai</name>
+      <name>Xin Su</name>
     </author>
     <author>
-      <name>Jie Zhang</name>
+      <name>Qutub Sha Syed</name>
     </author>
     <author>
-      <name>Song Guo</name>
+      <name>Phillip Howard</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06087v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06087v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Aleksei Kuvshinov</name>
+    </author>
+    <author>
+      <name>Leo Schwinn</name>
+    </author>
+    <author>
+      <name>Kay-Ulrich Scholl</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to Generation, Evaluation &amp; Metrics (GEM) Workshop at ACL
+  2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.06956v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.06956v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
