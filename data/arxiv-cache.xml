@@ -1,524 +1,496 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-11T01:00:16Z -->
+<!-- Last updated: 2025-07-12T01:01:39Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-10T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116616</opensearch:totalResults>
+  <updated>2025-07-11T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116691</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.07077v1</id>
-    <updated>2025-07-09T17:35:58Z</updated>
-    <published>2025-07-09T17:35:58Z</published>
-    <title>Reading a Ruler in the Wild</title>
-    <summary>  Accurately converting pixel measurements into absolute real-world dimensions
-remains a fundamental challenge in computer vision and limits progress in key
-applications such as biomedicine, forensics, nutritional analysis, and
-e-commerce. We introduce RulerNet, a deep learning framework that robustly
-infers scale "in the wild" by reformulating ruler reading as a unified
-keypoint-detection problem and by representing the ruler with
-geometric-progression parameters that are invariant to perspective
-transformations. Unlike traditional methods that rely on handcrafted thresholds
-or rigid, ruler-specific pipelines, RulerNet directly localizes centimeter
-marks using a distortion-invariant annotation and training strategy, enabling
-strong generalization across diverse ruler types and imaging conditions while
-mitigating data scarcity. We also present a scalable synthetic-data pipeline
-that combines graphics-based ruler generation with ControlNet to add
-photorealistic context, greatly increasing training diversity and improving
-performance. To further enhance robustness and efficiency, we propose DeepGP, a
-lightweight feed-forward network that regresses geometric-progression
-parameters from noisy marks and eliminates iterative optimization, enabling
-real-time scale estimation on mobile or edge devices. Experiments show that
-RulerNet delivers accurate, consistent, and efficient scale estimates under
-challenging real-world conditions. These results underscore its utility as a
-generalizable measurement tool and its potential for integration with other
-vision components for automated, scale-aware analysis in high-impact domains. A
-live demo is available at https://huggingface.co/spaces/ymp5078/RulerNet-Demo.
+    <id>http://arxiv.org/abs/2507.07996v1</id>
+    <updated>2025-07-10T17:59:53Z</updated>
+    <published>2025-07-10T17:59:53Z</published>
+    <title>Skip a Layer or Loop it? Test-Time Depth Adaptation of Pretrained LLMs</title>
+    <summary>  Can a pretrained neural network adapt its architecture to different inputs
+without any finetuning? Do we need all layers for simple tasks, and are they
+adequate for challenging tasks? We found that the layers of a pretrained large
+language model (LLM) can be manipulated as separate modules to build a better
+and even shallower model customized for each test sample. In particular, each
+layer from the pretrained model can be skipped/pruned or repeated multiple
+times as recurrent neural networks (RNN), and stacked with others in arbitrary
+orders, yielding a chain-of-layers (CoLa) per sample. This compositional space
+greatly expands the scope of existing works on looped/recurrent pretrained
+modules, layer pruning, or early-exit networks. We develop a Monte Carlo Tree
+Search (MCTS) protocol to explore and identify the optimal CoLa for each sample
+from math and commonsense reasoning benchmarks. Compared to a static model of a
+fixed depth, CoLa allows shortcut paths (fast thinking), recurrence of the same
+layer(s) (slow thinking), and combining both, offering more flexible, dynamic
+architectures for different inputs. We conduct an extensive analysis of the
+MCTS-optimized CoLa, which leads to two key findings: (1) For &gt;75% of samples
+with correct predictions by the original LLM, we can find shorter CoLa,
+suggesting a large space for improving inference efficiency; (2) For &gt;60% of
+samples with originally incorrect predictions, we can identify CoLa achieving
+correct predictions, suggesting a large space of performance enhancement. Our
+results highlight the shortcomings of using a fixed architecture of pre-trained
+LLMs for inference on different samples and pave the way to unlock the
+generalization power of test-time depth adaptation.
 </summary>
     <author>
-      <name>Yimu Pan</name>
+      <name>Ziyue Li</name>
     </author>
     <author>
-      <name>Manas Mehta</name>
+      <name>Yang Li</name>
     </author>
     <author>
-      <name>Gwen Sincerbeaux</name>
+      <name>Tianyi Zhou</name>
     </author>
-    <author>
-      <name>Jeffery A. Goldstein</name>
-    </author>
-    <author>
-      <name>Alison D. Gernand</name>
-    </author>
-    <author>
-      <name>James Z. Wang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.07077v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.07077v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.07067v1</id>
-    <updated>2025-07-09T17:27:51Z</updated>
-    <published>2025-07-09T17:27:51Z</published>
-    <title>How to Bridge the Sim-to-Real Gap in Digital Twin-Aided
-  Telecommunication Networks</title>
-    <summary>  Training effective artificial intelligence models for telecommunications is
-challenging due to the scarcity of deployment-specific data. Real data
-collection is expensive, and available datasets often fail to capture the
-unique operational conditions and contextual variability of the network
-environment. Digital twinning provides a potential solution to this problem, as
-simulators tailored to the current network deployment can generate
-site-specific data to augment the available training datasets. However, there
-is a need to develop solutions to bridge the inherent simulation-to-reality
-(sim-to-real) gap between synthetic and real-world data. This paper reviews
-recent advances on two complementary strategies: 1) the calibration of digital
-twins (DTs) through real-world measurements, and 2) the use of sim-to-real
-gap-aware training strategies to robustly handle residual discrepancies between
-digital twin-generated and real data. For the latter, we evaluate two
-conceptually distinct methods that model the sim-to-real gap either at the
-level of the environment via Bayesian learning or at the level of the training
-loss via prediction-powered inference.
-</summary>
-    <author>
-      <name>Clement Ruah</name>
-    </author>
-    <author>
-      <name>Houssem Sifaou</name>
-    </author>
-    <author>
-      <name>Osvaldo Simeone</name>
-    </author>
-    <author>
-      <name>Bashir M. Al-Hashimi</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This work has been submitted to the IEEE for possible publication</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.07067v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.07067v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.07031v1</id>
-    <updated>2025-07-09T17:03:21Z</updated>
-    <published>2025-07-09T17:03:21Z</published>
-    <title>ZKTorch: Compiling ML Inference to Zero-Knowledge Proofs via Parallel
-  Proof Accumulation</title>
-    <summary>  As AI models become ubiquitous in our daily lives, there has been an
-increasing demand for transparency in ML services. However, the model owner
-does not want to reveal the weights, as they are considered trade secrets. To
-solve this problem, researchers have turned to zero-knowledge proofs of ML
-model inference. These proofs convince the user that the ML model output is
-correct, without revealing the weights of the model to the user. Past work on
-these provers can be placed into two categories. The first method compiles the
-ML model into a low-level circuit, and proves the circuit using a ZK-SNARK. The
-second method uses custom cryptographic protocols designed only for a specific
-class of models. Unfortunately, the first method is highly inefficient, making
-it impractical for the large models used today, and the second method does not
-generalize well, making it difficult to update in the rapidly changing field of
-machine learning. To solve this, we propose ZKTorch, an open source end-to-end
-proving system that compiles ML models into base cryptographic operations
-called basic blocks, each proved using specialized protocols. ZKTorch is built
-on top of a novel parallel extension to the Mira accumulation scheme, enabling
-succinct proofs with minimal accumulation overhead. These contributions allow
-ZKTorch to achieve at least a $3\times$ reduction in the proof size compared to
-specialized protocols and up to a $6\times$ speedup in proving time over a
-general-purpose ZKML framework.
-</summary>
-    <author>
-      <name>Bing-Jyue Chen</name>
-    </author>
-    <author>
-      <name>Lilia Tang</name>
-    </author>
-    <author>
-      <name>Daniel Kang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 2 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.07031v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.07031v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.07024v1</id>
-    <updated>2025-07-09T16:54:21Z</updated>
-    <published>2025-07-09T16:54:21Z</published>
-    <title>FlexOlmo: Open Language Models for Flexible Data Use</title>
-    <summary>  We introduce FlexOlmo, a new class of language models (LMs) that supports (1)
-distributed training without data sharing, where different model parameters are
-independently trained on closed datasets, and (2) data-flexible inference,
-where these parameters along with their associated data can be flexibly
-included or excluded from model inferences with no further training. FlexOlmo
-employs a mixture-of-experts (MoE) architecture where each expert is trained
-independently on closed datasets and later integrated through a new
-domain-informed routing without any joint training. FlexOlmo is trained on
-FlexMix, a corpus we curate comprising publicly available datasets alongside
-seven domain-specific sets, representing realistic approximations of closed
-sets. We evaluate models with up to 37 billion parameters (20 billion active)
-on 31 diverse downstream tasks. We show that a general expert trained on public
-data can be effectively combined with independently trained experts from other
-data owners, leading to an average 41% relative improvement while allowing
-users to opt out of certain data based on data licensing or permission
-requirements. Our approach also outperforms prior model merging methods by
-10.1% on average and surpasses the standard MoE trained without data
-restrictions using the same training FLOPs. Altogether, this research presents
-a solution for both data owners and researchers in regulated industries with
-sensitive or protected data. FlexOlmo enables benefiting from closed data while
-respecting data owners' preferences by keeping their data local and supporting
-fine-grained control of data access during inference.
-</summary>
-    <author>
-      <name>Weijia Shi</name>
-    </author>
-    <author>
-      <name>Akshita Bhagia</name>
-    </author>
-    <author>
-      <name>Kevin Farhat</name>
-    </author>
-    <author>
-      <name>Niklas Muennighoff</name>
-    </author>
-    <author>
-      <name>Pete Walsh</name>
-    </author>
-    <author>
-      <name>Jacob Morrison</name>
-    </author>
-    <author>
-      <name>Dustin Schwenk</name>
-    </author>
-    <author>
-      <name>Shayne Longpre</name>
-    </author>
-    <author>
-      <name>Jake Poznanski</name>
-    </author>
-    <author>
-      <name>Allyson Ettinger</name>
-    </author>
-    <author>
-      <name>Daogao Liu</name>
-    </author>
-    <author>
-      <name>Margaret Li</name>
-    </author>
-    <author>
-      <name>Dirk Groeneveld</name>
-    </author>
-    <author>
-      <name>Mike Lewis</name>
-    </author>
-    <author>
-      <name>Wen-tau Yih</name>
-    </author>
-    <author>
-      <name>Luca Soldaini</name>
-    </author>
-    <author>
-      <name>Kyle Lo</name>
-    </author>
-    <author>
-      <name>Noah A. Smith</name>
-    </author>
-    <author>
-      <name>Luke Zettlemoyer</name>
-    </author>
-    <author>
-      <name>Pang Wei Koh</name>
-    </author>
-    <author>
-      <name>Hannaneh Hajishirzi</name>
-    </author>
-    <author>
-      <name>Ali Farhadi</name>
-    </author>
-    <author>
-      <name>Sewon Min</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.07024v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.07024v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06986v1</id>
-    <updated>2025-07-09T16:08:58Z</updated>
-    <published>2025-07-09T16:08:58Z</published>
-    <title>BarkBeetle: Stealing Decision Tree Models with Fault Injection</title>
-    <summary>  Machine learning models, particularly decision trees (DTs), are widely
-adopted across various domains due to their interpretability and efficiency.
-However, as ML models become increasingly integrated into privacy-sensitive
-applications, concerns about their confidentiality have grown, particularly in
-light of emerging threats such as model extraction and fault injection attacks.
-Assessing the vulnerability of DTs under such attacks is therefore important.
-In this work, we present BarkBeetle, a novel attack that leverages fault
-injection to extract internal structural information of DT models. BarkBeetle
-employs a bottom-up recovery strategy that uses targeted fault injection at
-specific nodes to efficiently infer feature splits and threshold values. Our
-proof-of-concept implementation demonstrates that BarkBeetle requires
-significantly fewer queries and recovers more structural information compared
-to prior approaches, when evaluated on DTs trained with public UCI datasets. To
-validate its practical feasibility, we implement BarkBeetle on a Raspberry Pi
-RP2350 board and perform fault injections using the Faultier voltage glitching
-tool. As BarkBeetle targets general DT models, we also provide an in-depth
-discussion on its applicability to a broader range of tree-based applications,
-including data stream classification, DT variants, and cryptography schemes.
-</summary>
-    <author>
-      <name>Qifan Wang</name>
-    </author>
-    <author>
-      <name>Jonas Sander</name>
-    </author>
-    <author>
-      <name>Minmin Jiang</name>
-    </author>
-    <author>
-      <name>Thomas Eisenbarth</name>
-    </author>
-    <author>
-      <name>David Oswald</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.06986v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06986v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06976v1</id>
-    <updated>2025-07-09T16:05:25Z</updated>
-    <published>2025-07-09T16:05:25Z</published>
-    <title>DenoiseCP-Net: Efficient Collective Perception in Adverse Weather via
-  Joint LiDAR-Based 3D Object Detection and Denoising</title>
-    <summary>  While automated vehicles hold the potential to significantly reduce traffic
-accidents, their perception systems remain vulnerable to sensor degradation
-caused by adverse weather and environmental occlusions. Collective perception,
-which enables vehicles to share information, offers a promising approach to
-overcoming these limitations. However, to this date collective perception in
-adverse weather is mostly unstudied. Therefore, we conduct the first study of
-LiDAR-based collective perception under diverse weather conditions and present
-a novel multi-task architecture for LiDAR-based collective perception under
-adverse weather. Adverse weather conditions can not only degrade perception
-capabilities, but also negatively affect bandwidth requirements and latency due
-to the introduced noise that is also transmitted and processed. Denoising prior
-to communication can effectively mitigate these issues. Therefore, we propose
-DenoiseCP-Net, a novel multi-task architecture for LiDAR-based collective
-perception under adverse weather conditions. DenoiseCP-Net integrates
-voxel-level noise filtering and object detection into a unified sparse
-convolution backbone, eliminating redundant computations associated with
-two-stage pipelines. This design not only reduces inference latency and
-computational cost but also minimizes communication overhead by removing
-non-informative noise. We extended the well-known OPV2V dataset by simulating
-rain, snow, and fog using our realistic weather simulation models. We
-demonstrate that DenoiseCP-Net achieves near-perfect denoising accuracy in
-adverse weather, reduces the bandwidth requirements by up to 23.6% while
-maintaining the same detection accuracy and reducing the inference latency for
-cooperative vehicles.
-</summary>
-    <author>
-      <name>Sven Teufel</name>
-    </author>
-    <author>
-      <name>Dominique Mayer</name>
-    </author>
-    <author>
-      <name>Jörg Gamerdinger</name>
-    </author>
-    <author>
-      <name>Oliver Bringmann</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.06976v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06976v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.06969v1</id>
-    <updated>2025-07-09T15:59:30Z</updated>
-    <published>2025-07-09T15:59:30Z</published>
-    <title>Unifying Re-Identification, Attribute Inference, and Data Reconstruction
-  Risks in Differential Privacy</title>
-    <summary>  Differentially private (DP) mechanisms are difficult to interpret and
-calibrate because existing methods for mapping standard privacy parameters to
-concrete privacy risks -- re-identification, attribute inference, and data
-reconstruction -- are both overly pessimistic and inconsistent. In this work,
-we use the hypothesis-testing interpretation of DP ($f$-DP), and determine that
-bounds on attack success can take the same unified form across
-re-identification, attribute inference, and data reconstruction risks. Our
-unified bounds are (1) consistent across a multitude of attack settings, and
-(2) tunable, enabling practitioners to evaluate risk with respect to arbitrary
-(including worst-case) levels of baseline risk. Empirically, our results are
-tighter than prior methods using $\varepsilon$-DP, R\'enyi DP, and concentrated
-DP. As a result, calibrating noise using our bounds can reduce the required
-noise by 20% at the same risk level, which yields, e.g., more than 15pp
-accuracy increase in a text classification task. Overall, this unifying
-perspective provides a principled framework for interpreting and calibrating
-the degree of protection in DP against specific levels of re-identification,
-attribute inference, or data reconstruction risk.
-</summary>
-    <author>
-      <name>Bogdan Kulynych</name>
-    </author>
-    <author>
-      <name>Juan Felipe Gomez</name>
-    </author>
-    <author>
-      <name>Georgios Kaissis</name>
-    </author>
-    <author>
-      <name>Jamie Hayes</name>
-    </author>
-    <author>
-      <name>Borja Balle</name>
-    </author>
-    <author>
-      <name>Flavio du Pin Calmon</name>
-    </author>
-    <author>
-      <name>Jean Louis Raisaro</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.06969v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06969v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07996v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07996v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07992v1</id>
+    <updated>2025-07-10T17:59:12Z</updated>
+    <published>2025-07-10T17:59:12Z</published>
+    <title>Correlations and quantum circuits with dynamical causal order</title>
+    <summary>  Requiring that the causal structure between different parties is well-defined
+imposes constraints on the correlations they can establish, which define
+so-called causal correlations. Some of these are known to have a "dynamical"
+causal order in the sense that their causal structure is not fixed a priori but
+is instead established on the fly, with for instance the causal order between
+future parties depending on some choice of action of parties in the past. Here
+we identify a new way that the causal order between the parties can be
+dynamical: with at least four parties, there can be some dynamical order which
+can nevertheless not be influenced by the actions of past parties. This leads
+us to introduce an intermediate class of correlations with what we call
+non-influenceable causal order, in between the set of correlations with static
+(non-dynamical) causal order and the set of general causal correlations. We
+then define analogous classes of quantum processes, considering recently
+introduced classes of quantum circuits with classical or quantum control of
+causal order - the latter being the largest class within the process matrix
+formalism known to have a clear interpretation in terms of coherent
+superpositions of causal orders. This allows us to formalise precisely in which
+sense certain quantum processes can have both indefinite and dynamical causal
+order.
+</summary>
+    <author>
+      <name>Raphaël Mothe</name>
+    </author>
+    <author>
+      <name>Alastair A. Abbott</name>
+    </author>
+    <author>
+      <name>Cyril Branciard</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages + 51 pages of appendices, 16 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07992v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07992v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07981v1</id>
+    <updated>2025-07-10T17:55:05Z</updated>
+    <published>2025-07-10T17:55:05Z</published>
+    <title>Why is Your Language Model a Poor Implicit Reward Model?</title>
+    <summary>  Reward models are key to language model post-training and inference
+pipelines. Conveniently, recent work showed that every language model defines
+an implicit reward model (IM-RM), without requiring any architectural changes.
+However, such IM-RMs tend to generalize worse, especially out-of-distribution,
+compared to explicit reward models (EX-RMs) that apply a dedicated linear head
+over the hidden representations of a language model. The existence of a
+generalization gap is puzzling, as EX-RMs and IM-RMs are nearly identical. They
+can be trained using the same data, loss function, and language model, and
+differ only in how the reward is computed. Towards a fundamental understanding
+of the implicit biases underlying different reward model types, we investigate
+the root cause of this gap. Our main finding, backed by theory and experiments,
+is that IM-RMs rely more heavily on superficial token-level cues. Consequently,
+they often generalize worse than EX-RMs under token-level distribution shifts,
+as well as in-distribution. Furthermore, we provide evidence against
+alternative hypotheses for the generalization gap. Most notably, we challenge
+the intuitive claim that IM-RMs struggle in tasks where generation is harder
+than verification because they can operate both as a verifier and a generator.
+Taken together, our results highlight that seemingly minor design choices can
+substantially impact the generalization behavior of reward models.
+</summary>
+    <author>
+      <name>Noam Razin</name>
+    </author>
+    <author>
+      <name>Yong Lin</name>
+    </author>
+    <author>
+      <name>Jiarui Yao</name>
+    </author>
+    <author>
+      <name>Sanjeev Arora</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.07981v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07981v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06964v2</id>
-    <updated>2025-07-10T05:41:21Z</updated>
-    <published>2025-07-09T15:52:34Z</published>
-    <title>IdentityByDescentDispersal.jl: Inferring dispersal rates with
-  identity-by-descent blocks</title>
-    <summary>  The population density and per-generation dispersal rate of a population are
-central parameters in the study of evolution and ecology. The distribution of
-recent coalescent events between individuals in space can be used to estimate
-such quantities through the distribution of identity-by-descent (IBD) blocks.
-An IBD block is defined as a segment of DNA that has been inherited by a pair
-of individuals from a common ancestor without being broken by recombination. We
-introduce IdentityByDescentDispersal.jl, a Julia package for estimating
-effective population densities and dispersal rates from observed spatial
-patterns of IBD shared blocks. It implements the inference scheme proposed by
-Ringbauer, Coop, and Barton (2017). The package provides a user-friendly
-interface, supports efficient gradient-based optimization and accommodates
-arbitrary user-defined demographic models through numerical integration. This
-software aims to encourage a wider audience to utilize spatial genetic data for
-estimating dispersal rates, thereby motivating further research and expanding
-its applications.
+    <id>http://arxiv.org/abs/2507.07967v1</id>
+    <updated>2025-07-10T17:47:40Z</updated>
+    <published>2025-07-10T17:47:40Z</published>
+    <title>Synthesizing Sun-as-a-star flare spectra from high-resolution solar
+  observations</title>
+    <summary>  Spatially resolved observations of the Sun and the astronomical sample size
+of stellar bodies are the respective key strengths of solar and stellar
+observations. However, the large difference in object brightness between the
+Sun and other stars has led to distinctly different instrumentation and
+methodologies between the two fields. We produce and analyze synthetic
+full-disk spectra derived from 19 small area field-of-view optical observations
+of solar flares acquired by the Swedish 1-m Solar Telescope (SST) between 2011
+and 2024. These are used to investigate what can and cannot be inferred about
+physical processes on the Sun from Sun-as-a-star observations. The recently
+released Numerical Empirical Sun-as-a-Star Integrator (NESSI) code provides
+synthetic full-disk integrated spectral line emission based on smaller
+field-of-view input, accounting for center-to-limb variations and differential
+rotation. We use this code to generate pseudo-Sun-as-a-star spectra from the
+SST observations. ...
 </summary>
     <author>
-      <name>Francisco Campuzano Jiménez</name>
+      <name>M. De Wilde</name>
     </author>
     <author>
-      <name>Arthur Zwaenepoel</name>
+      <name>A. G. M. Pietrow</name>
     </author>
     <author>
-      <name>Els Lea R De Keyzer</name>
+      <name>M. K. Druett</name>
     </author>
     <author>
-      <name>Hannes Svardal</name>
+      <name>A. Pastor Yabar</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.06964v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06964v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>J. Koza</name>
+    </author>
+    <author>
+      <name>I. Kontogiannis</name>
+    </author>
+    <author>
+      <name>O. Andriienko</name>
+    </author>
+    <author>
+      <name>A. Berlicki</name>
+    </author>
+    <author>
+      <name>A. R. Brunvoll</name>
+    </author>
+    <author>
+      <name>J. de la Cruz Rodríguez</name>
+    </author>
+    <author>
+      <name>J. T. Faber</name>
+    </author>
+    <author>
+      <name>R. Joshi</name>
+    </author>
+    <author>
+      <name>D. Kuridze</name>
+    </author>
+    <author>
+      <name>D. Nóbrega-Siverio</name>
+    </author>
+    <author>
+      <name>L. H. M. Rouppe van der Voort</name>
+    </author>
+    <author>
+      <name>J. Rybák</name>
+    </author>
+    <author>
+      <name>E. Scullion</name>
+    </author>
+    <author>
+      <name>A. M. Silva</name>
+    </author>
+    <author>
+      <name>Z. Vashalomidze</name>
+    </author>
+    <author>
+      <name>A. Vicente Arévalo</name>
+    </author>
+    <author>
+      <name>A. Wiśniewska</name>
+    </author>
+    <author>
+      <name>R. Yadav</name>
+    </author>
+    <author>
+      <name>T. V. Zaqarashvili</name>
+    </author>
+    <author>
+      <name>J. Zbinden</name>
+    </author>
+    <author>
+      <name>E. S. Øyre</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted in A&amp;A. 22 pages, 22 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07967v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07967v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06961v1</id>
-    <updated>2025-07-09T15:46:39Z</updated>
-    <published>2025-07-09T15:46:39Z</published>
-    <title>Off-Policy Evaluation Under Nonignorable Missing Data</title>
-    <summary>  Off-Policy Evaluation (OPE) aims to estimate the value of a target policy
-using offline data collected from potentially different policies. In real-world
-applications, however, logged data often suffers from missingness. While OPE
-has been extensively studied in the literature, a theoretical understanding of
-how missing data affects OPE results remains unclear. In this paper, we
-investigate OPE in the presence of monotone missingness and theoretically
-demonstrate that the value estimates remain unbiased under ignorable
-missingness but can be biased under nonignorable (informative) missingness. To
-retain the consistency of value estimation, we propose an inverse probability
-weighted value estimator and conduct statistical inference to quantify the
-uncertainty of the estimates. Through a series of numerical experiments, we
-empirically demonstrate that our proposed estimator yields a more reliable
-value inference under missing data.
+    <id>http://arxiv.org/abs/2507.07964v1</id>
+    <updated>2025-07-10T17:44:27Z</updated>
+    <published>2025-07-10T17:44:27Z</published>
+    <title>Gravitational lensing rarely produces high-mass outliers to the compact
+  binary population</title>
+    <summary>  All gravitational-wave signals are inevitably gravitationally lensed by
+intervening matter as they propagate through the Universe. When a
+gravitational-wave signal is magnified, it appears to have originated from a
+closer, more massive system. Thus, high-mass outliers to the gravitational-wave
+source population are often proposed as natural candidates for strongly lensed
+events. However, when using a data-driven method for identifying population
+outliers, we find that high-mass outliers are not necessarily strongly lensed,
+nor will the majority of strongly-lensed signals appear as high-mass outliers.
+This is both because statistical fluctuations produce a larger effect on
+observed binary parameters than does lensing magnification, and because
+lensing-induced outliers must originate from intrinsically high-mass sources,
+which are rare. Thus, the appearance of a single lensing-induced outlier
+implies the existence of many other lensed events within the catalog. We
+additionally show that it is possible to constrain the strong lensing optical
+depth, which is a fundamental quantity of our Universe, with the detection or
+absence of high-mass outliers. However, constraints using the latest
+gravitational-wave catalog are weak$\unicode{x2014}$we obtain an upper limit on
+the optical depth of sources at redshift $1$ magnified by a factor of $5$ or
+more of $\tau(\mu\geq5,z=1)\leq 0.035 \unicode{x2014}$and future observing runs
+will not make an outlier-based method competitive with other probes of the
+optical depth. Future work will investigate the ability of the full inferred
+population of compact binaries to inform the distribution of lenses in the
+Universe, opening a unique opportunity to access the high-redshift Universe and
+constrain cosmic structures.
 </summary>
     <author>
-      <name>Han Wang</name>
+      <name>Amanda Farah</name>
     </author>
     <author>
-      <name>Yang Xu</name>
+      <name>Jose María Ezquiaga</name>
     </author>
     <author>
-      <name>Wenbin Lu</name>
+      <name>Maya Fishbach</name>
     </author>
     <author>
-      <name>Rui Song</name>
+      <name>Daniel Holz</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.06961v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06961v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 6 figures. Code release:
+  https://github.com/afarah18/GW-lensing-outliers-public</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07964v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07964v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07954v1</id>
+    <updated>2025-07-10T17:39:03Z</updated>
+    <published>2025-07-10T17:39:03Z</published>
+    <title>Input Conditioned Layer Dropping in Speech Foundation Models</title>
+    <summary>  Curating foundation speech models for edge and IoT settings, where
+computational resources vary over time, requires dynamic architectures
+featuring adaptable reduction strategies. One emerging approach is layer
+dropping ($\mathcal{LD}$) which skips fraction of the layers of a backbone
+network during inference to reduce the computational load. This allows
+transforming static models into dynamic ones. However, existing approaches
+exhibit limitations either in the mode of selecting layers or by significantly
+modifying the neural architecture. To this end, we propose input-driven
+$\mathcal{LD}$ that employs the network's input features and a lightweight
+layer selecting network to determine the optimum combination of processing
+layers. Extensive experimentation on 4 speech and audio public benchmarks,
+using two different pre-trained foundation models, demonstrates the
+effectiveness of our approach, thoroughly outperforming random dropping and
+producing on-par (or better) results to early exit.
+</summary>
+    <author>
+      <name>Abdul Hannan</name>
+    </author>
+    <author>
+      <name>Daniele Falavigna</name>
+    </author>
+    <author>
+      <name>Alessio Brutti</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at IEEE MLSP 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07954v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07954v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07949v1</id>
+    <updated>2025-07-10T17:33:52Z</updated>
+    <published>2025-07-10T17:33:52Z</published>
+    <title>TinierHAR: Towards Ultra-Lightweight Deep Learning Models for Efficient
+  Human Activity Recognition on Edge Devices</title>
+    <summary>  Human Activity Recognition (HAR) on resource-constrained wearable devices
+demands inference models that harmonize accuracy with computational efficiency.
+This paper introduces TinierHAR, an ultra-lightweight deep learning
+architecture that synergizes residual depthwise separable convolutions, gated
+recurrent units (GRUs), and temporal aggregation to achieve SOTA efficiency
+without compromising performance. Evaluated across 14 public HAR datasets,
+TinierHAR reduces Parameters by 2.7x (vs. TinyHAR) and 43.3x (vs.
+DeepConvLSTM), and MACs by 6.4x and 58.6x, respectively, while maintaining the
+averaged F1-scores. Beyond quantitative gains, this work provides the first
+systematic ablation study dissecting the contributions of spatial-temporal
+components across proposed TinierHAR, prior SOTA TinyHAR, and the classical
+DeepConvLSTM, offering actionable insights for designing efficient HAR systems.
+We finally discussed the findings and suggested principled design guidelines
+for future efficient HAR. To catalyze edge-HAR research, we open-source all
+materials in this work for future
+benchmarking\footnote{https://github.com/zhaxidele/TinierHAR}
+</summary>
+    <author>
+      <name>Sizhen Bian</name>
+    </author>
+    <author>
+      <name>Mengxi Liu</name>
+    </author>
+    <author>
+      <name>Vitor Fortes Rey</name>
+    </author>
+    <author>
+      <name>Daniel Geissler</name>
+    </author>
+    <author>
+      <name>Paul Lukowicz</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.07949v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07949v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.06956v1</id>
-    <updated>2025-07-09T15:39:17Z</updated>
-    <published>2025-07-09T15:39:17Z</published>
-    <title>Investigating the Robustness of Retrieval-Augmented Generation at the
-  Query Level</title>
-    <summary>  Large language models (LLMs) are very costly and inefficient to update with
-new information. To address this limitation, retrieval-augmented generation
-(RAG) has been proposed as a solution that dynamically incorporates external
-knowledge during inference, improving factual consistency and reducing
-hallucinations. Despite its promise, RAG systems face practical challenges-most
-notably, a strong dependence on the quality of the input query for accurate
-retrieval. In this paper, we investigate the sensitivity of different
-components in the RAG pipeline to various types of query perturbations. Our
-analysis reveals that the performance of commonly used retrievers can degrade
-significantly even under minor query variations. We study each module in
-isolation as well as their combined effect in an end-to-end question answering
-setting, using both general-domain and domain-specific datasets. Additionally,
-we propose an evaluation framework to systematically assess the query-level
-robustness of RAG pipelines and offer actionable recommendations for
-practitioners based on the results of more than 1092 experiments we performed.
+    <id>http://arxiv.org/abs/2507.07948v1</id>
+    <updated>2025-07-10T17:33:28Z</updated>
+    <published>2025-07-10T17:33:28Z</published>
+    <title>Physics-Informed Gaussian Process Inference of Liquid Structure from
+  Scattering Data</title>
+    <summary>  We present a nonparametric Bayesian framework to infer radial distribution
+functions from experimental scattering measurements with uncertainty
+quantification using non-stationary Gaussian processes. The Gaussian process
+prior mean and kernel functions are designed to mitigate well-known numerical
+challenges with the Fourier transform, including discrete measurement binning
+and detector windowing, while encoding fundamental yet minimal physical
+knowledge of liquid structure. We demonstrate uncertainty propagation of the
+Gaussian process posterior to unmeasured quantities of interest. The
+methodology is applied to liquid argon and water as a proof of principle. The
+full implementation is available on GitHub at
+https://github.com/hoepfnergroup/LiquidStructureGP-Sullivan.
 </summary>
     <author>
-      <name>Sezen Perçin</name>
+      <name>Harry W. Sullivan</name>
     </author>
     <author>
-      <name>Xin Su</name>
+      <name>Brennon L. Shanks</name>
     </author>
     <author>
-      <name>Qutub Sha Syed</name>
+      <name>Matej Cervenka</name>
     </author>
     <author>
-      <name>Phillip Howard</name>
+      <name>Michael P. Hoepfner</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.07948v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07948v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07941v1</id>
+    <updated>2025-07-10T17:27:04Z</updated>
+    <published>2025-07-10T17:27:04Z</published>
+    <title>Late Fusion Multi-task Learning for Semiparametric Inference with
+  Nuisance Parameters</title>
+    <summary>  In the age of large and heterogeneous datasets, the integration of
+information from diverse sources is essential to improve parameter estimation.
+Multi-task learning offers a powerful approach by enabling simultaneous
+learning across related tasks. In this work, we introduce a late fusion
+framework for multi-task learning with semiparametric models that involve
+infinite-dimensional nuisance parameters, focusing on applications such as
+heterogeneous treatment effect estimation across multiple data sources,
+including electronic health records from different hospitals or clinical trial
+data. Our framework is two-step: first, initial double machine-learning
+estimators are obtained through individual task learning; second, these
+estimators are adaptively aggregated to exploit task similarities while
+remaining robust to task-specific differences. In particular, the framework
+avoids individual level data sharing, preserving privacy. Additionally, we
+propose a novel multi-task learning method for nuisance parameter estimation,
+which further enhances parameter estimation when nuisance parameters exhibit
+similarity across tasks. We establish theoretical guarantees for the method,
+demonstrating faster convergence rates compared to individual task learning
+when tasks share similar parametric components. Extensive simulations and real
+data applications complement the theoretical findings of our work while
+highlight the effectiveness of our framework even in moderate sample sizes.
+</summary>
+    <author>
+      <name>Sohom Bhattacharya</name>
     </author>
     <author>
-      <name>Aleksei Kuvshinov</name>
+      <name>Yongzhuo Chen</name>
     </author>
     <author>
-      <name>Leo Schwinn</name>
+      <name>Muxuan Liang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07941v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07941v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07932v1</id>
+    <updated>2025-07-10T17:10:51Z</updated>
+    <published>2025-07-10T17:10:51Z</published>
+    <title>KIS-S: A GPU-Aware Kubernetes Inference Simulator with RL-Based
+  Auto-Scaling</title>
+    <summary>  Autoscaling GPU inference workloads in Kubernetes remains challenging due to
+the reactive and threshold-based nature of default mechanisms such as the
+Horizontal Pod Autoscaler (HPA), which struggle under dynamic and bursty
+traffic patterns and lack integration with GPU-level metrics. We present KIS-S,
+a unified framework that combines KISim, a GPU-aware Kubernetes Inference
+Simulator, with KIScaler, a Proximal Policy Optimization (PPO)-based
+autoscaler. KIScaler learns latency-aware and resource-efficient scaling
+policies entirely in simulation, and is directly deployed without retraining.
+Experiments across four traffic patterns show that KIScaler improves average
+reward by 75.2%, reduces P95 latency up to 6.7x over CPU baselines, and
+generalizes without retraining. Our work bridges the gap between reactive
+autoscaling and intelligent orchestration for scalable GPU-accelerated
+environments.
+</summary>
+    <author>
+      <name>Guilin Zhang</name>
     </author>
     <author>
-      <name>Kay-Ulrich Scholl</name>
+      <name>Wulan Guo</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to Generation, Evaluation &amp; Metrics (GEM) Workshop at ACL
-  2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.06956v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.06956v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Ziqi Tan</name>
+    </author>
+    <author>
+      <name>Qiang Guan</name>
+    </author>
+    <author>
+      <name>Hailong Jiang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.07932v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.07932v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
