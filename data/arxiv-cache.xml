@@ -1,511 +1,454 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-15T01:02:26Z -->
+<!-- Last updated: 2025-07-16T01:01:17Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-14T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116755</opensearch:totalResults>
+  <updated>2025-07-15T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116917</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.08802v1</id>
-    <updated>2025-07-11T17:59:55Z</updated>
-    <published>2025-07-11T17:59:55Z</published>
-    <title>The Non-Linear Representation Dilemma: Is Causal Abstraction Enough for
-  Mechanistic Interpretability?</title>
-    <summary>  The concept of causal abstraction got recently popularised to demystify the
-opaque decision-making processes of machine learning models; in short, a neural
-network can be abstracted as a higher-level algorithm if there exists a
-function which allows us to map between them. Notably, most interpretability
-papers implement these maps as linear functions, motivated by the linear
-representation hypothesis: the idea that features are encoded linearly in a
-model's representations. However, this linearity constraint is not required by
-the definition of causal abstraction. In this work, we critically examine the
-concept of causal abstraction by considering arbitrarily powerful alignment
-maps. In particular, we prove that under reasonable assumptions, any neural
-network can be mapped to any algorithm, rendering this unrestricted notion of
-causal abstraction trivial and uninformative. We complement these theoretical
-findings with empirical evidence, demonstrating that it is possible to
-perfectly map models to algorithms even when these models are incapable of
-solving the actual task; e.g., on an experiment using randomly initialised
-language models, our alignment maps reach 100% interchange-intervention
-accuracy on the indirect object identification task. This raises the non-linear
-representation dilemma: if we lift the linearity constraint imposed to
-alignment maps in causal abstraction analyses, we are left with no principled
-way to balance the inherent trade-off between these maps' complexity and
-accuracy. Together, these results suggest an answer to our title's question:
-causal abstraction is not enough for mechanistic interpretability, as it
-becomes vacuous without assumptions about how models encode information.
-Studying the connection between this information-encoding assumption and causal
-abstraction should lead to exciting future work.
+    <id>http://arxiv.org/abs/2507.10543v1</id>
+    <updated>2025-07-14T17:59:08Z</updated>
+    <published>2025-07-14T17:59:08Z</published>
+    <title>MP1: Mean Flow Tames Policy Learning in 1-step for Robotic Manipulation</title>
+    <summary>  In robot manipulation, robot learning has become a prevailing approach.
+However, generative models within this field face a fundamental trade-off
+between the slow, iterative sampling of diffusion models and the architectural
+constraints of faster Flow-based methods, which often rely on explicit
+consistency losses. To address these limitations, we introduce MP1, which pairs
+3D point-cloud inputs with the MeanFlow paradigm to generate action
+trajectories in one network function evaluation (1-NFE). By directly learning
+the interval-averaged velocity via the MeanFlow Identity, our policy avoids any
+additional consistency constraints. This formulation eliminates numerical
+ODE-solver errors during inference, yielding more precise trajectories. MP1
+further incorporates CFG for improved trajectory controllability while
+retaining 1-NFE inference without reintroducing structural constraints. Because
+subtle scene-context variations are critical for robot learning, especially in
+few-shot learning, we introduce a lightweight Dispersive Loss that repels state
+embeddings during training, boosting generalization without slowing inference.
+We validate our method on the Adroit and Meta-World benchmarks, as well as in
+real-world scenarios. Experimental results show MP1 achieves superior average
+task success rates, outperforming DP3 by 10.2% and FlowPolicy by 7.3%. Its
+average inference time is only 6.8 ms-19x faster than DP3 and nearly 2x faster
+than FlowPolicy. Our code is available at https://mp1-2254.github.io/.
 </summary>
     <author>
-      <name>Denis Sutter</name>
+      <name>Juyi Sheng</name>
     </author>
     <author>
-      <name>Julian Minder</name>
+      <name>Ziyi Wang</name>
     </author>
     <author>
-      <name>Thomas Hofmann</name>
+      <name>Peiming Li</name>
     </author>
     <author>
-      <name>Tiago Pimentel</name>
+      <name>Mengyuan Liu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">42 pages, 17 figures, code available in
-  github.com/densutter/non-linear-representation-dilemma</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08802v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08802v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.10543v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10543v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.08801v1</id>
-    <updated>2025-07-11T17:59:42Z</updated>
-    <published>2025-07-11T17:59:42Z</published>
-    <title>Lumos-1: On Autoregressive Video Generation from a Unified Model
-  Perspective</title>
-    <summary>  Autoregressive large language models (LLMs) have unified a vast range of
-language tasks, inspiring preliminary efforts in autoregressive video
-generation. Existing autoregressive video generators either diverge from
-standard LLM architectures, depend on bulky external text encoders, or incur
-prohibitive latency due to next-token decoding. In this paper, we introduce
-Lumos-1, an autoregressive video generator that retains the LLM architecture
-with minimal architectural modifications. To inject spatiotemporal correlations
-in LLMs, we identify the efficacy of incorporating 3D RoPE and diagnose its
-imbalanced frequency spectrum ranges. Therefore, we propose MM-RoPE, a RoPE
-scheme that preserves the original textual RoPE while providing comprehensive
-frequency spectra and scaled 3D positions for modeling multimodal
-spatiotemporal data. Moreover, Lumos-1 resorts to a token dependency strategy
-that obeys intra-frame bidirectionality and inter-frame temporal causality.
-Based on this dependency strategy, we identify the issue of frame-wise loss
-imbalance caused by spatial information redundancy and solve it by proposing
-Autoregressive Discrete Diffusion Forcing (AR-DF). AR-DF introduces temporal
-tube masking during training with a compatible inference-time masking policy to
-avoid quality degradation. By using memory-efficient training techniques, we
-pre-train Lumos-1 on only 48 GPUs, achieving performance comparable to EMU3 on
-GenEval, COSMOS-Video2World on VBench-I2V, and OpenSoraPlan on VBench-T2V. Code
-and models are available at https://github.com/alibaba-damo-academy/Lumos.
+    <id>http://arxiv.org/abs/2507.10530v1</id>
+    <updated>2025-07-14T17:54:47Z</updated>
+    <published>2025-07-14T17:54:47Z</published>
+    <title>Accurate generation of chemical reaction transition states by
+  conditional flow matching</title>
+    <summary>  Transition state (TS) structures define the critical geometries and energy
+barriers underlying chemical reactivity, yet their fleeting nature renders them
+experimentally elusive and drives the reliance on costly, high-throughput
+density functional theory (DFT) calculations. Here, we introduce TS-GEN, a
+conditional flow-matching generative model that maps samples from a simple
+Gaussian prior directly to transition-state saddle-point geometries in a
+single, deterministic pass. By embedding both reactant and product
+conformations as conditioning information, TS-GEN learns to transport latent
+noise to true TS structures via an optimal-transport path, effectively
+replacing the iterative optimization common in nudged-elastic band or
+string-method algorithms. TS-GEN delivers unprecedented accuracy, achieving a
+root-mean-square deviation of $0.004\ \rm{\mathring{A}}$ (vs. $0.103\
+\rm{\mathring{A}}$ for prior state-of-the-art) and a mean barrier-height error
+of $1.019\ {\rm kcal/mol}$ (vs. $2.864\ {\rm kcal/mol}$), while requiring only
+$0.06\ {\rm s}$ GPU time per inference. Over 87% of generated TSs meet
+chemical-accuracy criteria ($&lt;1.58\ {\rm kcal/mol}$ error), substantially
+outpacing existing methods. TS-GEN also exhibits strong transferability to
+out-of-distribution reactions from a larger database. By uniting sub-angstrom
+precision, sub-second speed, and broad applicability, TS-GEN will be highly
+useful for high-throughput exploration of complex reaction networks, paving the
+way to the exploration of novel chemical reaction mechanisms.
 </summary>
     <author>
-      <name>Hangjie Yuan</name>
+      <name>Ping Tuo</name>
     </author>
     <author>
-      <name>Weihua Chen</name>
+      <name>Jiale Chen</name>
     </author>
     <author>
-      <name>Jun Cen</name>
+      <name>Ju Li</name>
     </author>
-    <author>
-      <name>Hu Yu</name>
-    </author>
-    <author>
-      <name>Jingyun Liang</name>
-    </author>
-    <author>
-      <name>Shuning Chang</name>
-    </author>
-    <author>
-      <name>Zhihui Lin</name>
-    </author>
-    <author>
-      <name>Tao Feng</name>
-    </author>
-    <author>
-      <name>Pengwei Liu</name>
-    </author>
-    <author>
-      <name>Jiazheng Xing</name>
-    </author>
-    <author>
-      <name>Hao Luo</name>
-    </author>
-    <author>
-      <name>Jiasheng Tang</name>
-    </author>
-    <author>
-      <name>Fan Wang</name>
-    </author>
-    <author>
-      <name>Yi Yang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code and Models: https://github.com/alibaba-damo-academy/Lumos</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08801v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08801v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.10530v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10530v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.10527v1</id>
+    <updated>2025-07-14T17:50:03Z</updated>
+    <published>2025-07-14T17:50:03Z</published>
+    <title>Multi-epoch spectro-photometric characterization of the minimoon 2024
+  PT$_5$ in the visible and near-infrared</title>
+    <summary>  2024 PT$_5$ is a tiny ($D\leq10$ m) near-Earth asteroid (NEA) discovered in
+August 2024. 2024 PT$_5$ was gravitationally bound to the Earth-Moon system
+from September to November 2024 and classified as a minimoon. Several quick
+response observations suggest the lunar ejecta origin of 2024 PT$_5$, while
+rotation state and albedo, essential properties to investigate its origin, are
+not well constrained. We performed visible to near-infrared multicolor
+photometry of 2024 PT$_5$ from data taken using the TriColor CMOS Camera and
+Spectrograph (TriCCS) on the Seimei 3.8 m telescope during 2025 January 4-10.
+The Seimei/TriCCS observations of 2024 PT$_5$ cover phase angles from 14 deg to
+27 deg, and were obtained in the $g$, $r$, $i$, and $z$ bands in the Pan-STARRS
+system. In addition, we analyzed $Y$, $J$, $H$, and $K$ photometry taken with
+the Multi-Object Spectrograph for Infrared Exploration (MOSFIRE) on the Keck I
+10-m telescope taken on 2025 January 16-17. Our lightcurves show brightness
+variations over time periods of several tens of minutes. We infer that 2024
+PT$_5$ is in a tumbling state and has a lightcurve amplitude of about 0.3 mag.
+Visible and near-infrared color indices of 2024 PT$_5$, $g-r=0.567\pm0.044$,
+$r-i=0.155\pm0.009$, $r-z=0.147\pm0.066$, $Y-J=0.557\pm0.046$,
+$J-H=0.672\pm0.078$, and $H-Ks=0.148\pm0.098$, indicate that 2024 PT$_5$ is an
+S-complex asteroid, largely consistent with previous observations. Using the
+$H$-$G$ model, we derived an absolute magnitude $H_{V,HG}$ of $27.72\pm0.09$
+and a slope parameter $G_V$ of $0.223\pm0.073$ in V-band. A geometric albedo of
+2024 PT$_5$ is derived to be $0.26\pm0.07$ from the slope of its photometric
+phase curve. This albedo value is typical of the S- and Q-type NEAs. The color
+properties of 2024 PT$_5$ derived from our observations match rock samples
+taken from the lunar surface, which agrees with previous studies.
+</summary>
+    <author>
+      <name>Jin Beniyama</name>
+    </author>
+    <author>
+      <name>Bryce T. Bolin</name>
+    </author>
+    <author>
+      <name>Alexey V. Sergeyev</name>
+    </author>
+    <author>
+      <name>Marco Delbo</name>
+    </author>
+    <author>
+      <name>Laura-May Abron</name>
+    </author>
+    <author>
+      <name>Matthew Belyakov</name>
+    </author>
+    <author>
+      <name>Tomohiko Sekiguchi</name>
+    </author>
+    <author>
+      <name>Seiko Takagi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in Astronomy &amp; Astrophysics (A&amp;A). Abstract
+  shortened for arXiv. Any comments are welcome</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.10527v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10527v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.10517v1</id>
+    <updated>2025-07-14T17:42:57Z</updated>
+    <published>2025-07-14T17:42:57Z</published>
+    <title>Closure of superstatistics</title>
+    <summary>  Plasmas and other systems with long-range interactions are commonly found in
+non-equilibrium steady states that are outside traditional Boltzmann-Gibbs
+statistics, but can be described using generalized statistical mechanics
+frameworks such as superstatistics, where steady states are treated as
+superpositions of canonical ensembles under a temperature distribution. In this
+work we solve the problem of inferring the possible steady states of a
+composite system $AB$ where subsystem $A$ is described by superstatistics and
+$E_{AB} = E_A + E_B$. Our result establishes a closure property of
+superstatistics, namely that $A$ is described by superstatistics if and only if
+$AB$ and $B$ are also superstatistical with the same temperature distribution.
+Some consequences of this result are discussed, such as the impossibility of
+local thermal equilibrium (LTE) for additive subsystems in non-canonical steady
+states.
+</summary>
+    <author>
+      <name>Sergio Davis</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.10517v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10517v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.10511v2</id>
+    <updated>2025-07-15T08:59:45Z</updated>
+    <published>2025-07-14T17:37:56Z</published>
+    <title>Constructing Confidence Intervals for Infinite-Dimensional Functional
+  Prameters by Highly Adaptive Lasso</title>
+    <summary>  Estimating the conditional mean function is a central task in statistical
+learning. In this paper, we consider estimation and inference for a
+nonparametric class of real-valued c\`adl\`ag functions with bounded sectional
+variation (Gill et al., 1995), using the Highly Adaptive Lasso (HAL) (van der
+Laan, 2015; Benkeser and van der Laan, 2016; van der Laan, 2023), a flexible
+empirical risk minimizer over linear combinations of tensor products of zero-
+or higher-order spline basis functions under an L1 norm constraint. Building on
+recent theoretical advances in asymptotic normality and uniform convergence
+rates for higher-order spline HAL estimators (van der Laan, 2023), this work
+focuses on constructing robust confidence intervals for HAL-based conditional
+mean estimators. To address regularization bias, we propose a targeted HAL with
+a debiasing step to remove bias for the conditional mean, and also consider a
+relaxed HAL estimator to reduce bias. We also introduce both global and local
+undersmoothing strategies to adaptively select the working model, reducing bias
+relative to variance. Combined with delta-method-based variance estimation, we
+construct confidence intervals for conditional means based on HAL. Through
+simulations, we evaluate combinations of estimation and model selection
+strategies, showing that our methods substantially reduce bias and yield
+confidence intervals with coverage rates close to nominal levels across
+scenarios. We also provide recommendations for different estimation objectives
+and illustrate the generality of our framework by applying it to estimate
+conditional average treatment effect (CATE) functions, highlighting how
+HAL-based inference extends to other infinite-dimensional, non-pathwise
+differentiable parameters.
+</summary>
+    <author>
+      <name>Wenxin Zhang</name>
+    </author>
+    <author>
+      <name>Junming Shi</name>
+    </author>
+    <author>
+      <name>Alan Hubbard</name>
+    </author>
+    <author>
+      <name>Mark van der Laan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.10511v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10511v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.10510v1</id>
+    <updated>2025-07-14T17:34:49Z</updated>
+    <published>2025-07-14T17:34:49Z</published>
+    <title>Chat with AI: The Surprising Turn of Real-time Video Communication from
+  Human to AI</title>
+    <summary>  AI Video Chat emerges as a new paradigm for Real-time Communication (RTC),
+where one peer is not a human, but a Multimodal Large Language Model (MLLM).
+This makes interaction between humans and AI more intuitive, as if chatting
+face-to-face with a real person. However, this poses significant challenges to
+latency, because the MLLM inference takes up most of the response time, leaving
+very little time for video streaming. Due to network uncertainty and
+instability, transmission latency becomes a critical bottleneck preventing AI
+from being like a real person. To address this, we propose Artic, an
+AI-oriented Real-time Communication framework, exploring the network
+requirement shift from "humans watching video" to "AI understanding video". To
+reduce bitrate dramatically while maintaining MLLM accuracy, we propose
+Context-Aware Video Streaming that recognizes the importance of each video
+region for chat and allocates bitrate almost exclusively to chat-important
+regions. To avoid packet retransmission, we propose Loss-Resilient Adaptive
+Frame Rate that leverages previous frames to substitute for lost/delayed frames
+while avoiding bitrate waste. To evaluate the impact of video streaming quality
+on MLLM accuracy, we build the first benchmark, named Degraded Video
+Understanding Benchmark (DeViBench). Finally, we discuss some open questions
+and ongoing solutions for AI Video Chat.
+</summary>
+    <author>
+      <name>Jiangkai Wu</name>
+    </author>
+    <author>
+      <name>Zhiyuan Ren</name>
+    </author>
+    <author>
+      <name>Liming Liu</name>
+    </author>
+    <author>
+      <name>Xinggong Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.10510v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10510v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.08799v1</id>
-    <updated>2025-07-11T17:59:36Z</updated>
-    <published>2025-07-11T17:59:36Z</published>
-    <title>KV Cache Steering for Inducing Reasoning in Small Language Models</title>
-    <summary>  We propose cache steering, a lightweight method for implicit steering of
-language models via a one-shot intervention applied directly to the key-value
-cache. To validate its effectiveness, we apply cache steering to induce
-chain-of-thought reasoning in small language models. Our approach leverages
-GPT-4o-generated reasoning traces to construct steering vectors that shift
-model behavior toward more explicit, multi-step reasoning without fine-tuning
-or prompt modifications. Experimental evaluations on diverse reasoning
-benchmarks demonstrate that cache steering improves both the qualitative
-structure of model reasoning and quantitative task performance. Compared to
-prior activation steering techniques that require continuous interventions, our
-one-shot cache steering offers substantial advantages in terms of
-hyperparameter stability, inference-time efficiency, and ease of integration,
-making it a more robust and practical solution for controlled generation.
+    <id>http://arxiv.org/abs/2507.10494v1</id>
+    <updated>2025-07-14T17:18:07Z</updated>
+    <published>2025-07-14T17:18:07Z</published>
+    <title>Split Happens: Combating Advanced Threats with Split Learning and
+  Function Secret Sharing</title>
+    <summary>  Split Learning (SL) -- splits a model into two distinct parts to help protect
+client data while enhancing Machine Learning (ML) processes. Though promising,
+SL has proven vulnerable to different attacks, thus raising concerns about how
+effective it may be in terms of data privacy. Recent works have shown promising
+results for securing SL through the use of a novel paradigm, named Function
+Secret Sharing (FSS), in which servers obtain shares of a function they compute
+and operate on a public input hidden with a random mask. However, these works
+fall short in addressing the rising number of attacks which exist on SL. In
+SplitHappens, we expand the combination of FSS and SL to U-shaped SL. Similarly
+to other works, we are able to make use of the benefits of SL by reducing the
+communication and computational costs of FSS. However, a U-shaped SL provides a
+higher security guarantee than previous works, allowing a client to keep the
+labels of the training data secret, without having to share them with the
+server. Through this, we are able to generalize the security analysis of
+previous works and expand it to different attack vectors, such as modern model
+inversion attacks as well as label inference attacks. We tested our approach
+for two different convolutional neural networks on different datasets. These
+experiments show the effectiveness of our approach in reducing the training
+time as well as the communication costs when compared to simply using FSS while
+matching prior accuracy.
 </summary>
     <author>
-      <name>Max Belitsky</name>
+      <name>Tanveer Khan</name>
     </author>
     <author>
-      <name>Dawid J. Kopiczko</name>
+      <name>Mindaugas Budzys</name>
     </author>
     <author>
-      <name>Michael Dorkenwald</name>
+      <name>Antonis Michalas</name>
     </author>
-    <author>
-      <name>M. Jehanzeb Mirza</name>
-    </author>
-    <author>
-      <name>Cees G. M. Snoek</name>
-    </author>
-    <author>
-      <name>Yuki M. Asano</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.08799v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08799v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.10494v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10494v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.08798v1</id>
-    <updated>2025-07-11T17:59:01Z</updated>
-    <published>2025-07-11T17:59:01Z</published>
-    <title>The Atacama Cosmology Telescope: High-redshift measurement of structure
-  growth from the cross-correlation of Quaia quasars and CMB lensing from ACT
-  DR6 and $\textit{Planck}$ PR4</title>
-    <summary>  We measure the amplitude of matter fluctuations over a wide range of
-redshifts by combining CMB lensing observations from ACT DR6 and
-$\textit{Planck}$ PR4 with the overdensity of quasars from Quaia, a
-$\textit{Gaia}$ and $\textit{unWISE}$ quasar catalog. Our analysis includes the
-CMB lensing power spectrum from ACT DR6, the auto-correlation of two Quaia
-quasar samples centered at $z \simeq 1.0$ and $z \simeq 2.1$, and their
-cross-correlations with CMB lensing from both ACT DR6 and $\textit{Planck}$
-PR4. By performing a series of contamination and systematic null tests, we find
-no evidence for contamination in the lensing maps, contrary to what was
-suggested in previous Quaia cross-correlation analyses using $\textit{Planck}$
-PR4 CMB lensing data. From the joint analysis of the quasar auto- and
-cross-correlations with CMB lensing, and including BOSS BAO data to break the
-degeneracy between $\Omega_m$ and $\sigma_8$, we obtain $\sigma_8 =
-0.802^{+0.045}_{-0.057}$, consistent with $\Lambda$CDM predictions from
-$\textit{Planck}$ primary CMB measurements. Combining the CMB lensing
-auto-spectrum with the cross-correlation measurement improves the constraint on
-$\sigma_8$ by $12\%$ relative to the lensing auto-spectrum alone, yielding
-$\sigma_8 = 0.804 \pm 0.013$. This dataset combination also enables a
-reconstruction of structure growth across redshifts. We infer a $12\%$
-constraint on the amplitude of matter fluctuations at $z &gt; 3$, with a
-measurement at the median redshift of the signal of $\sigma_8(\tilde{z}=5.1) =
-0.146^{+0.021}_{-0.014}$, consistent with $\textit{Planck}$ at the $1.4\sigma$
-level. These results provide one of the highest redshift constraints on the
-growth of structure to date.
+    <id>http://arxiv.org/abs/2507.10485v1</id>
+    <updated>2025-07-14T17:04:05Z</updated>
+    <published>2025-07-14T17:04:05Z</published>
+    <title>Overcoming catastrophic forgetting in neural networks</title>
+    <summary>  Catastrophic forgetting is the primary challenge that hinders continual
+learning, which refers to a neural network ability to sequentially learn
+multiple tasks while retaining previously acquired knowledge. Elastic Weight
+Consolidation, a regularization-based approach inspired by synaptic
+consolidation in biological neural systems, has been used to overcome this
+problem. In this study prior research is replicated and extended by evaluating
+EWC in supervised learning settings using the PermutedMNIST and RotatedMNIST
+benchmarks. Through systematic comparisons with L2 regularization and
+stochastic gradient descent (SGD) without regularization, we analyze how
+different approaches balance knowledge retention and adaptability. Our results
+confirm what was shown in previous research, showing that EWC significantly
+reduces forgetting compared to naive training while slightly compromising
+learning efficiency on new tasks. Moreover, we investigate the impact of
+dropout regularization and varying hyperparameters, offering insights into the
+generalization of EWC across diverse learning scenarios. These results
+underscore EWC's potential as a viable solution for lifelong learning in neural
+networks.
 </summary>
     <author>
-      <name>Carmen Embil Villagra</name>
+      <name>Brandon Shuen Yi Loke</name>
     </author>
     <author>
-      <name>Gerrit Farren</name>
+      <name>Filippo Quadri</name>
     </author>
     <author>
-      <name>Giulio Fabbian</name>
+      <name>Gabriel Vivanco</name>
     </author>
     <author>
-      <name>Boris Bolliet</name>
+      <name>Maximilian Casagrande</name>
     </author>
     <author>
-      <name>Irene Abril-Cabezas</name>
+      <name>Saúl Fenollosa</name>
     </author>
-    <author>
-      <name>David Alonso</name>
-    </author>
-    <author>
-      <name>Anthony Challinor</name>
-    </author>
-    <author>
-      <name>Jo Dunkley</name>
-    </author>
-    <author>
-      <name>Joshua Kim</name>
-    </author>
-    <author>
-      <name>Niall MacCrann</name>
-    </author>
-    <author>
-      <name>Fiona McCarthy</name>
-    </author>
-    <author>
-      <name>Kavilan Moodley</name>
-    </author>
-    <author>
-      <name>Frank J. Qu</name>
-    </author>
-    <author>
-      <name>Blake Sherwin</name>
-    </author>
-    <author>
-      <name>Cristobal Sifon</name>
-    </author>
-    <author>
-      <name>Alexander van Engelen</name>
-    </author>
-    <author>
-      <name>Edward J. Wollack</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">30 pages, 15 figures, to be submitted to JCAP</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08798v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08798v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, 5 figures, EE-411 Fundamentals of inference and learning
+  course project</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.10485v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10485v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.08781v1</id>
-    <updated>2025-07-11T17:43:54Z</updated>
-    <published>2025-07-11T17:43:54Z</published>
-    <title>Routing Quantum Control of Causal Order</title>
-    <summary>  In recent years, various frameworks have been proposed for the study of
-quantum processes with indefinite causal order. In particular, quantum circuits
-with quantum control of causal order (QC-QCs) form a broad class of physical
-supermaps obtained from a bottom-up construction and are believed to represent
-all quantum processes physically realisable in a fixed spacetime.
-Complementarily, the formalism of routed quantum circuits introduces quantum
-operations constrained by "routes" to represent processes in terms of a more
-fine-grained routed circuit decomposition. This decomposition, formalised using
-a so-called routed graph, represents the information flow within the respective
-process. However, the existence of routed circuit decompositions has only been
-established for a small set of processes so far, including both certain
-specific QC-QCs and more exotic processes as examples.
-  In this work, we remedy this fact by connecting these two frameworks. We
-prove that for any given $N$, one can use a single routed graph to
-systematically obtain a routed circuit decomposition for any QC-QC with $N$
-parties. We detail this construction explicitly and contrast it with other
-routed circuit decompositions of QC-QCs, which we obtain from alternative
-routed graphs. We conclude by pointing out how this connection can be useful to
-tackle various open problems in the field of indefinite causal order,
-particularly establishing circuit representations of subclasses of QC-QCs.
+    <id>http://arxiv.org/abs/2507.10473v1</id>
+    <updated>2025-07-14T16:54:57Z</updated>
+    <published>2025-07-14T16:54:57Z</published>
+    <title>GT-Loc: Unifying When and Where in Images Through a Joint Embedding
+  Space</title>
+    <summary>  Timestamp prediction aims to determine when an image was captured using only
+visual information, supporting applications such as metadata correction,
+retrieval, and digital forensics. In outdoor scenarios, hourly estimates rely
+on cues like brightness, hue, and shadow positioning, while seasonal changes
+and weather inform date estimation. However, these visual cues significantly
+depend on geographic context, closely linking timestamp prediction to
+geo-localization. To address this interdependence, we introduce GT-Loc, a novel
+retrieval-based method that jointly predicts the capture time (hour and month)
+and geo-location (GPS coordinates) of an image. Our approach employs separate
+encoders for images, time, and location, aligning their embeddings within a
+shared high-dimensional feature space. Recognizing the cyclical nature of time,
+instead of conventional contrastive learning with hard positives and negatives,
+we propose a temporal metric-learning objective providing soft targets by
+modeling pairwise time differences over a cyclical toroidal surface. We present
+new benchmarks demonstrating that our joint optimization surpasses previous
+time prediction methods, even those using the ground-truth geo-location as an
+input during inference. Additionally, our approach achieves competitive results
+on standard geo-localization tasks, and the unified embedding space facilitates
+compositional and text-based image retrieval.
 </summary>
     <author>
-      <name>Maarten Grothus</name>
+      <name>David G. Shatwell</name>
     </author>
     <author>
-      <name>Alastair A. Abbott</name>
+      <name>Ishan Rajendrakumar Dave</name>
     </author>
     <author>
-      <name>Augustin Vanrietvelde</name>
+      <name>Sirnam Swetha</name>
     </author>
     <author>
-      <name>Cyril Branciard</name>
+      <name>Mubarak Shah</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">49+14 pages, 20 figures. Comments welcome!</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08781v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08781v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.08765v1</id>
-    <updated>2025-07-11T17:21:06Z</updated>
-    <published>2025-07-11T17:21:06Z</published>
-    <title>Compress Any Segment Anything Model (SAM)</title>
-    <summary>  Due to the excellent performance in yielding high-quality, zero-shot
-segmentation, Segment Anything Model (SAM) and its variants have been widely
-applied in diverse scenarios such as healthcare and intelligent manufacturing.
-Therefore, effectively compressing SAMs has become an increasingly pressing
-practical need. In this study, we propose Birkhoff, a novel data-free
-compression algorithm for SAM and its variants. Unlike quantization, pruning,
-distillation, and other compression methods, Birkhoff embodies versatility
-across model types, agility in deployment, faithfulness to the original model,
-and compactness in model size. Specifically, Birkhoff introduces a novel
-compression algorithm: Hyper-Compression, whose core principle is to find a
-dense trajectory to turn a high-dimensional parameter vector into a
-low-dimensional scalar. Furthermore, Birkhoff designs a dedicated linear layer
-operator, HyperLinear, to fuse decompression and matrix multiplication to
-significantly accelerate inference of the compressed SAMs. Extensive
-experiments on 18 SAMs in the COCO, LVIS, and SA-1B datasets show that Birkhoff
-performs consistently and competitively in compression time, compression ratio,
-post-compression performance, and inference speed. For example, Birkhoff can
-achieve a compression ratio of 5.17x on SAM2-B, with less than 1% performance
-drop without using any fine-tuning data. Moreover, the compression is finished
-within 60 seconds for all models.
-</summary>
-    <author>
-      <name>Juntong Fan</name>
-    </author>
-    <author>
-      <name>Zhiwei Hao</name>
-    </author>
-    <author>
-      <name>Jianqiang Shen</name>
-    </author>
-    <author>
-      <name>Shang-Ling Jui</name>
-    </author>
-    <author>
-      <name>Yi Zhang</name>
-    </author>
-    <author>
-      <name>Jing-Xiao Liao</name>
-    </author>
-    <author>
-      <name>Feng-Lei Fan</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 6 tables, 8 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08765v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08765v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted in ICCV2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.10473v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10473v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.08764v1</id>
-    <updated>2025-07-11T17:20:29Z</updated>
-    <published>2025-07-11T17:20:29Z</published>
-    <title>Propensity score with factor loadings: the effect of the Paris Agreement</title>
-    <summary>  Factor models for longitudinal data, where policy adoption is unconfounded
-with respect to a low-dimensional set of latent factor loadings, have become
-increasingly popular for causal inference. Most existing approaches, however,
-rely on a causal finite-sample approach or computationally intensive methods,
-limiting their applicability and external validity. In this paper, we propose a
-novel causal inference method for panel data based on inverse propensity score
-weighting where the propensity score is a function of latent factor loadings
-within a framework of causal inference from super-population. The approach
-relaxes the traditional restrictive assumptions of causal panel methods, while
-offering advantages in terms of causal interpretability, policy relevance, and
-computational efficiency. Under standard assumptions, we outline a three-step
-estimation procedure for the ATT and derive its large-sample properties using
-Mestimation theory. We apply the method to assess the causal effect of the
-Paris Agreement, a policy aimed at fostering the transition to a low-carbon
-economy, on European stock returns. Our empirical results suggest a
-statistically significant and negative short-run effect on the stock returns of
-firms that issued green bonds.
+    <id>http://arxiv.org/abs/2507.10465v1</id>
+    <updated>2025-07-14T16:45:00Z</updated>
+    <published>2025-07-14T16:45:00Z</published>
+    <title>Flexible Modeling of Multivariate Skewed and Heavy-Tailed Data via a
+  Non-Central Skew t Distribution: Application to Tumor Shape Data</title>
+    <summary>  We propose a flexible formulation of the multivariate non-central skew t
+(NCST) distribution, defined by scaling skew-normal random vectors with
+independent chi-squared variables. This construction extends the classical
+multivariate t family by allowing both asymmetry and non-centrality, which
+provides an alternative to existing skew t models that often rely on
+restrictive assumptions for tractability. We derive key theoretical properties
+of the NCST distribution, which includes its moment structure, affine
+transformation behavior, and the distribution of quadratic forms. Due to the
+lack of a closed-form density, we implement a Monte Carlo likelihood
+approximation to enable maximum likelihood estimation and evaluate its
+performance through simulation studies. To demonstrate practical utility, we
+apply the NCST model to breast cancer diagnostic data, modeling multiple
+features of tumor shape. The NCST model achieves a superior fit based on
+information criteria and visual diagnostics, particularly in the presence of
+skewness and heavy tails compared to standard alternatives, including the
+multivariate normal, skew normal, and Azzalini's skew $t$ distribution. Our
+findings suggest that the NCST distribution offers a useful and interpretable
+choice for modeling complex multivariate data, which highlights promising
+directions for future development in likelihood inference, Bayesian
+computation, and applications involving asymmetry and non-Gaussian dependence.
 </summary>
     <author>
-      <name>Angelo Forino</name>
+      <name>Abeer M. Hasan</name>
     </author>
     <author>
-      <name>Andrea Mercatanti</name>
+      <name>Ying-Ju Chen</name>
     </author>
-    <author>
-      <name>Giacomo Morelli</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.08764v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08764v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.08742v1</id>
-    <updated>2025-07-11T16:44:46Z</updated>
-    <published>2025-07-11T16:44:46Z</published>
-    <title>Influence of river incision on landslides triggered in Nepal by the
-  Gorkha earthquake: Results from a pixel-based susceptibility model using
-  inlabru</title>
-    <summary>  This study presents a comprehensive framework for modelling
-earthquake-induced landslides (EQILs) through a channel-based analysis of
-landslide centroid distributions. A key innovation is the incorporation of the
-normalised channel steepness index ($k_{sn}$) as a physically meaningful and
-novel covariate, inferring hillslope erosion and fluvial incision processes.
-Used within spatial point process models, $k_{sn}$ supports the generation of
-landslide susceptibility maps with quantified uncertainty. To address spatial
-data misalignment between covariates and landslide observations, we leverage
-the inlabru framework, which enables coherent integration through mesh-based
-disaggregation, thereby overcoming challenges associated with spatially
-misaligned data integration. Our modelling strategy explicitly prioritises
-prospective transferability to unseen geographical regions, provided that
-explanatory variable data are available. By modelling both landslide locations
-and sizes, we find that elevated $k_{sn}$ is strongly associated with increased
-landslide susceptibility but not with landslide magnitude. The best-fitting
-Bayesian model, validated through cross-validation, offers a scalable and
-interpretable solution for predicting earthquake-induced landslides in complex
-terrain.
-</summary>
-    <author>
-      <name>Man Ho Suen</name>
-    </author>
-    <author>
-      <name>Mark Naylor</name>
-    </author>
-    <author>
-      <name>Simon Mudd</name>
-    </author>
-    <author>
-      <name>Finn Lindgren</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">45 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08742v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08742v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.08734v1</id>
-    <updated>2025-07-11T16:37:15Z</updated>
-    <published>2025-07-11T16:37:15Z</published>
-    <title>Estimating Marginal Likelihoods in Likelihood-Free Inference via Neural
-  Density Estimation</title>
-    <summary>  The marginal likelihood, or evidence, plays a central role in Bayesian model
-selection, yet remains notoriously challenging to compute in likelihood-free
-settings. While Simulation-Based Inference (SBI) techniques such as Sequential
-Neural Likelihood Estimation (SNLE) offer powerful tools to approximate
-posteriors using neural density estimators, they typically do not provide
-estimates of the evidence. In this technical report presented at BayesComp
-2025, we present a simple and general methodology to estimate the marginal
-likelihood using the output of SNLE.
-</summary>
-    <author>
-      <name>Paul Bastide</name>
-    </author>
-    <author>
-      <name>Arnaud Estoup</name>
-    </author>
-    <author>
-      <name>Jean-Michel Marin</name>
-    </author>
-    <author>
-      <name>Julien Stoehr</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.08734v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08734v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 9 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.10465v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.10465v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.08700v1</id>
-    <updated>2025-07-11T15:51:50Z</updated>
-    <published>2025-07-11T15:51:50Z</published>
-    <title>The breakdown scale of pionless effective field theory in the
-  three-nucleon sector</title>
-    <summary>  We make order-by-order predictions of neutron-deuteron total cross sections
-up to next-to-next-to-leading order in pionless effective field theory. Using
-Bayesian methods, we infer a posterior distribution for the breakdown scale.
-The result shows a mode near 100 MeV, and a combined analysis with
-neutron-proton scattering further sharpens the inference, placing the mode
-close to the pion mass scale, consistent with the expected range of pionless
-effective field theory.
-</summary>
-    <author>
-      <name>Andreas Ekström</name>
-    </author>
-    <author>
-      <name>Lucas Platter</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 5 figured</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.08700v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.08700v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
