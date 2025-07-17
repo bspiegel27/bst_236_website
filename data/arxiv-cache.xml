@@ -1,454 +1,491 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-16T01:01:17Z -->
+<!-- Last updated: 2025-07-17T01:01:52Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-15T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">116917</opensearch:totalResults>
+  <updated>2025-07-16T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117001</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.10543v1</id>
-    <updated>2025-07-14T17:59:08Z</updated>
-    <published>2025-07-14T17:59:08Z</published>
-    <title>MP1: Mean Flow Tames Policy Learning in 1-step for Robotic Manipulation</title>
-    <summary>  In robot manipulation, robot learning has become a prevailing approach.
-However, generative models within this field face a fundamental trade-off
-between the slow, iterative sampling of diffusion models and the architectural
-constraints of faster Flow-based methods, which often rely on explicit
-consistency losses. To address these limitations, we introduce MP1, which pairs
-3D point-cloud inputs with the MeanFlow paradigm to generate action
-trajectories in one network function evaluation (1-NFE). By directly learning
-the interval-averaged velocity via the MeanFlow Identity, our policy avoids any
-additional consistency constraints. This formulation eliminates numerical
-ODE-solver errors during inference, yielding more precise trajectories. MP1
-further incorporates CFG for improved trajectory controllability while
-retaining 1-NFE inference without reintroducing structural constraints. Because
-subtle scene-context variations are critical for robot learning, especially in
-few-shot learning, we introduce a lightweight Dispersive Loss that repels state
-embeddings during training, boosting generalization without slowing inference.
-We validate our method on the Adroit and Meta-World benchmarks, as well as in
-real-world scenarios. Experimental results show MP1 achieves superior average
-task success rates, outperforming DP3 by 10.2% and FlowPolicy by 7.3%. Its
-average inference time is only 6.8 ms-19x faster than DP3 and nearly 2x faster
-than FlowPolicy. Our code is available at https://mp1-2254.github.io/.
+    <id>http://arxiv.org/abs/2507.11539v1</id>
+    <updated>2025-07-15T17:59:57Z</updated>
+    <published>2025-07-15T17:59:57Z</published>
+    <title>Streaming 4D Visual Geometry Transformer</title>
+    <summary>  Perceiving and reconstructing 4D spatial-temporal geometry from videos is a
+fundamental yet challenging computer vision task. To facilitate interactive and
+real-time applications, we propose a streaming 4D visual geometry transformer
+that shares a similar philosophy with autoregressive large language models. We
+explore a simple and efficient design and employ a causal transformer
+architecture to process the input sequence in an online manner. We use temporal
+causal attention and cache the historical keys and values as implicit memory to
+enable efficient streaming long-term 4D reconstruction. This design can handle
+real-time 4D reconstruction by incrementally integrating historical information
+while maintaining high-quality spatial consistency. For efficient training, we
+propose to distill knowledge from the dense bidirectional visual geometry
+grounded transformer (VGGT) to our causal model. For inference, our model
+supports the migration of optimized efficient attention operator (e.g.,
+FlashAttention) from the field of large language models. Extensive experiments
+on various 4D geometry perception benchmarks demonstrate that our model
+increases the inference speed in online scenarios while maintaining competitive
+performance, paving the way for scalable and interactive 4D vision systems.
+Code is available at: https://github.com/wzzheng/StreamVGGT.
 </summary>
     <author>
-      <name>Juyi Sheng</name>
+      <name>Dong Zhuo</name>
     </author>
     <author>
-      <name>Ziyi Wang</name>
+      <name>Wenzhao Zheng</name>
     </author>
     <author>
-      <name>Peiming Li</name>
+      <name>Jiahe Guo</name>
     </author>
     <author>
-      <name>Mengyuan Liu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.10543v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10543v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.10530v1</id>
-    <updated>2025-07-14T17:54:47Z</updated>
-    <published>2025-07-14T17:54:47Z</published>
-    <title>Accurate generation of chemical reaction transition states by
-  conditional flow matching</title>
-    <summary>  Transition state (TS) structures define the critical geometries and energy
-barriers underlying chemical reactivity, yet their fleeting nature renders them
-experimentally elusive and drives the reliance on costly, high-throughput
-density functional theory (DFT) calculations. Here, we introduce TS-GEN, a
-conditional flow-matching generative model that maps samples from a simple
-Gaussian prior directly to transition-state saddle-point geometries in a
-single, deterministic pass. By embedding both reactant and product
-conformations as conditioning information, TS-GEN learns to transport latent
-noise to true TS structures via an optimal-transport path, effectively
-replacing the iterative optimization common in nudged-elastic band or
-string-method algorithms. TS-GEN delivers unprecedented accuracy, achieving a
-root-mean-square deviation of $0.004\ \rm{\mathring{A}}$ (vs. $0.103\
-\rm{\mathring{A}}$ for prior state-of-the-art) and a mean barrier-height error
-of $1.019\ {\rm kcal/mol}$ (vs. $2.864\ {\rm kcal/mol}$), while requiring only
-$0.06\ {\rm s}$ GPU time per inference. Over 87% of generated TSs meet
-chemical-accuracy criteria ($&lt;1.58\ {\rm kcal/mol}$ error), substantially
-outpacing existing methods. TS-GEN also exhibits strong transferability to
-out-of-distribution reactions from a larger database. By uniting sub-angstrom
-precision, sub-second speed, and broad applicability, TS-GEN will be highly
-useful for high-throughput exploration of complex reaction networks, paving the
-way to the exploration of novel chemical reaction mechanisms.
-</summary>
-    <author>
-      <name>Ping Tuo</name>
+      <name>Yuqi Wu</name>
     </author>
     <author>
-      <name>Jiale Chen</name>
+      <name>Jie Zhou</name>
     </author>
     <author>
-      <name>Ju Li</name>
+      <name>Jiwen Lu</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.10530v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10530v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code is available at: https://github.com/wzzheng/StreamVGGT</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11539v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11539v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.10527v1</id>
-    <updated>2025-07-14T17:50:03Z</updated>
-    <published>2025-07-14T17:50:03Z</published>
-    <title>Multi-epoch spectro-photometric characterization of the minimoon 2024
-  PT$_5$ in the visible and near-infrared</title>
-    <summary>  2024 PT$_5$ is a tiny ($D\leq10$ m) near-Earth asteroid (NEA) discovered in
-August 2024. 2024 PT$_5$ was gravitationally bound to the Earth-Moon system
-from September to November 2024 and classified as a minimoon. Several quick
-response observations suggest the lunar ejecta origin of 2024 PT$_5$, while
-rotation state and albedo, essential properties to investigate its origin, are
-not well constrained. We performed visible to near-infrared multicolor
-photometry of 2024 PT$_5$ from data taken using the TriColor CMOS Camera and
-Spectrograph (TriCCS) on the Seimei 3.8 m telescope during 2025 January 4-10.
-The Seimei/TriCCS observations of 2024 PT$_5$ cover phase angles from 14 deg to
-27 deg, and were obtained in the $g$, $r$, $i$, and $z$ bands in the Pan-STARRS
-system. In addition, we analyzed $Y$, $J$, $H$, and $K$ photometry taken with
-the Multi-Object Spectrograph for Infrared Exploration (MOSFIRE) on the Keck I
-10-m telescope taken on 2025 January 16-17. Our lightcurves show brightness
-variations over time periods of several tens of minutes. We infer that 2024
-PT$_5$ is in a tumbling state and has a lightcurve amplitude of about 0.3 mag.
-Visible and near-infrared color indices of 2024 PT$_5$, $g-r=0.567\pm0.044$,
-$r-i=0.155\pm0.009$, $r-z=0.147\pm0.066$, $Y-J=0.557\pm0.046$,
-$J-H=0.672\pm0.078$, and $H-Ks=0.148\pm0.098$, indicate that 2024 PT$_5$ is an
-S-complex asteroid, largely consistent with previous observations. Using the
-$H$-$G$ model, we derived an absolute magnitude $H_{V,HG}$ of $27.72\pm0.09$
-and a slope parameter $G_V$ of $0.223\pm0.073$ in V-band. A geometric albedo of
-2024 PT$_5$ is derived to be $0.26\pm0.07$ from the slope of its photometric
-phase curve. This albedo value is typical of the S- and Q-type NEAs. The color
-properties of 2024 PT$_5$ derived from our observations match rock samples
-taken from the lunar surface, which agrees with previous studies.
+    <id>http://arxiv.org/abs/2507.11535v1</id>
+    <updated>2025-07-15T17:58:55Z</updated>
+    <published>2025-07-15T17:58:55Z</published>
+    <title>Canonical Bayesian Linear System Identification</title>
+    <summary>  Standard Bayesian approaches for linear time-invariant (LTI) system
+identification are hindered by parameter non-identifiability; the resulting
+complex, multi-modal posteriors make inference inefficient and impractical. We
+solve this problem by embedding canonical forms of LTI systems within the
+Bayesian framework. We rigorously establish that inference in these minimal
+parameterizations fully captures all invariant system dynamics (e.g., transfer
+functions, eigenvalues, predictive distributions of system outputs) while
+resolving identifiability. This approach unlocks the use of meaningful,
+structure-aware priors (e.g., enforcing stability via eigenvalues) and ensures
+conditions for a Bernstein--von Mises theorem -- a link between Bayesian and
+frequentist large-sample asymptotics that is broken in standard forms.
+Extensive simulations with modern MCMC methods highlight advantages over
+standard parameterizations: canonical forms achieve higher computational
+efficiency, generate interpretable and well-behaved posteriors, and provide
+robust uncertainty estimates, particularly from limited data.
 </summary>
     <author>
-      <name>Jin Beniyama</name>
+      <name>Andrey Bryutkin</name>
     </author>
     <author>
-      <name>Bryce T. Bolin</name>
+      <name>Matthew E. Levine</name>
     </author>
     <author>
-      <name>Alexey V. Sergeyev</name>
+      <name>Iñigo Urteaga</name>
     </author>
     <author>
-      <name>Marco Delbo</name>
+      <name>Youssef Marzouk</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">46 pages, 9 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11535v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11535v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11507v1</id>
+    <updated>2025-07-15T17:23:22Z</updated>
+    <published>2025-07-15T17:23:22Z</published>
+    <title>MIRAGE: KV Cache Optimization through Parameter Remapping for
+  Multi-tenant LLM Serving</title>
+    <summary>  KV cache accelerates LLM inference by avoiding redundant computation, at the
+expense of memory. To support larger KV caches, prior work extends GPU memory
+with CPU memory via CPU-offloading. This involves swapping KV cache between GPU
+and CPU memory. However, because the cache updates dynamically, such swapping
+incurs high CPU memory traffic. We make a key observation that model parameters
+remain constant during runtime, unlike the dynamically updated KV cache.
+Building on this, we introduce MIRAGE, which avoids KV cache swapping by
+remapping, and thereby repurposing, the memory allocated to model parameters
+for KV cache. This parameter remapping is especially beneficial in multi-tenant
+environments, where the memory used for the parameters of the inactive models
+can be more aggressively reclaimed. Exploiting the high CPU-GPU bandwidth
+offered by the modern hardware, such as the NVIDIA Grace Hopper Superchip, we
+show that MIRAGE significantly outperforms state-of-the-art solutions,
+achieving a reduction of 44.8%-82.5% in tail time-between-token latency,
+20.7%-99.3% in tail time-to-first-token latency, and 6.6%-86.7% higher
+throughput compared to vLLM.
+</summary>
+    <author>
+      <name>Ruihao Li</name>
     </author>
     <author>
-      <name>Laura-May Abron</name>
+      <name>Shagnik Pal</name>
     </author>
     <author>
-      <name>Matthew Belyakov</name>
+      <name>Vineeth Narayan Pullu</name>
     </author>
     <author>
-      <name>Tomohiko Sekiguchi</name>
+      <name>Prasoon Sinha</name>
     </author>
     <author>
-      <name>Seiko Takagi</name>
+      <name>Jeeho Ryoo</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in Astronomy &amp; Astrophysics (A&amp;A). Abstract
-  shortened for arXiv. Any comments are welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.10527v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10527v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Lizy K. John</name>
+    </author>
+    <author>
+      <name>Neeraja J. Yadwadkar</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.11507v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11507v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.OS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.OS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11504v1</id>
+    <updated>2025-07-15T17:20:45Z</updated>
+    <published>2025-07-15T17:20:45Z</published>
+    <title>A Transiting Giant on a 7.7-Year Orbit Revealed by TTVs in the TOI-201
+  System</title>
+    <summary>  We report the detection and characterization of TOI-201 c, a long-period
+transiting companion to the warm Jupiter TOI-201 b. Its presence was first
+inferred from high-amplitude transit timing variations (TTVs) in TOI-201 b,
+pointing to a massive outer body on a $7.7^{+1.0}_{-0.6}$-year eccentric orbit.
+This prediction was confirmed when TESS observed a transit of TOI-201 c,
+precisely constraining its orbital geometry. A joint fit to TTVs, transit
+photometry, and archival radial velocities yields a mass of
+$14.2^{+1.0}_{-1.2}$ $M_{\rm Jup}$ and an eccentricity of
+$0.643^{+0.009}_{-0.021}$. The mutual inclination between planets b and c is
+$2.9^{+4.8}_{-4.4}$ degrees, indicating a nearly coplanar architecture.
+Long-term numerical integrations confirm dynamical stability over gigayear
+timescales and predict that transits of TOI-201 b will cease within a few
+thousand years. TOI-201 c ranks among the longest-period transiting planets
+with well-constrained properties. Its detection via TTVs, followed by a
+confirmed transit, represents a rare observational sequence and highlights the
+power of TTVs and photometric monitoring to uncover distant companions. The
+TOI-201 system offers a valuable laboratory for testing models of giant planet
+formation, migration, and secular evolution in multi-planet systems.
+</summary>
+    <author>
+      <name>Gracjan Maciejewski</name>
+    </author>
+    <author>
+      <name>Weronika Łoboda</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in ApJL on 2025-07-14, submitted on
+  2025-06-23</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11504v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11504v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.10517v1</id>
-    <updated>2025-07-14T17:42:57Z</updated>
-    <published>2025-07-14T17:42:57Z</published>
-    <title>Closure of superstatistics</title>
-    <summary>  Plasmas and other systems with long-range interactions are commonly found in
-non-equilibrium steady states that are outside traditional Boltzmann-Gibbs
-statistics, but can be described using generalized statistical mechanics
-frameworks such as superstatistics, where steady states are treated as
-superpositions of canonical ensembles under a temperature distribution. In this
-work we solve the problem of inferring the possible steady states of a
-composite system $AB$ where subsystem $A$ is described by superstatistics and
-$E_{AB} = E_A + E_B$. Our result establishes a closure property of
-superstatistics, namely that $A$ is described by superstatistics if and only if
-$AB$ and $B$ are also superstatistical with the same temperature distribution.
-Some consequences of this result are discussed, such as the impossibility of
-local thermal equilibrium (LTE) for additive subsystems in non-canonical steady
-states.
+    <id>http://arxiv.org/abs/2507.11492v1</id>
+    <updated>2025-07-15T17:06:35Z</updated>
+    <published>2025-07-15T17:06:35Z</published>
+    <title>Low-redshift analogues of cosmic noon galaxies as laboratories for
+  clumpy star formation</title>
+    <summary>  It has been established that a significant fraction of star formation at
+high-redshift occurs in clumpy galaxies. The properties of clumps and their
+formation mechanisms, however, remain highly debated. In this work we analyze a
+sample of 18 Supercompact Ultraviolet Luminous Galaxies observed with the
+OSIRIS spectrograph at the Keck Telescope, targeting their Pa-alpha emission.
+These galaxies, although at z~0.1-0.2, share many similar properties with
+star-forming galaxies at cosmic noon. We find a total of 84 star-forming clumps
+with typical sizes of a few hundred parsecs. The star-forming clumps exhibit
+low values of velocity shear (~12 km/s) and high velocity dispersion (~70
+km/s). The dynamical masses of the clumps are typically higher than gas masses
+inferred from the measured star-formation rates of each clump. We also
+artificially redshift our data to emulate observations at z=2.2 and allow for a
+direct comparison with other galaxies at higher redshift. Our results indicate
+that, due to the effects of clump clustering and low-resolution observations,
+high-z clumps appear larger at greater cosmological distances. This underscores
+the importance of using low-redshift observations to anchor studies at earlier
+epochs. Finally, our results support the idea of growing clump sizes in
+star-forming galaxies as a function of redshift, although not to scales of kpc
+as found by other works without the benefits of adaptive optics or
+gravitational lensing.
 </summary>
     <author>
-      <name>Sergio Davis</name>
+      <name>Jorge M. Santos-Junior</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.10517v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10517v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Thiago S. Goncalves</name>
+    </author>
+    <author>
+      <name>Luidhy Santana-Silva</name>
+    </author>
+    <author>
+      <name>Arianna Cortesi</name>
+    </author>
+    <author>
+      <name>Karin Menendez-Delmestre</name>
+    </author>
+    <author>
+      <name>Amanda E. de Araujo-Carvalho</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.3847/1538-4357/add926</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.3847/1538-4357/add926" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 11 figures, 3 tables, accepted for publication in ApJ</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11492v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11492v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11461v1</id>
+    <updated>2025-07-15T16:33:01Z</updated>
+    <published>2025-07-15T16:33:01Z</published>
+    <title>Deep Equilibrium models for Poisson Imaging Inverse problems via Mirror
+  Descent</title>
+    <summary>  Deep Equilibrium Models (DEQs) are implicit neural networks with fixed
+points, which have recently gained attention for learning image regularization
+functionals, particularly in settings involving Gaussian fidelities, where
+assumptions on the forward operator ensure contractiveness of standard
+(proximal) Gradient Descent operators. In this work, we extend the application
+of DEQs to Poisson inverse problems, where the data fidelity term is more
+appropriately modeled by the Kullback-Leibler divergence. To this end, we
+introduce a novel DEQ formulation based on Mirror Descent defined in terms of a
+tailored non-Euclidean geometry that naturally adapts with the structure of the
+data term. This enables the learning of neural regularizers within a principled
+training framework. We derive sufficient conditions to guarantee the
+convergence of the learned reconstruction scheme and propose computational
+strategies that enable both efficient training and fully parameter-free
+inference. Numerical experiments show that our method outperforms traditional
+model-based approaches and it is comparable to the performance of Bregman
+Plug-and-Play methods, while mitigating their typical drawbacks - namely,
+sensitivity to initialization and careful tuning of hyperparameters. The code
+is publicly available at https://github.com/christiandaniele/DEQ-MD.
+</summary>
+    <author>
+      <name>Christian Daniele</name>
+    </author>
+    <author>
+      <name>Silvia Villa</name>
+    </author>
+    <author>
+      <name>Samuel Vaiter</name>
+    </author>
+    <author>
+      <name>Luca Calatroni</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.11461v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11461v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="65K10, 65J22, 94A08, 47N10" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11456v1</id>
+    <updated>2025-07-15T16:27:05Z</updated>
+    <published>2025-07-15T16:27:05Z</published>
+    <title>Timescales for stochastic barrier crossing: inferring the potential from
+  nonequilibrium data</title>
+    <summary>  Kramers' rate theory forms a cornerstone for thermally activated barrier
+crossing. However, its reliance on equilibrium quantities excludes analysis of
+nonequilibrium dynamics at early times. Most works have thus focused on
+obtaining rates and transition time and path distributions in equilibrium.
+Instead, here we consider early-time nonequilibrium dynamics in a model system
+of a particle with overdamped dynamics hopping over the barrier in a
+double-well potential, using the Smoluchowski equation (SE) and stochastic path
+integral (SPI) mapping of the Langevin equation. We identify several key
+timescales relevant to nonequilibrium dynamics and quantify them using the SE
+and SPI approaches. The shortest timescale corresponds to equilibration in a
+well at time $t \ll \tau_{\rm B}$, where $\tau_{\rm B}$ is the Brownian
+diffusion time. The second important timescale is when an inflexion point
+appears in the effective potential constructed from the density at $t
+\lessapprox \tau_{\rm B}$. Shortly after, the existence of a second potential
+well can be inferred from sufficient sampling of the dynamics. Interestingly,
+this timescale decreases with increasing barrier height. We find significant
+deviations from the equilibrium limit unless $t \gg \tau_{\rm B}$. We further
+calculate \red{the} density current at the barrier for bistable and asymmetric
+potentials and find that it crosses over to that from equilibrium rate theory
+at a time that does not appear to depend on the barrier height. Our results
+have important implications for controlling activated processes at finite times
+and demonstrate the importance of reaching long enough times to faithfully
+construct potential landscapes from experimental or simulation data.
+</summary>
+    <author>
+      <name>A. J. Archer</name>
+    </author>
+    <author>
+      <name>T. Ala-Nissila</name>
+    </author>
+    <author>
+      <name>T. J. W. Honour</name>
+    </author>
+    <author>
+      <name>S. P. Fitzgerald</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11456v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11456v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.10511v2</id>
-    <updated>2025-07-15T08:59:45Z</updated>
-    <published>2025-07-14T17:37:56Z</published>
-    <title>Constructing Confidence Intervals for Infinite-Dimensional Functional
-  Prameters by Highly Adaptive Lasso</title>
-    <summary>  Estimating the conditional mean function is a central task in statistical
-learning. In this paper, we consider estimation and inference for a
-nonparametric class of real-valued c\`adl\`ag functions with bounded sectional
-variation (Gill et al., 1995), using the Highly Adaptive Lasso (HAL) (van der
-Laan, 2015; Benkeser and van der Laan, 2016; van der Laan, 2023), a flexible
-empirical risk minimizer over linear combinations of tensor products of zero-
-or higher-order spline basis functions under an L1 norm constraint. Building on
-recent theoretical advances in asymptotic normality and uniform convergence
-rates for higher-order spline HAL estimators (van der Laan, 2023), this work
-focuses on constructing robust confidence intervals for HAL-based conditional
-mean estimators. To address regularization bias, we propose a targeted HAL with
-a debiasing step to remove bias for the conditional mean, and also consider a
-relaxed HAL estimator to reduce bias. We also introduce both global and local
-undersmoothing strategies to adaptively select the working model, reducing bias
-relative to variance. Combined with delta-method-based variance estimation, we
-construct confidence intervals for conditional means based on HAL. Through
-simulations, we evaluate combinations of estimation and model selection
-strategies, showing that our methods substantially reduce bias and yield
-confidence intervals with coverage rates close to nominal levels across
-scenarios. We also provide recommendations for different estimation objectives
-and illustrate the generality of our framework by applying it to estimate
-conditional average treatment effect (CATE) functions, highlighting how
-HAL-based inference extends to other infinite-dimensional, non-pathwise
-differentiable parameters.
+    <id>http://arxiv.org/abs/2507.11442v1</id>
+    <updated>2025-07-15T16:06:33Z</updated>
+    <published>2025-07-15T16:06:33Z</published>
+    <title>Identifying galactic binary systems of neutron stars and black holes
+  with LISA</title>
+    <summary>  The Laser Interferometer Space Antenna (LISA) will detect ~ 100 galactic
+binary systems comprised of black holes (BHs) and neutron stars (NSs).
+Identifying the nature of the constituents of these binaries as BHs or NSs, and
+distinguishing them from $\sim 10^4$ detected double white dwarfs will be
+challenging. In the absence of any other information, the inferred values of
+the component masses can be used to classify the nature of these objects.
+However, short-period galactic binaries $\sim 10^7 - 10^3$ yr from coalescence
+produce a quasi-monochromatic signal which carries little information about
+their masses. We generate synthetic LISA data sets containing gravitational
+waves (GWs) from galactic binary BHs, binary NSs and BHNSs drawn from an
+astrophysically realistic population produced through the isolated binary
+evolution channel. We process the data with an end-to-end Bayesian inference
+pipeline to explore the accuracy with which the individual component masses can
+be measured. We find that for $\approx 10\% - 50\%$ of the detected systems
+LISA will be able to measure the individual component masses by measuring the
+orbital eccentricity, periapse precession frequency, and GW induced frequency
+derivative. Typical fractional mass errors are $\approx 1\% - 100\%$ (depending
+on the specific value of the source parameters), which will enable in many
+circumstances the classification of the objects as BHs or NSs. For these
+binaries, LISA will also be able to determine their 3-dimensional position in
+the Milky Way. The LISA-detected sample of these double compact objects will
+provide new information about the galactic population of BHs and NSs, the star
+formation history of the Milky Way and the astrophysical processes leading to
+the formation of these systems. However, for a significant fraction of the
+LISA-detected binaries the nature of their constituent objects may remain
+unclear.
 </summary>
     <author>
-      <name>Wenxin Zhang</name>
+      <name>Hannah Middleton</name>
     </author>
     <author>
-      <name>Junming Shi</name>
+      <name>Panagiota Kolitsidou</name>
     </author>
     <author>
-      <name>Alan Hubbard</name>
+      <name>Antoine Klein</name>
     </author>
     <author>
-      <name>Mark van der Laan</name>
+      <name>Connor Adam</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.10511v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10511v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Rowan Chalmers</name>
+    </author>
+    <author>
+      <name>Alberto Vecchio</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">23 pages, 11 figures, 8 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11442v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11442v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.10510v1</id>
-    <updated>2025-07-14T17:34:49Z</updated>
-    <published>2025-07-14T17:34:49Z</published>
-    <title>Chat with AI: The Surprising Turn of Real-time Video Communication from
-  Human to AI</title>
-    <summary>  AI Video Chat emerges as a new paradigm for Real-time Communication (RTC),
-where one peer is not a human, but a Multimodal Large Language Model (MLLM).
-This makes interaction between humans and AI more intuitive, as if chatting
-face-to-face with a real person. However, this poses significant challenges to
-latency, because the MLLM inference takes up most of the response time, leaving
-very little time for video streaming. Due to network uncertainty and
-instability, transmission latency becomes a critical bottleneck preventing AI
-from being like a real person. To address this, we propose Artic, an
-AI-oriented Real-time Communication framework, exploring the network
-requirement shift from "humans watching video" to "AI understanding video". To
-reduce bitrate dramatically while maintaining MLLM accuracy, we propose
-Context-Aware Video Streaming that recognizes the importance of each video
-region for chat and allocates bitrate almost exclusively to chat-important
-regions. To avoid packet retransmission, we propose Loss-Resilient Adaptive
-Frame Rate that leverages previous frames to substitute for lost/delayed frames
-while avoiding bitrate waste. To evaluate the impact of video streaming quality
-on MLLM accuracy, we build the first benchmark, named Degraded Video
-Understanding Benchmark (DeViBench). Finally, we discuss some open questions
-and ongoing solutions for AI Video Chat.
+    <id>http://arxiv.org/abs/2507.11435v1</id>
+    <updated>2025-07-15T15:57:28Z</updated>
+    <published>2025-07-15T15:57:28Z</published>
+    <title>FasTUSS: Faster Task-Aware Unified Source Separation</title>
+    <summary>  Time-Frequency (TF) dual-path models are currently among the best performing
+audio source separation network architectures, achieving state-of-the-art
+performance in speech enhancement, music source separation, and cinematic audio
+source separation. While they are characterized by a relatively low parameter
+count, they still require a considerable number of operations, implying a
+higher execution time. This problem is exacerbated by the trend towards bigger
+models trained on large amounts of data to solve more general tasks, such as
+the recently introduced task-aware unified source separation (TUSS) model.
+TUSS, which aims to solve audio source separation tasks using a single,
+conditional model, is built upon TF-Locoformer, a TF dual-path model combining
+convolution and attention layers. The task definition comes in the form of a
+sequence of prompts that specify the number and type of sources to be
+extracted. In this paper, we analyze the design choices of TUSS with the goal
+of optimizing its performance-complexity trade-off. We derive two more
+efficient models, FasTUSS-8.3G and FasTUSS-11.7G that reduce the original
+model's operations by 81\% and 73\% with minor performance drops of 1.2~dB and
+0.4~dB averaged over all benchmarks, respectively. Additionally, we investigate
+the impact of prompt conditioning to derive a causal TUSS model.
 </summary>
     <author>
-      <name>Jiangkai Wu</name>
+      <name>Francesco Paissan</name>
     </author>
     <author>
-      <name>Zhiyuan Ren</name>
+      <name>Gordon Wichern</name>
     </author>
     <author>
-      <name>Liming Liu</name>
+      <name>Yoshiki Masuyama</name>
     </author>
     <author>
-      <name>Xinggong Zhang</name>
+      <name>Ryo Aihara</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.10510v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10510v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>François G. Germain</name>
+    </author>
+    <author>
+      <name>Kohei Saijo</name>
+    </author>
+    <author>
+      <name>Jonathan Le Roux</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to WASPAA 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11435v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11435v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.10494v1</id>
-    <updated>2025-07-14T17:18:07Z</updated>
-    <published>2025-07-14T17:18:07Z</published>
-    <title>Split Happens: Combating Advanced Threats with Split Learning and
-  Function Secret Sharing</title>
-    <summary>  Split Learning (SL) -- splits a model into two distinct parts to help protect
-client data while enhancing Machine Learning (ML) processes. Though promising,
-SL has proven vulnerable to different attacks, thus raising concerns about how
-effective it may be in terms of data privacy. Recent works have shown promising
-results for securing SL through the use of a novel paradigm, named Function
-Secret Sharing (FSS), in which servers obtain shares of a function they compute
-and operate on a public input hidden with a random mask. However, these works
-fall short in addressing the rising number of attacks which exist on SL. In
-SplitHappens, we expand the combination of FSS and SL to U-shaped SL. Similarly
-to other works, we are able to make use of the benefits of SL by reducing the
-communication and computational costs of FSS. However, a U-shaped SL provides a
-higher security guarantee than previous works, allowing a client to keep the
-labels of the training data secret, without having to share them with the
-server. Through this, we are able to generalize the security analysis of
-previous works and expand it to different attack vectors, such as modern model
-inversion attacks as well as label inference attacks. We tested our approach
-for two different convolutional neural networks on different datasets. These
-experiments show the effectiveness of our approach in reducing the training
-time as well as the communication costs when compared to simply using FSS while
-matching prior accuracy.
+    <id>http://arxiv.org/abs/2507.11417v1</id>
+    <updated>2025-07-15T15:44:03Z</updated>
+    <published>2025-07-15T15:44:03Z</published>
+    <title>Quantifying the Energy Consumption and Carbon Emissions of LLM Inference
+  via Simulations</title>
+    <summary>  The environmental impact of Large Language Models (LLMs) is rising
+significantly, with inference now accounting for more than half of their total
+lifecycle carbon emissions. However, existing simulation frameworks, which are
+increasingly used to determine efficient LLM deployments, lack any concept of
+power and, therefore, cannot accurately estimate inference-related emissions.
+We present a simulation framework to assess the energy and carbon implications
+of LLM inference under varying deployment setups. First, we extend a
+high-fidelity LLM inference simulator with a GPU power model that estimates
+power consumption based on utilization metrics, enabling analysis across
+configurations like batch size, sequence length, and model parallelism. Second,
+we integrate simulation outputs into an energy system co-simulation environment
+to quantify carbon emissions under specific grid conditions and explore the
+potential of carbon-aware scheduling. Through scenario-based analysis, our
+framework reveals how inference parameters affect energy demand and carbon
+footprint, demonstrates a renewable offset potential of up to 69.2% in an
+illustrative deployment case, and provides a foundation for future carbon-aware
+inference infrastructure design.
 </summary>
     <author>
-      <name>Tanveer Khan</name>
+      <name>Miray Özcan</name>
     </author>
     <author>
-      <name>Mindaugas Budzys</name>
+      <name>Philipp Wiesner</name>
     </author>
     <author>
-      <name>Antonis Michalas</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.10494v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10494v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.10485v1</id>
-    <updated>2025-07-14T17:04:05Z</updated>
-    <published>2025-07-14T17:04:05Z</published>
-    <title>Overcoming catastrophic forgetting in neural networks</title>
-    <summary>  Catastrophic forgetting is the primary challenge that hinders continual
-learning, which refers to a neural network ability to sequentially learn
-multiple tasks while retaining previously acquired knowledge. Elastic Weight
-Consolidation, a regularization-based approach inspired by synaptic
-consolidation in biological neural systems, has been used to overcome this
-problem. In this study prior research is replicated and extended by evaluating
-EWC in supervised learning settings using the PermutedMNIST and RotatedMNIST
-benchmarks. Through systematic comparisons with L2 regularization and
-stochastic gradient descent (SGD) without regularization, we analyze how
-different approaches balance knowledge retention and adaptability. Our results
-confirm what was shown in previous research, showing that EWC significantly
-reduces forgetting compared to naive training while slightly compromising
-learning efficiency on new tasks. Moreover, we investigate the impact of
-dropout regularization and varying hyperparameters, offering insights into the
-generalization of EWC across diverse learning scenarios. These results
-underscore EWC's potential as a viable solution for lifelong learning in neural
-networks.
-</summary>
-    <author>
-      <name>Brandon Shuen Yi Loke</name>
+      <name>Philipp Weiß</name>
     </author>
     <author>
-      <name>Filippo Quadri</name>
+      <name>Odej Kao</name>
     </author>
-    <author>
-      <name>Gabriel Vivanco</name>
-    </author>
-    <author>
-      <name>Maximilian Casagrande</name>
-    </author>
-    <author>
-      <name>Saúl Fenollosa</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, 5 figures, EE-411 Fundamentals of inference and learning
-  course project</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.10485v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10485v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.10473v1</id>
-    <updated>2025-07-14T16:54:57Z</updated>
-    <published>2025-07-14T16:54:57Z</published>
-    <title>GT-Loc: Unifying When and Where in Images Through a Joint Embedding
-  Space</title>
-    <summary>  Timestamp prediction aims to determine when an image was captured using only
-visual information, supporting applications such as metadata correction,
-retrieval, and digital forensics. In outdoor scenarios, hourly estimates rely
-on cues like brightness, hue, and shadow positioning, while seasonal changes
-and weather inform date estimation. However, these visual cues significantly
-depend on geographic context, closely linking timestamp prediction to
-geo-localization. To address this interdependence, we introduce GT-Loc, a novel
-retrieval-based method that jointly predicts the capture time (hour and month)
-and geo-location (GPS coordinates) of an image. Our approach employs separate
-encoders for images, time, and location, aligning their embeddings within a
-shared high-dimensional feature space. Recognizing the cyclical nature of time,
-instead of conventional contrastive learning with hard positives and negatives,
-we propose a temporal metric-learning objective providing soft targets by
-modeling pairwise time differences over a cyclical toroidal surface. We present
-new benchmarks demonstrating that our joint optimization surpasses previous
-time prediction methods, even those using the ground-truth geo-location as an
-input during inference. Additionally, our approach achieves competitive results
-on standard geo-localization tasks, and the unified embedding space facilitates
-compositional and text-based image retrieval.
-</summary>
-    <author>
-      <name>David G. Shatwell</name>
-    </author>
-    <author>
-      <name>Ishan Rajendrakumar Dave</name>
-    </author>
-    <author>
-      <name>Sirnam Swetha</name>
-    </author>
-    <author>
-      <name>Mubarak Shah</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted in ICCV2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.10473v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10473v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.10465v1</id>
-    <updated>2025-07-14T16:45:00Z</updated>
-    <published>2025-07-14T16:45:00Z</published>
-    <title>Flexible Modeling of Multivariate Skewed and Heavy-Tailed Data via a
-  Non-Central Skew t Distribution: Application to Tumor Shape Data</title>
-    <summary>  We propose a flexible formulation of the multivariate non-central skew t
-(NCST) distribution, defined by scaling skew-normal random vectors with
-independent chi-squared variables. This construction extends the classical
-multivariate t family by allowing both asymmetry and non-centrality, which
-provides an alternative to existing skew t models that often rely on
-restrictive assumptions for tractability. We derive key theoretical properties
-of the NCST distribution, which includes its moment structure, affine
-transformation behavior, and the distribution of quadratic forms. Due to the
-lack of a closed-form density, we implement a Monte Carlo likelihood
-approximation to enable maximum likelihood estimation and evaluate its
-performance through simulation studies. To demonstrate practical utility, we
-apply the NCST model to breast cancer diagnostic data, modeling multiple
-features of tumor shape. The NCST model achieves a superior fit based on
-information criteria and visual diagnostics, particularly in the presence of
-skewness and heavy tails compared to standard alternatives, including the
-multivariate normal, skew normal, and Azzalini's skew $t$ distribution. Our
-findings suggest that the NCST distribution offers a useful and interpretable
-choice for modeling complex multivariate data, which highlights promising
-directions for future development in likelihood inference, Bayesian
-computation, and applications involving asymmetry and non-Gaussian dependence.
-</summary>
-    <author>
-      <name>Abeer M. Hasan</name>
-    </author>
-    <author>
-      <name>Ying-Ju Chen</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 9 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.10465v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.10465v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Presented at the Workshop on Performance and Energy Efficiency in
+  Concurrent and Distributed Systems (PECS) at Euro-PAR'25</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.11417v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.11417v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
