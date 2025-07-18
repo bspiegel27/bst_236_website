@@ -1,491 +1,480 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-17T01:01:52Z -->
+<!-- Last updated: 2025-07-18T01:01:03Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-16T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117001</opensearch:totalResults>
+  <updated>2025-07-17T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117070</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.11539v1</id>
-    <updated>2025-07-15T17:59:57Z</updated>
-    <published>2025-07-15T17:59:57Z</published>
-    <title>Streaming 4D Visual Geometry Transformer</title>
-    <summary>  Perceiving and reconstructing 4D spatial-temporal geometry from videos is a
-fundamental yet challenging computer vision task. To facilitate interactive and
-real-time applications, we propose a streaming 4D visual geometry transformer
-that shares a similar philosophy with autoregressive large language models. We
-explore a simple and efficient design and employ a causal transformer
-architecture to process the input sequence in an online manner. We use temporal
-causal attention and cache the historical keys and values as implicit memory to
-enable efficient streaming long-term 4D reconstruction. This design can handle
-real-time 4D reconstruction by incrementally integrating historical information
-while maintaining high-quality spatial consistency. For efficient training, we
-propose to distill knowledge from the dense bidirectional visual geometry
-grounded transformer (VGGT) to our causal model. For inference, our model
-supports the migration of optimized efficient attention operator (e.g.,
-FlashAttention) from the field of large language models. Extensive experiments
-on various 4D geometry perception benchmarks demonstrate that our model
-increases the inference speed in online scenarios while maintaining competitive
-performance, paving the way for scalable and interactive 4D vision systems.
-Code is available at: https://github.com/wzzheng/StreamVGGT.
+    <id>http://arxiv.org/abs/2507.12464v1</id>
+    <updated>2025-07-16T17:59:32Z</updated>
+    <published>2025-07-16T17:59:32Z</published>
+    <title>CytoSAE: Interpretable Cell Embeddings for Hematology</title>
+    <summary>  Sparse autoencoders (SAEs) emerged as a promising tool for mechanistic
+interpretability of transformer-based foundation models. Very recently, SAEs
+were also adopted for the visual domain, enabling the discovery of visual
+concepts and their patch-wise attribution to tokens in the transformer model.
+While a growing number of foundation models emerged for medical imaging, tools
+for explaining their inferences are still lacking. In this work, we show the
+applicability of SAEs for hematology. We propose CytoSAE, a sparse autoencoder
+which is trained on over 40,000 peripheral blood single-cell images. CytoSAE
+generalizes to diverse and out-of-domain datasets, including bone marrow
+cytology, where it identifies morphologically relevant concepts which we
+validated with medical experts. Furthermore, we demonstrate scenarios in which
+CytoSAE can generate patient-specific and disease-specific concepts, enabling
+the detection of pathognomonic cells and localized cellular abnormalities at
+the patch level. We quantified the effect of concepts on a patient-level AML
+subtype classification task and show that CytoSAE concepts reach performance
+comparable to the state-of-the-art, while offering explainability on the
+sub-cellular level. Source code and model weights are available at
+https://github.com/dynamical-inference/cytosae.
 </summary>
     <author>
-      <name>Dong Zhuo</name>
+      <name>Muhammed Furkan Dasdelen</name>
     </author>
     <author>
-      <name>Wenzhao Zheng</name>
+      <name>Hyesu Lim</name>
     </author>
     <author>
-      <name>Jiahe Guo</name>
+      <name>Michele Buck</name>
     </author>
     <author>
-      <name>Yuqi Wu</name>
+      <name>Katharina S. Götze</name>
     </author>
     <author>
-      <name>Jie Zhou</name>
+      <name>Carsten Marr</name>
     </author>
     <author>
-      <name>Jiwen Lu</name>
+      <name>Steffen Schneider</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code is available at: https://github.com/wzzheng/StreamVGGT</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11539v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11539v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 5 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.12464v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12464v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.11535v1</id>
-    <updated>2025-07-15T17:58:55Z</updated>
-    <published>2025-07-15T17:58:55Z</published>
-    <title>Canonical Bayesian Linear System Identification</title>
-    <summary>  Standard Bayesian approaches for linear time-invariant (LTI) system
-identification are hindered by parameter non-identifiability; the resulting
-complex, multi-modal posteriors make inference inefficient and impractical. We
-solve this problem by embedding canonical forms of LTI systems within the
-Bayesian framework. We rigorously establish that inference in these minimal
-parameterizations fully captures all invariant system dynamics (e.g., transfer
-functions, eigenvalues, predictive distributions of system outputs) while
-resolving identifiability. This approach unlocks the use of meaningful,
-structure-aware priors (e.g., enforcing stability via eigenvalues) and ensures
-conditions for a Bernstein--von Mises theorem -- a link between Bayesian and
-frequentist large-sample asymptotics that is broken in standard forms.
-Extensive simulations with modern MCMC methods highlight advantages over
-standard parameterizations: canonical forms achieve higher computational
-efficiency, generate interpretable and well-behaved posteriors, and provide
-robust uncertainty estimates, particularly from limited data.
+    <id>http://arxiv.org/abs/2507.12457v2</id>
+    <updated>2025-07-17T06:38:08Z</updated>
+    <published>2025-07-16T17:56:44Z</published>
+    <title>Does $K$-fold CV based penalty perform variable selection or does it
+  lead to $n^{1/2}$-consistency in Lasso?</title>
+    <summary>  Least absolute shrinkage and selection operator or Lasso, introduced by
+Tibshirani (1996), is one of the widely used regularization methods in
+regression. It is observed that the properties of Lasso vary wildly depending
+on the choice of the penalty parameter. The recent results of Lahiri (2021)
+suggest that, depending on the nature of the penalty parameter, Lasso can
+either be variable selection consistent or be $n^{1/2}-$consistent. However,
+practitioners generally implement Lasso by choosing the penalty parameter in a
+data-dependent way, the most popular being the $K$-fold cross-validation. In
+this paper, we explore the variable selection consistency and
+$n^{1/2}-$consistency of Lasso when the penalty is chosen based on $K$-fold
+cross-validation with $K$ being fixed. We consider the fixed-dimensional
+heteroscedastic linear regression model and show that Lasso with $K$-fold
+cross-validation based penalty is $n^{1/2}-$consistent, but not variable
+selection consistent. We also establish the $n^{1/2}-$consistency of the
+$K$-fold cross-validation based penalty as an intermediate result.
+Additionally, as a consequence of $n^{1/2}-$consistency, we establish the
+validity of Bootstrap to approximate the distribution of the Lasso estimator
+based on $K-$fold cross-validation. We validate the Bootstrap approximation in
+finite samples based on a moderate simulation study. Thus, our results
+essentially justify the use of $K$-fold cross-validation in practice to draw
+inferences based on $n^{1/2}-$scaled pivotal quantities in Lasso regression.
 </summary>
     <author>
-      <name>Andrey Bryutkin</name>
+      <name>Mayukh Choudhury</name>
     </author>
     <author>
-      <name>Matthew E. Levine</name>
+      <name>Debraj Das</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.12457v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12457v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.12443v1</id>
+    <updated>2025-07-16T17:29:15Z</updated>
+    <published>2025-07-16T17:29:15Z</published>
+    <title>LLM-Based Config Synthesis requires Disambiguation</title>
+    <summary>  Beyond hallucinations, another problem in program synthesis using LLMs is
+ambiguity in user intent. We illustrate the ambiguity problem in a networking
+context for LLM-based incremental configuration synthesis of route-maps and
+ACLs. These structures frequently overlap in header space, making the relative
+priority of actions impossible for the LLM to infer without user interaction.
+Measurements in a large cloud identify complex ACLs with 100's of overlaps,
+showing ambiguity is a real problem. We propose a prototype system, Clarify,
+which uses an LLM augmented with a new module called a Disambiguator that helps
+elicit user intent. On a small synthetic workload, Clarify incrementally
+synthesizes routing policies after disambiguation and then verifies them. Our
+treatment of ambiguities is useful more generally when the intent of updates
+can be correctly synthesized by LLMs, but their integration is ambiguous and
+can lead to different global behaviors.
+</summary>
+    <author>
+      <name>Rajdeep Mondal</name>
     </author>
     <author>
-      <name>Iñigo Urteaga</name>
+      <name>Nikolaj Bjorner</name>
     </author>
     <author>
-      <name>Youssef Marzouk</name>
+      <name>Todd Millstein</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">46 pages, 9 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11535v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11535v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Alan Tang</name>
+    </author>
+    <author>
+      <name>George Varghese</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.12443v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12443v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.12442v1</id>
+    <updated>2025-07-16T17:28:40Z</updated>
+    <published>2025-07-16T17:28:40Z</published>
+    <title>Characterizing State Space Model (SSM) and SSM-Transformer Hybrid
+  Language Model Performance with Long Context Length</title>
+    <summary>  The demand for machine intelligence capable of processing continuous,
+long-context inputs on local devices is growing rapidly. However, the quadratic
+complexity and memory requirements of traditional Transformer architectures
+make them inefficient and often unusable for these tasks. This has spurred a
+paradigm shift towards new architectures like State Space Models (SSMs) and
+hybrids, which promise near-linear scaling. While most current research focuses
+on the accuracy and theoretical throughput of these models, a systematic
+performance characterization on practical consumer hardware is critically
+needed to guide system-level optimization and unlock new applications.
+  To address this gap, we present a comprehensive, comparative benchmarking of
+carefully selected Transformer, SSM, and hybrid models specifically for
+long-context inference on consumer and embedded GPUs. Our analysis reveals that
+SSMs are not only viable but superior for this domain, capable of processing
+sequences up to 220K tokens on a 24GB consumer GPU-approximately 4x longer than
+comparable Transformers. While Transformers may be up to 1.8x faster at short
+sequences, SSMs demonstrate a dramatic performance inversion, becoming up to 4x
+faster at very long contexts (~57K tokens). Our operator-level analysis reveals
+that custom, hardware-aware SSM kernels dominate the inference runtime,
+accounting for over 55% of latency on edge platforms, identifying them as a
+primary target for future hardware acceleration. We also provide detailed,
+device-specific characterization results to guide system co-design for the
+edge. To foster further research, we will open-source our characterization
+framework.
+</summary>
+    <author>
+      <name>Saptarshi Mitra</name>
+    </author>
+    <author>
+      <name>Rachid Karami</name>
+    </author>
+    <author>
+      <name>Haocheng Xu</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+    <author>
+      <name>Hyoukjun Kwon</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.12442v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12442v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
     <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.11507v1</id>
-    <updated>2025-07-15T17:23:22Z</updated>
-    <published>2025-07-15T17:23:22Z</published>
-    <title>MIRAGE: KV Cache Optimization through Parameter Remapping for
-  Multi-tenant LLM Serving</title>
-    <summary>  KV cache accelerates LLM inference by avoiding redundant computation, at the
-expense of memory. To support larger KV caches, prior work extends GPU memory
-with CPU memory via CPU-offloading. This involves swapping KV cache between GPU
-and CPU memory. However, because the cache updates dynamically, such swapping
-incurs high CPU memory traffic. We make a key observation that model parameters
-remain constant during runtime, unlike the dynamically updated KV cache.
-Building on this, we introduce MIRAGE, which avoids KV cache swapping by
-remapping, and thereby repurposing, the memory allocated to model parameters
-for KV cache. This parameter remapping is especially beneficial in multi-tenant
-environments, where the memory used for the parameters of the inactive models
-can be more aggressively reclaimed. Exploiting the high CPU-GPU bandwidth
-offered by the modern hardware, such as the NVIDIA Grace Hopper Superchip, we
-show that MIRAGE significantly outperforms state-of-the-art solutions,
-achieving a reduction of 44.8%-82.5% in tail time-between-token latency,
-20.7%-99.3% in tail time-to-first-token latency, and 6.6%-86.7% higher
-throughput compared to vLLM.
+    <id>http://arxiv.org/abs/2507.12435v1</id>
+    <updated>2025-07-16T17:24:06Z</updated>
+    <published>2025-07-16T17:24:06Z</published>
+    <title>Targeted Deep Architectures: A TMLE-Based Framework for Robust Causal
+  Inference in Neural Networks</title>
+    <summary>  Modern deep neural networks are powerful predictive tools yet often lack
+valid inference for causal parameters, such as treatment effects or entire
+survival curves. While frameworks like Double Machine Learning (DML) and
+Targeted Maximum Likelihood Estimation (TMLE) can debias machine-learning fits,
+existing neural implementations either rely on "targeted losses" that do not
+guarantee solving the efficient influence function equation or computationally
+expensive post-hoc "fluctuations" for multi-parameter settings. We propose
+Targeted Deep Architectures (TDA), a new framework that embeds TMLE directly
+into the network's parameter space with no restrictions on the backbone
+architecture. Specifically, TDA partitions model parameters - freezing all but
+a small "targeting" subset - and iteratively updates them along a targeting
+gradient, derived from projecting the influence functions onto the span of the
+gradients of the loss with respect to weights. This procedure yields plug-in
+estimates that remove first-order bias and produce asymptotically valid
+confidence intervals. Crucially, TDA easily extends to multi-dimensional causal
+estimands (e.g., entire survival curves) by merging separate targeting
+gradients into a single universal targeting update. Theoretically, TDA inherits
+classical TMLE properties, including double robustness and semiparametric
+efficiency. Empirically, on the benchmark IHDP dataset (average treatment
+effects) and simulated survival data with informative censoring, TDA reduces
+bias and improves coverage relative to both standard neural-network estimators
+and prior post-hoc approaches. In doing so, TDA establishes a direct, scalable
+pathway toward rigorous causal inference within modern deep architectures for
+complex multi-parameter targets.
 </summary>
     <author>
-      <name>Ruihao Li</name>
+      <name>Yi Li</name>
     </author>
     <author>
-      <name>Shagnik Pal</name>
+      <name>David Mccoy</name>
     </author>
     <author>
-      <name>Vineeth Narayan Pullu</name>
+      <name>Nolan Gunter</name>
     </author>
     <author>
-      <name>Prasoon Sinha</name>
+      <name>Kaitlyn Lee</name>
     </author>
     <author>
-      <name>Jeeho Ryoo</name>
+      <name>Alejandro Schuler</name>
     </author>
     <author>
-      <name>Lizy K. John</name>
+      <name>Mark van der Laan</name>
     </author>
-    <author>
-      <name>Neeraja J. Yadwadkar</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.11507v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11507v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.OS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.OS" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.12435v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12435v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.11504v1</id>
-    <updated>2025-07-15T17:20:45Z</updated>
-    <published>2025-07-15T17:20:45Z</published>
-    <title>A Transiting Giant on a 7.7-Year Orbit Revealed by TTVs in the TOI-201
-  System</title>
-    <summary>  We report the detection and characterization of TOI-201 c, a long-period
-transiting companion to the warm Jupiter TOI-201 b. Its presence was first
-inferred from high-amplitude transit timing variations (TTVs) in TOI-201 b,
-pointing to a massive outer body on a $7.7^{+1.0}_{-0.6}$-year eccentric orbit.
-This prediction was confirmed when TESS observed a transit of TOI-201 c,
-precisely constraining its orbital geometry. A joint fit to TTVs, transit
-photometry, and archival radial velocities yields a mass of
-$14.2^{+1.0}_{-1.2}$ $M_{\rm Jup}$ and an eccentricity of
-$0.643^{+0.009}_{-0.021}$. The mutual inclination between planets b and c is
-$2.9^{+4.8}_{-4.4}$ degrees, indicating a nearly coplanar architecture.
-Long-term numerical integrations confirm dynamical stability over gigayear
-timescales and predict that transits of TOI-201 b will cease within a few
-thousand years. TOI-201 c ranks among the longest-period transiting planets
-with well-constrained properties. Its detection via TTVs, followed by a
-confirmed transit, represents a rare observational sequence and highlights the
-power of TTVs and photometric monitoring to uncover distant companions. The
-TOI-201 system offers a valuable laboratory for testing models of giant planet
-formation, migration, and secular evolution in multi-planet systems.
+    <id>http://arxiv.org/abs/2507.12424v1</id>
+    <updated>2025-07-16T17:11:48Z</updated>
+    <published>2025-07-16T17:11:48Z</published>
+    <title>Hierarchical Temporal Point Process Modeling of Aggressive Behavior
+  Onset in Psychiatric Inpatient Youth with Autism for Branching Factor
+  Estimation</title>
+    <summary>  Aggressive behavior in autistic inpatient youth often arises in temporally
+clustered bursts complicating efforts to distinguish external triggers from
+internal escalation. The sample population branching factor-the expected number
+of new onsets triggered by a given event-is a key summary of self-excitation in
+behavior dynamics. Prior pooled models overestimate this quantity by ignoring
+patient-specific variability. We addressed this using a hierarchical Hawkes
+process with an exponential kernel and edge-effect correction allowing partial
+pooling across patients. This approach reduces bias from high-frequency
+individuals and stabilizes estimates for those with sparse data. Bayesian
+inference was performed using the No U-Turn Sampler with model evaluation via
+convergence diagnostics, power-scaling sensitivity analysis, and multiple
+Goodness-of-Fit (GOF) metrics: PSIS-LOO the Lewis test with Durbin's
+modification and residual analysis based on the Random Time Change Theorem
+(RTCT). The hierarchical model yielded a significantly lower and more precise
+branching factor estimate mean (0.742 +- 0.026) than the pooled model (0.899 +-
+0.015) and narrower intervals than the unpooled model (0.717 +- 0.139). This
+led to a threefold smaller cascade of events per onset under the hierarchical
+model. Sensitivity analyses confirmed robustness to prior and likelihood
+perturbations while the unpooled model showed instability for sparse
+individuals. GOF measures consistently favored or on par to the hierarchical
+model. Hierarchical Hawkes modeling with edge-effect correction provides robust
+estimation of branching dynamics by capturing both within- and between-patient
+variability. This enables clearer separation of endogenous from exogenous
+events supports linkage to physiological signals and enhances early warning
+systems individualized treatment and resource allocation in inpatient care.
 </summary>
     <author>
-      <name>Gracjan Maciejewski</name>
+      <name>Michael Potter</name>
     </author>
     <author>
-      <name>Weronika Łoboda</name>
+      <name>Michael Everett</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in ApJL on 2025-07-14, submitted on
-  2025-06-23</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11504v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11504v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Deniz Erdogmus</name>
+    </author>
+    <author>
+      <name>Yuna Watanabe</name>
+    </author>
+    <author>
+      <name>Tales Imbiriba</name>
+    </author>
+    <author>
+      <name>Matthew S. Goodwin</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to BMC Bioinformatics</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.12424v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12424v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.OT" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.11492v1</id>
-    <updated>2025-07-15T17:06:35Z</updated>
-    <published>2025-07-15T17:06:35Z</published>
-    <title>Low-redshift analogues of cosmic noon galaxies as laboratories for
-  clumpy star formation</title>
-    <summary>  It has been established that a significant fraction of star formation at
-high-redshift occurs in clumpy galaxies. The properties of clumps and their
-formation mechanisms, however, remain highly debated. In this work we analyze a
-sample of 18 Supercompact Ultraviolet Luminous Galaxies observed with the
-OSIRIS spectrograph at the Keck Telescope, targeting their Pa-alpha emission.
-These galaxies, although at z~0.1-0.2, share many similar properties with
-star-forming galaxies at cosmic noon. We find a total of 84 star-forming clumps
-with typical sizes of a few hundred parsecs. The star-forming clumps exhibit
-low values of velocity shear (~12 km/s) and high velocity dispersion (~70
-km/s). The dynamical masses of the clumps are typically higher than gas masses
-inferred from the measured star-formation rates of each clump. We also
-artificially redshift our data to emulate observations at z=2.2 and allow for a
-direct comparison with other galaxies at higher redshift. Our results indicate
-that, due to the effects of clump clustering and low-resolution observations,
-high-z clumps appear larger at greater cosmological distances. This underscores
-the importance of using low-redshift observations to anchor studies at earlier
-epochs. Finally, our results support the idea of growing clump sizes in
-star-forming galaxies as a function of redshift, although not to scales of kpc
-as found by other works without the benefits of adaptive optics or
-gravitational lensing.
+    <id>http://arxiv.org/abs/2507.12412v1</id>
+    <updated>2025-07-16T17:00:41Z</updated>
+    <published>2025-07-16T17:00:41Z</published>
+    <title>NOCTA: Non-Greedy Objective Cost-Tradeoff Acquisition for Longitudinal
+  Data</title>
+    <summary>  In many critical applications, resource constraints limit the amount of
+information that can be gathered to make predictions. For example, in
+healthcare, patient data often spans diverse features ranging from lab tests to
+imaging studies. Each feature may carry different information and must be
+acquired at a respective cost of time, money, or risk to the patient. Moreover,
+temporal prediction tasks, where both instance features and labels evolve over
+time, introduce additional complexity in deciding when or what information is
+important. In this work, we propose NOCTA, a Non-Greedy Objective Cost-Tradeoff
+Acquisition method that sequentially acquires the most informative features at
+inference time while accounting for both temporal dynamics and acquisition
+cost. We first introduce a cohesive estimation target for our NOCTA setting,
+and then develop two complementary estimators: 1) a non-parametric method based
+on nearest neighbors to guide the acquisition (NOCTA-NP), and 2) a parametric
+method that directly predicts the utility of potential acquisitions (NOCTA-P).
+Experiments on synthetic and real-world medical datasets demonstrate that both
+NOCTA variants outperform existing baselines.
 </summary>
     <author>
-      <name>Jorge M. Santos-Junior</name>
+      <name>Dzung Dinh</name>
     </author>
     <author>
-      <name>Thiago S. Goncalves</name>
+      <name>Boqi Chen</name>
     </author>
     <author>
-      <name>Luidhy Santana-Silva</name>
+      <name>Marc Niethammer</name>
     </author>
     <author>
-      <name>Arianna Cortesi</name>
+      <name>Junier Oliva</name>
     </author>
-    <author>
-      <name>Karin Menendez-Delmestre</name>
-    </author>
-    <author>
-      <name>Amanda E. de Araujo-Carvalho</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.3847/1538-4357/add926</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.3847/1538-4357/add926" rel="related"/>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 11 figures, 3 tables, accepted for publication in ApJ</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11492v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11492v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.12412v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12412v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.11461v1</id>
-    <updated>2025-07-15T16:33:01Z</updated>
-    <published>2025-07-15T16:33:01Z</published>
-    <title>Deep Equilibrium models for Poisson Imaging Inverse problems via Mirror
-  Descent</title>
-    <summary>  Deep Equilibrium Models (DEQs) are implicit neural networks with fixed
-points, which have recently gained attention for learning image regularization
-functionals, particularly in settings involving Gaussian fidelities, where
-assumptions on the forward operator ensure contractiveness of standard
-(proximal) Gradient Descent operators. In this work, we extend the application
-of DEQs to Poisson inverse problems, where the data fidelity term is more
-appropriately modeled by the Kullback-Leibler divergence. To this end, we
-introduce a novel DEQ formulation based on Mirror Descent defined in terms of a
-tailored non-Euclidean geometry that naturally adapts with the structure of the
-data term. This enables the learning of neural regularizers within a principled
-training framework. We derive sufficient conditions to guarantee the
-convergence of the learned reconstruction scheme and propose computational
-strategies that enable both efficient training and fully parameter-free
-inference. Numerical experiments show that our method outperforms traditional
-model-based approaches and it is comparable to the performance of Bregman
-Plug-and-Play methods, while mitigating their typical drawbacks - namely,
-sensitivity to initialization and careful tuning of hyperparameters. The code
-is publicly available at https://github.com/christiandaniele/DEQ-MD.
+    <id>http://arxiv.org/abs/2507.12399v1</id>
+    <updated>2025-07-16T16:44:29Z</updated>
+    <published>2025-07-16T16:44:29Z</published>
+    <title>ROC-n-reroll: How verifier imperfection affects test-time scaling</title>
+    <summary>  Test-time scaling aims to improve language model performance by leveraging
+additional compute during inference. While many works have empirically studied
+techniques like Best-of-N (BoN) and rejection sampling that make use of a
+verifier to enable test-time scaling, there is little theoretical understanding
+of how verifier imperfection affects performance. In this work, we address this
+gap. Specifically, we prove how instance-level accuracy of these methods is
+precisely characterized by the geometry of the verifier's ROC curve.
+Interestingly, while scaling is determined by the local geometry of the ROC
+curve for rejection sampling, it depends on global properties of the ROC curve
+for BoN. As a consequence when the ROC curve is unknown, it is impossible to
+extrapolate the performance of rejection sampling based on the low-compute
+regime. Furthermore, while rejection sampling outperforms BoN for fixed
+compute, in the infinite-compute limit both methods converge to the same level
+of accuracy, determined by the slope of the ROC curve near the origin. Our
+theoretical results are confirmed by experiments on GSM8K using different
+versions of Llama and Qwen to generate and verify solutions.
 </summary>
     <author>
-      <name>Christian Daniele</name>
+      <name>Florian E. Dorner</name>
     </author>
     <author>
-      <name>Silvia Villa</name>
+      <name>Yatong Chen</name>
     </author>
     <author>
-      <name>Samuel Vaiter</name>
+      <name>André F. Cruz</name>
     </author>
     <author>
-      <name>Luca Calatroni</name>
+      <name>Fanny Yang</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.11461v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11461v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">35 pages, 9 Figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.12399v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12399v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.12395v1</id>
+    <updated>2025-07-16T16:41:17Z</updated>
+    <published>2025-07-16T16:41:17Z</published>
+    <title>Invariant non-equilibrium dynamics of transcriptional regulation
+  optimize information flow</title>
+    <summary>  Eukaryotic gene regulation is based on stochastic yet controlled promoter
+switching, during which genes transition between transcriptionally active and
+inactive states. Despite the molecular complexity of this process, recent
+studies reveal a surprising invariance of the "switching correlation time"
+($T_C$), which characterizes promoter activity fluctuations, across gene
+expression levels in diverse genes and organisms. A biophysically plausible
+explanation for this invariance remains missing. Here, we show that this
+invariance imposes stringent constraints on minimal yet plausible models of
+transcriptional regulation, requiring at least four system states and
+non-equilibrium dynamics that break detailed balance. Using Bayesian inference
+on Drosophila gap gene expression data, we demonstrate that such models (i)
+accurately reproduce the observed $T_C$-invariance; (ii) remain robust to
+parameter perturbations; and (iii) maximize information transmission from
+transcription factor concentration to gene expression. These findings suggest
+that eukaryotic gene regulation has evolved to balance precision with reaction
+rate and energy dissipation constraints, favoring non-equilibrium architectures
+for optimal information transmission.
+</summary>
+    <author>
+      <name>Benjamin Zoller</name>
+    </author>
+    <author>
+      <name>Alexis Bénichou</name>
+    </author>
+    <author>
+      <name>Thomas Gregor</name>
+    </author>
+    <author>
+      <name>Gašper Tkačik</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 4 figures, 10 SI figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.12395v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12395v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.12385v1</id>
+    <updated>2025-07-16T16:31:40Z</updated>
+    <published>2025-07-16T16:31:40Z</published>
+    <title>Convergence of drift-diffusion PDEs arising as Wasserstein gradient
+  flows of convex functions</title>
+    <summary>  We study the quantitative convergence of drift-diffusion PDEs that arise as
+Wasserstein gradient flows of linearly convex functions over the space of
+probability measures on ${\mathbb R}^d$. In this setting, the objective is in
+general not displacement convex, so it is not clear a priori whether global
+convergence even holds. Still, our analysis reveals that diffusion {allows} a
+favorable interaction between Wasserstein geometry and linear convexity,
+leading to a general quantitative convergence theory, analogous to that of
+gradient flows in convex settings in the Euclidean space.
+  Specifically, we prove that if the objective is convex and suitably coercive,
+the suboptimality gap decreases at a rate $O(1/t)$. This improves to a rate
+faster than any polynomial -- or even exponential in compact settings -- when
+the objective is strongly convex relative to the entropy.
+  Our results extend the range of mean-field Langevin dynamics that enjoy
+quantitative convergence guarantees, and enable new applications to
+optimization over the space of probability measures. To illustrate this, we
+show quantitative convergence results for the minimization of
+entropy-regularized nonconvex problems, we propose and study an
+\emph{approximate Fisher Information} regularization covered by our setting,
+and we apply our results to an estimator for trajectory inference which
+involves the minimization of the relative entropy with respect to the Wiener
+measure in path space.
+</summary>
+    <author>
+      <name>Lénaïc Chizat</name>
+    </author>
+    <author>
+      <name>Maria Colombo</name>
+    </author>
+    <author>
+      <name>Xavier Fernández-Real</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.12385v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.12385v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="65K10, 65J22, 94A08, 47N10" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.11456v1</id>
-    <updated>2025-07-15T16:27:05Z</updated>
-    <published>2025-07-15T16:27:05Z</published>
-    <title>Timescales for stochastic barrier crossing: inferring the potential from
-  nonequilibrium data</title>
-    <summary>  Kramers' rate theory forms a cornerstone for thermally activated barrier
-crossing. However, its reliance on equilibrium quantities excludes analysis of
-nonequilibrium dynamics at early times. Most works have thus focused on
-obtaining rates and transition time and path distributions in equilibrium.
-Instead, here we consider early-time nonequilibrium dynamics in a model system
-of a particle with overdamped dynamics hopping over the barrier in a
-double-well potential, using the Smoluchowski equation (SE) and stochastic path
-integral (SPI) mapping of the Langevin equation. We identify several key
-timescales relevant to nonequilibrium dynamics and quantify them using the SE
-and SPI approaches. The shortest timescale corresponds to equilibration in a
-well at time $t \ll \tau_{\rm B}$, where $\tau_{\rm B}$ is the Brownian
-diffusion time. The second important timescale is when an inflexion point
-appears in the effective potential constructed from the density at $t
-\lessapprox \tau_{\rm B}$. Shortly after, the existence of a second potential
-well can be inferred from sufficient sampling of the dynamics. Interestingly,
-this timescale decreases with increasing barrier height. We find significant
-deviations from the equilibrium limit unless $t \gg \tau_{\rm B}$. We further
-calculate \red{the} density current at the barrier for bistable and asymmetric
-potentials and find that it crosses over to that from equilibrium rate theory
-at a time that does not appear to depend on the barrier height. Our results
-have important implications for controlling activated processes at finite times
-and demonstrate the importance of reaching long enough times to faithfully
-construct potential landscapes from experimental or simulation data.
-</summary>
-    <author>
-      <name>A. J. Archer</name>
-    </author>
-    <author>
-      <name>T. Ala-Nissila</name>
-    </author>
-    <author>
-      <name>T. J. W. Honour</name>
-    </author>
-    <author>
-      <name>S. P. Fitzgerald</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11456v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11456v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.11442v1</id>
-    <updated>2025-07-15T16:06:33Z</updated>
-    <published>2025-07-15T16:06:33Z</published>
-    <title>Identifying galactic binary systems of neutron stars and black holes
-  with LISA</title>
-    <summary>  The Laser Interferometer Space Antenna (LISA) will detect ~ 100 galactic
-binary systems comprised of black holes (BHs) and neutron stars (NSs).
-Identifying the nature of the constituents of these binaries as BHs or NSs, and
-distinguishing them from $\sim 10^4$ detected double white dwarfs will be
-challenging. In the absence of any other information, the inferred values of
-the component masses can be used to classify the nature of these objects.
-However, short-period galactic binaries $\sim 10^7 - 10^3$ yr from coalescence
-produce a quasi-monochromatic signal which carries little information about
-their masses. We generate synthetic LISA data sets containing gravitational
-waves (GWs) from galactic binary BHs, binary NSs and BHNSs drawn from an
-astrophysically realistic population produced through the isolated binary
-evolution channel. We process the data with an end-to-end Bayesian inference
-pipeline to explore the accuracy with which the individual component masses can
-be measured. We find that for $\approx 10\% - 50\%$ of the detected systems
-LISA will be able to measure the individual component masses by measuring the
-orbital eccentricity, periapse precession frequency, and GW induced frequency
-derivative. Typical fractional mass errors are $\approx 1\% - 100\%$ (depending
-on the specific value of the source parameters), which will enable in many
-circumstances the classification of the objects as BHs or NSs. For these
-binaries, LISA will also be able to determine their 3-dimensional position in
-the Milky Way. The LISA-detected sample of these double compact objects will
-provide new information about the galactic population of BHs and NSs, the star
-formation history of the Milky Way and the astrophysical processes leading to
-the formation of these systems. However, for a significant fraction of the
-LISA-detected binaries the nature of their constituent objects may remain
-unclear.
-</summary>
-    <author>
-      <name>Hannah Middleton</name>
-    </author>
-    <author>
-      <name>Panagiota Kolitsidou</name>
-    </author>
-    <author>
-      <name>Antoine Klein</name>
-    </author>
-    <author>
-      <name>Connor Adam</name>
-    </author>
-    <author>
-      <name>Rowan Chalmers</name>
-    </author>
-    <author>
-      <name>Alberto Vecchio</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">23 pages, 11 figures, 8 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11442v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11442v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.11435v1</id>
-    <updated>2025-07-15T15:57:28Z</updated>
-    <published>2025-07-15T15:57:28Z</published>
-    <title>FasTUSS: Faster Task-Aware Unified Source Separation</title>
-    <summary>  Time-Frequency (TF) dual-path models are currently among the best performing
-audio source separation network architectures, achieving state-of-the-art
-performance in speech enhancement, music source separation, and cinematic audio
-source separation. While they are characterized by a relatively low parameter
-count, they still require a considerable number of operations, implying a
-higher execution time. This problem is exacerbated by the trend towards bigger
-models trained on large amounts of data to solve more general tasks, such as
-the recently introduced task-aware unified source separation (TUSS) model.
-TUSS, which aims to solve audio source separation tasks using a single,
-conditional model, is built upon TF-Locoformer, a TF dual-path model combining
-convolution and attention layers. The task definition comes in the form of a
-sequence of prompts that specify the number and type of sources to be
-extracted. In this paper, we analyze the design choices of TUSS with the goal
-of optimizing its performance-complexity trade-off. We derive two more
-efficient models, FasTUSS-8.3G and FasTUSS-11.7G that reduce the original
-model's operations by 81\% and 73\% with minor performance drops of 1.2~dB and
-0.4~dB averaged over all benchmarks, respectively. Additionally, we investigate
-the impact of prompt conditioning to derive a causal TUSS model.
-</summary>
-    <author>
-      <name>Francesco Paissan</name>
-    </author>
-    <author>
-      <name>Gordon Wichern</name>
-    </author>
-    <author>
-      <name>Yoshiki Masuyama</name>
-    </author>
-    <author>
-      <name>Ryo Aihara</name>
-    </author>
-    <author>
-      <name>François G. Germain</name>
-    </author>
-    <author>
-      <name>Kohei Saijo</name>
-    </author>
-    <author>
-      <name>Jonathan Le Roux</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to WASPAA 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11435v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11435v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.11417v1</id>
-    <updated>2025-07-15T15:44:03Z</updated>
-    <published>2025-07-15T15:44:03Z</published>
-    <title>Quantifying the Energy Consumption and Carbon Emissions of LLM Inference
-  via Simulations</title>
-    <summary>  The environmental impact of Large Language Models (LLMs) is rising
-significantly, with inference now accounting for more than half of their total
-lifecycle carbon emissions. However, existing simulation frameworks, which are
-increasingly used to determine efficient LLM deployments, lack any concept of
-power and, therefore, cannot accurately estimate inference-related emissions.
-We present a simulation framework to assess the energy and carbon implications
-of LLM inference under varying deployment setups. First, we extend a
-high-fidelity LLM inference simulator with a GPU power model that estimates
-power consumption based on utilization metrics, enabling analysis across
-configurations like batch size, sequence length, and model parallelism. Second,
-we integrate simulation outputs into an energy system co-simulation environment
-to quantify carbon emissions under specific grid conditions and explore the
-potential of carbon-aware scheduling. Through scenario-based analysis, our
-framework reveals how inference parameters affect energy demand and carbon
-footprint, demonstrates a renewable offset potential of up to 69.2% in an
-illustrative deployment case, and provides a foundation for future carbon-aware
-inference infrastructure design.
-</summary>
-    <author>
-      <name>Miray Özcan</name>
-    </author>
-    <author>
-      <name>Philipp Wiesner</name>
-    </author>
-    <author>
-      <name>Philipp Weiß</name>
-    </author>
-    <author>
-      <name>Odej Kao</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Presented at the Workshop on Performance and Energy Efficiency in
-  Concurrent and Distributed Systems (PECS) at Euro-PAR'25</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.11417v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.11417v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="49Q22, 35Q84, 35B40" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
