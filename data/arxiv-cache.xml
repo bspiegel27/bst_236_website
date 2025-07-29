@@ -1,770 +1,1028 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-28T01:06:16Z -->
+<!-- Last updated: 2025-07-29T01:08:31Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-27T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117563</opensearch:totalResults>
+  <updated>2025-07-28T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117632</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.18606v1</id>
-    <updated>2025-07-24T17:42:30Z</updated>
-    <published>2025-07-24T17:42:30Z</published>
-    <title>Hybrid quantum-classical algorithm for near-optimal planning in POMDPs</title>
-    <summary>  Reinforcement learning (RL) provides a principled framework for
-decision-making in partially observable environments, which can be modeled as
-Markov decision processes and compactly represented through dynamic decision
-Bayesian networks. Recent advances demonstrate that inference on sparse
-Bayesian networks can be accelerated using quantum rejection sampling combined
-with amplitude amplification, leading to a computational speedup in estimating
-acceptance probabilities.\\ Building on this result, we introduce Quantum
-Bayesian Reinforcement Learning (QBRL), a hybrid quantum-classical look-ahead
-algorithm for model-based RL in partially observable environments. We present a
-rigorous, oracle-free time complexity analysis under fault-tolerant assumptions
-for the quantum device. Unlike standard treatments that assume a black-box
-oracle, we explicitly specify the inference process, allowing our bounds to
-more accurately reflect the true computational cost. We show that, for
-environments whose dynamics form a sparse Bayesian network, horizon-based
-near-optimal planning can be achieved sub-quadratically faster through
-quantum-enhanced belief updates.
-  Furthermore, we present numerical experiments benchmarking QBRL against its
-classical counterpart on simple yet illustrative decision-making tasks. Our
-results offer a detailed analysis of how the quantum computational advantage
-translates into decision-making performance, highlighting that the magnitude of
-the advantage can vary significantly across different deployment settings.
+    <id>http://arxiv.org/abs/2507.19459v1</id>
+    <updated>2025-07-25T17:43:29Z</updated>
+    <published>2025-07-25T17:43:29Z</published>
+    <title>Fast Learning of Non-Cooperative Spacecraft 3D Models through Primitive
+  Initialization</title>
+    <summary>  The advent of novel view synthesis techniques such as NeRF and 3D Gaussian
+Splatting (3DGS) has enabled learning precise 3D models only from posed
+monocular images. Although these methods are attractive, they hold two major
+limitations that prevent their use in space applications: they require poses
+during training, and have high computational cost at training and inference. To
+address these limitations, this work contributes: (1) a Convolutional Neural
+Network (CNN) based primitive initializer for 3DGS using monocular images; (2)
+a pipeline capable of training with noisy or implicit pose estimates; and (3)
+and analysis of initialization variants that reduce the training cost of
+precise 3D models. A CNN takes a single image as input and outputs a coarse 3D
+model represented as an assembly of primitives, along with the target's pose
+relative to the camera. This assembly of primitives is then used to initialize
+3DGS, significantly reducing the number of training iterations and input images
+needed -- by at least an order of magnitude. For additional flexibility, the
+CNN component has multiple variants with different pose estimation techniques.
+This work performs a comparison between these variants, evaluating their
+effectiveness for downstream 3DGS training under noisy or implicit pose
+estimates. The results demonstrate that even with imperfect pose supervision,
+the pipeline is able to learn high-fidelity 3D representations, opening the
+door for the use of novel view synthesis in space applications.
 </summary>
     <author>
-      <name>Gilberto Cunha</name>
+      <name>Pol Francesch Huc</name>
     </author>
     <author>
-      <name>Alexandra Ramôa</name>
+      <name>Emily Bates</name>
     </author>
     <author>
-      <name>André Sequeira</name>
+      <name>Simone D'Amico</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.19459v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19459v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.19457v1</id>
+    <updated>2025-07-25T17:42:32Z</updated>
+    <published>2025-07-25T17:42:32Z</published>
+    <title>GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</title>
+    <summary>  Large language models (LLMs) are increasingly adapted to downstream tasks via
+reinforcement learning (RL) methods like Group Relative Policy Optimization
+(GRPO), which often require thousands of rollouts to learn new tasks. We argue
+that the interpretable nature of language can often provide a much richer
+learning medium for LLMs, compared with policy gradients derived from sparse,
+scalar rewards. To test this, we introduce GEPA (Genetic-Pareto), a prompt
+optimizer that thoroughly incorporates natural language reflection to learn
+high-level rules from trial and error. Given any AI system containing one or
+more LLM prompts, GEPA samples system-level trajectories (e.g., reasoning, tool
+calls, and tool outputs) and reflects on them in natural language to diagnose
+problems, propose and test prompt updates, and combine complementary lessons
+from the Pareto frontier of its own attempts. As a result of GEPA's design, it
+can often turn even just a few rollouts into a large quality gain. Across four
+tasks, GEPA outperforms GRPO by 10% on average and by up to 20%, while using up
+to 35x fewer rollouts. GEPA also outperforms the leading prompt optimizer,
+MIPROv2, by over 10% across two LLMs, and demonstrates promising results as an
+inference-time search strategy for code optimization.
+</summary>
+    <author>
+      <name>Lakshya A Agrawal</name>
     </author>
     <author>
-      <name>Michael de Oliveira</name>
+      <name>Shangyin Tan</name>
     </author>
     <author>
-      <name>Luís Barbosa</name>
+      <name>Dilara Soylu</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.18606v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18606v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Noah Ziems</name>
+    </author>
+    <author>
+      <name>Rishi Khare</name>
+    </author>
+    <author>
+      <name>Krista Opsahl-Ong</name>
+    </author>
+    <author>
+      <name>Arnav Singhvi</name>
+    </author>
+    <author>
+      <name>Herumb Shandilya</name>
+    </author>
+    <author>
+      <name>Michael J Ryan</name>
+    </author>
+    <author>
+      <name>Meng Jiang</name>
+    </author>
+    <author>
+      <name>Christopher Potts</name>
+    </author>
+    <author>
+      <name>Koushik Sen</name>
+    </author>
+    <author>
+      <name>Alexandros G. Dimakis</name>
+    </author>
+    <author>
+      <name>Ion Stoica</name>
+    </author>
+    <author>
+      <name>Dan Klein</name>
+    </author>
+    <author>
+      <name>Matei Zaharia</name>
+    </author>
+    <author>
+      <name>Omar Khattab</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.19457v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19457v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.2.7; I.2.6; I.2.4; I.2.8" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.19437v1</id>
+    <updated>2025-07-25T17:08:16Z</updated>
+    <published>2025-07-25T17:08:16Z</published>
+    <title>Observations Meet Actions: Learning Control-Sufficient Representations
+  for Robust Policy Generalization</title>
+    <summary>  Capturing latent variations ("contexts") is key to deploying
+reinforcement-learning (RL) agents beyond their training regime. We recast
+context-based RL as a dual inference-control problem and formally characterize
+two properties and their hierarchy: observation sufficiency (preserving all
+predictive information) and control sufficiency (retaining decision-making
+relevant information). Exploiting this dichotomy, we derive a contextual
+evidence lower bound(ELBO)-style objective that cleanly separates
+representation learning from policy learning and optimizes it with Bottlenecked
+Contextual Policy Optimization (BCPO), an algorithm that places a variational
+information-bottleneck encoder in front of any off-policy policy learner. On
+standard continuous-control benchmarks with shifting physical parameters, BCPO
+matches or surpasses other baselines while using fewer samples and retaining
+performance far outside the training regime. The framework unifies theory,
+diagnostics, and practice for context-based RL.
+</summary>
+    <author>
+      <name>Yuliang Gu</name>
+    </author>
+    <author>
+      <name>Hongpeng Cao</name>
+    </author>
+    <author>
+      <name>Marco Caccamo</name>
+    </author>
+    <author>
+      <name>Naira Hovakimyan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.19437v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19437v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.18595v1</id>
-    <updated>2025-07-24T17:26:30Z</updated>
-    <published>2025-07-24T17:26:30Z</published>
-    <title>Investigating Mobility in Spatial Biodiversity Models through Recurrence
-  Quantification Analysis</title>
-    <summary>  Recurrence plots and their associated quantifiers provide a robust framework
-for detecting and characterising complex patterns in non-linear time-series. In
-this paper, we employ recurrence quantification analysis to investigate the
-dynamics of the cyclic, non-hierarchical May-Leonard model, also referred to as
-rock--paper--scissors systems, that describes competitive interactions among
-three species. A crucial control parameter in these systems is the species'
-mobility $m$, which governs the spatial displacement of individuals and
-profoundly influences the resulting dynamics. By systematically varying $m$ and
-constructing suitable recurrence plots from numerical simulations, we explore
-how recurrence quantifiers reflect distinct dynamical features associated with
-different ecological states. We then introduce an ensemble-based approach that
-leverages statistical distributions of recurrence quantifiers, computed from
-numerous independent realisations, allowing us to identify dynamical outliers
-as significant deviations from typical system behaviour. Through detailed
-numerical analyses, we demonstrate that these outliers correspond to divergent
-ecological regimes associated with specific mobility values, providing also a
-robust manner to infer the mobility parameter from observed numerical data. Our
-results highlight the potential of recurrence-based methods as diagnostic tools
-for analysing spatial ecological systems and extracting ecologically relevant
-information from their non-linear dynamical patterns.
+    <id>http://arxiv.org/abs/2507.19432v1</id>
+    <updated>2025-07-25T17:02:18Z</updated>
+    <published>2025-07-25T17:02:18Z</published>
+    <title>Resolving Build Conflicts via Example-Based and Rule-Based Program
+  Transformations</title>
+    <summary>  Merge conflicts often arise when developers integrate changes from different
+software branches. The conflicts can result from overlapping edits in programs
+(i.e., textual conflicts) or cause build and test errors (i.e., build and test
+conflicts). They degrade software quality and hinder programmer productivity.
+While several tools detect build conflicts, few offer meaningful support for
+resolving cases like those caused by method removal. To overcome limitations of
+existing tools, we introduce BUCOR (Build Conflict Resolver), a new conflict
+resolver. BUCOR first detects conflicts by comparing three versions related to
+a merging scenario: base b, left l, and right r. To resolve conflicts, it
+employs two complementary strategies: example-based transformation (BUCOR-E)
+and rule-based transformation (BUCOR-R). BUCOR-R applies predefined rules to
+handle common, well-understood conflicts. BUCOR-E mines branch versions (l and
+r) for exemplar edits applied to fix related build errors. From these examples,
+it infers and generalizes program transformation patterns to resolve more
+complex conflicts.
+  We evaluated BUCOR on 88 real-world build conflicts spanning 21 distinct
+conflict types. BUCOR generated at least one solution for 65 cases and
+correctly resolved 43 conflicts. We observed that this hybrid
+approach--combining context-aware, example-based learning with structured,
+rule-based resolution--can effectively help resolve conflicts. Our research
+sheds light on future directions for more intelligent and automated merge
+tools.
 </summary>
     <author>
-      <name>Matheus Palmero</name>
+      <name>Sheikh Shadab Towqir</name>
     </author>
     <author>
-      <name>Matheus Bongestab</name>
+      <name>Fei He</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.18595v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18595v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Todd Mytkowicz</name>
+    </author>
+    <author>
+      <name>Na Meng</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.19432v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19432v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.18580v1</id>
-    <updated>2025-07-24T16:56:38Z</updated>
-    <published>2025-07-24T16:56:38Z</published>
-    <title>System Report for CCL25-Eval Task 10: SRAG-MAV for Fine-Grained Chinese
-  Hate Speech Recognition</title>
-    <summary>  This paper presents our system for CCL25-Eval Task 10, addressing
-Fine-Grained Chinese Hate Speech Recognition (FGCHSR). We propose a novel
-SRAG-MAV framework that synergistically integrates task reformulation(TR),
-Self-Retrieval-Augmented Generation (SRAG), and Multi-Round Accumulative Voting
-(MAV). Our method reformulates the quadruplet extraction task into triplet
-extraction, uses dynamic retrieval from the training set to create contextual
-prompts, and applies multi-round inference with voting to improve output
-stability and performance. Our system, based on the Qwen2.5-7B model, achieves
-a Hard Score of 26.66, a Soft Score of 48.35, and an Average Score of 37.505 on
-the STATE ToxiCN dataset, significantly outperforming baselines such as GPT-4o
-(Average Score 15.63) and fine-tuned Qwen2.5-7B (Average Score 35.365). The
-code is available at https://github.com/king-wang123/CCL25-SRAG-MAV.
+    <id>http://arxiv.org/abs/2507.19427v1</id>
+    <updated>2025-07-25T16:53:13Z</updated>
+    <published>2025-07-25T16:53:13Z</published>
+    <title>Step-3 is Large yet Affordable: Model-system Co-design for
+  Cost-effective Decoding</title>
+    <summary>  Large language models (LLMs) face low hardware efficiency during decoding,
+especially for long-context reasoning tasks. This paper introduces Step-3, a
+321B-parameter VLM with hardware-aware model-system co-design optimized for
+minimizing decoding costs. Step-3 innovates in two key dimensions: (1) A novel
+Multi-Matrix Factorization Attention (MFA) mechanism that significantly reduces
+both KV cache size and computation while maintaining high attention
+expressiveness, and (2) Attention-FFN Disaggregation (AFD), a distributed
+inference system that decouples attention and Feed-Forward Network (FFN) layers
+into specialized subsystems. This co-design achieves unprecedented cost
+efficiency: Step-3 significantly reduces theoretical decoding costs compared
+with models like DeepSeek-V3 and Qwen3 MoE 235B, with the gains widening at
+longer context. Step-3 achieves low cost while activating 38B parameters per
+token (more than DeepSeek-V3 and Qwen3 MoE 235B), demonstrating that
+hardware-aligned attention arithmetic intensity, MoE sparsity, and AFD are
+critical to cost-effectiveness. We perform a head-to-head comparison with
+DeepSeek-V3 in its favorable scenarios. Our implementation on Hopper GPUs
+achieves a decoding throughput of up to 4,039 tokens per second per GPU under
+50ms TPOT SLA (4K context, FP8, no MTP). It is higher than DeepSeek-V3's 2,324
+in the same setup and sets a new Pareto frontier for LLM decoding.
 </summary>
     <author>
-      <name>Jiahao Wang</name>
-    </author>
-    <author>
-      <name>Ramen Liu</name>
-    </author>
-    <author>
-      <name>Longhui Zhang</name>
-    </author>
-    <author>
-      <name>Jing Li</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 3 figures, accepted as oral presentation at CCL25-Eval</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.18580v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18580v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.18578v1</id>
-    <updated>2025-07-24T16:51:33Z</updated>
-    <published>2025-07-24T16:51:33Z</published>
-    <title>Wide-In, Narrow-Out: Revokable Decoding for Efficient and Effective
-  DLLMs</title>
-    <summary>  Diffusion Large Language Models (DLLMs) have emerged as a compelling
-alternative to Autoregressive models, designed for fast parallel generation.
-However, existing DLLMs are plagued by a severe quality-speed trade-off, where
-faster parallel decoding leads to significant performance degradation. We
-attribute this to the irreversibility of standard decoding in DLLMs, which is
-easily polarized into the wrong decoding direction along with early error
-context accumulation. To resolve this, we introduce Wide-In, Narrow-Out (WINO),
-a training-free decoding algorithm that enables revokable decoding in DLLMs.
-WINO employs a parallel draft-and-verify mechanism, aggressively drafting
-multiple tokens while simultaneously using the model's bidirectional context to
-verify and re-mask suspicious ones for refinement. Verified in open-source
-DLLMs like LLaDA and MMaDA, WINO is shown to decisively improve the
-quality-speed trade-off. For instance, on the GSM8K math benchmark, it
-accelerates inference by 6$\times$ while improving accuracy by 2.58%; on
-Flickr30K captioning, it achieves a 10$\times$ speedup with higher performance.
-More comprehensive experiments are conducted to demonstrate the superiority and
-provide an in-depth understanding of WINO.
-</summary>
-    <author>
-      <name>Feng Hong</name>
-    </author>
-    <author>
-      <name>Geng Yu</name>
-    </author>
-    <author>
-      <name>Yushi Ye</name>
-    </author>
-    <author>
-      <name>Haicheng Huang</name>
-    </author>
-    <author>
-      <name>Huangjie Zheng</name>
-    </author>
-    <author>
-      <name>Ya Zhang</name>
-    </author>
-    <author>
-      <name>Yanfeng Wang</name>
-    </author>
-    <author>
-      <name>Jiangchao Yao</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.18578v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18578v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.18576v1</id>
-    <updated>2025-07-24T16:49:19Z</updated>
-    <published>2025-07-24T16:49:19Z</published>
-    <title>SafeWork-R1: Coevolving Safety and Intelligence under the
-  AI-45$^{\circ}$ Law</title>
-    <summary>  We introduce SafeWork-R1, a cutting-edge multimodal reasoning model that
-demonstrates the coevolution of capabilities and safety. It is developed by our
-proposed SafeLadder framework, which incorporates large-scale, progressive,
-safety-oriented reinforcement learning post-training, supported by a suite of
-multi-principled verifiers. Unlike previous alignment methods such as RLHF that
-simply learn human preferences, SafeLadder enables SafeWork-R1 to develop
-intrinsic safety reasoning and self-reflection abilities, giving rise to safety
-`aha' moments. Notably, SafeWork-R1 achieves an average improvement of
-$46.54\%$ over its base model Qwen2.5-VL-72B on safety-related benchmarks
-without compromising general capabilities, and delivers state-of-the-art safety
-performance compared to leading proprietary models such as GPT-4.1 and Claude
-Opus 4. To further bolster its reliability, we implement two distinct
-inference-time intervention methods and a deliberative search mechanism,
-enforcing step-level verification. Finally, we further develop
-SafeWork-R1-InternVL3-78B, SafeWork-R1-DeepSeek-70B, and
-SafeWork-R1-Qwen2.5VL-7B. All resulting models demonstrate that safety and
-capability can co-evolve synergistically, highlighting the generalizability of
-our framework in building robust, reliable, and trustworthy general-purpose AI.
-</summary>
-    <author>
-      <name>Shanghai AI Lab</name>
+      <name> StepFun</name>
     </author>
     <author>
       <name> :</name>
     </author>
     <author>
-      <name>Yicheng Bao</name>
+      <name>Bin Wang</name>
     </author>
     <author>
-      <name>Guanxu Chen</name>
+      <name>Bojun Wang</name>
     </author>
     <author>
-      <name>Mingkang Chen</name>
+      <name>Changyi Wan</name>
     </author>
     <author>
-      <name>Yunhao Chen</name>
+      <name>Guanzhe Huang</name>
     </author>
     <author>
-      <name>Chiyu Chen</name>
+      <name>Hanpeng Hu</name>
     </author>
     <author>
-      <name>Lingjie Chen</name>
+      <name>Haonan Jia</name>
     </author>
     <author>
-      <name>Sirui Chen</name>
+      <name>Hao Nie</name>
     </author>
     <author>
-      <name>Xinquan Chen</name>
+      <name>Mingliang Li</name>
+    </author>
+    <author>
+      <name>Nuo Chen</name>
+    </author>
+    <author>
+      <name>Siyu Chen</name>
+    </author>
+    <author>
+      <name>Song Yuan</name>
+    </author>
+    <author>
+      <name>Wuxun Xie</name>
+    </author>
+    <author>
+      <name>Xiaoniu Song</name>
+    </author>
+    <author>
+      <name>Xing Chen</name>
+    </author>
+    <author>
+      <name>Xingping Yang</name>
+    </author>
+    <author>
+      <name>Xuelin Zhang</name>
+    </author>
+    <author>
+      <name>Yanbo Yu</name>
+    </author>
+    <author>
+      <name>Yaoyu Wang</name>
+    </author>
+    <author>
+      <name>Yibo Zhu</name>
+    </author>
+    <author>
+      <name>Yimin Jiang</name>
+    </author>
+    <author>
+      <name>Yu Zhou</name>
+    </author>
+    <author>
+      <name>Yuanwei Lu</name>
+    </author>
+    <author>
+      <name>Houyi Li</name>
+    </author>
+    <author>
+      <name>Jingcheng Hu</name>
+    </author>
+    <author>
+      <name>Ka Man Lo</name>
+    </author>
+    <author>
+      <name>Ailin Huang</name>
+    </author>
+    <author>
+      <name>Binxing Jiao</name>
+    </author>
+    <author>
+      <name>Bo Li</name>
+    </author>
+    <author>
+      <name>Boyu Chen</name>
+    </author>
+    <author>
+      <name>Changxin Miao</name>
+    </author>
+    <author>
+      <name>Chang Lou</name>
+    </author>
+    <author>
+      <name>Chen Hu</name>
+    </author>
+    <author>
+      <name>Chen Xu</name>
+    </author>
+    <author>
+      <name>Chenfeng Yu</name>
+    </author>
+    <author>
+      <name>Chengyuan Yao</name>
+    </author>
+    <author>
+      <name>Daokuan Lv</name>
+    </author>
+    <author>
+      <name>Dapeng Shi</name>
+    </author>
+    <author>
+      <name>Deshan Sun</name>
+    </author>
+    <author>
+      <name>Ding Huang</name>
+    </author>
+    <author>
+      <name>Dingyuan Hu</name>
+    </author>
+    <author>
+      <name>Dongqing Pang</name>
+    </author>
+    <author>
+      <name>Enle Liu</name>
+    </author>
+    <author>
+      <name>Fajie Zhang</name>
+    </author>
+    <author>
+      <name>Fanqi Wan</name>
+    </author>
+    <author>
+      <name>Gulin Yan</name>
+    </author>
+    <author>
+      <name>Han Zhang</name>
+    </author>
+    <author>
+      <name>Han Zhou</name>
+    </author>
+    <author>
+      <name>Hanghao Wu</name>
+    </author>
+    <author>
+      <name>Hangyu Guo</name>
+    </author>
+    <author>
+      <name>Hanqi Chen</name>
+    </author>
+    <author>
+      <name>Hanshan Zhang</name>
+    </author>
+    <author>
+      <name>Hao Wu</name>
+    </author>
+    <author>
+      <name>Haocheng Zhang</name>
+    </author>
+    <author>
+      <name>Haolong Yan</name>
+    </author>
+    <author>
+      <name>Haoran Lv</name>
+    </author>
+    <author>
+      <name>Haoran Wei</name>
+    </author>
+    <author>
+      <name>Hebin Zhou</name>
+    </author>
+    <author>
+      <name>Heng Wang</name>
+    </author>
+    <author>
+      <name>Heng Wang</name>
+    </author>
+    <author>
+      <name>Hongxin Li</name>
+    </author>
+    <author>
+      <name>Hongyu Zhou</name>
+    </author>
+    <author>
+      <name>Hongyuan Wang</name>
+    </author>
+    <author>
+      <name>Huiyong Guo</name>
+    </author>
+    <author>
+      <name>Jia Wang</name>
+    </author>
+    <author>
+      <name>Jiahao Gong</name>
+    </author>
+    <author>
+      <name>Jialing Xie</name>
+    </author>
+    <author>
+      <name>Jian Zhou</name>
+    </author>
+    <author>
+      <name>Jianjian Sun</name>
+    </author>
+    <author>
+      <name>Jiaoren Wu</name>
+    </author>
+    <author>
+      <name>Jiaran Zhang</name>
+    </author>
+    <author>
+      <name>Jiayu Liu</name>
     </author>
     <author>
       <name>Jie Cheng</name>
     </author>
     <author>
-      <name>Yu Cheng</name>
+      <name>Jie Luo</name>
     </author>
     <author>
-      <name>Dengke Deng</name>
+      <name>Jie Yan</name>
     </author>
     <author>
-      <name>Yizhuo Ding</name>
+      <name>Jie Yang</name>
     </author>
     <author>
-      <name>Dan Ding</name>
+      <name>Jieyi Hou</name>
     </author>
     <author>
-      <name>Xiaoshan Ding</name>
+      <name>Jinguang Zhang</name>
     </author>
     <author>
-      <name>Yi Ding</name>
+      <name>Jinlan Cao</name>
     </author>
     <author>
-      <name>Zhichen Dong</name>
+      <name>Jisheng Yin</name>
     </author>
     <author>
-      <name>Lingxiao Du</name>
+      <name>Junfeng Liu</name>
     </author>
     <author>
-      <name>Yuyu Fan</name>
+      <name>Junhao Huang</name>
     </author>
     <author>
-      <name>Xinshun Feng</name>
+      <name>Junzhe Lin</name>
     </author>
     <author>
-      <name>Yanwei Fu</name>
+      <name>Kaijun Tan</name>
     </author>
     <author>
-      <name>Yuxuan Gao</name>
+      <name>Kaixiang Li</name>
     </author>
     <author>
-      <name>Ruijun Ge</name>
+      <name>Kang An</name>
     </author>
     <author>
-      <name>Tianle Gu</name>
+      <name>Kangheng Lin</name>
     </author>
     <author>
-      <name>Lujun Gui</name>
+      <name>Kenkun Liu</name>
     </author>
     <author>
-      <name>Jiaxuan Guo</name>
+      <name>Lei Yang</name>
     </author>
     <author>
-      <name>Qianxi He</name>
+      <name>Liang Zhao</name>
     </author>
     <author>
-      <name>Yuenan Hou</name>
+      <name>Liangyu Chen</name>
     </author>
     <author>
-      <name>Xuhao Hu</name>
+      <name>Lieyu Shi</name>
     </author>
     <author>
-      <name>Hong Huang</name>
+      <name>Liguo Tan</name>
     </author>
     <author>
-      <name>Kaichen Huang</name>
+      <name>Lin Lin</name>
     </author>
     <author>
-      <name>Shiyang Huang</name>
+      <name>Lin Zhang</name>
     </author>
     <author>
-      <name>Yuxian Jiang</name>
+      <name>Lina Chen</name>
     </author>
     <author>
-      <name>Shanzhe Lei</name>
+      <name>Liwen Huang</name>
     </author>
     <author>
-      <name>Jie Li</name>
+      <name>Liying Shi</name>
     </author>
     <author>
-      <name>Lijun Li</name>
+      <name>Longlong Gu</name>
     </author>
     <author>
-      <name>Hao Li</name>
+      <name>Mei Chen</name>
     </author>
     <author>
-      <name>Juncheng Li</name>
+      <name>Mengqiang Ren</name>
     </author>
     <author>
-      <name>Xiangtian Li</name>
+      <name>Ming Li</name>
     </author>
     <author>
-      <name>Yafu Li</name>
+      <name>Mingzhe Chen</name>
     </author>
     <author>
-      <name>Lingyu Li</name>
+      <name>Na Wang</name>
     </author>
     <author>
-      <name>Xueyan Li</name>
+      <name>Nan Wu</name>
     </author>
     <author>
-      <name>Haotian Liang</name>
+      <name>Qi Han</name>
     </author>
     <author>
-      <name>Dongrui Liu</name>
+      <name>Qian Zhao</name>
     </author>
     <author>
-      <name>Qihua Liu</name>
+      <name>Qiang Zhang</name>
     </author>
     <author>
-      <name>Zhixuan Liu</name>
+      <name>Qianni Liu</name>
     </author>
     <author>
-      <name>Bangwei Liu</name>
+      <name>Qiaohui Chen</name>
     </author>
     <author>
-      <name>Huacan Liu</name>
+      <name>Qiling Wu</name>
     </author>
     <author>
-      <name>Yuexiao Liu</name>
+      <name>Qinglin He</name>
     </author>
     <author>
-      <name>Zongkai Liu</name>
+      <name>Qinyuan Tan</name>
     </author>
     <author>
-      <name>Chaochao Lu</name>
+      <name>Qiufeng Wang</name>
     </author>
     <author>
-      <name>Yudong Lu</name>
+      <name>Qiuping Wu</name>
     </author>
     <author>
-      <name>Xiaoya Lu</name>
+      <name>Qiuyan Liang</name>
     </author>
     <author>
-      <name>Zhenghao Lu</name>
+      <name>Quan Sun</name>
     </author>
     <author>
-      <name>Qitan Lv</name>
+      <name>Rui Li</name>
     </author>
     <author>
-      <name>Caoyuan Ma</name>
+      <name>Ruihang Miao</name>
     </author>
     <author>
-      <name>Jiachen Ma</name>
+      <name>Ruosi Wan</name>
     </author>
     <author>
-      <name>Xiaoya Ma</name>
+      <name>Ruyan Guo</name>
     </author>
     <author>
-      <name>Zhongtian Ma</name>
+      <name>Shangwu Zhong</name>
     </author>
     <author>
-      <name>Lingyu Meng</name>
+      <name>Shaoliang Pang</name>
     </author>
     <author>
-      <name>Ziqi Miao</name>
+      <name>Shengjie Fan</name>
     </author>
     <author>
-      <name>Yazhe Niu</name>
+      <name>Shijie Shang</name>
     </author>
     <author>
-      <name>Yuezhang Peng</name>
+      <name>Shilei Jiang</name>
     </author>
     <author>
-      <name>Yuan Pu</name>
+      <name>Shiliang Yang</name>
     </author>
     <author>
-      <name>Han Qi</name>
+      <name>Shiming Hao</name>
     </author>
     <author>
-      <name>Chen Qian</name>
+      <name>Shuli Gao</name>
     </author>
     <author>
-      <name>Xingge Qiao</name>
+      <name>Siming Huang</name>
     </author>
     <author>
-      <name>Jingjing Qu</name>
+      <name>Siqi Liu</name>
     </author>
     <author>
-      <name>Jiashu Qu</name>
+      <name>Tiancheng Cao</name>
     </author>
     <author>
-      <name>Wanying Qu</name>
+      <name>Tianhao Cheng</name>
     </author>
     <author>
-      <name>Wenwen Qu</name>
+      <name>Tianhao Peng</name>
     </author>
     <author>
-      <name>Xiaoye Qu</name>
+      <name>Wang You</name>
     </author>
     <author>
-      <name>Qihan Ren</name>
+      <name>Wei Ji</name>
     </author>
     <author>
-      <name>Qingnan Ren</name>
+      <name>Wen Sun</name>
     </author>
     <author>
-      <name>Qingyu Ren</name>
+      <name>Wenjin Deng</name>
     </author>
     <author>
-      <name>Jing Shao</name>
+      <name>Wenqing He</name>
     </author>
     <author>
-      <name>Wenqi Shao</name>
+      <name>Wenzhen Zheng</name>
     </author>
     <author>
-      <name>Shuai Shao</name>
+      <name>Xi Chen</name>
     </author>
     <author>
-      <name>Dongxing Shi</name>
+      <name>Xiangwen Kong</name>
     </author>
     <author>
-      <name>Xin Song</name>
+      <name>Xianzhen Luo</name>
     </author>
     <author>
-      <name>Xinhao Song</name>
+      <name>Xiaobo Yang</name>
     </author>
     <author>
-      <name>Yan Teng</name>
+      <name>Xiaojia Liu</name>
     </author>
     <author>
-      <name>Xuan Tong</name>
+      <name>Xiaoxiao Ren</name>
     </author>
     <author>
-      <name>Yingchun Wang</name>
+      <name>Xin Han</name>
     </author>
     <author>
-      <name>Xuhong Wang</name>
+      <name>Xin Li</name>
     </author>
     <author>
-      <name>Shujie Wang</name>
+      <name>Xin Wu</name>
     </author>
     <author>
-      <name>Xin Wang</name>
+      <name>Xu Zhao</name>
     </author>
     <author>
-      <name>Yige Wang</name>
+      <name>Yanan Wei</name>
     </author>
     <author>
-      <name>Yixu Wang</name>
+      <name>Yang Li</name>
     </author>
     <author>
-      <name>Yuanfu Wang</name>
+      <name>Yangguang Li</name>
     </author>
     <author>
-      <name>Futing Wang</name>
+      <name>Yangshijie Xu</name>
     </author>
     <author>
-      <name>Ruofan Wang</name>
+      <name>Yanming Xu</name>
     </author>
     <author>
-      <name>Wenjie Wang</name>
+      <name>Yaqiang Shi</name>
     </author>
     <author>
-      <name>Yajie Wang</name>
+      <name>Yeqing Shen</name>
     </author>
     <author>
-      <name>Muhao Wei</name>
+      <name>Yi Yang</name>
     </author>
     <author>
-      <name>Xiaoyu Wen</name>
+      <name>Yifei Yang</name>
     </author>
     <author>
-      <name>Fenghua Weng</name>
+      <name>Yifeng Gong</name>
     </author>
     <author>
-      <name>Yuqi Wu</name>
+      <name>Yihan Chen</name>
     </author>
     <author>
-      <name>Yingtong Xiong</name>
+      <name>Yijing Yang</name>
     </author>
     <author>
-      <name>Xingcheng Xu</name>
+      <name>Yinmin Zhang</name>
     </author>
     <author>
-      <name>Chao Yang</name>
+      <name>Yizhuang Zhou</name>
     </author>
     <author>
-      <name>Yue Yang</name>
+      <name>Yuanhao Ding</name>
     </author>
     <author>
-      <name>Yang Yao</name>
+      <name>Yuantao Fan</name>
     </author>
     <author>
-      <name>Yulei Ye</name>
+      <name>Yuanzhen Yang</name>
     </author>
     <author>
-      <name>Zhenyun Yin</name>
+      <name>Yuchu Luo</name>
     </author>
     <author>
-      <name>Yi Yu</name>
+      <name>Yue Peng</name>
     </author>
     <author>
-      <name>Bo Zhang</name>
+      <name>Yufan Lu</name>
     </author>
     <author>
-      <name>Qiaosheng Zhang</name>
+      <name>Yuhang Deng</name>
     </author>
     <author>
-      <name>Jinxuan Zhang</name>
+      <name>Yuhe Yin</name>
     </author>
     <author>
-      <name>Yexin Zhang</name>
+      <name>Yujie Liu</name>
     </author>
     <author>
-      <name>Yinqiang Zheng</name>
+      <name>Yukun Chen</name>
     </author>
     <author>
-      <name>Hefeng Zhou</name>
+      <name>Yuling Zhao</name>
     </author>
     <author>
-      <name>Zhanhui Zhou</name>
+      <name>Yun Mou</name>
     </author>
     <author>
-      <name>Pengyu Zhu</name>
+      <name>Yunlong Li</name>
     </author>
     <author>
-      <name>Qingzi Zhu</name>
+      <name>Yunzhou Ju</name>
     </author>
     <author>
-      <name>Yubo Zhu</name>
+      <name>Yusheng Li</name>
     </author>
     <author>
-      <name>Bowen Zhou</name>
+      <name>Yuxiang Yang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">47 pages, 18 figures, authors are listed in alphabetical order by
-  their last names</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.18576v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18576v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Yuxiang Zhang</name>
+    </author>
+    <author>
+      <name>Yuyang Chen</name>
+    </author>
+    <author>
+      <name>Zejia Weng</name>
+    </author>
+    <author>
+      <name>Zhe Xie</name>
+    </author>
+    <author>
+      <name>Zheng Ge</name>
+    </author>
+    <author>
+      <name>Zheng Gong</name>
+    </author>
+    <author>
+      <name>Zhenyi Lu</name>
+    </author>
+    <author>
+      <name>Zhewei Huang</name>
+    </author>
+    <author>
+      <name>Zhichao Chang</name>
+    </author>
+    <author>
+      <name>Zhiguo Huang</name>
+    </author>
+    <author>
+      <name>Zhirui Wang</name>
+    </author>
+    <author>
+      <name>Zidong Yang</name>
+    </author>
+    <author>
+      <name>Zili Wang</name>
+    </author>
+    <author>
+      <name>Ziqi Wang</name>
+    </author>
+    <author>
+      <name>Zixin Zhang</name>
+    </author>
+    <author>
+      <name>Binxing Jiao</name>
+    </author>
+    <author>
+      <name>Daxin Jiang</name>
+    </author>
+    <author>
+      <name>Heung-Yeung Shum</name>
+    </author>
+    <author>
+      <name>Xiangyu Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.19427v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19427v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.18562v1</id>
-    <updated>2025-07-24T16:36:47Z</updated>
-    <published>2025-07-24T16:36:47Z</published>
-    <title>GIIFT: Graph-guided Inductive Image-free Multimodal Machine Translation</title>
-    <summary>  Multimodal Machine Translation (MMT) has demonstrated the significant help of
-visual information in machine translation. However, existing MMT methods face
-challenges in leveraging the modality gap by enforcing rigid visual-linguistic
-alignment whilst being confined to inference within their trained multimodal
-domains. In this work, we construct novel multimodal scene graphs to preserve
-and integrate modality-specific information and introduce GIIFT, a two-stage
-Graph-guided Inductive Image-Free MMT framework that uses a cross-modal Graph
-Attention Network adapter to learn multimodal knowledge in a unified fused
-space and inductively generalize it to broader image-free translation domains.
-Experimental results on the Multi30K dataset of English-to-French and
-English-to-German tasks demonstrate that our GIIFT surpasses existing
-approaches and achieves the state-of-the-art, even without images during
-inference. Results on the WMT benchmark show significant improvements over the
-image-free translation baselines, demonstrating the strength of GIIFT towards
-inductive image-free inference.
+    <id>http://arxiv.org/abs/2507.19413v1</id>
+    <updated>2025-07-25T16:27:17Z</updated>
+    <published>2025-07-25T16:27:17Z</published>
+    <title>Riesz representers for the rest of us</title>
+    <summary>  The application of semiparametric efficient estimators, particularly those
+that leverage machine learning, is rapidly expanding within epidemiology and
+causal inference. Much of the recent methodological literature on these
+estimators relies heavily on the Riesz representation theorem and Riesz
+regression. This paper aims to introduce the Riesz representation theorem to an
+applied audience, explaining why and how Riesz regression is becoming widely
+used in the semiparametric estimator statistical literature.
 </summary>
     <author>
-      <name>Jiafeng Xiong</name>
+      <name>Nicholas T. Williams</name>
     </author>
     <author>
-      <name>Yuting Zhao</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.18562v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18562v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.18557v1</id>
-    <updated>2025-07-24T16:30:46Z</updated>
-    <published>2025-07-24T16:30:46Z</published>
-    <title>Deep Learning for Blood-Brain Barrier Permeability Prediction</title>
-    <summary>  Predicting whether a molecule can cross the blood-brain barrier (BBB) is a
-key step in early-stage neuropharmaceutical development, directly influencing
-both research efficiency and success rates in drug discovery. Traditional
-empirical methods based on physicochemical properties are prone to systematic
-misjudgements due to their reliance on static rules. Early machine learning
-models, although data-driven, often suffer from limited capacity, poor
-generalization, and insufficient interpretability. In recent years, artificial
-intelligence (AI) methods have become essential tools for predicting BBB
-permeability and guiding related drug design, owing to their ability to model
-molecular structures and capture complex biological mechanisms. This article
-systematically reviews the evolution of this field-from deep neural networks to
-graph-based structural modeling-highlighting the advantages of multi-task and
-multimodal learning strategies in identifying mechanism-relevant variables. We
-further explore the emerging potential of generative models and causal
-inference methods for integrating permeability prediction with mechanism-aware
-drug design. BBB modeling is in the transition from static classification
-toward mechanistic perception and structure-function modeling. This paradigm
-shift provides a methodological foundation and future roadmap for the
-integration of AI into neuropharmacological development.
-</summary>
-    <author>
-      <name>Zihan Yang</name>
+      <name>Oliver J. Hines</name>
     </author>
     <author>
-      <name>Haipeng Gong</name>
+      <name>Kara E. Rudolph</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.18557v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18557v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.18554v1</id>
-    <updated>2025-07-24T16:23:11Z</updated>
-    <published>2025-07-24T16:23:11Z</published>
-    <title>How weak are weak factors? Uniform inference for signal strength in
-  signal plus noise models</title>
-    <summary>  The paper analyzes four classical signal-plus-noise models: the factor model,
-spiked sample covariance matrices, the sum of a Wigner matrix and a low-rank
-perturbation, and canonical correlation analysis with low-rank dependencies.
-The objective is to construct confidence intervals for the signal strength that
-are uniformly valid across all regimes - strong, weak, and critical signals. We
-demonstrate that traditional Gaussian approximations fail in the critical
-regime. Instead, we introduce a universal transitional distribution that
-enables valid inference across the entire spectrum of signal strengths. The
-approach is illustrated through applications in macroeconomics and finance.
-</summary>
-    <author>
-      <name>Anna Bykhovskaya</name>
-    </author>
-    <author>
-      <name>Vadim Gorin</name>
-    </author>
-    <author>
-      <name>Sasha Sodin</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">75 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.18554v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18554v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.19413v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19413v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
     <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.18551v1</id>
-    <updated>2025-07-24T16:19:08Z</updated>
-    <published>2025-07-24T16:19:08Z</published>
-    <title>A 3D Cross-modal Keypoint Descriptor for MR-US Matching and Registration</title>
-    <summary>  Intraoperative registration of real-time ultrasound (iUS) to preoperative
-Magnetic Resonance Imaging (MRI) remains an unsolved problem due to severe
-modality-specific differences in appearance, resolution, and field-of-view. To
-address this, we propose a novel 3D cross-modal keypoint descriptor for MRI-iUS
-matching and registration. Our approach employs a patient-specific
-matching-by-synthesis approach, generating synthetic iUS volumes from
-preoperative MRI. This enables supervised contrastive training to learn a
-shared descriptor space.
-  A probabilistic keypoint detection strategy is then employed to identify
-anatomically salient and modality-consistent locations. During training, a
-curriculum-based triplet loss with dynamic hard negative mining is used to
-learn descriptors that are i) robust to iUS artifacts such as speckle noise and
-limited coverage, and ii) rotation-invariant . At inference, the method detects
-keypoints in MR and real iUS images and identifies sparse matches, which are
-then used to perform rigid registration. Our approach is evaluated using 3D
-MRI-iUS pairs from the ReMIND dataset. Experiments show that our approach
-outperforms state-of-the-art keypoint matching methods across 11 patients, with
-an average precision of $69.8\%$. For image registration, our method achieves a
-competitive mean Target Registration Error of 2.39 mm on the ReMIND2Reg
-benchmark.
-  Compared to existing iUS-MR registration approach, our framework is
-interpretable, requires no manual initialization, and shows robustness to iUS
-field-of-view variation. Code is available at
-https://github.com/morozovdd/CrossKEY.
+    <id>http://arxiv.org/abs/2507.19409v1</id>
+    <updated>2025-07-25T16:19:47Z</updated>
+    <published>2025-07-25T16:19:47Z</published>
+    <title>Modality Agnostic Efficient Long Range Encoder</title>
+    <summary>  The long-context capability of recent large transformer models can be
+surmised to rely on techniques such as attention/model parallelism, as well as
+hardware-level optimizations. While these strategies allow input lengths to
+scale to millions of tokens, they do not fundamentally mitigate the quadratic
+computational and memory complexity of the core attention mechanism. In this
+paper, we address the challenge of long-context processing on a single device
+using generic implementations by reducing the quadratic memory footprint and
+inference cost. Existing approaches to extend the context length for generic
+single device implementations -- such as token merging and modified attentions
+-- are often modality specific and attain a suboptimal tradeoff between
+accuracy and efficiency. To overcome these limitations, we propose MAELRE
+(Modality Agnostic Efficient Long Range Encoder), a unified and efficient
+transformer architecture designed for long-range encoding across diverse
+modalities. MAELRE integrates token merging with attention approximation,
+progressively merging tokens at different stages of internal computational
+blocks. It employs a lightweight attention approximation when the number of
+tokens is large, and switches to standard dot-product attention as the sequence
+becomes shorter through successive aggregation. We demonstrate that MAELRE
+achieves superior accuracy while reducing computational cost compared to
+existing long-context models on classification tasks spanning multiple
+modalities, including text, time series, audio, and vision.
 </summary>
     <author>
-      <name>Daniil Morozov</name>
+      <name>Toufiq Parag</name>
     </author>
     <author>
-      <name>Reuben Dorent</name>
+      <name>Ahmed Elgammal</name>
     </author>
-    <author>
-      <name>Nazim Haouchine</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Under review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.18551v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18551v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2507.19409v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19409v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.18544v1</id>
-    <updated>2025-07-24T16:10:20Z</updated>
-    <published>2025-07-24T16:10:20Z</published>
-    <title>EP250108a/SN2025kg: A Magnetar-powered Gamma-Ray Burst Supernova
-  Originating from a Close Helium-star Binary via Isolated Binary Evolution</title>
-    <summary>  SN\,2025kg, linked to EP250108a, is among the brightest broad-lined Type Ic
-supernova (SN Ic-BL) known, showing unique helium absorptions, a late-time
-broad H$\alpha$, and an early bump. In this {\em{Letter}}, we propose a
-jet-cocoon origin to explain EP250108a as off-axis cooling emission from a
-mildly relativistic inner cocoon viewed at $\sim45^\circ$ and the early bump of
-SN\,2025kg as the outer cocoon cooling emission, both constraining an energy of
-$\sim(1-2)\times10^{52}{\rm{erg}}$ and a progenitor radius of $\sim5\,R_\odot$.
-To explain SN\,2025kg's exceptionally luminous peak, potential energy injection
-into the $\sim2.5\,M_\odot$ ejecta from a magnetar with initial period
-$\sim1.7\,{\rm{ms}}$ and magnetic field $\sim2\times10^{15}{\rm{G}}$ may be
-required, implying a rapidly rotating $\sim4\,M_\odot$ progenitor. Thus, the
-progenitor may be a low-mass helium star with an extended helium envelope,
-supported by helium absorption lines and an inferred weak pre-SN wind.
-Hydrogen-rich material may reside in the inner ejecta layers, as suggested by
-the late-time broad H$\alpha$, possibly originating from main-sequence
-companion material evaporated by the magnetar wind. Since the observed
-near-solar metallicity challenges the popular quasi-chemically homogeneous
-evolution channel, the rapidly rotating helium-star progenitor of
-EP250108a/SN\,2025kg might attain angular momentum by being tidally spun up by
-a main-sequence companion in a close binary formed through isolated binary
-evolution.
+    <id>http://arxiv.org/abs/2507.19401v2</id>
+    <updated>2025-07-28T04:04:38Z</updated>
+    <published>2025-07-25T16:08:22Z</published>
+    <title>The gauge theory dual of the bilayer XY model with second order
+  Josephson coupling</title>
+    <summary>  We formulate a duality transformation for a bilayer XY model where the layers
+are coupled by second order Josephson effect, which favors inter-layer phase
+difference of either $0$ or $\pi$. The model may represent a bilayer
+superconductor or a spin-1 ferromagnetic Bose gas in the easy-plane limit. The
+second order Josephson term is mapped to a U(1) gauge field, known to be
+trivially confining in two dimensions, and we argue that a Coulomb-gas analysis
+is not applicable to the dual theory. Instead, we appeal to the vast knowledge
+of gauge theory and infer that the only phase transition out of low-temperature
+ordered phase is an Ising transition driven by condensation of $\mathbb{Z}_2$
+domain wall loops. The domain wall loops can be seen as a surviving vestige of
+single-layer vortex-anti-vortex pair, heavily deformed by the second order
+Josephson coupling. A theoretical or computational method that concentrates on
+point defects would most likely miss out on these excitations and reach
+erroneous results. Our dual theory offers a clear, intuitive picture of how the
+second order Josephson coupling induces confinement of vortices and drastically
+changes the physics.
 </summary>
     <author>
-      <name>Jin-Ping Zhu</name>
+      <name>Pye Ton How</name>
     </author>
     <author>
-      <name>Jian-He Zheng</name>
+      <name>Sungkit Yip</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">V2: fix the missing arXiv identifier of ref [19]</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.19401v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19401v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.19391v1</id>
+    <updated>2025-07-25T15:50:42Z</updated>
+    <published>2025-07-25T15:50:42Z</published>
+    <title>Transcript Franking for Encrypted Messaging</title>
+    <summary>  Message franking is an indispensable abuse mitigation tool for end-to-end
+encrypted (E2EE) messaging platforms. With it, users who receive harmful
+content can securely report that content to platform moderators. However, while
+real-world deployments of reporting require the disclosure of multiple
+messages, existing treatments of message franking only consider the report of a
+single message. As a result, there is a gap between the security goals achieved
+by constructions and those needed in practice. Our work introduces transcript
+franking, a new type of protocol that allows reporting subsets of conversations
+such that moderators can cryptographically verify message causality and
+contents. We define syntax, semantics, and security for transcript franking in
+two-party and group messaging. We then present efficient constructions for
+transcript franking and prove their security. Looking toward deployment
+considerations, we provide detailed discussion of how real-world messaging
+systems can incorporate our protocols.
+</summary>
+    <author>
+      <name>Armin Namavari</name>
     </author>
     <author>
-      <name>Bing Zhang</name>
+      <name>Thomas Ristenpart</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, 2 figures, comments are welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.18544v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.18544v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.19391v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19391v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.19372v1</id>
+    <updated>2025-07-25T15:24:56Z</updated>
+    <published>2025-07-25T15:24:56Z</published>
+    <title>Learning neuro-symbolic convergent term rewriting systems</title>
+    <summary>  Building neural systems that can learn to execute symbolic algorithms is a
+challenging open problem in artificial intelligence, especially when aiming for
+strong generalization and out-of-distribution performance. In this work, we
+introduce a general framework for learning convergent term rewriting systems
+using a neuro-symbolic architecture inspired by the rewriting algorithm itself.
+We present two modular implementations of such architecture: the Neural
+Rewriting System (NRS) and the Fast Neural Rewriting System (FastNRS). As a
+result of algorithmic-inspired design and key architectural elements, both
+models can generalize to out-of-distribution instances, with FastNRS offering
+significant improvements in terms of memory efficiency, training speed, and
+inference time. We evaluate both architectures on four tasks involving the
+simplification of mathematical formulas and further demonstrate their
+versatility in a multi-domain learning scenario, where a single model is
+trained to solve multiple types of problems simultaneously. The proposed system
+significantly outperforms two strong neural baselines: the Neural Data Router,
+a recent transformer variant specifically designed to solve algorithmic
+problems, and GPT-4o, one of the most powerful general-purpose large-language
+models. Moreover, our system matches or outperforms the latest o1-preview model
+from OpenAI that excels in reasoning benchmarks.
+</summary>
+    <author>
+      <name>Flavio Petruzzellis</name>
+    </author>
+    <author>
+      <name>Alberto Testolin</name>
+    </author>
+    <author>
+      <name>Alessandro Sperduti</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">48 pages, 31 figures. Submitted for review by Artificial Intelligence
+  Journal</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.19372v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.19372v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
