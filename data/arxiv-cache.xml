@@ -1,1028 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-07-29T01:08:31Z -->
+<!-- Last updated: 2025-07-30T01:02:44Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-28T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117632</opensearch:totalResults>
+  <updated>2025-07-29T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117753</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.19459v1</id>
-    <updated>2025-07-25T17:43:29Z</updated>
-    <published>2025-07-25T17:43:29Z</published>
-    <title>Fast Learning of Non-Cooperative Spacecraft 3D Models through Primitive
-  Initialization</title>
-    <summary>  The advent of novel view synthesis techniques such as NeRF and 3D Gaussian
-Splatting (3DGS) has enabled learning precise 3D models only from posed
-monocular images. Although these methods are attractive, they hold two major
-limitations that prevent their use in space applications: they require poses
-during training, and have high computational cost at training and inference. To
-address these limitations, this work contributes: (1) a Convolutional Neural
-Network (CNN) based primitive initializer for 3DGS using monocular images; (2)
-a pipeline capable of training with noisy or implicit pose estimates; and (3)
-and analysis of initialization variants that reduce the training cost of
-precise 3D models. A CNN takes a single image as input and outputs a coarse 3D
-model represented as an assembly of primitives, along with the target's pose
-relative to the camera. This assembly of primitives is then used to initialize
-3DGS, significantly reducing the number of training iterations and input images
-needed -- by at least an order of magnitude. For additional flexibility, the
-CNN component has multiple variants with different pose estimation techniques.
-This work performs a comparison between these variants, evaluating their
-effectiveness for downstream 3DGS training under noisy or implicit pose
-estimates. The results demonstrate that even with imperfect pose supervision,
-the pipeline is able to learn high-fidelity 3D representations, opening the
-door for the use of novel view synthesis in space applications.
+    <id>http://arxiv.org/abs/2507.21053v1</id>
+    <updated>2025-07-28T17:59:57Z</updated>
+    <published>2025-07-28T17:59:57Z</published>
+    <title>Flow Matching Policy Gradients</title>
+    <summary>  Flow-based generative models, including diffusion models, excel at modeling
+continuous distributions in high-dimensional spaces. In this work, we introduce
+Flow Policy Optimization (FPO), a simple on-policy reinforcement learning
+algorithm that brings flow matching into the policy gradient framework. FPO
+casts policy optimization as maximizing an advantage-weighted ratio computed
+from the conditional flow matching loss, in a manner compatible with the
+popular PPO-clip framework. It sidesteps the need for exact likelihood
+computation while preserving the generative capabilities of flow-based models.
+Unlike prior approaches for diffusion-based reinforcement learning that bind
+training to a specific sampling method, FPO is agnostic to the choice of
+diffusion or flow integration at both training and inference time. We show that
+FPO can train diffusion-style policies from scratch in a variety of continuous
+control tasks. We find that flow-based models can capture multimodal action
+distributions and achieve higher performance than Gaussian policies,
+particularly in under-conditioned settings.
 </summary>
     <author>
-      <name>Pol Francesch Huc</name>
+      <name>David McAllister</name>
     </author>
     <author>
-      <name>Emily Bates</name>
+      <name>Songwei Ge</name>
     </author>
     <author>
-      <name>Simone D'Amico</name>
+      <name>Brent Yi</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.19459v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19459v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Chung Min Kim</name>
+    </author>
+    <author>
+      <name>Ethan Weber</name>
+    </author>
+    <author>
+      <name>Hongsuk Choi</name>
+    </author>
+    <author>
+      <name>Haiwen Feng</name>
+    </author>
+    <author>
+      <name>Angjoo Kanazawa</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">See our blog post: https://flowreinforce.github.io</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.21053v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.21053v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.19457v1</id>
-    <updated>2025-07-25T17:42:32Z</updated>
-    <published>2025-07-25T17:42:32Z</published>
-    <title>GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</title>
-    <summary>  Large language models (LLMs) are increasingly adapted to downstream tasks via
-reinforcement learning (RL) methods like Group Relative Policy Optimization
-(GRPO), which often require thousands of rollouts to learn new tasks. We argue
-that the interpretable nature of language can often provide a much richer
-learning medium for LLMs, compared with policy gradients derived from sparse,
-scalar rewards. To test this, we introduce GEPA (Genetic-Pareto), a prompt
-optimizer that thoroughly incorporates natural language reflection to learn
-high-level rules from trial and error. Given any AI system containing one or
-more LLM prompts, GEPA samples system-level trajectories (e.g., reasoning, tool
-calls, and tool outputs) and reflects on them in natural language to diagnose
-problems, propose and test prompt updates, and combine complementary lessons
-from the Pareto frontier of its own attempts. As a result of GEPA's design, it
-can often turn even just a few rollouts into a large quality gain. Across four
-tasks, GEPA outperforms GRPO by 10% on average and by up to 20%, while using up
-to 35x fewer rollouts. GEPA also outperforms the leading prompt optimizer,
-MIPROv2, by over 10% across two LLMs, and demonstrates promising results as an
-inference-time search strategy for code optimization.
+    <id>http://arxiv.org/abs/2507.21051v1</id>
+    <updated>2025-07-28T17:59:55Z</updated>
+    <published>2025-07-28T17:59:55Z</published>
+    <title>Certification of nonobjective information by Popescu-Rohrlich box
+  fraction and distinguishing quantum theory</title>
+    <summary>  It is demonstrated that identifying information-theoretic limitations of
+quantum Bell nonlocality alone cannot completely distinguish quantum theory
+from generalized nonsignaling theories. To this end, an information-theoretic
+concept of certifying nonobjective information by the Popescu-Rohrlich box
+fraction is employed. Furthermore, in the aforementioned demonstration, a
+partial answer to the question of what distinguishes quantum theory from
+generalized nonsignaling theories emerges beyond the one provided by the
+principle of information causality alone. This is accomplished by demonstrating
+that postquantum models identified by the information causality are isolated by
+the emergence of the Popescu-Rohrlich box fraction of nonobjective information
+in Bell-local boxes of a generalized nonsignaling theory, over the two other
+generalized nonsignaling theories that have simplicial local state spaces.
 </summary>
     <author>
-      <name>Lakshya A Agrawal</name>
+      <name>Chellasamy Jebarathinam</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.21051v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.21051v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.21040v1</id>
+    <updated>2025-07-28T17:56:34Z</updated>
+    <published>2025-07-28T17:56:34Z</published>
+    <title>Transformers as Unrolled Inference in Probabilistic Laplacian Eigenmaps:
+  An Interpretation and Potential Improvements</title>
+    <summary>  We propose a probabilistic interpretation of transformers as unrolled
+inference steps assuming a probabilistic Laplacian Eigenmaps model from the
+ProbDR framework. Our derivation shows that at initialisation, transformers
+perform "linear" dimensionality reduction. We also show that within the
+transformer block, a graph Laplacian term arises from our arguments, rather
+than an attention matrix (which we interpret as an adjacency matrix). We
+demonstrate that simply subtracting the identity from the attention matrix (and
+thereby taking a graph diffusion step) improves validation performance on a
+language model and a simple vision transformer.
+</summary>
+    <author>
+      <name>Aditya Ravuri</name>
     </author>
     <author>
-      <name>Shangyin Tan</name>
+      <name>Neil D. Lawrence</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Initial version</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.21040v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.21040v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.21009v1</id>
+    <updated>2025-07-28T17:22:10Z</updated>
+    <published>2025-07-28T17:22:10Z</published>
+    <title>Memorization in Fine-Tuned Large Language Models</title>
+    <summary>  This study investigates the mechanisms and factors influencing memorization
+in fine-tuned large language models (LLMs), with a focus on the medical domain
+due to its privacy-sensitive nature. We examine how different aspects of the
+fine-tuning process affect a model's propensity to memorize training data,
+using the PHEE dataset of pharmacovigilance events.
+  Our research employs two main approaches: a membership inference attack to
+detect memorized data, and a generation task with prompted prefixes to assess
+verbatim reproduction. We analyze the impact of adapting different weight
+matrices in the transformer architecture, the relationship between perplexity
+and memorization, and the effect of increasing the rank in low-rank adaptation
+(LoRA) fine-tuning.
+  Key findings include: (1) Value and Output matrices contribute more
+significantly to memorization compared to Query and Key matrices; (2) Lower
+perplexity in the fine-tuned model correlates with increased memorization; (3)
+Higher LoRA ranks lead to increased memorization, but with diminishing returns
+at higher ranks.
+  These results provide insights into the trade-offs between model performance
+and privacy risks in fine-tuned LLMs. Our findings have implications for
+developing more effective and responsible strategies for adapting large
+language models while managing data privacy concerns.
+</summary>
+    <author>
+      <name>Danil Savine</name>
     </author>
     <author>
-      <name>Dilara Soylu</name>
+      <name>Muni Sreenivas Pydi</name>
     </author>
     <author>
-      <name>Noah Ziems</name>
+      <name>Jamal Atif</name>
     </author>
     <author>
-      <name>Rishi Khare</name>
+      <name>Olivier Cappé</name>
     </author>
-    <author>
-      <name>Krista Opsahl-Ong</name>
-    </author>
-    <author>
-      <name>Arnav Singhvi</name>
-    </author>
-    <author>
-      <name>Herumb Shandilya</name>
-    </author>
-    <author>
-      <name>Michael J Ryan</name>
-    </author>
-    <author>
-      <name>Meng Jiang</name>
-    </author>
-    <author>
-      <name>Christopher Potts</name>
-    </author>
-    <author>
-      <name>Koushik Sen</name>
-    </author>
-    <author>
-      <name>Alexandros G. Dimakis</name>
-    </author>
-    <author>
-      <name>Ion Stoica</name>
-    </author>
-    <author>
-      <name>Dan Klein</name>
-    </author>
-    <author>
-      <name>Matei Zaharia</name>
-    </author>
-    <author>
-      <name>Omar Khattab</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.19457v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19457v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2507.21009v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.21009v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.7; I.2.6; I.2.4; I.2.8" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.19437v1</id>
-    <updated>2025-07-25T17:08:16Z</updated>
-    <published>2025-07-25T17:08:16Z</published>
-    <title>Observations Meet Actions: Learning Control-Sufficient Representations
-  for Robust Policy Generalization</title>
-    <summary>  Capturing latent variations ("contexts") is key to deploying
-reinforcement-learning (RL) agents beyond their training regime. We recast
-context-based RL as a dual inference-control problem and formally characterize
-two properties and their hierarchy: observation sufficiency (preserving all
-predictive information) and control sufficiency (retaining decision-making
-relevant information). Exploiting this dichotomy, we derive a contextual
-evidence lower bound(ELBO)-style objective that cleanly separates
-representation learning from policy learning and optimizes it with Bottlenecked
-Contextual Policy Optimization (BCPO), an algorithm that places a variational
-information-bottleneck encoder in front of any off-policy policy learner. On
-standard continuous-control benchmarks with shifting physical parameters, BCPO
-matches or surpasses other baselines while using fewer samples and retaining
-performance far outside the training regime. The framework unifies theory,
-diagnostics, and practice for context-based RL.
+    <id>http://arxiv.org/abs/2507.20994v1</id>
+    <updated>2025-07-28T16:59:53Z</updated>
+    <published>2025-07-28T16:59:53Z</published>
+    <title>Security Tensors as a Cross-Modal Bridge: Extending Text-Aligned Safety
+  to Vision in LVLM</title>
+    <summary>  Large visual-language models (LVLMs) integrate aligned large language models
+(LLMs) with visual modules to process multimodal inputs. However, the safety
+mechanisms developed for text-based LLMs do not naturally extend to visual
+modalities, leaving LVLMs vulnerable to harmful image inputs. To address this
+cross-modal safety gap, we introduce security tensors - trainable input vectors
+applied during inference through either the textual or visual modality. These
+tensors transfer textual safety alignment to visual processing without
+modifying the model's parameters. They are optimized using a curated dataset
+containing (i) malicious image-text pairs requiring rejection, (ii) contrastive
+benign pairs with text structurally similar to malicious queries, with the
+purpose of being contrastive examples to guide visual reliance, and (iii)
+general benign samples preserving model functionality. Experimental results
+demonstrate that both textual and visual security tensors significantly enhance
+LVLMs' ability to reject diverse harmful visual inputs while maintaining
+near-identical performance on benign tasks. Further internal analysis towards
+hidden-layer representations reveals that security tensors successfully
+activate the language module's textual "safety layers" in visual inputs,
+thereby effectively extending text-based safety to the visual modality.
 </summary>
     <author>
-      <name>Yuliang Gu</name>
+      <name>Shen Li</name>
     </author>
     <author>
-      <name>Hongpeng Cao</name>
+      <name>Liuyi Yao</name>
     </author>
     <author>
-      <name>Marco Caccamo</name>
+      <name>Wujia Niu</name>
     </author>
     <author>
-      <name>Naira Hovakimyan</name>
+      <name>Lan Zhang</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.19437v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19437v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19432v1</id>
-    <updated>2025-07-25T17:02:18Z</updated>
-    <published>2025-07-25T17:02:18Z</published>
-    <title>Resolving Build Conflicts via Example-Based and Rule-Based Program
-  Transformations</title>
-    <summary>  Merge conflicts often arise when developers integrate changes from different
-software branches. The conflicts can result from overlapping edits in programs
-(i.e., textual conflicts) or cause build and test errors (i.e., build and test
-conflicts). They degrade software quality and hinder programmer productivity.
-While several tools detect build conflicts, few offer meaningful support for
-resolving cases like those caused by method removal. To overcome limitations of
-existing tools, we introduce BUCOR (Build Conflict Resolver), a new conflict
-resolver. BUCOR first detects conflicts by comparing three versions related to
-a merging scenario: base b, left l, and right r. To resolve conflicts, it
-employs two complementary strategies: example-based transformation (BUCOR-E)
-and rule-based transformation (BUCOR-R). BUCOR-R applies predefined rules to
-handle common, well-understood conflicts. BUCOR-E mines branch versions (l and
-r) for exemplar edits applied to fix related build errors. From these examples,
-it infers and generalizes program transformation patterns to resolve more
-complex conflicts.
-  We evaluated BUCOR on 88 real-world build conflicts spanning 21 distinct
-conflict types. BUCOR generated at least one solution for 65 cases and
-correctly resolved 43 conflicts. We observed that this hybrid
-approach--combining context-aware, example-based learning with structured,
-rule-based resolution--can effectively help resolve conflicts. Our research
-sheds light on future directions for more intelligent and automated merge
-tools.
-</summary>
     <author>
-      <name>Sheikh Shadab Towqir</name>
+      <name>Yaliang Li</name>
     </author>
-    <author>
-      <name>Fei He</name>
-    </author>
-    <author>
-      <name>Todd Mytkowicz</name>
-    </author>
-    <author>
-      <name>Na Meng</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.19432v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19432v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19427v1</id>
-    <updated>2025-07-25T16:53:13Z</updated>
-    <published>2025-07-25T16:53:13Z</published>
-    <title>Step-3 is Large yet Affordable: Model-system Co-design for
-  Cost-effective Decoding</title>
-    <summary>  Large language models (LLMs) face low hardware efficiency during decoding,
-especially for long-context reasoning tasks. This paper introduces Step-3, a
-321B-parameter VLM with hardware-aware model-system co-design optimized for
-minimizing decoding costs. Step-3 innovates in two key dimensions: (1) A novel
-Multi-Matrix Factorization Attention (MFA) mechanism that significantly reduces
-both KV cache size and computation while maintaining high attention
-expressiveness, and (2) Attention-FFN Disaggregation (AFD), a distributed
-inference system that decouples attention and Feed-Forward Network (FFN) layers
-into specialized subsystems. This co-design achieves unprecedented cost
-efficiency: Step-3 significantly reduces theoretical decoding costs compared
-with models like DeepSeek-V3 and Qwen3 MoE 235B, with the gains widening at
-longer context. Step-3 achieves low cost while activating 38B parameters per
-token (more than DeepSeek-V3 and Qwen3 MoE 235B), demonstrating that
-hardware-aligned attention arithmetic intensity, MoE sparsity, and AFD are
-critical to cost-effectiveness. We perform a head-to-head comparison with
-DeepSeek-V3 in its favorable scenarios. Our implementation on Hopper GPUs
-achieves a decoding throughput of up to 4,039 tokens per second per GPU under
-50ms TPOT SLA (4K context, FP8, no MTP). It is higher than DeepSeek-V3's 2,324
-in the same setup and sets a new Pareto frontier for LLM decoding.
-</summary>
-    <author>
-      <name> StepFun</name>
-    </author>
-    <author>
-      <name> :</name>
-    </author>
-    <author>
-      <name>Bin Wang</name>
-    </author>
-    <author>
-      <name>Bojun Wang</name>
-    </author>
-    <author>
-      <name>Changyi Wan</name>
-    </author>
-    <author>
-      <name>Guanzhe Huang</name>
-    </author>
-    <author>
-      <name>Hanpeng Hu</name>
-    </author>
-    <author>
-      <name>Haonan Jia</name>
-    </author>
-    <author>
-      <name>Hao Nie</name>
-    </author>
-    <author>
-      <name>Mingliang Li</name>
-    </author>
-    <author>
-      <name>Nuo Chen</name>
-    </author>
-    <author>
-      <name>Siyu Chen</name>
-    </author>
-    <author>
-      <name>Song Yuan</name>
-    </author>
-    <author>
-      <name>Wuxun Xie</name>
-    </author>
-    <author>
-      <name>Xiaoniu Song</name>
-    </author>
-    <author>
-      <name>Xing Chen</name>
-    </author>
-    <author>
-      <name>Xingping Yang</name>
-    </author>
-    <author>
-      <name>Xuelin Zhang</name>
-    </author>
-    <author>
-      <name>Yanbo Yu</name>
-    </author>
-    <author>
-      <name>Yaoyu Wang</name>
-    </author>
-    <author>
-      <name>Yibo Zhu</name>
-    </author>
-    <author>
-      <name>Yimin Jiang</name>
-    </author>
-    <author>
-      <name>Yu Zhou</name>
-    </author>
-    <author>
-      <name>Yuanwei Lu</name>
-    </author>
-    <author>
-      <name>Houyi Li</name>
-    </author>
-    <author>
-      <name>Jingcheng Hu</name>
-    </author>
-    <author>
-      <name>Ka Man Lo</name>
-    </author>
-    <author>
-      <name>Ailin Huang</name>
-    </author>
-    <author>
-      <name>Binxing Jiao</name>
-    </author>
-    <author>
-      <name>Bo Li</name>
-    </author>
-    <author>
-      <name>Boyu Chen</name>
-    </author>
-    <author>
-      <name>Changxin Miao</name>
-    </author>
-    <author>
-      <name>Chang Lou</name>
-    </author>
-    <author>
-      <name>Chen Hu</name>
-    </author>
-    <author>
-      <name>Chen Xu</name>
-    </author>
-    <author>
-      <name>Chenfeng Yu</name>
-    </author>
-    <author>
-      <name>Chengyuan Yao</name>
-    </author>
-    <author>
-      <name>Daokuan Lv</name>
-    </author>
-    <author>
-      <name>Dapeng Shi</name>
-    </author>
-    <author>
-      <name>Deshan Sun</name>
-    </author>
-    <author>
-      <name>Ding Huang</name>
-    </author>
-    <author>
-      <name>Dingyuan Hu</name>
-    </author>
-    <author>
-      <name>Dongqing Pang</name>
-    </author>
-    <author>
-      <name>Enle Liu</name>
-    </author>
-    <author>
-      <name>Fajie Zhang</name>
-    </author>
-    <author>
-      <name>Fanqi Wan</name>
-    </author>
-    <author>
-      <name>Gulin Yan</name>
-    </author>
-    <author>
-      <name>Han Zhang</name>
-    </author>
-    <author>
-      <name>Han Zhou</name>
-    </author>
-    <author>
-      <name>Hanghao Wu</name>
-    </author>
-    <author>
-      <name>Hangyu Guo</name>
-    </author>
-    <author>
-      <name>Hanqi Chen</name>
-    </author>
-    <author>
-      <name>Hanshan Zhang</name>
-    </author>
-    <author>
-      <name>Hao Wu</name>
-    </author>
-    <author>
-      <name>Haocheng Zhang</name>
-    </author>
-    <author>
-      <name>Haolong Yan</name>
-    </author>
-    <author>
-      <name>Haoran Lv</name>
-    </author>
-    <author>
-      <name>Haoran Wei</name>
-    </author>
-    <author>
-      <name>Hebin Zhou</name>
-    </author>
-    <author>
-      <name>Heng Wang</name>
-    </author>
-    <author>
-      <name>Heng Wang</name>
-    </author>
-    <author>
-      <name>Hongxin Li</name>
-    </author>
-    <author>
-      <name>Hongyu Zhou</name>
-    </author>
-    <author>
-      <name>Hongyuan Wang</name>
-    </author>
-    <author>
-      <name>Huiyong Guo</name>
-    </author>
-    <author>
-      <name>Jia Wang</name>
-    </author>
-    <author>
-      <name>Jiahao Gong</name>
-    </author>
-    <author>
-      <name>Jialing Xie</name>
-    </author>
-    <author>
-      <name>Jian Zhou</name>
-    </author>
-    <author>
-      <name>Jianjian Sun</name>
-    </author>
-    <author>
-      <name>Jiaoren Wu</name>
-    </author>
-    <author>
-      <name>Jiaran Zhang</name>
-    </author>
-    <author>
-      <name>Jiayu Liu</name>
-    </author>
-    <author>
-      <name>Jie Cheng</name>
-    </author>
-    <author>
-      <name>Jie Luo</name>
-    </author>
-    <author>
-      <name>Jie Yan</name>
-    </author>
-    <author>
-      <name>Jie Yang</name>
-    </author>
-    <author>
-      <name>Jieyi Hou</name>
-    </author>
-    <author>
-      <name>Jinguang Zhang</name>
-    </author>
-    <author>
-      <name>Jinlan Cao</name>
-    </author>
-    <author>
-      <name>Jisheng Yin</name>
-    </author>
-    <author>
-      <name>Junfeng Liu</name>
-    </author>
-    <author>
-      <name>Junhao Huang</name>
-    </author>
-    <author>
-      <name>Junzhe Lin</name>
-    </author>
-    <author>
-      <name>Kaijun Tan</name>
-    </author>
-    <author>
-      <name>Kaixiang Li</name>
-    </author>
-    <author>
-      <name>Kang An</name>
-    </author>
-    <author>
-      <name>Kangheng Lin</name>
-    </author>
-    <author>
-      <name>Kenkun Liu</name>
-    </author>
-    <author>
-      <name>Lei Yang</name>
-    </author>
-    <author>
-      <name>Liang Zhao</name>
-    </author>
-    <author>
-      <name>Liangyu Chen</name>
-    </author>
-    <author>
-      <name>Lieyu Shi</name>
-    </author>
-    <author>
-      <name>Liguo Tan</name>
-    </author>
-    <author>
-      <name>Lin Lin</name>
-    </author>
-    <author>
-      <name>Lin Zhang</name>
-    </author>
-    <author>
-      <name>Lina Chen</name>
-    </author>
-    <author>
-      <name>Liwen Huang</name>
-    </author>
-    <author>
-      <name>Liying Shi</name>
-    </author>
-    <author>
-      <name>Longlong Gu</name>
-    </author>
-    <author>
-      <name>Mei Chen</name>
-    </author>
-    <author>
-      <name>Mengqiang Ren</name>
-    </author>
-    <author>
-      <name>Ming Li</name>
-    </author>
-    <author>
-      <name>Mingzhe Chen</name>
-    </author>
-    <author>
-      <name>Na Wang</name>
-    </author>
-    <author>
-      <name>Nan Wu</name>
-    </author>
-    <author>
-      <name>Qi Han</name>
-    </author>
-    <author>
-      <name>Qian Zhao</name>
-    </author>
-    <author>
-      <name>Qiang Zhang</name>
-    </author>
-    <author>
-      <name>Qianni Liu</name>
-    </author>
-    <author>
-      <name>Qiaohui Chen</name>
-    </author>
-    <author>
-      <name>Qiling Wu</name>
-    </author>
-    <author>
-      <name>Qinglin He</name>
-    </author>
-    <author>
-      <name>Qinyuan Tan</name>
-    </author>
-    <author>
-      <name>Qiufeng Wang</name>
-    </author>
-    <author>
-      <name>Qiuping Wu</name>
-    </author>
-    <author>
-      <name>Qiuyan Liang</name>
-    </author>
-    <author>
-      <name>Quan Sun</name>
-    </author>
-    <author>
-      <name>Rui Li</name>
-    </author>
-    <author>
-      <name>Ruihang Miao</name>
-    </author>
-    <author>
-      <name>Ruosi Wan</name>
-    </author>
-    <author>
-      <name>Ruyan Guo</name>
-    </author>
-    <author>
-      <name>Shangwu Zhong</name>
-    </author>
-    <author>
-      <name>Shaoliang Pang</name>
-    </author>
-    <author>
-      <name>Shengjie Fan</name>
-    </author>
-    <author>
-      <name>Shijie Shang</name>
-    </author>
-    <author>
-      <name>Shilei Jiang</name>
-    </author>
-    <author>
-      <name>Shiliang Yang</name>
-    </author>
-    <author>
-      <name>Shiming Hao</name>
-    </author>
-    <author>
-      <name>Shuli Gao</name>
-    </author>
-    <author>
-      <name>Siming Huang</name>
-    </author>
-    <author>
-      <name>Siqi Liu</name>
-    </author>
-    <author>
-      <name>Tiancheng Cao</name>
-    </author>
-    <author>
-      <name>Tianhao Cheng</name>
-    </author>
-    <author>
-      <name>Tianhao Peng</name>
-    </author>
-    <author>
-      <name>Wang You</name>
-    </author>
-    <author>
-      <name>Wei Ji</name>
-    </author>
-    <author>
-      <name>Wen Sun</name>
-    </author>
-    <author>
-      <name>Wenjin Deng</name>
-    </author>
-    <author>
-      <name>Wenqing He</name>
-    </author>
-    <author>
-      <name>Wenzhen Zheng</name>
-    </author>
-    <author>
-      <name>Xi Chen</name>
-    </author>
-    <author>
-      <name>Xiangwen Kong</name>
-    </author>
-    <author>
-      <name>Xianzhen Luo</name>
-    </author>
-    <author>
-      <name>Xiaobo Yang</name>
-    </author>
-    <author>
-      <name>Xiaojia Liu</name>
-    </author>
-    <author>
-      <name>Xiaoxiao Ren</name>
-    </author>
-    <author>
-      <name>Xin Han</name>
-    </author>
-    <author>
-      <name>Xin Li</name>
-    </author>
-    <author>
-      <name>Xin Wu</name>
-    </author>
-    <author>
-      <name>Xu Zhao</name>
-    </author>
-    <author>
-      <name>Yanan Wei</name>
-    </author>
-    <author>
-      <name>Yang Li</name>
-    </author>
-    <author>
-      <name>Yangguang Li</name>
-    </author>
-    <author>
-      <name>Yangshijie Xu</name>
-    </author>
-    <author>
-      <name>Yanming Xu</name>
-    </author>
-    <author>
-      <name>Yaqiang Shi</name>
-    </author>
-    <author>
-      <name>Yeqing Shen</name>
-    </author>
-    <author>
-      <name>Yi Yang</name>
-    </author>
-    <author>
-      <name>Yifei Yang</name>
-    </author>
-    <author>
-      <name>Yifeng Gong</name>
-    </author>
-    <author>
-      <name>Yihan Chen</name>
-    </author>
-    <author>
-      <name>Yijing Yang</name>
-    </author>
-    <author>
-      <name>Yinmin Zhang</name>
-    </author>
-    <author>
-      <name>Yizhuang Zhou</name>
-    </author>
-    <author>
-      <name>Yuanhao Ding</name>
-    </author>
-    <author>
-      <name>Yuantao Fan</name>
-    </author>
-    <author>
-      <name>Yuanzhen Yang</name>
-    </author>
-    <author>
-      <name>Yuchu Luo</name>
-    </author>
-    <author>
-      <name>Yue Peng</name>
-    </author>
-    <author>
-      <name>Yufan Lu</name>
-    </author>
-    <author>
-      <name>Yuhang Deng</name>
-    </author>
-    <author>
-      <name>Yuhe Yin</name>
-    </author>
-    <author>
-      <name>Yujie Liu</name>
-    </author>
-    <author>
-      <name>Yukun Chen</name>
-    </author>
-    <author>
-      <name>Yuling Zhao</name>
-    </author>
-    <author>
-      <name>Yun Mou</name>
-    </author>
-    <author>
-      <name>Yunlong Li</name>
-    </author>
-    <author>
-      <name>Yunzhou Ju</name>
-    </author>
-    <author>
-      <name>Yusheng Li</name>
-    </author>
-    <author>
-      <name>Yuxiang Yang</name>
-    </author>
-    <author>
-      <name>Yuxiang Zhang</name>
-    </author>
-    <author>
-      <name>Yuyang Chen</name>
-    </author>
-    <author>
-      <name>Zejia Weng</name>
-    </author>
-    <author>
-      <name>Zhe Xie</name>
-    </author>
-    <author>
-      <name>Zheng Ge</name>
-    </author>
-    <author>
-      <name>Zheng Gong</name>
-    </author>
-    <author>
-      <name>Zhenyi Lu</name>
-    </author>
-    <author>
-      <name>Zhewei Huang</name>
-    </author>
-    <author>
-      <name>Zhichao Chang</name>
-    </author>
-    <author>
-      <name>Zhiguo Huang</name>
-    </author>
-    <author>
-      <name>Zhirui Wang</name>
-    </author>
-    <author>
-      <name>Zidong Yang</name>
-    </author>
-    <author>
-      <name>Zili Wang</name>
-    </author>
-    <author>
-      <name>Ziqi Wang</name>
-    </author>
-    <author>
-      <name>Zixin Zhang</name>
-    </author>
-    <author>
-      <name>Binxing Jiao</name>
-    </author>
-    <author>
-      <name>Daxin Jiang</name>
-    </author>
-    <author>
-      <name>Heung-Yeung Shum</name>
-    </author>
-    <author>
-      <name>Xiangyu Zhang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.19427v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19427v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19413v1</id>
-    <updated>2025-07-25T16:27:17Z</updated>
-    <published>2025-07-25T16:27:17Z</published>
-    <title>Riesz representers for the rest of us</title>
-    <summary>  The application of semiparametric efficient estimators, particularly those
-that leverage machine learning, is rapidly expanding within epidemiology and
-causal inference. Much of the recent methodological literature on these
-estimators relies heavily on the Riesz representation theorem and Riesz
-regression. This paper aims to introduce the Riesz representation theorem to an
-applied audience, explaining why and how Riesz regression is becoming widely
-used in the semiparametric estimator statistical literature.
-</summary>
-    <author>
-      <name>Nicholas T. Williams</name>
-    </author>
-    <author>
-      <name>Oliver J. Hines</name>
-    </author>
-    <author>
-      <name>Kara E. Rudolph</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.19413v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19413v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19409v1</id>
-    <updated>2025-07-25T16:19:47Z</updated>
-    <published>2025-07-25T16:19:47Z</published>
-    <title>Modality Agnostic Efficient Long Range Encoder</title>
-    <summary>  The long-context capability of recent large transformer models can be
-surmised to rely on techniques such as attention/model parallelism, as well as
-hardware-level optimizations. While these strategies allow input lengths to
-scale to millions of tokens, they do not fundamentally mitigate the quadratic
-computational and memory complexity of the core attention mechanism. In this
-paper, we address the challenge of long-context processing on a single device
-using generic implementations by reducing the quadratic memory footprint and
-inference cost. Existing approaches to extend the context length for generic
-single device implementations -- such as token merging and modified attentions
--- are often modality specific and attain a suboptimal tradeoff between
-accuracy and efficiency. To overcome these limitations, we propose MAELRE
-(Modality Agnostic Efficient Long Range Encoder), a unified and efficient
-transformer architecture designed for long-range encoding across diverse
-modalities. MAELRE integrates token merging with attention approximation,
-progressively merging tokens at different stages of internal computational
-blocks. It employs a lightweight attention approximation when the number of
-tokens is large, and switches to standard dot-product attention as the sequence
-becomes shorter through successive aggregation. We demonstrate that MAELRE
-achieves superior accuracy while reducing computational cost compared to
-existing long-context models on classification tasks spanning multiple
-modalities, including text, time series, audio, and vision.
-</summary>
-    <author>
-      <name>Toufiq Parag</name>
-    </author>
-    <author>
-      <name>Ahmed Elgammal</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.19409v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19409v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Codes and data are available at
+  https://github.com/listen0425/Security-Tensors</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.20994v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.20994v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19401v2</id>
-    <updated>2025-07-28T04:04:38Z</updated>
-    <published>2025-07-25T16:08:22Z</published>
-    <title>The gauge theory dual of the bilayer XY model with second order
-  Josephson coupling</title>
-    <summary>  We formulate a duality transformation for a bilayer XY model where the layers
-are coupled by second order Josephson effect, which favors inter-layer phase
-difference of either $0$ or $\pi$. The model may represent a bilayer
-superconductor or a spin-1 ferromagnetic Bose gas in the easy-plane limit. The
-second order Josephson term is mapped to a U(1) gauge field, known to be
-trivially confining in two dimensions, and we argue that a Coulomb-gas analysis
-is not applicable to the dual theory. Instead, we appeal to the vast knowledge
-of gauge theory and infer that the only phase transition out of low-temperature
-ordered phase is an Ising transition driven by condensation of $\mathbb{Z}_2$
-domain wall loops. The domain wall loops can be seen as a surviving vestige of
-single-layer vortex-anti-vortex pair, heavily deformed by the second order
-Josephson coupling. A theoretical or computational method that concentrates on
-point defects would most likely miss out on these excitations and reach
-erroneous results. Our dual theory offers a clear, intuitive picture of how the
-second order Josephson coupling induces confinement of vortices and drastically
-changes the physics.
-</summary>
-    <author>
-      <name>Pye Ton How</name>
-    </author>
-    <author>
-      <name>Sungkit Yip</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">V2: fix the missing arXiv identifier of ref [19]</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.19401v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19401v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19391v1</id>
-    <updated>2025-07-25T15:50:42Z</updated>
-    <published>2025-07-25T15:50:42Z</published>
-    <title>Transcript Franking for Encrypted Messaging</title>
-    <summary>  Message franking is an indispensable abuse mitigation tool for end-to-end
-encrypted (E2EE) messaging platforms. With it, users who receive harmful
-content can securely report that content to platform moderators. However, while
-real-world deployments of reporting require the disclosure of multiple
-messages, existing treatments of message franking only consider the report of a
-single message. As a result, there is a gap between the security goals achieved
-by constructions and those needed in practice. Our work introduces transcript
-franking, a new type of protocol that allows reporting subsets of conversations
-such that moderators can cryptographically verify message causality and
-contents. We define syntax, semantics, and security for transcript franking in
-two-party and group messaging. We then present efficient constructions for
-transcript franking and prove their security. Looking toward deployment
-considerations, we provide detailed discussion of how real-world messaging
-systems can incorporate our protocols.
-</summary>
-    <author>
-      <name>Armin Namavari</name>
-    </author>
-    <author>
-      <name>Thomas Ristenpart</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.19391v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19391v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.19372v1</id>
-    <updated>2025-07-25T15:24:56Z</updated>
-    <published>2025-07-25T15:24:56Z</published>
-    <title>Learning neuro-symbolic convergent term rewriting systems</title>
-    <summary>  Building neural systems that can learn to execute symbolic algorithms is a
-challenging open problem in artificial intelligence, especially when aiming for
-strong generalization and out-of-distribution performance. In this work, we
-introduce a general framework for learning convergent term rewriting systems
-using a neuro-symbolic architecture inspired by the rewriting algorithm itself.
-We present two modular implementations of such architecture: the Neural
-Rewriting System (NRS) and the Fast Neural Rewriting System (FastNRS). As a
-result of algorithmic-inspired design and key architectural elements, both
-models can generalize to out-of-distribution instances, with FastNRS offering
-significant improvements in terms of memory efficiency, training speed, and
-inference time. We evaluate both architectures on four tasks involving the
-simplification of mathematical formulas and further demonstrate their
-versatility in a multi-domain learning scenario, where a single model is
-trained to solve multiple types of problems simultaneously. The proposed system
-significantly outperforms two strong neural baselines: the Neural Data Router,
-a recent transformer variant specifically designed to solve algorithmic
-problems, and GPT-4o, one of the most powerful general-purpose large-language
-models. Moreover, our system matches or outperforms the latest o1-preview model
-from OpenAI that excels in reasoning benchmarks.
-</summary>
-    <author>
-      <name>Flavio Petruzzellis</name>
-    </author>
-    <author>
-      <name>Alberto Testolin</name>
-    </author>
-    <author>
-      <name>Alessandro Sperduti</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">48 pages, 31 figures. Submitted for review by Artificial Intelligence
-  Journal</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.19372v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.19372v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.20993v1</id>
+    <updated>2025-07-28T16:52:31Z</updated>
+    <published>2025-07-28T16:52:31Z</published>
+    <title>Personalized Treatment Effect Estimation from Unstructured Data</title>
+    <summary>  Existing methods for estimating personalized treatment effects typically rely
+on structured covariates, limiting their applicability to unstructured data.
+Yet, leveraging unstructured data for causal inference has considerable
+application potential, for instance in healthcare, where clinical notes or
+medical images are abundant. To this end, we first introduce an approximate
+'plug-in' method trained directly on the neural representations of unstructured
+data. However, when these fail to capture all confounding information, the
+method may be subject to confounding bias. We therefore introduce two
+theoretically grounded estimators that leverage structured measurements of the
+confounders during training, but allow estimating personalized treatment
+effects purely from unstructured inputs, while avoiding confounding bias. When
+these structured measurements are only available for a non-representative
+subset of the data, these estimators may suffer from sampling bias. To address
+this, we further introduce a regression-based correction that accounts for the
+non-uniform sampling, assuming the sampling mechanism is known or can be
+well-estimated. Our experiments on two benchmark datasets show that the plug-in
+method, directly trainable on large unstructured datasets, achieves strong
+empirical performance across all settings, despite its simplicity.
+</summary>
+    <author>
+      <name>Henri Arno</name>
+    </author>
+    <author>
+      <name>Thomas Demeester</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.20993v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.20993v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.20990v1</id>
+    <updated>2025-07-28T16:50:33Z</updated>
+    <published>2025-07-28T16:50:33Z</published>
+    <title>PyBird-JAX: Accelerated inference in large-scale structure with
+  model-independent emulation of one-loop galaxy power spectra</title>
+    <summary>  We present $\texttt{PyBird-JAX}$, a differentiable, $\texttt{JAX}$-based
+implementation of $\texttt{PyBird}$, using internal neural network emulators to
+accelerate computationally costly operations for rapid large-scale structure
+(LSS) analysis. $\texttt{PyBird-JAX}$ computes one-loop EFTofLSS predictions
+for redshift-space galaxy power spectrum multipoles in 1.2 ms on a CPU and 0.2
+ms on a GPU, achieving 3-4 orders of magnitude speed-up over $\texttt{PyBird}$.
+The emulators take a compact spline-based representation of the input linear
+power spectrum $P(k)$ as feature vectors, making the approach applicable to a
+wide range of cosmological models. We rigorously validate its accuracy against
+large-volume simulations and on BOSS data, including cosmologies not explicitly
+represented in the training set. Leveraging automatic differentiation,
+$\texttt{PyBird-JAX}$ supports Fisher forecasting, Taylor expansion of model
+predictions, gradient-based searches, and vectorised ensemble sampling.
+Interfaced with a variety of samplers and Boltzmann solvers,
+$\texttt{PyBird-JAX}$ provides a high-performance, end-to-end inference
+pipeline. Combined with a symbolic-$P(k)$ generator, a typical Stage-4 LSS MCMC
+converges in minutes on a GPU. Our results demonstrate that
+$\texttt{PyBird-JAX}$ delivers the precision and speed required for upcoming
+LSS surveys, opening the door to accelerated cosmological inference with
+minimal accuracy loss and no pretraining. In a companion paper [1], we put
+$\texttt{PyBird-JAX}$ to use in achieving LSS marginalised constraints free
+from volume projection effects through non-flat measures.
+</summary>
+    <author>
+      <name>Alexander Reeves</name>
+    </author>
+    <author>
+      <name>Pierre Zhang</name>
+    </author>
+    <author>
+      <name>Henry Zheng</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 + 14 pages, 9 figures, 4 tables. $\texttt{PyBird-JAX}$ code is
+  available at https://github.com/pierrexyz/pybird</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.20990v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.20990v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.20991v1</id>
+    <updated>2025-07-28T16:50:33Z</updated>
+    <published>2025-07-28T16:50:33Z</published>
+    <title>Debiasing inference in large-scale structure with non-flat volume
+  measures</title>
+    <summary>  Increasingly large parameter spaces, used to more accurately model precision
+observables in physics, can paradoxically lead to large deviations in the
+inferred parameters of interest -- a bias known as volume projection effects --
+when marginalising over many nuisance parameters. For posterior distributions
+that admit a Laplace expansion, we show that this artefact of Bayesian
+inference can be mitigated by defining expectation values with respect to a
+non-flat volume measure, such that the posterior mean becomes unbiased on
+average. We begin by finding a measure that ensures the mean is an unbiased
+estimator of the mode. Although the mode itself, as we rediscover, is biased
+under sample averaging, this choice yields the least biased estimator due to a
+cancellation we clarify. We further explain why bias in marginal posteriors can
+appear relatively large, yet remains correctable, when the number of nuisances
+is large. To demonstrate our approach, we present mock analyses in large-scale
+structure (LSS) wherein cosmological parameters are subject to large projection
+effects (at the 1-2$\sigma$ level) under a flat measure, that are however
+recovered at high fidelity ($&lt;0.1\sigma$) when estimated using non-flat
+counterparts. Our cosmological analyses are enabled by $\texttt{PyBird-JAX}$, a
+fast, differentiable pipeline for LSS developed in our companion paper [1].
+</summary>
+    <author>
+      <name>Alexander Reeves</name>
+    </author>
+    <author>
+      <name>Pierre Zhang</name>
+    </author>
+    <author>
+      <name>Henry Zheng</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">30 + 9 pages, 6 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.20991v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.20991v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.20989v1</id>
+    <updated>2025-07-28T16:47:48Z</updated>
+    <published>2025-07-28T16:47:48Z</published>
+    <title>Probing the Neutral Fraction of the Warm Ionized Medium via [NI] 5200</title>
+    <summary>  Most of the ionized mass in the Milky Way is in the Warm Ionized Medium (WIM)
+and not in the bright H~II regions. The WIM is traced by dispersion measure and
+has been extensively studied in recombination lines (primarily, H$\alpha$) and
+optical nebular lines (primarily, S+ and N+). The observations can be well
+explained by a photo-ionized nebula with a low ionization parameter. It is
+generally thought that the source of ionization (and heating) of the WIM is due
+to Lyman continuum leaking from HII regions which are concentrated in the
+Galactic plane. The rays of the diffuse Galactic Lyman-continuum radiation
+field incident on the Warm Neutral Medium (WNM) are absorbed, forming an
+ionized skin. In nebulae with low-ionization parameter the transition from
+ionized gas to neutral gas is gradual, unlike the case for HII regions with
+their sharp Stromgren spheres. The transition region is warm enough to excite
+oxygen and nitrogen atoms to emit [OI] 6300,6363 and [NI] 5198,5200. Domgorgen
+&amp; Mathis (1994) recognized the value of [OI] 6300 as a diagnostic of the
+fraction of the diffuse continuum that is absorbed by the WNM and therefore
+constrains the fraction of the diffuse Lyman continuum that escapes to the
+halo. Unfortunately, observations of Galactic [OI] 6300 have been stymied by
+bright [OI] 6300 airglow emission. [NI] 5200,5198 has been a historically less
+popular probe because this doublet is less luminous than the oxygen doublet.
+However, we point out that the [NI] airglow is two orders of magnitude smaller
+than that of [OI]. Furthermore, even in the presence of comparable airglow, the
+WIM [NI] emission can be inferred using the doublet intensity ratio for which a
+medium-resolution spectrometer such as the Local Volume Mapper will suffice.
+Separately, we note, in extragalactic systems, that [OI]6300/[NI]5200 is a
+robust measure of the O/N abundance ratio.
+</summary>
+    <author>
+      <name>S. R. Kulkarni</name>
+    </author>
+    <author>
+      <name>S. Noll</name>
+    </author>
+    <author>
+      <name>W. Kausch</name>
+    </author>
+    <author>
+      <name>Soumyadeep Bhattacharjee</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages; 18 figures; 3 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.20989v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.20989v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.20985v1</id>
+    <updated>2025-07-28T16:45:32Z</updated>
+    <published>2025-07-28T16:45:32Z</published>
+    <title>Behavioral Study of Dashboard Mechanisms</title>
+    <summary>  Visualization dashboards are increasingly used in strategic settings like
+auctions to enhance decision-making and reduce strategic confusion. This paper
+presents behavioral experiments evaluating how different dashboard designs
+affect bid optimization in reverse first-price auctions. Additionally, we
+assess how dashboard designs impact the auction designer's ability to
+accurately infer bidders' preferences within the dashboard mechanism framework.
+We compare visualizations of the bid allocation rule, commonly deployed in
+practice, to alternatives that display expected utility. We find that
+utility-based visualizations significantly improve bidding by reducing
+cognitive demands on bidders. However, even with improved dashboards, bidders
+systematically under-shade their bids, driven by an implicit preference for
+certain wins in uncertain settings. As a result, dashboard-based mechanisms
+that assume fully rational or risk-neutral bidder responses to dashboards can
+produce significant estimation errors when inferring private preferences, which
+may lead to suboptimal allocations in practice. Explicitly modeling agents'
+behavioral responses to dashboards substantially improves inference accuracy,
+highlighting the need to align visualization design and econometric inference
+assumptions in practice.
+</summary>
+    <author>
+      <name>Paula Kayongo</name>
+    </author>
+    <author>
+      <name>Jessica Hullman</name>
+    </author>
+    <author>
+      <name>Jason Hartline</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.20985v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.20985v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
