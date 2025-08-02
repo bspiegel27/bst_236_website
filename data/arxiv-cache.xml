@@ -1,416 +1,573 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-08-01T01:09:59Z -->
+<!-- Last updated: 2025-08-02T01:00:03Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-07-31T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117887</opensearch:totalResults>
+  <updated>2025-08-01T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117974</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.22887v1</id>
-    <updated>2025-07-30T17:59:46Z</updated>
-    <published>2025-07-30T17:59:46Z</published>
-    <title>Where to show Demos in Your Prompt: A Positional Bias of In-Context
-  Learning</title>
-    <summary>  In-context learning (ICL) is a critical emerging capability of large language
-models (LLMs), enabling few-shot learning during inference by including a few
-demonstrations (demos) in the prompt. However, it has been found that ICL's
-performance can be sensitive to the choices of demos and their order. This
-paper investigates an unexplored new positional bias of ICL for the first time:
-we observe that the predictions and accuracy can drift drastically when the
-positions of demos, the system prompt, and the user message in LLM input are
-varied. We refer to this bias as DEMOS' POSITION IN PROMPT (DPP) bias. We
-design a systematic evaluation pipeline to study this type of positional bias
-across classification, question answering, summarization, and reasoning tasks.
-We introduce two metrics, ACCURACY-CHANGE and PREDICTION-CHANGE, to quantify
-net gains and output volatility induced by changes in the demos' position.
-Extensive experiments on ten LLMs from four open-source model families (QWEN,
-LLAMA3, MISTRAL, COHERE) verify that the bias significantly affects their
-accuracy and predictions: placing demos at the start of the prompt yields the
-most stable and accurate outputs with gains of up to +6 points. In contrast,
-placing demos at the end of the user message flips over 30\% of predictions
-without improving correctness on QA tasks. Smaller models are most affected by
-this sensitivity, though even large models remain marginally affected on
-complex tasks.
+    <id>http://arxiv.org/abs/2507.23777v1</id>
+    <updated>2025-07-31T17:58:30Z</updated>
+    <published>2025-07-31T17:58:30Z</published>
+    <title>XSpecMesh: Quality-Preserving Auto-Regressive Mesh Generation
+  Acceleration via Multi-Head Speculative Decoding</title>
+    <summary>  Current auto-regressive models can generate high-quality, topologically
+precise meshes; however, they necessitate thousands-or even tens of
+thousands-of next-token predictions during inference, resulting in substantial
+latency. We introduce XSpecMesh, a quality-preserving acceleration method for
+auto-regressive mesh generation models. XSpecMesh employs a lightweight,
+multi-head speculative decoding scheme to predict multiple tokens in parallel
+within a single forward pass, thereby accelerating inference. We further
+propose a verification and resampling strategy: the backbone model verifies
+each predicted token and resamples any tokens that do not meet the quality
+criteria. In addition, we propose a distillation strategy that trains the
+lightweight decoding heads by distilling from the backbone model, encouraging
+their prediction distributions to align and improving the success rate of
+speculative predictions. Extensive experiments demonstrate that our method
+achieves a 1.7x speedup without sacrificing generation quality. Our code will
+be released.
 </summary>
     <author>
-      <name>Kwesi Cobbina</name>
+      <name>Dian Chen</name>
     </author>
     <author>
-      <name>Tianyi Zhou</name>
+      <name>Yansong Qu</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.22887v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22887v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Xinyang Li</name>
+    </author>
+    <author>
+      <name>Ming Li</name>
+    </author>
+    <author>
+      <name>Shengchuan Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.23777v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23777v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.23771v1</id>
+    <updated>2025-07-31T17:56:28Z</updated>
+    <published>2025-07-31T17:56:28Z</published>
+    <title>Consensus-Driven Active Model Selection</title>
+    <summary>  The widespread availability of off-the-shelf machine learning models poses a
+challenge: which model, of the many available candidates, should be chosen for
+a given data analysis task? This question of model selection is traditionally
+answered by collecting and annotating a validation dataset -- a costly and
+time-intensive process. We propose a method for active model selection, using
+predictions from candidate models to prioritize the labeling of test data
+points that efficiently differentiate the best candidate. Our method, CODA,
+performs consensus-driven active model selection by modeling relationships
+between classifiers, categories, and data points within a probabilistic
+framework. The framework uses the consensus and disagreement between models in
+the candidate pool to guide the label acquisition process, and Bayesian
+inference to update beliefs about which model is best as more information is
+collected. We validate our approach by curating a collection of 26 benchmark
+tasks capturing a range of model selection scenarios. CODA outperforms existing
+methods for active model selection significantly, reducing the annotation
+effort required to discover the best model by upwards of 70% compared to the
+previous state-of-the-art. Code and data are available at
+https://github.com/justinkay/coda.
+</summary>
+    <author>
+      <name>Justin Kay</name>
+    </author>
+    <author>
+      <name>Grant Van Horn</name>
+    </author>
+    <author>
+      <name>Subhransu Maji</name>
+    </author>
+    <author>
+      <name>Daniel Sheldon</name>
+    </author>
+    <author>
+      <name>Sara Beery</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICCV 2025 Highlight. 16 pages, 8 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.23771v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23771v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.23765v1</id>
+    <updated>2025-07-31T17:52:03Z</updated>
+    <published>2025-07-31T17:52:03Z</published>
+    <title>Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological
+  Order</title>
+    <summary>  Topological order (TO) provides a natural platform for storing and
+manipulating quantum information. However, its stability to noise has only been
+systematically understood for Abelian TOs. In this work, we exploit the
+non-deterministic fusion of non-Abelian anyons to inform active error
+correction and design decoders where the fusion products, instead of flag
+qubits, herald the noise. This intrinsic heralding enhances thresholds over
+those of Abelian counterparts when noise is dominated by a single non-Abelian
+anyon type. Furthermore, we present an approach for determining the optimal
+threshold for non-Abelian TOs with perfect anyon syndromes for any noise model,
+formulated as a statistical mechanics model using Bayesian inference. We
+numerically illustrate these results for $D_4 \cong \mathbb Z_4 \rtimes \mathbb
+Z_2$ TO. In particular, for non-Abelian charge noise and perfect syndrome
+measurement, we find an optimal threshold $p_c=0.218(1)$, whereas an
+intrinsically heralded minimal-weight perfect-matching (MWPM) decoder already
+gives $p_c=0.20842(2)$, outperforming standard MWPM with $p_c = 0.15860(1)$.
+Our work highlights how non-Abelian properties can enhance stability, rather
+than reduce it, and discusses potential generalizations for achieving fault
+tolerance.
+</summary>
+    <author>
+      <name>Dian Jing</name>
+    </author>
+    <author>
+      <name>Pablo Sala</name>
+    </author>
+    <author>
+      <name>Liang Jiang</name>
+    </author>
+    <author>
+      <name>Ruben Verresen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.23765v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23765v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.23743v1</id>
+    <updated>2025-07-31T17:29:20Z</updated>
+    <published>2025-07-31T17:29:20Z</published>
+    <title>Relative Bias Under Imperfect Identification in Observational Causal
+  Inference</title>
+    <summary>  To conduct causal inference in observational settings, researchers must rely
+on certain identifying assumptions. In practice, these assumptions are unlikely
+to hold exactly. This paper considers the bias of selection-on-observables,
+instrumental variables, and proximal inference estimates under violations of
+their identifying assumptions. We develop bias expressions for IV and proximal
+inference that show how violations of their respective assumptions are
+amplified by any unmeasured confounding in the outcome variable. We propose a
+set of sensitivity tools that quantify the sensitivity of different
+identification strategies, and an augmented bias contour plot visualizes the
+relationship between these strategies. We argue that the act of choosing an
+identification strategy implicitly expresses a belief about the degree of
+violations that must be present in alternative identification strategies. Even
+when researchers intend to conduct an IV or proximal analysis, a sensitivity
+analysis comparing different identification strategies can help to better
+understand the implications of each set of assumptions. Throughout, we compare
+the different approaches on a re-analysis of the impact of state surveillance
+on the incidence of protest in Communist Poland.
+</summary>
+    <author>
+      <name>Melody Huang</name>
+    </author>
+    <author>
+      <name>Cory McCartan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 2 figures, plus references and appendices</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.23743v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23743v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.23740v1</id>
+    <updated>2025-07-31T17:24:04Z</updated>
+    <published>2025-07-31T17:24:04Z</published>
+    <title>Rule2Text: Natural Language Explanation of Logical Rules in Knowledge
+  Graphs</title>
+    <summary>  Knowledge graphs (KGs) often contain sufficient information to support the
+inference of new facts. Identifying logical rules not only improves the
+completeness of a knowledge graph but also enables the detection of potential
+errors, reveals subtle data patterns, and enhances the overall capacity for
+reasoning and interpretation. However, the complexity of such rules, combined
+with the unique labeling conventions of each KG, can make them difficult for
+humans to understand. In this paper, we explore the potential of large language
+models to generate natural language explanations for logical rules.
+Specifically, we extract logical rules using the AMIE 3.5.1 rule discovery
+algorithm from the benchmark dataset FB15k-237 and two large-scale datasets,
+FB-CVT-REV and FB+CVT-REV. We examine various prompting strategies, including
+zero- and few-shot prompting, including variable entity types, and
+chain-of-thought reasoning. We conduct a comprehensive human evaluation of the
+generated explanations based on correctness, clarity, and hallucination, and
+also assess the use of large language models as automatic judges. Our results
+demonstrate promising performance in terms of explanation correctness and
+clarity, although several challenges remain for future research. All scripts
+and data used in this study are publicly available at
+https://github.com/idirlab/KGRule2NL}{https://github.com/idirlab/KGRule2NL.
+</summary>
+    <author>
+      <name>Nasim Shirvani-Mahdavi</name>
+    </author>
+    <author>
+      <name>Devin Wingfield</name>
+    </author>
+    <author>
+      <name>Amin Ghasemi</name>
+    </author>
+    <author>
+      <name>Chengkai Li</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.23740v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23740v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.22869v1</id>
-    <updated>2025-07-30T17:44:07Z</updated>
-    <published>2025-07-30T17:44:07Z</published>
-    <title>Inference on Common Trends in a Cointegrated Nonlinear SVAR</title>
-    <summary>  We consider the problem of performing inference on the number of common
-stochastic trends when data is generated by a cointegrated CKSVAR (a
-two-regime, piecewise-linear SVAR; Mavroeidis, 2021), using a modified version
-of the Breitung (2002) multivariate variance ratio test that is robust to the
-presence of nonlinear cointegration (of a known form). To derive the
-asymptotics of our test statistic, we prove a fundamental LLN-type result for a
-class of stable but nonstationary autoregressive processes, using a novel dual
-linear process approximation. We show that our modified test yields correct
-inferences regarding the number of common trends in such a system, whereas the
-unmodified test tends to infer a higher number of common trends than are
-actually present, when cointegrating relations are nonlinear.
+    <id>http://arxiv.org/abs/2507.23736v1</id>
+    <updated>2025-07-31T17:19:38Z</updated>
+    <published>2025-07-31T17:19:38Z</published>
+    <title>DICOM De-Identification via Hybrid AI and Rule-Based Framework for
+  Scalable, Uncertainty-Aware Redaction</title>
+    <summary>  Access to medical imaging and associated text data has the potential to drive
+major advances in healthcare research and patient outcomes. However, the
+presence of Protected Health Information (PHI) and Personally Identifiable
+Information (PII) in Digital Imaging and Communications in Medicine (DICOM)
+files presents a significant barrier to the ethical and secure sharing of
+imaging datasets. This paper presents a hybrid de-identification framework
+developed by Impact Business Information Solutions (IBIS) that combines
+rule-based and AI-driven techniques, and rigorous uncertainty quantification
+for comprehensive PHI/PII removal from both metadata and pixel data.
+  Our approach begins with a two-tiered rule-based system targeting explicit
+and inferred metadata elements, further augmented by a large language model
+(LLM) fine-tuned for Named Entity Recognition (NER), and trained on a suite of
+synthetic datasets simulating realistic clinical PHI/PII. For pixel data, we
+employ an uncertainty-aware Faster R-CNN model to localize embedded text,
+extract candidate PHI via Optical Character Recognition (OCR), and apply the
+NER pipeline for final redaction. Crucially, uncertainty quantification
+provides confidence measures for AI-based detections to enhance automation
+reliability and enable informed human-in-the-loop verification to manage
+residual risks.
+  This uncertainty-aware deidentification framework achieves robust performance
+across benchmark datasets and regulatory standards, including DICOM, HIPAA, and
+TCIA compliance metrics. By combining scalable automation, uncertainty
+quantification, and rigorous quality assurance, our solution addresses critical
+challenges in medical data de-identification and supports the secure, ethical,
+and trustworthy release of imaging data for research.
 </summary>
     <author>
-      <name>James A. Duffy</name>
+      <name>Kyle Naddeo</name>
     </author>
     <author>
-      <name>Xiyu Jiao</name>
+      <name>Nikolas Koutsoubis</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ii + 38 pp</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.22869v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22869v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="62M10 (Primary), 91B84, 62E20, 60G65 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Rahul Krish</name>
+    </author>
+    <author>
+      <name>Ghulam Rasool</name>
+    </author>
+    <author>
+      <name>Nidhal Bouaynaya</name>
+    </author>
+    <author>
+      <name>Tony OSullivan</name>
+    </author>
+    <author>
+      <name>Raj Krish</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 6 figures,</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.23736v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23736v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.22867v1</id>
-    <updated>2025-07-30T17:42:13Z</updated>
-    <published>2025-07-30T17:42:13Z</published>
-    <title>Hawkes Processes with Variable Length Memory: Existence, Inference and
-  Application to Neuronal Activity</title>
-    <summary>  Motivated by applications in neuroscience, where the memory of a neuron may
-reset upon firing, we introduce a new class of nonlinear Hawkes processes with
-variable length memory. Multivariate Hawkes processes are past-dependant point
-processes originally introduced tomodel excitation effects, later extended to a
-nonlinear framework to account for the opposite effect, known as inhibition.
-Our model generalises classical Hawkes processes, with or without inhibition,
-focusing on the situation where the probability of an event occurring within a
-given subprocess depends solely on the history since its last event. Our main
-contributions are to prove existence of such processes, and to derive a
-workable likelihood maximisation method, capable of identifying both classical
-and variable memory dynamics. We demonstrate the effectiveness of our approach
-both on synthetic data, and on a neuronal activity dataset.
+    <id>http://arxiv.org/abs/2507.23726v1</id>
+    <updated>2025-07-31T17:00:30Z</updated>
+    <published>2025-07-31T17:00:30Z</published>
+    <title>Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving</title>
+    <summary>  LLMs have demonstrated strong mathematical reasoning abilities by leveraging
+reinforcement learning with long chain-of-thought, yet they continue to
+struggle with theorem proving due to the lack of clear supervision signals when
+solely using natural language. Dedicated domain-specific languages like Lean
+provide clear supervision via formal verification of proofs, enabling effective
+training through reinforcement learning. In this work, we propose
+\textbf{Seed-Prover}, a lemma-style whole-proof reasoning model. Seed-Prover
+can iteratively refine its proof based on Lean feedback, proved lemmas, and
+self-summarization. To solve IMO-level contest problems, we design three
+test-time inference strategies that enable both deep and broad reasoning.
+Seed-Prover proves $78.1\%$ of formalized past IMO problems, saturates MiniF2F,
+and achieves over 50\% on PutnamBench, outperforming the previous
+state-of-the-art by a large margin. To address the lack of geometry support in
+Lean, we introduce a geometry reasoning engine \textbf{Seed-Geometry}, which
+outperforms previous formal geometry engines. We use these two systems to
+participate in IMO 2025 and fully prove 5 out of 6 problems. This work
+represents a significant advancement in automated mathematical reasoning,
+demonstrating the effectiveness of formal verification with long
+chain-of-thought reasoning.
 </summary>
     <author>
-      <name>Sacha Quayle</name>
+      <name>Luoxin Chen</name>
     </author>
     <author>
-      <name>Anna Bonnet</name>
+      <name>Jinming Gu</name>
     </author>
     <author>
-      <name>Maxime Sangnier</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.22867v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22867v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.22863v1</id>
-    <updated>2025-07-30T17:38:49Z</updated>
-    <published>2025-07-30T17:38:49Z</published>
-    <title>Formation of over-massive black holes in high-redshift disk galaxies via
-  globular cluster accretion</title>
-    <summary>  Recent observations with the James Webb Space Telescope (JWST) have suggested
-the existence of over-massive black holes (OMBHs) in high-redshift galaxies. In
-this paper, we propose a new mechanism for the formation of OMBHs, based on the
-accretion of globular clusters (GCs) in compact disk galaxies. We derive the
-conditions under which OMBHs can form, focusing on key parameters such as halo
-mass, redshift, and halo spin parameter. Our results show that at redshift $z =
-10$, a halo with mass $10^{11}~M_{\odot}$ and a spin parameter of $0.02$ can
-form a black hole of $1.4 \times 10^{8}~M_{\odot}$ through GC migration and
-accretion via tidal disruption events (TDEs). The resulting black
-hole-to-stellar mass ratio can reach $\sim 0.1$, corresponding to the fraction
-of GC mass accreted onto the black hole. This mechanism thus provides a
-plausible explanation for the OMBHs observed by JWST. Furthermore, by combining
-our model with halo mass functions and the distribution of spin parameters, we
-construct black hole mass functions that successfully reproduce the number
-densities of massive BH candidates at $z \sim 5$ inferred from JWST
-observations, and UHZ1 and GHZ9 at $z \sim 10$.
-</summary>
-    <author>
-      <name>Hidenobu Yajima</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.22863v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22863v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.22853v1</id>
-    <updated>2025-07-30T17:24:05Z</updated>
-    <published>2025-07-30T17:24:05Z</published>
-    <title>Repair-R1: Better Test Before Repair</title>
-    <summary>  APR (Automated Program Repair) aims to automatically locate program defects,
-generate patches and validate the repairs. Existing techniques for APR are
-often combined with LLMs (Large Language Models), which leverages the
-code-related knowledge of LLMs to improve repair effectiveness. Current
-LLM-based APR methods typically utilize test cases only during the inference
-stage, adopting an iterative approach that performs repair first and validates
-it through test execution afterward. This conventional paradigm neglects two
-important aspects: the potential contribution of test cases in the training
-phase, and the possibility of leveraging testing prior to repair. To address
-this, we propose Repair-R1, which introduces test cases into the model's
-training phase and shifts test generation to precede repair. The model is
-required to first generate discriminative test cases that can distinguish
-defective behaviors, and then perform repair based on these tests. This enables
-the model to better locate defects and understand the underlying causes of
-defects, thereby improving repair effectiveness. We implement Repair-R1 with
-three different backbone models, using RL (reinforcement learning) to
-co-optimize test generation and bug repair. Experimental results on four widely
-adopted benchmarks demonstrate the superiority of Repair-R1. Specially,
-compared to vanilla models, Repair-R1 improves repair success rate by 2.68\% to
-48.29\%, test generation success rate by 16.38\% to 53.28\%, and test coverage
-by 0.78\% to 53.96\%. We publish the code and weights at
-https://github.com/Tomsawyerhu/APR-RL and
-https://huggingface.co/tomhu/Qwen3-4B-RL-5000-step.
-</summary>
-    <author>
-      <name>Haichuan Hu</name>
+      <name>Liankai Huang</name>
     </author>
     <author>
-      <name>Xiaochen Xie</name>
+      <name>Wenhao Huang</name>
     </author>
     <author>
-      <name>Quanjun Zhang</name>
+      <name>Zhicheng Jiang</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.22853v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22853v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Allan Jie</name>
+    </author>
+    <author>
+      <name>Xiaoran Jin</name>
+    </author>
+    <author>
+      <name>Xing Jin</name>
+    </author>
+    <author>
+      <name>Chenggang Li</name>
+    </author>
+    <author>
+      <name>Kaijing Ma</name>
+    </author>
+    <author>
+      <name>Cheng Ren</name>
+    </author>
+    <author>
+      <name>Jiawei Shen</name>
+    </author>
+    <author>
+      <name>Wenlei Shi</name>
+    </author>
+    <author>
+      <name>Tong Sun</name>
+    </author>
+    <author>
+      <name>He Sun</name>
+    </author>
+    <author>
+      <name>Jiahui Wang</name>
+    </author>
+    <author>
+      <name>Siran Wang</name>
+    </author>
+    <author>
+      <name>Zhihong Wang</name>
+    </author>
+    <author>
+      <name>Chenrui Wei</name>
+    </author>
+    <author>
+      <name>Shufa Wei</name>
+    </author>
+    <author>
+      <name>Yonghui Wu</name>
+    </author>
+    <author>
+      <name>Yuchen Wu</name>
+    </author>
+    <author>
+      <name>Yihang Xia</name>
+    </author>
+    <author>
+      <name>Huajian Xin</name>
+    </author>
+    <author>
+      <name>Fan Yang</name>
+    </author>
+    <author>
+      <name>Huaiyuan Ying</name>
+    </author>
+    <author>
+      <name>Hongyi Yuan</name>
+    </author>
+    <author>
+      <name>Zheng Yuan</name>
+    </author>
+    <author>
+      <name>Tianyang Zhan</name>
+    </author>
+    <author>
+      <name>Chi Zhang</name>
+    </author>
+    <author>
+      <name>Yue Zhang</name>
+    </author>
+    <author>
+      <name>Ge Zhang</name>
+    </author>
+    <author>
+      <name>Tianyun Zhao</name>
+    </author>
+    <author>
+      <name>Jianqiu Zhao</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Thomas Hanwen Zhu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2507.23726v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23726v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.22825v1</id>
-    <updated>2025-07-30T16:40:46Z</updated>
-    <published>2025-07-30T16:40:46Z</published>
-    <title>DepR: Depth Guided Single-view Scene Reconstruction with Instance-level
-  Diffusion</title>
-    <summary>  We propose DepR, a depth-guided single-view scene reconstruction framework
-that integrates instance-level diffusion within a compositional paradigm.
-Instead of reconstructing the entire scene holistically, DepR generates
-individual objects and subsequently composes them into a coherent 3D layout.
-Unlike previous methods that use depth solely for object layout estimation
-during inference and therefore fail to fully exploit its rich geometric
-information, DepR leverages depth throughout both training and inference.
-Specifically, we introduce depth-guided conditioning to effectively encode
-shape priors into diffusion models. During inference, depth further guides DDIM
-sampling and layout optimization, enhancing alignment between the
-reconstruction and the input image. Despite being trained on limited synthetic
-data, DepR achieves state-of-the-art performance and demonstrates strong
-generalization in single-view scene reconstruction, as shown through
-evaluations on both synthetic and real-world datasets.
+    <id>http://arxiv.org/abs/2507.23723v1</id>
+    <updated>2025-07-31T16:57:08Z</updated>
+    <published>2025-07-31T16:57:08Z</published>
+    <title>Search for $t\bar tt\bar tW$ Production at $\sqrt{s} = 13$ TeV Using a
+  Modified Graph Neural Network at the LHC</title>
+    <summary>  The simultaneous production of four top quarks in association with a ($W$)
+boson at $(\sqrt{s} = 13)$ TeV is an rare SM process with a
+next-to-leading-order (NLO) cross-section of $(6.6^{+2.4}_{-2.6}
+{ab})$\cite{saiel}. Identifying this process in the fully hadronic decay
+channel is particularly challenging due to overwhelming backgrounds from
+$t\bar{t}, t\bar{t}W, t\bar{t}Z$, and triple-top production processes. This
+study introduces a modified physics informed Neural Network, a hybrid graph
+neural network (GNN) enhancing event classification. The proposed model
+integrates Graph layers for particle-level features, a custom Multi Layer
+Perceptron(MLP) based global stream with a quantum circuit and cross-attention
+fusion to combine local and global representations. Physics-informed Loss
+function enforce jet multiplicity constraints, derived from event decay
+dynamics. Benchmarked against conventional methods, the GNN achieves a signal
+significance $(S/\sqrt{S+B})$ of $0.174$ and ROC-AUC of 0.974, surpassing BDT's
+significance of $0.148$ and ROC of $0.913$, while Xgboost achieves a
+significance of $0.149$ and ROC of $0.920$. The classification models are
+trained on Monte Carlo (MC) simulations, with events normalized using
+cross-section-based reweighting to reflect their expected contributions in a
+dataset corresponding to $350\;$fb$^{-1}$ of integrated luminosity. This
+enhanced approach offers a framework for precision event selection at the LHC,
+leveraging high dimensional statistical learning and physics informed inference
+to tackle fundamental HEP challenges, aligning with ML developments.
 </summary>
     <author>
-      <name>Qingcheng Zhao</name>
+      <name>Syed Haider Ali</name>
     </author>
     <author>
-      <name>Xiang Zhang</name>
+      <name>Ashfaq Ahmad</name>
     </author>
     <author>
-      <name>Haiyang Xu</name>
+      <name>Muhammad Saiel</name>
     </author>
     <author>
-      <name>Zeyuan Chen</name>
+      <name>Nadeem Shaukat</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2507.23723v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23723v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.23709v1</id>
+    <updated>2025-07-31T16:30:50Z</updated>
+    <published>2025-07-31T16:30:50Z</published>
+    <title>Explainable Image Classification with Reduced Overconfidence for Tissue
+  Characterisation</title>
+    <summary>  The deployment of Machine Learning models intraoperatively for tissue
+characterisation can assist decision making and guide safe tumour resections.
+For image classification models, pixel attribution methods are popular to infer
+explainability. However, overconfidence in deep learning model's predictions
+translates to overconfidence in pixel attribution. In this paper, we propose
+the first approach which incorporates risk estimation into a pixel attribution
+method for improved image classification explainability. The proposed method
+iteratively applies a classification model with a pixel attribution method to
+create a volume of PA maps. This volume is used for the first time, to generate
+a pixel-wise distribution of PA values. We introduce a method to generate an
+enhanced PA map by estimating the expectation values of the pixel-wise
+distributions. In addition, the coefficient of variation (CV) is used to
+estimate pixel-wise risk of this enhanced PA map. Hence, the proposed method
+not only provides an improved PA map but also produces an estimation of risk on
+the output PA values. Performance evaluation on probe-based Confocal Laser
+Endomicroscopy (pCLE) data and ImageNet verifies that our improved
+explainability method outperforms the state-of-the-art.
+</summary>
+    <author>
+      <name>Alfie Roddan</name>
     </author>
     <author>
-      <name>Jianwen Xie</name>
+      <name>Chi Xu</name>
     </author>
     <author>
-      <name>Yuan Gao</name>
+      <name>Serine Ajlouni</name>
     </author>
     <author>
-      <name>Zhuowen Tu</name>
+      <name>Irini Kakaletri</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICCV 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.22825v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22825v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Patra Charalampaki</name>
+    </author>
+    <author>
+      <name>Stamatia Giannarou</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/978-3-031-43895-0_54</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1007/978-3-031-43895-0_54" rel="related"/>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">(2023). In: Greenspan, H., et al. (eds) Medical Image Computing
+  and Computer Assisted Intervention MICCAI 2023. Lecture Notes in Computer
+  Science, vol 14221. Springer, Cham</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2507.23709v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23709v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.22817v1</id>
-    <updated>2025-07-30T16:32:47Z</updated>
-    <published>2025-07-30T16:32:47Z</published>
-    <title>Wall Shear Stress Estimation in Abdominal Aortic Aneurysms: Towards
-  Generalisable Neural Surrogate Models</title>
-    <summary>  Abdominal aortic aneurysms (AAAs) are pathologic dilatations of the abdominal
-aorta posing a high fatality risk upon rupture. Studying AAA progression and
-rupture risk often involves in-silico blood flow modelling with computational
-fluid dynamics (CFD) and extraction of hemodynamic factors like time-averaged
-wall shear stress (TAWSS) or oscillatory shear index (OSI). However, CFD
-simulations are known to be computationally demanding. Hence, in recent years,
-geometric deep learning methods, operating directly on 3D shapes, have been
-proposed as compelling surrogates, estimating hemodynamic parameters in just a
-few seconds. In this work, we propose a geometric deep learning approach to
-estimating hemodynamics in AAA patients, and study its generalisability to
-common factors of real-world variation. We propose an E(3)-equivariant deep
-learning model utilising novel robust geometrical descriptors and projective
-geometric algebra. Our model is trained to estimate transient WSS using a
-dataset of CT scans of 100 AAA patients, from which lumen geometries are
-extracted and reference CFD simulations with varying boundary conditions are
-obtained. Results show that the model generalizes well within the distribution,
-as well as to the external test set. Moreover, the model can accurately
-estimate hemodynamics across geometry remodelling and changes in boundary
-conditions. Furthermore, we find that a trained model can be applied to
-different artery tree topologies, where new and unseen branches are added
-during inference. Finally, we find that the model is to a large extent agnostic
-to mesh resolution. These results show the accuracy and generalisation of the
-proposed model, and highlight its potential to contribute to hemodynamic
-parameter estimation in clinical practice.
+    <id>http://arxiv.org/abs/2507.23692v1</id>
+    <updated>2025-07-31T16:09:33Z</updated>
+    <published>2025-07-31T16:09:33Z</published>
+    <title>High-resolution eikonal imaging and uncertainty quantification of the
+  Kilauea caldera</title>
+    <summary>  Images of the Earth's interior can provide us with insight into the
+underlying properties of the Earth, such as how seismic activity might emerge
+and the interplay between seismic and volcanic activity. Understanding these
+systems requires reliable high-resolution images to understand mechanisms and
+estimate physical quantities. However, reliable images are often difficult to
+obtain due to the non-linear nature of seismic wave propagation and the
+ill-posedness of the related inverse problem. Reconstructions rely on good
+initial estimates as well as hand-crafted priors, which can ultimately bias
+solutions. In our work, we present a 3D reconstruction of Kilauea's magmatic
+system at a previously unattained resolution. Our eikonal tomography procedure
+improves upon prior imaging results of Kilauea through increased resolution and
+per-pixel uncertainties estimated through variational inference. In particular,
+solving eikonal imaging using variational inference with stochastic gradient
+descent enables stable inversion and uncertainty quantification in the absence
+of strong prior knowledge of the velocity structure. Our work makes two key
+contributions: developing a stochastic eikonal tomography scheme with
+uncertainty quantification and illuminating the structure and melt quantity of
+the magmatic system that underlies Kilauea.
 </summary>
     <author>
-      <name>Patryk Rygiel</name>
+      <name>Angela F. Gao</name>
     </author>
     <author>
-      <name>Julian Suk</name>
+      <name>John D. Wilding</name>
     </author>
     <author>
-      <name>Christoph Brune</name>
+      <name>Ettore Biondi</name>
     </author>
     <author>
-      <name>Kak Khee Yeung</name>
+      <name>Katherine L. Bouman</name>
     </author>
     <author>
-      <name>Jelmer M. Wolterink</name>
+      <name>Zachary E. Ross</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.22817v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22817v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.22816v1</id>
-    <updated>2025-07-30T16:32:33Z</updated>
-    <published>2025-07-30T16:32:33Z</published>
-    <title>Kan Approximations of the Persistent Homology Transform</title>
-    <summary>  The persistent homology transform (PHT) of a subset $M \subset \mathbb{R}^d$
-is a map $\text{PHT}(M):\mathbb{S}^{d-1} \to \mathbf{Dgm}$ from the unit sphere
-to the space of persistence diagrams. This map assigns to each direction $v\in
-\mathbb{S}^{d-1}$ the persistent homology of the filtration of $M$ in direction
-$v$. In practice, one can only sample the map $\text{PHT}(M)$ at a finite set
-of directions $A \subset \mathbb{S}^{d-1}$. This suggests two natural
-questions: (1) Can we interpolate the PHT from this finite sample of directions
-to the entire sphere? If so, (2) can we prove that the resulting interpolation
-is close to the true PHT? In this paper we show that if we can sample the PHT
-at the module level, where we have information about how homology from each
-direction interacts, a ready-made interpolation theory due to Bubenik, de
-Silva, and Nanda using Kan extensions can answer both of these questions in the
-affirmative. A close inspection of those techniques shows that we can infer the
-PHT from a finite sample of heights from each direction as well. Our paper
-presents the first known results for approximating the PHT from finite
-directional and scalar data.
-</summary>
-    <author>
-      <name>Shreya Arya</name>
-    </author>
-    <author>
-      <name>Justin Curry</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 4 figures. Dedicated to our beloved graduate and post-doc
-  mentor, Sayan Mukherjee (1971--2025)</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.22816v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22816v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.22805v1</id>
-    <updated>2025-07-30T16:15:22Z</updated>
-    <published>2025-07-30T16:15:22Z</published>
-    <title>MoCHA: Advanced Vision-Language Reasoning with MoE Connector and
-  Hierarchical Group Attention</title>
-    <summary>  Vision large language models (VLLMs) are focusing primarily on handling
-complex and fine-grained visual information by incorporating advanced vision
-encoders and scaling up visual models. However, these approaches face high
-training and inference costs, as well as challenges in extracting visual
-details, effectively bridging across modalities. In this work, we propose a
-novel visual framework, MoCHA, to address these issues. Our framework
-integrates four vision backbones (i.e., CLIP, SigLIP, DINOv2 and ConvNeXt) to
-extract complementary visual features and is equipped with a sparse Mixture of
-Experts Connectors (MoECs) module to dynamically select experts tailored to
-different visual dimensions. To mitigate redundant or insufficient use of the
-visual information encoded by the MoECs module, we further design a
-Hierarchical Group Attention (HGA) with intra- and inter-group operations and
-an adaptive gating strategy for encoded visual features. We train MoCHA on two
-mainstream LLMs (e.g., Phi2-2.7B and Vicuna-7B) and evaluate their performance
-across various benchmarks. Notably, MoCHA outperforms state-of-the-art
-open-weight models on various tasks. For example, compared to CuMo
-(Mistral-7B), our MoCHA (Phi2-2.7B) presents outstanding abilities to mitigate
-hallucination by showing improvements of 3.25% in POPE and to follow visual
-instructions by raising 153 points on MME. Finally, ablation studies further
-confirm the effectiveness and robustness of the proposed MoECs and HGA in
-improving the overall performance of MoCHA.
-</summary>
-    <author>
-      <name>Yuqi Pang</name>
-    </author>
-    <author>
-      <name>Bowen Yang</name>
-    </author>
-    <author>
-      <name>Yun Cao</name>
-    </author>
-    <author>
-      <name>Fan Rong</name>
-    </author>
-    <author>
-      <name>Xiaoyu Li</name>
-    </author>
-    <author>
-      <name>Chen He</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.22805v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22805v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.22800v1</id>
-    <updated>2025-07-30T16:03:21Z</updated>
-    <published>2025-07-30T16:03:21Z</published>
-    <title>The Multi-Agent Fault Localization System Based on Monte Carlo Tree
-  Search Approach</title>
-    <summary>  In real-world scenarios, due to the highly decoupled and flexible nature of
-microservices, it poses greater challenges to system reliability. The more
-frequent occurrence of incidents has created a demand for Root Cause
-Analysis(RCA) methods that enable rapid identification and recovery of
-incidents. Large language model (LLM) provides a new path for quickly locating
-and recovering from incidents by leveraging their powerful generalization
-ability combined with expert experience. Current LLM for RCA frameworks are
-based on ideas like ReAct and Chain-of-Thought, but the hallucination of LLM
-and the propagation nature of anomalies often lead to incorrect localization
-results. Moreover, the massive amount of anomalous information generated in
-large, complex systems presents a huge challenge for the context window length
-of LLMs. To address these challenges, we propose KnowledgeMind, an innovative
-LLM multi-agent system based on Monte Carlo Tree Search and a knowledge base
-reward mechanism for standardized service-by-service reasoning. Compared to
-State-Of-The-Art(SOTA) LLM for RCA methods, our service-by-service exploration
-approach significantly reduces the burden on the maximum context window length,
-requiring only one-tenth of its size. Additionally, by incorporating a
-rule-based real-time reward mechanism, our method effectively mitigates
-hallucinations during the inference process. Compared to the SOTA LLM for RCA
-framework, our method achieves a 49.29% to 128.35% improvement in root cause
-localization accuracy.
-</summary>
-    <author>
-      <name>Rui Ren</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.22800v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.22800v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2507.23692v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2507.23692v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
