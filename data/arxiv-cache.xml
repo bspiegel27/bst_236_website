@@ -1,573 +1,473 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-08-04T01:07:54Z -->
+<!-- Last updated: 2025-08-05T01:04:30Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-08-03T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">117975</opensearch:totalResults>
+  <updated>2025-08-04T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">118055</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2507.23777v1</id>
-    <updated>2025-07-31T17:58:30Z</updated>
-    <published>2025-07-31T17:58:30Z</published>
-    <title>XSpecMesh: Quality-Preserving Auto-Regressive Mesh Generation
-  Acceleration via Multi-Head Speculative Decoding</title>
-    <summary>  Current auto-regressive models can generate high-quality, topologically
-precise meshes; however, they necessitate thousands-or even tens of
-thousands-of next-token predictions during inference, resulting in substantial
-latency. We introduce XSpecMesh, a quality-preserving acceleration method for
-auto-regressive mesh generation models. XSpecMesh employs a lightweight,
-multi-head speculative decoding scheme to predict multiple tokens in parallel
-within a single forward pass, thereby accelerating inference. We further
-propose a verification and resampling strategy: the backbone model verifies
-each predicted token and resamples any tokens that do not meet the quality
-criteria. In addition, we propose a distillation strategy that trains the
-lightweight decoding heads by distilling from the backbone model, encouraging
-their prediction distributions to align and improving the success rate of
-speculative predictions. Extensive experiments demonstrate that our method
-achieves a 1.7x speedup without sacrificing generation quality. Our code will
-be released.
+    <id>http://arxiv.org/abs/2508.00819v1</id>
+    <updated>2025-08-01T17:56:07Z</updated>
+    <published>2025-08-01T17:56:07Z</published>
+    <title>Beyond Fixed: Variable-Length Denoising for Diffusion Large Language
+  Models</title>
+    <summary>  Diffusion Large Language Models (DLLMs) are emerging as a powerful
+alternative to the dominant Autoregressive Large Language Models, offering
+efficient parallel generation and capable global context modeling. However, the
+practical application of DLLMs is hindered by a critical architectural
+constraint: the need for a statically predefined generation length. This static
+length allocation leads to a problematic trade-off: insufficient lengths
+cripple performance on complex tasks, while excessive lengths incur significant
+computational overhead and sometimes result in performance degradation. While
+the inference framework is rigid, we observe that the model itself possesses
+internal signals that correlate with the optimal response length for a given
+task. To bridge this gap, we leverage these latent signals and introduce
+DAEDAL, a novel training-free denoising strategy that enables Dynamic Adaptive
+Length Expansion for Diffusion Large Language Models. DAEDAL operates in two
+phases: 1) Before the denoising process, DAEDAL starts from a short initial
+length and iteratively expands it to a coarse task-appropriate length, guided
+by a sequence completion metric. 2) During the denoising process, DAEDAL
+dynamically intervenes by pinpointing and expanding insufficient generation
+regions through mask token insertion, ensuring the final output is fully
+developed. Extensive experiments on DLLMs demonstrate that DAEDAL achieves
+performance comparable, and in some cases superior, to meticulously tuned
+fixed-length baselines, while simultaneously enhancing computational efficiency
+by achieving a higher effective token ratio. By resolving the static length
+constraint, DAEDAL unlocks new potential for DLLMs, bridging a critical gap
+with their Autoregressive counterparts and paving the way for more efficient
+and capable generation.
 </summary>
     <author>
-      <name>Dian Chen</name>
+      <name>Jinsong Li</name>
     </author>
     <author>
-      <name>Yansong Qu</name>
+      <name>Xiaoyi Dong</name>
     </author>
     <author>
-      <name>Xinyang Li</name>
+      <name>Yuhang Zang</name>
     </author>
     <author>
-      <name>Ming Li</name>
+      <name>Yuhang Cao</name>
     </author>
     <author>
-      <name>Shengchuan Zhang</name>
+      <name>Jiaqi Wang</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.23777v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23777v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code is available at https://github.com/Li-Jinsong/DAEDAL</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.00819v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00819v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.00804v1</id>
+    <updated>2025-08-01T17:37:19Z</updated>
+    <published>2025-08-01T17:37:19Z</published>
+    <title>Online Fine-Tuning of Carbon Emission Predictions using Real-Time
+  Recurrent Learning for State Space Models</title>
+    <summary>  This paper introduces a new approach for fine-tuning the predictions of
+structured state space models (SSMs) at inference time using real-time
+recurrent learning. While SSMs are known for their efficiency and long-range
+modeling capabilities, they are typically trained offline and remain static
+during deployment. Our method enables online adaptation by continuously
+updating model parameters in response to incoming data. We evaluate our
+approach for linear-recurrent-unit SSMs using a small carbon emission dataset
+collected from embedded automotive hardware. Experimental results show that our
+method consistently reduces prediction error online during inference,
+demonstrating its potential for dynamic, resource-constrained environments.
+</summary>
+    <author>
+      <name>Julian Lemmel</name>
+    </author>
+    <author>
+      <name>Manuel Kranzl</name>
+    </author>
+    <author>
+      <name>Adam Lamine</name>
+    </author>
+    <author>
+      <name>Philipp Neubauer</name>
+    </author>
+    <author>
+      <name>Radu Grosu</name>
+    </author>
+    <author>
+      <name>Sophie Neubauer</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.00804v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00804v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.23771v1</id>
-    <updated>2025-07-31T17:56:28Z</updated>
-    <published>2025-07-31T17:56:28Z</published>
-    <title>Consensus-Driven Active Model Selection</title>
-    <summary>  The widespread availability of off-the-shelf machine learning models poses a
-challenge: which model, of the many available candidates, should be chosen for
-a given data analysis task? This question of model selection is traditionally
-answered by collecting and annotating a validation dataset -- a costly and
-time-intensive process. We propose a method for active model selection, using
-predictions from candidate models to prioritize the labeling of test data
-points that efficiently differentiate the best candidate. Our method, CODA,
-performs consensus-driven active model selection by modeling relationships
-between classifiers, categories, and data points within a probabilistic
-framework. The framework uses the consensus and disagreement between models in
-the candidate pool to guide the label acquisition process, and Bayesian
-inference to update beliefs about which model is best as more information is
-collected. We validate our approach by curating a collection of 26 benchmark
-tasks capturing a range of model selection scenarios. CODA outperforms existing
-methods for active model selection significantly, reducing the annotation
-effort required to discover the best model by upwards of 70% compared to the
-previous state-of-the-art. Code and data are available at
-https://github.com/justinkay/coda.
+    <id>http://arxiv.org/abs/2508.00788v1</id>
+    <updated>2025-08-01T17:11:42Z</updated>
+    <published>2025-08-01T17:11:42Z</published>
+    <title>Do They Understand Them? An Updated Evaluation on Nonbinary Pronoun
+  Handling in Large Language Models</title>
+    <summary>  Large language models (LLMs) are increasingly deployed in sensitive contexts
+where fairness and inclusivity are critical. Pronoun usage, especially
+concerning gender-neutral and neopronouns, remains a key challenge for
+responsible AI. Prior work, such as the MISGENDERED benchmark, revealed
+significant limitations in earlier LLMs' handling of inclusive pronouns, but
+was constrained to outdated models and limited evaluations. In this study, we
+introduce MISGENDERED+, an extended and updated benchmark for evaluating LLMs'
+pronoun fidelity. We benchmark five representative LLMs, GPT-4o, Claude 4,
+DeepSeek-V3, Qwen Turbo, and Qwen2.5, across zero-shot, few-shot, and gender
+identity inference. Our results show notable improvements compared with
+previous studies, especially in binary and gender-neutral pronoun accuracy.
+However, accuracy on neopronouns and reverse inference tasks remains
+inconsistent, underscoring persistent gaps in identity-sensitive reasoning. We
+discuss implications, model-specific observations, and avenues for future
+inclusive AI research.
 </summary>
     <author>
-      <name>Justin Kay</name>
+      <name>Xushuo Tang</name>
     </author>
     <author>
-      <name>Grant Van Horn</name>
+      <name>Yi Ding</name>
     </author>
     <author>
-      <name>Subhransu Maji</name>
+      <name>Zhengyi Yang</name>
     </author>
     <author>
-      <name>Daniel Sheldon</name>
+      <name>Yin Chen</name>
     </author>
     <author>
-      <name>Sara Beery</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICCV 2025 Highlight. 16 pages, 8 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.23771v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23771v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.23765v1</id>
-    <updated>2025-07-31T17:52:03Z</updated>
-    <published>2025-07-31T17:52:03Z</published>
-    <title>Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological
-  Order</title>
-    <summary>  Topological order (TO) provides a natural platform for storing and
-manipulating quantum information. However, its stability to noise has only been
-systematically understood for Abelian TOs. In this work, we exploit the
-non-deterministic fusion of non-Abelian anyons to inform active error
-correction and design decoders where the fusion products, instead of flag
-qubits, herald the noise. This intrinsic heralding enhances thresholds over
-those of Abelian counterparts when noise is dominated by a single non-Abelian
-anyon type. Furthermore, we present an approach for determining the optimal
-threshold for non-Abelian TOs with perfect anyon syndromes for any noise model,
-formulated as a statistical mechanics model using Bayesian inference. We
-numerically illustrate these results for $D_4 \cong \mathbb Z_4 \rtimes \mathbb
-Z_2$ TO. In particular, for non-Abelian charge noise and perfect syndrome
-measurement, we find an optimal threshold $p_c=0.218(1)$, whereas an
-intrinsically heralded minimal-weight perfect-matching (MWPM) decoder already
-gives $p_c=0.20842(2)$, outperforming standard MWPM with $p_c = 0.15860(1)$.
-Our work highlights how non-Abelian properties can enhance stability, rather
-than reduce it, and discusses potential generalizations for achieving fault
-tolerance.
-</summary>
-    <author>
-      <name>Dian Jing</name>
+      <name>Yongrui Gu</name>
     </author>
     <author>
-      <name>Pablo Sala</name>
+      <name>Wenke Yang</name>
     </author>
     <author>
-      <name>Liang Jiang</name>
+      <name>Mingchen Ju</name>
     </author>
     <author>
-      <name>Ruben Verresen</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.23765v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23765v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.23743v1</id>
-    <updated>2025-07-31T17:29:20Z</updated>
-    <published>2025-07-31T17:29:20Z</published>
-    <title>Relative Bias Under Imperfect Identification in Observational Causal
-  Inference</title>
-    <summary>  To conduct causal inference in observational settings, researchers must rely
-on certain identifying assumptions. In practice, these assumptions are unlikely
-to hold exactly. This paper considers the bias of selection-on-observables,
-instrumental variables, and proximal inference estimates under violations of
-their identifying assumptions. We develop bias expressions for IV and proximal
-inference that show how violations of their respective assumptions are
-amplified by any unmeasured confounding in the outcome variable. We propose a
-set of sensitivity tools that quantify the sensitivity of different
-identification strategies, and an augmented bias contour plot visualizes the
-relationship between these strategies. We argue that the act of choosing an
-identification strategy implicitly expresses a belief about the degree of
-violations that must be present in alternative identification strategies. Even
-when researchers intend to conduct an IV or proximal analysis, a sensitivity
-analysis comparing different identification strategies can help to better
-understand the implications of each set of assumptions. Throughout, we compare
-the different approaches on a re-analysis of the impact of state surveillance
-on the incidence of protest in Communist Poland.
-</summary>
-    <author>
-      <name>Melody Huang</name>
+      <name>Xin Cao</name>
     </author>
     <author>
-      <name>Cory McCartan</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 2 figures, plus references and appendices</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.23743v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23743v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.23740v1</id>
-    <updated>2025-07-31T17:24:04Z</updated>
-    <published>2025-07-31T17:24:04Z</published>
-    <title>Rule2Text: Natural Language Explanation of Logical Rules in Knowledge
-  Graphs</title>
-    <summary>  Knowledge graphs (KGs) often contain sufficient information to support the
-inference of new facts. Identifying logical rules not only improves the
-completeness of a knowledge graph but also enables the detection of potential
-errors, reveals subtle data patterns, and enhances the overall capacity for
-reasoning and interpretation. However, the complexity of such rules, combined
-with the unique labeling conventions of each KG, can make them difficult for
-humans to understand. In this paper, we explore the potential of large language
-models to generate natural language explanations for logical rules.
-Specifically, we extract logical rules using the AMIE 3.5.1 rule discovery
-algorithm from the benchmark dataset FB15k-237 and two large-scale datasets,
-FB-CVT-REV and FB+CVT-REV. We examine various prompting strategies, including
-zero- and few-shot prompting, including variable entity types, and
-chain-of-thought reasoning. We conduct a comprehensive human evaluation of the
-generated explanations based on correctness, clarity, and hallucination, and
-also assess the use of large language models as automatic judges. Our results
-demonstrate promising performance in terms of explanation correctness and
-clarity, although several challenges remain for future research. All scripts
-and data used in this study are publicly available at
-https://github.com/idirlab/KGRule2NL}{https://github.com/idirlab/KGRule2NL.
-</summary>
-    <author>
-      <name>Nasim Shirvani-Mahdavi</name>
+      <name>Yongfei Liu</name>
     </author>
     <author>
-      <name>Devin Wingfield</name>
+      <name>Wenjie Zhang</name>
     </author>
-    <author>
-      <name>Amin Ghasemi</name>
-    </author>
-    <author>
-      <name>Chengkai Li</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.23740v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23740v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2508.00788v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00788v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.00785v1</id>
+    <updated>2025-08-01T17:09:49Z</updated>
+    <published>2025-08-01T17:09:49Z</published>
+    <title>Explainable AI and Machine Learning for Exam-based Student Evaluation:
+  Causal and Predictive Analysis of Socio-academic and Economic Factors</title>
+    <summary>  Academic performance depends on a multivariable nexus of socio-academic and
+financial factors. This study investigates these influences to develop
+effective strategies for optimizing students' CGPA. To achieve this, we
+reviewed various literature to identify key influencing factors and constructed
+an initial hypothetical causal graph based on the findings. Additionally, an
+online survey was conducted, where 1,050 students participated, providing
+comprehensive data for analysis. Rigorous data preprocessing techniques,
+including cleaning and visualization, ensured data quality before analysis.
+Causal analysis validated the relationships among variables, offering deeper
+insights into their direct and indirect effects on CGPA. Regression models were
+implemented for CGPA prediction, while classification models categorized
+students based on performance levels. Ridge Regression demonstrated strong
+predictive accuracy, achieving a Mean Absolute Error of 0.12 and a Mean Squared
+Error of 0.023. Random Forest outperformed in classification, attaining an
+F1-score near perfection and an accuracy of 98.68%. Explainable AI techniques
+such as SHAP, LIME, and Interpret enhanced model interpretability, highlighting
+critical factors such as study hours, scholarships, parental education, and
+prior academic performance. The study culminated in the development of a
+web-based application that provides students with personalized insights,
+allowing them to predict academic performance, identify areas for improvement,
+and make informed decisions to enhance their outcomes.
+</summary>
+    <author>
+      <name>Bushra Akter</name>
+    </author>
+    <author>
+      <name>Md Biplob Hosen</name>
+    </author>
+    <author>
+      <name>Sabbir Ahmed</name>
+    </author>
+    <author>
+      <name>Mehrin Anannya</name>
+    </author>
+    <author>
+      <name>Md. Farhad Hossain</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.00785v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00785v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.23736v1</id>
-    <updated>2025-07-31T17:19:38Z</updated>
-    <published>2025-07-31T17:19:38Z</published>
-    <title>DICOM De-Identification via Hybrid AI and Rule-Based Framework for
-  Scalable, Uncertainty-Aware Redaction</title>
-    <summary>  Access to medical imaging and associated text data has the potential to drive
-major advances in healthcare research and patient outcomes. However, the
-presence of Protected Health Information (PHI) and Personally Identifiable
-Information (PII) in Digital Imaging and Communications in Medicine (DICOM)
-files presents a significant barrier to the ethical and secure sharing of
-imaging datasets. This paper presents a hybrid de-identification framework
-developed by Impact Business Information Solutions (IBIS) that combines
-rule-based and AI-driven techniques, and rigorous uncertainty quantification
-for comprehensive PHI/PII removal from both metadata and pixel data.
-  Our approach begins with a two-tiered rule-based system targeting explicit
-and inferred metadata elements, further augmented by a large language model
-(LLM) fine-tuned for Named Entity Recognition (NER), and trained on a suite of
-synthetic datasets simulating realistic clinical PHI/PII. For pixel data, we
-employ an uncertainty-aware Faster R-CNN model to localize embedded text,
-extract candidate PHI via Optical Character Recognition (OCR), and apply the
-NER pipeline for final redaction. Crucially, uncertainty quantification
-provides confidence measures for AI-based detections to enhance automation
-reliability and enable informed human-in-the-loop verification to manage
-residual risks.
-  This uncertainty-aware deidentification framework achieves robust performance
-across benchmark datasets and regulatory standards, including DICOM, HIPAA, and
-TCIA compliance metrics. By combining scalable automation, uncertainty
-quantification, and rigorous quality assurance, our solution addresses critical
-challenges in medical data de-identification and supports the secure, ethical,
-and trustworthy release of imaging data for research.
+    <id>http://arxiv.org/abs/2508.00768v1</id>
+    <updated>2025-08-01T16:43:45Z</updated>
+    <published>2025-08-01T16:43:45Z</published>
+    <title>Evaluating Angle and Amplitude Encoding Strategies for Variational
+  Quantum Machine Learning: their impact on model's accuracy</title>
+    <summary>  Recent advancements in Quantum Computing and Machine Learning have increased
+attention to Quantum Machine Learning (QML), which aims to develop machine
+learning models by exploiting the quantum computing paradigm. One of the widely
+used models in this area is the Variational Quantum Circuit (VQC), a hybrid
+model where the quantum circuit handles data inference while classical
+optimization adjusts the parameters of the circuit. The quantum circuit
+consists of an encoding layer, which loads data into the circuit, and a
+template circuit, known as the ansatz, responsible for processing the data.
+This work involves performing an analysis by considering both Amplitude- and
+Angle-encoding models, and examining how the type of rotational gate applied
+affects the classification performance of the model. This comparison is carried
+out by training the different models on two datasets, Wine and Diabetes, and
+evaluating their performance. The study demonstrates that, under identical
+model topologies, the difference in accuracy between the best and worst models
+ranges from 10% to 30%, with differences reaching up to 41%. Moreover, the
+results highlight how the choice of rotational gates used in encoding can
+significantly impact the model's classification performance. The findings
+confirm that the embedding represents a hyperparameter for VQC models.
 </summary>
     <author>
-      <name>Kyle Naddeo</name>
+      <name>Antonio Tudisco</name>
     </author>
     <author>
-      <name>Nikolas Koutsoubis</name>
+      <name>Andrea Marchesin</name>
     </author>
     <author>
-      <name>Rahul Krish</name>
+      <name>Maurizio Zamboni</name>
     </author>
     <author>
-      <name>Ghulam Rasool</name>
+      <name>Mariagrazia Graziano</name>
     </author>
     <author>
-      <name>Nidhal Bouaynaya</name>
+      <name>Giovanna Turvani</name>
     </author>
-    <author>
-      <name>Tony OSullivan</name>
-    </author>
-    <author>
-      <name>Raj Krish</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 6 figures,</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.23736v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23736v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2508.00768v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00768v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.23726v2</id>
-    <updated>2025-08-01T03:36:47Z</updated>
-    <published>2025-07-31T17:00:30Z</published>
-    <title>Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving</title>
-    <summary>  LLMs have demonstrated strong mathematical reasoning abilities by leveraging
-reinforcement learning with long chain-of-thought, yet they continue to
-struggle with theorem proving due to the lack of clear supervision signals when
-solely using natural language. Dedicated domain-specific languages like Lean
-provide clear supervision via formal verification of proofs, enabling effective
-training through reinforcement learning. In this work, we propose
-\textbf{Seed-Prover}, a lemma-style whole-proof reasoning model. Seed-Prover
-can iteratively refine its proof based on Lean feedback, proved lemmas, and
-self-summarization. To solve IMO-level contest problems, we design three
-test-time inference strategies that enable both deep and broad reasoning.
-Seed-Prover proves $78.1\%$ of formalized past IMO problems, saturates MiniF2F,
-and achieves over 50\% on PutnamBench, outperforming the previous
-state-of-the-art by a large margin. To address the lack of geometry support in
-Lean, we introduce a geometry reasoning engine \textbf{Seed-Geometry}, which
-outperforms previous formal geometry engines. We use these two systems to
-participate in IMO 2025 and fully prove 5 out of 6 problems. This work
-represents a significant advancement in automated mathematical reasoning,
-demonstrating the effectiveness of formal verification with long
-chain-of-thought reasoning.
+    <id>http://arxiv.org/abs/2508.00756v1</id>
+    <updated>2025-08-01T16:32:48Z</updated>
+    <published>2025-08-01T16:32:48Z</published>
+    <title>LeakyCLIP: Extracting Training Data from CLIP</title>
+    <summary>  Understanding the memorization and privacy leakage risks in Contrastive
+Language--Image Pretraining (CLIP) is critical for ensuring the security of
+multimodal models. Recent studies have demonstrated the feasibility of
+extracting sensitive training examples from diffusion models, with conditional
+diffusion models exhibiting a stronger tendency to memorize and leak
+information. In this work, we investigate data memorization and extraction
+risks in CLIP through the lens of CLIP inversion, a process that aims to
+reconstruct training images from text prompts. To this end, we introduce
+\textbf{LeakyCLIP}, a novel attack framework designed to achieve high-quality,
+semantically accurate image reconstruction from CLIP embeddings. We identify
+three key challenges in CLIP inversion: 1) non-robust features, 2) limited
+visual semantics in text embeddings, and 3) low reconstruction fidelity. To
+address these challenges, LeakyCLIP employs 1) adversarial fine-tuning to
+enhance optimization smoothness, 2) linear transformation-based embedding
+alignment, and 3) Stable Diffusion-based refinement to improve fidelity.
+Empirical results demonstrate the superiority of LeakyCLIP, achieving over 358%
+improvement in Structural Similarity Index Measure (SSIM) for ViT-B-16 compared
+to baseline methods on LAION-2B subset. Furthermore, we uncover a pervasive
+leakage risk, showing that training data membership can even be successfully
+inferred from the metrics of low-fidelity reconstructions. Our work introduces
+a practical method for CLIP inversion while offering novel insights into the
+nature and scope of privacy risks in multimodal models.
 </summary>
     <author>
-      <name>Luoxin Chen</name>
+      <name>Yunhao Chen</name>
     </author>
     <author>
-      <name>Jinming Gu</name>
+      <name>Shujie Wang</name>
     </author>
     <author>
-      <name>Liankai Huang</name>
+      <name>Xin Wang</name>
     </author>
     <author>
-      <name>Wenhao Huang</name>
+      <name>Xingjun Ma</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.00756v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00756v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.00751v1</id>
+    <updated>2025-08-01T16:28:18Z</updated>
+    <published>2025-08-01T16:28:18Z</published>
+    <title>Harnessing the Power of Interleaving and Counterfactual Evaluation for
+  Airbnb Search Ranking</title>
+    <summary>  Evaluation plays a crucial role in the development of ranking algorithms on
+search and recommender systems. It enables online platforms to create
+user-friendly features that drive commercial success in a steady and effective
+manner. The online environment is particularly conducive to applying causal
+inference techniques, such as randomized controlled experiments (known as A/B
+test), which are often more challenging to implement in fields like medicine
+and public policy. However, businesses face unique challenges when it comes to
+effective A/B test. Specifically, achieving sufficient statistical power for
+conversion-based metrics can be time-consuming, especially for significant
+purchases like booking accommodations. While offline evaluations are quicker
+and more cost-effective, they often lack accuracy and are inadequate for
+selecting candidates for A/B test. To address these challenges, we developed
+interleaving and counterfactual evaluation methods to facilitate rapid online
+assessments for identifying the most promising candidates for A/B tests. Our
+approach not only increased the sensitivity of experiments by a factor of up to
+100 (depending on the approach and metrics) compared to traditional A/B testing
+but also streamlined the experimental process. The practical insights gained
+from usage in production can also benefit organizations with similar interests.
+</summary>
+    <author>
+      <name>Qing Zhang</name>
     </author>
     <author>
-      <name>Zhicheng Jiang</name>
+      <name>Alex Deng</name>
     </author>
     <author>
-      <name>Allan Jie</name>
+      <name>Michelle Du</name>
     </author>
     <author>
-      <name>Xiaoran Jin</name>
+      <name>Huiji Gao</name>
     </author>
     <author>
-      <name>Xing Jin</name>
+      <name>Liwei He</name>
     </author>
     <author>
-      <name>Chenggang Li</name>
+      <name>Sanjeev Katariya</name>
     </author>
-    <author>
-      <name>Kaijing Ma</name>
-    </author>
-    <author>
-      <name>Cheng Ren</name>
-    </author>
-    <author>
-      <name>Jiawei Shen</name>
-    </author>
-    <author>
-      <name>Wenlei Shi</name>
-    </author>
-    <author>
-      <name>Tong Sun</name>
-    </author>
-    <author>
-      <name>He Sun</name>
-    </author>
-    <author>
-      <name>Jiahui Wang</name>
-    </author>
-    <author>
-      <name>Siran Wang</name>
-    </author>
-    <author>
-      <name>Zhihong Wang</name>
-    </author>
-    <author>
-      <name>Chenrui Wei</name>
-    </author>
-    <author>
-      <name>Shufa Wei</name>
-    </author>
-    <author>
-      <name>Yonghui Wu</name>
-    </author>
-    <author>
-      <name>Yuchen Wu</name>
-    </author>
-    <author>
-      <name>Yihang Xia</name>
-    </author>
-    <author>
-      <name>Huajian Xin</name>
-    </author>
-    <author>
-      <name>Fan Yang</name>
-    </author>
-    <author>
-      <name>Huaiyuan Ying</name>
-    </author>
-    <author>
-      <name>Hongyi Yuan</name>
-    </author>
-    <author>
-      <name>Zheng Yuan</name>
-    </author>
-    <author>
-      <name>Tianyang Zhan</name>
-    </author>
-    <author>
-      <name>Chi Zhang</name>
-    </author>
-    <author>
-      <name>Yue Zhang</name>
-    </author>
-    <author>
-      <name>Ge Zhang</name>
-    </author>
-    <author>
-      <name>Tianyun Zhao</name>
-    </author>
-    <author>
-      <name>Jianqiu Zhao</name>
-    </author>
-    <author>
-      <name>Yichi Zhou</name>
-    </author>
-    <author>
-      <name>Thomas Hanwen Zhu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2507.23726v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23726v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3711896.3737232</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/3711896.3737232" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Proceedings of the 31st ACM SIGKDD Conference on Knowledge
+  Discovery and Data Mining V.2 (KDD 2025)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2508.00751v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00751v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="H.3; G.3" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.23723v1</id>
-    <updated>2025-07-31T16:57:08Z</updated>
-    <published>2025-07-31T16:57:08Z</published>
-    <title>Search for $t\bar tt\bar tW$ Production at $\sqrt{s} = 13$ TeV Using a
-  Modified Graph Neural Network at the LHC</title>
-    <summary>  The simultaneous production of four top quarks in association with a ($W$)
-boson at $(\sqrt{s} = 13)$ TeV is an rare SM process with a
-next-to-leading-order (NLO) cross-section of $(6.6^{+2.4}_{-2.6}
-{ab})$\cite{saiel}. Identifying this process in the fully hadronic decay
-channel is particularly challenging due to overwhelming backgrounds from
-$t\bar{t}, t\bar{t}W, t\bar{t}Z$, and triple-top production processes. This
-study introduces a modified physics informed Neural Network, a hybrid graph
-neural network (GNN) enhancing event classification. The proposed model
-integrates Graph layers for particle-level features, a custom Multi Layer
-Perceptron(MLP) based global stream with a quantum circuit and cross-attention
-fusion to combine local and global representations. Physics-informed Loss
-function enforce jet multiplicity constraints, derived from event decay
-dynamics. Benchmarked against conventional methods, the GNN achieves a signal
-significance $(S/\sqrt{S+B})$ of $0.174$ and ROC-AUC of 0.974, surpassing BDT's
-significance of $0.148$ and ROC of $0.913$, while Xgboost achieves a
-significance of $0.149$ and ROC of $0.920$. The classification models are
-trained on Monte Carlo (MC) simulations, with events normalized using
-cross-section-based reweighting to reflect their expected contributions in a
-dataset corresponding to $350\;$fb$^{-1}$ of integrated luminosity. This
-enhanced approach offers a framework for precision event selection at the LHC,
-leveraging high dimensional statistical learning and physics informed inference
-to tackle fundamental HEP challenges, aligning with ML developments.
+    <id>http://arxiv.org/abs/2508.00746v1</id>
+    <updated>2025-08-01T16:21:11Z</updated>
+    <published>2025-08-01T16:21:11Z</published>
+    <title>GECO: Geometrically Consistent Embedding with Lightspeed Inference</title>
+    <summary>  Recent advances in feature learning have shown that self-supervised vision
+foundation models can capture semantic correspondences but often lack awareness
+of underlying 3D geometry. GECO addresses this gap by producing geometrically
+coherent features that semantically distinguish parts based on geometry (e.g.,
+left/right eyes, front/back legs). We propose a training framework based on
+optimal transport, enabling supervision beyond keypoints, even under occlusions
+and disocclusions. With a lightweight architecture, GECO runs at 30 fps, 98.2%
+faster than prior methods, while achieving state-of-the-art performance on
+PFPascal, APK, and CUB, improving PCK by 6.0%, 6.2%, and 4.1%, respectively.
+Finally, we show that PCK alone is insufficient to capture geometric quality
+and introduce new metrics and insights for more geometry-aware feature
+learning. Link to project page:
+https://reginehartwig.github.io/publications/geco/
 </summary>
     <author>
-      <name>Syed Haider Ali</name>
+      <name>Regine Hartwig</name>
     </author>
     <author>
-      <name>Ashfaq Ahmad</name>
+      <name>Dominik Muhle</name>
     </author>
     <author>
-      <name>Muhammad Saiel</name>
+      <name>Riccardo Marin</name>
     </author>
     <author>
-      <name>Nadeem Shaukat</name>
+      <name>Daniel Cremers</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2507.23723v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23723v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2507.23709v1</id>
-    <updated>2025-07-31T16:30:50Z</updated>
-    <published>2025-07-31T16:30:50Z</published>
-    <title>Explainable Image Classification with Reduced Overconfidence for Tissue
-  Characterisation</title>
-    <summary>  The deployment of Machine Learning models intraoperatively for tissue
-characterisation can assist decision making and guide safe tumour resections.
-For image classification models, pixel attribution methods are popular to infer
-explainability. However, overconfidence in deep learning model's predictions
-translates to overconfidence in pixel attribution. In this paper, we propose
-the first approach which incorporates risk estimation into a pixel attribution
-method for improved image classification explainability. The proposed method
-iteratively applies a classification model with a pixel attribution method to
-create a volume of PA maps. This volume is used for the first time, to generate
-a pixel-wise distribution of PA values. We introduce a method to generate an
-enhanced PA map by estimating the expectation values of the pixel-wise
-distributions. In addition, the coefficient of variation (CV) is used to
-estimate pixel-wise risk of this enhanced PA map. Hence, the proposed method
-not only provides an improved PA map but also produces an estimation of risk on
-the output PA values. Performance evaluation on probe-based Confocal Laser
-Endomicroscopy (pCLE) data and ImageNet verifies that our improved
-explainability method outperforms the state-of-the-art.
-</summary>
-    <author>
-      <name>Alfie Roddan</name>
-    </author>
-    <author>
-      <name>Chi Xu</name>
-    </author>
-    <author>
-      <name>Serine Ajlouni</name>
-    </author>
-    <author>
-      <name>Irini Kakaletri</name>
-    </author>
-    <author>
-      <name>Patra Charalampaki</name>
-    </author>
-    <author>
-      <name>Stamatia Giannarou</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/978-3-031-43895-0_54</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.1007/978-3-031-43895-0_54" rel="related"/>
-    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">(2023). In: Greenspan, H., et al. (eds) Medical Image Computing
-  and Computer Assisted Intervention MICCAI 2023. Lecture Notes in Computer
-  Science, vol 14221. Springer, Cham</arxiv:journal_ref>
-    <link href="http://arxiv.org/abs/2507.23709v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23709v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2508.00746v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00746v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2507.23692v1</id>
-    <updated>2025-07-31T16:09:33Z</updated>
-    <published>2025-07-31T16:09:33Z</published>
-    <title>High-resolution eikonal imaging and uncertainty quantification of the
-  Kilauea caldera</title>
-    <summary>  Images of the Earth's interior can provide us with insight into the
-underlying properties of the Earth, such as how seismic activity might emerge
-and the interplay between seismic and volcanic activity. Understanding these
-systems requires reliable high-resolution images to understand mechanisms and
-estimate physical quantities. However, reliable images are often difficult to
-obtain due to the non-linear nature of seismic wave propagation and the
-ill-posedness of the related inverse problem. Reconstructions rely on good
-initial estimates as well as hand-crafted priors, which can ultimately bias
-solutions. In our work, we present a 3D reconstruction of Kilauea's magmatic
-system at a previously unattained resolution. Our eikonal tomography procedure
-improves upon prior imaging results of Kilauea through increased resolution and
-per-pixel uncertainties estimated through variational inference. In particular,
-solving eikonal imaging using variational inference with stochastic gradient
-descent enables stable inversion and uncertainty quantification in the absence
-of strong prior knowledge of the velocity structure. Our work makes two key
-contributions: developing a stochastic eikonal tomography scheme with
-uncertainty quantification and illuminating the structure and melt quantity of
-the magmatic system that underlies Kilauea.
+    <id>http://arxiv.org/abs/2508.00741v1</id>
+    <updated>2025-08-01T16:12:23Z</updated>
+    <published>2025-08-01T16:12:23Z</published>
+    <title>Out-of-Context Abduction: LLMs Make Inferences About Procedural Data
+  Leveraging Declarative Facts in Earlier Training Data</title>
+    <summary>  Large language models (LLMs) are trained on large corpora, yet it is unclear
+whether they can reason about the information present within their training
+data. We design experiments to study out-of-context abduction in LLMs, the
+ability to infer the most plausible explanations for observations using
+relevant facts present in training data. We train treatment LLMs on names and
+behavior descriptions of fictitious chatbots, but not on examples of dialogue
+with the chatbots. We find that OpenAI's GPT 4o LLM can correctly infer at
+least one chatbot's name after observing example responses characteristic of
+that chatbot. We also find that previously training GPT 4o on descriptions of a
+chatbot's behavior allows it to display behaviors more characteristic of the
+chatbot when iteratively trained to display such behaviors. Our results have
+implications for situational awareness in LLMs and, therefore, for AI safety.
 </summary>
     <author>
-      <name>Angela F. Gao</name>
+      <name>Sohaib Imran</name>
     </author>
     <author>
-      <name>John D. Wilding</name>
+      <name>Rob Lamb</name>
     </author>
     <author>
-      <name>Ettore Biondi</name>
+      <name>Peter M. Atkinson</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.00741v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00741v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.00738v1</id>
+    <updated>2025-08-01T16:08:24Z</updated>
+    <published>2025-08-01T16:08:24Z</published>
+    <title>Tool-Assisted Conformance Checking to Reference Process Models</title>
+    <summary>  Reference models convey best practices and standards. The reference
+frameworks necessitate conformance checks to ensure adherence to established
+guidelines and principles, which is crucial for maintaining quality and
+consistency in various processes. This paper explores automated conformance
+checks for concrete process models against reference models using causal
+dependency analysis of tasks and events. Existing notions of conformance
+checking for process models focus on verifying process execution traces and
+lack the expressiveness and automation needed for semantic model comparison,
+leaving this question unresolved. We integrate our approach into a broader
+semantic framework for defining reference model conformance. We outline an
+algorithm for reference process model conformance checking, evaluate it through
+a case study, and discuss its strengths and limitations. Our research provides
+a tool-assisted solution enhancing accuracy and flexibility in process model
+conformance verification.
+</summary>
+    <author>
+      <name>Bernhard Rumpe</name>
     </author>
     <author>
-      <name>Katherine L. Bouman</name>
+      <name>Max Stachon</name>
     </author>
     <author>
-      <name>Zachary E. Ross</name>
+      <name>Sebastian Stüber</name>
     </author>
-    <link href="http://arxiv.org/abs/2507.23692v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2507.23692v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Valdes Voufo</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.00738v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.00738v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68N30" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="D.2.4" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
