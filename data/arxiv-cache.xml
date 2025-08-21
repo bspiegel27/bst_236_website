@@ -1,591 +1,406 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-08-20T00:54:52Z -->
+<!-- Last updated: 2025-08-21T00:54:10Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-08-19T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">119190</opensearch:totalResults>
+  <updated>2025-08-20T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">119276</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2508.13148v1</id>
-    <updated>2025-08-18T17:58:13Z</updated>
-    <published>2025-08-18T17:58:13Z</published>
-    <title>MDPO: Overcoming the Training-Inference Divide of Masked Diffusion
-  Language Models</title>
-    <summary>  Diffusion language models, as a promising alternative to traditional
-autoregressive (AR) models, enable faster generation and richer conditioning on
-bidirectional context. However, they suffer from a key discrepancy between
-training and inference: during inference, MDLMs progressively reveal the
-structure of the generated sequence by producing fewer and fewer masked tokens,
-whereas this structure is ignored in training as tokens are masked at random.
-Although this discrepancy between training and inference can lead to suboptimal
-performance, it has been largely overlooked by previous works, leaving closing
-this gap between the two stages an open problem. To address this, we frame the
-problem of learning effective denoising trajectories as a sequential
-decision-making problem and use the resulting framework to apply reinforcement
-learning. We propose a novel Masked Diffusion Policy Optimization (MDPO) to
-exploit the Markov property diffusion possesses and explicitly train the model
-under the same progressive refining schedule used at inference. MDPO matches
-the performance of the previous state-of-the-art (SOTA) method with 60x fewer
-gradient updates, while achieving average improvements of 9.6% on MATH500 and
-54.2% on Countdown over SOTA when trained within the same number of weight
-updates. Additionally, we improve the remasking strategy of MDLMs as a plug-in
-inference replacement to overcome the limitation that the model cannot refine
-tokens flexibly. This simple yet effective training-free strategy, what we
-refer to as RCR, consistently improves performance and yields additional gains
-when combined with MDPO. Our findings establish great potential for
-investigating the discrepancy between pre-training and inference of MDLMs.
-Code: https://github.com/autonomousvision/mdpo. Project Page:
-https://cli212.github.io/MDPO/.
+    <id>http://arxiv.org/abs/2508.14023v1</id>
+    <updated>2025-08-19T17:30:29Z</updated>
+    <published>2025-08-19T17:30:29Z</published>
+    <title>Oscillation of delay differential equations via the hyper4 convergence</title>
+    <summary>  A sharp condition is provided to guarantee that the (nontrivial) solutions of
+a DDE of the form $\dot{x}(t)+F(t,x)=0$ $t\geq 0,$ (where $F(t,\cdot)$ is an
+odd-like causal operator) either oscillate, or converge monotonically to zero.
+The method used is based on the convergence of the sequence of
+hyper4-iterations to the Lambert's function.
 </summary>
     <author>
-      <name>Haoyu He</name>
+      <name>George L. Karakostas</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.14023v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.14023v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="39A21 39A12" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.14022v1</id>
+    <updated>2025-08-19T17:28:14Z</updated>
+    <published>2025-08-19T17:28:14Z</published>
+    <title>BLIPs: Bayesian Learned Interatomic Potentials</title>
+    <summary>  Machine Learning Interatomic Potentials (MLIPs) are becoming a central tool
+in simulation-based chemistry. However, like most deep learning models, MLIPs
+struggle to make accurate predictions on out-of-distribution data or when
+trained in a data-scarce regime, both common scenarios in simulation-based
+chemistry. Moreover, MLIPs do not provide uncertainty estimates by
+construction, which are fundamental to guide active learning pipelines and to
+ensure the accuracy of simulation results compared to quantum calculations. To
+address this shortcoming, we propose BLIPs: Bayesian Learned Interatomic
+Potentials. BLIP is a scalable, architecture-agnostic variational Bayesian
+framework for training or fine-tuning MLIPs, built on an adaptive version of
+Variational Dropout. BLIP delivers well-calibrated uncertainty estimates and
+minimal computational overhead for energy and forces prediction at inference
+time, while integrating seamlessly with (equivariant) message-passing
+architectures. Empirical results on simulation-based computational chemistry
+tasks demonstrate improved predictive accuracy with respect to standard MLIPs,
+and trustworthy uncertainty estimates, especially in data-scarse or heavy
+out-of-distribution regimes. Moreover, fine-tuning pretrained MLIPs with BLIP
+yields consistent performance gains and calibrated uncertainties.
+</summary>
+    <author>
+      <name>Dario Coscia</name>
     </author>
     <author>
-      <name>Katrin Renz</name>
+      <name>Pim de Haan</name>
     </author>
     <author>
-      <name>Yong Cao</name>
+      <name>Max Welling</name>
     </author>
-    <author>
-      <name>Andreas Geiger</name>
-    </author>
-    <link href="http://arxiv.org/abs/2508.13148v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13148v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2508.14022v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.14022v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.13136v1</id>
-    <updated>2025-08-18T17:49:25Z</updated>
-    <published>2025-08-18T17:49:25Z</published>
-    <title>The ALPINE-CRISTAL-JWST survey: spatially resolved star formation
-  relations at $z\sim5$</title>
-    <summary>  Star formation governs galaxy evolution, shaping stellar mass assembly and
-gas consumption across cosmic time. The Kennicutt-Schmidt (KS) relation,
-linking star formation rate (SFR) and gas surface densities, is fundamental to
-understand star formation regulation, yet remains poorly constrained at $z &gt; 2$
-due to observational limitations and uncertainties in locally calibrated gas
-tracers. The [CII] $158 {\rm \mu m}$ line has recently emerged as a key probe
-of the cold ISM and star formation in the early Universe. We investigate
-whether the resolved [CII]-SFR and KS relations established at low redshift
-remain valid at $4 &lt; z &lt; 6$ by analysing 13 main-sequence galaxies from the
-ALPINE and CRISTAL surveys, using multi-wavelength data (HST, JWST, ALMA) at
-$\sim2$ kpc resolution. We perform pixel-by-pixel spectral energy distribution
-(SED) modelling with CIGALE on resolution-homogenised images. We develop a
-statistical framework to fit the [CII]-SFR relation that accounts for pixel
-covariance and compare our results to classical fitting methods. We test two
-[CII]-to-gas conversion prescriptions to assess their impact on inferred gas
-surface densities and depletion times. We find a resolved [CII]-SFR relation
-with a slope of $0.87 \pm 0.15$ and intrinsic scatter of $0.19 \pm 0.03$ dex,
-which is shallower and tighter than previous studies at $z\sim5$. The resolved
-KS relation is highly sensitive to the [CII]-to-gas conversion factor: using a
-fixed global $\alpha_{\rm [CII]}$ yields depletion times of $0.5$-$1$ Gyr,
-while a surface brightness-dependent $W_{\rm [CII]}$, places some galaxies with
-high gas density in the starburst regime ($&lt;0.1$ Gyr). Future inputs from both
-simulations and observations are required to better understand how the
-[CII]-to-gas conversion factor depends on local ISM properties. We need to
-break this fundamental limit to properly study the KS relation at $z\gtrsim4$.
+    <id>http://arxiv.org/abs/2508.14021v1</id>
+    <updated>2025-08-19T17:27:47Z</updated>
+    <published>2025-08-19T17:27:47Z</published>
+    <title>Data Compression with Noise Suppression for Inference under Noisy
+  Covariance</title>
+    <summary>  In many fields including cosmology, statistical inference often relies on
+Gaussian likelihoods whose covariance matrices are estimated from a finite
+number of simulations. This finite-sample estimation introduces noise into the
+covariance, which propagates to parameter estimates, a phenomenon known as the
+Dodelson-Schneider (DS) effect, leading to inflated uncertainties. While the
+Massively Optimized Parameter Estimation and Data compression (MOPED) algorithm
+offers lossless Fisher information-preserving compression, it does not mitigate
+the DS effect when the compression matrix itself is derived from noisy
+covariances. In this paper, we propose a modified compression scheme, powered
+MOPED ($p$-MOPED), which suppresses noise propagation by balancing information
+retention and covariance estimate noise reduction through a tunable power-law
+transformation of the sample correlation matrix. We test $p$-MOPED against
+standard and diagonal MOPED on toy models and on cosmological data from the
+Subaru Hyper Suprime-Cam Year 3 weak lensing survey. Our results demonstrate
+that $p$-MOPED consistently outperforms other approaches, especially in regimes
+with limited simulations, offering a robust compression strategy for
+high-dimensional data analyses under practical constraints.
 </summary>
     <author>
-      <name>C. Accard</name>
+      <name>Sunao Sugiyama</name>
     </author>
     <author>
-      <name>M. Béthermin</name>
+      <name>Minsu Park</name>
     </author>
-    <author>
-      <name>M. Boquien</name>
-    </author>
-    <author>
-      <name>V. Buat</name>
-    </author>
-    <author>
-      <name>L. Vallini</name>
-    </author>
-    <author>
-      <name>F. Renaud</name>
-    </author>
-    <author>
-      <name>K. Kraljic</name>
-    </author>
-    <author>
-      <name>M. Aravena</name>
-    </author>
-    <author>
-      <name>P. Cassata</name>
-    </author>
-    <author>
-      <name>E. da Cunha</name>
-    </author>
-    <author>
-      <name>P. Dam</name>
-    </author>
-    <author>
-      <name>I. de Looze</name>
-    </author>
-    <author>
-      <name>M. Dessauges-Zavadsky</name>
-    </author>
-    <author>
-      <name>Y. Dubois</name>
-    </author>
-    <author>
-      <name>A. Faisst</name>
-    </author>
-    <author>
-      <name>Y. Fudamoto</name>
-    </author>
-    <author>
-      <name>M. Ginolfi</name>
-    </author>
-    <author>
-      <name>C. Gruppioni</name>
-    </author>
-    <author>
-      <name>S. Han</name>
-    </author>
-    <author>
-      <name>R. Herrera-Camus</name>
-    </author>
-    <author>
-      <name>H. Inami</name>
-    </author>
-    <author>
-      <name>A. M. Koekemoer</name>
-    </author>
-    <author>
-      <name>B. C. Lemaux</name>
-    </author>
-    <author>
-      <name>J. Li</name>
-    </author>
-    <author>
-      <name>Y. Li</name>
-    </author>
-    <author>
-      <name>B. Mobasher</name>
-    </author>
-    <author>
-      <name>J. Molina</name>
-    </author>
-    <author>
-      <name>A. Nanni</name>
-    </author>
-    <author>
-      <name>M. Palla</name>
-    </author>
-    <author>
-      <name>F. Pozzi</name>
-    </author>
-    <author>
-      <name>M. Relaño</name>
-    </author>
-    <author>
-      <name>M. Romano</name>
-    </author>
-    <author>
-      <name>P. Sawant</name>
-    </author>
-    <author>
-      <name>J. Spilker</name>
-    </author>
-    <author>
-      <name>A. Tsujita</name>
-    </author>
-    <author>
-      <name>E. Veraldi</name>
-    </author>
-    <author>
-      <name>V. Villanueva</name>
-    </author>
-    <author>
-      <name>W. Wang</name>
-    </author>
-    <author>
-      <name>S. K. Yi</name>
-    </author>
-    <author>
-      <name>G. Zamorani</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 13 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.13136v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13136v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.13111v1</id>
-    <updated>2025-08-18T17:18:38Z</updated>
-    <published>2025-08-18T17:18:38Z</published>
-    <title>Causally-Guided Pairwise Transformer -- Towards Foundational Digital
-  Twins in Process Industry</title>
-    <summary>  Foundational modelling of multi-dimensional time-series data in industrial
-systems presents a central trade-off: channel-dependent (CD) models capture
-specific cross-variable dynamics but lack robustness and adaptability as model
-layers are commonly bound to the data dimensionality of the tackled use-case,
-while channel-independent (CI) models offer generality at the cost of modelling
-the explicit interactions crucial for system-level predictive regression tasks.
-To resolve this, we propose the Causally-Guided Pairwise Transformer (CGPT), a
-novel architecture that integrates a known causal graph as an inductive bias.
-The core of CGPT is built around a pairwise modeling paradigm, tackling the
-CD/CI conflict by decomposing the multidimensional data into pairs. The model
-uses channel-agnostic learnable layers where all parameter dimensions are
-independent of the number of variables. CGPT enforces a CD information flow at
-the pair-level and CI-like generalization across pairs. This approach
-disentangles complex system dynamics and results in a highly flexible
-architecture that ensures scalability and any-variate adaptability. We validate
-CGPT on a suite of synthetic and real-world industrial datasets on long-term
-and one-step forecasting tasks designed to simulate common industrial
-complexities. Results demonstrate that CGPT significantly outperforms both CI
-and CD baselines in predictive accuracy and shows competitive performance with
-end-to-end trained CD models while remaining agnostic to the problem
-dimensionality.
-</summary>
-    <author>
-      <name>Michael Mayr</name>
-    </author>
-    <author>
-      <name>Georgios C. Chasparis</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 2 figures, 4 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.13111v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13111v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.13101v1</id>
-    <updated>2025-08-18T17:10:04Z</updated>
-    <published>2025-08-18T17:10:04Z</published>
-    <title>Real-Time Beach Litter Detection and Counting: A Comparative Analysis of
-  RT-DETR Model Variants</title>
-    <summary>  Coastal pollution is a pressing global environmental issue, necessitating
-scalable and automated solutions for monitoring and management. This study
-investigates the efficacy of the Real-Time Detection Transformer (RT-DETR), a
-state-of-the-art, end-to-end object detection model, for the automated
-detection and counting of beach litter. A rigorous comparative analysis is
-conducted between two model variants, RT-DETR-Large (RT-DETR-L) and
-RT-DETR-Extra-Large (RT-DETR-X), trained on a publicly available dataset of
-coastal debris. The evaluation reveals that the RT-DETR-X model achieves
-marginally superior accuracy, with a mean Average Precision at 50\% IoU
-(mAP@50) of 0.816 and a mAP@50-95 of 0.612, compared to the RT-DETR-L model's
-0.810 and 0.606, respectively. However, this minor performance gain is realized
-at a significant computational cost; the RT-DETR-L model demonstrates a
-substantially faster inference time of 20.1 ms versus 34.5 ms for the
-RT-DETR-X. The findings suggest that the RT-DETR-L model offers a more
-practical and efficient solution for real-time, in-field deployment due to its
-superior balance of processing speed and detection accuracy. This research
-provides valuable insights into the application of advanced Transformer-based
-detectors for environmental conservation, highlighting the critical trade-offs
-between model complexity and operational viability.
-</summary>
-    <author>
-      <name>Miftahul Huda</name>
-    </author>
-    <author>
-      <name>Arsyiah Azahra</name>
-    </author>
-    <author>
-      <name>Putri Maulida Chairani</name>
-    </author>
-    <author>
-      <name>Dimas Rizky Ramadhani</name>
-    </author>
-    <author>
-      <name>Nabila Azhari</name>
-    </author>
-    <author>
-      <name>Ade Lailani</name>
-    </author>
-    <link href="http://arxiv.org/abs/2508.13101v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13101v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.13070v1</id>
-    <updated>2025-08-18T16:42:55Z</updated>
-    <published>2025-08-18T16:42:55Z</published>
-    <title>Reinforced Context Order Recovery for Adaptive Reasoning and Planning</title>
-    <summary>  Modern causal language models, followed by rapid developments in discrete
-diffusion models, can now produce a wide variety of interesting and useful
-content. However, these families of models are predominantly trained to output
-tokens with a fixed (left-to-right) or random order, which may deviate from the
-logical order in which tokens are generated originally. In this paper, we
-observe that current causal and diffusion models encounter difficulties in
-problems that require adaptive token generation orders to solve tractably,
-which we characterize with the $\mathcal{V}$-information framework. Motivated
-by this, we propose Reinforced Context Order Recovery (ReCOR), a
-reinforcement-learning-based framework to extract adaptive, data-dependent
-token generation orders from text data without annotations. Self-supervised by
-token prediction statistics, ReCOR estimates the hardness of predicting every
-unfilled token and adaptively selects the next token during both training and
-inference. Experiments on challenging reasoning and planning datasets
-demonstrate the superior performance of ReCOR compared with baselines,
-sometimes outperforming oracle models supervised with the ground-truth order.
-</summary>
-    <author>
-      <name>Long Ma</name>
-    </author>
-    <author>
-      <name>Fangwei Zhong</name>
-    </author>
-    <author>
-      <name>Yizhou Wang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2508.13070v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13070v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.13066v1</id>
-    <updated>2025-08-18T16:40:10Z</updated>
-    <published>2025-08-18T16:40:10Z</published>
-    <title>Double-Peaked Optical Afterglows with X-ray Shallow Decay Inferring a
-  Magnetized Thick Shell Ejecta</title>
-    <summary>  Gamma-ray bursts early afterglows are important tracers for determining the
-radial structure and magnetization of the ejecta. In this paper, we focus on
-GRB 110213A that shows double-peaked optical afterglow lightcurves and the
-shallow decay feature of the X-ray afterglow. We adopt a semi-analytic model
-for the dynamics of forward and reverse shocks generated through an interaction
-between an arbitrary magnetized ejecta with a finite thickness and a stratified
-circumstellar medium. Multiwavelength radiation from forward and reverse shocks
-seen from an arbitrary viewing angle is calculated under a thin-shell
-approximation. Our analysis with multimodal nested sampling methods for GRB
-110213A suggests that the thick shell ejecta naturally explains the shallow
-decay feature of the X-ray afterglow. The combination of the reverse shock
-emission in the strongly magnetized jet and forward shock emission in the
-weakly magnetized circumstellar medium makes the double peak feature of the
-optical afterglows. The estimated low radiative efficiency in the prompt phase
-may be a consequence of the high magnetization of the jet in this case. A
-multi-messenger emission simulator based on the magnetic bullet afterglow model
-is publicly available as the open source Julia package "Magglow".
-</summary>
-    <author>
-      <name>Yo Kusafuka</name>
-    </author>
-    <author>
-      <name>Kaori Obayashi</name>
-    </author>
-    <author>
-      <name>Katsuaki Asano</name>
-    </author>
-    <author>
-      <name>Ryo Yamazaki</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 5 figures, submitted to MNRAS, Magglow is available from
-  https://github.com/yo3-sun/Magglow</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.13066v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13066v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.13064v1</id>
-    <updated>2025-08-18T16:36:27Z</updated>
-    <published>2025-08-18T16:36:27Z</published>
-    <title>Is This News Still Interesting to You?: Lifetime-aware Interest Matching
-  for News Recommendation</title>
-    <summary>  Personalized news recommendation aims to deliver news articles aligned with
-users' interests, serving as a key solution to alleviate the problem of
-information overload on online news platforms. While prior work has improved
-interest matching through refined representations of news and users, the
-following time-related challenges remain underexplored: (C1) leveraging the age
-of clicked news to infer users' interest persistence, and (C2) modeling the
-varying lifetime of news across topics and users. To jointly address these
-challenges, we propose a novel Lifetime-aware Interest Matching framework for
-nEws recommendation, named LIME, which incorporates three key strategies: (1)
-User-Topic lifetime-aware age representation to capture the relative age of
-news with respect to a user-topic pair, (2) Candidate-aware lifetime attention
-for generating temporally aligned user representation, and (3) Freshness-guided
-interest refinement for prioritizing valid candidate news at prediction time.
-Extensive experiments on two real-world datasets demonstrate that LIME
-consistently outperforms a wide range of state-of-the-art news recommendation
-methods, and its model agnostic strategies significantly improve recommendation
-accuracy.
-</summary>
-    <author>
-      <name>Seongeun Ryu</name>
-    </author>
-    <author>
-      <name>Yunyong Ko</name>
-    </author>
-    <author>
-      <name>Sang-Wook Kim</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3746252.3761047</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.1145/3746252.3761047" rel="related"/>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 7 figures, 4 tables, accepted at ACM International
-  Conference on Information and Knowledge Management (CIKM)</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.13064v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13064v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.13053v1</id>
-    <updated>2025-08-18T16:20:19Z</updated>
-    <published>2025-08-18T16:20:19Z</published>
-    <title>A 15 Mpc rotating galaxy filament at redshift z = 0.032</title>
-    <summary>  Understanding the cold atomic hydrogen gas (HI) within cosmic filaments has
-the potential to pin down the relationship between the low density gas in the
-cosmic web and how the galaxies that lie within it grow using this material. We
-report the discovery of a cosmic filament using 14 HI-selected galaxies that
-form a very thin elongated structure of 1.7 Mpc. These galaxies are embedded
-within a much larger cosmic web filament, traced by optical galaxies, that
-spans at least $\sim 15$~Mpc. We find that the spin axes of the HI galaxies are
-significantly more strongly aligned with the cosmic web filament
-($\langle\lvert \cos \psi \rvert\rangle = 0.64 \pm 0.05$) than cosmological
-simulations predict, with the optically-selected galaxies showing alignment to
-a lesser degree ($\langle\lvert \cos \psi \rvert\rangle = 0.55 \pm 0.05$). This
-structure demonstrates that within the cosmic filament, the angular momentum of
-galaxies is closely connected to the large-scale filamentary structure. We also
-find strong evidence that the galaxies are orbiting around the spine of the
-filament, making this one of the largest rotating structures discovered thus
-far, and from which we can infer that there is transfer of angular momentum
-from the filament to the individual galaxies. The abundance of HI galaxies
-along the filament and the low dynamical temperature of the galaxies within the
-filament indicates that this filament is at an early evolutionary stage where
-the imprint of cosmic matter flow on galaxies has been preserved over cosmic
-time.
-</summary>
-    <author>
-      <name>Madalina N. Tudorache</name>
-    </author>
-    <author>
-      <name>S. L. Jung</name>
-    </author>
-    <author>
-      <name>M. J. Jarvis</name>
-    </author>
-    <author>
-      <name>I. Heywood</name>
-    </author>
-    <author>
-      <name>A. A. Ponomareva</name>
-    </author>
-    <author>
-      <name>A. Varasteanu</name>
-    </author>
-    <author>
-      <name>N. Maddox</name>
-    </author>
-    <author>
-      <name>T. Yasin</name>
-    </author>
-    <author>
-      <name>M. Glowacki</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 9 figures, submitted to MNRAS</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.13053v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13053v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 5 figures, comments welcomed!</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.14021v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.14021v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.13037v1</id>
-    <updated>2025-08-18T15:56:10Z</updated>
-    <published>2025-08-18T15:56:10Z</published>
-    <title>Can Large Models Teach Student Models to Solve Mathematical Problems
-  Like Human Beings? A Reasoning Distillation Method via Multi-LoRA Interaction</title>
-    <summary>  Recent studies have demonstrated that Large Language Models (LLMs) have
-strong mathematical reasoning abilities but rely on hundreds of billions of
-parameters. To tackle the challenge of poor reasoning in Small Language Models
-(SLMs), existing methods typically leverage LLMs to generate massive amounts of
-data for cramming training. In psychology, they are akin to System 1 thinking,
-which resolves reasoning problems rapidly based on experience and intuition.
-However, human learning also requires System 2 thinking, where knowledge is
-first acquired and then reinforced through practice. Inspired by such two
-distinct modes of thinking, we propose a novel method based on the multi-LoRA
-Interaction for mathematical reasoning Distillation (LoRID). First, we input
-the question and reasoning of each sample into an LLM to create
-knowledge-enhanced datasets. Subsequently, we train a LoRA block on the student
-model as an Intuitive Reasoner (IR), which directly generates Chain-of-Thoughts
-for problem-solving. Then, to imitate System 2 thinking, we train the Knowledge
-Generator (KG) and Deep Reasoner (DR), respectively. The former outputs only
-knowledge after receiving problems, while the latter uses that knowledge to
-perform reasoning. Finally, to address the randomness in the generation of IR
-and DR, we evaluate whether their outputs are consistent, and the inference
-process needs to be iterated if not. This step can enhance the mathematical
-reasoning ability of SLMs through mutual feedback. Experimental results show
-that LoRID achieves state-of-the-art performance, especially on the GSM8K
-dataset, where it outperforms the second-best method by 2.3%, 16.1%, 2.4%,
-12.3%, and 1.8% accuracy across the five base models, respectively.
+    <id>http://arxiv.org/abs/2508.13967v1</id>
+    <updated>2025-08-19T15:57:55Z</updated>
+    <published>2025-08-19T15:57:55Z</published>
+    <title>A PC Algorithm for Max-Linear Bayesian Networks</title>
+    <summary>  Max-linear Bayesian networks (MLBNs) are a relatively recent class of
+structural equation models which arise when the random variables involved have
+heavy-tailed distributions. Unlike most directed graphical models, MLBNs are
+typically not faithful to d-separation and thus classical causal discovery
+algorithms such as the PC algorithm or greedy equivalence search can not be
+used to accurately recover the true graph structure. In this paper, we begin
+the study of constraint-based discovery algorithms for MLBNs given an oracle
+for testing conditional independence in the true, unknown graph. We show that
+if the oracle is given by the $\ast$-separation criteria in the true graph,
+then the PC algorithm remains consistent despite the presence of additional CI
+statements implied by $\ast$-separation. We also introduce a new causal
+discovery algorithm named "PCstar" which assumes faithfulness to
+$C^\ast$-separation and is able to orient additional edges which cannot be
+oriented with only d- or $\ast$-separation.
 </summary>
     <author>
-      <name>Xinhe Li</name>
+      <name>Carlos Améndola</name>
     </author>
     <author>
-      <name>Jiajun Liu</name>
+      <name>Benjamin Hollering</name>
     </author>
     <author>
-      <name>Peng Wang</name>
+      <name>Francesco Nowell</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IJCAI2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.13037v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13037v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">24 pages, 7 figures, 1 table</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.13967v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13967v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="62H22, 14T90, 05C20, 62R01" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.13013v1</id>
-    <updated>2025-08-18T15:33:09Z</updated>
-    <published>2025-08-18T15:33:09Z</published>
-    <title>EgoTwin: Dreaming Body and View in First Person</title>
-    <summary>  While exocentric video synthesis has achieved great progress, egocentric
-video generation remains largely underexplored, which requires modeling
-first-person view content along with camera motion patterns induced by the
-wearer's body movements. To bridge this gap, we introduce a novel task of joint
-egocentric video and human motion generation, characterized by two key
-challenges: 1) Viewpoint Alignment: the camera trajectory in the generated
-video must accurately align with the head trajectory derived from human motion;
-2) Causal Interplay: the synthesized human motion must causally align with the
-observed visual dynamics across adjacent video frames. To address these
-challenges, we propose EgoTwin, a joint video-motion generation framework built
-on the diffusion transformer architecture. Specifically, EgoTwin introduces a
-head-centric motion representation that anchors the human motion to the head
-joint and incorporates a cybernetics-inspired interaction mechanism that
-explicitly captures the causal interplay between video and motion within
-attention operations. For comprehensive evaluation, we curate a large-scale
-real-world dataset of synchronized text-video-motion triplets and design novel
-metrics to assess video-motion consistency. Extensive experiments demonstrate
-the effectiveness of the EgoTwin framework.
+    <id>http://arxiv.org/abs/2508.13946v1</id>
+    <updated>2025-08-19T15:36:29Z</updated>
+    <published>2025-08-19T15:36:29Z</published>
+    <title>Partial Identification of Causal Effects for Endogenous Continuous
+  Treatments</title>
+    <summary>  No unmeasured confounding is a common assumption when reasoning about
+counterfactual outcomes, but such an assumption may not be plausible in
+observational studies. Sensitivity analysis is often employed to assess the
+robustness of causal conclusions to unmeasured confounding, but existing
+methods are predominantly designed for binary treatments. In this paper, we
+provide natural extensions of two extensively used sensitivity frameworks --
+the Rosenbaum and Marginal sensitivity models -- to the setting of continuous
+exposures. Our generalization replaces scalar sensitivity parameters with
+sensitivity functions that vary with exposure level, enabling richer modeling
+and sharper identification bounds. We develop a unified pseudo-outcome
+regression formulation for bounding the counterfactual dose-response curve
+under both models, and propose corresponding nonparametric estimators which
+have second order bias. These estimators accommodate modern machine learning
+methods for obtaining nuisance parameter estimators, which are shown to achieve
+$L^2$- consistency, minimax rates of convergence under suitable conditions. Our
+resulting estimators of bounds for the counterfactual dose-response curve are
+shown to be consistent and asymptotic normal allowing for a user-specified
+bound on the degree of uncontrolled exposure endogeneity. We also offer a
+geometric interpretation that relates the Rosenbaum and Marginal sensitivity
+model and guides their practical usage in global versus targeted sensitivity
+analysis. The methods are validated through simulations and a real-data
+application on the effect of second-hand smoke exposure on blood lead levels in
+children.
 </summary>
     <author>
-      <name>Jingqiao Xiu</name>
+      <name>Abhinandan Dalal</name>
     </author>
     <author>
-      <name>Fangzhou Hong</name>
+      <name>Eric J. Tchetgen Tchetgen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.13946v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13946v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13941v1</id>
+    <updated>2025-08-19T15:30:57Z</updated>
+    <published>2025-08-19T15:30:57Z</published>
+    <title>A Catalog of M&amp;M Eclipsing Binaries with TESS</title>
+    <summary>  We present a catalog of 1292 low-mass (M&amp;M) short-period eclipsing binaries
+observed by the TESS mission. Eclipsing binaries are useful for many aspects of
+stellar astrophysics, including calibrating stellar models. Catalogs of
+eclipsing binary properties provide context for population-level inferences. In
+this work, we present our selection criteria for our catalog, along with steps
+taken to characterize both the orbital and physical properties of our EBs. We
+further detail crucial steps in vetting our catalog to ensure that the stars in
+our catalog have a high likelihood of being true M&amp;Ms. We compare distributions
+of orbital and physical properties to other relevant datasets. Our sample
+consists primarily of binaries with short-period, circular orbits and often
+manifest as high-mass ratio "twin" M&amp;Ms. We find that M&amp;Ms do not exhibit an
+overdensity of contact binaries, which is different from previous results for
+solar-type binaries. Further, we find a tidal circularization period of
+approximately 2.7 days, which is significantly shorter compared to the
+literature value of 7 days. Finally, we explore the prospects for additional
+companions to our M&amp;Ms. Future avenues include spectroscopic follow-up of
+bright M&amp;Ms to better-characterize low-mass stellar properties and a deeper
+assessment of the presence of tertiary companions.
+</summary>
+    <author>
+      <name>Dominic Oddo</name>
     </author>
     <author>
-      <name>Yicong Li</name>
+      <name>Diana Dragomir</name>
     </author>
     <author>
-      <name>Mengze Li</name>
+      <name>Brian P. Powell</name>
     </author>
     <author>
-      <name>Wentao Wang</name>
+      <name>Veselin B. Kostov</name>
     </author>
     <author>
-      <name>Sirui Han</name>
+      <name>Te Han</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 14 figures. Submitted to APJ, under review</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.13941v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13941v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13940v1</id>
+    <updated>2025-08-19T15:29:57Z</updated>
+    <published>2025-08-19T15:29:57Z</published>
+    <title>Convergence Rates for Realizations of Gaussian Random Variables</title>
+    <summary>  This paper investigates the approximation of Gaussian random variables in
+Banach spaces, focusing on the high-probability bounds for the approximation of
+Gaussian random variables using finitely many observations. We derive
+non-asymptotic error bounds for the approximation of a Gaussian process $ X $
+by its conditional expectation, given finitely many linear functionals.
+Specifically, we quantify the difference between the covariance of $ X $ and
+its finite-dimensional approximation, establishing a direct relationship
+between the quality of the covariance approximation and the convergence of the
+process in the Banach space norm. Our approach avoids the reliance on spectral
+methods or eigenfunction expansions commonly used in Hilbert space settings,
+and instead uses finite, linear observations. This makes our result
+particularly suitable for practical applications in nonparametric statistics,
+machine learning, and Bayesian inference.
+</summary>
+    <author>
+      <name>Daniel Winkle</name>
     </author>
     <author>
-      <name>Liang Pan</name>
+      <name>Ingo Steinwart</name>
     </author>
     <author>
-      <name>Ziwei Liu</name>
+      <name>Bernard Haasdonk</name>
     </author>
-    <link href="http://arxiv.org/abs/2508.13013v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.13013v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2508.13940v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13940v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="Primary 60G15, Secondary 62F15" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13905v1</id>
+    <updated>2025-08-19T15:06:04Z</updated>
+    <published>2025-08-19T15:06:04Z</published>
+    <title>Automated Energy-Aware Time-Series Model Deployment on Embedded FPGAs
+  for Resilient Combined Sewer Overflow Management</title>
+    <summary>  Extreme weather events, intensified by climate change, increasingly challenge
+aging combined sewer systems, raising the risk of untreated wastewater
+overflow. Accurate forecasting of sewer overflow basin filling levels can
+provide actionable insights for early intervention, helping mitigating
+uncontrolled discharge. In recent years, AI-based forecasting methods have
+offered scalable alternatives to traditional physics-based models, but their
+reliance on cloud computing limits their reliability during communication
+outages. To address this, we propose an end-to-end forecasting framework that
+enables energy-efficient inference directly on edge devices. Our solution
+integrates lightweight Transformer and Long Short-Term Memory (LSTM) models,
+compressed via integer-only quantization for efficient on-device execution.
+Moreover, an automated hardware-aware deployment pipeline is used to search for
+optimal model configurations by jointly minimizing prediction error and energy
+consumption on an AMD Spartan-7 XC7S15 FPGA. Evaluated on real-world sewer
+data, the selected 8-bit Transformer model, trained on 24 hours of historical
+measurements, achieves high accuracy (MSE 0.0376) at an energy cost of 0.370 mJ
+per inference. In contrast, the optimal 8-bit LSTM model requires significantly
+less energy (0.009 mJ, over 40x lower) but yields 14.89% worse accuracy (MSE
+0.0432) and much longer training time. This trade-off highlights the need to
+align model selection with deployment priorities, favoring LSTM for ultra-low
+energy consumption or Transformer for higher predictive accuracy. In general,
+our work enables local, energy-efficient forecasting, contributing to more
+resilient combined sewer systems. All code can be found in the GitHub
+Repository (https://github.com/tianheng-ling/EdgeOverflowForecast).
+</summary>
+    <author>
+      <name>Tianheng Ling</name>
+    </author>
+    <author>
+      <name>Vipin Singh</name>
+    </author>
+    <author>
+      <name>Chao Qian</name>
+    </author>
+    <author>
+      <name>Felix Biessmann</name>
+    </author>
+    <author>
+      <name>Gregor Schiele</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 6 figures, 1 table, accepted by the 11th IEEE International
+  Smart Cities Conference</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.13905v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13905v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13904v1</id>
+    <updated>2025-08-19T15:05:55Z</updated>
+    <published>2025-08-19T15:05:55Z</published>
+    <title>Revisiting Diffusion Q-Learning: From Iterative Denoising to One-Step
+  Action Generation</title>
+    <summary>  The generative power of diffusion models (DMs) has recently enabled
+high-performing decision-making algorithms in offline reinforcement learning
+(RL), achieving state-of-the-art results across standard benchmarks. Among
+them, Diffusion Q-Learning (DQL) stands out as a leading method for its
+consistently strong performance. Nevertheless, DQL remains limited in practice
+due to its reliance on multi-step denoising for action generation during both
+training and inference. Although one-step denoising is desirable, simply
+applying it to DQL leads to a drastic performance drop. In this work, we
+revisit DQL and identify its core limitations. We then propose One-Step Flow
+Q-Learning (OFQL), a novel framework that enables efficient one-step action
+generation during both training and inference, without requiring auxiliary
+models, distillation, or multi-phase training. Specifically, OFQL reformulates
+DQL within the sample-efficient Flow Matching (FM) framework. While
+conventional FM induces curved generative trajectories that impede one-step
+generation, OFQL instead learns an average velocity field that facilitates
+direct, accurate action generation. Collectively, OFQL eliminates the need for
+multi-step sampling and recursive gradient updates in DQL, resulting in faster
+and more robust training and inference. Extensive experiments on the D4RL
+benchmark demonstrate that OFQL outperforms DQL and other diffusion-based
+baselines, while substantially reducing both training and inference time
+compared to DQL.
+</summary>
+    <author>
+      <name>Thanh Nguyen</name>
+    </author>
+    <author>
+      <name>Chang D. Yoo</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.13904v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13904v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13890v1</id>
+    <updated>2025-08-19T14:54:20Z</updated>
+    <published>2025-08-19T14:54:20Z</published>
+    <title>Diffusion-Driven High-Dimensional Variable Selection</title>
+    <summary>  Variable selection for high-dimensional, highly correlated data has long been
+a challenging problem, often yielding unstable and unreliable models. We
+propose a resample-aggregate framework that exploits diffusion models' ability
+to generate high-fidelity synthetic data. Specifically, we draw multiple
+pseudo-data sets from a diffusion model fitted to the original data, apply any
+off-the-shelf selector (e.g., lasso or SCAD), and store the resulting inclusion
+indicators and coefficients. Aggregating across replicas produces a stable
+subset of predictors with calibrated stability scores for variable selection.
+Theoretically, we show that the proposed method is selection consistent under
+mild assumptions. Because the generative model imports knowledge from large
+pre-trained weights, the procedure naturally benefits from transfer learning,
+boosting power when the observed sample is small or noisy. We also extend the
+framework of aggregating synthetic data to other model selection problems,
+including graphical model selection, and statistical inference that supports
+valid confidence intervals and hypothesis tests. Extensive simulations show
+consistent gains over the lasso, stability selection, and knockoff baselines,
+especially when predictors are strongly correlated, achieving higher
+true-positive rates and lower false-discovery proportions. By coupling
+diffusion-based data augmentation with principled aggregation, our method
+advances variable selection methodology and broadens the toolkit for
+interpretable, statistically rigorous analysis in complex scientific
+applications.
+</summary>
+    <author>
+      <name>Minjie Wang</name>
+    </author>
+    <author>
+      <name>Xiaotong Shen</name>
+    </author>
+    <author>
+      <name>Wei Pan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.13890v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.13890v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
