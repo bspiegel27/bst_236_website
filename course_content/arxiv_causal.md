@@ -11,7 +11,7 @@ title: Latest Causal Inference Research
 
 This page displays a regularly updated list of the newest research papers about causal inference from arXiv. The list is automatically refreshed daily at midnight.
 
-<div class="last-updated">Last updated: <span id="update-time">2025-08-22 01:10:04 UTC</span></div>
+<div class="last-updated">Last updated: <span id="update-time">2025-08-23 01:07:34 UTC</span></div>
 <div id="loading">Loading latest papers...</div>
 <table id="papers-table">
     <thead>
