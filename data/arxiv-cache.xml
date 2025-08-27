@@ -1,491 +1,666 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-08-26T00:56:02Z -->
+<!-- Last updated: 2025-08-27T00:54:26Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-08-25T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">119478</opensearch:totalResults>
+  <updated>2025-08-26T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">119638</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2508.16577v1</id>
-    <updated>2025-08-22T17:59:40Z</updated>
-    <published>2025-08-22T17:59:40Z</published>
-    <title>MV-RAG: Retrieval Augmented Multiview Diffusion</title>
-    <summary>  Text-to-3D generation approaches have advanced significantly by leveraging
-pretrained 2D diffusion priors, producing high-quality and 3D-consistent
-outputs. However, they often fail to produce out-of-domain (OOD) or rare
-concepts, yielding inconsistent or inaccurate results. To this end, we propose
-MV-RAG, a novel text-to-3D pipeline that first retrieves relevant 2D images
-from a large in-the-wild 2D database and then conditions a multiview diffusion
-model on these images to synthesize consistent and accurate multiview outputs.
-Training such a retrieval-conditioned model is achieved via a novel hybrid
-strategy bridging structured multiview data and diverse 2D image collections.
-This involves training on multiview data using augmented conditioning views
-that simulate retrieval variance for view-specific reconstruction, alongside
-training on sets of retrieved real-world 2D images using a distinctive held-out
-view prediction objective: the model predicts the held-out view from the other
-views to infer 3D consistency from 2D data. To facilitate a rigorous OOD
-evaluation, we introduce a new collection of challenging OOD prompts.
-Experiments against state-of-the-art text-to-3D, image-to-3D, and
-personalization baselines show that our approach significantly improves 3D
-consistency, photorealism, and text adherence for OOD/rare concepts, while
-maintaining competitive performance on standard benchmarks.
+    <id>http://arxiv.org/abs/2508.18265v1</id>
+    <updated>2025-08-25T17:58:17Z</updated>
+    <published>2025-08-25T17:58:17Z</published>
+    <title>InternVL3.5: Advancing Open-Source Multimodal Models in Versatility,
+  Reasoning, and Efficiency</title>
+    <summary>  We introduce InternVL 3.5, a new family of open-source multimodal models that
+significantly advances versatility, reasoning capability, and inference
+efficiency along the InternVL series. A key innovation is the Cascade
+Reinforcement Learning (Cascade RL) framework, which enhances reasoning through
+a two-stage process: offline RL for stable convergence and online RL for
+refined alignment. This coarse-to-fine training strategy leads to substantial
+improvements on downstream reasoning tasks, e.g., MMMU and MathVista. To
+optimize efficiency, we propose a Visual Resolution Router (ViR) that
+dynamically adjusts the resolution of visual tokens without compromising
+performance. Coupled with ViR, our Decoupled Vision-Language Deployment (DvD)
+strategy separates the vision encoder and language model across different GPUs,
+effectively balancing computational load. These contributions collectively
+enable InternVL3.5 to achieve up to a +16.0\% gain in overall reasoning
+performance and a 4.05$\times$ inference speedup compared to its predecessor,
+i.e., InternVL3. In addition, InternVL3.5 supports novel capabilities such as
+GUI interaction and embodied agency. Notably, our largest model, i.e.,
+InternVL3.5-241B-A28B, attains state-of-the-art results among open-source MLLMs
+across general multimodal, reasoning, text, and agentic tasks -- narrowing the
+performance gap with leading commercial models like GPT-5. All models and code
+are publicly released.
 </summary>
     <author>
-      <name>Yosef Dayani</name>
+      <name>Weiyun Wang</name>
     </author>
     <author>
-      <name>Omer Benishu</name>
+      <name>Zhangwei Gao</name>
     </author>
     <author>
-      <name>Sagie Benaim</name>
+      <name>Lixin Gu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://yosefdayani.github.io/MV-RAG</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.16577v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16577v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Hengjun Pu</name>
+    </author>
+    <author>
+      <name>Long Cui</name>
+    </author>
+    <author>
+      <name>Xingguang Wei</name>
+    </author>
+    <author>
+      <name>Zhaoyang Liu</name>
+    </author>
+    <author>
+      <name>Linglin Jing</name>
+    </author>
+    <author>
+      <name>Shenglong Ye</name>
+    </author>
+    <author>
+      <name>Jie Shao</name>
+    </author>
+    <author>
+      <name>Zhaokai Wang</name>
+    </author>
+    <author>
+      <name>Zhe Chen</name>
+    </author>
+    <author>
+      <name>Hongjie Zhang</name>
+    </author>
+    <author>
+      <name>Ganlin Yang</name>
+    </author>
+    <author>
+      <name>Haomin Wang</name>
+    </author>
+    <author>
+      <name>Qi Wei</name>
+    </author>
+    <author>
+      <name>Jinhui Yin</name>
+    </author>
+    <author>
+      <name>Wenhao Li</name>
+    </author>
+    <author>
+      <name>Erfei Cui</name>
+    </author>
+    <author>
+      <name>Guanzhou Chen</name>
+    </author>
+    <author>
+      <name>Zichen Ding</name>
+    </author>
+    <author>
+      <name>Changyao Tian</name>
+    </author>
+    <author>
+      <name>Zhenyu Wu</name>
+    </author>
+    <author>
+      <name>Jingjing Xie</name>
+    </author>
+    <author>
+      <name>Zehao Li</name>
+    </author>
+    <author>
+      <name>Bowen Yang</name>
+    </author>
+    <author>
+      <name>Yuchen Duan</name>
+    </author>
+    <author>
+      <name>Xuehui Wang</name>
+    </author>
+    <author>
+      <name>Songze Li</name>
+    </author>
+    <author>
+      <name>Xiangyu Zhao</name>
+    </author>
+    <author>
+      <name>Haodong Duan</name>
+    </author>
+    <author>
+      <name>Nianchen Deng</name>
+    </author>
+    <author>
+      <name>Bin Fu</name>
+    </author>
+    <author>
+      <name>Yinan He</name>
+    </author>
+    <author>
+      <name>Yi Wang</name>
+    </author>
+    <author>
+      <name>Conghui He</name>
+    </author>
+    <author>
+      <name>Botian Shi</name>
+    </author>
+    <author>
+      <name>Junjun He</name>
+    </author>
+    <author>
+      <name>Yingtong Xiong</name>
+    </author>
+    <author>
+      <name>Han Lv</name>
+    </author>
+    <author>
+      <name>Lijun Wu</name>
+    </author>
+    <author>
+      <name>Wenqi Shao</name>
+    </author>
+    <author>
+      <name>Kaipeng Zhang</name>
+    </author>
+    <author>
+      <name>Huipeng Deng</name>
+    </author>
+    <author>
+      <name>Biqing Qi</name>
+    </author>
+    <author>
+      <name>Jiaye Ge</name>
+    </author>
+    <author>
+      <name>Qipeng Guo</name>
+    </author>
+    <author>
+      <name>Wenwei Zhang</name>
+    </author>
+    <author>
+      <name>Wanli Ouyang</name>
+    </author>
+    <author>
+      <name>Limin Wang</name>
+    </author>
+    <author>
+      <name>Min Dou</name>
+    </author>
+    <author>
+      <name>Xizhou Zhu</name>
+    </author>
+    <author>
+      <name>Tong Lu</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <author>
+      <name>Jifeng Dai</name>
+    </author>
+    <author>
+      <name>Bowen Zhou</name>
+    </author>
+    <author>
+      <name>Weijie Su</name>
+    </author>
+    <author>
+      <name>Kai Chen</name>
+    </author>
+    <author>
+      <name>Yu Qiao</name>
+    </author>
+    <author>
+      <name>Wenhai Wang</name>
+    </author>
+    <author>
+      <name>Gen Luo</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.18265v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18265v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.16573v1</id>
-    <updated>2025-08-22T17:56:01Z</updated>
-    <published>2025-08-22T17:56:01Z</published>
-    <title>ORCA: Mitigating Over-Reliance for Multi-Task Dwell Time Prediction with
-  Causal Decoupling</title>
-    <summary>  Dwell time (DT) is a critical post-click metric for evaluating user
-preference in recommender systems, complementing the traditional click-through
-rate (CTR). Although multi-task learning is widely adopted to jointly optimize
-DT and CTR, we observe that multi-task models systematically collapse their DT
-predictions to the shortest and longest bins, under-predicting the moderate
-durations. We attribute this moderate-duration bin under-representation to
-over-reliance on the CTR-DT spurious correlation, and propose ORCA to address
-it with causal-decoupling. Specifically, ORCA explicitly models and subtracts
-CTR's negative transfer while preserving its positive transfer. We further
-introduce (i) feature-level counterfactual intervention, and (ii) a
-task-interaction module with instance inverse-weighting, weakening CTR-mediated
-effect and restoring direct DT semantics. ORCA is model-agnostic and easy to
-deploy. Experiments show an average 10.6% lift in DT metrics without harming
-CTR. Code is available at
-https://github.com/Chrissie-Law/ORCA-Mitigating-Over-Reliance-for-Multi-Task-Dwell-Time-Prediction-with-Causal-Decoupling.
+    <id>http://arxiv.org/abs/2508.18264v1</id>
+    <updated>2025-08-25T17:57:49Z</updated>
+    <published>2025-08-25T17:57:49Z</published>
+    <title>MMTok: Multimodal Coverage Maximization for Efficient Inference of VLMs</title>
+    <summary>  Vision-Language Models (VLMs) demonstrate impressive performance in
+understanding visual content with language instruction by converting visual
+input to vision tokens. However, redundancy in vision tokens results in the
+degenerated inference efficiency of VLMs. While many algorithms have been
+proposed to reduce the number of vision tokens, most of them apply only
+unimodal information (i.e., vision/text) for pruning and ignore the inherent
+multimodal property of vision-language tasks. Moreover, it lacks a generic
+criterion that can be applied to different modalities. To mitigate this
+limitation, in this work, we propose to leverage both vision and text tokens to
+select informative vision tokens by the criterion of coverage. We first
+formulate the subset selection problem as a maximum coverage problem.
+Afterward, a subset of vision tokens is optimized to cover the text tokens and
+the original set of vision tokens, simultaneously. Finally, a VLM agent can be
+adopted to further improve the quality of text tokens for guiding vision
+pruning. The proposed method MMTok is extensively evaluated on benchmark
+datasets with different VLMs. The comparison illustrates that vision and text
+information are complementary, and combining multimodal information can surpass
+the unimodal baseline with a clear margin. Moreover, under the maximum coverage
+criterion on the POPE dataset, our method achieves a 1.87x speedup while
+maintaining 98.7% of the original performance on LLaVA-NeXT-13B. Furthermore,
+with only four vision tokens, it still preserves 87.7% of the original
+performance on LLaVA-1.5-7B. These results highlight the effectiveness of
+coverage in token selection.
 </summary>
     <author>
-      <name>Huishi Luo</name>
+      <name>Sixun Dong</name>
     </author>
     <author>
-      <name>Fuzhen Zhuang</name>
+      <name>Juhua Hu</name>
     </author>
     <author>
-      <name>Yongchun Zhu</name>
+      <name>Mian Zhang</name>
     </author>
     <author>
-      <name>Yiqing Wu</name>
+      <name>Ming Yin</name>
     </author>
     <author>
-      <name>Bo Kang</name>
+      <name>Yanjie Fu</name>
     </author>
     <author>
-      <name>Ruobing Xie</name>
+      <name>Qi Qian</name>
     </author>
-    <author>
-      <name>Feng Xia</name>
-    </author>
-    <author>
-      <name>Deqing Wang</name>
-    </author>
-    <author>
-      <name>Jin Dong</name>
-    </author>
-    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3746252.3760898</arxiv:doi>
-    <link title="doi" href="http://dx.doi.org/10.1145/3746252.3760898" rel="related"/>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted as a short paper at CIKM 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.16573v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16573v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://project.ironieser.cc/mmtok</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.18264v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18264v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.16556v1</id>
-    <updated>2025-08-22T17:23:25Z</updated>
-    <published>2025-08-22T17:23:25Z</published>
-    <title>Spherical latent space models for social network analysis</title>
-    <summary>  This article introduces a spherical latent space model for social network
-analysis, embedding actors on a hypersphere rather than in Euclidean space as
-in standard latent space models. The spherical geometry facilitates the
-representation of transitive relationships and community structure, naturally
-captures cyclical patterns, and ensures bounded distances, thereby mitigating
-degeneracy issues common in traditional approaches. Bayesian inference is
-performed via Markov chain Monte Carlo methods to estimate both latent
-positions and other model parameters. The approach is demonstrated using two
-benchmark social network datasets, yielding improved model fit and
-interpretability relative to conventional latent space models.
+    <id>http://arxiv.org/abs/2508.18260v1</id>
+    <updated>2025-08-25T17:53:22Z</updated>
+    <published>2025-08-25T17:53:22Z</published>
+    <title>MIRAGE: Scaling Test-Time Inference with Parallel
+  Graph-Retrieval-Augmented Reasoning Chains</title>
+    <summary>  Large reasoning models (LRMs) have shown significant progress in test-time
+scaling through chain-of-thought prompting. Current approaches like search-o1
+integrate retrieval augmented generation (RAG) into multi-step reasoning
+processes but rely on a single, linear reasoning chain while incorporating
+unstructured textual information in a flat, context-agnostic manner. As a
+result, these approaches can lead to error accumulation throughout the
+reasoning chain, which significantly limits its effectiveness in medical
+question-answering (QA) tasks where both accuracy and traceability are critical
+requirements. To address these challenges, we propose MIRAGE (Multi-chain
+Inference with Retrieval-Augmented Graph Exploration), a novel test-time
+scalable reasoning framework that performs dynamic multi-chain inference over
+structured medical knowledge graphs. Specifically, MIRAGE 1) decomposes complex
+queries into entity-grounded sub-questions, 2) executes parallel inference
+chains, 3) retrieves evidence adaptively via neighbor expansion and multi-hop
+traversal, and 4) integrates answers using cross-chain verification to resolve
+contradictions. Experiments on three medical QA benchmarks (GenMedGPT-5k,
+CMCQA, and ExplainCPE) show that MIRAGE consistently outperforms GPT-4o,
+Tree-of-Thought variants, and other retrieval-augmented baselines in both
+automatic and human evaluations. Additionally, MIRAGE improves interpretability
+by generating explicit reasoning chains that trace each factual claim to
+concrete chains within the knowledge graph, making it well-suited for complex
+medical reasoning scenarios. The code will be available for further research.
 </summary>
     <author>
-      <name>Juan Sosa</name>
+      <name>Kaiwen Wei</name>
     </author>
     <author>
-      <name>Carlos Nosa</name>
+      <name>Rui Shan</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">37 pages, 8 figures, 4 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.16556v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16556v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Dongsheng Zou</name>
+    </author>
+    <author>
+      <name>Jianzhong Yang</name>
+    </author>
+    <author>
+      <name>Bi Zhao</name>
+    </author>
+    <author>
+      <name>Junnan Zhu</name>
+    </author>
+    <author>
+      <name>Jiang Zhong</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 8 figures (including tables), plus appendix. Submitted to
+  AAAI 2026</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.18260v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18260v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.2.3; I.2.4; I.2.7" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.16553v1</id>
-    <updated>2025-08-22T17:21:56Z</updated>
-    <published>2025-08-22T17:21:56Z</published>
-    <title>TinyML Towards Industry 4.0: Resource-Efficient Process Monitoring of a
-  Milling Machine</title>
-    <summary>  In the context of industry 4.0, long-serving industrial machines can be
-retrofitted with process monitoring capabilities for future use in a smart
-factory. One possible approach is the deployment of wireless monitoring
-systems, which can benefit substantially from the TinyML paradigm. This work
-presents a complete TinyML flow from dataset generation, to machine learning
-model development, up to implementation and evaluation of a full preprocessing
-and classification pipeline on a microcontroller. After a short review on
-TinyML in industrial process monitoring, the creation of the novel MillingVibes
-dataset is described. The feasibility of a TinyML system for
-structure-integrated process quality monitoring could be shown by the
-development of an 8-bit-quantized convolutional neural network (CNN) model with
-12.59kiB parameter storage. A test accuracy of 100.0% could be reached at
-15.4ms inference time and 1.462mJ per quantized CNN inference on an ARM Cortex
-M4F microcontroller, serving as a reference for future TinyML process
-monitoring solutions.
+    <id>http://arxiv.org/abs/2508.18224v1</id>
+    <updated>2025-08-25T17:22:15Z</updated>
+    <published>2025-08-25T17:22:15Z</published>
+    <title>Flash Sparse Attention: An Alternative Efficient Implementation of
+  Native Sparse Attention Kernel</title>
+    <summary>  Recent progress in sparse attention mechanisms has demonstrated strong
+potential for reducing the computational cost of long-context training and
+inference in large language models (LLMs). Native Sparse Attention (NSA), a
+state-of-the-art approach, introduces natively trainable, hardware-aligned
+sparse attention that delivers substantial system-level performance gains while
+maintaining accuracy comparable to full attention. However, the kernel
+implementation of NSA relies on a query-grouping strategy that is efficient
+only with large Grouped Query Attention (GQA) sizes, whereas modern LLMs
+typically adopt much smaller GQA groups, which limits the applicability of this
+sparse algorithmic advance. In this work, we propose Flash Sparse Attention
+(FSA), which includes an alternative kernel design that enables efficient NSA
+computation across a wide range of popular LLMs with varied smaller GQA group
+sizes on modern GPUs. Compared to vanilla NSA kernel implementation, our
+empirical evaluation demonstrates that FSA achieves (i) up to 3.5$\times$ and
+on average 1.6$\times$ kernel-level latency reduction, (ii) up to 1.25$\times$
+and 1.09$\times$ on average end-to-end training speedup on state-of-the-art
+LLMs, and (iii) up to 1.36$\times$ and 1.11$\times$ on average end-to-end
+prefill speedup on state-of-the-art LLMs. The source code is open-sourced and
+publicly available at
+https://github.com/Relaxed-System-Lab/Flash-Sparse-Attention.
 </summary>
     <author>
-      <name>Tim Langer</name>
+      <name>Ran Yan</name>
     </author>
     <author>
-      <name>Matthias Widra</name>
+      <name>Youhe Jiang</name>
     </author>
     <author>
-      <name>Volkhard Beyer</name>
+      <name>Binhang Yuan</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 5 figures, 1 table</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.16553v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16553v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2508.18224v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18224v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.2.1; I.5.4; C.5.3; C.3" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.16552v1</id>
-    <updated>2025-08-22T17:21:21Z</updated>
-    <published>2025-08-22T17:21:21Z</published>
-    <title>Data Gluttony: Epistemic Risks, Dependent Testing and Data Reuse in
-  Large Datasets</title>
-    <summary>  Large-scale registries have collected vast amounts of data which has enabled
-investigators to efficiently conduct studies of observational data. Common
-practice is for investigators to use all data meeting the inclusion criteria of
-their study to perform their analysis. We term this common practice data
-gluttony. It has apparent formal justification insofar as this approach
-maximizes per-study power. But this comes at a cost: data reuse affects the
-shape of the tail distribution of inferential errors. Using the theory of risk
-orderings we demonstrate how positively dependent testing procedures result in
-strictly riskier distributions of inferential error.
-  We identify two remedies to this state of affairs: research portfolio
-optimization and what we term data temperance. Research portfolio optimization
-requires that we formulate the enterprise of inference in a utility theoretic
-framework: associated to each hypothesis to be evaluated is some utility
-dependent on its truth as well as the impact of the statistical decision
-rendered on the basis of the data. Under certain models of data governance,
-this approach can be used to optimally allocate data usage across multiple
-inferential tasks. On the other hand, data temperance is a more flexible
-strategy for managing the distribution of inferential errors. Data temperance
-is the principle that an investigator use only as much data as is necessary to
-perform the task at hand. This is possible due to the diminishing marginal
-returns in power and precision in sample size. We analyze the effectiveness of
-data temperance at reducing the dependence across testing and develop a theory
-of the capacity of a static database to sustain large numbers of inferential
-tasks with low probability of inducing pairwise dependent testing procedures.
+    <id>http://arxiv.org/abs/2508.18213v1</id>
+    <updated>2025-08-25T17:11:53Z</updated>
+    <published>2025-08-25T17:11:53Z</published>
+    <title>Follow My Hold: Hand-Object Interaction Reconstruction through Geometric
+  Guidance</title>
+    <summary>  We propose a novel diffusion-based framework for reconstructing 3D geometry
+of hand-held objects from monocular RGB images by leveraging hand-object
+interaction as geometric guidance. Our method conditions a latent diffusion
+model on an inpainted object appearance and uses inference-time guidance to
+optimize the object reconstruction, while simultaneously ensuring plausible
+hand-object interactions. Unlike prior methods that rely on extensive
+post-processing or produce low-quality reconstructions, our approach directly
+generates high-quality object geometry during the diffusion process by
+introducing guidance with an optimization-in-the-loop design. Specifically, we
+guide the diffusion model by applying supervision to the velocity field while
+simultaneously optimizing the transformations of both the hand and the object
+being reconstructed. This optimization is driven by multi-modal geometric cues,
+including normal and depth alignment, silhouette consistency, and 2D keypoint
+reprojection. We further incorporate signed distance field supervision and
+enforce contact and non-intersection constraints to ensure physical
+plausibility of hand-object interaction. Our method yields accurate, robust and
+coherent reconstructions under occlusion while generalizing well to in-the-wild
+scenarios.
 </summary>
     <author>
-      <name>Reid Dale</name>
+      <name>Ayce Idil Aytekin</name>
     </author>
     <author>
-      <name>Jordan Rodu</name>
+      <name>Helge Rhodin</name>
     </author>
     <author>
-      <name>Maria E. Currie</name>
+      <name>Rishabh Dabral</name>
     </author>
     <author>
-      <name>Mike Baiocchi</name>
+      <name>Christian Theobalt</name>
     </author>
-    <link href="http://arxiv.org/abs/2508.16552v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16552v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.16513v1</id>
-    <updated>2025-08-22T16:36:52Z</updated>
-    <published>2025-08-22T16:36:52Z</published>
-    <title>Extreme Lithium Depletion in Solar Twins: Challenging Non-Standard
-  Mixing Models</title>
-    <summary>  Lithium (Li) is a powerful tracer of stellar mixing, gradually depleted in
-solar twins by non-standard transport below the convective zone. Here, we
-identify six new solar twins with exceptionally low Li levels that are not
-explained by current non-standard mixing models and, together with our
-previously reported anomalous solar twin HIP 8522, suggest a distinct
-population marked by a violent evolutionary past. Employing high-resolution
-spectra ($R=60,000 - 165,000$), we infer precise stellar parameters and
-chemical compositions, including Li abundances. We consider possible scenarios
-generating enhanced mixing, including planetary engulfment, blue straggler
-stars (BSSs), and early episodic accretion. Our planet engulfment simulations
-indicate that only one star may have engulfed an exoplanet, rapidly depleting
-Li via thermohaline convection. In the BSS scenario, radial velocity data rule
-out binary mass transfer, revealing no stellar companions but instead two new
-exoplanets. If these stars are field BSSs, a binary merger is likely though
-uncertain given that current BSS models focus mostly on stars in open clusters.
-Using pre-main-sequence episodic accretion models, we find that solar-mass
-stars can experience enhanced Li depletion without significant beryllium (Be)
-depletion. This is consistent with the Be abundances measured in two of our
-stars and represents the most plausible scenario, pending Be measurements for
-the remaining stars. These unique stars, together with HIP 8522, represent
-exceptional cases for testing stellar evolution models and probing internal
-mixing processes in Sun-like stars.
-</summary>
-    <author>
-      <name>Isabelle Winnick</name>
-    </author>
-    <author>
-      <name>Jhon Yana Galarza</name>
-    </author>
-    <author>
-      <name>Henrique Reggiani</name>
-    </author>
-    <author>
-      <name>Thiago Ferreira</name>
-    </author>
-    <author>
-      <name>Isabelle Baraffe</name>
-    </author>
-    <author>
-      <name>Diego Lorenzo-Oliveira</name>
-    </author>
-    <author>
-      <name>Micaela Oyague</name>
-    </author>
-    <author>
-      <name>Rita Valle</name>
-    </author>
-    <author>
-      <name>Renzo Trujillo Diaz</name>
-    </author>
-    <author>
-      <name>Nathan Leigh</name>
-    </author>
-    <author>
-      <name>Matias Flores Trivigno</name>
-    </author>
-    <author>
-      <name>Ricardo Lopez-Valdivia</name>
-    </author>
-    <author>
-      <name>Gabriela Carvalho Silva</name>
-    </author>
-    <author>
-      <name>Eder Martioli</name>
-    </author>
-    <author>
-      <name>Helio Perottoni</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">32 pages, 12 figures, 9 tables, submitted to ApJ</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.16513v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16513v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.16491v1</id>
-    <updated>2025-08-22T16:15:53Z</updated>
-    <published>2025-08-22T16:15:53Z</published>
-    <title>Tracking flat bands via phonon-mediated interband scattering</title>
-    <summary>  Flat-band (FB) materials have emerged as promising platforms for exploring
-exotic quantum phases. While numerous candidates have recently been identified
-through spectroscopic techniques such as angle-resolved photoemission
-spectroscopy, central challenges remain on how to tune FBs towards the Fermi
-level $E_F$ and to understand their impact on low-energy excitations probed in
-electronic transport experiments. Here, we show that, by attributing the
-temperature dependence of the electrical resistivity at elevated temperatures
-to electron-phonon interband scattering, one can infer the position of FBs near
-$E_F$ across diverse material classes. As charge carriers scatter off phonons,
-interband transitions into FB states lead to distinctive sub- or superlinear
-resistivity at elevated temperatures, governed by the proximity of the FB to
-$E_F$. Our phenomenological model captures these universal transport behaviors
-observed across several recently studied FB compounds and offers a simple,
-broadly applicable method for detecting flat bands.
-</summary>
-    <author>
-      <name>Fabian Garmroudi</name>
-    </author>
-    <author>
-      <name>Xinlin Yan</name>
-    </author>
-    <author>
-      <name>Silke Paschen</name>
-    </author>
-    <author>
-      <name>Sean M. Thomas</name>
-    </author>
-    <author>
-      <name>Eric D. Bauer</name>
-    </author>
-    <author>
-      <name>Andrej Pustogow</name>
-    </author>
-    <author>
-      <name>Priscila F. S. Rosa</name>
-    </author>
-    <link href="http://arxiv.org/abs/2508.16491v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16491v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2508.16479v1</id>
-    <updated>2025-08-22T15:51:33Z</updated>
-    <published>2025-08-22T15:51:33Z</published>
-    <title>Disentangled Multi-modal Learning of Histology and Transcriptomics for
-  Cancer Characterization</title>
-    <summary>  Histopathology remains the gold standard for cancer diagnosis and prognosis.
-With the advent of transcriptome profiling, multi-modal learning combining
-transcriptomics with histology offers more comprehensive information. However,
-existing multi-modal approaches are challenged by intrinsic multi-modal
-heterogeneity, insufficient multi-scale integration, and reliance on paired
-data, restricting clinical applicability. To address these challenges, we
-propose a disentangled multi-modal framework with four contributions: 1) To
-mitigate multi-modal heterogeneity, we decompose WSIs and transcriptomes into
-tumor and microenvironment subspaces using a disentangled multi-modal fusion
-module, and introduce a confidence-guided gradient coordination strategy to
-balance subspace optimization. 2) To enhance multi-scale integration, we
-propose an inter-magnification gene-expression consistency strategy that aligns
-transcriptomic signals across WSI magnifications. 3) To reduce dependency on
-paired data, we propose a subspace knowledge distillation strategy enabling
-transcriptome-agnostic inference through a WSI-only student model. 4) To
-improve inference efficiency, we propose an informative token aggregation
-module that suppresses WSI redundancy while preserving subspace semantics.
-Extensive experiments on cancer diagnosis, prognosis, and survival prediction
-demonstrate our superiority over state-of-the-art methods across multiple
-settings. Code is available at
-https://github.com/helenypzhang/Disentangled-Multimodal-Learning.
-</summary>
-    <author>
-      <name>Yupei Zhang</name>
-    </author>
-    <author>
-      <name>Xiaofei Wang</name>
-    </author>
-    <author>
-      <name>Anran Liu</name>
-    </author>
-    <author>
-      <name>Lequan Yu</name>
-    </author>
-    <author>
-      <name>Chao Li</name>
-    </author>
-    <link href="http://arxiv.org/abs/2508.16479v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16479v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://aidilayce.github.io/FollowMyHold-page/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.18213v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18213v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.16464v1</id>
-    <updated>2025-08-22T15:30:40Z</updated>
-    <published>2025-08-22T15:30:40Z</published>
-    <title>What makes an entity salient in discourse?</title>
-    <summary>  Entities in discourse vary broadly in salience: main participants, objects
-and locations are noticeable and memorable, while tangential ones are less
-important and quickly forgotten, raising questions about how humans signal and
-infer relative salience. Using a graded operationalization of salience based on
-summary-worthiness in multiple summaries of a discourse, this paper explores
-data from 24 spoken and written genres of English to extract a multifactorial
-complex of overt and implicit linguistic cues, such as recurring subjecthood or
-definiteness, discourse relations and hierarchy across utterances, as well as
-pragmatic functional inferences based on genre and communicative intent.
-Tackling the question 'how is the degree of salience expressed for each and
-every entity mentioned?' our results show that while previous approaches to
-salience all correlate with our salience scores to some extent, no single
-generalization is without exceptions, and the phenomenon cuts across all levels
-of linguistic representation.
+    <id>http://arxiv.org/abs/2508.18212v1</id>
+    <updated>2025-08-25T17:11:28Z</updated>
+    <published>2025-08-25T17:11:28Z</published>
+    <title>Better Language Model-Based Judging Reward Modeling through Scaling
+  Comprehension Boundaries</title>
+    <summary>  The emergence of LM-based judging reward modeling, represented by generative
+reward models, has successfully made reinforcement learning from AI feedback
+(RLAIF) efficient and scalable. To further advance this paradigm, we propose a
+core insight: this form of reward modeling shares fundamental formal
+consistency with natural language inference (NLI), a core task in natural
+language understanding. This reframed perspective points to a key path for
+building superior reward models: scaling the model's comprehension boundaries.
+Pursuing this path, exploratory experiments on NLI tasks demonstrate that the
+slot prediction masked language models (MLMs) incorporating contextual
+explanations achieve significantly better performance compared to mainstream
+autoregressive models. Based on this key finding, we propose ESFP-RM, a
+two-stage LM-based judging reward model that utilizes an explanation based slot
+framework for prediction to fully leverage the advantages of MLMs. Extensive
+experiments demonstrate that in both reinforcement learning from human feedback
+(RLHF) and out-of-distribution (OOD) scenarios, the ESFP-RM framework delivers
+more stable and generalizable reward signals compared to generative reward
+models.
 </summary>
     <author>
-      <name>Amir Zeldes</name>
+      <name>Meiling Ning</name>
     </author>
     <author>
-      <name>Jessica Lin</name>
+      <name>Zhongbao Zhang</name>
     </author>
-    <link href="http://arxiv.org/abs/2508.16464v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16464v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Junda Ye</name>
+    </author>
+    <author>
+      <name>Jiabao Guo</name>
+    </author>
+    <author>
+      <name>Qingyuan Guan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.18212v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18212v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2508.16463v1</id>
-    <updated>2025-08-22T15:25:40Z</updated>
-    <published>2025-08-22T15:25:40Z</published>
-    <title>Modular Embedding Recomposition for Incremental Learning</title>
-    <summary>  The advent of pre-trained Vision-Language Models (VLMs) has significantly
-transformed Continual Learning (CL), mainly due to their zero-shot
-classification abilities. Such proficiency makes VLMs well-suited for
-real-world applications, enabling robust performance on novel unseen classes
-without requiring adaptation. However, fine-tuning remains essential when
-downstream tasks deviate significantly from the pre-training domain. Prior CL
-approaches primarily focus on preserving the zero-shot capabilities of VLMs
-during incremental fine-tuning on a downstream task. We take a step further by
-devising an approach that transforms preservation into enhancement of the
-zero-shot capabilities of VLMs. Our approach, named MoDular Embedding
-Recomposition (MoDER), introduces a modular framework that trains multiple
-textual experts, each specialized in a single seen class, and stores them in a
-foundational hub. At inference time, for each unseen class, we query the hub
-and compose the retrieved experts to synthesize a refined prototype that
-improves classification. We show the effectiveness of our method across two
-popular zero-shot incremental protocols, Class-IL and MTIL, comprising a total
-of 14 datasets. The codebase is available at
-https://github.com/aimagelab/mammoth.
+    <id>http://arxiv.org/abs/2508.18175v1</id>
+    <updated>2025-08-25T16:28:18Z</updated>
+    <published>2025-08-25T16:28:18Z</published>
+    <title>Amortized Sampling with Transferable Normalizing Flows</title>
+    <summary>  Efficient equilibrium sampling of molecular conformations remains a core
+challenge in computational chemistry and statistical inference. Classical
+approaches such as molecular dynamics or Markov chain Monte Carlo inherently
+lack amortization; the computational cost of sampling must be paid in-full for
+each system of interest. The widespread success of generative models has
+inspired interest into overcoming this limitation through learning sampling
+algorithms. Despite performing on par with conventional methods when trained on
+a single system, learned samplers have so far demonstrated limited ability to
+transfer across systems. We prove that deep learning enables the design of
+scalable and transferable samplers by introducing Prose, a 280 million
+parameter all-atom transferable normalizing flow trained on a corpus of peptide
+molecular dynamics trajectories up to 8 residues in length. Prose draws
+zero-shot uncorrelated proposal samples for arbitrary peptide systems,
+achieving the previously intractable transferability across sequence length,
+whilst retaining the efficient likelihood evaluation of normalizing flows.
+Through extensive empirical evaluation we demonstrate the efficacy of Prose as
+a proposal for a variety of sampling algorithms, finding a simple importance
+sampling-based finetuning procedure to achieve superior performance to
+established methods such as sequential Monte Carlo on unseen tetrapeptides. We
+open-source the Prose codebase, model weights, and training dataset, to further
+stimulate research into amortized sampling methods and finetuning objectives.
 </summary>
     <author>
-      <name>Aniello Panariello</name>
+      <name>Charlie B. Tan</name>
     </author>
     <author>
-      <name>Emanuele Frascaroli</name>
+      <name>Majdi Hassan</name>
     </author>
     <author>
-      <name>Pietro Buzzega</name>
+      <name>Leon Klein</name>
     </author>
     <author>
-      <name>Lorenzo Bonicelli</name>
+      <name>Saifuddin Syed</name>
     </author>
     <author>
-      <name>Angelo Porrello</name>
+      <name>Dominique Beaini</name>
     </author>
     <author>
-      <name>Simone Calderara</name>
+      <name>Michael M. Bronstein</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to the 36th British Machine Vision Conference (BMVC 2025),
-  Sheffield, UK</arxiv:comment>
-    <link href="http://arxiv.org/abs/2508.16463v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2508.16463v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Alexander Tong</name>
+    </author>
+    <author>
+      <name>Kirill Neklyudov</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.18175v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18175v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.18167v1</id>
+    <updated>2025-08-25T16:16:42Z</updated>
+    <published>2025-08-25T16:16:42Z</published>
+    <title>DiscussLLM: Teaching Large Language Models When to Speak</title>
+    <summary>  Large Language Models (LLMs) have demonstrated remarkable capabilities in
+understanding and generating human-like text, yet they largely operate as
+reactive agents, responding only when directly prompted. This passivity creates
+an "awareness gap," limiting their potential as truly collaborative partners in
+dynamic human discussions. We introduce $\textit{DiscussLLM}$, a framework
+designed to bridge this gap by training models to proactively decide not just
+$\textit{what}$ to say, but critically, $\textit{when}$ to speak. Our primary
+contribution is a scalable two-stage data generation pipeline that synthesizes
+a large-scale dataset of realistic multi-turn human discussions. Each
+discussion is annotated with one of five intervention types (e.g., Factual
+Correction, Concept Definition) and contains an explicit conversational trigger
+where an AI intervention adds value. By training models to predict a special
+silent token when no intervention is needed, they learn to remain quiet until a
+helpful contribution can be made. We explore two architectural baselines: an
+integrated end-to-end model and a decoupled classifier-generator system
+optimized for low-latency inference. We evaluate these models on their ability
+to accurately time interventions and generate helpful responses, paving the way
+for more situationally aware and proactive conversational AI.
+</summary>
+    <author>
+      <name>Deep Anil Patel</name>
+    </author>
+    <author>
+      <name>Iain Melvin</name>
+    </author>
+    <author>
+      <name>Christopher Malon</name>
+    </author>
+    <author>
+      <name>Martin Renqiang Min</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.18167v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18167v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.18165v1</id>
+    <updated>2025-08-25T16:15:14Z</updated>
+    <published>2025-08-25T16:15:14Z</published>
+    <title>Geometry of effective field theory positivity cones</title>
+    <summary>  Positivity bounds are theoretical constraints on the Wilson coefficients of
+an effective field theory. These bounds emerge from the requirement that a
+given effective field theory must be the low-energy limit of a relativistic
+quantum theory that satisfies the fundamental principles of unitarity,
+locality, and causality. The task of deriving these bounds can be reformulated
+as the geometric problem of finding the extremal representation of a closed
+convex cone~$\mathcal C_W$. More precisely, in the presence of multiple
+particle flavors, the forward-limit positivity cone $\mathcal C_W$ consists of
+all positive semi-definite tensors in $W =\left\{ S \in \mathrm{Sym}^2
+(\mathrm{Sym}^2\, V^*)\oplus \mathrm{Sym}^2 \left({\Lambda}^2 V^*\right) : \tau
+S = S \right\}
+  \subset \mathrm{Sym}^2(V^*\otimes V^*)$, where $\tau$ denotes transposition
+in the second and fourth tensor factor and $V\cong\mathbb{R}^n$, where $n$ is
+the number of flavors. In this work, we solve this question up to three
+flavors, i.e.~$n=3$, proving a full classification of all extremal elements in
+these cases. We furthermore study the implications of our findings, deriving
+the full positivity bounds for amplitudes with and without additional
+symmetries. In the cases with additional symmetries that we consider, we find
+that the so-called elastic bounds are sufficient to give rise to the full
+positivity bounds.
+</summary>
+    <author>
+      <name>Quentin Bonnefoy</name>
+    </author>
+    <author>
+      <name>Vicente Cortés</name>
+    </author>
+    <author>
+      <name>Emanuele Gendy</name>
+    </author>
+    <author>
+      <name>Christophe Grojean</name>
+    </author>
+    <author>
+      <name>Karim Ritter von Merkl</name>
+    </author>
+    <author>
+      <name>Paula Naomi Pilatus</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.18165v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18165v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="52A20, 15B48, 81T12" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.18164v1</id>
+    <updated>2025-08-25T16:13:42Z</updated>
+    <published>2025-08-25T16:13:42Z</published>
+    <title>S2Sent: Nested Selectivity Aware Sentence Representation Learning</title>
+    <summary>  The combination of Transformer-based encoders with contrastive learning
+represents the current mainstream paradigm for sentence representation
+learning. This paradigm is typically based on the hidden states of the last
+Transformer block of the encoder. However, within Transformer-based encoders,
+different blocks exhibit varying degrees of semantic perception ability. From
+the perspective of interpretability, the semantic perception potential of
+knowledge neurons is modulated by stimuli, thus rational cross-block
+representation fusion is a direction worth optimizing. To balance the semantic
+redundancy and loss across block fusion, we propose a sentence representation
+selection mechanism S\textsuperscript{2}Sent, which integrates a parameterized
+nested selector downstream of the Transformer-based encoder. This selector
+performs spatial selection (SS) and nested frequency selection (FS) from a
+modular perspective. The SS innovatively employs a spatial squeeze based
+self-gating mechanism to obtain adaptive weights, which not only achieves
+fusion with low information redundancy but also captures the dependencies
+between embedding features. The nested FS replaces GAP with different DCT basis
+functions to achieve spatial squeeze with low semantic loss. Extensive
+experiments have demonstrated that S\textsuperscript{2}Sent achieves
+significant improvements over baseline methods with negligible additional
+parameters and inference latency, while highlighting high integrability and
+scalability.
+</summary>
+    <author>
+      <name>Jianxiang Zang</name>
+    </author>
+    <author>
+      <name>Nijia Mo</name>
+    </author>
+    <author>
+      <name>Yonda Wei</name>
+    </author>
+    <author>
+      <name>Meiling Ning</name>
+    </author>
+    <author>
+      <name>Hui Liu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.18164v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.18164v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
