@@ -1,556 +1,473 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-09-05T00:52:37Z -->
+<!-- Last updated: 2025-09-06T00:51:16Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-09-04T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">120246</opensearch:totalResults>
+  <updated>2025-09-05T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">120312</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2509.03518v1</id>
-    <updated>2025-09-03T17:59:45Z</updated>
-    <published>2025-09-03T17:59:45Z</published>
-    <title>Can LLMs Lie? Investigation beyond Hallucination</title>
-    <summary>  Large language models (LLMs) have demonstrated impressive capabilities across
-a variety of tasks, but their increasing autonomy in real-world applications
-raises concerns about their trustworthiness. While hallucinations-unintentional
-falsehoods-have been widely studied, the phenomenon of lying, where an LLM
-knowingly generates falsehoods to achieve an ulterior objective, remains
-underexplored. In this work, we systematically investigate the lying behavior
-of LLMs, differentiating it from hallucinations and testing it in practical
-scenarios. Through mechanistic interpretability techniques, we uncover the
-neural mechanisms underlying deception, employing logit lens analysis, causal
-interventions, and contrastive activation steering to identify and control
-deceptive behavior. We study real-world lying scenarios and introduce
-behavioral steering vectors that enable fine-grained manipulation of lying
-tendencies. Further, we explore the trade-offs between lying and end-task
-performance, establishing a Pareto frontier where dishonesty can enhance goal
-optimization. Our findings contribute to the broader discourse on AI ethics,
-shedding light on the risks and potential safeguards for deploying LLMs in
-high-stakes environments. Code and more illustrations are available at
-https://llm-liar.github.io/
+    <id>http://arxiv.org/abs/2509.04439v1</id>
+    <updated>2025-09-04T17:54:19Z</updated>
+    <published>2025-09-04T17:54:19Z</published>
+    <title>ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory</title>
+    <summary>  While inference-time scaling enables LLMs to carry out increasingly long and
+capable reasoning traces, the patterns and insights uncovered during these
+traces are immediately discarded once the context window is reset for a new
+query. External memory is a natural way to persist these discoveries, and
+recent work has shown clear benefits for reasoning-intensive tasks. We see an
+opportunity to make such memories more broadly reusable and scalable by moving
+beyond instance-based memory entries (e.g. exact query/response pairs, or
+summaries tightly coupled with the original problem context) toward
+concept-level memory: reusable, modular abstractions distilled from solution
+traces and stored in natural language. For future queries, relevant concepts
+are selectively retrieved and integrated into the prompt, enabling test-time
+continual learning without weight updates. Our design introduces new strategies
+for abstracting takeaways from rollouts and retrieving entries for new queries,
+promoting reuse and allowing memory to expand with additional experiences. On
+the challenging ARC-AGI benchmark, our method yields a 7.5% relative gain over
+a strong no-memory baseline with performance continuing to scale with inference
+compute. We find abstract concepts to be the most consistent memory design,
+outscoring the baseline at all tested inference compute scales. Moreover, we
+confirm that dynamically updating memory during test-time outperforms an
+otherwise identical fixed memory setting with additional attempts, supporting
+the hypothesis that solving more problems and abstracting more patterns to
+memory enables further solutions in a form of self-improvement. Code available
+at https://github.com/matt-seb-ho/arc_memo.
 </summary>
     <author>
-      <name>Haoran Huan</name>
+      <name>Matthew Ho</name>
     </author>
     <author>
-      <name>Mihir Prabhudesai</name>
+      <name>Chen Si</name>
     </author>
     <author>
-      <name>Mengning Wu</name>
+      <name>Zhaoxiang Feng</name>
     </author>
     <author>
-      <name>Shantanu Jaiswal</name>
+      <name>Fangxu Yu</name>
     </author>
     <author>
-      <name>Deepak Pathak</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Website at https://llm-liar.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03518v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03518v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.03516v1</id>
-    <updated>2025-09-03T17:58:12Z</updated>
-    <published>2025-09-03T17:58:12Z</published>
-    <title>Easier Painting Than Thinking: Can Text-to-Image Models Set the Stage,
-  but Not Direct the Play?</title>
-    <summary>  Text-to-image (T2I) generation aims to synthesize images from textual
-prompts, which jointly specify what must be shown and imply what can be
-inferred, thereby corresponding to two core capabilities: composition and
-reasoning. However, with the emerging advances of T2I models in reasoning
-beyond composition, existing benchmarks reveal clear limitations in providing
-comprehensive evaluations across and within these capabilities. Meanwhile,
-these advances also enable models to handle more complex prompts, whereas
-current benchmarks remain limited to low scene density and simplified
-one-to-one reasoning. To address these limitations, we propose T2I-CoReBench, a
-comprehensive and complex benchmark that evaluates both composition and
-reasoning capabilities of T2I models. To ensure comprehensiveness, we structure
-composition around scene graph elements (instance, attribute, and relation) and
-reasoning around the philosophical framework of inference (deductive,
-inductive, and abductive), formulating a 12-dimensional evaluation taxonomy. To
-increase complexity, driven by the inherent complexities of real-world
-scenarios, we curate each prompt with high compositional density for
-composition and multi-step inference for reasoning. We also pair each prompt
-with a checklist that specifies individual yes/no questions to assess each
-intended element independently to facilitate fine-grained and reliable
-evaluation. In statistics, our benchmark comprises 1,080 challenging prompts
-and around 13,500 checklist questions. Experiments across 27 current T2I models
-reveal that their composition capability still remains limited in complex
-high-density scenarios, while the reasoning capability lags even further behind
-as a critical bottleneck, with all models struggling to infer implicit elements
-from prompts. Our project page: https://t2i-corebench.github.io/.
-</summary>
-    <author>
-      <name>Ouxiang Li</name>
+      <name>Zhijian Liu</name>
     </author>
     <author>
-      <name>Yuan Wang</name>
+      <name>Zhiting Hu</name>
     </author>
     <author>
-      <name>Xinting Hu</name>
+      <name>Lianhui Qin</name>
     </author>
-    <author>
-      <name>Huijuan Huang</name>
-    </author>
-    <author>
-      <name>Rui Chen</name>
-    </author>
-    <author>
-      <name>Jiarong Ou</name>
-    </author>
-    <author>
-      <name>Xin Tao</name>
-    </author>
-    <author>
-      <name>Pengfei Wan</name>
-    </author>
-    <author>
-      <name>Fuli Feng</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://t2i-corebench.github.io/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03516v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03516v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.03512v1</id>
-    <updated>2025-09-03T17:52:16Z</updated>
-    <published>2025-09-03T17:52:16Z</published>
-    <title>Bayesian Multivariate Sparse Functional PCA</title>
-    <summary>  Functional Principal Components Analysis (FPCA) provides a parsimonious,
-semi-parametric model for multivariate, sparsely-observed functional data.
-Frequentist FPCA approaches estimate principal components (PCs) from the data,
-then condition on these estimates in subsequent analyses. As an alternative, we
-propose a fully Bayesian inferential framework for multivariate, sparse
-functional data (MSFAST) which explicitly models the PCs and incorporates their
-uncertainty. MSFAST builds upon the FAST approach to FPCA for univariate,
-densely-observed functional data. Like FAST, MSFAST represents PCs using
-orthonormal splines, samples the orthonormal spline coefficients using
-parameter expansion, and enforces eigenvalue ordering during model fit. MSFAST
-extends FAST to multivariate, sparsely-observed data by (1) standardizing each
-functional covariate to mitigate poor posterior conditioning due to disparate
-scales; (2) using a better-suited orthogonal spline basis; (3) parallelizing
-likelihood calculations over covariates; (4) updating parameterizations and
-priors for computational stability; (5) using a Procrustes-based posterior
-alignment procedure; and (6) providing efficient prediction routines. We
-evaluated MSFAST alongside existing implementations using simulations. MSFAST
-produces uniquely valid inferences and accurate estimates, particularly for
-smaller signals. MSFAST is motivated by and applied to a study of child growth,
-with an accompanying vignette illustrating the implementation step-by-step.
-</summary>
-    <author>
-      <name>Joseph Sartini</name>
-    </author>
-    <author>
-      <name>Scott Zeger</name>
-    </author>
-    <author>
-      <name>Ciprian Crainiceanu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">24 pages, 7 figures for main text. Appendix contains supplemental
-  material</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03512v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03512v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.03505v1</id>
-    <updated>2025-09-03T17:39:08Z</updated>
-    <published>2025-09-03T17:39:08Z</published>
-    <title>LimiX: Unleashing Structured-Data Modeling Capability for Generalist
-  Intelligence</title>
-    <summary>  We argue that progress toward general intelligence requires complementary
-foundation models grounded in language, the physical world, and structured
-data. This report presents LimiX, the first installment of our large
-structured-data models (LDMs). LimiX treats structured data as a joint
-distribution over variables and missingness, thus capable of addressing a wide
-range of tabular tasks through query-based conditional prediction via a single
-model. LimiX is pretrained using masked joint-distribution modeling with an
-episodic, context-conditional objective, where the model predicts for query
-subsets conditioned on dataset-specific contexts, supporting rapid,
-training-free adaptation at inference. We evaluate LimiX across 10 large
-structured-data benchmarks with broad regimes of sample size, feature
-dimensionality, class number, categorical-to-numerical feature ratio,
-missingness, and sample-to-feature ratios. With a single model and a unified
-interface, LimiX consistently surpasses strong baselines including
-gradient-boosting trees, deep tabular networks, recent tabular foundation
-models, and automated ensembles, as shown in Figure 1 and Figure 2. The
-superiority holds across a wide range of tasks, such as classification,
-regression, missing value imputation, and data generation, often by substantial
-margins, while avoiding task-specific architectures or bespoke training per
-task. All LimiX models are publicly accessible under Apache 2.0.
-</summary>
-    <author>
-      <name>Xingxuan Zhang</name>
-    </author>
-    <author>
-      <name>Gang Ren</name>
-    </author>
-    <author>
-      <name>Han Yu</name>
-    </author>
-    <author>
-      <name>Hao Yuan</name>
-    </author>
-    <author>
-      <name>Hui Wang</name>
-    </author>
-    <author>
-      <name>Jiansheng Li</name>
-    </author>
-    <author>
-      <name>Jiayun Wu</name>
-    </author>
-    <author>
-      <name>Lang Mo</name>
-    </author>
-    <author>
-      <name>Li Mao</name>
-    </author>
-    <author>
-      <name>Mingchao Hao</name>
-    </author>
-    <author>
-      <name>Ningbo Dai</name>
-    </author>
-    <author>
-      <name>Renzhe Xu</name>
-    </author>
-    <author>
-      <name>Shuyang Li</name>
-    </author>
-    <author>
-      <name>Tianyang Zhang</name>
-    </author>
-    <author>
-      <name>Yue He</name>
-    </author>
-    <author>
-      <name>Yuanrui Wang</name>
-    </author>
-    <author>
-      <name>Yunjia Zhang</name>
-    </author>
-    <author>
-      <name>Zijing Xu</name>
-    </author>
-    <author>
-      <name>Dongzhe Li</name>
-    </author>
-    <author>
-      <name>Fang Gao</name>
-    </author>
-    <author>
-      <name>Hao Zou</name>
-    </author>
-    <author>
-      <name>Jiandong Liu</name>
-    </author>
-    <author>
-      <name>Jiashuo Liu</name>
-    </author>
-    <author>
-      <name>Jiawei Xu</name>
-    </author>
-    <author>
-      <name>Kaijie Cheng</name>
-    </author>
-    <author>
-      <name>Kehan Li</name>
-    </author>
-    <author>
-      <name>Linjun Zhou</name>
-    </author>
-    <author>
-      <name>Qing Li</name>
-    </author>
-    <author>
-      <name>Shaohua Fan</name>
-    </author>
-    <author>
-      <name>Xiaoyu Lin</name>
-    </author>
-    <author>
-      <name>Xinyan Han</name>
-    </author>
-    <author>
-      <name>Xuanyue Li</name>
-    </author>
-    <author>
-      <name>Yan Lu</name>
-    </author>
-    <author>
-      <name>Yuan Xue</name>
-    </author>
-    <author>
-      <name>Yuanyuan Jiang</name>
-    </author>
-    <author>
-      <name>Zimu Wang</name>
-    </author>
-    <author>
-      <name>Zhenlei Wang</name>
-    </author>
-    <author>
-      <name>Peng Cui</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">56 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03505v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03505v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2509.04439v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04439v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.03498v1</id>
-    <updated>2025-09-03T17:29:50Z</updated>
-    <published>2025-09-03T17:29:50Z</published>
-    <title>OneCAT: Decoder-Only Auto-Regressive Model for Unified Understanding and
-  Generation</title>
-    <summary>  We introduce OneCAT, a unified multimodal model that seamlessly integrates
-understanding, generation, and editing within a novel, pure decoder-only
-transformer architecture. Our framework uniquely eliminates the need for
-external components such as Vision Transformers (ViT) or vision tokenizer
-during inference, leading to significant efficiency gains, especially for
-high-resolution inputs. This is achieved through a modality-specific
-Mixture-of-Experts (MoE) structure trained with a single autoregressive (AR)
-objective, which also natively supports dynamic resolutions. Furthermore, we
-pioneer a multi-scale visual autoregressive mechanism within the Large Language
-Model (LLM) that drastically reduces decoding steps compared to diffusion-based
-methods while maintaining state-of-the-art performance. Our findings
-demonstrate the powerful potential of pure autoregressive modeling as a
-sufficient and elegant foundation for unified multimodal intelligence. As a
-result, OneCAT sets a new performance standard, outperforming existing
-open-source unified multimodal models across benchmarks for multimodal
-generation, editing, and understanding.
+    <id>http://arxiv.org/abs/2509.04437v1</id>
+    <updated>2025-09-04T17:53:45Z</updated>
+    <published>2025-09-04T17:53:45Z</published>
+    <title>From Lines to Shapes: Geometric-Constrained Segmentation of X-Ray
+  Collimators via Hough Transform</title>
+    <summary>  Collimation in X-ray imaging restricts exposure to the region-of-interest
+(ROI) and minimizes the radiation dose applied to the patient. The detection of
+collimator shadows is an essential image-based preprocessing step in digital
+radiography posing a challenge when edges get obscured by scattered X-ray
+radiation. Regardless, the prior knowledge that collimation forms
+polygonal-shaped shadows is evident. For this reason, we introduce a deep
+learning-based segmentation that is inherently constrained to its geometry. We
+achieve this by incorporating a differentiable Hough transform-based network to
+detect the collimation borders and enhance its capability to extract the
+information about the ROI center. During inference, we combine the information
+of both tasks to enable the generation of refined, line-constrained
+segmentation masks. We demonstrate robust reconstruction of collimated regions
+achieving median Hausdorff distances of 4.3-5.0mm on diverse test sets of real
+Xray images. While this application involves at most four shadow borders, our
+method is not fundamentally limited by a specific number of edges.
 </summary>
     <author>
-      <name>Han Li</name>
+      <name>Benjamin El-Zein</name>
     </author>
     <author>
-      <name>Xinyu Peng</name>
+      <name>Dominik Eckert</name>
     </author>
     <author>
-      <name>Yaoming Wang</name>
+      <name>Andreas Fieselmann</name>
     </author>
     <author>
-      <name>Zelin Peng</name>
+      <name>Christopher Syben</name>
     </author>
     <author>
-      <name>Xin Chen</name>
+      <name>Ludwig Ritschl</name>
     </author>
     <author>
-      <name>Rongxiang Weng</name>
+      <name>Steffen Kappler</name>
     </author>
     <author>
-      <name>Jingang Wang</name>
+      <name>Sebastian Stober</name>
     </author>
-    <author>
-      <name>Xunliang Cai</name>
-    </author>
-    <author>
-      <name>Wenrui Dai</name>
-    </author>
-    <author>
-      <name>Hongkai Xiong</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">technical report</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03498v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03498v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2509.04437v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04437v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.03494v1</id>
-    <updated>2025-09-03T17:23:24Z</updated>
-    <published>2025-09-03T17:23:24Z</published>
-    <title>Parameter-Efficient Adaptation of mPLUG-Owl2 via Pixel-Level Visual
-  Prompts for NR-IQA</title>
-    <summary>  In this paper, we propose a novel parameter-efficient adaptation method for
-No- Reference Image Quality Assessment (NR-IQA) using visual prompts optimized
-in pixel-space. Unlike full fine-tuning of Multimodal Large Language Models
-(MLLMs), our approach trains only 600K parameters at most (&lt; 0.01% of the base
-model), while keeping the underlying model fully frozen. During inference,
-these visual prompts are combined with images via addition and processed by
-mPLUG-Owl2 with the textual query "Rate the technical quality of the image."
-Evaluations across distortion types (synthetic, realistic, AI-generated) on
-KADID- 10k, KonIQ-10k, and AGIQA-3k demonstrate competitive performance against
-full finetuned methods and specialized NR-IQA models, achieving 0.93 SRCC on
-KADID-10k. To our knowledge, this is the first work to leverage pixel-space
-visual prompts for NR-IQA, enabling efficient MLLM adaptation for low-level
-vision tasks. The source code is publicly available at https: // github. com/
-yahya-ben/ mplug2-vp-for-nriqa .
+    <id>http://arxiv.org/abs/2509.04415v1</id>
+    <updated>2025-09-04T17:37:35Z</updated>
+    <published>2025-09-04T17:37:35Z</published>
+    <title>Interpretable Clustering with Adaptive Heterogeneous Causal Structure
+  Learning in Mixed Observational Data</title>
+    <summary>  Understanding causal heterogeneity is essential for scientific discovery in
+domains such as biology and medicine. However, existing methods lack causal
+awareness, with insufficient modeling of heterogeneity, confounding, and
+observational constraints, leading to poor interpretability and difficulty
+distinguishing true causal heterogeneity from spurious associations. We propose
+an unsupervised framework, HCL (Interpretable Causal Mechanism-Aware Clustering
+with Adaptive Heterogeneous Causal Structure Learning), that jointly infers
+latent clusters and their associated causal structures from mixed-type
+observational data without requiring temporal ordering, environment labels,
+interventions or other prior knowledge. HCL relaxes the homogeneity and
+sufficiency assumptions by introducing an equivalent representation that
+encodes both structural heterogeneity and confounding. It further develops a
+bi-directional iterative strategy to alternately refine causal clustering and
+structure learning, along with a self-supervised regularization that balance
+cross-cluster universality and specificity. Together, these components enable
+convergence toward interpretable, heterogeneous causal patterns. Theoretically,
+we show identifiability of heterogeneous causal structures under mild
+conditions. Empirically, HCL achieves superior performance in both clustering
+and structure learning tasks, and recovers biologically meaningful mechanisms
+in real-world single-cell perturbation data, demonstrating its utility for
+discovering interpretable, mechanism-level causal heterogeneity.
 </summary>
     <author>
-      <name>Yahya Benmahane</name>
+      <name>Wenrui Li</name>
     </author>
     <author>
-      <name>Mohammed El Hassouni</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.03494v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03494v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.03477v1</id>
-    <updated>2025-09-03T16:56:27Z</updated>
-    <published>2025-09-03T16:56:27Z</published>
-    <title>Robult: Leveraging Redundancy and Modality Specific Features for Robust
-  Multimodal Learning</title>
-    <summary>  Addressing missing modalities and limited labeled data is crucial for
-advancing robust multimodal learning. We propose Robult, a scalable framework
-designed to mitigate these challenges by preserving modality-specific
-information and leveraging redundancy through a novel information-theoretic
-approach. Robult optimizes two core objectives: (1) a soft Positive-Unlabeled
-(PU) contrastive loss that maximizes task-relevant feature alignment while
-effectively utilizing limited labeled data in semi-supervised settings, and (2)
-a latent reconstruction loss that ensures unique modality-specific information
-is retained. These strategies, embedded within a modular design, enhance
-performance across various downstream tasks and ensure resilience to incomplete
-modalities during inference. Experimental results across diverse datasets
-validate that Robult achieves superior performance over existing approaches in
-both semi-supervised learning and missing modality contexts. Furthermore, its
-lightweight design promotes scalability and seamless integration with existing
-architectures, making it suitable for real-world multimodal applications.
-</summary>
-    <author>
-      <name>Duy A. Nguyen</name>
+      <name>Qinghao Zhang</name>
     </author>
     <author>
-      <name>Abhi Kamboj</name>
+      <name>Xiaowo Wang</name>
     </author>
-    <author>
-      <name>Minh N. Do</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted and presented at IJCAI 2025 in Montreal, Canada</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03477v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03477v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2509.04415v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04415v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.04406v1</id>
+    <updated>2025-09-04T17:24:31Z</updated>
+    <published>2025-09-04T17:24:31Z</published>
+    <title>Few-step Flow for 3D Generation via Marginal-Data Transport Distillation</title>
+    <summary>  Flow-based 3D generation models typically require dozens of sampling steps
+during inference. Though few-step distillation methods, particularly
+Consistency Models (CMs), have achieved substantial advancements in
+accelerating 2D diffusion models, they remain under-explored for more complex
+3D generation tasks. In this study, we propose a novel framework, MDT-dist, for
+few-step 3D flow distillation. Our approach is built upon a primary objective:
+distilling the pretrained model to learn the Marginal-Data Transport. Directly
+learning this objective needs to integrate the velocity fields, while this
+integral is intractable to be implemented. Therefore, we propose two
+optimizable objectives, Velocity Matching (VM) and Velocity Distillation (VD),
+to equivalently convert the optimization target from the transport level to the
+velocity and the distribution level respectively. Velocity Matching (VM) learns
+to stably match the velocity fields between the student and the teacher, but
+inevitably provides biased gradient estimates. Velocity Distillation (VD)
+further enhances the optimization process by leveraging the learned velocity
+fields to perform probability density distillation. When evaluated on the
+pioneer 3D generation framework TRELLIS, our method reduces sampling steps of
+each flow transformer from 25 to 1 or 2, achieving 0.68s (1 step x 2) and 0.94s
+(2 steps x 2) latency with 9.0x and 6.5x speedup on A800, while preserving high
+visual and geometric fidelity. Extensive experiments demonstrate that our
+method significantly outperforms existing CM distillation methods, and enables
+TRELLIS to achieve superior performance in few-step 3D generation.
+</summary>
+    <author>
+      <name>Zanwei Zhou</name>
+    </author>
+    <author>
+      <name>Taoran Yi</name>
+    </author>
+    <author>
+      <name>Jiemin Fang</name>
+    </author>
+    <author>
+      <name>Chen Yang</name>
+    </author>
+    <author>
+      <name>Lingxi Xie</name>
+    </author>
+    <author>
+      <name>Xinggang Wang</name>
+    </author>
+    <author>
+      <name>Wei Shen</name>
+    </author>
+    <author>
+      <name>Qi Tian</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://github.com/Zanue/MDT-dist</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.04406v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04406v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.03458v1</id>
-    <updated>2025-09-03T16:33:04Z</updated>
-    <published>2025-09-03T16:33:04Z</published>
-    <title>Comparison of Halo Model and Simulation Predictions for Projected-Field
-  Kinematic Sunyaev-Zel'dovich Cross-Correlations</title>
-    <summary>  The kinematic Sunyaev-Zel'dovich (kSZ) effect in the cosmic microwave
-background (CMB) is a powerful probe of gas physics and large-scale structure
-(LSS) in our universe. We consider the "projected-field" kSZ estimator, which
-involves cross-correlating a foreground-cleaned, filtered, squared CMB
-temperature map with an LSS tracer, and requires no individual tracer
-redshifts. We compare $\verb|class_sz|$ halo model calculations of
-projected-field kSZ cross-correlations with measurements of these signals from
-the Websky numerical simulations. We cross-correlate halo density maps from
-Websky with various CMB secondary signals. We first validate our halo model by
-comparing its predictions for thermal SZ (tSZ) and patchy screening ($\tau$)
-cross-correlations to measurements of these signals from Websky. We consider
-three different halo redshift ranges in our comparisons. We also construct our
-own kSZ, tSZ, and $\tau$ maps to validate the form of the relevant profiles.
-Following the tSZ and $\tau$ validation, we compare projected-field kSZ
-calculations between the halo model and the simulations. We use filters
-constructed for $\textit{Planck}$ and the Simons Observatory (SO) to assess the
-accuracy of the halo-model kSZ predictions for experiments of differing
-sensitivity. Overall, we find good agreement, particularly at $\textit{Planck}$
-sensitivity. However, we find an $\approx$ 20$\%$ difference between our halo
-model and the simulations for SO, which significantly exceeds the predicted
-error bars. We note that our halo model includes only the dominant expected
-term in the projected-field kSZ signal; the magnitude of the difference between
-our model and the simulations is consistent with previous predictions for terms
-arising from other contractions in the theory calculation. These terms will
-need to be included to obtain unbiased inference from upcoming projected-field
-kSZ measurements.
+    <id>http://arxiv.org/abs/2509.04405v1</id>
+    <updated>2025-09-04T17:18:04Z</updated>
+    <published>2025-09-04T17:18:04Z</published>
+    <title>Generation of Lognormal Synthetic Lyman-$α$ Forest Spectra for
+  $P_{1D}$ Analysis</title>
+    <summary>  The one-dimensional flux power spectrum (P1D) of the Lyman-$\alpha$ forest
+probes small-scale structure in the intergalactic medium (IGM) and is therefore
+sensitive to a variety of cosmological and astrophysical parameters. These
+include the amplitude and shape of the matter power spectrum, the thermal
+history of the IGM, the sum of neutrino masses, and potential small-scale
+fluctuations due to the nature of dark matter. However, P1D is also highly
+sensitive to observational and instrumental systematics, making accurate
+synthetic spectra essential for validating analyses and quantifying these
+effects, especially in high-volume surveys like the Dark Energy Spectroscopic
+Instrument (DESI). We present an efficient lognormal mock framework for
+generating one-dimensional Lyman-$\alpha$ forest spectra tailored for P1D
+analysis. Our method captures the redshift evolution of the mean transmitted
+flux and the scale-dependent shape and amplitude of the one-dimensional flux
+power spectrum by tuning Gaussian field correlations and transformation
+parameters. Across the DESI Early Data Release (EDR) redshift range ($2.0 \leq
+z \leq 3.8$), and a wide range of scales ($10^{-4}$ s km$^{-1} \leq k \leq 1.0$
+s km$^{-1}$), our mocks recover the mean flux evolution with redshift to
+sub-percent accuracy, and the P1D at the percent level. Additionally, we
+discuss potential extensions of this framework, such as the incorporation of
+astrophysical contaminants, continuum uncertainties, and instrumental effects.
+Such improvements would expand its utility in ongoing and upcoming surveys and
+enable a broader range of validation efforts and systematics studies for P1D
+inference and precision cosmology.
 </summary>
     <author>
-      <name>Michael Jacob Rodriguez</name>
+      <name>Meagan Herbold</name>
     </author>
     <author>
-      <name>Aleksandra Kusiak</name>
+      <name>Naim Göksel Karaçaylı</name>
     </author>
     <author>
-      <name>Shivam Pandey</name>
+      <name>Paul Martini</name>
     </author>
-    <author>
-      <name>J. Colin Hill</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.03458v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03458v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages, 5 figures, 1 table, prepared for submission to JCAP</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.04405v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04405v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.03456v1</id>
-    <updated>2025-09-03T16:25:45Z</updated>
-    <published>2025-09-03T16:25:45Z</published>
-    <title>Off-Policy Learning in Large Action Spaces: Optimization Matters More
-  Than Estimation</title>
-    <summary>  Off-policy evaluation (OPE) and off-policy learning (OPL) are foundational
-for decision-making in offline contextual bandits. Recent advances in OPL
-primarily optimize OPE estimators with improved statistical properties,
-assuming that better estimators inherently yield superior policies. Although
-theoretically justified, we argue this estimator-centric approach neglects a
-critical practical obstacle: challenging optimization landscapes. In this
-paper, we provide theoretical insights and extensive empirical evidence showing
-that current OPL methods encounter severe optimization issues, particularly as
-action spaces become large. We demonstrate that simpler weighted log-likelihood
-objectives enjoy substantially better optimization properties and still recover
-competitive, often superior, learned policies. Our findings emphasize the
-necessity of explicitly addressing optimization considerations in the
-development of OPL algorithms for large action spaces.
+    <id>http://arxiv.org/abs/2509.04399v1</id>
+    <updated>2025-09-04T17:10:15Z</updated>
+    <published>2025-09-04T17:10:15Z</published>
+    <title>Leveraging Equivariances and Symmetries in the Control Barrier Function
+  Synthesis</title>
+    <summary>  The synthesis of Control Barrier Functions (CBFs) often involves demanding
+computations or a meticulous construction. However, structural properties of
+the system dynamics and constraints have the potential to mitigate these
+challenges. In this paper, we explore how equivariances in the dynamics,
+loosely speaking a form of symmetry, can be leveraged in the CBF synthesis.
+Although CBFs are generally not inherently symmetric, we show how equivariances
+in the dynamics and symmetries in the constraints induce symmetries in CBFs
+derived through reachability analysis. This insight allows us to infer their
+CBF values across the entire domain from their values on a subset, leading to
+significant computational savings. Interestingly, equivariances can be even
+leveraged to the CBF synthesis for non-symmetric constraints. Specifically, we
+show how a partially known CBF can be leveraged together with equivariances to
+construct a CBF for various new constraints. Throughout the paper, we provide
+examples illustrating the theoretical findings. Furthermore, a numerical study
+investigates the computational gains from invoking equivariances into the CBF
+synthesis.
 </summary>
     <author>
-      <name>Imad Aouali</name>
+      <name>Adrian Wiltz</name>
     </author>
     <author>
-      <name>Otmane Sakhi</name>
+      <name>Dimos V. Dimarogonas</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Recsys '25, CONSEQUENCES: Causality, Counterfactuals &amp; Sequential
-  Decision-Making Workshop</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03456v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03456v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.04399v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04399v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.04398v1</id>
+    <updated>2025-09-04T17:10:01Z</updated>
+    <published>2025-09-04T17:10:01Z</published>
+    <title>IPA: An Information-Preserving Input Projection Framework for Efficient
+  Foundation Model Adaptation</title>
+    <summary>  Parameter-efficient fine-tuning (PEFT) methods, such as LoRA, reduce
+adaptation cost by injecting low-rank updates into pretrained weights. However,
+LoRA's down-projection is randomly initialized and data-agnostic, discarding
+potentially useful information. Prior analyses show that this projection
+changes little during training, while the up-projection carries most of the
+adaptation, making the random input compression a performance bottleneck. We
+propose IPA, a feature-aware projection framework that explicitly preserves
+information in the reduced hidden space. In the linear case, we instantiate IPA
+with algorithms approximating top principal components, enabling efficient
+projector pretraining with negligible inference overhead. Across language and
+vision benchmarks, IPA consistently improves over LoRA and DoRA, achieving on
+average 1.5 points higher accuracy on commonsense reasoning and 2.3 points on
+VTAB-1k, while matching full LoRA performance with roughly half the trainable
+parameters when the projection is frozen.
+</summary>
+    <author>
+      <name>Yuan Yin</name>
+    </author>
+    <author>
+      <name>Shashanka Venkataramanan</name>
+    </author>
+    <author>
+      <name>Tuan-Hung Vu</name>
+    </author>
+    <author>
+      <name>Andrei Bursuc</name>
+    </author>
+    <author>
+      <name>Matthieu Cord</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.04398v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04398v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.04377v1</id>
+    <updated>2025-09-04T16:40:01Z</updated>
+    <published>2025-09-04T16:40:01Z</published>
+    <title>PagedEviction: Structured Block-wise KV Cache Pruning for Efficient
+  Large Language Model Inference</title>
+    <summary>  KV caching significantly improves the efficiency of Large Language Model
+(LLM) inference by storing attention states from previously processed tokens,
+enabling faster generation of subsequent tokens. However, as sequence length
+increases, the KV cache quickly becomes a major memory bottleneck. To address
+this, we propose PagedEviction, a novel fine-grained, structured KV cache
+pruning strategy that enhances the memory efficiency of vLLM's PagedAttention.
+Unlike existing approaches that rely on attention-based token importance or
+evict tokens across different vLLM pages, PagedEviction introduces an efficient
+block-wise eviction algorithm tailored for paged memory layouts. Our method
+integrates seamlessly with PagedAttention without requiring any modifications
+to its CUDA attention kernels. We evaluate PagedEviction across
+Llama-3.1-8B-Instruct, Llama-3.2-1B-Instruct, and Llama-3.2-3B-Instruct models
+on the LongBench benchmark suite, demonstrating improved memory usage with
+better accuracy than baselines on long context tasks.
+</summary>
+    <author>
+      <name>Krishna Teja Chitty-Venkata</name>
+    </author>
+    <author>
+      <name>Jie Ye</name>
+    </author>
+    <author>
+      <name>Xian-He Sun</name>
+    </author>
+    <author>
+      <name>Anthony Kougkas</name>
+    </author>
+    <author>
+      <name>Murali Emani</name>
+    </author>
+    <author>
+      <name>Venkatram Vishwanath</name>
+    </author>
+    <author>
+      <name>Bogdan Nicolae</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.04377v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04377v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.03438v1</id>
-    <updated>2025-09-03T16:07:34Z</updated>
-    <published>2025-09-03T16:07:34Z</published>
-    <title>Non-Linear Counterfactual Aggregate Optimization</title>
-    <summary>  We consider the problem of directly optimizing a non-linear function of an
-outcome, where this outcome itself is the sum of many small contributions. The
-non-linearity of the function means that the problem is not equivalent to the
-maximization of the expectation of the individual contribution. By leveraging
-the concentration properties of the sum of individual outcomes, we derive a
-scalable descent algorithm that directly optimizes for our stated objective.
-This allows for instance to maximize the probability of successful A/B test,
-for which it can be wiser to target a success criterion, such as exceeding a
-given uplift, rather than chasing the highest expected payoff.
+    <id>http://arxiv.org/abs/2509.04356v1</id>
+    <updated>2025-09-04T16:18:04Z</updated>
+    <published>2025-09-04T16:18:04Z</published>
+    <title>SRWToolkit: An Open Source Wizard of Oz Toolkit to Create Social Robotic
+  Avatars</title>
+    <summary>  We present SRWToolkit, an open-source Wizard of Oz toolkit designed to
+facilitate the rapid prototyping of social robotic avatars powered by local
+large language models (LLMs). Our web-based toolkit enables multimodal
+interaction through text input, button-activated speech, and wake-word command.
+The toolkit offers real-time configuration of avatar appearance, behavior,
+language, and voice via an intuitive control panel. In contrast to prior works
+that rely on cloud-based LLM services, SRWToolkit emphasizes modularity and
+ensures on-device functionality through local LLM inference. In our small-scale
+user study ($n=11$), participants created and interacted with diverse robotic
+roles (hospital receptionist, mathematics teacher, and driving assistant),
+which demonstrated positive outcomes in the toolkit's usability, trust, and
+user experience. The toolkit enables rapid and efficient development of robot
+characters customized to researchers' needs, supporting scalable research in
+human-robot interaction.
 </summary>
     <author>
-      <name>Benjamin Heymann</name>
+      <name>Atikkhan Faridkhan Nilgar</name>
     </author>
     <author>
-      <name>Otmane Sakhi</name>
+      <name>Kristof Van Laerhoven</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Recsys '25, CONSEQUENCES: Causality, Counterfactuals &amp; Sequential
-  Decision-Making Workshop</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.03438v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.03438v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Ayub Kinoti</name>
+    </author>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">2025 International Conference on Social Robotics (ICSR)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2509.04356v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04356v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.04348v1</id>
+    <updated>2025-09-04T16:05:54Z</updated>
+    <published>2025-09-04T16:05:54Z</published>
+    <title>GWTC-4.0: Constraints on the Cosmic Expansion Rate and Modified
+  Gravitational-wave Propagation</title>
+    <summary>  We analyze data from 142 of the 218 gravitational-wave (GW) sources in the
+fourth LIGO-Virgo-KAGRA Collaboration (LVK) Gravitational-Wave Transient
+Catalog (GWTC-4.0) to estimate the Hubble constant $H_0$ jointly with the
+population properties of merging compact binaries. We measure the luminosity
+distance and redshifted masses of GW sources directly; in contrast, we infer GW
+source redshifts statistically through i) location of features in the compact
+object mass spectrum and merger rate evolution, and ii) identifying potential
+host galaxies in the GW localization volume. Probing the relationship between
+source luminosity distances and redshifts obtained in this way yields
+constraints on cosmological parameters. We also constrain parameterized
+deviations from general relativity which affect GW propagation, specifically
+those modifying the dependence of a GW signal on the source luminosity
+distance. Assuming our fiducial model for the source-frame mass distribution
+and using GW candidates detected up to the end of the fourth observing run
+(O4a), together with the GLADE+ all-sky galaxy catalog, we estimate $H_0 =
+76.6^{+13.0}_{-9.5} (76.6^{+25.2}_{-14.0})$ km s$^{-1}$ Mpc$^{-1}$. This value
+is reported as a median with 68.3% (90%) symmetric credible interval, and
+includes combination with the $H_0$ measurement from GW170817 and its
+electromagnetic counterpart. Using a parametrization of modified GW propagation
+in terms of the magnitude parameter $\Xi_0$, we estimate $\Xi_0 =
+1.2^{+0.8}_{-0.4} (1.2^{+2.4}_{-0.5})$, where $\Xi_0 = 1$ recovers the behavior
+of general relativity.
+</summary>
+    <author>
+      <name> The LIGO Scientific Collaboration</name>
+    </author>
+    <author>
+      <name> the Virgo Collaboration</name>
+    </author>
+    <author>
+      <name> the KAGRA Collaboration</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">As part of the Astrophysical Journal Letters Focus Issue on the
+  Gravitational Wave Transient Catalog</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.04348v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.04348v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
