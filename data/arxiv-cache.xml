@@ -1,511 +1,732 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-09-10T00:52:07Z -->
+<!-- Last updated: 2025-09-11T00:53:16Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-09-09T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">120540</opensearch:totalResults>
+  <updated>2025-09-10T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">120622</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2509.06956v1</id>
-    <updated>2025-09-08T17:59:59Z</updated>
-    <published>2025-09-08T17:59:59Z</published>
-    <title>H$_{2}$OT: Hierarchical Hourglass Tokenizer for Efficient Video Pose
-  Transformers</title>
-    <summary>  Transformers have been successfully applied in the field of video-based 3D
-human pose estimation. However, the high computational costs of these video
-pose transformers (VPTs) make them impractical on resource-constrained devices.
-In this paper, we present a hierarchical plug-and-play pruning-and-recovering
-framework, called Hierarchical Hourglass Tokenizer (H$_{2}$OT), for efficient
-transformer-based 3D human pose estimation from videos. H$_{2}$OT begins with
-progressively pruning pose tokens of redundant frames and ends with recovering
-full-length sequences, resulting in a few pose tokens in the intermediate
-transformer blocks and thus improving the model efficiency. It works with two
-key modules, namely, a Token Pruning Module (TPM) and a Token Recovering Module
-(TRM). TPM dynamically selects a few representative tokens to eliminate the
-redundancy of video frames, while TRM restores the detailed spatio-temporal
-information based on the selected tokens, thereby expanding the network output
-to the original full-length temporal resolution for fast inference. Our method
-is general-purpose: it can be easily incorporated into common VPT models on
-both seq2seq and seq2frame pipelines while effectively accommodating different
-token pruning and recovery strategies. In addition, our H$_{2}$OT reveals that
-maintaining the full pose sequence is unnecessary, and a few pose tokens of
-representative frames can achieve both high efficiency and estimation accuracy.
-Extensive experiments on multiple benchmark datasets demonstrate both the
-effectiveness and efficiency of the proposed method. Code and models are
-available at https://github.com/NationalGAILab/HoT.
+    <id>http://arxiv.org/abs/2509.07969v1</id>
+    <updated>2025-09-09T17:54:21Z</updated>
+    <published>2025-09-09T17:54:21Z</published>
+    <title>Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual
+  Search</title>
+    <summary>  Recent advances in large multimodal models have leveraged image-based tools
+with reinforcement learning to tackle visual problems. However, existing
+open-source approaches often exhibit monotonous reasoning patterns and allow
+only a limited number of interaction turns, making them inadequate for
+difficult tasks that require trial-and-error exploration. In this work, we
+address this limitation by scaling up tool-based interactions and introduce
+Mini-o3, a system that executes deep, multi-turn reasoning -- spanning tens of
+steps -- and achieves state-of-the-art performance on challenging visual search
+tasks. Our recipe for reproducing OpenAI o3-style behaviors comprises three key
+components. First, we construct the Visual Probe Dataset, a collection of
+thousands of challenging visual search problems designed for exploratory
+reasoning. Second, we develop an iterative data collection pipeline to obtain
+cold-start trajectories that exhibit diverse reasoning patterns, including
+depth-first search, trial-and-error, and goal maintenance. Third, we propose an
+over-turn masking strategy that prevents penalization of over-turn responses
+(those that hit the maximum number of turns) during reinforcement learning,
+thereby balancing training-time efficiency with test-time scalability. Despite
+training with an upper bound of only six interaction turns, our model generates
+trajectories that naturally scale to tens of turns at inference time, with
+accuracy improving as the number of turns increases. Extensive experiments
+demonstrate that Mini-o3 produces rich reasoning patterns and deep thinking
+paths, effectively solving challenging visual search problems.
 </summary>
     <author>
-      <name>Wenhao Li</name>
+      <name>Xin Lai</name>
     </author>
     <author>
-      <name>Mengyuan Liu</name>
+      <name>Junyi Li</name>
     </author>
     <author>
-      <name>Hong Liu</name>
+      <name>Wei Li</name>
     </author>
     <author>
-      <name>Pichao Wang</name>
+      <name>Tao Liu</name>
     </author>
     <author>
-      <name>Shijian Lu</name>
+      <name>Tianjian Li</name>
     </author>
     <author>
-      <name>Nicu Sebe</name>
+      <name>Hengshuang Zhao</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by TPAMI 2025, Open Sourced. arXiv admin note: substantial
-  text overlap with arXiv:2311.12028</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.06956v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06956v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code, datasets, models are available at
+  https://github.com/Mini-o3/Mini-o3. Project Page: https://mini-o3.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07969v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07969v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07964v1</id>
+    <updated>2025-09-09T17:51:35Z</updated>
+    <published>2025-09-09T17:51:35Z</published>
+    <title>Dark Energy Survey Year 6 Results: Redshift Calibration of the MagLim++
+  Lens Sample</title>
+    <summary>  In this work, we derive and calibrate the redshift distribution of the
+MagLim++ lens galaxy sample used in the Dark Energy Survey Year 6 (DES Y6)
+3x2pt cosmology analysis. The 3x2pt analysis combines galaxy clustering from
+the lens galaxy sample and weak gravitational lensing. The redshift
+distributions are inferred using the SOMPZ method - a Self-Organizing Map
+framework that combines deep-field multi-band photometry, wide-field data, and
+a synthetic source injection (Balrog) catalog. Key improvements over the DES
+Year 3 (Y3) calibration include a noise-weighted SOM metric, an expanded Balrog
+catalogue, and an improved scheme for propagating systematic uncertainties,
+which allows us to generate O($10^8$) redshift realizations that collectively
+span the dominant sources of uncertainty. These realizations are then combined
+with independent clustering-redshift measurements via importance sampling. The
+resulting calibration achieves typical uncertainties on the mean redshift of
+1-2%, corresponding to a 20-30% average reduction relative to DES Y3. We
+compress the $n(z)$ uncertainties into a small number of orthogonal modes for
+use in cosmological inference. Marginalizing over these modes leads to only a
+minor degradation in cosmological constraints. This analysis establishes the
+MagLim++ sample as a robust lens sample for precision cosmology with DES Y6 and
+provides a scalable framework for future surveys.
+</summary>
+    <author>
+      <name>G. Giannini</name>
+    </author>
+    <author>
+      <name>A. Alarcon</name>
+    </author>
+    <author>
+      <name>W. d'Assignies</name>
+    </author>
+    <author>
+      <name>G. M. Bernstein</name>
+    </author>
+    <author>
+      <name>M. A. Troxel</name>
+    </author>
+    <author>
+      <name>C. Chang</name>
+    </author>
+    <author>
+      <name>B. Yin</name>
+    </author>
+    <author>
+      <name>A. Amon</name>
+    </author>
+    <author>
+      <name>J. Myles</name>
+    </author>
+    <author>
+      <name>N. Weaverdyck</name>
+    </author>
+    <author>
+      <name>A. Porredon</name>
+    </author>
+    <author>
+      <name>D. Anbajagane</name>
+    </author>
+    <author>
+      <name>S. Avila</name>
+    </author>
+    <author>
+      <name>K. Bechtol</name>
+    </author>
+    <author>
+      <name>M. R. Becker</name>
+    </author>
+    <author>
+      <name>J. Blazek</name>
+    </author>
+    <author>
+      <name>M. Crocce</name>
+    </author>
+    <author>
+      <name>D. Gruen</name>
+    </author>
+    <author>
+      <name>M. Rodriguez-Monroy</name>
+    </author>
+    <author>
+      <name>C. Sánchez</name>
+    </author>
+    <author>
+      <name>D. Sanchez Cid</name>
+    </author>
+    <author>
+      <name>I. Sevilla-Noarbe</name>
+    </author>
+    <author>
+      <name>M. Aguena</name>
+    </author>
+    <author>
+      <name>S. Allam</name>
+    </author>
+    <author>
+      <name>O. Alves</name>
+    </author>
+    <author>
+      <name>F. Andrade-Oliveira</name>
+    </author>
+    <author>
+      <name>D. Bacon</name>
+    </author>
+    <author>
+      <name>S. Bocquet</name>
+    </author>
+    <author>
+      <name>D. Brooks</name>
+    </author>
+    <author>
+      <name>R. Camilleri</name>
+    </author>
+    <author>
+      <name>A. Carnero Rosell</name>
+    </author>
+    <author>
+      <name>J. Carretero</name>
+    </author>
+    <author>
+      <name>R. Cawthon</name>
+    </author>
+    <author>
+      <name>L. N. da Costa</name>
+    </author>
+    <author>
+      <name>M. E. da Silva Pereira</name>
+    </author>
+    <author>
+      <name>T. M. Davis</name>
+    </author>
+    <author>
+      <name>J. De Vicente</name>
+    </author>
+    <author>
+      <name>D. L. DePoy</name>
+    </author>
+    <author>
+      <name>S. Desai</name>
+    </author>
+    <author>
+      <name>H. T. Diehl</name>
+    </author>
+    <author>
+      <name>S. Dodelson</name>
+    </author>
+    <author>
+      <name>P. Doel</name>
+    </author>
+    <author>
+      <name>C. Doux</name>
+    </author>
+    <author>
+      <name>A. Drlica-Wagner</name>
+    </author>
+    <author>
+      <name>J. Elvin-Poole</name>
+    </author>
+    <author>
+      <name>S. Everett</name>
+    </author>
+    <author>
+      <name>A. E. Evrard</name>
+    </author>
+    <author>
+      <name>B. Flaugher</name>
+    </author>
+    <author>
+      <name>J. Frieman</name>
+    </author>
+    <author>
+      <name>J. García-Bellido</name>
+    </author>
+    <author>
+      <name>M. Gatti</name>
+    </author>
+    <author>
+      <name>E. Gaztanaga</name>
+    </author>
+    <author>
+      <name>P. Giles</name>
+    </author>
+    <author>
+      <name>R. A. Gruendl</name>
+    </author>
+    <author>
+      <name>G. Gutierrez</name>
+    </author>
+    <author>
+      <name>K. Herner</name>
+    </author>
+    <author>
+      <name>S. R. Hinton</name>
+    </author>
+    <author>
+      <name>D. L. Hollowood</name>
+    </author>
+    <author>
+      <name>K. Honscheid</name>
+    </author>
+    <author>
+      <name>D. Huterer</name>
+    </author>
+    <author>
+      <name>D. J. James</name>
+    </author>
+    <author>
+      <name>K. Kuehn</name>
+    </author>
+    <author>
+      <name>O. Lahav</name>
+    </author>
+    <author>
+      <name>S. Lee</name>
+    </author>
+    <author>
+      <name>H. Lin</name>
+    </author>
+    <author>
+      <name>J. L. Marshall</name>
+    </author>
+    <author>
+      <name>J. Mena-Fernández</name>
+    </author>
+    <author>
+      <name>F. Menanteau</name>
+    </author>
+    <author>
+      <name>R. Miquel</name>
+    </author>
+    <author>
+      <name>J. Muir</name>
+    </author>
+    <author>
+      <name>R. L. C. Ogando</name>
+    </author>
+    <author>
+      <name>D. Petravick</name>
+    </author>
+    <author>
+      <name>A. A. Plazas Malagón</name>
+    </author>
+    <author>
+      <name>J. Prat</name>
+    </author>
+    <author>
+      <name>M. Raveri</name>
+    </author>
+    <author>
+      <name>E. S. Rykoff</name>
+    </author>
+    <author>
+      <name>S. Samuroff</name>
+    </author>
+    <author>
+      <name>E. Sanchez</name>
+    </author>
+    <author>
+      <name>T. Shin</name>
+    </author>
+    <author>
+      <name>M. Smith</name>
+    </author>
+    <author>
+      <name>E. Suchyta</name>
+    </author>
+    <author>
+      <name>M. E. C. Swanson</name>
+    </author>
+    <author>
+      <name>G. Tarle</name>
+    </author>
+    <author>
+      <name>D. Thomas</name>
+    </author>
+    <author>
+      <name>C. To</name>
+    </author>
+    <author>
+      <name>D. L. Tucker</name>
+    </author>
+    <author>
+      <name>V. Vikram</name>
+    </author>
+    <author>
+      <name>M. Yamamoto</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">30 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07964v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07964v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07938v1</id>
+    <updated>2025-09-09T17:19:09Z</updated>
+    <published>2025-09-09T17:19:09Z</published>
+    <title>The JADE code. II. Modeling the coupled orbital and atmospheric
+  evolution of GJ 436 b to constrain its migration and companion</title>
+    <summary>  The observed architecture and modeled evolution of close-in exoplanets
+provide crucial insights into their formation pathways and survival mechanisms.
+To investigate these fundamental questions, we employed JADE, a comprehensive
+numerical code that models the coupled evolution of atmospheres and dynamics
+over secular timescales, rooted in present-day observations. JADE integrates
+photoevaporation with migration driven by von Zeipel-Lidov-Kozai (ZLK) cycles
+from an external perturber, allowing us to explore evolutionary scenarios where
+dynamical and atmospheric processes influence each other. Here, we specifically
+considered GJ 436 b, a warm Neptune with an eccentric orbit and polar
+spin-orbit angle that has survived within the "hot Neptune desert" despite
+ongoing atmospheric escape. Our extensive exploration included over 500 000
+simulations in a framework that combines precomputed grids with Bayesian
+inference. This allowed us to constrain GJ 436 b's initial conditions and the
+properties of its putative companion within a ZLK hypothesis. Our results
+suggest that GJ 436 b formed at ~ 0.3 AU and, despite its current substantial
+atmospheric erosion, has experienced minimal cumulative mass loss throughout
+its history, thanks to a late inward migration triggered by a distant companion
+inducing ZLK oscillations. We find that initial mutual inclinations of 80{\deg}
+- 100{\deg} with this companion best reproduce the observed polar orbit. By
+combining our explored constraints with radial velocity detection limits, we
+identified the viable parameter space for the hypothetical GJ 436 c. We found
+that it strongly disfavors stellar and brown dwarf masses, which offers a
+useful guide for future observational searches. This work demonstrates how
+coupled modeling can shed light on the interplay shaping close-in exoplanets
+and explain the survival of volatile-rich worlds near the edges of the desert.
+</summary>
+    <author>
+      <name>M. Attia</name>
+    </author>
+    <author>
+      <name>V. Bourrier</name>
+    </author>
+    <author>
+      <name>E. Bolmont</name>
+    </author>
+    <author>
+      <name>L. Mignon</name>
+    </author>
+    <author>
+      <name>J. -B. Delisle</name>
+    </author>
+    <author>
+      <name>H. Beust</name>
+    </author>
+    <author>
+      <name>N. C. Hara</name>
+    </author>
+    <author>
+      <name>C. Mordasini</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in A&amp;A. Abstract abridged for arXiv</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07938v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07938v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07928v1</id>
+    <updated>2025-09-09T17:13:31Z</updated>
+    <published>2025-09-09T17:13:31Z</published>
+    <title>Accelerating Local AI on Consumer GPUs: A Hardware-Aware Dynamic
+  Strategy for YOLOv10s</title>
+    <summary>  As local AI grows in popularity, there is a critical gap between the
+benchmark performance of object detectors and their practical viability on
+consumer-grade hardware. While models like YOLOv10s promise real-time speeds,
+these metrics are typically achieved on high-power, desktop-class GPUs. This
+paper reveals that on resource-constrained systems, such as laptops with RTX
+4060 GPUs, performance is not compute-bound but is instead dominated by
+system-level bottlenecks, as illustrated by a simple bottleneck test. To
+overcome this hardware-level constraint, we introduce a Two-Pass Adaptive
+Inference algorithm, a model-independent approach that requires no
+architectural changes. This study mainly focuses on adaptive inference
+strategies and undertakes a comparative analysis of architectural early-exit
+and resolution-adaptive routing, highlighting their respective trade-offs
+within a unified evaluation framework. The system uses a fast, low-resolution
+pass and only escalates to a high-resolution model pass when detection
+confidence is low. On a 5000-image COCO dataset, our method achieves a 1.85x
+speedup over a PyTorch Early-Exit baseline, with a modest mAP loss of 5.51%.
+This work provides a practical and reproducible blueprint for deploying
+high-performance, real-time AI on consumer-grade devices by shifting the focus
+from pure model optimization to hardware-aware inference strategies that
+maximize throughput.
+</summary>
+    <author>
+      <name>Mahmudul Islam Masum</name>
+    </author>
+    <author>
+      <name>Miad Islam</name>
+    </author>
+    <author>
+      <name>Arif I. Sarwat</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07928v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07928v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.06953v1</id>
-    <updated>2025-09-08T17:59:35Z</updated>
-    <published>2025-09-08T17:59:35Z</published>
-    <title>Deep Reactive Policy: Learning Reactive Manipulator Motion Planning for
-  Dynamic Environments</title>
-    <summary>  Generating collision-free motion in dynamic, partially observable
-environments is a fundamental challenge for robotic manipulators. Classical
-motion planners can compute globally optimal trajectories but require full
-environment knowledge and are typically too slow for dynamic scenes. Neural
-motion policies offer a promising alternative by operating in closed-loop
-directly on raw sensory inputs but often struggle to generalize in complex or
-dynamic settings. We propose Deep Reactive Policy (DRP), a visuo-motor neural
-motion policy designed for reactive motion generation in diverse dynamic
-environments, operating directly on point cloud sensory input. At its core is
-IMPACT, a transformer-based neural motion policy pretrained on 10 million
-generated expert trajectories across diverse simulation scenarios. We further
-improve IMPACT's static obstacle avoidance through iterative student-teacher
-finetuning. We additionally enhance the policy's dynamic obstacle avoidance at
-inference time using DCP-RMP, a locally reactive goal-proposal module. We
-evaluate DRP on challenging tasks featuring cluttered scenes, dynamic moving
-obstacles, and goal obstructions. DRP achieves strong generalization,
-outperforming prior classical and neural methods in success rate across both
-simulated and real-world settings. Video results and code available at
-https://deep-reactive-policy.com
+    <id>http://arxiv.org/abs/2509.07920v1</id>
+    <updated>2025-09-09T17:00:42Z</updated>
+    <published>2025-09-09T17:00:42Z</published>
+    <title>ScoreHOI: Physically Plausible Reconstruction of Human-Object
+  Interaction via Score-Guided Diffusion</title>
+    <summary>  Joint reconstruction of human-object interaction marks a significant
+milestone in comprehending the intricate interrelations between humans and
+their surrounding environment. Nevertheless, previous optimization methods
+often struggle to achieve physically plausible reconstruction results due to
+the lack of prior knowledge about human-object interactions. In this paper, we
+introduce ScoreHOI, an effective diffusion-based optimizer that introduces
+diffusion priors for the precise recovery of human-object interactions. By
+harnessing the controllability within score-guided sampling, the diffusion
+model can reconstruct a conditional distribution of human and object pose given
+the image observation and object feature. During inference, the ScoreHOI
+effectively improves the reconstruction results by guiding the denoising
+process with specific physical constraints. Furthermore, we propose a
+contact-driven iterative refinement approach to enhance the contact
+plausibility and improve the reconstruction accuracy. Extensive evaluations on
+standard benchmarks demonstrate ScoreHOI's superior performance over
+state-of-the-art methods, highlighting its ability to achieve a precise and
+robust improvement in joint human-object interaction reconstruction.
 </summary>
     <author>
-      <name>Jiahui Yang</name>
+      <name>Ao Li</name>
     </author>
     <author>
-      <name>Jason Jingzhou Liu</name>
+      <name>Jinpeng Liu</name>
     </author>
     <author>
-      <name>Yulong Li</name>
+      <name>Yixuan Zhu</name>
     </author>
     <author>
-      <name>Youssef Khaky</name>
+      <name>Yansong Tang</name>
     </author>
-    <author>
-      <name>Kenneth Shaw</name>
-    </author>
-    <author>
-      <name>Deepak Pathak</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Website at \url{deep-reactive-policy.com}</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.06953v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06953v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06952v1</id>
-    <updated>2025-09-08T17:59:32Z</updated>
-    <published>2025-09-08T17:59:32Z</published>
-    <title>On the Same Wavelength? Evaluating Pragmatic Reasoning in Language
-  Models across Broad Concepts</title>
-    <summary>  Language use is shaped by pragmatics -- i.e., reasoning about communicative
-goals and norms in context. As language models (LMs) are increasingly used as
-conversational agents, it becomes ever more important to understand their
-pragmatic reasoning abilities. We propose an evaluation framework derived from
-Wavelength, a popular communication game where a speaker and a listener
-communicate about a broad range of concepts in a granular manner. We study a
-range of LMs on both language comprehension and language production using
-direct and Chain-of-Thought (CoT) prompting, and further explore a Rational
-Speech Act (RSA) approach to incorporating Bayesian pragmatic reasoning into LM
-inference. We find that state-of-the-art LMs, but not smaller ones, achieve
-strong performance on language comprehension, obtaining similar-to-human
-accuracy and exhibiting high correlations with human judgments even without CoT
-prompting or RSA. On language production, CoT can outperform direct prompting,
-and using RSA provides significant improvements over both approaches. Our study
-helps identify the strengths and limitations in LMs' pragmatic reasoning
-abilities and demonstrates the potential for improving them with RSA, opening
-up future avenues for understanding conceptual representation, language
-understanding, and social reasoning in LMs and humans.
-</summary>
-    <author>
-      <name>Linlu Qiu</name>
-    </author>
-    <author>
-      <name>Cedegao E. Zhang</name>
-    </author>
-    <author>
-      <name>Joshua B. Tenenbaum</name>
-    </author>
-    <author>
-      <name>Yoon Kim</name>
-    </author>
-    <author>
-      <name>Roger P. Levy</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">EMNLP 2025 (Main)</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.06952v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06952v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06949v1</id>
-    <updated>2025-09-08T17:58:06Z</updated>
-    <published>2025-09-08T17:58:06Z</published>
-    <title>Revolutionizing Reinforcement Learning Framework for Diffusion Large
-  Language Models</title>
-    <summary>  We propose TraceRL, a trajectory-aware reinforcement learning framework for
-diffusion language models (DLMs) that incorporates preferred inference
-trajectory into post-training, and is applicable across different
-architectures. Equipped with a diffusion-based value model that enhances
-training stability, we demonstrate improved reasoning performance on complex
-math and coding tasks. Besides, it can also be applied to adapt block-specific
-models to larger blocks, which improves sampling flexibility. Employing
-TraceRL, we derive a series of state-of-the-art diffusion language models,
-namely TraDo. Although smaller than 7B-scale AR models, TraDo-4B-Instruct still
-consistently outperforms them across complex math reasoning tasks.
-TraDo-8B-Instruct achieves relative accuracy improvements of 6.1% over
-Qwen2.5-7B-Instruct and 51.3% over Llama3.1-8B-Instruct on mathematical
-reasoning benchmarks. Through curriculum learning, we also derive the first
-long-CoT DLM, outperforming Qwen2.5-7B-Instruct on MATH500 with an 18.1%
-relative accuracy gain. To facilitate reproducible research and practical
-applications, we release a comprehensive open-source framework for building,
-training, and deploying diffusion LLMs across diverse architectures. The
-framework integrates accelerated KV-cache techniques and inference engines for
-both inference and reinforcement learning, and includes implementations of
-various supervised fine-tuning and RL methods for mathematics, coding, and
-general tasks. Code and Models: https://github.com/Gen-Verse/dLLM-RL
-</summary>
-    <author>
-      <name>Yinjie Wang</name>
-    </author>
-    <author>
-      <name>Ling Yang</name>
-    </author>
-    <author>
-      <name>Bowen Li</name>
-    </author>
-    <author>
-      <name>Ye Tian</name>
-    </author>
-    <author>
-      <name>Ke Shen</name>
-    </author>
-    <author>
-      <name>Mengdi Wang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code and Models: https://github.com/Gen-Verse/dLLM-RL</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.06949v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06949v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06924v1</id>
-    <updated>2025-09-08T17:38:01Z</updated>
-    <published>2025-09-08T17:38:01Z</published>
-    <title>Neutron Reflectometry by Gradient Descent</title>
-    <summary>  Neutron reflectometry (NR) is a powerful technique to probe surfaces and
-interfaces. NR is inherently an indirect measurement technique, access to the
-physical quantities of interest (layer thickness, scattering length density,
-roughness), necessitate the solution of an inverse modelling problem, that is
-inefficient for large amounts of data or complex multiplayer structures (e.g.
-lithium batteries / electrodes). Recently, surrogate machine learning models
-have been proposed as an alternative to existing optimisation routines.
-Although such approaches have been successful, physical intuition is lost when
-replacing governing equations with fast neural networks. Instead, we propose a
-novel and efficient approach; to optimise reflectivity data analysis by
-performing gradient descent on the forward reflection model itself. Herein,
-automatic differentiation techniques are used to evaluate exact gradients of
-the error function with respect to the parameters of interest. Access to these
-quantities enables users of neutron reflectometry to harness a host of powerful
-modern optimisation and inference techniques that remain thus far unexploited
-in the context of neutron reflectometry. This paper presents two benchmark case
-studies; demonstrating state-of-the-art performance on a thick oxide quartz
-film, and robust co-fitting performance in the high complexity regime of
-organic LED multilayer devices. Additionally, we provide an open-source library
-of differentiable reflectometry kernels in the python programming language so
-that gradient based approaches can readily be applied to other NR datasets.
-</summary>
-    <author>
-      <name>Max D. ~Champneys</name>
-    </author>
-    <author>
-      <name>Andrew J. ~Parnell</name>
-    </author>
-    <author>
-      <name>Philipp Gutfreund</name>
-    </author>
-    <author>
-      <name>Maximilian W. A. Skoda</name>
-    </author>
-    <author>
-      <name>. Patrick A. Fairclough</name>
-    </author>
-    <author>
-      <name>Timothy J. ~Rogers</name>
-    </author>
-    <author>
-      <name>Stephanie L. ~Burg</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.06924v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06924v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06921v1</id>
-    <updated>2025-09-08T17:33:59Z</updated>
-    <published>2025-09-08T17:33:59Z</published>
-    <title>Neuro-Symbolic AI for Cybersecurity: State of the Art, Challenges, and
-  Opportunities</title>
-    <summary>  Traditional Artificial Intelligence (AI) approaches in cybersecurity exhibit
-fundamental limitations: inadequate conceptual grounding leading to
-non-robustness against novel attacks; limited instructibility impeding
-analyst-guided adaptation; and misalignment with cybersecurity objectives.
-Neuro-Symbolic (NeSy) AI has emerged with the potential to revolutionize
-cybersecurity AI. However, there is no systematic understanding of this
-emerging approach. These hybrid systems address critical cybersecurity
-challenges by combining neural pattern recognition with symbolic reasoning,
-enabling enhanced threat understanding while introducing concerning autonomous
-offensive capabilities that reshape threat landscapes. In this survey, we
-systematically characterize this field by analyzing 127 publications spanning
-2019-July 2025. We introduce a Grounding-Instructibility-Alignment (G-I-A)
-framework to evaluate these systems, focusing on both cyber defense and cyber
-offense across network security, malware analysis, and cyber operations. Our
-analysis shows advantages of multi-agent NeSy architectures and identifies
-critical implementation challenges including standardization gaps,
-computational complexity, and human-AI collaboration requirements that
-constrain deployment. We show that causal reasoning integration is the most
-transformative advancement, enabling proactive defense beyond correlation-based
-approaches. Our findings highlight dual-use implications where autonomous
-systems demonstrate substantial capabilities in zero-day exploitation while
-achieving significant cost reductions, altering threat dynamics. We provide
-insights and future research directions, emphasizing the urgent need for
-community-driven standardization frameworks and responsible development
-practices that ensure advancement serves defensive cybersecurity objectives
-while maintaining societal alignment.
-</summary>
-    <author>
-      <name>Safayat Bin Hakim</name>
-    </author>
-    <author>
-      <name>Muhammad Adil</name>
-    </author>
-    <author>
-      <name>Alvaro Velasquez</name>
-    </author>
-    <author>
-      <name>Shouhuai Xu</name>
-    </author>
-    <author>
-      <name>Houbing Herbert Song</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.06921v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06921v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06911v1</id>
-    <updated>2025-09-08T17:25:23Z</updated>
-    <published>2025-09-08T17:25:23Z</published>
-    <title>Hypergraph-Guided Regex Filter Synthesis for Event-Based Anomaly
-  Detection</title>
-    <summary>  We propose HyGLAD, a novel algorithm that automatically builds a set of
-interpretable patterns that model event data. These patterns can then be used
-to detect event-based anomalies in a stationary system, where any deviation
-from past behavior may indicate malicious activity. The algorithm infers
-equivalence classes of entities with similar behavior observed from the events,
-and then builds regular expressions that capture the values of those entities.
-As opposed to deep-learning approaches, the regular expressions are directly
-interpretable, which also translates to interpretable anomalies. We evaluate
-HyGLAD against all 7 unsupervised anomaly detection methods from DeepOD on five
-datasets from real-world systems. The experimental results show that on average
-HyGLAD outperforms existing deep-learning methods while being an order of
-magnitude more efficient in training and inference (single CPU vs GPU).
-Precision improved by 1.2x and recall by 1.3x compared to the second-best
-baseline.
-</summary>
-    <author>
-      <name>Margarida Ferreira</name>
-    </author>
-    <author>
-      <name>Victor Nicolet</name>
-    </author>
-    <author>
-      <name>Luan Pham</name>
-    </author>
-    <author>
-      <name>Joey Dodds</name>
-    </author>
-    <author>
-      <name>Daniel Kroening</name>
-    </author>
-    <author>
-      <name>Ines Lynce</name>
-    </author>
-    <author>
-      <name>Ruben Martins</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.06911v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06911v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06894v1</id>
-    <updated>2025-09-08T17:13:28Z</updated>
-    <published>2025-09-08T17:13:28Z</published>
-    <title>Learning from one graph: transductive learning guarantees via the
-  geometry of small random worlds</title>
-    <summary>  Since their introduction by Kipf and Welling in $2017$, a primary use of
-graph convolutional networks is transductive node classification, where missing
-labels are inferred within a single observed graph and its feature matrix.
-Despite the widespread use of the network model, the statistical foundations of
-transductive learning remain limited, as standard inference frameworks
-typically rely on multiple independent samples rather than a single graph. In
-this work, we address these gaps by developing new concentration-of-measure
-tools that leverage the geometric regularities of large graphs via
-low-dimensional metric embeddings. The emergent regularities are captured using
-a random graph model; however, the methods remain applicable to deterministic
-graphs once observed. We establish two principal learning results. The first
-concerns arbitrary deterministic $k$-vertex graphs, and the second addresses
-random graphs that share key geometric properties with an Erd\H{o}s-R\'{e}nyi
-graph $\mathbf{G}=\mathbf{G}(k,p)$ in the regime $p \in \mathcal{O}((\log
-(k)/k)^{1/2})$. The first result serves as the basis for and illuminates the
-second. We then extend these results to the graph convolutional network
-setting, where additional challenges arise. Lastly, our learning guarantees
-remain informative even with a few labelled nodes $N$ and achieve the optimal
-nonparametric rate $\mathcal{O}(N^{-1/2})$ as $N$ grows.
-</summary>
-    <author>
-      <name>Nils Detering</name>
-    </author>
-    <author>
-      <name>Luca Galimberti</name>
-    </author>
-    <author>
-      <name>Anastasis Kratsios</name>
-    </author>
-    <author>
-      <name>Giulia Livieri</name>
-    </author>
-    <author>
-      <name>A. Martina Neuman</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.06894v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06894v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06891v1</id>
-    <updated>2025-09-08T17:11:12Z</updated>
-    <published>2025-09-08T17:11:12Z</published>
-    <title>Tensor Network based Gene Regulatory Network Inference for Single-Cell
-  Transcriptomic Data</title>
-    <summary>  Deciphering complex gene-gene interactions remains challenging in
-transcriptomics as traditional methods often miss higher-order and nonlinear
-dependencies. This study introduces a quantum-inspired framework leveraging
-tensor networks (TNs) to optimally map expression data into a lower dimensional
-representation preserving biological locality. Using Quantum Mutual Information
-(QMI), a nonparametric measure natural for tensor networks, we quantify gene
-dependencies and establish statistical significance via permutation testing.
-This constructs robust interaction networks where the edges reflect
-biologically meaningful relationships that are resilient to random chance. The
-approach effectively distinguishes true regulatory patterns from experimental
-noise and biological stochasticity. To test the proposed method, we recover a
-gene regulatory network consisted of six pathway genes from single-cell RNA
-sequencing data comprising over $28.000$ lymphoblastoid cells. Furthermore, we
-unveil several triadic regulatory mechanisms. By merging quantum physics
-inspired techniques with computational biology, our method provides novel
-insights into gene regulation, with applications in disease mechanisms and
-precision medicine.
-</summary>
-    <author>
-      <name>Olatz Sanz Larrarte</name>
-    </author>
-    <author>
-      <name>Borja Aizpurua</name>
-    </author>
-    <author>
-      <name>Reza Dastbasteh</name>
-    </author>
-    <author>
-      <name>Ruben M. Otxoa</name>
-    </author>
-    <author>
-      <name>Josu Etxezarreta Martinez</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.06891v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06891v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.06890v1</id>
-    <updated>2025-09-08T17:10:43Z</updated>
-    <published>2025-09-08T17:10:43Z</published>
-    <title>Intraoperative 2D/3D Registration via Spherical Similarity Learning and
-  Inference-Time Differentiable Levenberg-Marquardt Optimization</title>
-    <summary>  Intraoperative 2D/3D registration aligns preoperative 3D volumes with
-real-time 2D radiographs, enabling accurate localization of instruments and
-implants. A recent fully differentiable similarity learning framework
-approximates geodesic distances on SE(3), expanding the capture range of
-registration and mitigating the effects of substantial disturbances, but
-existing Euclidean approximations distort manifold structure and slow
-convergence. To address these limitations, we explore similarity learning in
-non-Euclidean spherical feature spaces to better capture and fit complex
-manifold structure. We extract feature embeddings using a CNN-Transformer
-encoder, project them into spherical space, and approximate their geodesic
-distances with Riemannian distances in the bi-invariant SO(4) space. This
-enables a more expressive and geometrically consistent deep similarity metric,
-enhancing the ability to distinguish subtle pose differences. During inference,
-we replace gradient descent with fully differentiable Levenberg-Marquardt
-optimization to accelerate convergence. Experiments on real and synthetic
-datasets show superior accuracy in both patient-specific and patient-agnostic
-scenarios.
-</summary>
-    <author>
-      <name>Minheng Chen</name>
-    </author>
-    <author>
-      <name>Youyong Kong</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">WACV 2026 Accepted</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.06890v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.06890v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by ICCV 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07920v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07920v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07879v1</id>
+    <updated>2025-09-09T16:00:03Z</updated>
+    <published>2025-09-09T16:00:03Z</published>
+    <title>Active Membership Inference Test (aMINT): Enhancing Model Auditability
+  with Multi-Task Learning</title>
+    <summary>  Active Membership Inference Test (aMINT) is a method designed to detect
+whether given data were used during the training of machine learning models. In
+Active MINT, we propose a novel multitask learning process that involves
+training simultaneously two models: the original or Audited Model, and a
+secondary model, referred to as the MINT Model, responsible for identifying the
+data used for training the Audited Model. This novel multi-task learning
+approach has been designed to incorporate the auditability of the model as an
+optimization objective during the training process of neural networks. The
+proposed approach incorporates intermediate activation maps as inputs to the
+MINT layers, which are trained to enhance the detection of training data. We
+present results using a wide range of neural networks, from lighter
+architectures such as MobileNet to more complex ones such as Vision
+Transformers, evaluated in 5 public benchmarks. Our proposed Active MINT
+achieves over 80% accuracy in detecting if given data was used for training,
+significantly outperforming previous approaches in the literature. Our aMINT
+and related methodological developments contribute to increasing transparency
+in AI models, facilitating stronger safeguards in AI deployments to achieve
+proper security, privacy, and copyright protection.
+</summary>
+    <author>
+      <name>Daniel DeAlcala</name>
+    </author>
+    <author>
+      <name>Aythami Morales</name>
+    </author>
+    <author>
+      <name>Julian Fierrez</name>
+    </author>
+    <author>
+      <name>Gonzalo Mancera</name>
+    </author>
+    <author>
+      <name>Ruben Tolosana</name>
+    </author>
+    <author>
+      <name>Javier Ortega-Garcia</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">In Proc. IEEE/CVF Intenational Conference on Computer Vision, ICCV,
+  2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07879v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07879v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07874v1</id>
+    <updated>2025-09-09T15:57:40Z</updated>
+    <published>2025-09-09T15:57:40Z</published>
+    <title>Forecasting dementia incidence</title>
+    <summary>  This paper estimates the stochastic process of how dementia incidence evolves
+over time. We proceed in two steps: first, we estimate a time trend for
+dementia using a multi-state Cox model. The multi-state model addresses
+problems of both interval censoring arising from infrequent measurement and
+also measurement error in dementia. Second, we feed the estimated mean and
+variance of the time trend into a Kalman filter to infer the population level
+dementia process. Using data from the English Longitudinal Study of Aging
+(ELSA), we find that dementia incidence is no longer declining in England.
+Furthermore, our forecast is that future incidence remains constant, although
+there is considerable uncertainty in this forecast. Our two-step estimation
+procedure has significant computational advantages by combining a multi-state
+model with a time series method. To account for the short sample that is
+available for dementia, we derive expressions for the Kalman filter's
+convergence speed, size, and power to detect changes and conclude our estimator
+performs well even in short samples.
+</summary>
+    <author>
+      <name>Jérôme R. Simons</name>
+    </author>
+    <author>
+      <name>Yuntao Chen</name>
+    </author>
+    <author>
+      <name>Eric Brunner</name>
+    </author>
+    <author>
+      <name>Eric French</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.07874v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07874v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="62, 91, 92" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="G.3" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07864v1</id>
+    <updated>2025-09-09T15:51:15Z</updated>
+    <published>2025-09-09T15:51:15Z</published>
+    <title>D-LEAF: Localizing and Correcting Hallucinations in Multimodal LLMs via
+  Layer-to-head Attention Diagnostics</title>
+    <summary>  Multimodal Large Language Models (MLLMs) achieve strong performance on tasks
+like image captioning and visual question answering, but remain prone to
+hallucinations, where generated text conflicts with the visual input. Prior
+work links this partly to insufficient visual attention, but existing
+attention-based detectors and mitigation typically apply uniform adjustments
+across layers and heads, obscuring where errors originate. In this paper, we
+first show these methods fail to accurately localize problematic layers. Then,
+we introduce two diagnostics: Layer Image Attention Entropy (LIAE) which flags
+anomalous layers, and Image Attention Focus (IAF) which scores attention heads
+within those layers. Analysis shows that LIAE pinpoints faulty layers and IAF
+reliably ranks heads that warrant correction. Guided by these signals, we
+propose Dynamic Layer-wise Entropy and Attention Fusion (D-LEAF), a
+task-agnostic, attention-guided method that dynamically localizes and corrects
+errors during inference with negligible overhead. Results show our D-LEAF
+delivers a 53% relative improvement on standard captioning benchmarks, and on
+VQA both accuracy and F1-score improve by approximately 4%, substantially
+suppressing hallucinations while preserving efficiency.
+</summary>
+    <author>
+      <name>Tiancheng Yang</name>
+    </author>
+    <author>
+      <name>Lin Zhang</name>
+    </author>
+    <author>
+      <name>Jiaye Lin</name>
+    </author>
+    <author>
+      <name>Guimin Hu</name>
+    </author>
+    <author>
+      <name>Di Wang</name>
+    </author>
+    <author>
+      <name>Lijie Hu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.07864v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07864v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07839v1</id>
+    <updated>2025-09-09T15:13:15Z</updated>
+    <published>2025-09-09T15:13:15Z</published>
+    <title>Enhancements in Score-based Channel Estimation for Real-Time Wireless
+  Systems</title>
+    <summary>  We propose enhancements to score-based generative modeling techniques for
+low-latency pilot-based channel estimation in a point-to-point single-carrier
+multiple-input multiple-output (MIMO) wireless system. Building on recent
+advances in score-based models, we investigate a specific noise schedule design
+and sampling acceleration by step-skipping to reduce the number of denoising
+steps during inference. We additionally propose a single-step signal-to-noise
+ratio informed denoiser as an extreme case of the step-skipping approach. Our
+methods achieve significant latency reductions without performance degradation,
+as demonstrated on a synthetic channel dataset representing an urban macrocell
+MIMO communications scenario.
+</summary>
+    <author>
+      <name>Florian Strasser</name>
+    </author>
+    <author>
+      <name>Marion Bäro</name>
+    </author>
+    <author>
+      <name>Wolfgang Utschick</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Presented at 28th International Workshop on Smart Antennas 2025,
+  https://www.wsa2025.fau.de/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07839v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07839v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07825v1</id>
+    <updated>2025-09-09T15:01:28Z</updated>
+    <published>2025-09-09T15:01:28Z</published>
+    <title>Point Linguist Model: Segment Any Object via Bridged Large 3D-Language
+  Model</title>
+    <summary>  3D object segmentation with Large Language Models (LLMs) has become a
+prevailing paradigm due to its broad semantics, task flexibility, and strong
+generalization. However, this paradigm is hindered by representation
+misalignment: LLMs process high-level semantic tokens, whereas 3D point clouds
+convey only dense geometric structures. In prior methods, misalignment limits
+both input and output. At the input stage, dense point patches require heavy
+pre-alignment, weakening object-level semantics and confusing similar
+distractors. At the output stage, predictions depend only on dense features
+without explicit geometric cues, leading to a loss of fine-grained accuracy. To
+address these limitations, we present the Point Linguist Model (PLM), a general
+framework that bridges the representation gap between LLMs and dense 3D point
+clouds without requiring large-scale pre-alignment between 3D-text or
+3D-images. Specifically, we introduce Object-centric Discriminative
+Representation (OcDR), which learns object-centric tokens that capture target
+semantics and scene relations under a hard negative-aware training objective.
+This mitigates the misalignment between LLM tokens and 3D points, enhances
+resilience to distractors, and facilitates semantic-level reasoning within
+LLMs. For accurate segmentation, we introduce the Geometric Reactivation
+Decoder (GRD), which predicts masks by combining OcDR tokens carrying
+LLM-inferred geometry with corresponding dense features, preserving
+comprehensive dense features throughout the pipeline. Extensive experiments
+show that PLM achieves significant improvements of +7.3 mIoU on ScanNetv2 and
++6.0 mIoU on Multi3DRefer for 3D referring segmentation, with consistent gains
+across 7 benchmarks spanning 4 different tasks, demonstrating the effectiveness
+of comprehensive object-centric reasoning for robust 3D understanding.
+</summary>
+    <author>
+      <name>Zhuoxu Huang</name>
+    </author>
+    <author>
+      <name>Mingqi Gao</name>
+    </author>
+    <author>
+      <name>Jungong Han</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.07825v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.07825v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
