@@ -1,504 +1,505 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-09-18T00:51:39Z -->
+<!-- Last updated: 2025-09-19T00:53:46Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-09-17T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">121075</opensearch:totalResults>
+  <updated>2025-09-18T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">121171</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2509.13318v1</id>
-    <updated>2025-09-16T17:59:31Z</updated>
-    <published>2025-09-16T17:59:31Z</published>
-    <title>How Theory-Informed Priors Affect DESI Evidence for Evolving Dark Energy</title>
-    <summary>  Recent measurements of baryon acoustic oscillations (BAO) from the Dark
-Energy Spectroscopic Instrument (DESI) have been interpreted to suggest that
-dark energy may be evolving. In this work, we examine how prior choices affect
-such conclusions. Specifically, we study the biases introduced by the customary
-use of uniform priors on the Chevallier-Polarski-Linder (CPL) parameters, $w_0$
-and $w_a$, when assessing evidence for evolving dark energy. To do so, we
-construct theory-informed priors on $(w_0, w_a)$ using a normalizing flow (NF),
-trained on two representative quintessence models, which learns the
-distribution of these parameters conditional on the underlying $\Lambda$CDM
-parameters. In the combined $\textit{Planck}$ CMB + DESI BAO analysis we find
-that the apparent tension with a cosmological constant in the CPL framework can
-be reduced from $\sim 3.1\sigma$ to $\sim 1.3\sigma$ once theory-informed
-priors are applied, rendering the result effectively consistent with
-$\Lambda$CDM. For completeness, we also analyze combinations that include Type
-Ia supernova data, showing similar shifts toward the $\Lambda$CDM limit. Taken
-together, the observed sensitivity to prior choices in these analyses arises
-because uniform priors - often mischaracterized as "uninformative" - can
-actually bias inferences toward unphysical parameter regions. Consequently, our
-results underscore the importance of adopting physically motivated priors to
-ensure robust cosmological inferences, especially when evaluating new
-hypotheses with only marginal statistical support. Lastly, our NF-based
-framework achieves these results by post-processing existing MCMC chains,
-requiring $\approx 1$ hour of additional CPU compute time on top of the base
-analysis - a dramatic speedup over direct model sampling that highlights the
-scalability of this approach for testing diverse theoretical models.
+    <id>http://arxiv.org/abs/2509.14234v1</id>
+    <updated>2025-09-17T17:59:42Z</updated>
+    <published>2025-09-17T17:59:42Z</published>
+    <title>Compute as Teacher: Turning Inference Compute Into Reference-Free
+  Supervision</title>
+    <summary>  Where do learning signals come from when there is no ground truth in
+post-training? We propose turning exploration into supervision through Compute
+as Teacher (CaT), which converts the model's own exploration at inference-time
+into reference-free supervision by synthesizing a single reference from a group
+of parallel rollouts and then optimizing toward it. Concretely, the current
+policy produces a group of rollouts; a frozen anchor (the initial policy)
+reconciles omissions and contradictions to estimate a reference, turning extra
+inference-time compute into a teacher signal. We turn this into rewards in two
+regimes: (i) verifiable tasks use programmatic equivalence on final answers;
+(ii) non-verifiable tasks use self-proposed rubrics-binary, auditable criteria
+scored by an independent LLM judge, with reward given by the fraction
+satisfied. Unlike selection methods (best-of-N, majority, perplexity, or judge
+scores), synthesis may disagree with the majority and be correct even when all
+rollouts are wrong; performance scales with the number of rollouts. As a
+test-time procedure, CaT improves Gemma 3 4B, Qwen 3 4B, and Llama 3.1 8B (up
+to +27% on MATH-500; +12% on HealthBench). With reinforcement learning
+(CaT-RL), we obtain further gains (up to +33% and +30%), with the trained
+policy surpassing the initial teacher signal.
 </summary>
     <author>
-      <name>Michael W. Toomey</name>
+      <name>Dulhan Jayalath</name>
     </author>
     <author>
-      <name>Gabriele Montefalcone</name>
+      <name>Shashwat Goel</name>
     </author>
     <author>
-      <name>Evan McDonough</name>
+      <name>Thomas Foster</name>
     </author>
     <author>
-      <name>Katherine Freese</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 7 figures, 2 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13318v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13318v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13317v1</id>
-    <updated>2025-09-16T17:59:06Z</updated>
-    <published>2025-09-16T17:59:06Z</published>
-    <title>3D Aware Region Prompted Vision Language Model</title>
-    <summary>  We present Spatial Region 3D (SR-3D) aware vision-language model that
-connects single-view 2D images and multi-view 3D data through a shared visual
-token space. SR-3D supports flexible region prompting, allowing users to
-annotate regions with bounding boxes, segmentation masks on any frame, or
-directly in 3D, without the need for exhaustive multi-frame labeling. We
-achieve this by enriching 2D visual features with 3D positional embeddings,
-which allows the 3D model to draw upon strong 2D priors for more accurate
-spatial reasoning across frames, even when objects of interest do not co-occur
-within the same view. Extensive experiments on both general 2D vision language
-and specialized 3D spatial benchmarks demonstrate that SR-3D achieves
-state-of-the-art performance, underscoring its effectiveness for unifying 2D
-and 3D representation space on scene understanding. Moreover, we observe
-applicability to in-the-wild videos without sensory 3D inputs or ground-truth
-3D annotations, where SR-3D accurately infers spatial relationships and metric
-measurements.
-</summary>
-    <author>
-      <name>An-Chieh Cheng</name>
+      <name>Parag Jain</name>
     </author>
     <author>
-      <name>Yang Fu</name>
+      <name>Suchin Gururangan</name>
     </author>
     <author>
-      <name>Yukang Chen</name>
-    </author>
-    <author>
-      <name>Zhijian Liu</name>
-    </author>
-    <author>
-      <name>Xiaolong Li</name>
-    </author>
-    <author>
-      <name>Subhashree Radhakrishnan</name>
-    </author>
-    <author>
-      <name>Song Han</name>
-    </author>
-    <author>
-      <name>Yao Lu</name>
-    </author>
-    <author>
-      <name>Jan Kautz</name>
-    </author>
-    <author>
-      <name>Pavlo Molchanov</name>
-    </author>
-    <author>
-      <name>Hongxu Yin</name>
-    </author>
-    <author>
-      <name>Xiaolong Wang</name>
-    </author>
-    <author>
-      <name>Sifei Liu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Website: https://www.anjiecheng.me/sr3d</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13317v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13317v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13307v1</id>
-    <updated>2025-09-16T17:57:05Z</updated>
-    <published>2025-09-16T17:57:05Z</published>
-    <title>High-Dimensional Bayesian Model Comparison in Cosmology with
-  GPU-accelerated Nested Sampling and Neural Emulators</title>
-    <summary>  We demonstrate a GPU-accelerated nested sampling framework for efficient
-high-dimensional Bayesian inference in cosmology. Using JAX-based neural
-emulators and likelihoods for cosmic microwave background and cosmic shear
-analyses, our approach provides parameter constraints and direct calculation of
-Bayesian evidence. In the 39 dimensional $\Lambda$CDM vs $w_0w_a$ shear
-analysis, we produce Bayes Factors and a robust error bar in just 2 days on a
-single A100 GPU, without loss of accuracy. Where CPU-based nested sampling can
-now be outpaced by methods relying on MCMC sampling and decoupled evidence
-estimation, we demonstrate that with GPU acceleration nested sampling offers
-the necessary speed-up to put it on equal computational footing with these
-methods, especially where reliable model comparison is paramount. We put
-forward both nested and gradient-based sampling as useful tools for the modern
-cosmologist, where cutting-edge inference pipelines can yield orders of
-magnitude improvements in computation time.
-</summary>
-    <author>
-      <name>Toby Lovick</name>
-    </author>
-    <author>
-      <name>David Yallup</name>
-    </author>
-    <author>
-      <name>Davide Piras</name>
-    </author>
-    <author>
-      <name>Alessio Spurio Mancini</name>
-    </author>
-    <author>
-      <name>Will Handley</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages 4 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13307v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13307v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13293v1</id>
-    <updated>2025-09-16T17:44:58Z</updated>
-    <published>2025-09-16T17:44:58Z</published>
-    <title>Inferring Soil Drydown Behaviour with Adaptive Bayesian Online
-  Changepoint Analysis</title>
-    <summary>  Continuous soil-moisture measurements provide a direct lens on subsurface
-hydrological processes, notably the post-rainfall "drydown" phase. Because
-these records consist of distinct, segment-specific behaviours whose forms and
-scales vary over time, realistic inference demands a model that captures
-piecewise dynamics while accommodating parameters that are unknown a priori.
-Building on Bayesian Online Changepoint Detection (BOCPD), we introduce two
-complementary extensions: a particle-filter variant that substitutes exact
-marginalisation with sequential Monte Carlo to enable real-time inference when
-critical parameters cannot be integrated out analytically, and an
-online-gradient variant that embeds stochastic gradient updates within BOCPD to
-learn application-relevant parameters on the fly without prohibitive
-computational cost. After validating both algorithms on synthetic data that
-replicate the temporal structure of field observations-detailing hyperparameter
-choices, priors, and cost-saving strategies-we apply them to soil-moisture
-series from experimental sites in Austria and the United States, quantifying
-site-specific drydown rates and demonstrating the advantages of our adaptive
-framework over static models.
-</summary>
-    <author>
-      <name>Mengyi Gong</name>
-    </author>
-    <author>
-      <name>Christopher Nemeth</name>
-    </author>
-    <author>
-      <name>Rebecca Killick</name>
-    </author>
-    <author>
-      <name>Peter Strauss</name>
-    </author>
-    <author>
-      <name>John Quinton</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages of main manuscript and 3 pages if supplemental document</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13293v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13293v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="62P12" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13272v1</id>
-    <updated>2025-09-16T17:29:32Z</updated>
-    <published>2025-09-16T17:29:32Z</published>
-    <title>Ionization and temperature measurements in warm dense copper using x-ray
-  absorption spectroscopy</title>
-    <summary>  We detail experimental results inferring ionization and temperature for warm
-dense copper plasmas at several times solid density (15 to 25 g/cm$^3$) and
-temperatures of 10 to 21 eV. Experiments performed at the OMEGA Laser Facility
-generate uniform warm dense matter conditions via symmetric shock compression
-of a buried copper layer. The plasma is probed with a laser-generated x-ray
-source to collect the K-shell x-ray absorption spectrum. Fitting bound-bound
-absorption contributions from constituent charge states of copper provides an
-estimated $\overline{Z}$ of approximately 4 to 7 for these warm dense copper
-plasmas. We find that these partially ionized plasmas have K-edge shifts of 12
-to 30 eV and bound-bound resonance 1s$\rightarrow$3p absorption shifts of 4 to
-26 eV with respect to the cold K-edge. This study provides necessary
-experimental data to improve ionization and opacity models in the warm dense
-matter regime.
-</summary>
-    <author>
-      <name>T. Cordova</name>
-    </author>
-    <author>
-      <name>E. V. Marley</name>
-    </author>
-    <author>
-      <name>D. A. Chin</name>
-    </author>
-    <author>
-      <name>R. A. London</name>
-    </author>
-    <author>
-      <name>H. A. Scott</name>
-    </author>
-    <author>
-      <name>T. Döppner</name>
-    </author>
-    <author>
-      <name>F. N. Beg</name>
-    </author>
-    <author>
-      <name>F. Coppari</name>
-    </author>
-    <author>
-      <name>M. Millot</name>
-    </author>
-    <author>
-      <name>J. Emig</name>
-    </author>
-    <author>
-      <name>S. B. Hansen</name>
-    </author>
-    <author>
-      <name>P. M. Nilson</name>
-    </author>
-    <author>
-      <name>P. Sterne</name>
-    </author>
-    <author>
-      <name>M. J. MacDonald</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 Pages, 7 Figures, In submission for Physical Review Research</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13272v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13272v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13267v1</id>
-    <updated>2025-09-16T17:24:35Z</updated>
-    <published>2025-09-16T17:24:35Z</published>
-    <title>Learning Discrete Bayesian Networks with Hierarchical Dirichlet
-  Shrinkage</title>
-    <summary>  Discrete Bayesian networks (DBNs) provide a broadly useful framework for
-modeling dependence structures in multivariate categorical data. There is a
-vast literature on methods for inferring conditional probabilities and
-graphical structure in DBNs, but data sparsity and parametric assumptions are
-major practical issues. In this article, we detail a comprehensive Bayesian
-framework for learning DBNs. First, we propose a hierarchical prior for the
-conditional probabilities that enables complicated interactions between parent
-variables and stability in sparse regimes. We give a novel Markov chain Monte
-Carlo (MCMC) algorithm utilizing parallel Langevin proposals to generate exact
-posterior samples, avoiding the pitfalls of variational approximations.
-Moreover, we verify that the full conditional distribution of the concentration
-parameters is log-concave under mild conditions, facilitating efficient
-sampling. We then propose two methods for learning network structures,
-including parent sets, Markov blankets, and DAGs, from categorical data. The
-first cycles through individual edges each MCMC iteration, whereas the second
-updates the entire structure as a single step. We evaluate the accuracy, power,
-and MCMC performance of our methods on several simulation studies. Finally, we
-apply our methodology to uncover prognostic network structure from primary
-breast cancer samples.
-</summary>
-    <author>
-      <name>Alexander Dombowsky</name>
-    </author>
-    <author>
-      <name>David B. Dunson</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.13267v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13267v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13255v1</id>
-    <updated>2025-09-16T17:12:23Z</updated>
-    <published>2025-09-16T17:12:23Z</published>
-    <title>ResidualViT for Efficient Temporally Dense Video Encoding</title>
-    <summary>  Several video understanding tasks, such as natural language temporal video
-grounding, temporal activity localization, and audio description generation,
-require "temporally dense" reasoning over frames sampled at high temporal
-resolution. However, computing frame-level features for these tasks is
-computationally expensive given the temporal resolution requirements. In this
-paper, we make three contributions to reduce the cost of computing features for
-temporally dense tasks. First, we introduce a vision transformer (ViT)
-architecture, dubbed ResidualViT, that leverages the large temporal redundancy
-in videos to efficiently compute temporally dense frame-level features. Our
-architecture incorporates (i) learnable residual connections that ensure
-temporal consistency across consecutive frames and (ii) a token reduction
-module that enhances processing speed by selectively discarding temporally
-redundant information while reusing weights of a pretrained foundation model.
-Second, we propose a lightweight distillation strategy to approximate the
-frame-level features of the original foundation model. Finally, we evaluate our
-approach across four tasks and five datasets, in both zero-shot and fully
-supervised settings, demonstrating significant reductions in computational cost
-(up to 60%) and improvements in inference speed (up to 2.5x faster), all while
-closely approximating the accuracy of the original foundation model.
-</summary>
-    <author>
-      <name>Mattia Soldan</name>
-    </author>
-    <author>
-      <name>Fabian Caba Heilbron</name>
-    </author>
-    <author>
-      <name>Bernard Ghanem</name>
-    </author>
-    <author>
-      <name>Josef Sivic</name>
-    </author>
-    <author>
-      <name>Bryan Russell</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.13255v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13255v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13244v1</id>
-    <updated>2025-09-16T16:54:35Z</updated>
-    <published>2025-09-16T16:54:35Z</published>
-    <title>Evaluating LLM Alignment on Personality Inference from Real-World
-  Interview Data</title>
-    <summary>  Large Language Models (LLMs) are increasingly deployed in roles requiring
-nuanced psychological understanding, such as emotional support agents,
-counselors, and decision-making assistants. However, their ability to interpret
-human personality traits, a critical aspect of such applications, remains
-unexplored, particularly in ecologically valid conversational settings. While
-prior work has simulated LLM "personas" using discrete Big Five labels on
-social media data, the alignment of LLMs with continuous, ground-truth
-personality assessments derived from natural interactions is largely
-unexamined. To address this gap, we introduce a novel benchmark comprising
-semi-structured interview transcripts paired with validated continuous Big Five
-trait scores. Using this dataset, we systematically evaluate LLM performance
-across three paradigms: (1) zero-shot and chain-of-thought prompting with
-GPT-4.1 Mini, (2) LoRA-based fine-tuning applied to both RoBERTa and Meta-LLaMA
-architectures, and (3) regression using static embeddings from pretrained BERT
-and OpenAI's text-embedding-3-small. Our results reveal that all Pearson
-correlations between model predictions and ground-truth personality traits
-remain below 0.26, highlighting the limited alignment of current LLMs with
-validated psychological constructs. Chain-of-thought prompting offers minimal
-gains over zero-shot, suggesting that personality inference relies more on
-latent semantic representation than explicit reasoning. These findings
-underscore the challenges of aligning LLMs with complex human attributes and
-motivate future work on trait-specific prompting, context-aware modeling, and
-alignment-oriented fine-tuning.
-</summary>
-    <author>
-      <name>Jianfeng Zhu</name>
-    </author>
-    <author>
-      <name>Julina Maharjan</name>
-    </author>
-    <author>
-      <name>Xinyu Li</name>
-    </author>
-    <author>
-      <name>Karin G. Coifman</name>
-    </author>
-    <author>
-      <name>Ruoming Jin</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 3 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13244v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13244v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.13237v1</id>
-    <updated>2025-09-16T16:44:26Z</updated>
-    <published>2025-09-16T16:44:26Z</published>
-    <title>Metacognitive Reuse: Turning Recurring LLM Reasoning Into Concise
-  Behaviors</title>
-    <summary>  Large language models (LLMs) now solve multi-step problems by emitting
-extended chains of thought. During the process, they often re-derive the same
-intermediate steps across problems, inflating token usage and latency. This
-saturation of the context window leaves less capacity for exploration. We study
-a simple mechanism that converts recurring reasoning fragments into concise,
-reusable "behaviors" (name + instruction) via the model's own metacognitive
-analysis of prior traces. These behaviors are stored in a "behavior handbook"
-which supplies them to the model in-context at inference or distills them into
-parameters via supervised fine-tuning. This approach achieves improved
-test-time reasoning across three different settings - 1) Behavior-conditioned
-inference: Providing the LLM relevant behaviors in-context during reasoning
-reduces number of reasoning tokens by up to 46% while matching or improving
-baseline accuracy; 2) Behavior-guided self-improvement: Without any parameter
-updates, the model improves its own future reasoning by leveraging behaviors
-from its own past problem solving attempts. This yields up to 10% higher
-accuracy than a naive critique-and-revise baseline; and 3) Behavior-conditioned
-SFT: SFT on behavior-conditioned reasoning traces is more effective at
-converting non-reasoning models into reasoning models as compared to vanilla
-SFT. Together, these results indicate that turning slow derivations into fast
-procedural hints enables LLMs to remember how to reason, not just what to
-conclude.
-</summary>
-    <author>
-      <name>Aniket Didolkar</name>
-    </author>
-    <author>
-      <name>Nicolas Ballas</name>
-    </author>
-    <author>
-      <name>Sanjeev Arora</name>
+      <name>Cheng Zhang</name>
     </author>
     <author>
       <name>Anirudh Goyal</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages, 9 Figures, 5 Tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13237v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13237v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Alan Schelten</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 8 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14234v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14234v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.13201v1</id>
-    <updated>2025-09-16T16:06:33Z</updated>
-    <published>2025-09-16T16:06:33Z</published>
-    <title>Scaling Up Throughput-oriented LLM Inference Applications on
-  Heterogeneous Opportunistic GPU Clusters with Pervasive Context Management</title>
-    <summary>  The widespread growth in LLM developments increasingly demands more
-computational power from clusters than what they can supply. Traditional LLM
-applications inherently require huge static resource allocations, which force
-users to either wait in a long job queue and accept progress delay, or buy
-expensive hardware to fulfill their needs and exacerbate the demand-supply
-problem. However, not all LLM applications are latency-sensitive and can
-instead be executed in a throughput-oriented way. This throughput orientation
-allows a dynamic allocation that opportunistically pools available resources
-over time, avoiding both the long queue and expensive GPU purchases.
-Effectively utilizing opportunistic resources brings numerous challenges
-nevertheless. Our solution, pervasive context management, exploits the common
-computational context in LLM applications and provides mechanisms and policies
-that allow seamless context reuse on opportunistic resources. Our evaluation
-shows an LLM application with pervasive context management on opportunistic
-resources reduces its execution time by 98.1%.
+    <id>http://arxiv.org/abs/2509.14229v1</id>
+    <updated>2025-09-17T17:58:28Z</updated>
+    <published>2025-09-17T17:58:28Z</published>
+    <title>Spacing Test for Fused Lasso</title>
+    <summary>  This study addresses the unresolved problem of selecting the regularization
+parameter in the fused lasso. In particular, we extend the framework of the
+Spacing Test proposed by Tibshirani et al. to the fused lasso, providing a
+theoretical foundation for post-selection inference by characterizing the
+selection event as a polyhedral constraint. Based on the analysis of the
+solution path of the fused lasso using a LARS-type algorithm, we derive exact
+conditional $p$-values for the selected change-points. Our method broadens the
+applicability of the Spacing Test from the standard lasso to fused penalty
+structures. Furthermore, through numerical experiments comparing the proposed
+method with sequential versions of AIC and BIC as well as cross-validation, we
+demonstrate that the proposed approach properly controls the type I error while
+achieving high detection power. This work offers a theoretically sound and
+computationally practical solution for parameter selection and post-selection
+inference in structured signal estimation problems. Keywords: Fused Lasso,
+Regularization parameter selection, Spacing Test for Lasso, Selective
+inference, Change-point detection
 </summary>
     <author>
-      <name>Thanh Son Phung</name>
+      <name>Rieko Tasaka</name>
     </author>
     <author>
-      <name>Douglas Thain</name>
+      <name>Tatsuya Kimura</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.13201v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.13201v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Joe Suzuki</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.14229v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14229v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14225v1</id>
+    <updated>2025-09-17T17:56:20Z</updated>
+    <published>2025-09-17T17:56:20Z</published>
+    <title>Defending Diffusion Models Against Membership Inference Attacks via
+  Higher-Order Langevin Dynamics</title>
+    <summary>  Recent advances in generative artificial intelligence applications have
+raised new data security concerns. This paper focuses on defending diffusion
+models against membership inference attacks. This type of attack occurs when
+the attacker can determine if a certain data point was used to train the model.
+Although diffusion models are intrinsically more resistant to membership
+inference attacks than other generative models, they are still susceptible. The
+defense proposed here utilizes critically-damped higher-order Langevin
+dynamics, which introduces several auxiliary variables and a joint diffusion
+process along these variables. The idea is that the presence of auxiliary
+variables mixes external randomness that helps to corrupt sensitive input data
+earlier on in the diffusion process. This concept is theoretically investigated
+and validated on a toy dataset and a speech dataset using the Area Under the
+Receiver Operating Characteristic (AUROC) curves and the FID metric.
+</summary>
+    <author>
+      <name>Benjamin Sterling</name>
+    </author>
+    <author>
+      <name>Yousef El-Laham</name>
+    </author>
+    <author>
+      <name>Mónica F. Bugallo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">5 pages, 2 figures, 1 table</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14225v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14225v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14218v1</id>
+    <updated>2025-09-17T17:51:40Z</updated>
+    <published>2025-09-17T17:51:40Z</published>
+    <title>Adaptive Off-Policy Inference for M-Estimators Under Model
+  Misspecification</title>
+    <summary>  When data are collected adaptively, such as in bandit algorithms, classical
+statistical approaches such as ordinary least squares and $M$-estimation will
+often fail to achieve asymptotic normality. Although recent lines of work have
+modified the classical approaches to ensure valid inference on adaptively
+collected data, most of these works assume that the model is correctly
+specified. We propose a method that provides valid inference for M-estimators
+that use adaptively collected bandit data with a (possibly) misspecified
+working model. A key ingredient in our approach is the use of flexible machine
+learning approaches to stabilize the variance induced by adaptive data
+collection. A major novelty is that our procedure enables the construction of
+valid confidence sets even in settings where treatment policies are unstable
+and non-converging, such as when there is no unique optimal arm and standard
+bandit algorithms are used. Empirical results on semi-synthetic datasets
+constructed from the Osteoarthritis Initiative demonstrate that the method
+maintains type I error control, while existing methods for inference in
+adaptive settings do not cover in the misspecified case.
+</summary>
+    <author>
+      <name>James Leiner</name>
+    </author>
+    <author>
+      <name>Robin Dunn</name>
+    </author>
+    <author>
+      <name>Aaditya Ramdas</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">36 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14218v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14218v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.OT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14206v1</id>
+    <updated>2025-09-17T17:37:25Z</updated>
+    <published>2025-09-17T17:37:25Z</published>
+    <title>Looking into the faintEst WIth MUSE (LEWIS): Exploring the nature of
+  ultra-diffuse galaxies in the Hydra-I cluster IV. A study of the Globular
+  Cluster population in four UDGs</title>
+    <summary>  As old stellar systems, globular clusters (GCs) are key fossil tracers of
+galaxy formation and interaction histories. This paper is part of the LEWIS
+project, an integral-field spectroscopic survey of ultra-diffuse galaxies
+(UDGs) in the Hydra I cluster. We use MUSE spectroscopy and new VIRCAM $H$-band
+imaging data to study the GC populations and dark matter content in four dwarf
+galaxies. We retrieved line-of-sight velocities for all sources in the observed
+MUSE fields. Since the spectroscopic measurements are limited to relatively
+bright sources, we developed a multi-band photometric procedure to identify
+additional GC candidates too faint for spectroscopic confirmation. GC
+candidates were selected using a combination of photometric properties and
+morphometric criteria. Additionally, the $H$-band observations were used to
+constrain the stellar masses of the studied galaxies. Based on the
+spectroscopic classification, we confirm one GC in UDG3, two in UDG7, and four
+in UDG11, while UDG9 has no spectroscopically confirmed bright GCs. We identify
+four intra-cluster GCs in the vicinity of UDG3 and UDG11, and one ultra-compact
+dwarf with a radial velocity only $\Delta v = -85 \pm 10\mathrm{km\ s^{-1}}$
+relative to UDG7, suggesting it may be bound to it. Considering completeness
+corrections and accounting for possible contamination, from photometry we
+estimate that the number of GCs ranges between 0 and $\sim40$ for the
+investigated UDGs. Their specific frequencies suggest that three out of four
+UDGs are either GC-rich, similar to those in the Coma cluster, or belong to an
+intermediate population as seen in the Perseus cluster. Dark matter content
+estimates, inferred from GC counts and stellar mass, indicate that these
+galaxies are dark-matter dominated, with dynamical-to-stellar mass ratios of
+$M_{\mathrm{dyn}} / M_\star \sim 10-1000$.
+</summary>
+    <author>
+      <name>Marco Mirabile</name>
+    </author>
+    <author>
+      <name>Michele Cantiello</name>
+    </author>
+    <author>
+      <name>Marina Rejkuba</name>
+    </author>
+    <author>
+      <name>Steffen Mieske</name>
+    </author>
+    <author>
+      <name>Enrichetta Iodice</name>
+    </author>
+    <author>
+      <name>Chiara Buttitta</name>
+    </author>
+    <author>
+      <name>Maria Luisa Buzzo</name>
+    </author>
+    <author>
+      <name>Johanna Hartke</name>
+    </author>
+    <author>
+      <name>Goran Doll</name>
+    </author>
+    <author>
+      <name>Luca Rossi</name>
+    </author>
+    <author>
+      <name>Magda Arnaboldi</name>
+    </author>
+    <author>
+      <name>Marica Branchesi</name>
+    </author>
+    <author>
+      <name>Giuseppe D'Ago</name>
+    </author>
+    <author>
+      <name>Jesus Falcon-Barroso</name>
+    </author>
+    <author>
+      <name>Katja Fahrion</name>
+    </author>
+    <author>
+      <name>Duncan A. Forbes</name>
+    </author>
+    <author>
+      <name>Marco Gullieuszik</name>
+    </author>
+    <author>
+      <name>Michael Hilker</name>
+    </author>
+    <author>
+      <name>Felipe S. Lohmann</name>
+    </author>
+    <author>
+      <name>Maurizio Paolillo</name>
+    </author>
+    <author>
+      <name>Gabriele Riccio</name>
+    </author>
+    <author>
+      <name>Tom Richtler</name>
+    </author>
+    <author>
+      <name>Marilena Spavone</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages, 24 figures, 7 tables. Accepted for publication in A&amp;A</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14206v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14206v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14204v1</id>
+    <updated>2025-09-17T17:36:17Z</updated>
+    <published>2025-09-17T17:36:17Z</published>
+    <title>Large deviations for probability graphons</title>
+    <summary>  We establish a large deviation principle (LDP) for probability graphons,
+which are symmetric functions from the unit square into the space of
+probability measures. This notion extends classical graphons and provides a
+flexible framework for studying the limit behavior of large dense weighted
+graphs. In particular, our result generalizes the seminal work of Chatterjee
+and Varadhan (2011), who derived an LDP for Erd\H{o}s-R\'enyi random graphs via
+graphon theory. We move beyond their binary (Bernoulli) setting to encompass
+arbitrary edge-weight distributions. Specifically, we analyze the distribution
+on probability graphons induced by random weighted graphs in which edges are
+sampled independently from a common reference probability measure supported on
+a compact Polish space. We prove that this distribution satisfies an LDP with a
+good rate function, expressed as an extension of the Kullback-Leibler
+divergence between probability graphons and the reference measure. This theorem
+can also be viewed as a Sanov-type result in the graphon setting. Our work
+provides a rigorous foundation for analyzing rare events in weighted networks
+and supports statistical inference in structured random graph models under
+distributional edge uncertainty.
+</summary>
+    <author>
+      <name>Pierfrancesco Dionigi</name>
+    </author>
+    <author>
+      <name>Giulio Zucal</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint, comments are very welcome. 55 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14204v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14204v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="05C80, 60F10 (Primary) 60B20, 60B10, 60C05, 28A33 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14201v1</id>
+    <updated>2025-09-17T17:35:07Z</updated>
+    <published>2025-09-17T17:35:07Z</published>
+    <title>Active Inference Framework for Closed-Loop Sensing, Communication, and
+  Control in UAV Systems</title>
+    <summary>  Integrated sensing and communication (ISAC) is a core technology for 6G, and
+its application to closed-loop sensing, communication, and control (SCC)
+enables various services. Existing SCC solutions often treat sensing and
+control separately, leading to suboptimal performance and resource usage. In
+this work, we introduce the active inference framework (AIF) into SCC-enabled
+unmanned aerial vehicle (UAV) systems for joint state estimation, control, and
+sensing resource allocation. By formulating a unified generative model, the
+problem reduces to minimizing variational free energy for inference and
+expected free energy for action planning. Simulation results show that both
+control cost and sensing cost are reduced relative to baselines.
+</summary>
+    <author>
+      <name>Guangjin Pan</name>
+    </author>
+    <author>
+      <name>Liping Bai</name>
+    </author>
+    <author>
+      <name>Zhuojun Tian</name>
+    </author>
+    <author>
+      <name>Hui Chen</name>
+    </author>
+    <author>
+      <name>Mehdi Bennis</name>
+    </author>
+    <author>
+      <name>Henk Wymeersch</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">5 pages, 2 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14201v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14201v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14183v1</id>
+    <updated>2025-09-17T17:16:57Z</updated>
+    <published>2025-09-17T17:16:57Z</published>
+    <title>Index Date Imputation For Survival Outcomes for Externally Controlled
+  Trials</title>
+    <summary>  Externally controlled trials (ECTs) compare outcomes between a single-arm
+trial and external controls drawn from sources such as historical trials,
+registries, or observational studies. In survival analysis, a major challenge
+arises when the time origin (index date) differs across groups, for example,
+when treatment initiation occurs after a delay in the single-arm trial but is
+undefined in the external controls. This misalignment can bias treatment effect
+estimates and distort causal interpretation. We propose a novel statistical
+method, Index Date Imputation (IDI), that imputes comparable index dates for
+external control patients using the estimated distribution of treatment
+initiation times from the single-arm cohort. To address population-level
+confounding, IDI is combined with propensity score weighting or matching,
+yielding balanced and temporally aligned cohorts for survival comparison. We
+detail diagnostics for covariate balance and truncation bias, and evaluate
+performance via extensive simulations. Applying IDI to a randomized oncology
+trial, we demonstrate that the method recovers the known treatment effect
+despite artificial index date misalignment. IDI provides a principled framework
+for time-to-event analyses in ECTs and is broadly applicable in oncology and
+rare disease settings.
+</summary>
+    <author>
+      <name>Q. Le Coent</name>
+    </author>
+    <author>
+      <name>G. L. Rosner</name>
+    </author>
+    <author>
+      <name>M-C. Wang</name>
+    </author>
+    <author>
+      <name>C. Hu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.14183v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14183v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14166v1</id>
+    <updated>2025-09-17T16:49:46Z</updated>
+    <published>2025-09-17T16:49:46Z</published>
+    <title>Reaction-diffusion models of invasive tree pest spread: quantifying the
+  spread of oak processionary moth in the UK</title>
+    <summary>  UK woodlands, forests, and urban treescapes are under threat from invasive
+species, exacerbated by climate change, trade, and transport. Invasive tree
+pests debilitate their host and disrupt forest ecosystems, thus it is
+imperative to quantitatively model and predict their spread. Addressing this,
+we represent the spatial distribution of the pest as a population density field
+which evolves according to a spatiotemporal reaction-diffusion equation. We
+solve this intractable system of equations numerically and, from the solution,
+we determine first arrival times of the pest at locations in the field. The
+adopted model permits us to obtain the expansion rate of pest spread directly
+from the model parameters, which we infer in the Bayesian paradigm, using a
+Markov chain Monte Carlo scheme. We apply our framework to the ongoing spread
+of oak processionary moth in the UK, an outbreak which continues to grow
+despite management efforts. We demonstrate that our approach effectively
+captures the spread of the pest and that this has occurred at a non-constant
+expansion rate. The proposed framework is a powerful tool for quantitatively
+modelling the spread of an invasive tree pest and could underpin future
+prediction and management approaches.
+</summary>
+    <author>
+      <name>Jamie P. McKeown</name>
+    </author>
+    <author>
+      <name>Laura E. Wadkin</name>
+    </author>
+    <author>
+      <name>Nick G. Parker</name>
+    </author>
+    <author>
+      <name>Andrew Golightly</name>
+    </author>
+    <author>
+      <name>Andrew W. Baggaley</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 8 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.14166v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14166v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="92D40, 92-10" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14165v1</id>
+    <updated>2025-09-17T16:48:00Z</updated>
+    <published>2025-09-17T16:48:00Z</published>
+    <title>Where Do Tokens Go? Understanding Pruning Behaviors in STEP at High
+  Resolutions</title>
+    <summary>  Vision Transformers (ViTs) achieve state-of-the-art performance in semantic
+segmentation but are hindered by high computational and memory costs. To
+address this, we propose STEP (SuperToken and Early-Pruning), a hybrid
+token-reduction framework that combines dynamic patch merging and token pruning
+to enhance efficiency without significantly compromising accuracy. At the core
+of STEP is dCTS, a lightweight CNN-based policy network that enables flexible
+merging into superpatches. Encoder blocks integrate also early-exits to remove
+high-confident supertokens, lowering computational load. We evaluate our method
+on high-resolution semantic segmentation benchmarks, including images up to
+1024 x 1024, and show that when dCTS is applied alone, the token count can be
+reduced by a factor of 2.5 compared to the standard 16 x 16 pixel patching
+scheme. This yields a 2.6x reduction in computational cost and a 3.4x increase
+in throughput when using ViT-Large as the backbone. Applying the full STEP
+framework further improves efficiency, reaching up to a 4x reduction in
+computational complexity and a 1.7x gain in inference speed, with a maximum
+accuracy drop of no more than 2.0%. With the proposed STEP configurations, up
+to 40% of tokens can be confidently predicted and halted before reaching the
+final encoder layer.
+</summary>
+    <author>
+      <name>Michal Szczepanski</name>
+    </author>
+    <author>
+      <name>Martyna Poreba</name>
+    </author>
+    <author>
+      <name>Karim Haroun</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.14165v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.14165v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
