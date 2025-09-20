@@ -1,505 +1,447 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-09-19T00:53:46Z -->
+<!-- Last updated: 2025-09-20T00:50:32Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-09-18T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">121171</opensearch:totalResults>
+  <updated>2025-09-19T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">121264</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2509.14234v1</id>
-    <updated>2025-09-17T17:59:42Z</updated>
-    <published>2025-09-17T17:59:42Z</published>
-    <title>Compute as Teacher: Turning Inference Compute Into Reference-Free
-  Supervision</title>
-    <summary>  Where do learning signals come from when there is no ground truth in
-post-training? We propose turning exploration into supervision through Compute
-as Teacher (CaT), which converts the model's own exploration at inference-time
-into reference-free supervision by synthesizing a single reference from a group
-of parallel rollouts and then optimizing toward it. Concretely, the current
-policy produces a group of rollouts; a frozen anchor (the initial policy)
-reconciles omissions and contradictions to estimate a reference, turning extra
-inference-time compute into a teacher signal. We turn this into rewards in two
-regimes: (i) verifiable tasks use programmatic equivalence on final answers;
-(ii) non-verifiable tasks use self-proposed rubrics-binary, auditable criteria
-scored by an independent LLM judge, with reward given by the fraction
-satisfied. Unlike selection methods (best-of-N, majority, perplexity, or judge
-scores), synthesis may disagree with the majority and be correct even when all
-rollouts are wrong; performance scales with the number of rollouts. As a
-test-time procedure, CaT improves Gemma 3 4B, Qwen 3 4B, and Llama 3.1 8B (up
-to +27% on MATH-500; +12% on HealthBench). With reinforcement learning
-(CaT-RL), we obtain further gains (up to +33% and +30%), with the trained
-policy surpassing the initial teacher signal.
+    <id>http://arxiv.org/abs/2509.15224v1</id>
+    <updated>2025-09-18T17:59:51Z</updated>
+    <published>2025-09-18T17:59:51Z</published>
+    <title>Depth AnyEvent: A Cross-Modal Distillation Paradigm for Event-Based
+  Monocular Depth Estimation</title>
+    <summary>  Event cameras capture sparse, high-temporal-resolution visual information,
+making them particularly suitable for challenging environments with high-speed
+motion and strongly varying lighting conditions. However, the lack of large
+datasets with dense ground-truth depth annotations hinders learning-based
+monocular depth estimation from event data. To address this limitation, we
+propose a cross-modal distillation paradigm to generate dense proxy labels
+leveraging a Vision Foundation Model (VFM). Our strategy requires an event
+stream spatially aligned with RGB frames, a simple setup even available
+off-the-shelf, and exploits the robustness of large-scale VFMs. Additionally,
+we propose to adapt VFMs, either a vanilla one like Depth Anything v2 (DAv2),
+or deriving from it a novel recurrent architecture to infer depth from
+monocular event cameras. We evaluate our approach with synthetic and real-world
+datasets, demonstrating that i) our cross-modal paradigm achieves competitive
+performance compared to fully supervised methods without requiring expensive
+depth annotations, and ii) our VFM-based models achieve state-of-the-art
+performance.
 </summary>
     <author>
-      <name>Dulhan Jayalath</name>
+      <name>Luca Bartolomei</name>
     </author>
     <author>
-      <name>Shashwat Goel</name>
+      <name>Enrico Mannocci</name>
     </author>
     <author>
-      <name>Thomas Foster</name>
+      <name>Fabio Tosi</name>
     </author>
     <author>
-      <name>Parag Jain</name>
+      <name>Matteo Poggi</name>
     </author>
     <author>
-      <name>Suchin Gururangan</name>
+      <name>Stefano Mattoccia</name>
     </author>
-    <author>
-      <name>Cheng Zhang</name>
-    </author>
-    <author>
-      <name>Anirudh Goyal</name>
-    </author>
-    <author>
-      <name>Alan Schelten</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 8 figures, 2 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14234v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14234v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14229v1</id>
-    <updated>2025-09-17T17:58:28Z</updated>
-    <published>2025-09-17T17:58:28Z</published>
-    <title>Spacing Test for Fused Lasso</title>
-    <summary>  This study addresses the unresolved problem of selecting the regularization
-parameter in the fused lasso. In particular, we extend the framework of the
-Spacing Test proposed by Tibshirani et al. to the fused lasso, providing a
-theoretical foundation for post-selection inference by characterizing the
-selection event as a polyhedral constraint. Based on the analysis of the
-solution path of the fused lasso using a LARS-type algorithm, we derive exact
-conditional $p$-values for the selected change-points. Our method broadens the
-applicability of the Spacing Test from the standard lasso to fused penalty
-structures. Furthermore, through numerical experiments comparing the proposed
-method with sequential versions of AIC and BIC as well as cross-validation, we
-demonstrate that the proposed approach properly controls the type I error while
-achieving high detection power. This work offers a theoretically sound and
-computationally practical solution for parameter selection and post-selection
-inference in structured signal estimation problems. Keywords: Fused Lasso,
-Regularization parameter selection, Spacing Test for Lasso, Selective
-inference, Change-point detection
-</summary>
-    <author>
-      <name>Rieko Tasaka</name>
-    </author>
-    <author>
-      <name>Tatsuya Kimura</name>
-    </author>
-    <author>
-      <name>Joe Suzuki</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.14229v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14229v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14225v1</id>
-    <updated>2025-09-17T17:56:20Z</updated>
-    <published>2025-09-17T17:56:20Z</published>
-    <title>Defending Diffusion Models Against Membership Inference Attacks via
-  Higher-Order Langevin Dynamics</title>
-    <summary>  Recent advances in generative artificial intelligence applications have
-raised new data security concerns. This paper focuses on defending diffusion
-models against membership inference attacks. This type of attack occurs when
-the attacker can determine if a certain data point was used to train the model.
-Although diffusion models are intrinsically more resistant to membership
-inference attacks than other generative models, they are still susceptible. The
-defense proposed here utilizes critically-damped higher-order Langevin
-dynamics, which introduces several auxiliary variables and a joint diffusion
-process along these variables. The idea is that the presence of auxiliary
-variables mixes external randomness that helps to corrupt sensitive input data
-earlier on in the diffusion process. This concept is theoretically investigated
-and validated on a toy dataset and a speech dataset using the Area Under the
-Receiver Operating Characteristic (AUROC) curves and the FID metric.
-</summary>
-    <author>
-      <name>Benjamin Sterling</name>
-    </author>
-    <author>
-      <name>Yousef El-Laham</name>
-    </author>
-    <author>
-      <name>Mónica F. Bugallo</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">5 pages, 2 figures, 1 table</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14225v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14225v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14218v1</id>
-    <updated>2025-09-17T17:51:40Z</updated>
-    <published>2025-09-17T17:51:40Z</published>
-    <title>Adaptive Off-Policy Inference for M-Estimators Under Model
-  Misspecification</title>
-    <summary>  When data are collected adaptively, such as in bandit algorithms, classical
-statistical approaches such as ordinary least squares and $M$-estimation will
-often fail to achieve asymptotic normality. Although recent lines of work have
-modified the classical approaches to ensure valid inference on adaptively
-collected data, most of these works assume that the model is correctly
-specified. We propose a method that provides valid inference for M-estimators
-that use adaptively collected bandit data with a (possibly) misspecified
-working model. A key ingredient in our approach is the use of flexible machine
-learning approaches to stabilize the variance induced by adaptive data
-collection. A major novelty is that our procedure enables the construction of
-valid confidence sets even in settings where treatment policies are unstable
-and non-converging, such as when there is no unique optimal arm and standard
-bandit algorithms are used. Empirical results on semi-synthetic datasets
-constructed from the Osteoarthritis Initiative demonstrate that the method
-maintains type I error control, while existing methods for inference in
-adaptive settings do not cover in the misspecified case.
-</summary>
-    <author>
-      <name>James Leiner</name>
-    </author>
-    <author>
-      <name>Robin Dunn</name>
-    </author>
-    <author>
-      <name>Aaditya Ramdas</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">36 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14218v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14218v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.OT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14206v1</id>
-    <updated>2025-09-17T17:37:25Z</updated>
-    <published>2025-09-17T17:37:25Z</published>
-    <title>Looking into the faintEst WIth MUSE (LEWIS): Exploring the nature of
-  ultra-diffuse galaxies in the Hydra-I cluster IV. A study of the Globular
-  Cluster population in four UDGs</title>
-    <summary>  As old stellar systems, globular clusters (GCs) are key fossil tracers of
-galaxy formation and interaction histories. This paper is part of the LEWIS
-project, an integral-field spectroscopic survey of ultra-diffuse galaxies
-(UDGs) in the Hydra I cluster. We use MUSE spectroscopy and new VIRCAM $H$-band
-imaging data to study the GC populations and dark matter content in four dwarf
-galaxies. We retrieved line-of-sight velocities for all sources in the observed
-MUSE fields. Since the spectroscopic measurements are limited to relatively
-bright sources, we developed a multi-band photometric procedure to identify
-additional GC candidates too faint for spectroscopic confirmation. GC
-candidates were selected using a combination of photometric properties and
-morphometric criteria. Additionally, the $H$-band observations were used to
-constrain the stellar masses of the studied galaxies. Based on the
-spectroscopic classification, we confirm one GC in UDG3, two in UDG7, and four
-in UDG11, while UDG9 has no spectroscopically confirmed bright GCs. We identify
-four intra-cluster GCs in the vicinity of UDG3 and UDG11, and one ultra-compact
-dwarf with a radial velocity only $\Delta v = -85 \pm 10\mathrm{km\ s^{-1}}$
-relative to UDG7, suggesting it may be bound to it. Considering completeness
-corrections and accounting for possible contamination, from photometry we
-estimate that the number of GCs ranges between 0 and $\sim40$ for the
-investigated UDGs. Their specific frequencies suggest that three out of four
-UDGs are either GC-rich, similar to those in the Coma cluster, or belong to an
-intermediate population as seen in the Perseus cluster. Dark matter content
-estimates, inferred from GC counts and stellar mass, indicate that these
-galaxies are dark-matter dominated, with dynamical-to-stellar mass ratios of
-$M_{\mathrm{dyn}} / M_\star \sim 10-1000$.
-</summary>
-    <author>
-      <name>Marco Mirabile</name>
-    </author>
-    <author>
-      <name>Michele Cantiello</name>
-    </author>
-    <author>
-      <name>Marina Rejkuba</name>
-    </author>
-    <author>
-      <name>Steffen Mieske</name>
-    </author>
-    <author>
-      <name>Enrichetta Iodice</name>
-    </author>
-    <author>
-      <name>Chiara Buttitta</name>
-    </author>
-    <author>
-      <name>Maria Luisa Buzzo</name>
-    </author>
-    <author>
-      <name>Johanna Hartke</name>
-    </author>
-    <author>
-      <name>Goran Doll</name>
-    </author>
-    <author>
-      <name>Luca Rossi</name>
-    </author>
-    <author>
-      <name>Magda Arnaboldi</name>
-    </author>
-    <author>
-      <name>Marica Branchesi</name>
-    </author>
-    <author>
-      <name>Giuseppe D'Ago</name>
-    </author>
-    <author>
-      <name>Jesus Falcon-Barroso</name>
-    </author>
-    <author>
-      <name>Katja Fahrion</name>
-    </author>
-    <author>
-      <name>Duncan A. Forbes</name>
-    </author>
-    <author>
-      <name>Marco Gullieuszik</name>
-    </author>
-    <author>
-      <name>Michael Hilker</name>
-    </author>
-    <author>
-      <name>Felipe S. Lohmann</name>
-    </author>
-    <author>
-      <name>Maurizio Paolillo</name>
-    </author>
-    <author>
-      <name>Gabriele Riccio</name>
-    </author>
-    <author>
-      <name>Tom Richtler</name>
-    </author>
-    <author>
-      <name>Marilena Spavone</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages, 24 figures, 7 tables. Accepted for publication in A&amp;A</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14206v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14206v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14204v1</id>
-    <updated>2025-09-17T17:36:17Z</updated>
-    <published>2025-09-17T17:36:17Z</published>
-    <title>Large deviations for probability graphons</title>
-    <summary>  We establish a large deviation principle (LDP) for probability graphons,
-which are symmetric functions from the unit square into the space of
-probability measures. This notion extends classical graphons and provides a
-flexible framework for studying the limit behavior of large dense weighted
-graphs. In particular, our result generalizes the seminal work of Chatterjee
-and Varadhan (2011), who derived an LDP for Erd\H{o}s-R\'enyi random graphs via
-graphon theory. We move beyond their binary (Bernoulli) setting to encompass
-arbitrary edge-weight distributions. Specifically, we analyze the distribution
-on probability graphons induced by random weighted graphs in which edges are
-sampled independently from a common reference probability measure supported on
-a compact Polish space. We prove that this distribution satisfies an LDP with a
-good rate function, expressed as an extension of the Kullback-Leibler
-divergence between probability graphons and the reference measure. This theorem
-can also be viewed as a Sanov-type result in the graphon setting. Our work
-provides a rigorous foundation for analyzing rare events in weighted networks
-and supports statistical inference in structured random graph models under
-distributional edge uncertainty.
-</summary>
-    <author>
-      <name>Pierfrancesco Dionigi</name>
-    </author>
-    <author>
-      <name>Giulio Zucal</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint, comments are very welcome. 55 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14204v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14204v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="05C80, 60F10 (Primary) 60B20, 60B10, 60C05, 28A33 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14201v1</id>
-    <updated>2025-09-17T17:35:07Z</updated>
-    <published>2025-09-17T17:35:07Z</published>
-    <title>Active Inference Framework for Closed-Loop Sensing, Communication, and
-  Control in UAV Systems</title>
-    <summary>  Integrated sensing and communication (ISAC) is a core technology for 6G, and
-its application to closed-loop sensing, communication, and control (SCC)
-enables various services. Existing SCC solutions often treat sensing and
-control separately, leading to suboptimal performance and resource usage. In
-this work, we introduce the active inference framework (AIF) into SCC-enabled
-unmanned aerial vehicle (UAV) systems for joint state estimation, control, and
-sensing resource allocation. By formulating a unified generative model, the
-problem reduces to minimizing variational free energy for inference and
-expected free energy for action planning. Simulation results show that both
-control cost and sensing cost are reduced relative to baselines.
-</summary>
-    <author>
-      <name>Guangjin Pan</name>
-    </author>
-    <author>
-      <name>Liping Bai</name>
-    </author>
-    <author>
-      <name>Zhuojun Tian</name>
-    </author>
-    <author>
-      <name>Hui Chen</name>
-    </author>
-    <author>
-      <name>Mehdi Bennis</name>
-    </author>
-    <author>
-      <name>Henk Wymeersch</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">5 pages, 2 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14201v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14201v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14183v1</id>
-    <updated>2025-09-17T17:16:57Z</updated>
-    <published>2025-09-17T17:16:57Z</published>
-    <title>Index Date Imputation For Survival Outcomes for Externally Controlled
-  Trials</title>
-    <summary>  Externally controlled trials (ECTs) compare outcomes between a single-arm
-trial and external controls drawn from sources such as historical trials,
-registries, or observational studies. In survival analysis, a major challenge
-arises when the time origin (index date) differs across groups, for example,
-when treatment initiation occurs after a delay in the single-arm trial but is
-undefined in the external controls. This misalignment can bias treatment effect
-estimates and distort causal interpretation. We propose a novel statistical
-method, Index Date Imputation (IDI), that imputes comparable index dates for
-external control patients using the estimated distribution of treatment
-initiation times from the single-arm cohort. To address population-level
-confounding, IDI is combined with propensity score weighting or matching,
-yielding balanced and temporally aligned cohorts for survival comparison. We
-detail diagnostics for covariate balance and truncation bias, and evaluate
-performance via extensive simulations. Applying IDI to a randomized oncology
-trial, we demonstrate that the method recovers the known treatment effect
-despite artificial index date misalignment. IDI provides a principled framework
-for time-to-event analyses in ECTs and is broadly applicable in oncology and
-rare disease settings.
-</summary>
-    <author>
-      <name>Q. Le Coent</name>
-    </author>
-    <author>
-      <name>G. L. Rosner</name>
-    </author>
-    <author>
-      <name>M-C. Wang</name>
-    </author>
-    <author>
-      <name>C. Hu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.14183v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14183v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14166v1</id>
-    <updated>2025-09-17T16:49:46Z</updated>
-    <published>2025-09-17T16:49:46Z</published>
-    <title>Reaction-diffusion models of invasive tree pest spread: quantifying the
-  spread of oak processionary moth in the UK</title>
-    <summary>  UK woodlands, forests, and urban treescapes are under threat from invasive
-species, exacerbated by climate change, trade, and transport. Invasive tree
-pests debilitate their host and disrupt forest ecosystems, thus it is
-imperative to quantitatively model and predict their spread. Addressing this,
-we represent the spatial distribution of the pest as a population density field
-which evolves according to a spatiotemporal reaction-diffusion equation. We
-solve this intractable system of equations numerically and, from the solution,
-we determine first arrival times of the pest at locations in the field. The
-adopted model permits us to obtain the expansion rate of pest spread directly
-from the model parameters, which we infer in the Bayesian paradigm, using a
-Markov chain Monte Carlo scheme. We apply our framework to the ongoing spread
-of oak processionary moth in the UK, an outbreak which continues to grow
-despite management efforts. We demonstrate that our approach effectively
-captures the spread of the pest and that this has occurred at a non-constant
-expansion rate. The proposed framework is a powerful tool for quantitatively
-modelling the spread of an invasive tree pest and could underpin future
-prediction and management approaches.
-</summary>
-    <author>
-      <name>Jamie P. McKeown</name>
-    </author>
-    <author>
-      <name>Laura E. Wadkin</name>
-    </author>
-    <author>
-      <name>Nick G. Parker</name>
-    </author>
-    <author>
-      <name>Andrew Golightly</name>
-    </author>
-    <author>
-      <name>Andrew W. Baggaley</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 8 figures, 2 tables</arxiv:comment>
-    <link href="http://arxiv.org/abs/2509.14166v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14166v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="92D40, 92-10" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2509.14165v1</id>
-    <updated>2025-09-17T16:48:00Z</updated>
-    <published>2025-09-17T16:48:00Z</published>
-    <title>Where Do Tokens Go? Understanding Pruning Behaviors in STEP at High
-  Resolutions</title>
-    <summary>  Vision Transformers (ViTs) achieve state-of-the-art performance in semantic
-segmentation but are hindered by high computational and memory costs. To
-address this, we propose STEP (SuperToken and Early-Pruning), a hybrid
-token-reduction framework that combines dynamic patch merging and token pruning
-to enhance efficiency without significantly compromising accuracy. At the core
-of STEP is dCTS, a lightweight CNN-based policy network that enables flexible
-merging into superpatches. Encoder blocks integrate also early-exits to remove
-high-confident supertokens, lowering computational load. We evaluate our method
-on high-resolution semantic segmentation benchmarks, including images up to
-1024 x 1024, and show that when dCTS is applied alone, the token count can be
-reduced by a factor of 2.5 compared to the standard 16 x 16 pixel patching
-scheme. This yields a 2.6x reduction in computational cost and a 3.4x increase
-in throughput when using ViT-Large as the backbone. Applying the full STEP
-framework further improves efficiency, reaching up to a 4x reduction in
-computational complexity and a 1.7x gain in inference speed, with a maximum
-accuracy drop of no more than 2.0%. With the proposed STEP configurations, up
-to 40% of tokens can be confidently predicted and halted before reaching the
-final encoder layer.
-</summary>
-    <author>
-      <name>Michal Szczepanski</name>
-    </author>
-    <author>
-      <name>Martyna Poreba</name>
-    </author>
-    <author>
-      <name>Karim Haroun</name>
-    </author>
-    <link href="http://arxiv.org/abs/2509.14165v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2509.14165v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICCV 2025. Code: https://github.com/bartn8/depthanyevent/ Project
+  Page: https://bartn8.github.io/depthanyevent/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15224v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15224v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15223v1</id>
+    <updated>2025-09-18T17:59:30Z</updated>
+    <published>2025-09-18T17:59:30Z</published>
+    <title>Parameter sensitivity of cosmic pairwise velocities in the non-linear
+  regime of structure formation</title>
+    <summary>  The peculiar velocities of dark matter tracers drive the growth of cosmic
+structures, providing a sensitive test of cosmological models and strengthening
+constraints on the nature of dark energy. In this work, we investigate the mean
+pairwise velocities, $v_{12}$, of dark matter tracers as a cosmological probe
+in the non-linear regime of cosmic structure formation. Using N-body dark
+matter-only simulations, we measure $v_{12}$ for pair separations up to 50
+$h^{-1}$Mpc and model it by solving the pair conservation equation for a
+self-gravitating particle system, along with various prescriptions of the
+nonlinear matter power spectrum. We quantified the sensitivity of $v_{12}$ to
+variations in key cosmological parameters such as $\Omega_{\mathrm{m}}$,
+$\sigma_8$, $h$, $M_\nu$, and $w$. Our parameter inference analysis using MCMC
+shows sub-11% agreement with simulation data, with notable degeneracies,
+particularly between $\Omega_\mathrm{m}$ and $\sigma_8$. We further compute the
+stable clustering crossing scale across redshifts $z=0$, $0.5$, and $1$,
+assessing its dependence on cosmology. Among the tested power spectrum modeling
+approaches, we find that the CSSTEmu emulator provides the most accurate
+predictions, with deviations below 5% for $r &gt; 10$ $h^{-1}$Mpc at $z=0.5$. Our
+results are validated using independent simulation suites, demonstrating that
+our framework offers a robust method for extracting cosmological constraints
+from upcoming peculiar velocity data.
+</summary>
+    <author>
+      <name>Jorge Enrique García-Farieta</name>
+    </author>
+    <author>
+      <name>Héctor J. Hortúa</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 8 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15223v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15223v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15199v1</id>
+    <updated>2025-09-18T17:54:01Z</updated>
+    <published>2025-09-18T17:54:01Z</published>
+    <title>CausalPre: Scalable and Effective Data Pre-processing for Causal
+  Fairness</title>
+    <summary>  Causal fairness in databases is crucial to preventing biased and inaccurate
+outcomes in downstream tasks. While most prior work assumes a known causal
+model, recent efforts relax this assumption by enforcing additional
+constraints. However, these approaches often fail to capture broader attribute
+relationships that are critical to maintaining utility. This raises a
+fundamental question: Can we harness the benefits of causal reasoning to design
+efficient and effective fairness solutions without relying on strong
+assumptions about the underlying causal model? In this paper, we seek to answer
+this question by introducing CausalPre, a scalable and effective
+causality-guided data pre-processing framework that guarantees justifiable
+fairness, a strong causal notion of fairness. CausalPre extracts causally fair
+relationships by reformulating the originally complex and computationally
+infeasible extraction task into a tailored distribution estimation problem. To
+ensure scalability, CausalPre adopts a carefully crafted variant of
+low-dimensional marginal factorization to approximate the joint distribution,
+complemented by a heuristic algorithm that efficiently tackles the associated
+computational challenge. Extensive experiments on benchmark datasets
+demonstrate that CausalPre is both effective and scalable, challenging the
+conventional belief that achieving causal fairness requires trading off
+relationship coverage for relaxed model assumptions.
+</summary>
+    <author>
+      <name>Ying Zheng</name>
+    </author>
+    <author>
+      <name>Yangfan Jiang</name>
+    </author>
+    <author>
+      <name>Kian-Lee Tan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.15199v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15199v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15197v1</id>
+    <updated>2025-09-18T17:52:26Z</updated>
+    <published>2025-09-18T17:52:26Z</published>
+    <title>Consistent causal discovery with equal error variances: a least-squares
+  perspective</title>
+    <summary>  We consider the problem of recovering the true causal structure among a set
+of variables, generated by a linear acyclic structural equation model (SEM)
+with the error terms being independent and having equal variances. It is
+well-known that the true underlying directed acyclic graph (DAG) encoding the
+causal structure is uniquely identifiable under this assumption. In this work,
+we establish that the sum of minimum expected squared errors for every
+variable, while predicted by the best linear combination of its parent
+variables, is minimised if and only if the causal structure is represented by
+any supergraph of the true DAG. This property is further utilised to design a
+Bayesian DAG selection method that recovers the true graph consistently.
+</summary>
+    <author>
+      <name>Anamitra Chaudhuri</name>
+    </author>
+    <author>
+      <name>Yang Ni</name>
+    </author>
+    <author>
+      <name>Anirban Bhattacharya</name>
+    </author>
+    <link href="http://arxiv.org/abs/2509.15197v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15197v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="62H22, 62F15 (Primary) 62C10, 62E10 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15196v1</id>
+    <updated>2025-09-18T17:52:23Z</updated>
+    <published>2025-09-18T17:52:23Z</published>
+    <title>Measuring the Two-Dimensional Thermal Structures of Protoplanetary Disks</title>
+    <summary>  We present a flexible, annulus-by-annulus method to constrain the 2-D thermal
+structure of a protoplanetary disk from optically thick spectral line emission.
+Using synthetic disk models with a known temperature and density structure, we
+extracted the vertical emission surfaces and brightness temperatures in radial
+annuli for multiple CO isotopologue transitions and used them to infer the
+vertical temperature profiles. This approach reliably recovers the injected
+temperature structure despite noise and finite resolution. We demonstrated that
+even a modest set of emission lines can constrain the temperature across a wide
+range of radii and elevations. Nevertheless, biases in the extracted emission
+surfaces constitute a major source of systematic error. Finally, we applied
+this method to archival ALMA observations of the HD 163296 disk, revealing that
+simple parametric radial temperature models may obscure the complexity of real
+disks and that additional observations are necessary to distinguish between
+different models of the vertical structure. This flexible framework can be
+readily applied to other systems, helping to characterize the thermal
+environments that shape planet formation.
+</summary>
+    <author>
+      <name>Anna J. Fehr</name>
+    </author>
+    <author>
+      <name>Sean M. Andrews</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 15 figures, accepted by ApJ</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15196v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15196v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15188v1</id>
+    <updated>2025-09-18T17:48:21Z</updated>
+    <published>2025-09-18T17:48:21Z</published>
+    <title>Fast and Fluent Diffusion Language Models via Convolutional Decoding and
+  Rejective Fine-tuning</title>
+    <summary>  Autoregressive (AR) language models generate text one token at a time, which
+limits their inference speed. Diffusion-based language models offer a promising
+alternative, as they can decode multiple tokens in parallel. However, we
+identify a key bottleneck in current diffusion LMs: the long decoding-window
+problem, where tokens generated far from the input context often become
+irrelevant or repetitive. Previous solutions like semi-autoregressive address
+this issue by splitting windows into blocks, but this sacrifices speed and
+bidirectionality, eliminating the main advantage of diffusion models. To
+overcome this, we propose Convolutional decoding (Conv), a normalization-based
+method that narrows the decoding window without hard segmentation, leading to
+better fluency and flexibility. Additionally, we introduce Rejecting Rule-based
+Fine-Tuning (R2FT), a post-hoc training scheme that better aligns tokens at
+positions far from context. Our methods achieve state-of-the-art results on
+open-ended generation benchmarks (e.g., AlpacaEval) among diffusion LM
+baselines, with significantly lower step size than previous works,
+demonstrating both speed and quality improvements.
+</summary>
+    <author>
+      <name>Yeongbin Seo</name>
+    </author>
+    <author>
+      <name>Dongha Lee</name>
+    </author>
+    <author>
+      <name>Jaehyung Kim</name>
+    </author>
+    <author>
+      <name>Jinyoung Yeo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">NeurIPS 2025 spotlight</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15188v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15188v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68T50" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.2.7" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15187v1</id>
+    <updated>2025-09-18T17:48:20Z</updated>
+    <published>2025-09-18T17:48:20Z</published>
+    <title>MaRVIn: A Cross-Layer Mixed-Precision RISC-V Framework for DNN
+  Inference, from ISA Extension to Hardware Acceleration</title>
+    <summary>  The evolution of quantization and mixed-precision techniques has unlocked new
+possibilities for enhancing the speed and energy efficiency of NNs. Several
+recent studies indicate that adapting precision levels across different
+parameters can maintain accuracy comparable to full-precision models while
+significantly reducing computational demands. However, existing embedded
+microprocessors lack sufficient architectural support for efficiently executing
+mixed-precision NNs, both in terms of ISA extensions and hardware design,
+resulting in inefficiencies such as excessive data packing/unpacking and
+underutilized arithmetic units. In this work, we propose novel ISA extensions
+and a micro-architecture implementation specifically designed to optimize
+mixed-precision execution, enabling energy-efficient deep learning inference on
+RISC-V architectures. We introduce MaRVIn, a cross-layer hardware-software
+co-design framework that enhances power efficiency and performance through a
+combination of hardware improvements, mixed-precision quantization, ISA-level
+optimizations, and cycle-accurate emulation. At the hardware level, we enhance
+the ALU with configurable mixed-precision arithmetic (2, 4, 8 bits) for
+weights/activations and employ multi-pumping to reduce execution latency while
+implementing soft SIMD for efficient 2-bit ops. At the software level, we
+integrate a pruning-aware fine-tuning method to optimize model compression and
+a greedy-based DSE approach to efficiently search for Pareto-optimal
+mixed-quantized models. Additionally, we incorporate voltage scaling to boost
+the power efficiency of our system. Our experimental evaluation over widely
+used DNNs and datasets, such as CIFAR10 and ImageNet, demonstrates that our
+framework can achieve, on average, 17.6x speedup for less than 1% accuracy loss
+and outperforms the ISA-agnostic state-of-the-art RISC-V cores, delivering up
+to 1.8 TOPs/W.
+</summary>
+    <author>
+      <name>Giorgos Armeniakos</name>
+    </author>
+    <author>
+      <name>Alexis Maras</name>
+    </author>
+    <author>
+      <name>Sotirios Xydis</name>
+    </author>
+    <author>
+      <name>Dimitrios Soudris</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication by IEEE Transactions on Computer-Aided
+  Design of Integrated Circuits and Systems, March 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15187v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15187v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15182v1</id>
+    <updated>2025-09-18T17:43:20Z</updated>
+    <published>2025-09-18T17:43:20Z</published>
+    <title>Conditional Prior-based Non-stationary Channel Estimation Using
+  Accelerated Diffusion Models</title>
+    <summary>  Wireless channels in motion-rich urban microcell (UMi) settings are
+non-stationary; mobility and scatterer dynamics shift the distribution over
+time, degrading classical and deep estimators. This work proposes conditional
+prior diffusion for channel estimation, which learns a history-conditioned
+score to denoise noisy channel snapshots. A temporal encoder with cross-time
+attention compresses a short observation window into a context vector, which
+captures the channel's instantaneous coherence and steers the denoiser via
+feature-wise modulation. In inference, an SNR-matched initialization selects
+the diffusion step whose marginal aligns with the measured input SNR, and the
+process follows a shortened, geometrically spaced schedule, preserving the
+signal-to-noise trajectory with far fewer iterations. Temporal
+self-conditioning with the previous channel estimate and a training-only
+smoothness penalty further stabilizes evolution without biasing the test-time
+estimator. Evaluations on a 3GPP benchmark show lower NMSE across all SNRs than
+LMMSE, GMM, LSTM, and LDAMP baselines, demonstrating stable performance and
+strong high SNR fidelity.
+</summary>
+    <author>
+      <name>Muhammad Ahmed Mohsin</name>
+    </author>
+    <author>
+      <name>Ahsan Bilal</name>
+    </author>
+    <author>
+      <name>Muhammad Umer</name>
+    </author>
+    <author>
+      <name>Asad Aali</name>
+    </author>
+    <author>
+      <name>Muhammad Ali Jamshed</name>
+    </author>
+    <author>
+      <name>Dean F. Hougen</name>
+    </author>
+    <author>
+      <name>John M. Cioffi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICASSP 2026</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15182v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15182v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15181v1</id>
+    <updated>2025-09-18T17:41:59Z</updated>
+    <published>2025-09-18T17:41:59Z</published>
+    <title>Maize Seedling Detection Dataset (MSDD): A Curated High-Resolution RGB
+  Dataset for Seedling Maize Detection and Benchmarking with YOLOv9, YOLO11,
+  YOLOv12 and Faster-RCNN</title>
+    <summary>  Accurate maize seedling detection is crucial for precision agriculture, yet
+curated datasets remain scarce. We introduce MSDD, a high-quality aerial image
+dataset for maize seedling stand counting, with applications in early-season
+crop monitoring, yield prediction, and in-field management. Stand counting
+determines how many plants germinated, guiding timely decisions such as
+replanting or adjusting inputs. Traditional methods are labor-intensive and
+error-prone, while computer vision enables efficient, accurate detection. MSDD
+contains three classes-single, double, and triple plants-capturing diverse
+growth stages, planting setups, soil types, lighting conditions, camera angles,
+and densities, ensuring robustness for real-world use. Benchmarking shows
+detection is most reliable during V4-V6 stages and under nadir views. Among
+tested models, YOLO11 is fastest, while YOLOv9 yields the highest accuracy for
+single plants. Single plant detection achieves precision up to 0.984 and recall
+up to 0.873, but detecting doubles and triples remains difficult due to rarity
+and irregular appearance, often from planting errors. Class imbalance further
+reduces accuracy in multi-plant detection. Despite these challenges, YOLO11
+maintains efficient inference at 35 ms per image, with an additional 120 ms for
+saving outputs. MSDD establishes a strong foundation for developing models that
+enhance stand counting, optimize resource allocation, and support real-time
+decision-making. This dataset marks a step toward automating agricultural
+monitoring and advancing precision agriculture.
+</summary>
+    <author>
+      <name>Dewi Endah Kharismawati</name>
+    </author>
+    <author>
+      <name>Toni Kazic</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages, 10 figures, 8 tables. Submitted to IEEE Journal of Selected
+  Topics in Signal Processing (JSTSP) Special Series on Artificial Intelligence
+  for Smart Agriculture</arxiv:comment>
+    <link href="http://arxiv.org/abs/2509.15181v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15181v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15178v1</id>
+    <updated>2025-09-18T17:35:50Z</updated>
+    <published>2025-09-18T17:35:50Z</published>
+    <title>Unleashing the Potential of Multimodal LLMs for Zero-Shot
+  Spatio-Temporal Video Grounding</title>
+    <summary>  Spatio-temporal video grounding (STVG) aims at localizing the spatio-temporal
+tube of a video, as specified by the input text query. In this paper, we
+utilize multimodal large language models (MLLMs) to explore a zero-shot
+solution in STVG. We reveal two key insights about MLLMs: (1) MLLMs tend to
+dynamically assign special tokens, referred to as \textit{grounding tokens},
+for grounding the text query; and (2) MLLMs often suffer from suboptimal
+grounding due to the inability to fully integrate the cues in the text query
+(\textit{e.g.}, attributes, actions) for inference. Based on these insights, we
+propose a MLLM-based zero-shot framework for STVG, which includes novel
+decomposed spatio-temporal highlighting (DSTH) and temporal-augmented
+assembling (TAS) strategies to unleash the reasoning ability of MLLMs. The DSTH
+strategy first decouples the original query into attribute and action
+sub-queries for inquiring the existence of the target both spatially and
+temporally. It then uses a novel logit-guided re-attention (LRA) module to
+learn latent variables as spatial and temporal prompts, by regularizing token
+predictions for each sub-query. These prompts highlight attribute and action
+cues, respectively, directing the model's attention to reliable spatial and
+temporal related visual regions. In addition, as the spatial grounding by the
+attribute sub-query should be temporally consistent, we introduce the TAS
+strategy to assemble the predictions using the original video frames and the
+temporal-augmented frames as inputs to help improve temporal consistency. We
+evaluate our method on various MLLMs, and show that it outperforms SOTA methods
+on three common STVG benchmarks.
+  The code will be available at https://github.com/zaiquanyang/LLaVA_Next_STVG.
+</summary>
+    <author>
+      <name>Zaiquan Yang</name>
+    </author>
+    <author>
+      <name>Yuhao Liu</name>
+    </author>
+    <author>
+      <name>Gerhard Hancke</name>
+    </author>
+    <author>
+      <name>Rynson W. H. Lau</name>
+    </author>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">NeurIPS2025</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2509.15178v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2509.15178v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
