@@ -1,495 +1,453 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-06T00:53:55Z -->
+<!-- Last updated: 2025-10-07T00:52:56Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-05T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">122619</opensearch:totalResults>
+  <updated>2025-10-06T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">122706</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.02312v1</id>
-    <updated>2025-10-02T17:59:51Z</updated>
-    <published>2025-10-02T17:59:51Z</published>
-    <title>KaVa: Latent Reasoning via Compressed KV-Cache Distillation</title>
-    <summary>  Large Language Models (LLMs) excel at multi-step reasoning problems with
-explicit chain-of-thought (CoT), but verbose traces incur significant
-computational costs and memory overhead, and often carry redundant, stylistic
-artifacts. Latent reasoning has emerged as an efficient alternative that
-internalizes the thought process, but it suffers from a critical lack of
-supervision, limiting its effectiveness on complex, natural-language reasoning
-traces. In this work, we propose KaVa, the first framework that bridges this
-gap by distilling knowledge directly from a compressed KV-cache of the teacher
-into a latent-reasoning student via self-distillation, leveraging the
-representational flexibility of continuous latent tokens to align stepwise KV
-trajectories. We show that the abstract, unstructured knowledge within
-compressed KV-cache, which lacks direct token correspondence, can serve as a
-rich supervisory signal for a latent reasoning student. Empirically, the
-approach consistently outperforms strong latent baselines, exhibits markedly
-smaller degradation from equation-only to natural-language traces, and scales
-to larger backbones while preserving efficiency. These results establish
-compressed KV-cache distillation as a scalable supervision signal for latent
-reasoning, combining the accuracy of CoT-trained teachers with the efficiency
-and deployability of latent inference.
+    <id>http://arxiv.org/abs/2510.03230v1</id>
+    <updated>2025-10-03T17:59:34Z</updated>
+    <published>2025-10-03T17:59:34Z</published>
+    <title>Improving GUI Grounding with Explicit Position-to-Coordinate Mapping</title>
+    <summary>  GUI grounding, the task of mapping natural-language instructions to pixel
+coordinates, is crucial for autonomous agents, yet remains difficult for
+current VLMs. The core bottleneck is reliable patch-to-pixel mapping, which
+breaks when extrapolating to high-resolution displays unseen during training.
+Current approaches generate coordinates as text tokens directly from visual
+features, forcing the model to infer complex position-to-pixel mappings
+implicitly; as a result, accuracy degrades and failures proliferate on new
+resolutions. We address this with two complementary innovations. First, RULER
+tokens serve as explicit coordinate markers, letting the model reference
+positions similar to gridlines on a map and adjust rather than generate
+coordinates from scratch. Second, Interleaved MRoPE (I-MRoPE) improves spatial
+encoding by ensuring that width and height dimensions are represented equally,
+addressing the asymmetry of standard positional schemes. Experiments on
+ScreenSpot, ScreenSpot-V2, and ScreenSpot-Pro show consistent gains in
+grounding accuracy, with the largest improvements on high-resolution
+interfaces. By providing explicit spatial guidance rather than relying on
+implicit learning, our approach enables more reliable GUI automation across
+diverse resolutions and platforms.
 </summary>
     <author>
-      <name>Anna Kuzina</name>
+      <name>Suyuchen Wang</name>
     </author>
     <author>
-      <name>Maciej Pioro</name>
+      <name>Tianyu Zhang</name>
     </author>
     <author>
-      <name>Paul N. Whatmough</name>
+      <name>Ahmed Masry</name>
     </author>
     <author>
-      <name>Babak Ehteshami Bejnordi</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint. Under Review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.02312v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02312v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.02311v1</id>
-    <updated>2025-10-02T17:59:50Z</updated>
-    <published>2025-10-02T17:59:50Z</published>
-    <title>Inferring Dynamic Physical Properties from Video Foundation Models</title>
-    <summary>  We study the task of predicting dynamic physical properties from videos. More
-specifically, we consider physical properties that require temporal information
-to be inferred: elasticity of a bouncing object, viscosity of a flowing liquid,
-and dynamic friction of an object sliding on a surface. To this end, we make
-the following contributions: (i) We collect a new video dataset for each
-physical property, consisting of synthetic training and testing splits, as well
-as a real split for real world evaluation. (ii) We explore three ways to infer
-the physical property from videos: (a) an oracle method where we supply the
-visual cues that intrinsically reflect the property using classical computer
-vision techniques; (b) a simple read out mechanism using a visual prompt and
-trainable prompt vector for cross-attention on pre-trained video generative and
-self-supervised models; and (c) prompt strategies for Multi-modal Large
-Language Models (MLLMs). (iii) We show that video foundation models trained in
-a generative or self-supervised manner achieve a similar performance, though
-behind that of the oracle, and MLLMs are currently inferior to the other
-models, though their performance can be improved through suitable prompting.
-</summary>
-    <author>
-      <name>Guanqi Zhan</name>
+      <name>Christopher Pal</name>
     </author>
     <author>
-      <name>Xianzheng Ma</name>
+      <name>Spandana Gella</name>
     </author>
     <author>
-      <name>Weidi Xie</name>
+      <name>Bang Liu</name>
     </author>
     <author>
-      <name>Andrew Zisserman</name>
+      <name>Perouz Taslakian</name>
     </author>
-    <link href="http://arxiv.org/abs/2510.02311v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02311v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.03230v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03230v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.02300v1</id>
-    <updated>2025-10-02T17:59:06Z</updated>
-    <published>2025-10-02T17:59:06Z</published>
-    <title>Equilibrium Matching: Generative Modeling with Implicit Energy-Based
-  Models</title>
-    <summary>  We introduce Equilibrium Matching (EqM), a generative modeling framework
-built from an equilibrium dynamics perspective. EqM discards the
-non-equilibrium, time-conditional dynamics in traditional diffusion and
-flow-based generative models and instead learns the equilibrium gradient of an
-implicit energy landscape. Through this approach, we can adopt an
-optimization-based sampling process at inference time, where samples are
-obtained by gradient descent on the learned landscape with adjustable step
-sizes, adaptive optimizers, and adaptive compute. EqM surpasses the generation
-performance of diffusion/flow models empirically, achieving an FID of 1.90 on
-ImageNet 256$\times$256. EqM is also theoretically justified to learn and
-sample from the data manifold. Beyond generation, EqM is a flexible framework
-that naturally handles tasks including partially noised image denoising, OOD
-detection, and image composition. By replacing time-conditional velocities with
-a unified equilibrium landscape, EqM offers a tighter bridge between flow and
-energy-based models and a simple route to optimization-driven inference.
-</summary>
-    <author>
-      <name>Runqian Wang</name>
-    </author>
-    <author>
-      <name>Yilun Du</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.02300v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02300v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.02291v1</id>
-    <updated>2025-10-02T17:58:37Z</updated>
-    <published>2025-10-02T17:58:37Z</published>
-    <title>Test-Time Anchoring for Discrete Diffusion Posterior Sampling</title>
-    <summary>  We study the problem of posterior sampling using pretrained discrete
-diffusion foundation models, aiming to recover images from noisy measurements
-without retraining task-specific models. While diffusion models have achieved
-remarkable success in generative modeling, most advances rely on continuous
-Gaussian diffusion. In contrast, discrete diffusion offers a unified framework
-for jointly modeling categorical data such as text and images. Beyond
-unification, discrete diffusion provides faster inference, finer control, and
-principled training-free Bayesian inference, making it particularly well-suited
-for posterior sampling. However, existing approaches to discrete diffusion
-posterior sampling face severe challenges: derivative-free guidance yields
-sparse signals, continuous relaxations limit applicability, and split Gibbs
-samplers suffer from the curse of dimensionality. To overcome these
-limitations, we introduce Anchored Posterior Sampling (APS) for masked
-diffusion foundation models, built on two key innovations -- quantized
-expectation for gradient-like guidance in discrete embedding space, and
-anchored remasking for adaptive decoding. Our approach achieves
-state-of-the-art performance among discrete diffusion samplers across linear
-and nonlinear inverse problems on the standard benchmarks. We further
-demonstrate the benefits of our approach in training-free stylization and
-text-guided editing.
+    <id>http://arxiv.org/abs/2510.03229v1</id>
+    <updated>2025-10-03T17:59:03Z</updated>
+    <published>2025-10-03T17:59:03Z</published>
+    <title>Robust magnetic field estimates in star-forming galaxies with the
+  equipartition formula in the absence of equipartition</title>
+    <summary>  The equipartition model is widely used to estimate magnetic field strength
+from synchrotron intensity in radio galaxies, yet the validity of its
+underlying assumptions remains uncertain. Using an Arepo simulation which
+incorporates a two-moment cosmic ray (CR) transport scheme and a multiphase
+interstellar medium, we compare magnetic fields inferred from synthetic
+synchrotron emission maps with the true fields in the simulation. Starting from
+the derivation of the equipartition formula, we find that the deviation between
+the equipartition magnetic field and the true magnetic field depends only
+weakly on the ratio of the magnetic to the CR energy density. In practice, for
+both face-on and edge-on projections, the equipartition model slightly
+overestimates the total synchrotron-weighted magnetic field with mean offsets
+of 32% (0.17 dex) and 36% (0.2 dex), even though the energy equipartition does
+not hold locally. Beyond these average offsets, a clear trend emerges in
+edge-on projections that the model underestimates the field in the disk and
+overestimates it in the halo. Our results demonstrate that the validity of the
+equipartition model depends only weakly on the strict fulfillment of energy
+equipartition, and that the equipartition model remains a practical method for
+estimating magnetic field strengths in face-on projection maps based on our
+CR-magnetohydrodynamics simulation.
 </summary>
     <author>
-      <name>Litu Rout</name>
+      <name>H. -H. Sandy Chiu</name>
     </author>
     <author>
-      <name>Andreas Lugmayr</name>
+      <name>Mateusz Ruszkowski</name>
     </author>
     <author>
-      <name>Yasamin Jafarian</name>
+      <name>Maria Werhahn</name>
     </author>
     <author>
-      <name>Srivatsan Varadharajan</name>
+      <name>Christoph Pfrommer</name>
     </author>
     <author>
-      <name>Constantine Caramanis</name>
+      <name>Timon Thomas</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages; submitted to A&amp;A</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.03229v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03229v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03223v1</id>
+    <updated>2025-10-03T17:56:33Z</updated>
+    <published>2025-10-03T17:56:33Z</published>
+    <title>Self-Anchor: Large Language Model Reasoning via Step-by-step Attention
+  Alignment</title>
+    <summary>  To solve complex reasoning tasks for Large Language Models (LLMs),
+prompting-based methods offer a lightweight alternative to fine-tuning and
+reinforcement learning. However, as reasoning chains extend, critical
+intermediate steps and the original prompt will be buried in the context,
+receiving insufficient attention and leading to errors. In this paper, we
+propose Self-Anchor, a novel pipeline that leverages the inherent structure of
+reasoning to steer LLM attention. Self-Anchor decomposes reasoning trajectories
+into structured plans and automatically aligns the model's attention to the
+most relevant inference steps, allowing the model to maintain focus throughout
+generation. Our experiment shows that Self-Anchor outperforms SOTA prompting
+methods across six benchmarks. Notably, Self-Anchor significantly reduces the
+performance gap between ``non-reasoning'' models and specialized reasoning
+models, with the potential to enable most LLMs to tackle complex reasoning
+tasks without retraining.
+</summary>
+    <author>
+      <name>Hongxiang Zhang</name>
     </author>
     <author>
-      <name>Sanjay Shakkottai</name>
+      <name>Yuan Tian</name>
     </author>
     <author>
-      <name>Ira Kemelmacher-Shlizerman</name>
+      <name>Tianyi Zhang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.02291v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02291v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.03223v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03223v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03221v1</id>
+    <updated>2025-10-03T17:54:56Z</updated>
+    <published>2025-10-03T17:54:56Z</published>
+    <title>Inferring Stellar Densities with Flexible Models I: The Distribution of
+  RR Lyrae in the Milky Way with $\textit{Gaia}$ DR3</title>
+    <summary>  Understanding the formation and evolutionary history of the Milky Way
+requires detailed mapping of its stellar components, which preserve fossil
+records of the Galaxy's assembly through cosmic time. RR Lyrae stars are
+particularly well-suited for this endeavor, as they are old, standard candle
+variables that probe the Galaxy's earliest formation epochs. In this work, we
+employ a hierarchical Bayesian Gaussian Mixture Model (GMM) to characterize the
+three-dimensional density distribution of RR Lyrae stars in the Milky Way. This
+approach provides a flexible framework for modeling complex stellar
+distributions, particularly in the inner Galaxy where the bulge, disk, and halo
+components overlap. Our analysis reveals that the inner Galaxy is dominated by
+a distinct prolate stellar population with axis ratio $q$=1.30. Consistent with
+previous work, we find the halo follows a $r^{-4}$ power-law profile that
+flattens within 12 kpc of the Galactic center. We also confirm the halo is
+oblate ($q$=0.62) with a tilt angle of $12.22^{\circ}$. We report for the first
+time that this tilt aligns the halo major axis in the direction of the
+Sagittarius dwarf galaxy. These results establish GMMs as an effective and
+flexible tool for modeling Galactic structure and provide new constraints on
+the distribution of old stars in the inner Galaxy.
+</summary>
+    <author>
+      <name>Madeline Lucey</name>
+    </author>
+    <author>
+      <name>Cecilia Mateu</name>
+    </author>
+    <author>
+      <name>Adrian Price-Whelan</name>
+    </author>
+    <author>
+      <name>David Hogg</name>
+    </author>
+    <author>
+      <name>Hans-Walter Rix</name>
+    </author>
+    <author>
+      <name>Robyn Sanderson</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 6 figures, submitted to ApJ, comments welcome!</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.03221v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03221v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03199v1</id>
+    <updated>2025-10-03T17:35:45Z</updated>
+    <published>2025-10-03T17:35:45Z</published>
+    <title>Best-of-Majority: Minimax-Optimal Strategy for Pass@$k$ Inference
+  Scaling</title>
+    <summary>  LLM inference often generates a batch of candidates for a prompt and selects
+one via strategies like majority voting or Best-of- N (BoN). For difficult
+tasks, this single-shot selection often underperforms. Consequently,
+evaluations commonly report Pass@$k$: the agent may submit up to $k$ responses,
+and only the best of them is used when computing regret. Motivated by this, we
+study inference scaling in the more general Pass@$k$ inference setting, and
+prove that neither majority voting nor BoN exhibits the desirable scaling with
+$k$ and the sampling budget $N$. Combining the advantages of majority voting
+and BoN, we propose a new inference strategy called Best-of-Majority (BoM),
+with a pivotal step that restricts the candidates to the responses with high
+frequency in the $N$ samples before selecting the top-$k$ rewards. We prove
+that when the sampling budget is $N=\tilde\Omega(C^*)$, the regret of BoM is
+$O(\epsilon_{\mathrm{opt}}+\sqrt{\epsilon_{\mathrm{RM}}^2C^*/k})$, where $C^*$
+is the coverage coefficient, $\epsilon_{\mathrm{RM}}$ is the estimation error
+of the reward model, and $\epsilon_{\mathrm{opt}}$ is the estimation error of
+reward at the optimal response. We further establish a matching lower bound,
+certifying that our algorithm is minimax optimal. Beyond optimality, BoM has a
+key advantage: unlike majority voting and BoN, its performance does not degrade
+when increasing $N$. Experimental results of inference on math problems show
+BoM outperforming both majority voting and BoN.
+</summary>
+    <author>
+      <name>Qiwei Di</name>
+    </author>
+    <author>
+      <name>Kaixuan Ji</name>
+    </author>
+    <author>
+      <name>Xuheng Li</name>
+    </author>
+    <author>
+      <name>Heyang Zhao</name>
+    </author>
+    <author>
+      <name>Quanquan Gu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.03199v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03199v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.02287v1</id>
-    <updated>2025-10-02T17:57:06Z</updated>
-    <published>2025-10-02T17:57:06Z</published>
-    <title>MultiModal Action Conditioned Video Generation</title>
-    <summary>  Current video models fail as world model as they lack fine-graiend control.
-General-purpose household robots require real-time fine motor control to handle
-delicate tasks and urgent situations. In this work, we introduce fine-grained
-multimodal actions to capture such precise control. We consider senses of
-proprioception, kinesthesia, force haptics, and muscle activation. Such
-multimodal senses naturally enables fine-grained interactions that are
-difficult to simulate with text-conditioned generative models. To effectively
-simulate fine-grained multisensory actions, we develop a feature learning
-paradigm that aligns these modalities while preserving the unique information
-each modality provides. We further propose a regularization scheme to enhance
-causality of the action trajectory features in representing intricate
-interaction dynamics. Experiments show that incorporating multimodal senses
-improves simulation accuracy and reduces temporal drift. Extensive ablation
-studies and downstream applications demonstrate the effectiveness and
-practicality of our work.
+    <id>http://arxiv.org/abs/2510.03185v1</id>
+    <updated>2025-10-03T17:09:03Z</updated>
+    <published>2025-10-03T17:09:03Z</published>
+    <title>PRISM-Physics: Causal DAG-Based Process Evaluation for Physics Reasoning</title>
+    <summary>  Benchmarks for competition-style reasoning have advanced evaluation in
+mathematics and programming, yet physics remains comparatively explored. Most
+existing physics benchmarks evaluate only final answers, which fail to capture
+reasoning processes, while recent stepwise methods rely on heuristic
+LLM-as-judge scoring or restrictive linear assumptions, limiting reliability
+and diagnostic validity. We introduce PRISM-Physics, a process-level evaluation
+framework and benchmark for complex physics reasoning problems. Solutions are
+represented as directed acyclic graphs (DAGs) of formulas, explicitly encoding
+causal dependencies among intermediate steps to enable fine-grained,
+interpretable, and theoretically grounded scoring. We prove the optimality of
+the DAG representation and the corresponding scoring policy. Combining with a
+fully rule-based method for symbolic formula equivalence matching that we
+developed, we ensure consistent validation across diverse formulations without
+heuristic judgments. Results show that our evaluation framework is more aligned
+with human experts' scoring. Experiments on state-of-the-art LLMs reveal
+persistent reasoning failures in physics, while step-level scoring offers both
+diagnostic insight and rich signals for later training. By combining structural
+rigor, theoretical guarantees, and symbolic validation, PRISM-Physics provides
+a principled foundation for advancing process-level evaluation and guiding the
+development of models with deeper scientific reasoning capabilities.
 </summary>
     <author>
-      <name>Yichen Li</name>
+      <name>Wanjia Zhao</name>
     </author>
     <author>
-      <name>Antonio Torralba</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.02287v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02287v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.02284v1</id>
-    <updated>2025-10-02T17:56:46Z</updated>
-    <published>2025-10-02T17:56:46Z</published>
-    <title>Learning to Generate Object Interactions with Physics-Guided Video
-  Diffusion</title>
-    <summary>  Recent models for video generation have achieved remarkable progress and are
-now deployed in film, social media production, and advertising. Beyond their
-creative potential, such models also hold promise as world simulators for
-robotics and embodied decision making. Despite strong advances, however,
-current approaches still struggle to generate physically plausible object
-interactions and lack physics-grounded control mechanisms. To address this
-limitation, we introduce KineMask, an approach for physics-guided video
-generation that enables realistic rigid body control, interactions, and
-effects. Given a single image and a specified object velocity, our method
-generates videos with inferred motions and future object interactions. We
-propose a two-stage training strategy that gradually removes future motion
-supervision via object masks. Using this strategy we train video diffusion
-models (VDMs) on synthetic scenes of simple interactions and demonstrate
-significant improvements of object interactions in real scenes. Furthermore,
-KineMask integrates low-level motion control with high-level textual
-conditioning via predictive scene descriptions, leading to effective support
-for synthesis of complex dynamical phenomena. Extensive experiments show that
-KineMask achieves strong improvements over recent models of comparable size.
-Ablation studies further highlight the complementary roles of low- and
-high-level conditioning in VDMs. Our code, model, and data will be made
-publicly available.
-</summary>
-    <author>
-      <name>David Romero</name>
+      <name>Qinwei Ma</name>
     </author>
     <author>
-      <name>Ariana Bermudez</name>
+      <name>Jingzhe Shi</name>
     </author>
     <author>
-      <name>Hao Li</name>
+      <name>Shirley Wu</name>
     </author>
     <author>
-      <name>Fabio Pizzati</name>
+      <name>Jiaqi Han</name>
     </author>
     <author>
-      <name>Ivan Laptev</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.02284v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02284v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.02268v1</id>
-    <updated>2025-10-02T17:47:06Z</updated>
-    <published>2025-10-02T17:47:06Z</published>
-    <title>Do You Know Where Your Camera Is? View-Invariant Policy Learning with
-  Camera Conditioning</title>
-    <summary>  We study view-invariant imitation learning by explicitly conditioning
-policies on camera extrinsics. Using Plucker embeddings of per-pixel rays, we
-show that conditioning on extrinsics significantly improves generalization
-across viewpoints for standard behavior cloning policies, including ACT,
-Diffusion Policy, and SmolVLA. To evaluate policy robustness under realistic
-viewpoint shifts, we introduce six manipulation tasks in RoboSuite and
-ManiSkill that pair "fixed" and "randomized" scene variants, decoupling
-background cues from camera pose. Our analysis reveals that policies without
-extrinsics often infer camera pose using visual cues from static backgrounds in
-fixed scenes; this shortcut collapses when workspace geometry or camera
-placement shifts. Conditioning on extrinsics restores performance and yields
-robust RGB-only control without depth. We release the tasks, demonstrations,
-and code at https://ripl.github.io/know_your_camera/ .
-</summary>
-    <author>
-      <name>Tianchong Jiang</name>
+      <name>Yijia Xiao</name>
     </author>
     <author>
-      <name>Jingtian Ji</name>
+      <name>Si-Yuan Chen</name>
     </author>
     <author>
-      <name>Xiangshan Tan</name>
+      <name>Xiao Luo</name>
     </author>
     <author>
-      <name>Jiading Fang</name>
+      <name>Ludwig Schmidt</name>
     </author>
     <author>
-      <name>Anand Bhattad</name>
+      <name>James Zou</name>
     </author>
-    <author>
-      <name>Vitor Guizilini</name>
-    </author>
-    <author>
-      <name>Matthew R. Walter</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code and project materials are available at
-  ripl.github.io/know_your_camera</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.02268v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02268v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.02260v1</id>
-    <updated>2025-10-02T17:42:26Z</updated>
-    <published>2025-10-02T17:42:26Z</published>
-    <title>Mapping the Cloud-Driven Atmospheric Dynamics &amp; Chemistry of an Isolated
-  Exoplanet Analog with Harmonic Signatures</title>
-    <summary>  Young planetary-mass objects and brown dwarfs near the L/T spectral
-transition exhibit enhanced spectrophotometric variability over field brown
-dwarfs. Patchy clouds, auroral processes, stratospheric hot spots, and complex
-carbon chemistry have all been proposed as potential sources of this
-variability. Using time-resolved, low-to-mid-resolution spectroscopy collected
-with the JWST/NIRISS and NIRSpec instruments, we apply harmonic analysis to
-SIMP J0136, a highly variable, young, isolated planetary-mass object. Odd
-harmonics (k=3) at pressure levels (&gt; 1 bar) corresponding to iron and
-forsterite cloud formation suggest North/South hemispheric asymmetry in the
-cloudy, and likely equatorial, regions. We use the inferred harmonics, along
-with 1-D substellar atmospheric models, to map the flux variability by
-atmospheric pressure level. These vertical maps demonstrate robust interaction
-between deep convective weather layers and the overlying stratified and
-radiative atmosphere. We identify distinct time-varying structures in the
-near-infrared that we interpret as planetary-scale wave (e.g., Rossby or
-Kelvin)-associated cloud modulation. We detect variability in water (S/N =
-14.0), carbon monoxide (S/N = 13.0), and methane (S/N = 14.9) molecular
-signatures. Forsterite cloud modulation is anti-correlated with overlying
-carbon monoxide and water abundances and correlated with deep methane
-absorption, suggesting complex interaction between cloud formation, atmospheric
-chemistry, and temperature structure. Furthermore, we identify distinct
-harmonic behavior between methane and carbon monoxide absorption bands,
-providing evidence for time-resolved disequilibrium carbon chemistry. At the
-lowest pressures (&lt; 100 mbar), we find that the mapped methane lines transition
-from absorption to emission, supporting evidence of high-altitude auroral
-heating via electron precipitation.
-</summary>
-    <author>
-      <name>Michael K. Plummer</name>
-    </author>
-    <author>
-      <name>Francis P. Cocchini</name>
-    </author>
-    <author>
-      <name>Peter A. Kearns</name>
-    </author>
-    <author>
-      <name>Allison McCarthy</name>
-    </author>
-    <author>
-      <name>Étienne Artigau</name>
-    </author>
-    <author>
-      <name>Nicolas B. Cowan</name>
-    </author>
-    <author>
-      <name>Roman Akhmetshyn</name>
-    </author>
-    <author>
-      <name>Johanna Vos</name>
-    </author>
-    <author>
-      <name>Evert Nasedkin</name>
-    </author>
-    <author>
-      <name>Channon Visscher</name>
-    </author>
-    <author>
-      <name>Björn Benneke</name>
-    </author>
-    <author>
-      <name>René Doyon</name>
-    </author>
-    <author>
-      <name>Stanimir A. Metchev</name>
-    </author>
-    <author>
-      <name>Jason F. Rowe</name>
-    </author>
-    <author>
-      <name>Genaro Suárez</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 6 figures, submitted</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.02260v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02260v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.02259v1</id>
-    <updated>2025-10-02T17:42:10Z</updated>
-    <published>2025-10-02T17:42:10Z</published>
-    <title>Transformers Discover Molecular Structure Without Graph Priors</title>
-    <summary>  Graph Neural Networks (GNNs) are the dominant architecture for molecular
-machine learning, particularly for molecular property prediction and machine
-learning interatomic potentials (MLIPs). GNNs perform message passing on
-predefined graphs often induced by a fixed radius cutoff or k-nearest neighbor
-scheme. While this design aligns with the locality present in many molecular
-tasks, a hard-coded graph can limit expressivity due to the fixed receptive
-field and slows down inference with sparse graph operations. In this work, we
-investigate whether pure, unmodified Transformers trained directly on Cartesian
-coordinates$\unicode{x2013}$without predefined graphs or physical
-priors$\unicode{x2013}$can approximate molecular energies and forces. As a
-starting point for our analysis, we demonstrate how to train a Transformer to
-competitive energy and force mean absolute errors under a matched training
-compute budget, relative to a state-of-the-art equivariant GNN on the OMol25
-dataset. We discover that the Transformer learns physically consistent
-patterns$\unicode{x2013}$such as attention weights that decay inversely with
-interatomic distance$\unicode{x2013}$and flexibly adapts them across different
-molecular environments due to the absence of hard-coded biases. The use of a
-standard Transformer also unlocks predictable improvements with respect to
-scaling training resources, consistent with empirical scaling laws observed in
-other domains. Our results demonstrate that many favorable properties of GNNs
-can emerge adaptively in Transformers, challenging the necessity of hard-coded
-graph inductive biases and pointing toward standardized, scalable architectures
-for molecular modeling.
-</summary>
-    <author>
-      <name>Tobias Kreiman</name>
-    </author>
-    <author>
-      <name>Yutong Bai</name>
-    </author>
-    <author>
-      <name>Fadi Atieh</name>
-    </author>
-    <author>
-      <name>Elizabeth Weaver</name>
-    </author>
-    <author>
-      <name>Eric Qu</name>
-    </author>
-    <author>
-      <name>Aditi S. Krishnapriyan</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.02259v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02259v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.03185v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03185v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.02242v1</id>
-    <updated>2025-10-02T17:29:53Z</updated>
-    <published>2025-10-02T17:29:53Z</published>
-    <title>Transfer of Stability from the Classical to the Fractional Anisotropic
-  Calderón Problem</title>
-    <summary>  We discuss two spectral fractional anisotropic Calder\'on problems with
-source-to-solution measurements and their quantitative relation to the
-classical Calder\'on problem. Firstly, we consider the anistropic fractional
-Calder\'on problem from [FGKU25]. In this setting, we quantify the relation
-between the local and nonlocal Calder\'on problems which had been deduced in
-[R25] and provide an associated stability estimate. As a consequence, any
-stability result which holds on the level of the local problem with
-source-to-solution data has a direct nonlocal analogue (up to a logarithmic
-loss). Secondly, we introduce and discuss the fractional Calder\'on problem
-with source-to-solution measurements for the spectral fractional Dirichlet
-Laplacian on open, bounded, connected, Lipschitz sets on $\mathbb{R}^n$. Also
-in this context, we provide a qualitative and quantitative transfer of
-uniqueness from the local to the nonlocal setting. As a consequence, we infer
-the first stability results for the principal part for a fractional Calder\'on
-type problem for which no reduction of Liouville type is known. Our arguments
-rely on quantitative unique continuation arguments. As a result of independent
-interest, we also prove a quantitative relation between source-to-solution and
-Dirichlet-to-Neumann measurements for the classical Calder\'on problem.
+    <id>http://arxiv.org/abs/2510.03174v1</id>
+    <updated>2025-10-03T16:48:32Z</updated>
+    <published>2025-10-03T16:48:32Z</published>
+    <title>Topic Modeling as Long-Form Generation: Can Long-Context LLMs
+  revolutionize NTM via Zero-Shot Prompting?</title>
+    <summary>  Traditional topic models such as neural topic models rely on inference and
+generation networks to learn latent topic distributions. This paper explores a
+new paradigm for topic modeling in the era of large language models, framing TM
+as a long-form generation task whose definition is updated in this paradigm. We
+propose a simple but practical approach to implement LLM-based topic model
+tasks out of the box (sample a data subset, generate topics and representative
+text with our prompt, text assignment with keyword match). We then investigate
+whether the long-form generation paradigm can beat NTMs via zero-shot
+prompting. We conduct a systematic comparison between NTMs and LLMs in terms of
+topic quality and empirically examine the claim that "a majority of NTMs are
+outdated."
 </summary>
     <author>
-      <name>Hendrik Baers</name>
+      <name>Xuan Xu</name>
     </author>
     <author>
-      <name>Angkana Rüland</name>
+      <name>Haolun Li</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">54 pages, 4 figures, comments welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.02242v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.02242v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Zhongliang Yang</name>
+    </author>
+    <author>
+      <name>Beilin Chu</name>
+    </author>
+    <author>
+      <name>Jia Song</name>
+    </author>
+    <author>
+      <name>Moxuan Xu</name>
+    </author>
+    <author>
+      <name>Linna Zhou</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.03174v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03174v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03151v1</id>
+    <updated>2025-10-03T16:24:50Z</updated>
+    <published>2025-10-03T16:24:50Z</published>
+    <title>Mixture of Many Zero-Compute Experts: A High-Rate Quantization Theory
+  Perspective</title>
+    <summary>  This paper uses classical high-rate quantization theory to provide new
+insights into mixture-of-experts (MoE) models for regression tasks. Our MoE is
+defined by a segmentation of the input space to regions, each with a
+single-parameter expert that acts as a constant predictor with zero-compute at
+inference. Motivated by high-rate quantization theory assumptions, we assume
+that the number of experts is sufficiently large to make their input-space
+regions very small. This lets us to study the approximation error of our MoE
+model class: (i) for one-dimensional inputs, we formulate the test error and
+its minimizing segmentation and experts; (ii) for multidimensional inputs, we
+formulate an upper bound for the test error and study its minimization.
+Moreover, we consider the learning of the expert parameters from a training
+dataset, given an input-space segmentation, and formulate their statistical
+learning properties. This leads us to theoretically and empirically show how
+the tradeoff between approximation and estimation errors in MoE learning
+depends on the number of experts.
+</summary>
+    <author>
+      <name>Yehuda Dar</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.03151v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03151v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03141v1</id>
+    <updated>2025-10-03T16:11:36Z</updated>
+    <published>2025-10-03T16:11:36Z</published>
+    <title>Nonmodal growth and optimal perturbations in magnetohydrodynamic shear
+  flows</title>
+    <summary>  In astrophysical shear flows, the Kelvin-Helmholtz (KH) instability is
+generally suppressed by magnetic tension provided a sufficiently strong
+streamwise magnetic field. This is often used to infer upper (or lower) bounds
+on field strengths in systems where shear-driven fluctuations are (or are not)
+observed, on the basis that fluctuations cannot grow in the absence of linear
+instability. On the contrary, by calculating the maximum growth that
+small-amplitude perturbations can achieve in finite time for such a system, we
+show that perturbations can grow in energy by orders of magnitude even when the
+flow is sub-Alfv\'enic, suggesting that shear-driven turbulence is possible
+even in the presence of strong magnetic fields, and challenging inferences from
+the observed presence or absence of shear-driven fluctuations. We further show
+that magnetic fields introduce additional nonmodal growth mechanisms relative
+to the hydrodynamic case, and that 2D simulations miss key aspects of these
+growth mechanisms.
+</summary>
+    <author>
+      <name>Adrian E. Fraser</name>
+    </author>
+    <author>
+      <name>Alexis K. Kaminski</name>
+    </author>
+    <author>
+      <name>Jeffrey S. Oishi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 2 figures, submitted to PRL</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.03141v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03141v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.space-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03127v1</id>
+    <updated>2025-10-03T15:53:28Z</updated>
+    <published>2025-10-03T15:53:28Z</published>
+    <title>A Study of Rule Omission in Raven's Progressive Matrices</title>
+    <summary>  Analogical reasoning lies at the core of human cognition and remains a
+fundamental challenge for artificial intelligence. Raven's Progressive Matrices
+(RPM) serve as a widely used benchmark to assess abstract reasoning by
+requiring the inference of underlying structural rules. While many vision-based
+and language-based models have achieved success on RPM tasks, it remains
+unclear whether their performance reflects genuine reasoning ability or
+reliance on statistical shortcuts. This study investigates the generalization
+capacity of modern AI systems under conditions of incomplete training by
+deliberately omitting several structural rules during training. Both
+sequence-to-sequence transformer models and vision-based architectures such as
+CoPINet and the Dual-Contrast Network are evaluated on the Impartial-RAVEN
+(I-RAVEN) dataset. Experiments reveal that although transformers demonstrate
+strong performance on familiar rules, their accuracy declines sharply when
+faced with novel or omitted rules. Moreover, the gap between token-level
+accuracy and complete answer accuracy highlights fundamental limitations in
+current approaches. These findings provide new insights into the reasoning
+mechanisms underlying deep learning models and underscore the need for
+architectures that move beyond pattern recognition toward robust abstract
+reasoning.
+</summary>
+    <author>
+      <name>Binze Li</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.03127v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.03127v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
