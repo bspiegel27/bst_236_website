@@ -1,525 +1,516 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-10T00:52:47Z -->
+<!-- Last updated: 2025-10-11T00:50:20Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-09T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">123147</opensearch:totalResults>
+  <updated>2025-10-10T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">123279</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.07318v1</id>
-    <updated>2025-10-08T17:59:55Z</updated>
-    <published>2025-10-08T17:59:55Z</published>
-    <title>Artificial Hippocampus Networks for Efficient Long-Context Modeling</title>
-    <summary>  Long-sequence modeling faces a fundamental trade-off between the efficiency
-of compressive fixed-size memory in RNN-like models and the fidelity of
-lossless growing memory in attention-based Transformers. Inspired by the
-Multi-Store Model in cognitive science, we introduce a memory framework of
-artificial neural networks. Our method maintains a sliding window of the
-Transformer's KV cache as lossless short-term memory, while a learnable module
-termed Artificial Hippocampus Network (AHN) recurrently compresses
-out-of-window information into a fixed-size compact long-term memory. To
-validate this framework, we instantiate AHNs using modern RNN-like
-architectures, including Mamba2, DeltaNet, and Gated DeltaNet. Extensive
-experiments on long-context benchmarks LV-Eval and InfiniteBench demonstrate
-that AHN-augmented models consistently outperform sliding window baselines and
-achieve performance comparable or even superior to full-attention models, while
-substantially reducing computational and memory requirements. For instance,
-augmenting the Qwen2.5-3B-Instruct with AHNs reduces inference FLOPs by 40.5%
-and memory cache by 74.0%, while improving its average score on LV-Eval (128k
-sequence length) from 4.41 to 5.88. Code is available at:
-https://github.com/ByteDance-Seed/AHN.
+    <id>http://arxiv.org/abs/2510.08575v1</id>
+    <updated>2025-10-09T17:59:59Z</updated>
+    <published>2025-10-09T17:59:59Z</published>
+    <title>ReSplat: Learning Recurrent Gaussian Splats</title>
+    <summary>  While feed-forward Gaussian splatting models provide computational efficiency
+and effectively handle sparse input settings, their performance is
+fundamentally limited by the reliance on a single forward pass during
+inference. We propose ReSplat, a feed-forward recurrent Gaussian splatting
+model that iteratively refines 3D Gaussians without explicitly computing
+gradients. Our key insight is that the Gaussian splatting rendering error
+serves as a rich feedback signal, guiding the recurrent network to learn
+effective Gaussian updates. This feedback signal naturally adapts to unseen
+data distributions at test time, enabling robust generalization. To initialize
+the recurrent process, we introduce a compact reconstruction model that
+operates in a $16 \times$ subsampled space, producing $16 \times$ fewer
+Gaussians than previous per-pixel Gaussian models. This substantially reduces
+computational overhead and allows for efficient Gaussian updates. Extensive
+experiments across varying of input views (2, 8, 16), resolutions ($256 \times
+256$ to $540 \times 960$), and datasets (DL3DV and RealEstate10K) demonstrate
+that our method achieves state-of-the-art performance while significantly
+reducing the number of Gaussians and improving the rendering speed. Our project
+page is at https://haofeixu.github.io/resplat/.
 </summary>
     <author>
-      <name>Yunhao Fang</name>
+      <name>Haofei Xu</name>
     </author>
     <author>
-      <name>Weihao Yu</name>
+      <name>Daniel Barath</name>
     </author>
     <author>
-      <name>Shu Zhong</name>
+      <name>Andreas Geiger</name>
     </author>
     <author>
-      <name>Qinghao Ye</name>
+      <name>Marc Pollefeys</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://haofeixu.github.io/resplat/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.08575v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08575v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08569v1</id>
+    <updated>2025-10-09T17:59:55Z</updated>
+    <published>2025-10-09T17:59:55Z</published>
+    <title>ArenaBencher: Automatic Benchmark Evolution via Multi-Model Competitive
+  Evaluation</title>
+    <summary>  Benchmarks are central to measuring the capabilities of large language models
+and guiding model development, yet widespread data leakage from pretraining
+corpora undermines their validity. Models can match memorized content rather
+than demonstrate true generalization, which inflates scores, distorts
+cross-model comparisons, and misrepresents progress. We introduce ArenaBencher,
+a model-agnostic framework for automatic benchmark evolution that updates test
+cases while preserving comparability. Given an existing benchmark and a diverse
+pool of models to be evaluated, ArenaBencher infers the core ability of each
+test case, generates candidate question-answer pairs that preserve the original
+objective, verifies correctness and intent with an LLM as a judge, and
+aggregates feedback from multiple models to select candidates that expose
+shared weaknesses. The process runs iteratively with in-context demonstrations
+that steer generation toward more challenging and diagnostic cases. We apply
+ArenaBencher to math problem solving, commonsense reasoning, and safety domains
+and show that it produces verified, diverse, and fair updates that uncover new
+failure modes, increase difficulty while preserving test objective alignment,
+and improve model separability. The framework provides a scalable path to
+continuously evolve benchmarks in step with the rapid progress of foundation
+models.
+</summary>
+    <author>
+      <name>Qin Liu</name>
     </author>
     <author>
-      <name>Xuehan Xiong</name>
+      <name>Jacob Dineen</name>
     </author>
     <author>
-      <name>Lai Wei</name>
+      <name>Yuxi Huang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/ByteDance-Seed/AHN</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07318v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07318v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Sheng Zhang</name>
+    </author>
+    <author>
+      <name>Hoifung Poon</name>
+    </author>
+    <author>
+      <name>Ben Zhou</name>
+    </author>
+    <author>
+      <name>Muhao Chen</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.08569v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08569v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.07312v1</id>
-    <updated>2025-10-08T17:58:41Z</updated>
-    <published>2025-10-08T17:58:41Z</published>
-    <title>h1: Bootstrapping LLMs to Reason over Longer Horizons via Reinforcement
-  Learning</title>
-    <summary>  Large language models excel at short-horizon reasoning tasks, but performance
-drops as reasoning horizon lengths increase. Existing approaches to combat this
-rely on inference-time scaffolding or costly step-level supervision, neither of
-which scales easily. In this work, we introduce a scalable method to bootstrap
-long-horizon reasoning capabilities using only existing, abundant short-horizon
-data. Our approach synthetically composes simple problems into complex,
-multi-step dependency chains of arbitrary length. We train models on this data
-using outcome-only rewards under a curriculum that automatically increases in
-complexity, allowing RL training to be scaled much further without saturating.
-Empirically, our method generalizes remarkably well: curriculum training on
-composed 6th-grade level math problems (GSM8K) boosts accuracy on longer,
-competition-level benchmarks (GSM-Symbolic, MATH-500, AIME) by up to 2.06x.
-Importantly, our long-horizon improvements are significantly higher than
-baselines even at high pass@k, showing that models can learn new reasoning
-paths under RL. Theoretically, we show that curriculum RL with outcome rewards
-achieves an exponential improvement in sample complexity over full-horizon
-training, providing training signal comparable to dense supervision. h1
-therefore introduces an efficient path towards scaling RL for long-horizon
-problems using only existing data.
+    <id>http://arxiv.org/abs/2510.08562v1</id>
+    <updated>2025-10-09T17:59:36Z</updated>
+    <published>2025-10-09T17:59:36Z</published>
+    <title>ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous
+  Driving</title>
+    <summary>  End-to-end autonomous driving (E2EAD) systems, which learn to predict future
+trajectories directly from sensor data, are fundamentally challenged by the
+inherent spatio-temporal imbalance of trajectory data. This imbalance creates a
+significant optimization burden, causing models to learn spurious correlations
+instead of causal inference, while also prioritizing uncertain, distant
+predictions, thereby compromising immediate safety. To address these issues, we
+propose ResAD, a novel Normalized Residual Trajectory Modeling framework.
+Instead of predicting the future trajectory directly, our approach reframes the
+learning task to predict the residual deviation from a deterministic inertial
+reference. The inertial reference serves as a counterfactual, forcing the model
+to move beyond simple pattern recognition and instead identify the underlying
+causal factors (e.g., traffic rules, obstacles) that necessitate deviations
+from a default, inertially-guided path. To deal with the optimization imbalance
+caused by uncertain, long-term horizons, ResAD further incorporates Point-wise
+Normalization of the predicted residual. It re-weights the optimization
+objective, preventing large-magnitude errors associated with distant, uncertain
+waypoints from dominating the learning signal. Extensive experiments validate
+the effectiveness of our framework. On the NAVSIM benchmark, ResAD achieves a
+state-of-the-art PDMS of 88.6 using a vanilla diffusion policy with only two
+denoising steps, demonstrating that our approach significantly simplifies the
+learning task and improves model performance. The code will be released to
+facilitate further research.
 </summary>
     <author>
-      <name>Sumeet Ramesh Motwani</name>
+      <name>Zhiyu Zheng</name>
     </author>
     <author>
-      <name>Alesia Ivanova</name>
+      <name>Shaoyu Chen</name>
     </author>
     <author>
-      <name>Ziyang Cai</name>
+      <name>Haoran Yin</name>
     </author>
     <author>
-      <name>Philip Torr</name>
+      <name>Xinbang Zhang</name>
     </author>
     <author>
-      <name>Riashat Islam</name>
+      <name>Jialv Zou</name>
     </author>
     <author>
-      <name>Shital Shah</name>
+      <name>Xinggang Wang</name>
     </author>
     <author>
-      <name>Christian Schroeder de Witt</name>
+      <name>Qian Zhang</name>
     </author>
     <author>
-      <name>Charles London</name>
+      <name>Lefei Zhang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint, 31 pages, 8 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07312v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07312v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2510.08562v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08562v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.07309v2</id>
-    <updated>2025-10-09T02:27:56Z</updated>
-    <published>2025-10-08T17:57:35Z</published>
-    <title>Agent Bain vs. Agent McKinsey: A New Text-to-SQL Benchmark for the
-  Business Domain</title>
-    <summary>  In the business domain, where data-driven decision making is crucial,
-text-to-SQL is fundamental for easy natural language access to structured data.
-While recent LLMs have achieved strong performance in code generation, existing
-text-to-SQL benchmarks remain focused on factual retrieval of past records. We
-introduce CORGI, a new benchmark specifically designed for real-world business
-contexts. CORGI is composed of synthetic databases inspired by enterprises such
-as Doordash, Airbnb, and Lululemon. It provides questions across four
-increasingly complex categories of business queries: descriptive, explanatory,
-predictive, and recommendational. This challenge calls for causal reasoning,
-temporal forecasting, and strategic recommendation, reflecting multi-level and
-multi-step agentic intelligence. We find that LLM performance drops on
-high-level questions, struggling to make accurate predictions and offer
-actionable plans. Based on execution success rate, the CORGI benchmark is about
-21% more difficult than the BIRD benchmark. This highlights the gap between
-popular LLMs and the need for real-world business intelligence. We release a
-public dataset and evaluation framework, and a website for public submissions.
+    <id>http://arxiv.org/abs/2510.08555v1</id>
+    <updated>2025-10-09T17:58:59Z</updated>
+    <published>2025-10-09T17:58:59Z</published>
+    <title>VideoCanvas: Unified Video Completion from Arbitrary Spatiotemporal
+  Patches via In-Context Conditioning</title>
+    <summary>  We introduce the task of arbitrary spatio-temporal video completion, where a
+video is generated from arbitrary, user-specified patches placed at any spatial
+location and timestamp, akin to painting on a video canvas. This flexible
+formulation naturally unifies many existing controllable video generation
+tasks--including first-frame image-to-video, inpainting, extension, and
+interpolation--under a single, cohesive paradigm. Realizing this vision,
+however, faces a fundamental obstacle in modern latent video diffusion models:
+the temporal ambiguity introduced by causal VAEs, where multiple pixel frames
+are compressed into a single latent representation, making precise frame-level
+conditioning structurally difficult. We address this challenge with
+VideoCanvas, a novel framework that adapts the In-Context Conditioning (ICC)
+paradigm to this fine-grained control task with zero new parameters. We propose
+a hybrid conditioning strategy that decouples spatial and temporal control:
+spatial placement is handled via zero-padding, while temporal alignment is
+achieved through Temporal RoPE Interpolation, which assigns each condition a
+continuous fractional position within the latent sequence. This resolves the
+VAE's temporal ambiguity and enables pixel-frame-aware control on a frozen
+backbone. To evaluate this new capability, we develop VideoCanvasBench, the
+first benchmark for arbitrary spatio-temporal video completion, covering both
+intra-scene fidelity and inter-scene creativity. Experiments demonstrate that
+VideoCanvas significantly outperforms existing conditioning paradigms,
+establishing a new state of the art in flexible and unified video generation.
 </summary>
     <author>
-      <name>Yue Li</name>
+      <name>Minghong Cai</name>
     </author>
     <author>
-      <name>Ran Tao</name>
+      <name>Qiulin Wang</name>
     </author>
     <author>
-      <name>Derek Hommel</name>
+      <name>Zongli Ye</name>
     </author>
     <author>
-      <name>Yusuf Denizay Dönder</name>
+      <name>Wenze Liu</name>
     </author>
     <author>
-      <name>Sungyong Chang</name>
+      <name>Quande Liu</name>
     </author>
     <author>
-      <name>David Mimno</name>
+      <name>Weicai Ye</name>
     </author>
     <author>
-      <name>Unso Eun Seo Jo</name>
+      <name>Xintao Wang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 6 figures, under review for ACL ARR; typos corrected</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07309v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07309v2" rel="related" type="application/pdf"/>
+    <author>
+      <name>Pengfei Wan</name>
+    </author>
+    <author>
+      <name>Kun Gai</name>
+    </author>
+    <author>
+      <name>Xiangyu Yue</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://onevfall.github.io/project_page/videocanvas</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.08555v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08555v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08553v1</id>
+    <updated>2025-10-09T17:58:01Z</updated>
+    <published>2025-10-09T17:58:01Z</published>
+    <title>Dream to Recall: Imagination-Guided Experience Retrieval for
+  Memory-Persistent Vision-and-Language Navigation</title>
+    <summary>  Vision-and-Language Navigation (VLN) requires agents to follow natural
+language instructions through environments, with memory-persistent variants
+demanding progressive improvement through accumulated experience. Existing
+approaches for memory-persistent VLN face critical limitations: they lack
+effective memory access mechanisms, instead relying on entire memory
+incorporation or fixed-horizon lookup, and predominantly store only
+environmental observations while neglecting navigation behavioral patterns that
+encode valuable decision-making strategies. We present Memoir, which employs
+imagination as a retrieval mechanism grounded by explicit memory: a world model
+imagines future navigation states as queries to selectively retrieve relevant
+environmental observations and behavioral histories. The approach comprises: 1)
+a language-conditioned world model that imagines future states serving dual
+purposes: encoding experiences for storage and generating retrieval queries; 2)
+Hybrid Viewpoint-Level Memory that anchors both observations and behavioral
+patterns to viewpoints, enabling hybrid retrieval; and 3) an
+experience-augmented navigation model that integrates retrieved knowledge
+through specialized encoders. Extensive evaluation across diverse
+memory-persistent VLN benchmarks with 10 distinctive testing scenarios
+demonstrates Memoir's effectiveness: significant improvements across all
+scenarios, with 5.4% SPL gains on IR2R over the best memory-persistent
+baseline, accompanied by 8.3x training speedup and 74% inference memory
+reduction. The results validate that predictive retrieval of both environmental
+and behavioral memories enables more effective navigation, with analysis
+indicating substantial headroom (73.3% vs 93.4% upper bound) for this
+imagination-guided paradigm. Code at https://github.com/xyz9911/Memoir.
+</summary>
+    <author>
+      <name>Yunzhe Xu</name>
+    </author>
+    <author>
+      <name>Yiyuan Pan</name>
+    </author>
+    <author>
+      <name>Zhe Liu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 6 figures, 13 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.08553v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08553v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08551v1</id>
+    <updated>2025-10-09T17:57:38Z</updated>
+    <published>2025-10-09T17:57:38Z</published>
+    <title>ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D
+  Reconstruction with Structured Scene Representation</title>
+    <summary>  On-the-fly 3D reconstruction from monocular image sequences is a
+long-standing challenge in computer vision, critical for applications such as
+real-to-sim, AR/VR, and robotics. Existing methods face a major tradeoff:
+per-scene optimization yields high fidelity but is computationally expensive,
+whereas feed-forward foundation models enable real-time inference but struggle
+with accuracy and robustness. In this work, we propose ARTDECO, a unified
+framework that combines the efficiency of feed-forward models with the
+reliability of SLAM-based pipelines. ARTDECO uses 3D foundation models for pose
+estimation and point prediction, coupled with a Gaussian decoder that
+transforms multi-scale features into structured 3D Gaussians. To sustain both
+fidelity and efficiency at scale, we design a hierarchical Gaussian
+representation with a LoD-aware rendering strategy, which improves rendering
+fidelity while reducing redundancy. Experiments on eight diverse indoor and
+outdoor benchmarks show that ARTDECO delivers interactive performance
+comparable to SLAM, robustness similar to feed-forward systems, and
+reconstruction quality close to per-scene optimization, providing a practical
+path toward on-the-fly digitization of real-world environments with both
+accurate geometry and high visual fidelity. Explore more demos on our project
+page: https://city-super.github.io/artdeco/.
+</summary>
+    <author>
+      <name>Guanghao Li</name>
+    </author>
+    <author>
+      <name>Kerui Ren</name>
+    </author>
+    <author>
+      <name>Linning Xu</name>
+    </author>
+    <author>
+      <name>Zhewen Zheng</name>
+    </author>
+    <author>
+      <name>Changjian Jiang</name>
+    </author>
+    <author>
+      <name>Xin Gao</name>
+    </author>
+    <author>
+      <name>Bo Dai</name>
+    </author>
+    <author>
+      <name>Jian Pu</name>
+    </author>
+    <author>
+      <name>Mulin Yu</name>
+    </author>
+    <author>
+      <name>Jiangmiao Pang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.08551v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08551v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08544v1</id>
+    <updated>2025-10-09T17:55:08Z</updated>
+    <published>2025-10-09T17:55:08Z</published>
+    <title>SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM
+  Inference</title>
+    <summary>  Large Language Models (LLMs) have gained popularity in recent years, driving
+up the demand for inference. LLM inference is composed of two phases with
+distinct characteristics: a compute-bound prefill phase followed by a
+memory-bound decode phase. To efficiently serve LLMs, prior work proposes
+prefill-decode disaggregation to run each phase on separate hardware. However,
+existing hardware poorly matches the different requirements of each phase.
+Current datacenter GPUs and TPUs follow a more-is-better design philosophy that
+maximizes compute and memory resources, causing memory bandwidth
+underutilization in the prefill phase and compute underutilization in the
+decode phase. Such underutilization directly translates into increased serving
+costs.
+  This paper proposes SPAD (Specialized Prefill and Decode hardware), adopting
+a less-is-more methodology to design specialized chips tailored to the distinct
+characteristics of prefill and decode phases. The proposed Prefill Chips have
+larger systolic arrays and use cost-effective GDDR memory, whereas the proposed
+Decode Chips retain high memory bandwidth but reduce compute capacity. Compared
+to modeled H100s, simulations show that the proposed Prefill Chips deliver 8%
+higher prefill performance on average at 52% lower hardware cost, while the
+proposed Decode Chips achieve 97% of the decode performance with 28% lower TDP.
+  End-to-end simulations on production traces show that SPAD reduces hardware
+cost by 19%-41% and TDP by 2%-17% compared to modeled baseline clusters while
+offering the same performance. Even when models and workloads change, SPAD can
+reallocate either type of chip to run either phase and still achieve 11%-43%
+lower hardware costs, demonstrating the longevity of the SPAD design.
+</summary>
+    <author>
+      <name>Hengrui Zhang</name>
+    </author>
+    <author>
+      <name>Pratyush Patel</name>
+    </author>
+    <author>
+      <name>August Ning</name>
+    </author>
+    <author>
+      <name>David Wentzlaff</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.08544v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08544v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08527v1</id>
+    <updated>2025-10-09T17:50:22Z</updated>
+    <published>2025-10-09T17:50:22Z</published>
+    <title>FlexTraj: Image-to-Video Generation with Flexible Point Trajectory
+  Control</title>
+    <summary>  We present FlexTraj, a framework for image-to-video generation with flexible
+point trajectory control. FlexTraj introduces a unified point-based motion
+representation that encodes each point with a segmentation ID, a temporally
+consistent trajectory ID, and an optional color channel for appearance cues,
+enabling both dense and sparse trajectory control. Instead of injecting
+trajectory conditions into the video generator through token concatenation or
+ControlNet, FlexTraj employs an efficient sequence-concatenation scheme that
+achieves faster convergence, stronger controllability, and more efficient
+inference, while maintaining robustness under unaligned conditions. To train
+such a unified point trajectory-controlled video generator, FlexTraj adopts an
+annealing training strategy that gradually reduces reliance on complete
+supervision and aligned condition. Experimental results demonstrate that
+FlexTraj enables multi-granularity, alignment-agnostic trajectory control for
+video generation, supporting various applications such as motion cloning,
+drag-based image-to-video, motion interpolation, camera redirection, flexible
+action control and mesh animations.
+</summary>
+    <author>
+      <name>Zhiyuan Zhang</name>
+    </author>
+    <author>
+      <name>Can Wang</name>
+    </author>
+    <author>
+      <name>Dongdong Chen</name>
+    </author>
+    <author>
+      <name>Jing Liao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://bestzzhang.github.io/FlexTraj</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.08527v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08527v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08525v1</id>
+    <updated>2025-10-09T17:50:00Z</updated>
+    <published>2025-10-09T17:50:00Z</published>
+    <title>Which Heads Matter for Reasoning? RL-Guided KV Cache Compression</title>
+    <summary>  Reasoning large language models exhibit complex reasoning behaviors through
+the extended chain-of-thought generation, creating unprecedented Key-Value (KV)
+cache overhead during the decoding phase. Existing KV cache compression methods
+underperform on reasoning models: token-dropping methods break reasoning
+integrity by discarding critical information, while head-reallocating methods
+mistakenly compress reasoning-critical heads since they are designed for
+retrieval tasks, resulting in significant performance degradation as
+compression rates increase. We hypothesize that KV heads exhibit functional
+heterogeneity in reasoning models-some heads are critical for chain-of-thought
+consistency while others are compressible. To validate and exploit this
+insight, we propose RLKV, a novel reasoning-critical head identification
+framework, which uses reinforcement learning to directly optimize the
+relationship between each head's cache usage and reasoning quality. As RLKV
+produces rewards from actual generated samples during training, it naturally
+identifies heads relevant to reasoning behaviors. We then allocate full KV
+cache to these heads while applying compressed constant KV cache to others for
+efficient inference. Our experiments reveal that only a small fraction of
+attention heads is essential for reasoning, enabling our KV compression
+approach to outperform baseline methods while achieving 20-50% cache reduction
+with near lossless performance compared to uncompressed results.
+</summary>
+    <author>
+      <name>Wenjie Du</name>
+    </author>
+    <author>
+      <name>Li Jiang</name>
+    </author>
+    <author>
+      <name>Keda Tao</name>
+    </author>
+    <author>
+      <name>Xue Liu</name>
+    </author>
+    <author>
+      <name>Huan Wang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.08525v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08525v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.07293v1</id>
-    <updated>2025-10-08T17:50:16Z</updated>
-    <published>2025-10-08T17:50:16Z</published>
-    <title>AudioMarathon: A Comprehensive Benchmark for Long-Context Audio
-  Understanding and Efficiency in Audio LLMs</title>
-    <summary>  Processing long-form audio is a major challenge for Large Audio Language
-models (LALMs). These models struggle with the quadratic cost of attention
-($O(N^2)$) and with modeling long-range temporal dependencies. Existing audio
-benchmarks are built mostly from short clips and do not evaluate models in
-realistic long context settings. To address this gap, we introduce
-AudioMarathon, a benchmark designed to evaluate both understanding and
-inference efficiency on long-form audio. AudioMarathon provides a diverse set
-of tasks built upon three pillars: long-context audio inputs with durations
-ranging from 90.0 to 300.0 seconds, which correspond to encoded sequences of
-2,250 to 7,500 audio tokens, respectively, full domain coverage across speech,
-sound, and music, and complex reasoning that requires multi-hop inference. We
-evaluate state-of-the-art LALMs and observe clear performance drops as audio
-length grows. We also study acceleration techniques and analyze the trade-offs
-of token pruning and KV cache eviction. The results show large gaps across
-current LALMs and highlight the need for better temporal reasoning and
-memory-efficient architectures. We believe AudioMarathon will drive the audio
-and multimodal research community to develop more advanced audio understanding
-models capable of solving complex audio tasks.
+    <id>http://arxiv.org/abs/2510.08507v1</id>
+    <updated>2025-10-09T17:42:04Z</updated>
+    <published>2025-10-09T17:42:04Z</published>
+    <title>The quantum communication power of indefinite causal order</title>
+    <summary>  Quantum theory is in principle compatible with scenarios where physical
+processes take place in an indefinite causal order, a possibility that was
+shown to yield advantages in several information processing tasks. However,
+advantages in communication, the most basic form of information processing,
+have so far remained controversial and hard to prove. Here we develop a
+framework that can be used to rigorously assess the role of causal order in a
+scenario where communication links are built by assembling multiple quantum
+devices. In this setting, we establish a clear-cut advantage of indefinite
+order in the one-shot transmission of classical messages. On the other hand, we
+also show that the advantage is not generic to all communication tasks.
+Notably, we find that indefinite order does not offer any advantage over shared
+entanglement in the asymptotic scenario where a large number of uses of the
+same communication device is employed. Overall, our results unveil non-trivial
+relations between communication, causal order, entanglement, and no-signaling
+resources in quantum mechanics.
 </summary>
     <author>
-      <name>Peize He</name>
+      <name>Xuanqiang Zhao</name>
     </author>
     <author>
-      <name>Zichen Wen</name>
+      <name>Benchi Zhao</name>
     </author>
     <author>
-      <name>Yubo Wang</name>
+      <name>Giulio Chiribella</name>
     </author>
-    <author>
-      <name>Yuxuan Wang</name>
-    </author>
-    <author>
-      <name>Xiaoqian Liu</name>
-    </author>
-    <author>
-      <name>Jiajie Huang</name>
-    </author>
-    <author>
-      <name>Zehui Lei</name>
-    </author>
-    <author>
-      <name>Zhuangcheng Gu</name>
-    </author>
-    <author>
-      <name>Xiangqi Jin</name>
-    </author>
-    <author>
-      <name>Jiabing Yang</name>
-    </author>
-    <author>
-      <name>Kai Li</name>
-    </author>
-    <author>
-      <name>Zhifei Liu</name>
-    </author>
-    <author>
-      <name>Weijia Li</name>
-    </author>
-    <author>
-      <name>Cunxiang Wang</name>
-    </author>
-    <author>
-      <name>Conghui He</name>
-    </author>
-    <author>
-      <name>Linfeng Zhang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">26 pages, 23 figures, the code is available at
-  \url{https://github.com/DabDans/AudioMarathon}</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07293v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07293v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.07287v1</id>
-    <updated>2025-10-08T17:46:11Z</updated>
-    <published>2025-10-08T17:46:11Z</published>
-    <title>Modified Fronsdal coordinates for maximally extended Schwarzschild
-  spacetime</title>
-    <summary>  We introduce a coordinate system that complements the Kruskal--Szekeres
-extension. Like the standard construction, it covers the maximally extended
-Schwarzschild manifold in its entirety, while offering an additional advantage
-of expressing the areal radius as an explicit function of the new coordinates.
-Its main limitation, however, is that radial null geodesics are no longer
-represented as 45-degree lines in the Kruskal plane, making the causal
-structure more difficult to interpret. Nevertheless, the new system offers a
-compelling aesthetic trade-off: among all known maximally extended systems -
-including those of Kruskal-Szekeres, Israel, Fronsdal, Novikov, and Synge - it
-exhibits the highest degree of symmetry with respect to Schwarzschild's
-original r- and t-coordinate lines. It trades the regular pattern of Kruskal's
-light cones for a symmetric nesting arrangement of the two-dimensional spheres.
-The proposed extension sheds new light on the closely related Fronsdal's
-six-dimensional embedding construction, and clarifies the deep connection that
-exists between the most important implicit (Kruskal-Szekeres) and explicit
-(Israel's) procedures for maximal extension of the Schwarzschild geometry that
-is well known to those working in the field but rarely presented in textbooks
-on general relativity.
-</summary>
-    <author>
-      <name>Andrei Galiautdinov</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07287v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07287v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.07283v1</id>
-    <updated>2025-10-08T17:43:36Z</updated>
-    <published>2025-10-08T17:43:36Z</published>
-    <title>Content-Adaptive Inference for State-of-the-art Learned Video
-  Compression</title>
-    <summary>  While the BD-rate performance of recent learned video codec models in both
-low-delay and random-access modes exceed that of respective modes of
-traditional codecs on average over common benchmarks, the performance
-improvements for individual videos with complex/large motions is much smaller
-compared to scenes with simple motion. This is related to the inability of a
-learned encoder model to generalize to motion vector ranges that have not been
-seen in the training set, which causes loss of performance in both coding of
-flow fields as well as frame prediction and coding. As a remedy, we propose a
-generic (model-agnostic) framework to control the scale of motion vectors in a
-scene during inference (encoding) to approximately match the range of motion
-vectors in the test and training videos by adaptively downsampling frames. This
-results in down-scaled motion vectors enabling: i) better flow estimation;
-hence, frame prediction and ii) more efficient flow compression. We show that
-the proposed framework for content-adaptive inference improves the BD-rate
-performance of already state-of-the-art low-delay video codec DCVC-FM by up to
-41\% on individual videos without any model fine tuning. We present ablation
-studies to show measures of motion and scene complexity can be used to predict
-the effectiveness of the proposed framework.
-</summary>
-    <author>
-      <name>Ahmet Bilican</name>
-    </author>
-    <author>
-      <name>M. Akın Yılmaz</name>
-    </author>
-    <author>
-      <name>A. Murat Tekalp</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.07283v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07283v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.07259v1</id>
-    <updated>2025-10-08T17:21:43Z</updated>
-    <published>2025-10-08T17:21:43Z</published>
-    <title>The cosmic web's Lyman-$α$ glow at $z \approx 2.5$; varying
-  hydrodynamic models, dust, and wide-field, narrow-band imaging detection</title>
-    <summary>  The diffuse glow of the cosmic web in Lyman-$\alpha$ emission has long been
-predicted, yet remained elusive to direct wide field detection. We present
-theoretical calculations that, when compared with recent observations made
-using the Condor Array Telescope in New Mexico reported in Lanzetta et al.
-2024, point to its discovery at $z \approx 2.5$. Synthetic Lyman-$\alpha$
-surface brightness maps are constructed from five state-of-the-art hydrodynamic
-simulations (Illustris-TNG, SIMBA, EAGLE, CROCODILE, and Sherwood),
-incorporating dust attenuation, star formation, collisional excitation, and
-recombination physics. Our cosmic web Lyman-$\alpha$ surface brightness
-predictions are consistent with the UV excess detected at high significance in
-the recent deep, wide field, narrow-band imaging Condor data. The calculations
-presented here thus demonstrate that diffuse Lyman-$\alpha$ emission is
-observable with current (and next-generation) wide field low surface brightness
-facilities, opening the path to direct cartographic mapping of the cosmic web.
-These findings mark a turning point: for the first time, cosmology moves beyond
-inference from absorption and high-density peaks, into panoramic imaging of the
-faint intergalactic scaffolding that underpins structure formation in the
-Universe.
-</summary>
-    <author>
-      <name>Oleksii Sokoliuk</name>
-    </author>
-    <author>
-      <name>John K. Webb</name>
-    </author>
-    <author>
-      <name>Kenneth M. Lanzetta</name>
-    </author>
-    <author>
-      <name>Michael M. Shara</name>
-    </author>
-    <author>
-      <name>Stefan Gromoll</name>
-    </author>
-    <author>
-      <name>James S. Bolton</name>
-    </author>
-    <author>
-      <name>Robert F. Carswell</name>
-    </author>
-    <author>
-      <name>Gaspar Galaz</name>
-    </author>
-    <author>
-      <name>Cédric Ledoux</name>
-    </author>
-    <author>
-      <name>Gaspare Lo Curto</name>
-    </author>
-    <author>
-      <name>Alain Smette</name>
-    </author>
-    <author>
-      <name>David Valls-Gabaud</name>
-    </author>
-    <author>
-      <name>Anja von der Linden</name>
-    </author>
-    <author>
-      <name>Frederick M. Walter</name>
-    </author>
-    <author>
-      <name>Joris Witstok</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07259v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07259v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.07257v1</id>
-    <updated>2025-10-08T17:20:53Z</updated>
-    <published>2025-10-08T17:20:53Z</published>
-    <title>Test-Time Graph Search for Goal-Conditioned Reinforcement Learning</title>
-    <summary>  Offline goal-conditioned reinforcement learning (GCRL) trains policies that
-reach user-specified goals at test time, providing a simple, unsupervised,
-domain-agnostic way to extract diverse behaviors from unlabeled, reward-free
-datasets. Nonetheless, long-horizon decision making remains difficult for GCRL
-agents due to temporal credit assignment and error accumulation, and the
-offline setting amplifies these effects. To alleviate this issue, we introduce
-Test-Time Graph Search (TTGS), a lightweight planning approach to solve the
-GCRL task. TTGS accepts any state-space distance or cost signal, builds a
-weighted graph over dataset states, and performs fast search to assemble a
-sequence of subgoals that a frozen policy executes. When the base learner is
-value-based, the distance is derived directly from the learned goal-conditioned
-value function, so no handcrafted metric is needed. TTGS requires no changes to
-training, no additional supervision, no online interaction, and no privileged
-information, and it runs entirely at inference. On the OGBench benchmark, TTGS
-improves success rates of multiple base learners on challenging locomotion
-tasks, demonstrating the benefit of simple metric-guided test-time planning for
-offline GCRL.
-</summary>
-    <author>
-      <name>Evgenii Opryshko</name>
-    </author>
-    <author>
-      <name>Junwei Quan</name>
-    </author>
-    <author>
-      <name>Claas Voelcker</name>
-    </author>
-    <author>
-      <name>Yilun Du</name>
-    </author>
-    <author>
-      <name>Igor Gilitschenski</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.07257v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07257v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.07255v1</id>
-    <updated>2025-10-08T17:20:27Z</updated>
-    <published>2025-10-08T17:20:27Z</published>
-    <title>ARGscape: A modular, interactive tool for manipulation of spatiotemporal
-  ancestral recombination graphs</title>
-    <summary>  Ancestral recombination graphs (ARGs) encode the complete genealogical
-history of a population of recombining lineages. ARGs, and their succinct
-representation, tree sequences, are increasingly central to modern population
-genetics methods, yet building an intuition for ARGs remains challenging. This
-is particularly true when analyzing ancestry in a geographic context, as there
-is a critical lack of dedicated, interactive tools capable of visualizing ARGs
-as spatiotemporal objects. To address this gap, we introduce ARGscape, an
-interactive platform for simulating, analyzing, and visualizing ARGs across
-space and time. ARGscape provides a user-friendly graphical interface featuring
-dynamic 2- and 3-dimensional visualizations to explore ARGs through space and
-time, as well as a novel "spatial diff" visualization for quantitative
-comparison of geographic inference methods. ARGscape is an innovative, unified
-framework that seamlessly integrates leading command-line, Python, and R-based
-tools for ARG simulation, manipulation, and use in spatiotemporal inference
-into both graphical and command-line interfaces. By integrating these various
-functionalities, ARGscape facilitates novel data exploration and hypothesis
-generation, while lowering the barrier to entry for spatiotemporal ARG analysis
-in both research and education use-cases. ARGscape is built with a Python
-FastAPI backend and a React/TypeScript frontend. It is freely available as a
-live demo at https://www.argscape.com and as a Python package on PyPI (pip
-install argscape). The source code and documentation are available on GitHub at
-https://github.com/chris-a-talbot/argscape.
-</summary>
-    <author>
-      <name>Christopher Talbot</name>
-    </author>
-    <author>
-      <name>Gideon Bradburd</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages; 1 figure</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.07255v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07255v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.07239v1</id>
-    <updated>2025-10-08T17:06:20Z</updated>
-    <published>2025-10-08T17:06:20Z</published>
-    <title>Red-Bandit: Test-Time Adaptation for LLM Red-Teaming via Bandit-Guided
-  LoRA Experts</title>
-    <summary>  Automated red-teaming has emerged as a scalable approach for auditing Large
-Language Models (LLMs) prior to deployment, yet existing approaches lack
-mechanisms to efficiently adapt to model-specific vulnerabilities at inference.
-We introduce Red-Bandit, a red-teaming framework that adapts online to identify
-and exploit model failure modes under distinct attack styles (e.g.,
-manipulation, slang). Red-Bandit post-trains a set of parameter-efficient LoRA
-experts, each specialized for a particular attack style, using reinforcement
-learning that rewards the generation of unsafe prompts via a rule-based safety
-model. At inference, a multi-armed bandit policy dynamically selects among
-these attack-style experts based on the target model's response safety,
-balancing exploration and exploitation. Red-Bandit achieves state-of-the-art
-results on AdvBench under sufficient exploration (ASR@10), while producing more
-human-readable prompts (lower perplexity). Moreover, Red-Bandit's bandit policy
-serves as a diagnostic tool for uncovering model-specific vulnerabilities by
-indicating which attack styles most effectively elicit unsafe behaviors.
-</summary>
-    <author>
-      <name>Christos Ziakas</name>
-    </author>
-    <author>
-      <name>Nicholas Loo</name>
-    </author>
-    <author>
-      <name>Nishita Jain</name>
-    </author>
-    <author>
-      <name>Alessandra Russo</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.07239v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.07239v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages, 1 figure</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.08507v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.08507v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
