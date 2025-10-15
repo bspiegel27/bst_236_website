@@ -1,471 +1,449 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-14T00:53:08Z -->
+<!-- Last updated: 2025-10-15T00:54:40Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-13T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">123395</opensearch:totalResults>
+  <updated>2025-10-14T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">123578</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.09608v1</id>
-    <updated>2025-10-10T17:59:58Z</updated>
-    <published>2025-10-10T17:59:58Z</published>
-    <title>StreamingVLM: Real-Time Understanding for Infinite Video Streams</title>
-    <summary>  Vision-language models (VLMs) could power real-time assistants and autonomous
-agents, but they face a critical challenge: understanding near-infinite video
-streams without escalating latency and memory usage. Processing entire videos
-with full attention leads to quadratic computational costs and poor performance
-on long videos. Meanwhile, simple sliding window methods are also flawed, as
-they either break coherence or suffer from high latency due to redundant
-recomputation. In this paper, we introduce StreamingVLM, a model designed for
-real-time, stable understanding of infinite visual input. Our approach is a
-unified framework that aligns training with streaming inference. During
-inference, we maintain a compact KV cache by reusing states of attention sinks,
-a short window of recent vision tokens, and a long window of recent text
-tokens. This streaming ability is instilled via a simple supervised fine-tuning
-(SFT) strategy that applies full attention on short, overlapped video chunks,
-which effectively mimics the inference-time attention pattern without training
-on prohibitively long contexts. For evaluation, we build Inf-Streams-Eval, a
-new benchmark with videos averaging over two hours that requires dense,
-per-second alignment between frames and text. On Inf-Streams-Eval, StreamingVLM
-achieves a 66.18% win rate against GPT-4O mini and maintains stable, real-time
-performance at up to 8 FPS on a single NVIDIA H100. Notably, our SFT strategy
-also enhances general VQA abilities without any VQA-specific fine-tuning,
-improving performance on LongVideoBench by +4.30 and OVOBench Realtime by
-+5.96. Code is available at https://github.com/mit-han-lab/streaming-vlm.
+    <id>http://arxiv.org/abs/2510.11719v1</id>
+    <updated>2025-10-13T17:59:59Z</updated>
+    <published>2025-10-13T17:59:59Z</published>
+    <title>BayeSN-TD: Time Delay and $H_0$ Estimation for Lensed SN H0pe</title>
+    <summary>  We present BayeSN-TD, an enhanced implementation of the probabilistic type Ia
+supernova (SN Ia) BayeSN SED model, designed for fitting multiply-imaged,
+gravitationally lensed type Ia supernovae (glSNe Ia). BayeSN-TD fits for
+magnifications and time-delays across multiple images while marginalising over
+an achromatic, Gaussian process-based treatment of microlensing, to allow for
+time-dependent deviations from a typical SN Ia SED caused by gravitational
+lensing by stars in the lensing system. BayeSN-TD is able to robustly infer
+time delays and produce well-calibrated uncertainties, even when applied to
+simulations based on a different SED model and incorporating chromatic
+microlensing, strongly validating its suitability for time-delay cosmography.
+We then apply BayeSN-TD to publicly available photometry of the glSN Ia SN
+H0pe, inferring time delays between images BA and BC of $\Delta
+T_{BA}=121.9^{+9.5}_{-7.5}$ days and $\Delta T_{BC}=63.2^{+3.2}_{-3.3}$ days
+along with absolute magnifications $\beta$ for each image, $\beta_A =
+2.38^{+0.72}_{-0.54}$, $\beta_B=5.27^{+1.25}_{-1.02}$ and
+$\beta_C=3.93^{+1.00}_{-0.75}$. Combining our constraints on time-delays and
+magnifications with existing lens models of this system, we infer
+$H_0=69.3^{+12.6}_{-7.8}$ km s$^{-1}$ Mpc$^{-1}$, consistent with previous
+analysis of this system; incorporating additional constraints based on
+spectroscopy yields $H_0=66.8^{+13.4}_{-5.4}$ km s$^{-1}$ Mpc$^{-1}$. While
+this is not yet precise enough to draw a meaningful conclusion with regard to
+the `Hubble tension', upcoming analysis of SN H0pe with more accurate
+photometry enabled by template images, and other glSNe, will provide stronger
+constraints on $H_0$; BayeSN-TD will be a valuable tool for these analyses.
 </summary>
     <author>
-      <name>Ruyi Xu</name>
+      <name>M. Grayling</name>
     </author>
     <author>
-      <name>Guangxuan Xiao</name>
+      <name>S. Thorp</name>
     </author>
     <author>
-      <name>Yukang Chen</name>
+      <name>K. S. Mandel</name>
     </author>
     <author>
-      <name>Liuning He</name>
+      <name>M. Pascale</name>
     </author>
     <author>
-      <name>Kelly Peng</name>
+      <name>J. D. R</name>
     </author>
     <author>
-      <name>Yao Lu</name>
+      <name> Pierel</name>
     </author>
     <author>
-      <name>Song Han</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The first two authors contributed equally to this work</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09608v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09608v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.09602v1</id>
-    <updated>2025-10-10T17:59:02Z</updated>
-    <published>2025-10-10T17:59:02Z</published>
-    <title>Anchoring the Universe with Characteristic Redshifts using Raychaudhuri
-  Equation Informed Reconstruction Algorithm (REIRA)</title>
-    <summary>  We study the robustness and physical implications of a set of characteristic
-redshifts that capture key features of the late-time Universe. Using both
-model-independent reconstructions as well as different dark energy (DE)
-parameterizations, we show that these redshifts remain stable across
-cosmological models and reconstruction algorithm, making them reliable
-geometric anchors of the expansion history. Moreover, the Alcock-Paczy\'nski
-corrections at these redshift anchors are found to be unity with high
-statistical significance, making them natural isotropy points in the comoving
-distance-redshift relation. We also find that certain redshifts anchors $(z &lt;
-1)$ coincide with epochs where strong deviations from the Planck $\Lambda$CDM
-baseline are apparent irrespective of DE parametrisation like CPL or
-reconstruction algorithm, indicating their potential as probes of new physics
-in cosmological evolution. Finally, we demonstrate, for the first time, that a
-Raychaudhuri Equation Informed Reconstruction Algorithm, substantially enhances
-the precision of the inferred distance measures and the Hubble expansion rate
-as well as results tighter constraints in the DE parameter space. These results
-demonstrate that combining geometric reconstruction with physics-informed
-kinematic information offers a powerful and consistent algorithm to probe new
-physics in the late-time dynamics of our Universe.
-</summary>
-    <author>
-      <name>Shibendu Gupta Choudhury</name>
+      <name>E. E. Hayes</name>
     </author>
     <author>
-      <name>Purba Mukherjee</name>
+      <name>C. Larison</name>
     </author>
     <author>
-      <name>Anjan Ananda Sen</name>
+      <name>A. Agrawal</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 5 sets of figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09602v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09602v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>G. Narayan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 11 figures, 4 tables. Submitted to MNRAS. BayeSN-TD code
+  will be made public upon acceptance of the paper</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.11719v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11719v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.09599v1</id>
-    <updated>2025-10-10T17:57:04Z</updated>
-    <published>2025-10-10T17:57:04Z</published>
-    <title>Prompting Test-Time Scaling Is A Strong LLM Reasoning Data Augmentation</title>
-    <summary>  Large language models (LLMs) have demonstrated impressive reasoning
-capabilities when provided with chain-of-thought exemplars, but curating large
-reasoning datasets remains laborious and resource-intensive. In this work, we
-introduce Prompting Test-Time Scaling (P-TTS), a simple yet effective
-inference-time data augmentation strategy for enhancing LLM reasoning through
-finetuning. Rather than collecting thousands or even millions of examples,
-P-TTS leverages a small pool of only 90 manually selected reasoning instances
-and systematically varies exemplar augmentation through principled instruction
-prompting intensities at test time to synthesize diverse reasoning trajectory
-contexts. Then we finetune the various sizes of Qwen-2.5 models on P-TTS data.
-Across a suite of mathematical reasoning AIME2024 &amp; 25, MATH500, and
-GPQA-Diamond, our P-TTS-7B and 32B models outperform the prior competitive
-baselines like S1 and S1.1 (1K-shot), achieving absolute accuracy gains of
-+26.66% and +30.00% on AIME'24 (7B), and +13.34% and +6.67% on AIME'25 (7B);
-P-TTS-32B yields gains of +23.33% and +16.63% on AIME'24, and +26.63% and
-+3.33% on AIME'25 (vs. S1 and S1.1, respectively), with comparable or better
-performance on MATH500 and GPQA-Diamond. We further show that P-TTS enhances
-zero-shot generalization accuracy on out-of-domain reasoning benchmarks of
-Gaokao, Kaoyan, OlympiadBench, AMC23, GradeSchoolMath, and Minerva. Our
-analysis suggests that test-time scaling effectively explores the latent space
-of reasoning patterns, amplifying LLM problem-solving with minimal annotation
-overhead, and further unlocking the reasoning potential and capabilities of
-LLMs. Prompting Test-Time Scaling offers a practical, low-cost way to elicit
-LLM reasoning in resource-constrained or rapidly evolving domains.
+    <id>http://arxiv.org/abs/2510.11689v1</id>
+    <updated>2025-10-13T17:51:23Z</updated>
+    <published>2025-10-13T17:51:23Z</published>
+    <title>Phys2Real: Fusing VLM Priors with Interactive Online Adaptation for
+  Uncertainty-Aware Sim-to-Real Manipulation</title>
+    <summary>  Learning robotic manipulation policies directly in the real world can be
+expensive and time-consuming. While reinforcement learning (RL) policies
+trained in simulation present a scalable alternative, effective sim-to-real
+transfer remains challenging, particularly for tasks that require precise
+dynamics. To address this, we propose Phys2Real, a real-to-sim-to-real RL
+pipeline that combines vision-language model (VLM)-inferred physical parameter
+estimates with interactive adaptation through uncertainty-aware fusion. Our
+approach consists of three core components: (1) high-fidelity geometric
+reconstruction with 3D Gaussian splatting, (2) VLM-inferred prior distributions
+over physical parameters, and (3) online physical parameter estimation from
+interaction data. Phys2Real conditions policies on interpretable physical
+parameters, refining VLM predictions with online estimates via ensemble-based
+uncertainty quantification. On planar pushing tasks of a T-block with varying
+center of mass (CoM) and a hammer with an off-center mass distribution,
+Phys2Real achieves substantial improvements over a domain randomization
+baseline: 100% vs 79% success rate for the bottom-weighted T-block, 57% vs 23%
+in the challenging top-weighted T-block, and 15% faster average task completion
+for hammer pushing. Ablation studies indicate that the combination of VLM and
+interaction information is essential for success. Project website:
+https://phys2real.github.io/ .
 </summary>
     <author>
-      <name>Sondos Mahmoud Bsharat</name>
+      <name>Maggie Wang</name>
     </author>
     <author>
-      <name>Zhiqiang Shen</name>
+      <name>Stephen Tian</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Our code and data are available at https://github.com/VILA-Lab/PTTS</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09599v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09599v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Aiden Swann</name>
+    </author>
+    <author>
+      <name>Ola Shorinwa</name>
+    </author>
+    <author>
+      <name>Jiajun Wu</name>
+    </author>
+    <author>
+      <name>Mac Schwager</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.11689v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11689v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.09598v1</id>
-    <updated>2025-10-10T17:55:28Z</updated>
-    <published>2025-10-10T17:55:28Z</published>
-    <title>Defensive Model Expansion for Robust Bayesian Inference</title>
-    <summary>  Some applied researchers hesitate to use nonparametric methods, worrying that
-they will lose power in small samples or overfit the data when simpler models
-are sufficient. We argue that at least some of these concerns are unfounded
-when nonparametric models are strongly shrunk towards parametric submodels. We
-consider expanding a parametric model with a nonparametric component that is
-heavily shrunk toward zero. This construction allows the model to adapt
-automatically: if the parametric model is correct, the nonparametric component
-disappears, recovering parametric efficiency, while if it is misspecified, the
-flexible component activates to capture the missing signal. We show that this
-adaptive behavior follows from simple and general conditions. Specifically, we
-prove that Bayesian nonparametric models anchored to linear regression,
-including variants of Gaussian processes regression and Bayesian additive
-regression trees, consistently identify the correct parametric submodel when it
-holds and give asymptotically efficient inference for regression coefficients.
-In simulations, we find that the "general BART" model performs identically to
-correctly specified linear regression when the parametric model holds, and
-substantially outperform it when nonlinear effects are present. This suggests a
-practical paradigm: "defensive model expansion" as a safeguard against model
-misspecification.
+    <id>http://arxiv.org/abs/2510.11687v1</id>
+    <updated>2025-10-13T17:49:15Z</updated>
+    <published>2025-10-13T17:49:15Z</published>
+    <title>Beyond 'Templates': Category-Agnostic Object Pose, Size, and Shape
+  Estimation from a Single View</title>
+    <summary>  Estimating an object's 6D pose, size, and shape from visual input is a
+fundamental problem in computer vision, with critical applications in robotic
+grasping and manipulation. Existing methods either rely on object-specific
+priors such as CAD models or templates, or suffer from limited generalization
+across categories due to pose-shape entanglement and multi-stage pipelines. In
+this work, we propose a unified, category-agnostic framework that
+simultaneously predicts 6D pose, size, and dense shape from a single RGB-D
+image, without requiring templates, CAD models, or category labels at test
+time. Our model fuses dense 2D features from vision foundation models with
+partial 3D point clouds using a Transformer encoder enhanced by a
+Mixture-of-Experts, and employs parallel decoders for pose-size estimation and
+shape reconstruction, achieving real-time inference at 28 FPS. Trained solely
+on synthetic data from 149 categories in the SOPE dataset, our framework is
+evaluated on four diverse benchmarks SOPE, ROPE, ObjaversePose, and HANDAL,
+spanning over 300 categories. It achieves state-of-the-art accuracy on seen
+categories while demonstrating remarkably strong zero-shot generalization to
+unseen real-world objects, establishing a new standard for open-set 6D
+understanding in robotics and embodied AI.
 </summary>
     <author>
-      <name>Antonio R. Linero</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.09598v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09598v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.09583v1</id>
-    <updated>2025-10-10T17:38:40Z</updated>
-    <published>2025-10-10T17:38:40Z</published>
-    <title>FSP-DETR: Few-Shot Prototypical Parasitic Ova Detection</title>
-    <summary>  Object detection in biomedical settings is fundamentally constrained by the
-scarcity of labeled data and the frequent emergence of novel or rare
-categories. We present FSP-DETR, a unified detection framework that enables
-robust few-shot detection, open-set recognition, and generalization to unseen
-biomedical tasks within a single model. Built upon a class-agnostic DETR
-backbone, our approach constructs class prototypes from original support images
-and learns an embedding space using augmented views and a lightweight
-transformer decoder. Training jointly optimizes a prototype matching loss, an
-alignment-based separation loss, and a KL divergence regularization to improve
-discriminative feature learning and calibration under scarce supervision.
-Unlike prior work that tackles these tasks in isolation, FSP-DETR enables
-inference-time flexibility to support unseen class recognition, background
-rejection, and cross-task adaptation without retraining. We also introduce a
-new ova species detection benchmark with 20 parasite classes and establish
-standardized evaluation protocols. Extensive experiments across ova, blood
-cell, and malaria detection tasks demonstrate that FSP-DETR significantly
-outperforms prior few-shot and prototype-based detectors, especially in
-low-shot and open-set scenarios.
-</summary>
-    <author>
-      <name>Shubham Trehan</name>
+      <name>Jinyu Zhang</name>
     </author>
     <author>
-      <name>Udhav Ramachandran</name>
+      <name>Haitao Lin</name>
     </author>
     <author>
-      <name>Akash Rao</name>
+      <name>Jiashu Hou</name>
     </author>
     <author>
-      <name>Ruth Scimeca</name>
+      <name>Xiangyang Xue</name>
     </author>
     <author>
-      <name>Sathyanarayanan N. Aakur</name>
+      <name>Yanwei Fu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 3 Figures, 5 Tables. Under Review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09583v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09583v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.11687v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11687v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.09574v1</id>
-    <updated>2025-10-10T17:28:12Z</updated>
-    <published>2025-10-10T17:28:12Z</published>
-    <title>Zero-shot Structure Learning and Planning for Autonomous Robot
-  Navigation using Active Inference</title>
-    <summary>  Autonomous navigation in unfamiliar environments requires robots to
-simultaneously explore, localise, and plan under uncertainty, without relying
-on predefined maps or extensive training. We present a biologically inspired,
-Active Inference-based framework, Active Inference MAPping and Planning
-(AIMAPP). This model unifies mapping, localisation, and decision-making within
-a single generative model. Inspired by hippocampal navigation, it uses
-topological reasoning, place-cell encoding, and episodic memory to guide
-behaviour. The agent builds and updates a sparse topological map online, learns
-state transitions dynamically, and plans actions by minimising Expected Free
-Energy. This allows it to balance goal-directed and exploratory behaviours. We
-implemented a ROS-compatible navigation system that is sensor and
-robot-agnostic, capable of integrating with diverse hardware configurations. It
-operates in a fully self-supervised manner, is resilient to drift, and supports
-both exploration and goal-directed navigation without any pre-training. We
-demonstrate robust performance in large-scale real and simulated environments
-against state-of-the-art planning models, highlighting the system's
-adaptability to ambiguous observations, environmental changes, and sensor
-noise. The model offers a biologically inspired, modular solution to scalable,
-self-supervised navigation in unstructured settings. AIMAPP is available at
-https://github.com/decide-ugent/AIMAPP.
+    <id>http://arxiv.org/abs/2510.11686v1</id>
+    <updated>2025-10-13T17:49:05Z</updated>
+    <published>2025-10-13T17:49:05Z</published>
+    <title>Representation-Based Exploration for Language Models: From Test-Time to
+  Post-Training</title>
+    <summary>  Reinforcement learning (RL) promises to expand the capabilities of language
+models, but it is unclear if current RL techniques promote the discovery of
+novel behaviors, or simply sharpen those already present in the base model. In
+this paper, we investigate the value of deliberate exploration -- explicitly
+incentivizing the model to discover novel and diverse behaviors -- and aim to
+understand how the knowledge in pre-trained models can guide this search. Our
+main finding is that exploration with a simple, principled,
+representation-based bonus derived from the pre-trained language model's hidden
+states significantly improves diversity and pass@k rates -- both for
+post-training, and in a novel inference-time scaling setting we introduce. For
+inference-time, exploration with representation-based diversity improves
+efficiency, consistently improving pass@k rates across a variety of models and
+reasoning tasks. For example, for Qwen-2.5-14b-Instruct we obtain over 50%
+improvement in verifier efficiency on almost all tasks. For post-training, we
+show that integrating this exploration strategy into an RL pipeline improves
+reasoning performance over that of the initial model and over standard RL
+post-training. For example, on AIME 2024, our post-trained
+Qwen-2.5-7b-Instruct's pass@80 matches the pass@256 of GRPO on the same model,
+demonstrating a 3x improvement in test-time sample efficiency. Overall, our
+findings suggest that deliberate exploration -- with the right notion of
+diversity -- is a practical path toward discovery of new behaviors beyond
+sharpening.
 </summary>
     <author>
-      <name>Daria de tinguy</name>
+      <name>Jens Tuyls</name>
     </author>
     <author>
-      <name>Tim Verbelen</name>
+      <name>Dylan J. Foster</name>
     </author>
     <author>
-      <name>Emilio Gamba</name>
+      <name>Akshay Krishnamurthy</name>
     </author>
     <author>
-      <name>Bart Dhoedt</name>
+      <name>Jordan T. Ash</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">yet to be submitted</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09574v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09574v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Website and code: https://rep-exp.github.io</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.11686v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11686v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.09557v1</id>
-    <updated>2025-10-10T17:07:48Z</updated>
-    <published>2025-10-10T17:07:48Z</published>
-    <title>Doc2Query++: Topic-Coverage based Document Expansion and its Application
-  to Dense Retrieval via Dual-Index Fusion</title>
-    <summary>  Document expansion (DE) via query generation tackles vocabulary mismatch in
-sparse retrieval, yet faces limitations: uncontrolled generation producing
-hallucinated or redundant queries with low diversity; poor generalization from
-in-domain training (e.g., MS MARCO) to out-of-domain data like BEIR; and noise
-from concatenation harming dense retrieval. While Large Language Models (LLMs)
-enable cross-domain query generation, basic prompting lacks control, and
-taxonomy-based methods rely on domain-specific structures, limiting
-applicability. To address these challenges, we introduce Doc2Query++, a DE
-framework that structures query generation by first inferring a document's
-latent topics via unsupervised topic modeling for cross-domain applicability,
-then using hybrid keyword selection to create a diverse and relevant keyword
-set per document. This guides LLM not only to leverage keywords, which ensure
-comprehensive topic representation, but also to reduce redundancy through
-diverse, relevant terms. To prevent noise from query appending in dense
-retrieval, we propose Dual-Index Fusion strategy that isolates text and query
-signals, boosting performance in dense settings. Extensive experiments show
-Doc2Query++ significantly outperforms state-of-the-art baselines, achieving
-substantial gains in MAP, nDCG@10 and Recall@100 across diverse datasets on
-both sparse and dense retrieval.
+    <id>http://arxiv.org/abs/2510.11671v1</id>
+    <updated>2025-10-13T17:43:24Z</updated>
+    <published>2025-10-13T17:43:24Z</published>
+    <title>Finite-temperature phase diagram and collective modes of coherently
+  coupled Bose mixtures</title>
+    <summary>  We investigate the ferromagnetic-paramagnetic phase transition in coherently
+(Rabi) coupled Bose-Einstein condensates at zero and finite temperatures,
+exploring different routes to the transition by tuning the Rabi coupling or
+increasing the temperature at a fixed coupling. Using the
+Hartree-Fock-Bogoliubov theory within the Popov approximation, we map out the
+finite-temperature phase diagram of a three-dimensional homogeneous condensate
+and identify the critical line through the softening of the spin gap.
+Magnetization and the spin dispersion branch reveal the progressive suppression
+of the ferromagnetic order with increasing temperature. In
+quasi-one-dimensional harmonic traps, the transition, driven by Rabi coupling,
+is inferred through the softening of the spin breathing mode with its minimum
+shifting to lower coupling values with increasing temperature. Notably, the
+thermally driven transition causes monotonic hardening of all the spin modes.
+For both coupling and temperature-driven transition, the hybridized density
+modes in the ferromagnetic phase acquire more density character while
+approaching the critical point.
 </summary>
     <author>
-      <name>Tzu-Lin Kuo</name>
+      <name>Sunilkumar V</name>
     </author>
     <author>
-      <name>Wei-Ning Chiu</name>
+      <name> Rajat</name>
     </author>
     <author>
-      <name>Wei-Yun Ma</name>
+      <name>Sandeep Gautam</name>
     </author>
     <author>
-      <name>Pu-Jen Cheng</name>
+      <name>Arko Roy</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 4 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09557v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09557v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="H.3.3" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 8 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.11671v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11671v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.09556v1</id>
-    <updated>2025-10-10T17:07:45Z</updated>
-    <published>2025-10-10T17:07:45Z</published>
-    <title>WUGNECTIVES: Novel Entity Inferences of Language Models from Discourse
-  Connectives</title>
-    <summary>  The role of world knowledge has been particularly crucial to predict the
-discourse connective that marks the discourse relation between two arguments,
-with language models (LMs) being generally successful at this task. We flip
-this premise in our work, and instead study the inverse problem of
-understanding whether discourse connectives can inform LMs about the world. To
-this end, we present WUGNECTIVES, a dataset of 8,880 stimuli that evaluates
-LMs' inferences about novel entities in contexts where connectives link the
-entities to particular attributes. On investigating 17 different LMs at various
-scales, and training regimens, we found that tuning an LM to show reasoning
-behavior yields noteworthy improvements on most connectives. At the same time,
-there was a large variation in LMs' overall performance across connective type,
-with all models systematically struggling on connectives that express a
-concessive meaning. Our findings pave the way for more nuanced investigations
-into the functional role of language cues as captured by LMs. We release
-WUGNECTIVES at https://github.com/sheffwb/wugnectives.
+    <id>http://arxiv.org/abs/2510.11664v1</id>
+    <updated>2025-10-13T17:38:02Z</updated>
+    <published>2025-10-13T17:38:02Z</published>
+    <title>Proprioceptive Misestimation of Hand Speed</title>
+    <summary>  The accuracy with which the human proprioceptive system estimates hand speed
+is not well understood. To investigate this, we designed an experiment using
+hobby-grade mechatronics parts and integrated it as a laboratory exercise in a
+large remote laboratory course. In a simple joint position reproduction task,
+participants (N = 191) grasped a servomotor-driven shaft with one hand as it
+followed a randomized trajectory composed of sinusoidal submovements. They
+simultaneously attempted to reproduce the movement by turning the shaft of a
+potentiometer with the other hand. Focusing on the first movement of the
+trajectory, we found that participants consistently overestimated the speed of
+the slowest rotations by ~45% and underestimated the speed of the fastest
+rotations also by ~30%. Speed estimation errors were near zero for trajectories
+with peak velocities ~63 deg/s. Participants' movements also overshot slow
+trajectories and undershot fast trajectories. We show that these trajectory
+errors can be explained by a model in which the proprioceptive system
+integrates velocity misestimates to infer position.
 </summary>
     <author>
-      <name>Daniel Brubaker</name>
+      <name>Caitlin Callaghan</name>
     </author>
     <author>
-      <name>William Sheffield</name>
+      <name>David J Reinkensmeyer</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.11664v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11664v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.11633v1</id>
+    <updated>2025-10-13T17:14:14Z</updated>
+    <published>2025-10-13T17:14:14Z</published>
+    <title>The Role of Congeniality in Multiple Imputation for Doubly Robust Causal
+  Estimation</title>
+    <summary>  This paper provides clear and practical guidance on the specification of
+imputation models when multiple imputation is used in conjunction with doubly
+robust estimation methods for causal inference. Through theoretical arguments
+and targeted simulations, we show that when a confounder has missing data the
+corresponding imputation model must include all variables used in either the
+propensity score model or the outcome model, and that these variables must
+appear in the same functional form as in the final analysis. Violating these
+conditions can lead to biased treatment effect estimates, even when both
+components of the doubly robust estimator are correctly specified. We present a
+mathematical framework for doubly robust estimation combined with multiple
+imputation, establish the theoretical requirements for proper imputation in
+this setting, and demonstrate the consequences of misspecification through
+simulation. Based on these findings, we offer concrete recommendations to
+ensure valid inference when using multiple imputation with doubly robust
+methods in applied causal analyses.
+</summary>
+    <author>
+      <name>Lucy D'Agostino McGowan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.11633v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11633v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.11628v1</id>
+    <updated>2025-10-13T17:10:25Z</updated>
+    <published>2025-10-13T17:10:25Z</published>
+    <title>Bayesian Self-Calibration and Parametric Channel Estimation for 6G
+  Antenna Arrays</title>
+    <summary>  Accurate channel estimation is essential for both high-rate communication and
+high-precision sensing in 6G wireless systems. However, a major performance
+limitation arises from calibration mismatches when operating phased-array
+antennas under real-world conditions. To address this issue, we propose to
+integrate antenna element self-calibration into a variational sparse Bayesian
+learning (VSBL) algorithm for parametric channel estimation. We model antenna
+gain and phase deviations as latent variables and derive explicit update
+equations to jointly infer these calibration parameters and the channel
+parameters: the model order, complex amplitudes, delays, angles, and the noise
+variance. The resulting algorithm operates online and adapts in real time to
+hardware-induced mismatches. We assess its performance in terms of the root
+mean square error (RMSE) and the optimal subpattern-assignment (OSPA) metric,
+demonstrating consistent improvements over conventional VSBL without
+calibration. Our results demonstrate that embedding self-calibration within
+Bayesian inference significantly enhances the robustness of channel estimation.
+</summary>
+    <author>
+      <name>Patrick Hödl</name>
     </author>
     <author>
-      <name>Junyi Jessy Li</name>
+      <name>Jakob Möderl</name>
     </author>
     <author>
-      <name>Kanishka Misra</name>
+      <name>Erik Leitinger</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages total, 9 pages main; 7 figures total, 4 figures main; 8
-  tables total, 4 tables main</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09556v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09556v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Klaus Witrisal</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.11628v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11628v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.11620v1</id>
+    <updated>2025-10-13T17:02:41Z</updated>
+    <published>2025-10-13T17:02:41Z</published>
+    <title>Enhancing Long Chain-of-Thought Reasoning through Multi-Path Plan
+  Aggregation</title>
+    <summary>  Inference-time scaling enhances the reasoning ability of a language model
+(LM) by extending its chain-of-thought (CoT). However, existing approaches
+typically generate the entire reasoning chain in a single forward pass, which
+often leads to CoT derailment, i.e., the reasoning trajectory drifting off
+course due to compounding errors. This problem is particularly severe for
+smaller LMs with long CoTs due to their limited capacity. To address this, we
+analyze raw long CoTs and uncover a reasoning hierarchy consisting of planning
+and execution steps. Our analysis reveals that most reasoning errors stem from
+incorrect planning. Motivated by this observation, we propose Multi-Path Plan
+Aggregation (MPPA), a framework that augments single-pass reasoning with plan
+exploration and aggregation. Following a variable interval schedule based on
+the token position, MPPA generates multiple candidate plans and aggregates them
+into a refined planning step. To maintain efficiency, we adopt a minimal design
+in which the base LM serves as the primary policy, while a lightweight LoRA
+module implements the plan aggregation policy. We further observe that
+outcome-reward RL is inefficient for long trajectories (e.g., exceeding 4K
+tokens). To overcome this, we introduce online Step-DPO, a process-level
+preference optimization scheme that leverages Twisted Sequential Monte Carlo
+(TSMC) to provide scalable stepwise supervision using small LMs. This yields
+more efficient training, improved stability, and higher accuracy. Extensive
+experiments on challenging math, science, and logical reasoning benchmarks
+demonstrate that, with only 10% SFT data and 5% of preference pairs, our method
+outperforms both the DeepSeek-R1 distillation baseline and the outcome-reward
+RL baseline across multiple base models and tasks.
+</summary>
+    <author>
+      <name>Siheng Xiong</name>
+    </author>
+    <author>
+      <name>Ali Payani</name>
+    </author>
+    <author>
+      <name>Faramarz Fekri</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.11620v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11620v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.09544v1</id>
-    <updated>2025-10-10T16:58:14Z</updated>
-    <published>2025-10-10T16:58:14Z</published>
-    <title>Beyond Surface Reasoning: Unveiling the True Long Chain-of-Thought
-  Capacity of Diffusion Large Language Models</title>
-    <summary>  Recently, Diffusion Large Language Models (DLLMs) have offered high
-throughput and effective sequential reasoning, making them a competitive
-alternative to autoregressive LLMs (ALLMs). However, parallel decoding, which
-enables simultaneous token updates, conflicts with the causal order often
-required for rigorous reasoning. We first identify this conflict as the core
-Parallel-Sequential Contradiction (PSC). Behavioral analyses in both simple and
-complex reasoning tasks show that DLLMs exhibit genuine parallelism only for
-directly decidable outputs. As task difficulty increases, they revert to
-autoregressive-like behavior, a limitation exacerbated by autoregressive
-prompting, which nearly doubles the number of decoding steps with remasking
-without improving quality. Moreover, PSC restricts DLLMs' self-reflection,
-reasoning depth, and exploratory breadth. To further characterize PSC, we
-introduce three scaling dimensions for DLLMs: parallel, diffusion, and
-sequential. Empirically, while parallel scaling yields consistent improvements,
-diffusion and sequential scaling are constrained by PSC. Based on these
-findings, we propose several practical mitigations, parallel-oriented
-prompting, diffusion early stopping, and parallel scaling, to reduce
-PSC-induced ineffectiveness and inefficiencies.
+    <id>http://arxiv.org/abs/2510.11600v1</id>
+    <updated>2025-10-13T16:40:44Z</updated>
+    <published>2025-10-13T16:40:44Z</published>
+    <title>A framework for realisable data-driven active flow control using model
+  predictive control applied to a simplified truck wake</title>
+    <summary>  We present an efficient and realisable active flow control framework with few
+non-intrusive sensors. The method builds upon data-driven, reduced-order
+predictive models based on Long-Short-Term Memory (LSTM) networks and efficient
+gradient-based Model Predictive Control (MPC). The model uses only
+surface-mounted pressure probes to infer the wake state, and is trained
+entirely offline on a dataset built with open-loop actuations, thus avoiding
+the complexities of online learning. Sparsification of the sensors needed for
+control from an initially large set is achieved using SHapley Additive
+exPlanations. A parsimonious set of sensors is then deployed in closed-loop
+control with MPC. The framework is tested in numerical simulations of a 2D
+truck model at Reynolds number 500, with pulsed-jet actuators placed in the
+rear of the truck to control the wake. The parsimonious LSTM-MPC achieved a
+drag reduction of 12.8%.
 </summary>
     <author>
-      <name>Qiguang Chen</name>
+      <name>Alberto Solera-Rico</name>
     </author>
     <author>
-      <name>Hanjing Li</name>
+      <name>Carlos Sanmiguel Vila</name>
     </author>
     <author>
-      <name>Libo Qin</name>
+      <name>Stefano Discetti</name>
     </author>
-    <author>
-      <name>Dengyun Peng</name>
-    </author>
-    <author>
-      <name>Jinhao Liu</name>
-    </author>
-    <author>
-      <name>Jiangyi Wang</name>
-    </author>
-    <author>
-      <name>Chengyue Wu</name>
-    </author>
-    <author>
-      <name>Xie Chen</name>
-    </author>
-    <author>
-      <name>Yantao Du</name>
-    </author>
-    <author>
-      <name>Wanxiang Che</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09544v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09544v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.09536v1</id>
-    <updated>2025-10-10T16:49:12Z</updated>
-    <published>2025-10-10T16:49:12Z</published>
-    <title>Evaluating Robustness of Large Language Models Against Multilingual
-  Typographical Errors</title>
-    <summary>  Large language models (LLMs) are increasingly deployed in multilingual,
-real-world applications with user inputs -- naturally introducing typographical
-errors (typos). Yet most benchmarks assume clean input, leaving the robustness
-of LLMs to typos across languages largely underexplored. To address this gap,
-we introduce MulTypo, a multilingual typo generation algorithm that simulates
-human-like errors based on language-specific keyboard layouts and typing
-behavior. We evaluate 18 open-source LLMs across three model families and five
-downstream tasks spanning language inference, multi-choice question answering,
-mathematical reasoning, and machine translation tasks. Our results show that
-typos consistently degrade performance, particularly in generative tasks and
-those requiring reasoning -- while the natural language inference task is
-comparatively more robust. Instruction tuning improves clean-input performance
-but may increase brittleness under noise. We also observe language-dependent
-robustness: high-resource languages are generally more robust than low-resource
-ones, and translation from English is more robust than translation into
-English. Our findings underscore the need for noise-aware training and
-multilingual robustness evaluation. We make our code and data publicly
-available.
-</summary>
-    <author>
-      <name>Yihong Liu</name>
-    </author>
-    <author>
-      <name>Raoyuan Zhao</name>
-    </author>
-    <author>
-      <name>Lena Altinger</name>
-    </author>
-    <author>
-      <name>Hinrich Schütze</name>
-    </author>
-    <author>
-      <name>Michael A. Hedderich</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.09536v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.09536v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 15 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.11600v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.11600v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="76D55" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="I.2.8; J.2" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
