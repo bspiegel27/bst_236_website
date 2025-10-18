@@ -1,510 +1,502 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-17T00:53:52Z -->
+<!-- Last updated: 2025-10-18T00:51:00Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-16T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">123773</opensearch:totalResults>
+  <updated>2025-10-17T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">123898</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.13805v1</id>
-    <updated>2025-10-15T17:59:25Z</updated>
-    <published>2025-10-15T17:59:25Z</published>
-    <title>$\texttt{SBi3PCF:}$ Simulation-based inference with the integrated 3PCF</title>
-    <summary>  We present $\texttt{SBi3PCF}$, a simulation-based inference (SBI) framework
-for analysing a higher-order weak lensing statistic, the integrated 3-point
-correlation function (i3PCF). Our approach forward-models the cosmic shear
-field using the $\texttt{CosmoGridV1}$ suite of N-body simulations, including a
-comprehensive set of systematic effects such as intrinsic alignment, baryonic
-feedback, photometric redshift uncertainty, shear calibration bias, and shape
-noise. Using this, we have produced a set of DES Y3-like synthetic measurements
-for 2-point shear correlation functions $\xi_{\pm}$ (2PCFs) and i3PCFs
-$\zeta_{\pm}$ across 6 cosmological and 11 systematic parameters. Having
-validated these measurements against theoretical predictions and thoroughly
-examined for potential systematic biases, we have found that the impact of
-source galaxy clustering and reduced shear on the i3PCF is negligible for
-Stage-III surveys. Furthermore, we have tested the Gaussianity assumption for
-the likelihood of our data vector and found that while the sampling
-distribution of the 2PCF can be well approximated by a Gaussian function, the
-likelihood of the combined 2PCF + i3PCF data vector including filter sizes of
-$90'$ and larger can deviate from this assumption. Our SBI pipeline employs
-masked autoregressive flows to perform neural likelihood estimation and is
-validated to give statistically accurate posterior estimates. On mock data, we
-find that including the i3PCF yields a substantial $63.8\%$ median improvement
-in the figure of merit for $\Omega_m - \sigma_8 - w_0$. These findings are
-consistent with previous works on the i3PCF and demonstrate that our SBI
-framework can achieve the accuracy and realism needed to analyse the i3PCF in
-wide-area weak lensing surveys.
+    <id>http://arxiv.org/abs/2510.14981v1</id>
+    <updated>2025-10-16T17:59:59Z</updated>
+    <published>2025-10-16T17:59:59Z</published>
+    <title>Coupled Diffusion Sampling for Training-Free Multi-View Image Editing</title>
+    <summary>  We present an inference-time diffusion sampling method to perform multi-view
+consistent image editing using pre-trained 2D image editing models. These
+models can independently produce high-quality edits for each image in a set of
+multi-view images of a 3D scene or object, but they do not maintain consistency
+across views. Existing approaches typically address this by optimizing over
+explicit 3D representations, but they suffer from a lengthy optimization
+process and instability under sparse view settings. We propose an implicit 3D
+regularization approach by constraining the generated 2D image sequences to
+adhere to a pre-trained multi-view image distribution. This is achieved through
+coupled diffusion sampling, a simple diffusion sampling technique that
+concurrently samples two trajectories from both a multi-view image distribution
+and a 2D edited image distribution, using a coupling term to enforce the
+multi-view consistency among the generated images. We validate the
+effectiveness and generality of this framework on three distinct multi-view
+image editing tasks, demonstrating its applicability across various model
+architectures and highlighting its potential as a general solution for
+multi-view consistent editing.
 </summary>
     <author>
-      <name>David Gebauer</name>
+      <name>Hadi Alzayer</name>
     </author>
     <author>
-      <name>Anik Halder</name>
+      <name>Yunzhi Zhang</name>
     </author>
     <author>
-      <name>Stella Seitz</name>
+      <name>Chen Geng</name>
     </author>
     <author>
-      <name>Dhayaa Anbajagane</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages + appendix. 21 figures. Comments are welcome!</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.13805v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13805v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.13796v1</id>
-    <updated>2025-10-15T17:56:15Z</updated>
-    <published>2025-10-15T17:56:15Z</published>
-    <title>The Mechanistic Emergence of Symbol Grounding in Language Models</title>
-    <summary>  Symbol grounding (Harnad, 1990) describes how symbols such as words acquire
-their meanings by connecting to real-world sensorimotor experiences. Recent
-work has shown preliminary evidence that grounding may emerge in
-(vision-)language models trained at scale without using explicit grounding
-objectives. Yet, the specific loci of this emergence and the mechanisms that
-drive it remain largely unexplored. To address this problem, we introduce a
-controlled evaluation framework that systematically traces how symbol grounding
-arises within the internal computations through mechanistic and causal
-analysis. Our findings show that grounding concentrates in middle-layer
-computations and is implemented through the aggregate mechanism, where
-attention heads aggregate the environmental ground to support the prediction of
-linguistic forms. This phenomenon replicates in multimodal dialogue and across
-architectures (Transformers and state-space models), but not in unidirectional
-LSTMs. Our results provide behavioral and mechanistic evidence that symbol
-grounding can emerge in language models, with practical implications for
-predicting and potentially controlling the reliability of generation.
-</summary>
-    <author>
-      <name>Shuyu Wu</name>
+      <name>Jia-Bin Huang</name>
     </author>
     <author>
-      <name>Ziqiao Ma</name>
+      <name>Jiajun Wu</name>
     </author>
-    <author>
-      <name>Xiaoxi Luo</name>
-    </author>
-    <author>
-      <name>Yidong Huang</name>
-    </author>
-    <author>
-      <name>Josue Torres-Fonseca</name>
-    </author>
-    <author>
-      <name>Freda Shi</name>
-    </author>
-    <author>
-      <name>Joyce Chai</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.13796v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13796v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project page: https://coupled-diffusion.github.io</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14981v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14981v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.13780v1</id>
-    <updated>2025-10-15T17:34:31Z</updated>
-    <published>2025-10-15T17:34:31Z</published>
-    <title>Macro-Level Correlational Analysis of Mental Disorders: Economy,
-  Education, Society, and Technology Development</title>
-    <summary>  This paper quantifies the age-stratified global burden of four mental
-disorders in 27 regions from 1990 to 2021 using GBD 2021. To put it in detail,
-it links the age-standardized years of disability adjustment with 18 world
-development indicators across economic, educational, social and information
-technology sectors. Then, by means of Pearson correlation, mutual information,
-Granger causality and maximum information coefficient and other methods, the
-linear, nonlinear and lagged dependency relationships were evaluated. After
-research, it was found that there is a very prominent spatio-temporal
-heterogeneity among young people aged 20 to 39, and the coupling relationship
-is stronger. From the overall situation, education corresponds to a low burden.
-Unemployment corresponds to a high burden. Through lag analysis, it can be
-known that the influence time of economic and technological factors is
-relatively short, while that of educational factors is relatively long. These
-results highlight the macro determinants that play a role at different time
-scales and also provide population-level references for verifying computational
-mental health models and for intervention measures in specific regions and for
-specific ages.
+    <id>http://arxiv.org/abs/2510.14976v1</id>
+    <updated>2025-10-16T17:59:56Z</updated>
+    <published>2025-10-16T17:59:56Z</published>
+    <title>Ponimator: Unfolding Interactive Pose for Versatile Human-human
+  Interaction Animation</title>
+    <summary>  Close-proximity human-human interactive poses convey rich contextual
+information about interaction dynamics. Given such poses, humans can
+intuitively infer the context and anticipate possible past and future dynamics,
+drawing on strong priors of human behavior. Inspired by this observation, we
+propose Ponimator, a simple framework anchored on proximal interactive poses
+for versatile interaction animation. Our training data consists of
+close-contact two-person poses and their surrounding temporal context from
+motion-capture interaction datasets. Leveraging interactive pose priors,
+Ponimator employs two conditional diffusion models: (1) a pose animator that
+uses the temporal prior to generate dynamic motion sequences from interactive
+poses, and (2) a pose generator that applies the spatial prior to synthesize
+interactive poses from a single pose, text, or both when interactive poses are
+unavailable. Collectively, Ponimator supports diverse tasks, including
+image-based interaction animation, reaction animation, and text-to-interaction
+synthesis, facilitating the transfer of interaction knowledge from high-quality
+mocap data to open-world scenarios. Empirical experiments across diverse
+datasets and applications demonstrate the universality of the pose prior and
+the effectiveness and robustness of our framework.
 </summary>
     <author>
-      <name>Yingzhi Tao</name>
+      <name>Shaowei Liu</name>
     </author>
     <author>
-      <name>Chang Yang</name>
+      <name>Chuan Guo</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 5 figures, ICDM workshop</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.13780v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13780v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="G.3; I.5.4; I.2.1" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Bing Zhou</name>
+    </author>
+    <author>
+      <name>Jian Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to ICCV 2025. Project page:
+  https://stevenlsw.github.io/ponimator/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14976v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14976v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.13774v1</id>
-    <updated>2025-10-15T17:26:24Z</updated>
-    <published>2025-10-15T17:26:24Z</published>
-    <title>UrbanFusion: Stochastic Multimodal Fusion for Contrastive Learning of
-  Robust Spatial Representations</title>
-    <summary>  Forecasting urban phenomena such as housing prices and public health
-indicators requires the effective integration of various geospatial data.
-Current methods primarily utilize task-specific models, while recent foundation
-models for spatial representations often support only limited modalities and
-lack multimodal fusion capabilities. To overcome these challenges, we present
-UrbanFusion, a Geo-Foundation Model (GeoFM) that features Stochastic Multimodal
-Fusion (SMF). The framework employs modality-specific encoders to process
-different types of inputs, including street view imagery, remote sensing data,
-cartographic maps, and points of interest (POIs) data. These multimodal inputs
-are integrated via a Transformer-based fusion module that learns unified
-representations. An extensive evaluation across 41 tasks in 56 cities worldwide
-demonstrates UrbanFusion's strong generalization and predictive performance
-compared to state-of-the-art GeoAI models. Specifically, it 1) outperforms
-prior foundation models on location-encoding, 2) allows multimodal input during
-inference, and 3) generalizes well to regions unseen during training.
-UrbanFusion can flexibly utilize any subset of available modalities for a given
-location during both pretraining and inference, enabling broad applicability
-across diverse data availability scenarios. All source code is available at
-https://github.com/DominikM198/UrbanFusion.
+    <id>http://arxiv.org/abs/2510.14970v1</id>
+    <updated>2025-10-16T17:59:38Z</updated>
+    <published>2025-10-16T17:59:38Z</published>
+    <title>Biology-informed neural networks learn nonlinear representations from
+  omics data to improve genomic prediction and interpretability</title>
+    <summary>  We extend biologically-informed neural networks (BINNs) for genomic
+prediction (GP) and selection (GS) in crops by integrating thousands of
+single-nucleotide polymorphisms (SNPs) with multi-omics measurements and prior
+biological knowledge. Traditional genotype-to-phenotype (G2P) models depend
+heavily on direct mappings that achieve only modest accuracy, forcing breeders
+to conduct large, costly field trials to maintain or marginally improve genetic
+gain. Models that incorporate intermediate molecular phenotypes such as gene
+expression can achieve higher predictive fit, but they remain impractical for
+GS since such data are unavailable at deployment or design time. BINNs overcome
+this limitation by encoding pathway-level inductive biases and leveraging
+multi-omics data only during training, while using genotype data alone during
+inference. Applied to maize gene-expression and multi-environment field-trial
+data, BINN improves rank-correlation accuracy by up to 56% within and across
+subpopulations under sparse-data conditions and nonlinearly identifies genes
+that GWAS/TWAS fail to uncover. With complete domain knowledge for a synthetic
+metabolomics benchmark, BINN reduces prediction error by 75% relative to
+conventional neural nets and correctly identifies the most important nonlinear
+pathway. Importantly, both cases show highly sensitive BINN latent variables
+correlate with the experimental quantities they represent, despite not being
+trained on them. This suggests BINNs learn biologically-relevant
+representations, nonlinear or linear, from genotype to phenotype. Together,
+BINNs establish a framework that leverages intermediate domain information to
+improve genomic prediction accuracy and reveal nonlinear biological
+relationships that can guide genomic selection, candidate gene selection,
+pathway enrichment, and gene-editing prioritization.
 </summary>
     <author>
-      <name>Dominik J. Mühlematter</name>
+      <name>Katiana Kontolati</name>
     </author>
     <author>
-      <name>Lin Che</name>
+      <name>Rini Jasmine Gladstone</name>
     </author>
     <author>
-      <name>Ye Hong</name>
+      <name>Ian Davis</name>
     </author>
     <author>
-      <name>Martin Raubal</name>
+      <name>Ethan Pickering</name>
     </author>
-    <author>
-      <name>Nina Wiedemann</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.13774v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13774v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">35 pages, 12 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14970v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14970v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.14961v1</id>
+    <updated>2025-10-16T17:59:07Z</updated>
+    <published>2025-10-16T17:59:07Z</published>
+    <title>Efficient Parallel Samplers for Recurrent-Depth Models and Their
+  Connection to Diffusion Language Models</title>
+    <summary>  Language models with recurrent depth, also referred to as universal or looped
+when considering transformers, are defined by the capacity to increase their
+computation through the repetition of layers. Recent efforts in pretraining
+have demonstrated that these architectures can scale to modern language
+modeling tasks while exhibiting advantages in reasoning tasks. In this work, we
+examine the relationship between recurrent-depth models and diffusion language
+models. Building on their similarities, we develop a new diffusion forcing
+sampler for these models to accelerate generation. The sampler advances by
+decoding new tokens at every forward pass of the model, while the latent states
+of these tokens can be further refined in parallel through recurrence.
+Theoretically, generation with our sampler is strictly more expressive than the
+baseline autoregressive generation using the same time budget on modern
+hardware. Moreover, this sampler, based on principles from diffusion
+literature, can be directly applied to existing 3.5B recurrent-depth
+transformers without any tuning, leading to up to a 5x speedup. Consequently,
+our findings not only provide an efficient mechanism for parallelizing the
+extra computation in recurrent-depth models at inference, but also suggest that
+such models can be naturally viewed as strong continuous, though causal,
+diffusion language models.
+</summary>
+    <author>
+      <name>Jonas Geiping</name>
+    </author>
+    <author>
+      <name>Xinyu Yang</name>
+    </author>
+    <author>
+      <name>Guinan Su</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code can be found at https://github.com/seal-rg/recurrent-pretraining</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14961v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14961v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.14954v1</id>
+    <updated>2025-10-16T17:57:53Z</updated>
+    <published>2025-10-16T17:57:53Z</published>
+    <title>OmniMotion: Multimodal Motion Generation with Continuous Masked
+  Autoregression</title>
+    <summary>  Whole-body multi-modal human motion generation poses two primary challenges:
+creating an effective motion generation mechanism and integrating various
+modalities, such as text, speech, and music, into a cohesive framework. Unlike
+previous methods that usually employ discrete masked modeling or autoregressive
+modeling, we develop a continuous masked autoregressive motion transformer,
+where a causal attention is performed considering the sequential nature within
+the human motion. Within this transformer, we introduce a gated linear
+attention and an RMSNorm module, which drive the transformer to pay attention
+to the key actions and suppress the instability caused by either the abnormal
+movements or the heterogeneous distributions within multi-modalities. To
+further enhance both the motion generation and the multimodal generalization,
+we employ the DiT structure to diffuse the conditions from the transformer
+towards the targets. To fuse different modalities, AdaLN and cross-attention
+are leveraged to inject the text, speech, and music signals. Experimental
+results demonstrate that our framework outperforms previous methods across all
+modalities, including text-to-motion, speech-to-gesture, and music-to-dance.
+The code of our method will be made public.
+</summary>
+    <author>
+      <name>Zhe Li</name>
+    </author>
+    <author>
+      <name>Weihao Yuan</name>
+    </author>
+    <author>
+      <name>Weichao Shen</name>
+    </author>
+    <author>
+      <name>Siyu Zhu</name>
+    </author>
+    <author>
+      <name>Zilong Dong</name>
+    </author>
+    <author>
+      <name>Chang Xu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.14954v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14954v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.13763v1</id>
-    <updated>2025-10-15T17:11:19Z</updated>
-    <published>2025-10-15T17:11:19Z</published>
-    <title>PriorGuide: Test-Time Prior Adaptation for Simulation-Based Inference</title>
-    <summary>  Amortized simulator-based inference offers a powerful framework for tackling
-Bayesian inference in computational fields such as engineering or neuroscience,
-increasingly leveraging modern generative methods like diffusion models to map
-observed data to model parameters or future predictions. These approaches yield
-posterior or posterior-predictive samples for new datasets without requiring
-further simulator calls after training on simulated parameter-data pairs.
-However, their applicability is often limited by the prior distribution(s) used
-to generate model parameters during this training phase. To overcome this
-constraint, we introduce PriorGuide, a technique specifically designed for
-diffusion-based amortized inference methods. PriorGuide leverages a novel
-guidance approximation that enables flexible adaptation of the trained
-diffusion model to new priors at test time, crucially without costly
-retraining. This allows users to readily incorporate updated information or
-expert knowledge post-training, enhancing the versatility of pre-trained
-inference models.
+    <id>http://arxiv.org/abs/2510.14952v1</id>
+    <updated>2025-10-16T17:57:47Z</updated>
+    <published>2025-10-16T17:57:47Z</published>
+    <title>From Language to Locomotion: Retargeting-free Humanoid Control via
+  Motion Latent Guidance</title>
+    <summary>  Natural language offers a natural interface for humanoid robots, but existing
+language-guided humanoid locomotion pipelines remain cumbersome and unreliable.
+They typically decode human motion, retarget it to robot morphology, and then
+track it with a physics-based controller. However, this multi-stage process is
+prone to cumulative errors, introduces high latency, and yields weak coupling
+between semantics and control. These limitations call for a more direct pathway
+from language to action, one that eliminates fragile intermediate stages.
+Therefore, we present RoboGhost, a retargeting-free framework that directly
+conditions humanoid policies on language-grounded motion latents. By bypassing
+explicit motion decoding and retargeting, RoboGhost enables a diffusion-based
+policy to denoise executable actions directly from noise, preserving semantic
+intent and supporting fast, reactive control. A hybrid causal
+transformer-diffusion motion generator further ensures long-horizon consistency
+while maintaining stability and diversity, yielding rich latent representations
+for precise humanoid behavior. Extensive experiments demonstrate that RoboGhost
+substantially reduces deployment latency, improves success rates and tracking
+accuracy, and produces smooth, semantically aligned locomotion on real
+humanoids. Beyond text, the framework naturally extends to other modalities
+such as images, audio, and music, providing a general foundation for
+vision-language-action humanoid systems.
 </summary>
     <author>
-      <name>Yang Yang</name>
+      <name>Zhe Li</name>
     </author>
     <author>
-      <name>Severi Rissanen</name>
+      <name>Cheng Chi</name>
     </author>
     <author>
-      <name>Paul E. Chang</name>
+      <name>Yangyang Wei</name>
     </author>
     <author>
-      <name>Nasrulloh Loka</name>
+      <name>Boan Zhu</name>
     </author>
     <author>
-      <name>Daolang Huang</name>
+      <name>Yibo Peng</name>
     </author>
     <author>
-      <name>Arno Solin</name>
+      <name>Tao Huang</name>
     </author>
     <author>
-      <name>Markus Heinonen</name>
+      <name>Pengwei Wang</name>
     </author>
     <author>
-      <name>Luigi Acerbi</name>
+      <name>Zhongyuan Wang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">35 pages, 6 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.13763v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13763v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+    <author>
+      <name>Chang Xu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.14952v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14952v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.13760v1</id>
-    <updated>2025-10-15T17:10:39Z</updated>
-    <published>2025-10-15T17:10:39Z</published>
-    <title>Invited Paper: BitMedViT: Ternary-Quantized Vision Transformer for
-  Medical AI Assistants on the Edge</title>
-    <summary>  Vision Transformers (ViTs) have demonstrated strong capabilities in
-interpreting complex medical imaging data. However, their significant
-computational and memory demands pose challenges for deployment in real-time,
-resource-constrained mobile and wearable devices used in clinical environments.
-We introduce, BiTMedViT, a new class of Edge ViTs serving as medical AI
-assistants that perform structured analysis of medical images directly on the
-edge. BiTMedViT utilizes ternary- quantized linear layers tailored for medical
-imaging and com- bines a training procedure with multi-query attention,
-preserving stability under ternary weights with low-precision activations.
-Furthermore, BiTMedViT employs task-aware distillation from a high-capacity
-teacher to recover accuracy lost due to extreme quantization. Lastly, we also
-present a pipeline that maps the ternarized ViTs to a custom CUDA kernel for
-efficient memory bandwidth utilization and latency reduction on the Jetson Orin
-Nano. Finally, BiTMedViT achieves 86% diagnostic accuracy (89% SOTA) on
-MedMNIST across 12 datasets, while reducing model size by 43x, memory traffic
-by 39x, and enabling 16.8 ms inference at an energy efficiency up to 41x that
-of SOTA models at 183.62 GOPs/J on the Orin Nano. Our results demonstrate a
-practical and scientifically grounded route for extreme-precision medical
-imaging ViTs deployable on the edge, narrowing the gap between algorithmic
-advances and deployable clinical tools.
+    <id>http://arxiv.org/abs/2510.14950v1</id>
+    <updated>2025-10-16T17:57:06Z</updated>
+    <published>2025-10-16T17:57:06Z</published>
+    <title>A formative measurement validation methodology for survey questionnaires</title>
+    <summary>  Model misspecification of formative indicators remains a widely documented
+issue across academic literature, yet scholars lack a clear consensus on
+pragmatic, prescriptive approaches to manage this gap. This ambiguity forces
+researchers to rely on psychometric frameworks primarily intended for
+reflective models, and thus risks misleading findings. This article introduces
+a Multi-Step Validation Methodology Framework specifically designed for
+formative constructs in survey-based research. The proposed framework is
+grounded in an exhaustive literature review and integrates essential pilot
+diagnostics through descriptive statistics and multicollinearity checks. The
+methodology provides researchers with the necessary theoretical and structural
+clarity to finally justify and adhere to appropriate validation techniques that
+accurately account for the causal nature of the constructs while ensuring high
+psychometric and statistical integrity.
 </summary>
     <author>
-      <name>Mikolaj Walczak</name>
+      <name>Mark Dominique Dalipe Muñoz</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 4 figures, 1 table</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14950v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14950v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.14946v1</id>
+    <updated>2025-10-16T17:55:56Z</updated>
+    <published>2025-10-16T17:55:56Z</published>
+    <title>EdgeNavMamba: Mamba Optimized Object Detection for Energy Efficient Edge
+  Devices</title>
+    <summary>  Deployment of efficient and accurate Deep Learning models has long been a
+challenge in autonomous navigation, particularly for real-time applications on
+resource-constrained edge devices. Edge devices are limited in computing power
+and memory, making model efficiency and compression essential. In this work, we
+propose EdgeNavMamba, a reinforcement learning-based framework for
+goal-directed navigation using an efficient Mamba object detection model. To
+train and evaluate the detector, we introduce a custom shape detection dataset
+collected in diverse indoor settings, reflecting visual cues common in
+real-world navigation. The object detector serves as a pre-processing module,
+extracting bounding boxes (BBOX) from visual input, which are then passed to an
+RL policy to control goal-oriented navigation. Experimental results show that
+the student model achieved a reduction of 67% in size, and up to 73% in energy
+per inference on edge devices of NVIDIA Jetson Orin Nano and Raspberry Pi 5,
+while keeping the same performance as the teacher model. EdgeNavMamba also
+maintains high detection accuracy in MiniWorld and IsaacLab simulators while
+reducing parameters by 31% compared to the baseline. In the MiniWorld
+simulator, the navigation policy achieves over 90% success across environments
+of varying complexity.
+</summary>
+    <author>
+      <name>Romina Aalishah</name>
     </author>
     <author>
-      <name>Uttej Kallakuri</name>
-    </author>
-    <author>
-      <name>Edward Humes</name>
-    </author>
-    <author>
-      <name>Xiaomin Lin</name>
+      <name>Mozhgan Navardi</name>
     </author>
     <author>
       <name>Tinoosh Mohsenin</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at 2025 IEEE/ACM International Conf. on Computer-Aided
-  Design (ICCAD) Oct. 26-30 2025, Munich, DE</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.13760v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13760v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The 11th IEEE International Conference on Edge Computing and Scalable
+  Cloud (IEEE EdgeCom 2025)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14946v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14946v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.13756v1</id>
-    <updated>2025-10-15T17:05:37Z</updated>
-    <published>2025-10-15T17:05:37Z</published>
-    <title>RECODE: Reasoning Through Code Generation for Visual Question Answering</title>
-    <summary>  Multimodal Large Language Models (MLLMs) struggle with precise reasoning for
-structured visuals like charts and diagrams, as pixel-based perception lacks a
-mechanism for verification. To address this, we propose to leverage derendering
--- the process of reverse-engineering visuals into executable code -- as a new
-modality for verifiable visual reasoning. Specifically, we propose RECODE, an
-agentic framework that first generates multiple candidate programs to reproduce
-the input image. It then uses a critic to select the most faithful
-reconstruction and iteratively refines the code. This process not only
-transforms an ambiguous perceptual task into a verifiable, symbolic problem,
-but also enables precise calculations and logical inferences later on. On
-various visual reasoning benchmarks such as CharXiv, ChartQA, and Geometry3K,
-RECODE significantly outperforms methods that do not leverage code or only use
-code for drawing auxiliary lines or cropping. Our work demonstrates that
-grounding visual perception in executable code provides a new path toward more
-accurate and verifiable multimodal reasoning.
+    <id>http://arxiv.org/abs/2510.14943v1</id>
+    <updated>2025-10-16T17:55:11Z</updated>
+    <published>2025-10-16T17:55:11Z</published>
+    <title>LaSeR: Reinforcement Learning with Last-Token Self-Rewarding</title>
+    <summary>  Reinforcement Learning with Verifiable Rewards (RLVR) has recently emerged as
+a core paradigm for enhancing the reasoning capabilities of Large Language
+Models (LLMs). To address the lack of verification signals at test time, prior
+studies incorporate the training of model's self-verification capability into
+the standard RLVR process, thereby unifying reasoning and verification
+capabilities within a single LLM. However, previous practice requires the LLM
+to sequentially generate solutions and self-verifications using two separate
+prompt templates, which significantly reduces efficiency. In this work, we
+theoretically reveal that the closed-form solution to the RL objective of
+self-verification can be reduced to a remarkably simple form: the true
+reasoning reward of a solution is equal to its last-token self-rewarding score,
+which is computed as the difference between the policy model's next-token
+log-probability assigned to any pre-specified token at the solution's last
+token and a pre-calculated constant, scaled by the KL coefficient. Based on
+this insight, we propose LaSeR (Reinforcement Learning with Last-Token
+Self-Rewarding), an algorithm that simply augments the original RLVR loss with
+a MSE loss that aligns the last-token self-rewarding scores with verifier-based
+reasoning rewards, jointly optimizing the reasoning and self-rewarding
+capabilities of LLMs. The optimized self-rewarding scores can be utilized in
+both training and testing to enhance model performance. Notably, our algorithm
+derives these scores from the predicted next-token probability distribution of
+the last token immediately after generation, incurring only the minimal extra
+cost of one additional token inference. Experiments show that our method not
+only improves the model's reasoning performance but also equips it with
+remarkable self-rewarding capability, thereby boosting its inference-time
+scaling performance.
 </summary>
     <author>
-      <name>Junhong Shen</name>
+      <name>Wenkai Yang</name>
     </author>
     <author>
-      <name>Mu Cai</name>
+      <name>Weijie Liu</name>
     </author>
     <author>
-      <name>Bo Hu</name>
+      <name>Ruobing Xie</name>
     </author>
     <author>
-      <name>Ameet Talwalkar</name>
+      <name>Yiju Guo</name>
     </author>
     <author>
-      <name>David A Ross</name>
+      <name>Lulu Wu</name>
     </author>
     <author>
-      <name>Cordelia Schmid</name>
+      <name>Saiyong Yang</name>
     </author>
     <author>
-      <name>Alireza Fathi</name>
+      <name>Yankai Lin</name>
     </author>
-    <link href="http://arxiv.org/abs/2510.13756v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13756v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Work in progress. Github repo: https://github.com/RUCBM/LaSeR</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14943v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14943v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.13738v1</id>
-    <updated>2025-10-15T16:45:59Z</updated>
-    <published>2025-10-15T16:45:59Z</published>
-    <title>HyMiRec: A Hybrid Multi-interest Learning Framework for LLM-based
-  Sequential Recommendation</title>
-    <summary>  Large language models (LLMs) have recently demonstrated strong potential for
-sequential recommendation. However, current LLM-based approaches face critical
-limitations in modeling users' long-term and diverse interests. First, due to
-inference latency and feature fetching bandwidth constraints, existing methods
-typically truncate user behavior sequences to include only the most recent
-interactions, resulting in the loss of valuable long-range preference signals.
-Second, most current methods rely on next-item prediction with a single
-predicted embedding, overlooking the multifaceted nature of user interests and
-limiting recommendation diversity. To address these challenges, we propose
-HyMiRec, a hybrid multi-interest sequential recommendation framework, which
-leverages a lightweight recommender to extracts coarse interest embeddings from
-long user sequences and an LLM-based recommender to captures refined interest
-embeddings. To alleviate the overhead of fetching features, we introduce a
-residual codebook based on cosine similarity, enabling efficient compression
-and reuse of user history embeddings. To model the diverse preferences of
-users, we design a disentangled multi-interest learning module, which leverages
-multiple interest queries to learn disentangles multiple interest signals
-adaptively, allowing the model to capture different facets of user intent.
-Extensive experiments are conducted on both benchmark datasets and a collected
-industrial dataset, demonstrating our effectiveness over existing
-state-of-the-art methods. Furthermore, online A/B testing shows that HyMiRec
-brings consistent improvements in real-world recommendation systems.
+    <id>http://arxiv.org/abs/2510.14942v1</id>
+    <updated>2025-10-16T17:54:07Z</updated>
+    <published>2025-10-16T17:54:07Z</published>
+    <title>GroundedPRM: Tree-Guided and Fidelity-Aware Process Reward Modeling for
+  Step-Level Reasoning</title>
+    <summary>  Process Reward Models (PRMs) aim to improve multi-step reasoning in Large
+Language Models (LLMs) by supervising intermediate steps and identifying
+errors. However, building effective PRMs remains challenging due to the lack of
+scalable, high-quality annotations. Existing approaches rely on costly human
+labeling, LLM-based self-evaluation that is prone to hallucination, or Monte
+Carlo (MC) estimation, which infers step quality solely from rollout outcomes
+and often introduces noisy, misaligned supervision due to credit
+misattribution. These issues result in three core limitations: noisy rewards,
+low factual fidelity, and misalignment with step-level reasoning objectives. To
+address these challenges, we introduce GroundedPRM, a tree-guided and
+fidelity-aware framework for automatic process supervision. To reduce reward
+noise and enable fine-grained credit assignment, we construct structured
+reasoning paths via Monte Carlo Tree Search (MCTS). To eliminate hallucinated
+supervision, we validate each intermediate step using an external tool,
+providing execution-grounded correctness signals. To combine both step-level
+validation and global outcome assessment, we design a hybrid reward aggregation
+mechanism that fuses tool-based verification with MCTS-derived feedback.
+Finally, we format the reward signal into a rationale-enhanced, generative
+structure to promote interpretability and compatibility with instruction-tuned
+LLMs. GroundedPRM is trained on only 40K automatically labeled samples,
+amounting to just 10% of the data used by the best-performing PRM trained with
+auto-labeled supervision. Nevertheless, it achieves up to a 26% relative
+improvement in average performance on ProcessBench. When used for reward-guided
+greedy search, GroundedPRM outperforms even PRMs trained with human-labeled
+supervision, offering a scalable and verifiable path toward high-quality
+process-level reasoning.
 </summary>
     <author>
-      <name>Jingyi Zhou</name>
+      <name>Yao Zhang</name>
     </author>
     <author>
-      <name>Cheng Chen</name>
+      <name>Yu Wu</name>
     </author>
     <author>
-      <name>Kai Zuo</name>
+      <name>Haowei Zhang</name>
     </author>
     <author>
-      <name>Manjie Xu</name>
+      <name>Weiguo Li</name>
     </author>
     <author>
-      <name>Zhendong Fu</name>
+      <name>Haokun Chen</name>
     </author>
     <author>
-      <name>Yibo Chen</name>
+      <name>Jingpei Wu</name>
     </author>
     <author>
-      <name>Xu Tang</name>
+      <name>Guohao Li</name>
     </author>
     <author>
-      <name>Yao Hu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.13738v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13738v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.13724v1</id>
-    <updated>2025-10-15T16:28:34Z</updated>
-    <published>2025-10-15T16:28:34Z</published>
-    <title>FIRST: Federated Inference Resource Scheduling Toolkit for Scientific AI
-  Model Access</title>
-    <summary>  We present the Federated Inference Resource Scheduling Toolkit (FIRST), a
-framework enabling Inference-as-a-Service across distributed High-Performance
-Computing (HPC) clusters. FIRST provides cloud-like access to diverse AI
-models, like Large Language Models (LLMs), on existing HPC infrastructure.
-Leveraging Globus Auth and Globus Compute, the system allows researchers to run
-parallel inference workloads via an OpenAI-compliant API on private, secure
-environments. This cluster-agnostic API allows requests to be distributed
-across federated clusters, targeting numerous hosted models. FIRST supports
-multiple inference backends (e.g., vLLM), auto-scales resources, maintains
-"hot" nodes for low-latency execution, and offers both high-throughput batch
-and interactive modes. The framework addresses the growing demand for private,
-secure, and scalable AI inference in scientific workflows, allowing researchers
-to generate billions of tokens daily on-premises without relying on commercial
-cloud infrastructure.
-</summary>
-    <author>
-      <name>Aditya Tanikanti</name>
+      <name>Zhen Han</name>
     </author>
     <author>
-      <name>Benoit Côté</name>
+      <name>Volker Tresp</name>
     </author>
-    <author>
-      <name>Yanfei Guo</name>
-    </author>
-    <author>
-      <name>Le Chen</name>
-    </author>
-    <author>
-      <name>Nickolaus Saint</name>
-    </author>
-    <author>
-      <name>Ryan Chard</name>
-    </author>
-    <author>
-      <name>Ken Raffenetti</name>
-    </author>
-    <author>
-      <name>Rajeev Thakur</name>
-    </author>
-    <author>
-      <name>Thomas Uram</name>
-    </author>
-    <author>
-      <name>Ian Foster</name>
-    </author>
-    <author>
-      <name>Michael E. Papka</name>
-    </author>
-    <author>
-      <name>Venkatram Vishwanath</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.13724v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13724v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.14942v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.14942v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.13714v1</id>
-    <updated>2025-10-15T16:13:44Z</updated>
-    <published>2025-10-15T16:13:44Z</published>
-    <title>Dedelayed: Deleting remote inference delay via on-device correction</title>
-    <summary>  Remote inference allows lightweight devices to leverage powerful cloud
-models. However, communication network latency makes predictions stale and
-unsuitable for real-time tasks. To address this, we introduce Dedelayed, a
-delay-corrective method that mitigates arbitrary remote inference delays,
-allowing the local device to produce low-latency outputs in real time. Our
-method employs a lightweight local model that processes the current frame and
-fuses in features that a heavyweight remote model computes from past frames. On
-video from the BDD100K driving dataset, Dedelayed improves semantic
-segmentation accuracy over the stronger of the local-only and remote-only
-baselines across all realistic communication network delays beyond 33 ms.
-Without incurring additional delay, it improves accuracy by 6.4 mIoU compared
-to fully local inference and 9.8 mIoU compared to remote inference, for a
-round-trip delay of 100 ms. The advantage grows under longer delays and
-higher-motion scenes, as delay-mitigated split inference sustains accuracy more
-effectively, providing clear advantages for real-time tasks that must remain
-aligned with the current world state.
-</summary>
-    <author>
-      <name>Dan Jacobellis</name>
-    </author>
-    <author>
-      <name>Mateen Ulhaq</name>
-    </author>
-    <author>
-      <name>Fabien Racapé</name>
-    </author>
-    <author>
-      <name>Hyomin Choi</name>
-    </author>
-    <author>
-      <name>Neeraja J. Yadwadkar</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.13714v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.13714v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
