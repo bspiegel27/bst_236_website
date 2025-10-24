@@ -1,864 +1,550 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-23T00:54:51Z -->
+<!-- Last updated: 2025-10-24T00:51:36Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-22T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">124292</opensearch:totalResults>
+  <updated>2025-10-23T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">124382</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.18873v1</id>
-    <updated>2025-10-21T17:59:36Z</updated>
-    <published>2025-10-21T17:59:36Z</published>
-    <title>DSI-Bench: A Benchmark for Dynamic Spatial Intelligence</title>
-    <summary>  Reasoning about dynamic spatial relationships is essential, as both observers
-and objects often move simultaneously. Although vision-language models (VLMs)
-and visual expertise models excel in 2D tasks and static scenarios, their
-ability to fully understand dynamic 3D scenarios remains limited. We introduce
-Dynamic Spatial Intelligence and propose DSI-Bench, a benchmark with nearly
-1,000 dynamic videos and over 1,700 manually annotated questions covering nine
-decoupled motion patterns of observers and objects. Spatially and temporally
-symmetric designs reduce biases and enable systematic evaluation of models'
-reasoning about self-motion and object motion. Our evaluation of 14 VLMs and
-expert models reveals key limitations: models often conflate observer and
-object motion, exhibit semantic biases, and fail to accurately infer relative
-relationships in dynamic scenarios. Our DSI-Bench provides valuable findings
-and insights about the future development of general and expertise models with
-dynamic spatial intelligence.
+    <id>http://arxiv.org/abs/2510.19811v1</id>
+    <updated>2025-10-22T17:48:23Z</updated>
+    <published>2025-10-22T17:48:23Z</published>
+    <title>Hubble: a Model Suite to Advance the Study of LLM Memorization</title>
+    <summary>  We present Hubble, a suite of fully open-source large language models (LLMs)
+for the scientific study of LLM memorization. Hubble models come in standard
+and perturbed variants: standard models are pretrained on a large English
+corpus, and perturbed models are trained in the same way but with controlled
+insertion of text (e.g., book passages, biographies, and test sets) designed to
+emulate key memorization risks. Our core release includes 8 models -- standard
+and perturbed models with 1B or 8B parameters, pretrained on 100B or 500B
+tokens -- establishing that memorization risks are determined by the frequency
+of sensitive data relative to size of the training corpus (i.e., a password
+appearing once in a smaller corpus is memorized better than the same password
+in a larger corpus). Our release also includes 6 perturbed models with text
+inserted at different pretraining phases, showing that sensitive data without
+continued exposure can be forgotten. These findings suggest two best practices
+for addressing memorization risks: to dilute sensitive data by increasing the
+size of the training corpus, and to order sensitive data to appear earlier in
+training. Beyond these general empirical findings, Hubble enables a broad range
+of memorization research; for example, analyzing the biographies reveals how
+readily different types of private information are memorized. We also
+demonstrate that the randomized insertions in Hubble make it an ideal testbed
+for membership inference and machine unlearning, and invite the community to
+further explore, benchmark, and build upon our work.
 </summary>
     <author>
-      <name>Ziang Zhang</name>
+      <name>Johnny Tian-Zheng Wei</name>
     </author>
     <author>
-      <name>Zehan Wang</name>
+      <name>Ameya Godbole</name>
     </author>
     <author>
-      <name>Guanghao Zhang</name>
+      <name>Mohammad Aflah Khan</name>
     </author>
     <author>
-      <name>Weilong Dai</name>
+      <name>Ryan Wang</name>
     </author>
     <author>
-      <name>Yan Xia</name>
+      <name>Xiaoyuan Zhu</name>
     </author>
     <author>
-      <name>Ziang Yan</name>
+      <name>James Flemings</name>
     </author>
     <author>
-      <name>Minjie Hong</name>
+      <name>Nitya Kashyap</name>
     </author>
     <author>
-      <name>Zhou Zhao</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.18873v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18873v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18871v1</id>
-    <updated>2025-10-21T17:59:05Z</updated>
-    <published>2025-10-21T17:59:05Z</published>
-    <title>How Do LLMs Use Their Depth?</title>
-    <summary>  Growing evidence suggests that large language models do not use their depth
-uniformly, yet we still lack a fine-grained understanding of their layer-wise
-prediction dynamics. In this paper, we trace the intermediate representations
-of several open-weight models during inference and reveal a structured and
-nuanced use of depth. Specifically, we propose a "Guess-then-Refine" framework
-that explains how LLMs internally structure their computations to make
-predictions. We first show that the top-ranked predictions in early LLM layers
-are composed primarily of high-frequency tokens, which act as statistical
-guesses proposed by the model early on due to the lack of appropriate
-contextual information. As contextual information develops deeper into the
-model, these initial guesses get refined into contextually appropriate tokens.
-Even high-frequency token predictions from early layers get refined &gt;70% of the
-time, indicating that correct token prediction is not "one-and-done". We then
-go beyond frequency-based prediction to examine the dynamic usage of layer
-depth across three case studies. (i) Part-of-speech analysis shows that
-function words are, on average, the earliest to be predicted correctly. (ii)
-Fact recall task analysis shows that, in a multi-token answer, the first token
-requires more computational depth than the rest. (iii) Multiple-choice task
-analysis shows that the model identifies the format of the response within the
-first half of the layers, but finalizes its response only toward the end.
-Together, our results provide a detailed view of depth usage in LLMs, shedding
-light on the layer-by-layer computations that underlie successful predictions
-and providing insights for future works to improve computational efficiency in
-transformer-based models.
-</summary>
-    <author>
-      <name>Akshat Gupta</name>
+      <name>Krishna P. Gummadi</name>
     </author>
     <author>
-      <name>Jay Yeung</name>
+      <name>Willie Neiswanger</name>
     </author>
     <author>
-      <name>Gopala Anumanchipalli</name>
+      <name>Robin Jia</name>
     </author>
-    <author>
-      <name>Anna Ivanova</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.18871v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18871v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.19811v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19811v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18870v1</id>
-    <updated>2025-10-21T17:59:02Z</updated>
-    <published>2025-10-21T17:59:02Z</published>
-    <title>Triangle Multiplication Is All You Need For Biomolecular Structure
-  Representations</title>
-    <summary>  AlphaFold has transformed protein structure prediction, but emerging
-applications such as virtual ligand screening, proteome-wide folding, and de
-novo binder design demand predictions at a massive scale, where runtime and
-memory costs become prohibitive. A major bottleneck lies in the Pairformer
-backbone of AlphaFold3-style models, which relies on computationally expensive
-triangular primitives-especially triangle attention-for pairwise reasoning. We
-introduce Pairmixer, a streamlined alternative that eliminates triangle
-attention while preserving higher-order geometric reasoning capabilities that
-are critical for structure prediction. Pairmixer substantially improves
-computational efficiency, matching state-of-the-art structure predictors across
-folding and docking benchmarks, delivering up to 4x faster inference on long
-sequences while reducing training cost by 34%. Its efficiency alleviates the
-computational burden of downstream applications such as modeling large protein
-complexes, high-throughput ligand and binder screening, and hallucination-based
-design. Within BoltzDesign, for example, Pairmixer delivers over 2x faster
-sampling and scales to sequences ~30% longer than the memory limits of
-Pairformer.
-</summary>
-    <author>
-      <name>Jeffrey Ouyang-Zhang</name>
-    </author>
-    <author>
-      <name>Pranav Murugan</name>
-    </author>
-    <author>
-      <name>Daniel J. Diaz</name>
-    </author>
-    <author>
-      <name>Gianluca Scarpellini</name>
-    </author>
-    <author>
-      <name>Richard Strong Bowen</name>
-    </author>
-    <author>
-      <name>Nate Gruver</name>
-    </author>
-    <author>
-      <name>Adam Klivans</name>
-    </author>
-    <author>
-      <name>Philipp Krähenbühl</name>
-    </author>
-    <author>
-      <name>Aleksandra Faust</name>
-    </author>
-    <author>
-      <name>Maruan Al-Shedivat</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Preprint</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.18870v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18870v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18867v1</id>
-    <updated>2025-10-21T17:58:21Z</updated>
-    <published>2025-10-21T17:58:21Z</published>
-    <title>Reexamining Evidence of a Pair-Instability Mass Gap in the Binary Black
-  Hole Population</title>
-    <summary>  The fourth gravitational wave transient catalog~(GWTC-4) has enabled
-empirical probes of the theorized pair-instability gap in the higher end of the
-binary black hole~(BBH) mass-spectrum. In this letter, using flexibly
-parametrized models, we show that at present there is no evidence of a sharp
-drop-off in the spectrum of black hole masses near $~40-50M_{\odot}$. We
-simultaneously characterize the transition in the distribution of BBH
-mass-ratios, effective aligned and effective precessing spins using our
-flexible models. From the transitions in our inferred spin and mass-ratio
-distributions, we find that the high-mass broad-spin sub-population has a
-significant fraction~($52^{+18}_{-23}\%$) of systems with mass ratios in the
-range $0.6-1$. This suggests that alternatives to the hypothesis of 2G+1G
-hierarchical systems dominating BBH formation above $\sim 40-50 M_{\odot}$ are
-more consistent with the GWTC-4 detection sample. By comparing with the
-predictions of star cluster simulations, we further show that contributions
-from (2G+2G) systems are not abundant enough to alleviate this discrepancy. We
-also demonstrate the effects of strong model assumptions on this inference,
-which can lead to biased astrophysical interpretation from restricted priors.
-We note that our results do not exclude that a high-mass gap may be identified
-as our sample size increases. We constrain the lower bound on the location of a
-possible PISN cutoff still allowed within measurement uncertainties to be
-$(57^{+17}_{-10}M_{\odot})$ and discuss its implications on the S factor of
-$^{12}\mathrm{C}(\alpha, \gamma)^{16}O$ at 300 kev.
-</summary>
-    <author>
-      <name>Anarya Ray</name>
-    </author>
-    <author>
-      <name>Vicky Kalogera</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.18867v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18867v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18866v1</id>
-    <updated>2025-10-21T17:58:17Z</updated>
-    <published>2025-10-21T17:58:17Z</published>
-    <title>LightMem: Lightweight and Efficient Memory-Augmented Generation</title>
-    <summary>  Despite their remarkable capabilities, Large Language Models (LLMs) struggle
-to effectively leverage historical interaction information in dynamic and
-complex environments. Memory systems enable LLMs to move beyond stateless
-interactions by introducing persistent information storage, retrieval, and
-utilization mechanisms. However, existing memory systems often introduce
-substantial time and computational overhead. To this end, we introduce a new
-memory system called LightMem, which strikes a balance between the performance
-and efficiency of memory systems. Inspired by the Atkinson-Shiffrin model of
-human memory, LightMem organizes memory into three complementary stages. First,
-cognition-inspired sensory memory rapidly filters irrelevant information
-through lightweight compression and groups information according to their
-topics. Next, topic-aware short-term memory consolidates these topic-based
-groups, organizing and summarizing content for more structured access. Finally,
-long-term memory with sleep-time update employs an offline procedure that
-decouples consolidation from online inference. Experiments on LongMemEval with
-GPT and Qwen backbones show that LightMem outperforms strong baselines in
-accuracy (up to 10.9% gains) while reducing token usage by up to 117x, API
-calls by up to 159x, and runtime by over 12x. The code is available at
-https://github.com/zjunlp/LightMem.
-</summary>
-    <author>
-      <name>Jizhan Fang</name>
-    </author>
-    <author>
-      <name>Xinle Deng</name>
-    </author>
-    <author>
-      <name>Haoming Xu</name>
-    </author>
-    <author>
-      <name>Ziyan Jiang</name>
-    </author>
-    <author>
-      <name>Yuqi Tang</name>
-    </author>
-    <author>
-      <name>Ziwen Xu</name>
-    </author>
-    <author>
-      <name>Shumin Deng</name>
-    </author>
-    <author>
-      <name>Yunzhi Yao</name>
-    </author>
-    <author>
-      <name>Mengru Wang</name>
-    </author>
-    <author>
-      <name>Shuofei Qiao</name>
-    </author>
-    <author>
-      <name>Huajun Chen</name>
-    </author>
-    <author>
-      <name>Ningyu Zhang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Work in progress</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.18866v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18866v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.18863v1</id>
-    <updated>2025-10-21T17:55:39Z</updated>
-    <published>2025-10-21T17:55:39Z</published>
-    <title>EffiReasonTrans: RL-Optimized Reasoning for Code Translation</title>
-    <summary>  Code translation is a crucial task in software development and maintenance.
-While recent advancements in large language models (LLMs) have improved
-automated code translation accuracy, these gains often come at the cost of
-increased inference latency, hindering real-world development workflows that
-involve human-in-the-loop inspection. To address this trade-off, we propose
-EffiReasonTrans, a training framework designed to improve translation accuracy
-while balancing inference latency. We first construct a high-quality
-reasoning-augmented dataset by prompting a stronger language model,
-DeepSeek-R1, to generate intermediate reasoning and target translations. Each
-(source code, reasoning, target code) triplet undergoes automated syntax and
-functionality checks to ensure reliability. Based on this dataset, we employ a
-two-stage training strategy: supervised fine-tuning on reasoning-augmented
-samples, followed by reinforcement learning to further enhance accuracy and
-balance inference latency. We evaluate EffiReasonTrans on six translation
-pairs. Experimental results show that it consistently improves translation
-accuracy (up to +49.2% CA and +27.8% CodeBLEU compared to the base model) while
-reducing the number of generated tokens (up to -19.3%) and lowering inference
-latency in most cases (up to -29.0%). Ablation studies further confirm the
-complementary benefits of the two-stage training framework. Additionally,
-EffiReasonTrans demonstrates improved translation accuracy when integrated into
-agent-based frameworks. Our code and data are available at
-https://github.com/DeepSoftwareAnalytics/EffiReasonTrans.
+    <id>http://arxiv.org/abs/2510.19798v1</id>
+    <updated>2025-10-22T17:34:26Z</updated>
+    <published>2025-10-22T17:34:26Z</published>
+    <title>Detecting gravitational lensing by matter currents</title>
+    <summary>  We explore the observational prospects for detecting gravitational lensing
+induced by cosmological matter currents, a relativistic correction to the
+standard scalar lensing effect arising from the motion of matter. We propose to
+isolate this contribution by cross-correlating the weak-lensing convergence
+field with a reconstructed cosmic momentum field inferred from galaxy surveys.
+Using numerical simulations, we demonstrate that this reconstructed momentum
+field is uncorrelated with the scalar lensing signal, enabling a clean
+separation of the gravitomagnetic component. We then forecast the detectability
+of this signal for upcoming wide-field galaxy and weak-lensing surveys, showing
+that a statistically significant detection may be achievable under realistic
+observational conditions. Such a measurement would provide the first direct
+probe of the large-scale cosmic momentum field, offering a novel test of
+general relativity and Lorentz invariance on cosmological scales.
 </summary>
     <author>
-      <name>Yanlin Wang</name>
+      <name>C. Murray</name>
     </author>
     <author>
-      <name>Rongyi Ou</name>
+      <name>R. Kou</name>
     </author>
     <author>
-      <name>Yanli Wang</name>
+      <name>J. G. Bartlett</name>
     </author>
-    <author>
-      <name>Mingwei Liu</name>
-    </author>
-    <author>
-      <name>Jiachi Chen</name>
-    </author>
-    <author>
-      <name>Ensheng Shi</name>
-    </author>
-    <author>
-      <name>Xilin Liu</name>
-    </author>
-    <author>
-      <name>Yuchi Ma</name>
-    </author>
-    <author>
-      <name>Zibin Zheng</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.18863v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18863v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.19798v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19798v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.18855v1</id>
-    <updated>2025-10-21T17:46:14Z</updated>
-    <published>2025-10-21T17:46:14Z</published>
-    <title>Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale
-  Thinking Model</title>
-    <summary>  We present Ring-1T, the first open-source, state-of-the-art thinking model
-with a trillion-scale parameter. It features 1 trillion total parameters and
-activates approximately 50 billion per token. Training such models at a
-trillion-parameter scale introduces unprecedented challenges, including
-train-inference misalignment, inefficiencies in rollout processing, and
-bottlenecks in the RL system. To address these, we pioneer three interconnected
-innovations: (1) IcePop stabilizes RL training via token-level discrepancy
-masking and clipping, resolving instability from training-inference mismatches;
-(2) C3PO++ improves resource utilization for long rollouts under a token budget
-by dynamically partitioning them, thereby obtaining high time efficiency; and
-(3) ASystem, a high-performance RL framework designed to overcome the systemic
-bottlenecks that impede trillion-parameter model training. Ring-1T delivers
-breakthrough results across critical benchmarks: 93.4 on AIME-2025, 86.72 on
-HMMT-2025, 2088 on CodeForces, and 55.94 on ARC-AGI-v1. Notably, it attains a
-silver medal-level result on the IMO-2025, underscoring its exceptional
-reasoning capabilities. By releasing the complete 1T parameter MoE model to the
-community, we provide the research community with direct access to cutting-edge
-reasoning capabilities. This contribution marks a significant milestone in
-democratizing large-scale reasoning intelligence and establishes a new baseline
-for open-source model performance.
+    <id>http://arxiv.org/abs/2510.19796v1</id>
+    <updated>2025-10-22T17:30:39Z</updated>
+    <published>2025-10-22T17:30:39Z</published>
+    <title>Blackbox Model Provenance via Palimpsestic Membership Inference</title>
+    <summary>  Suppose Alice trains an open-weight language model and Bob uses a blackbox
+derivative of Alice's model to produce text. Can Alice prove that Bob is using
+her model, either by querying Bob's derivative model (query setting) or from
+the text alone (observational setting)? We formulate this question as an
+independence testing problem--in which the null hypothesis is that Bob's model
+or text is independent of Alice's randomized training run--and investigate it
+through the lens of palimpsestic memorization in language models: models are
+more likely to memorize data seen later in training, so we can test whether Bob
+is using Alice's model using test statistics that capture correlation between
+Bob's model or text and the ordering of training examples in Alice's training
+run. If Alice has randomly shuffled her training data, then any significant
+correlation amounts to exactly quantifiable statistical evidence against the
+null hypothesis, regardless of the composition of Alice's training data. In the
+query setting, we directly estimate (via prompting) the likelihood Bob's model
+gives to Alice's training examples and order; we correlate the likelihoods of
+over 40 fine-tunes of various Pythia and OLMo base models ranging from 1B to
+12B parameters with the base model's training data order, achieving a p-value
+on the order of at most 1e-8 in all but six cases. In the observational
+setting, we try two approaches based on estimating 1) the likelihood of Bob's
+text overlapping with spans of Alice's training examples and 2) the likelihood
+of Bob's text with respect to different versions of Alice's model we obtain by
+repeating the last phase (e.g., 1%) of her training run on reshuffled data. The
+second approach can reliably distinguish Bob's text from as little as a few
+hundred tokens; the first does not involve any retraining but requires many
+more tokens (several hundred thousand) to achieve high power.
 </summary>
     <author>
-      <name> Ling Team</name>
+      <name>Rohith Kuditipudi</name>
     </author>
     <author>
-      <name>Anqi Shen</name>
+      <name>Jing Huang</name>
     </author>
     <author>
-      <name>Baihui Li</name>
+      <name>Sally Zhu</name>
     </author>
     <author>
-      <name>Bin Hu</name>
+      <name>Diyi Yang</name>
     </author>
     <author>
-      <name>Bin Jing</name>
+      <name>Christopher Potts</name>
     </author>
     <author>
-      <name>Cai Chen</name>
+      <name>Percy Liang</name>
     </author>
-    <author>
-      <name>Chao Huang</name>
-    </author>
-    <author>
-      <name>Chao Zhang</name>
-    </author>
-    <author>
-      <name>Chaokun Yang</name>
-    </author>
-    <author>
-      <name>Cheng Lin</name>
-    </author>
-    <author>
-      <name>Chengyao Wen</name>
-    </author>
-    <author>
-      <name>Congqi Li</name>
-    </author>
-    <author>
-      <name>Deng Zhao</name>
-    </author>
-    <author>
-      <name>Dingbo Yuan</name>
-    </author>
-    <author>
-      <name>Donghai You</name>
-    </author>
-    <author>
-      <name>Fagui Mao</name>
-    </author>
-    <author>
-      <name>Fanzhuang Meng</name>
-    </author>
-    <author>
-      <name>Feng Xu</name>
-    </author>
-    <author>
-      <name>Guojie Li</name>
-    </author>
-    <author>
-      <name>Guowei Wang</name>
-    </author>
-    <author>
-      <name>Hao Dai</name>
-    </author>
-    <author>
-      <name>Haonan Zheng</name>
-    </author>
-    <author>
-      <name>Hong Liu</name>
-    </author>
-    <author>
-      <name>Jia Guo</name>
-    </author>
-    <author>
-      <name>Jiaming Liu</name>
-    </author>
-    <author>
-      <name>Jian Liu</name>
-    </author>
-    <author>
-      <name>Jianhao Fu</name>
-    </author>
-    <author>
-      <name>Jiannan Shi</name>
-    </author>
-    <author>
-      <name>Jianwen Wang</name>
-    </author>
-    <author>
-      <name>Jianxin Lai</name>
-    </author>
-    <author>
-      <name>Jin Yang</name>
-    </author>
-    <author>
-      <name>Jun Mei</name>
-    </author>
-    <author>
-      <name>Jun Zhou</name>
-    </author>
-    <author>
-      <name>Junbo Zhao</name>
-    </author>
-    <author>
-      <name>Junping Zhao</name>
-    </author>
-    <author>
-      <name>Kuan Xu</name>
-    </author>
-    <author>
-      <name>Le Su</name>
-    </author>
-    <author>
-      <name>Lei Chen</name>
-    </author>
-    <author>
-      <name>Li Tang</name>
-    </author>
-    <author>
-      <name>Liang Jiang</name>
-    </author>
-    <author>
-      <name>Liangcheng Fu</name>
-    </author>
-    <author>
-      <name>Lianhao Xu</name>
-    </author>
-    <author>
-      <name>Linfeng Shi</name>
-    </author>
-    <author>
-      <name>Lisha Liao</name>
-    </author>
-    <author>
-      <name>Longfei Zheng</name>
-    </author>
-    <author>
-      <name>Meng Li</name>
-    </author>
-    <author>
-      <name>Mingchun Chen</name>
-    </author>
-    <author>
-      <name>Qi Zuo</name>
-    </author>
-    <author>
-      <name>Qiang Cheng</name>
-    </author>
-    <author>
-      <name>Qianggang Cao</name>
-    </author>
-    <author>
-      <name>Qitao Shi</name>
-    </author>
-    <author>
-      <name>Quanrui Guo</name>
-    </author>
-    <author>
-      <name>Senlin Zhu</name>
-    </author>
-    <author>
-      <name>Shaofei Wang</name>
-    </author>
-    <author>
-      <name>Shaomian Zheng</name>
-    </author>
-    <author>
-      <name>Shuaicheng Li</name>
-    </author>
-    <author>
-      <name>Shuwei Gu</name>
-    </author>
-    <author>
-      <name>Siba Chen</name>
-    </author>
-    <author>
-      <name>Tao Wu</name>
-    </author>
-    <author>
-      <name>Tao Zhang</name>
-    </author>
-    <author>
-      <name>Tianyu Zhang</name>
-    </author>
-    <author>
-      <name>Tianyu Zhou</name>
-    </author>
-    <author>
-      <name>Tiwei Bie</name>
-    </author>
-    <author>
-      <name>Tongkai Yang</name>
-    </author>
-    <author>
-      <name>Wang Hong</name>
-    </author>
-    <author>
-      <name>Wang Ren</name>
-    </author>
-    <author>
-      <name>Weihua Chen</name>
-    </author>
-    <author>
-      <name>Wenbo Yu</name>
-    </author>
-    <author>
-      <name>Wengang Zheng</name>
-    </author>
-    <author>
-      <name>Xiangchun Wang</name>
-    </author>
-    <author>
-      <name>Xiaodong Yan</name>
-    </author>
-    <author>
-      <name>Xiaopei Wan</name>
-    </author>
-    <author>
-      <name>Xin Zhao</name>
-    </author>
-    <author>
-      <name>Xinyu Kong</name>
-    </author>
-    <author>
-      <name>Xinyu Tang</name>
-    </author>
-    <author>
-      <name>Xudong Han</name>
-    </author>
-    <author>
-      <name>Xudong Wang</name>
-    </author>
-    <author>
-      <name>Xuemin Yang</name>
-    </author>
-    <author>
-      <name>Xueyu Hu</name>
-    </author>
-    <author>
-      <name>Yalin Zhang</name>
-    </author>
-    <author>
-      <name>Yan Sun</name>
-    </author>
-    <author>
-      <name>Yicheng Shan</name>
-    </author>
-    <author>
-      <name>Yilong Wang</name>
-    </author>
-    <author>
-      <name>Yingying Xu</name>
-    </author>
-    <author>
-      <name>Yongkang Liu</name>
-    </author>
-    <author>
-      <name>Yongzhen Guo</name>
-    </author>
-    <author>
-      <name>Yuanyuan Wang</name>
-    </author>
-    <author>
-      <name>Yuchen Yan</name>
-    </author>
-    <author>
-      <name>Yuefan Wang</name>
-    </author>
-    <author>
-      <name>Yuhong Guo</name>
-    </author>
-    <author>
-      <name>Zehuan Li</name>
-    </author>
-    <author>
-      <name>Zhankai Xu</name>
-    </author>
-    <author>
-      <name>Zhe Li</name>
-    </author>
-    <author>
-      <name>Zhenduo Zhang</name>
-    </author>
-    <author>
-      <name>Zhengke Gui</name>
-    </author>
-    <author>
-      <name>Zhenxuan Pan</name>
-    </author>
-    <author>
-      <name>Zhenyu Huang</name>
-    </author>
-    <author>
-      <name>Zhenzhong Lan</name>
-    </author>
-    <author>
-      <name>Zhiqiang Ding</name>
-    </author>
-    <author>
-      <name>Zhiqiang Zhang</name>
-    </author>
-    <author>
-      <name>Zhixun Li</name>
-    </author>
-    <author>
-      <name>Zhizhen Liu</name>
-    </author>
-    <author>
-      <name>Zihao Wang</name>
-    </author>
-    <author>
-      <name>Zujie Wen</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Technical Report</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.18855v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18855v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18854v1</id>
-    <updated>2025-10-21T17:45:13Z</updated>
-    <published>2025-10-21T17:45:13Z</published>
-    <title>AT2025ulz and S250818k: zooming in with the Hubble Space Telescope</title>
-    <summary>  AT2025ulz is an optical/near-infrared transient discovered during follow-up
-of the candidate gravitational wave (GW) event S250818k. Its young age
-($\lesssim$1 d), rapid decline and strong color evolution over the first 48 hr
-classify it as a potential kilonova candidate. In this work, we present the
-results of our observing campaign, carried out with the Gran Telescopio
-Canarias (GTC) and the Hubble Space Telescope (HST). Although the early time
-evolution of AT2025ulz resembles some aspects of a kilonova, its rapid onset
-($\sim$3 hr after the GW trigger) and luminosity (a factor of $\sim5$ brighter
-than AT2017gfo in $g$-band) are difficult to reproduce. Only a small subset of
-our kilonova models matches its multi-color light curve, and the inferred
-ejecta mass is uncomfortably large given the low chirp mass ($\lesssim\!0.87\!$
-M$_{\odot}$) of the GW candidate. HST observations place the transient within a
-nearby ($z=0.08489$) spiral galaxy with on-going star-formation and measure a
-color ($F336W-F160W\!\approx\!1.4$ mag) that is too blue to match with a
-kilonova. Our data support the classification of AT2025ulz as a supernova,
-initially undergoing a shock-cooling phase and later entering its photospheric
-phase, and spectroscopically identified via its broad absorption features.
-</summary>
-    <author>
-      <name>Yu-Han Yang</name>
-    </author>
-    <author>
-      <name>Eleonora Troja</name>
-    </author>
-    <author>
-      <name>Marko Ristić</name>
-    </author>
-    <author>
-      <name>Muskan Yadav</name>
-    </author>
-    <author>
-      <name>Massine El Kabir</name>
-    </author>
-    <author>
-      <name>Rubén Sánchez-Ramírez</name>
-    </author>
-    <author>
-      <name>Rosa L. Becerra</name>
-    </author>
-    <author>
-      <name>Chris L. Fryer</name>
-    </author>
-    <author>
-      <name>Brendan O'Connor</name>
-    </author>
-    <author>
-      <name>Simone Dichiara</name>
-    </author>
-    <author>
-      <name>Alberto J. Castro-Tirado</name>
-    </author>
-    <author>
-      <name>Camila Angulo-Valdez</name>
-    </author>
-    <author>
-      <name>Josefa Becerra González</name>
-    </author>
-    <author>
-      <name>José A. Font</name>
-    </author>
-    <author>
-      <name>Ori Fox</name>
-    </author>
-    <author>
-      <name>Lei Hu</name>
-    </author>
-    <author>
-      <name>Youdong Hu</name>
-    </author>
-    <author>
-      <name>William H. Lee</name>
-    </author>
-    <author>
-      <name>Margarita Pereyra</name>
-    </author>
-    <author>
-      <name>Alicia M. Sintes</name>
-    </author>
-    <author>
-      <name>Alan M. Watson</name>
-    </author>
-    <author>
-      <name>López Mendoza K. Océlotl C</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 5 figures, 2 tables. Submitted to ApJL</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.18854v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18854v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18843v1</id>
-    <updated>2025-10-21T17:35:33Z</updated>
-    <published>2025-10-21T17:35:33Z</published>
-    <title>Inference on Local Variable Importance Measures for Heterogeneous
-  Treatment Effects</title>
-    <summary>  We provide an inferential framework to assess variable importance for
-heterogeneous treatment effects. This assessment is especially useful in
-high-risk domains such as medicine, where decision makers hesitate to rely on
-black-box treatment recommendation algorithms. The variable importance measures
-we consider are local in that they may differ across individuals, while the
-inference is global in that it tests whether a given variable is important for
-any individual. Our approach builds on recent developments in semiparametric
-theory for function-valued parameters, and is valid even when statistical
-machine learning algorithms are employed to quantify treatment effect
-heterogeneity. We demonstrate the applicability of our method to infectious
-disease prevention strategies.
-</summary>
-    <author>
-      <name>Pawel Morzywolek</name>
-    </author>
-    <author>
-      <name>Peter B. Gilbert</name>
-    </author>
-    <author>
-      <name>Alex Luedtke</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">40 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.18843v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18843v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.18841v1</id>
-    <updated>2025-10-21T17:35:12Z</updated>
-    <published>2025-10-21T17:35:12Z</published>
-    <title>A Hybrid Enumeration Framework for Optimal Counterfactual Generation in
-  Post-Acute COVID-19 Heart Failure</title>
-    <summary>  Counterfactual inference provides a mathematical framework for reasoning
-about hypothetical outcomes under alternative interventions, bridging causal
-reasoning and predictive modeling. We present a counterfactual inference
-framework for individualized risk estimation and intervention analysis,
-illustrated through a clinical application to post-acute sequelae of COVID-19
-(PASC) among patients with pre-existing heart failure (HF). Using longitudinal
-diagnosis, laboratory, and medication data from a large health-system cohort,
-we integrate regularized predictive modeling with counterfactual search to
-identify actionable pathways to PASC-related HF hospital admissions. The
-framework combines exact enumeration with optimization-based methods, including
-the Nearest Instance Counterfactual Explanations (NICE) and Multi-Objective
-Counterfactuals (MOC) algorithms, to efficiently explore high-dimensional
-intervention spaces. Applied to more than 2700 individuals with confirmed
-SARS-CoV-2 infection and prior HF, the model achieved strong discriminative
-performance (AUROC: 0.88, 95% CI: 0.84-0.91) and generated interpretable,
-patient-specific counterfactuals that quantify how modifying comorbidity
-patterns or treatment factors could alter predicted outcomes. This work
-demonstrates how counterfactual reasoning can be formalized as an optimization
-problem over predictive functions, offering a rigorous, interpretable, and
-computationally efficient approach to personalized inference in complex
-biomedical systems.
-</summary>
-    <author>
-      <name>Jingya Cheng</name>
-    </author>
-    <author>
-      <name>Alaleh Azhir</name>
-    </author>
-    <author>
-      <name>Jiazi Tian</name>
-    </author>
-    <author>
-      <name>Hossein Estiri</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.18841v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.18841v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.19796v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19796v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19788v2</id>
+    <updated>2025-10-23T11:48:07Z</updated>
+    <published>2025-10-22T17:23:18Z</published>
+    <title>Benchmarking World-Model Learning</title>
+    <summary>  Model-learning agents should gather information to learn world models that
+support many downstream tasks and inferences, such as predicting unobserved
+states, estimating near- and far-term consequences of actions, planning action
+sequences, and detecting changes in dynamics. Current methods for learning and
+evaluating world models diverge from this goal: training and evaluation are
+anchored to next-frame prediction, and success is scored by reward maximization
+in the same environment. We propose WorldTest, a protocol to evaluate
+model-learning agents that separates reward-free interaction from a scored test
+phase in a different but related environment. WorldTest is
+open-ended$\unicode{x2014}$models should support many different tasks unknown
+ahead of time$\unicode{x2014}$and agnostic to model representation, allowing
+comparison across approaches. We instantiated WorldTest with AutumnBench, a
+suite of 43 interactive grid-world environments and 129 tasks across three
+families: masked-frame prediction, planning, and predicting changes to the
+causal dynamics. We compared 517 human participants and three frontier models
+on AutumnBench. We found that humans outperform the models, and scaling compute
+improves performance only in some environments but not others. WorldTest
+provides a novel template$\unicode{x2014}$reward-free exploration, derived
+tests, and behavior-based scoring$\unicode{x2014}$to evaluate what agents learn
+about environment dynamics, and AutumnBench exposes significant headroom in
+world-model learning.
+</summary>
+    <author>
+      <name>Archana Warrier</name>
+    </author>
+    <author>
+      <name>Dat Nguyen</name>
+    </author>
+    <author>
+      <name>Michelangelo Naim</name>
+    </author>
+    <author>
+      <name>Moksh Jain</name>
+    </author>
+    <author>
+      <name>Yichao Liang</name>
+    </author>
+    <author>
+      <name>Karen Schroeder</name>
+    </author>
+    <author>
+      <name>Cambridge Yang</name>
+    </author>
+    <author>
+      <name>Joshua B. Tenenbaum</name>
+    </author>
+    <author>
+      <name>Sebastian Vollmer</name>
+    </author>
+    <author>
+      <name>Kevin Ellis</name>
+    </author>
+    <author>
+      <name>Zenna Tavares</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">30 pages, 10 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.19788v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19788v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19784v1</id>
+    <updated>2025-10-22T17:20:12Z</updated>
+    <published>2025-10-22T17:20:12Z</published>
+    <title>Environment Inference for Learning Generalizable Dynamical System</title>
+    <summary>  Data-driven methods offer efficient and robust solutions for analyzing
+complex dynamical systems but rely on the assumption of I.I.D. data, driving
+the development of generalization techniques for handling environmental
+differences. These techniques, however, are limited by their dependence on
+environment labels, which are often unavailable during training due to data
+acquisition challenges, privacy concerns, and environmental variability,
+particularly in large public datasets and privacy-sensitive domains. In
+response, we propose DynaInfer, a novel method that infers environment
+specifications by analyzing prediction errors from fixed neural networks within
+each training round, enabling environment assignments directly from data. We
+prove our algorithm effectively solves the alternating optimization problem in
+unlabeled scenarios and validate it through extensive experiments across
+diverse dynamical systems. Results show that DynaInfer outperforms existing
+environment assignment techniques, converges rapidly to true labels, and even
+achieves superior performance when environment labels are available.
+</summary>
+    <author>
+      <name>Shixuan Liu</name>
+    </author>
+    <author>
+      <name>Yue He</name>
+    </author>
+    <author>
+      <name>Haotian Wang</name>
+    </author>
+    <author>
+      <name>Wenjing Yang</name>
+    </author>
+    <author>
+      <name>Yunfei Wang</name>
+    </author>
+    <author>
+      <name>Peng Cui</name>
+    </author>
+    <author>
+      <name>Zhong Liu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">NeurIPS 2025 Spotlight</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.19784v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19784v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19779v1</id>
+    <updated>2025-10-22T17:13:00Z</updated>
+    <published>2025-10-22T17:13:00Z</published>
+    <title>AdaSPEC: Selective Knowledge Distillation for Efficient Speculative
+  Decoders</title>
+    <summary>  Speculative Decoding (SD) accelerates large language model inference by
+employing a small draft model to generate predictions, which are then verified
+by a larger target model. The effectiveness of SD hinges on the alignment
+between these models, which is typically enhanced by Knowledge Distillation
+(KD). However, conventional KD methods aim to minimize the KL divergence
+between the draft and target models across all tokens, a goal that is
+misaligned with the true objective of SD, which is to maximize token acceptance
+rate. Therefore, draft models often struggle to fully assimilate the target
+model's knowledge due to capacity constraints, leading to suboptimal
+performance. To address this challenge, we propose AdaSPEC, a novel method that
+incorporates selective token filtering into the KD process. AdaSPEC utilizes a
+reference model to identify and filter out difficult-to-fit tokens, enabling
+the distillation of a draft model that better aligns with the target model on
+simpler tokens. This approach improves the overall token acceptance rate
+without compromising generation quality. We evaluate AdaSPEC across diverse
+tasks, including arithmetic reasoning, instruction-following, coding, and
+summarization, using model configurations of 31M/1.4B and 350M/2.7B parameters.
+Our results demonstrate that AdaSPEC consistently outperforms the
+state-of-the-art DistillSpec method, achieving higher acceptance rates across
+all tasks (up to 15\%). The code is publicly available at
+https://github.com/yuezhouhu/adaspec.
+</summary>
+    <author>
+      <name>Yuezhou Hu</name>
+    </author>
+    <author>
+      <name>Jiaxin Guo</name>
+    </author>
+    <author>
+      <name>Xinyu Feng</name>
+    </author>
+    <author>
+      <name>Tuo Zhao</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.19779v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19779v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19773v1</id>
+    <updated>2025-10-22T17:03:55Z</updated>
+    <published>2025-10-22T17:03:55Z</published>
+    <title>The Tail Tells All: Estimating Model-Level Membership Inference
+  Vulnerability Without Reference Models</title>
+    <summary>  Membership inference attacks (MIAs) have emerged as the standard tool for
+evaluating the privacy risks of AI models. However, state-of-the-art attacks
+require training numerous, often computationally expensive, reference models,
+limiting their practicality. We present a novel approach for estimating
+model-level vulnerability, the TPR at low FPR, to membership inference attacks
+without requiring reference models. Empirical analysis shows loss distributions
+to be asymmetric and heavy-tailed and suggests that most points at risk from
+MIAs have moved from the tail (high-loss region) to the head (low-loss region)
+of the distribution after training. We leverage this insight to propose a
+method to estimate model-level vulnerability from the training and testing
+distribution alone: using the absence of outliers from the high-loss region as
+a predictor of the risk. We evaluate our method, the TNR of a simple loss
+attack, across a wide range of architectures and datasets and show it to
+accurately estimate model-level vulnerability to the SOTA MIA attack (LiRA). We
+also show our method to outperform both low-cost (few reference models) attacks
+such as RMIA and other measures of distribution difference. We finally evaluate
+the use of non-linear functions to evaluate risk and show the approach to be
+promising to evaluate the risk in large-language models.
+</summary>
+    <author>
+      <name>Euodia Dodd</name>
+    </author>
+    <author>
+      <name>Nataša Krčo</name>
+    </author>
+    <author>
+      <name>Igor Shilov</name>
+    </author>
+    <author>
+      <name>Yves-Alexandre de Montjoye</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.19773v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19773v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19767v1</id>
+    <updated>2025-10-22T16:56:01Z</updated>
+    <published>2025-10-22T16:56:01Z</published>
+    <title>SmartSwitch: Advancing LLM Reasoning by Overcoming Underthinking via
+  Promoting Deeper Thought Exploration</title>
+    <summary>  The long chain-of-thought (LongCoT) capability is central to the recent
+breakthroughs achieved by large language models in complex reasoning tasks.
+However, the accompanying issue of ''underthinking'', where models exhibit
+shallow reasoning by frequently switching thoughts without sufficient
+exploration, limits both performance and token efficiency. To address this
+problem, we propose a simple yet effective reasoning strategy: the SmartSwitch
+inference framework. This framework can be easily integrated into any large
+language model as a plug-and-play solution, continuously monitoring the model's
+reasoning process to detect underthinking and guide it toward deeper
+exploration of promising but overlooked thoughts. Specifically, the perception
+module identifies points where thoughts switch and evaluates the potential of
+the preceding thought using an off-the-shelf process reward model (PRM). If a
+high-potential thought is found to be prematurely abandoned, the intervention
+module interrupts the ongoing inference, backtracks to the point before the
+switch, and inserts a "deepening prompt" to encourage further exploration along
+that promising path. Extensive experiments on challenging mathematical
+reasoning benchmarks demonstrate that our method significantly enhances the
+performance of various large language models of different sizes.
+</summary>
+    <author>
+      <name>Xichen Zhang</name>
+    </author>
+    <author>
+      <name>Sitong Wu</name>
+    </author>
+    <author>
+      <name>Haoru Tan</name>
+    </author>
+    <author>
+      <name>Shaozuo Yu</name>
+    </author>
+    <author>
+      <name>Yinghao Zhu</name>
+    </author>
+    <author>
+      <name>Ziyi He</name>
+    </author>
+    <author>
+      <name>Jiaya Jia</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code: https://github.com/dvlab-research/SmartSwitch</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.19767v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19767v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19764v1</id>
+    <updated>2025-10-22T16:50:00Z</updated>
+    <published>2025-10-22T16:50:00Z</published>
+    <title>A flexible framework for structural plasticity in GPU-accelerated sparse
+  spiking neural networks</title>
+    <summary>  The majority of research in both training Artificial Neural Networks (ANNs)
+and modeling learning in biological brains focuses on synaptic plasticity,
+where learning equates to changing the strength of existing connections.
+However, in biological brains, structural plasticity - where new connections
+are created and others removed - is also vital, not only for effective learning
+but also for recovery from damage and optimal resource usage. Inspired by
+structural plasticity, pruning is often used in machine learning to remove weak
+connections from trained models to reduce the computational requirements of
+inference. However, the machine learning frameworks typically used for
+backpropagation-based training of both ANNs and Spiking Neural Networks (SNNs)
+are optimized for dense connectivity, meaning that pruning does not help reduce
+the training costs of ever-larger models. The GeNN simulator already supports
+efficient GPU-accelerated simulation of sparse SNNs for computational
+neuroscience and machine learning. Here, we present a new flexible framework
+for implementing GPU-accelerated structural plasticity rules and demonstrate
+this first using the e-prop supervised learning rule and DEEP R to train
+efficient, sparse SNN classifiers and then, in an unsupervised learning
+context, to learn topographic maps. Compared to baseline dense models, our
+sparse classifiers reduce training time by up to 10x while the DEEP R rewiring
+enables them to perform as well as the original models. We demonstrate
+topographic map formation in faster-than-realtime simulations, provide insights
+into the connectivity evolution, and measure simulation speed versus network
+size. The proposed framework will enable further research into achieving and
+maintaining sparsity in network structure and neural communication, as well as
+exploring the computational benefits of sparsity in a range of neuromorphic
+applications.
+</summary>
+    <author>
+      <name>James C. Knight</name>
+    </author>
+    <author>
+      <name>Johanna Senk</name>
+    </author>
+    <author>
+      <name>Thomas Nowotny</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages, 9 figures, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.19764v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19764v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19755v2</id>
+    <updated>2025-10-23T09:09:15Z</updated>
+    <published>2025-10-22T16:46:05Z</published>
+    <title>A Survey on Cache Methods in Diffusion Models: Toward Efficient
+  Multi-Modal Generation</title>
+    <summary>  Diffusion Models have become a cornerstone of modern generative AI for their
+exceptional generation quality and controllability. However, their inherent
+\textit{multi-step iterations} and \textit{complex backbone networks} lead to
+prohibitive computational overhead and generation latency, forming a major
+bottleneck for real-time applications. Although existing acceleration
+techniques have made progress, they still face challenges such as limited
+applicability, high training costs, or quality degradation.
+  Against this backdrop, \textbf{Diffusion Caching} offers a promising
+training-free, architecture-agnostic, and efficient inference paradigm. Its
+core mechanism identifies and reuses intrinsic computational redundancies in
+the diffusion process. By enabling feature-level cross-step reuse and
+inter-layer scheduling, it reduces computation without modifying model
+parameters. This paper systematically reviews the theoretical foundations and
+evolution of Diffusion Caching and proposes a unified framework for its
+classification and analysis.
+  Through comparative analysis of representative methods, we show that
+Diffusion Caching evolves from \textit{static reuse} to \textit{dynamic
+prediction}. This trend enhances caching flexibility across diverse tasks and
+enables integration with other acceleration techniques such as sampling
+optimization and model distillation, paving the way for a unified, efficient
+inference framework for future multimodal and interactive applications. We
+argue that this paradigm will become a key enabler of real-time and efficient
+generative AI, injecting new vitality into both theory and practice of
+\textit{Efficient Generative Intelligence}.
+</summary>
+    <author>
+      <name>Jiacheng Liu</name>
+    </author>
+    <author>
+      <name>Xinyu Wang</name>
+    </author>
+    <author>
+      <name>Yuqi Lin</name>
+    </author>
+    <author>
+      <name>Zhikai Wang</name>
+    </author>
+    <author>
+      <name>Peiru Wang</name>
+    </author>
+    <author>
+      <name>Peiliang Cai</name>
+    </author>
+    <author>
+      <name>Qinming Zhou</name>
+    </author>
+    <author>
+      <name>Zhengan Yan</name>
+    </author>
+    <author>
+      <name>Zexuan Yan</name>
+    </author>
+    <author>
+      <name>Zhengyi Shi</name>
+    </author>
+    <author>
+      <name>Chang Zou</name>
+    </author>
+    <author>
+      <name>Yue Ma</name>
+    </author>
+    <author>
+      <name>Linfeng Zhang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">22 pages,2 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.19755v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.19755v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
