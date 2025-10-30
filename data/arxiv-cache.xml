@@ -1,530 +1,612 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-29T00:58:03Z -->
+<!-- Last updated: 2025-10-30T00:57:39Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-28T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">124770</opensearch:totalResults>
+  <updated>2025-10-29T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">124857</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.23606v1</id>
-    <updated>2025-10-27T17:59:57Z</updated>
-    <published>2025-10-27T17:59:57Z</published>
-    <title>Variational Masked Diffusion Models</title>
-    <summary>  Masked diffusion models have recently emerged as a flexible framework for
-discrete generative modeling. However, a key limitation of standard masked
-diffusion is its inability to effectively capture dependencies among tokens
-that are predicted concurrently, leading to degraded generation quality when
-dependencies among tokens are important. To explicitly model dependencies among
-tokens, we propose Variational Masked Diffusion (VMD), a framework that
-introduces latent variables into the masked diffusion process. Through
-controlled experiments on synthetic datasets, we demonstrate that VMD
-successfully learns dependencies that conventional masked diffusion fails to
-capture. We further validate the effectiveness of our approach on Sudoku
-puzzles and text datasets, where learning of dependencies among tokens improves
-global consistency. Across these domains, VMD enhances both generation quality
-and dependency awareness, highlighting the value of integrating variational
-inference into masked diffusion. Our code is available at:
-https://riccizz.github.io/VMD.
+    <id>http://arxiv.org/abs/2510.24717v1</id>
+    <updated>2025-10-28T17:59:57Z</updated>
+    <published>2025-10-28T17:59:57Z</published>
+    <title>Uniform Discrete Diffusion with Metric Path for Video Generation</title>
+    <summary>  Continuous-space video generation has advanced rapidly, while discrete
+approaches lag behind due to error accumulation and long-context inconsistency.
+In this work, we revisit discrete generative modeling and present Uniform
+discRete diffuSion with metric pAth (URSA), a simple yet powerful framework
+that bridges the gap with continuous approaches for the scalable video
+generation. At its core, URSA formulates the video generation task as an
+iterative global refinement of discrete spatiotemporal tokens. It integrates
+two key designs: a Linearized Metric Path and a Resolution-dependent Timestep
+Shifting mechanism. These designs enable URSA to scale efficiently to
+high-resolution image synthesis and long-duration video generation, while
+requiring significantly fewer inference steps. Additionally, we introduce an
+asynchronous temporal fine-tuning strategy that unifies versatile tasks within
+a single model, including interpolation and image-to-video generation.
+Extensive experiments on challenging video and image generation benchmarks
+demonstrate that URSA consistently outperforms existing discrete methods and
+achieves performance comparable to state-of-the-art continuous diffusion
+methods. Code and models are available at https://github.com/baaivision/URSA
 </summary>
     <author>
-      <name>Yichi Zhang</name>
+      <name>Haoge Deng</name>
     </author>
     <author>
-      <name>Alex Schwing</name>
+      <name>Ting Pan</name>
     </author>
     <author>
-      <name>Zhizhen Zhao</name>
+      <name>Fan Zhang</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://riccizz.github.io/VMD</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.23606v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23606v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Zhuoyan Luo</name>
+    </author>
+    <author>
+      <name>Yufeng Cui</name>
+    </author>
+    <author>
+      <name>Wenxuan Wang</name>
+    </author>
+    <author>
+      <name>Chunhua Shen</name>
+    </author>
+    <author>
+      <name>Shiguang Shan</name>
+    </author>
+    <author>
+      <name>Zhaoxiang Zhang</name>
+    </author>
+    <author>
+      <name>Xinlong Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, 10 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.24717v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24717v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.24714v1</id>
+    <updated>2025-10-28T17:59:15Z</updated>
+    <published>2025-10-28T17:59:15Z</published>
+    <title>Machine-Learning-Assisted Comparison of Regression Functions</title>
+    <summary>  We revisit the classical problem of comparing regression functions, a
+fundamental question in statistical inference with broad relevance to modern
+applications such as data integration, transfer learning, and causal inference.
+Existing approaches typically rely on smoothing techniques and are thus
+hindered by the curse of dimensionality. We propose a generalized notion of
+kernel-based conditional mean dependence that provides a new characterization
+of the null hypothesis of equal regression functions. Building on this
+reformulation, we develop two novel tests that leverage modern machine learning
+methods for flexible estimation. We establish the asymptotic properties of the
+test statistics, which hold under both fixed- and high-dimensional regimes.
+Unlike existing methods that often require restrictive distributional
+assumptions, our framework only imposes mild moment conditions. The efficacy of
+the proposed tests is demonstrated through extensive numerical studies.
+</summary>
+    <author>
+      <name>Jian Yan</name>
+    </author>
+    <author>
+      <name>Zhuoxi Li</name>
+    </author>
+    <author>
+      <name>Yang Ning</name>
+    </author>
+    <author>
+      <name>Yong Chen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.24714v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24714v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.24670v2</id>
+    <updated>2025-10-29T14:41:45Z</updated>
+    <published>2025-10-28T17:36:51Z</published>
+    <title>Pearl: A Foundation Model for Placing Every Atom in the Right Location</title>
+    <summary>  Accurately predicting the three-dimensional structures of protein-ligand
+complexes remains a fundamental challenge in computational drug discovery that
+limits the pace and success of therapeutic design. Deep learning methods have
+recently shown strong potential as structural prediction tools, achieving
+promising accuracy across diverse biomolecular systems. However, their
+performance and utility are constrained by scarce experimental data,
+inefficient architectures, physically invalid poses, and the limited ability to
+exploit auxiliary information available at inference. To address these issues,
+we introduce Pearl (Placing Every Atom in the Right Location), a foundation
+model for protein-ligand cofolding at scale. Pearl addresses these challenges
+with three key innovations: (1) training recipes that include large-scale
+synthetic data to overcome data scarcity; (2) architectures that incorporate an
+SO(3)-equivariant diffusion module to inherently respect 3D rotational
+symmetries, improving generalization and sample efficiency, and (3)
+controllable inference, including a generalized multi-chain templating system
+supporting both protein and non-polymeric components as well as dual
+unconditional/conditional modes. Pearl establishes a new state-of-the-art
+performance in protein-ligand cofolding. On the key metric of generating
+accurate (RMSD &lt; 2 \r{A}) and physically valid poses, Pearl surpasses AlphaFold
+3 and other open source baselines on the public Runs N' Poses and PoseBusters
+benchmarks, delivering 14.5% and 14.2% improvements, respectively, over the
+next best model. In the pocket-conditional cofolding regime, Pearl delivers
+$3.6\times$ improvement on a proprietary set of challenging, real-world drug
+targets at the more rigorous RMSD &lt; 1 \r{A} threshold. Finally, we demonstrate
+that model performance correlates directly with synthetic dataset size used in
+training.
+</summary>
+    <author>
+      <name> Genesis Research Team</name>
+    </author>
+    <author>
+      <name>Alejandro Dobles</name>
+    </author>
+    <author>
+      <name>Nina Jovic</name>
+    </author>
+    <author>
+      <name>Kenneth Leidal</name>
+    </author>
+    <author>
+      <name>Pranav Murugan</name>
+    </author>
+    <author>
+      <name>David C. Williams</name>
+    </author>
+    <author>
+      <name>Drausin Wulsin</name>
+    </author>
+    <author>
+      <name>Nate Gruver</name>
+    </author>
+    <author>
+      <name>Christina X. Ji</name>
+    </author>
+    <author>
+      <name>Korrawat Pruegsanusak</name>
+    </author>
+    <author>
+      <name>Gianluca Scarpellini</name>
+    </author>
+    <author>
+      <name>Ansh Sharma</name>
+    </author>
+    <author>
+      <name>Wojciech Swiderski</name>
+    </author>
+    <author>
+      <name>Andrea Bootsma</name>
+    </author>
+    <author>
+      <name>Richard Strong Bowen</name>
+    </author>
+    <author>
+      <name>Charlotte Chen</name>
+    </author>
+    <author>
+      <name>Jamin Chen</name>
+    </author>
+    <author>
+      <name>Marc André Dämgen</name>
+    </author>
+    <author>
+      <name>Benjamin DiFrancesco</name>
+    </author>
+    <author>
+      <name>J. D. Fishman</name>
+    </author>
+    <author>
+      <name>Alla Ivanova</name>
+    </author>
+    <author>
+      <name>Zach Kagin</name>
+    </author>
+    <author>
+      <name>David Li-Bland</name>
+    </author>
+    <author>
+      <name>Zuli Liu</name>
+    </author>
+    <author>
+      <name>Igor Morozov</name>
+    </author>
+    <author>
+      <name>Jeffrey Ouyang-Zhang</name>
+    </author>
+    <author>
+      <name>Frank C. Pickard IV</name>
+    </author>
+    <author>
+      <name>Kushal S. Shah</name>
+    </author>
+    <author>
+      <name>Ben Shor</name>
+    </author>
+    <author>
+      <name>Gabriel Monteiro da Silva</name>
+    </author>
+    <author>
+      <name>Roy Tal</name>
+    </author>
+    <author>
+      <name>Maxx Tessmer</name>
+    </author>
+    <author>
+      <name>Carl Tilbury</name>
+    </author>
+    <author>
+      <name>Cyr Vetcher</name>
+    </author>
+    <author>
+      <name>Daniel Zeng</name>
+    </author>
+    <author>
+      <name>Maruan Al-Shedivat</name>
+    </author>
+    <author>
+      <name>Aleksandra Faust</name>
+    </author>
+    <author>
+      <name>Evan N. Feinberg</name>
+    </author>
+    <author>
+      <name>Michael V. LeVine</name>
+    </author>
+    <author>
+      <name>Matteus Pan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">technical report</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.24670v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24670v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.24639v1</id>
+    <updated>2025-10-28T17:06:15Z</updated>
+    <published>2025-10-28T17:06:15Z</published>
+    <title>Causal Ordering for Structure Learning From Time Series</title>
+    <summary>  Predicting causal structure from time series data is crucial for
+understanding complex phenomena in physiology, brain connectivity, climate
+dynamics, and socio-economic behaviour. Causal discovery in time series is
+hindered by the combinatorial complexity of identifying true causal
+relationships, especially as the number of variables and time points grow. A
+common approach to simplify the task is the so-called ordering-based methods.
+Traditional ordering methods inherently limit the representational capacity of
+the resulting model. In this work, we fix this issue by leveraging multiple
+valid causal orderings, instead of a single one as standard practice. We
+propose DOTS (Diffusion Ordered Temporal Structure), using diffusion-based
+causal discovery for temporal data. By integrating multiple orderings, DOTS
+effectively recovers the transitive closure of the underlying directed acyclic
+graph, mitigating spurious artifacts inherent in single-ordering approaches. We
+formalise the problem under standard assumptions such as stationarity and the
+additive noise model, and leverage score matching with diffusion processes to
+enable efficient Hessian estimation. Extensive experiments validate the
+approach. Empirical evaluations on synthetic and real-world datasets
+demonstrate that DOTS outperforms state-of-the-art baselines, offering a
+scalable and robust approach to temporal causal discovery. On synthetic
+benchmarks ($d{=}\!3-\!6$ variables, $T{=}200\!-\!5{,}000$ samples), DOTS
+improves mean window-graph $F1$ from $0.63$ (best baseline) to $0.81$. On the
+CausalTime real-world benchmark ($d{=}20\!-\!36$), while baselines remain the
+best on individual datasets, DOTS attains the highest average summary-graph
+$F1$ while halving runtime relative to graph-optimisation methods. These
+results establish DOTS as a scalable and accurate solution for temporal causal
+discovery.
+</summary>
+    <author>
+      <name>Pedro P. Sanchez</name>
+    </author>
+    <author>
+      <name>Damian Machlanski</name>
+    </author>
+    <author>
+      <name>Steven McDonagh</name>
+    </author>
+    <author>
+      <name>Sotirios A. Tsaftaris</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">32 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.24639v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24639v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.23601v1</id>
-    <updated>2025-10-27T17:59:14Z</updated>
-    <published>2025-10-27T17:59:14Z</published>
-    <title>Alita-G: Self-Evolving Generative Agent for Agent Generation</title>
-    <summary>  Large language models (LLMs) have been shown to perform better when
-scaffolded into agents with memory, tools, and feedback. Beyond this,
-self-evolving agents have emerged, but current work largely limits adaptation
-to prompt rewriting or failure retries. Therefore, we present ALITA-G, a
-self-evolution framework that transforms a general-purpose agent into a domain
-expert by systematically generating, abstracting, and curating Model Context
-Protocol (MCP) tools. In this framework, a generalist agent executes a curated
-suite of target-domain tasks and synthesizes candidate MCPs from successful
-trajectories. These are then abstracted to parameterized primitives and
-consolidated into an MCP Box. At inference time, ALITA-G performs
-retrieval-augmented MCP selection with the help of each tool's descriptions and
-use cases, before executing an agent equipped with the MCP Executor. Across
-several benchmarks GAIA, PathVQA, and Humanity's Last Exam, ALITA-G attains
-strong gains while reducing computation costs. On GAIA validation, it achieves
-83.03% pass@1 and 89.09% pass@3, establishing a new state-of-the-art result
-while reducing mean tokens per example by approximately 15% relative to a
-strong baseline agent. ALITA-G thus provides a principled pathway from
-generalist capability to reusable, domain-specific competence, improving both
-accuracy and efficiency on complex reasoning tasks.
+    <id>http://arxiv.org/abs/2510.24637v1</id>
+    <updated>2025-10-28T17:03:33Z</updated>
+    <published>2025-10-28T17:03:33Z</published>
+    <title>All in one timestep: Enhancing Sparsity and Energy efficiency in
+  Multi-level Spiking Neural Networks</title>
+    <summary>  Spiking Neural Networks (SNNs) are one of the most promising bio-inspired
+neural networks models and have drawn increasing attention in recent years. The
+event-driven communication mechanism of SNNs allows for sparse and
+theoretically low-power operations on dedicated neuromorphic hardware. However,
+the binary nature of instantaneous spikes also leads to considerable
+information loss in SNNs, resulting in accuracy degradation. To address this
+issue, we propose a multi-level spiking neuron model able to provide both
+low-quantization error and minimal inference latency while approaching the
+performance of full precision Artificial Neural Networks (ANNs). Experimental
+results with popular network architectures and datasets, show that multi-level
+spiking neurons provide better information compression, allowing therefore a
+reduction in latency without performance loss. When compared to binary SNNs on
+image classification scenarios, multi-level SNNs indeed allow reducing by 2 to
+3 times the energy consumption depending on the number of quantization
+intervals. On neuromorphic data, our approach allows us to drastically reduce
+the inference latency to 1 timestep, which corresponds to a compression factor
+of 10 compared to previously published results. At the architectural level, we
+propose a new residual architecture that we call Sparse-ResNet. Through a
+careful analysis of the spikes propagation in residual connections we highlight
+a spike avalanche effect, that affects most spiking residual architectures.
+Using our Sparse-ResNet architecture, we can provide state-of-the-art accuracy
+results in image classification while reducing by more than 20% the network
+activity compared to the previous spiking ResNets.
 </summary>
     <author>
-      <name>Jiahao Qiu</name>
+      <name>Andrea Castagnetti</name>
     </author>
     <author>
-      <name>Xuan Qi</name>
+      <name>Alain Pegatoquet</name>
     </author>
     <author>
-      <name>Hongru Wang</name>
+      <name>Benoît Miramond</name>
     </author>
-    <author>
-      <name>Xinzhe Juan</name>
-    </author>
-    <author>
-      <name>Yimin Wang</name>
-    </author>
-    <author>
-      <name>Zelin Zhao</name>
-    </author>
-    <author>
-      <name>Jiayi Geng</name>
-    </author>
-    <author>
-      <name>Jiacheng Guo</name>
-    </author>
-    <author>
-      <name>Peihang Li</name>
-    </author>
-    <author>
-      <name>Jingzhe Shi</name>
-    </author>
-    <author>
-      <name>Shilong Liu</name>
-    </author>
-    <author>
-      <name>Mengdi Wang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 3 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.23601v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23601v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2510.24637v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24637v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.23588v1</id>
-    <updated>2025-10-27T17:54:08Z</updated>
-    <published>2025-10-27T17:54:08Z</published>
-    <title>FARMER: Flow AutoRegressive Transformer over Pixels</title>
-    <summary>  Directly modeling the explicit likelihood of the raw data distribution is key
-topic in the machine learning area, which achieves the scaling successes in
-Large Language Models by autoregressive modeling. However, continuous AR
-modeling over visual pixel data suffer from extremely long sequences and
-high-dimensional spaces. In this paper, we present FARMER, a novel end-to-end
-generative framework that unifies Normalizing Flows (NF) and Autoregressive
-(AR) models for tractable likelihood estimation and high-quality image
-synthesis directly from raw pixels. FARMER employs an invertible autoregressive
-flow to transform images into latent sequences, whose distribution is modeled
-implicitly by an autoregressive model. To address the redundancy and complexity
-in pixel-level modeling, we propose a self-supervised dimension reduction
-scheme that partitions NF latent channels into informative and redundant
-groups, enabling more effective and efficient AR modeling. Furthermore, we
-design a one-step distillation scheme to significantly accelerate inference
-speed and introduce a resampling-based classifier-free guidance algorithm to
-boost image generation quality. Extensive experiments demonstrate that FARMER
-achieves competitive performance compared to existing pixel-based generative
-models while providing exact likelihoods and scalable training.
+    <id>http://arxiv.org/abs/2510.24636v2</id>
+    <updated>2025-10-29T16:06:18Z</updated>
+    <published>2025-10-28T17:02:46Z</published>
+    <title>OpenReward: Learning to Reward Long-form Agentic Tasks via Reinforcement
+  Learning</title>
+    <summary>  Reward models (RMs) have become essential for aligning large language models
+(LLMs), serving as scalable proxies for human evaluation in both training and
+inference. However, existing RMs struggle on knowledge-intensive and long-form
+tasks, where evaluating correctness requires grounding beyond the model's
+internal knowledge. This limitation hinders them from reliably discriminating
+subtle quality differences, especially when external evidence is necessary. To
+address this, we introduce OpenRM, a tool-augmented long-form reward model that
+systematically judges open-ended responses by invoking external tools to gather
+relevant evidence. We train OpenRM with Group Relative Policy Optimization
+(GRPO) on over 27K synthesized pairwise examples generated through a
+controllable data synthesis framework. The training objective jointly
+supervises intermediate tool usage and final outcome accuracy, incentivizing
+our reward model to learn effective evidence-based judgment strategies.
+Extensive experiments on three newly-collected datasets and two widely-used
+benchmarks demonstrate that OpenRM substantially outperforms existing reward
+modeling approaches. As a further step, we integrate OpenRM into both
+inference-time response selection and training-time data selection. This yields
+consistent gains in downstream LLM alignment tasks, highlighting the potential
+of tool-augmented reward models for scaling reliable long-form evaluation.
 </summary>
     <author>
-      <name>Guangting Zheng</name>
+      <name>Ziyou Hu</name>
     </author>
     <author>
-      <name>Qinyu Zhao</name>
+      <name>Zhengliang Shi</name>
     </author>
     <author>
-      <name>Tao Yang</name>
+      <name>Minghang Zhu</name>
     </author>
     <author>
-      <name>Fei Xiao</name>
+      <name>Haitao Li</name>
     </author>
     <author>
-      <name>Zhijie Lin</name>
+      <name>Teng Sun</name>
     </author>
     <author>
-      <name>Jie Wu</name>
+      <name>Pengjie Ren</name>
     </author>
     <author>
-      <name>Jiajun Deng</name>
+      <name>Suzan Verberne</name>
     </author>
     <author>
-      <name>Yanyong Zhang</name>
+      <name>Zhaochun Ren</name>
     </author>
-    <author>
-      <name>Rui Zhu</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Bytedance Seed Technical Report</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.23588v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23588v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2510.24636v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24636v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.23582v1</id>
-    <updated>2025-10-27T17:51:22Z</updated>
-    <published>2025-10-27T17:51:22Z</published>
-    <title>Cosmic magnification on multi-catalogue Herschel submillimetre galaxies</title>
-    <summary>  {Submillimetre galaxies (SMGs) are excellent background sources for
-magnification-bias studies, but the limited sky coverage in the submillimetre
-(sub-mm) band constrains their statistical power. Beyond H-ATLAS, Herschel
-produced additional sub-mm catalogues, though not optimised for spatial
-statistical lensing analyses.} {Our goal is to refine cosmological constraints
-from SMG magnification bias by exploiting the full sub-mm sky surveyed by
-Herschel.} {We expanded the SMG sample by incorporating other Herschel
-catalogues overlapping SDSS spectroscopic lenses. Random catalogues were
-generated via kernel density estimation to compute cross-correlations, and
-Markov Chain Monte Carlo methods were applied to infer astrophysical and
-cosmological parameters for each catalogue and for the combined dataset.} {We
-report the first detection of magnification bias in SMGs beyond H-ATLAS,
-reinforcing the robustness of this observable. Individual Herschel catalogues
-yield reasonable central values for $\Omega_m$ and $\sigma_8$, although with
-large uncertainties. The combined analysis, dominated by the more powerful
-H-ATLAS sample, gives results consistent with $\Lambda$CDM: $\Omega_m =
-0.30^{+0.05}_{-0.07}$, $\sigma_8 = 0.80 (+/- 0.07)$, and $h &lt; 0.80$, in better
-agreement with \textit{Planck} 2018 than previous non-tomographic studies.}
-{SMGs are promising tracers for magnification bias, but the narrow sub-mm
-coverage remains a major limitation. Wider surveys optimised for lensing would
-enable cross-correlations on larger scales, yielding tighter cosmological
-constraints.}
+    <id>http://arxiv.org/abs/2510.24631v1</id>
+    <updated>2025-10-28T16:59:42Z</updated>
+    <published>2025-10-28T16:59:42Z</published>
+    <title>Bridging Simulators with Conditional Optimal Transport</title>
+    <summary>  We propose a new field-level emulator that bridges two simulators using
+unpaired simulation datasets. Our method leverages a flow-based approach to
+learn the likelihood transport from one simulator to the other. Since multiple
+transport maps exist, we employ Conditional Optimal Transport Flow Matching
+(COT-FM) to ensure that the transformation minimally distorts the underlying
+structure of the data. We demonstrate the effectiveness of this approach by
+bridging weak lensing simulators: a Lagrangian Perturbation Theory (LPT) to a
+N-body Particle-Mesh (PM). We demonstrate that our emulator captures the full
+correction between the simulators by showing that it enables full-field
+inference to accurately recover the true posterior, validating its accuracy
+beyond traditional summary statistics.
 </summary>
     <author>
-      <name>R. Fernandez-Fernandez</name>
+      <name>Justine Zeghal</name>
     </author>
     <author>
-      <name>M. M. Cueli</name>
+      <name>Benjamin Remy</name>
     </author>
     <author>
-      <name>J. González-Nuevo</name>
+      <name>Yashar Hezaveh</name>
     </author>
     <author>
-      <name>L. Bonavera</name>
+      <name>Francois Lanusse</name>
     </author>
     <author>
-      <name>D. Crespo</name>
+      <name>Laurence Perreault Levasseur</name>
     </author>
-    <author>
-      <name>E. Goitia</name>
-    </author>
-    <author>
-      <name>J. M. Casas</name>
-    </author>
-    <author>
-      <name>J. A. Cano</name>
-    </author>
-    <author>
-      <name>M. Migliaccio</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.23582v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23582v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at the 2025 Workshop on Machine Learning for Astrophysics,
+  10 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.24631v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24631v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.23569v1</id>
-    <updated>2025-10-27T17:38:17Z</updated>
-    <published>2025-10-27T17:38:17Z</published>
-    <title>EgoThinker: Unveiling Egocentric Reasoning with Spatio-Temporal CoT</title>
-    <summary>  Egocentric video reasoning centers on an unobservable agent behind the camera
-who dynamically shapes the environment, requiring inference of hidden
-intentions and recognition of fine-grained interactions. This core challenge
-limits current multimodal large language models MLLMs, which excel at visible
-event reasoning but lack embodied, first-person understanding. To bridge this
-gap, we introduce EgoThinker, a novel framework that endows MLLMs with robust
-egocentric reasoning capabilities through spatio-temporal chain-of-thought
-supervision and a two-stage learning curriculum. First, we introduce EgoRe-5M,
-a large-scale egocentric QA dataset constructed from 13M diverse egocentric
-video clips. This dataset features multi-minute segments annotated with
-detailed CoT rationales and dense hand-object grounding. Second, we employ SFT
-on EgoRe-5M to instill reasoning skills, followed by reinforcement fine-tuning
-RFT to further enhance spatio-temporal localization. Experimental results show
-that EgoThinker outperforms existing methods across multiple egocentric
-benchmarks, while achieving substantial improvements in fine-grained
-spatio-temporal localization tasks. Full code and data are released at
-https://github.com/InternRobotics/EgoThinker.
+    <id>http://arxiv.org/abs/2510.24605v1</id>
+    <updated>2025-10-28T16:32:43Z</updated>
+    <published>2025-10-28T16:32:43Z</published>
+    <title>Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead
+  the Way</title>
+    <summary>  Diffusion-based large language models (dLLMs) have exhibited substantial
+potential for parallel text generation, which may enable more efficient
+generation compared to autoregressive models. However, current dLLMs suffer
+from fixed generation lengths, which indicates the generation lengths of dLLMs
+have to be determined before decoding as a hyper-parameter, leading to issues
+in efficiency and flexibility. To solve these problems, in this work, we
+propose to train a diffusion LLM with native variable generation lengths,
+abbreviated as dLLM-Var. Concretely, we aim to train a model to accurately
+predict the [EOS] token in the generated text, which makes a dLLM be able to
+natively infer in a block diffusion manner, while still maintaining the ability
+of global bi-directional (full) attention and high parallelism. Experiments on
+standard benchmarks demonstrate that our method achieves a 30.1x speedup over
+traditional dLLM inference paradigms and a 2.4x speedup relative to
+autoregressive models such as Qwen and Llama. Our method achieves higher
+accuracy and faster inference, elevating dLLMs beyond mere academic novelty and
+supporting their practical use in real-world applications. Codes and models
+have been released.
 </summary>
     <author>
-      <name>Baoqi Pei</name>
+      <name>Yicun Yang</name>
     </author>
     <author>
-      <name>Yifei Huang</name>
+      <name>Cong Wang</name>
     </author>
     <author>
-      <name>Jilan Xu</name>
+      <name>Shaobo Wang</name>
     </author>
     <author>
-      <name>Yuping He</name>
+      <name>Zichen Wen</name>
     </author>
     <author>
-      <name>Guo Chen</name>
+      <name>Biqing Qi</name>
     </author>
     <author>
-      <name>Fei Wu</name>
+      <name>Hanlin Xu</name>
     </author>
     <author>
-      <name>Yu Qiao</name>
+      <name>Linfeng Zhang</name>
     </author>
-    <author>
-      <name>Jiangmiao Pang</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at NeurIPS 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.23569v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23569v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2510.24605v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24605v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.23564v2</id>
-    <updated>2025-10-28T03:22:35Z</updated>
-    <published>2025-10-27T17:35:15Z</published>
-    <title>ReCode: Unify Plan and Action for Universal Granularity Control</title>
-    <summary>  Real-world tasks require decisions at varying granularities, and humans excel
-at this by leveraging a unified cognitive representation where planning is
-fundamentally understood as a high-level form of action. However, current Large
-Language Model (LLM)-based agents lack this crucial capability to operate
-fluidly across decision granularities. This limitation stems from existing
-paradigms that enforce a rigid separation between high-level planning and
-low-level action, which impairs dynamic adaptability and limits generalization.
-We propose ReCode (Recursive Code Generation), a novel paradigm that addresses
-this limitation by unifying planning and action within a single code
-representation. In this representation, ReCode treats high-level plans as
-abstract placeholder functions, which the agent then recursively decomposes
-into finer-grained sub-functions until reaching primitive actions. This
-recursive approach dissolves the rigid boundary between plan and action,
-enabling the agent to dynamically control its decision granularity.
-Furthermore, the recursive structure inherently generates rich,
-multi-granularity training data, enabling models to learn hierarchical
-decision-making processes. Extensive experiments show ReCode significantly
-surpasses advanced baselines in inference performance and demonstrates
-exceptional data efficiency in training, validating our core insight that
-unifying planning and action through recursive code generation is a powerful
-and effective approach to achieving universal granularity control. The code is
-available at https://github.com/FoundationAgents/ReCode.
+    <id>http://arxiv.org/abs/2510.24593v1</id>
+    <updated>2025-10-28T16:22:55Z</updated>
+    <published>2025-10-28T16:22:55Z</published>
+    <title>Brownian motion on spaces of discrete regular curves</title>
+    <summary>  We introduce and study Brownian motion on spaces of discrete regular curves
+in Euclidean space equipped with discrete Sobolev-type metrics. It has been
+established that these spaces of discrete regular curves are geodesically
+complete if and only if the Sobolev-type metric is of order two or higher. By
+relying on a general result by Grigor'yan and controlling the volume growth of
+geodesic balls, we show that all spaces of discrete regular curves that are
+geodesically complete are also stochastically complete, that is, the associated
+Brownian motion exists for all times. This provides a rigorous footing for
+performing data statistics, such as data inference and data imputation, on
+these spaces. Our result is the first stochastic completeness result in shape
+analysis that applies to the full shape space of interest. For illustrative
+purposes, we include simulations for sample paths of Brownian motion on spaces
+of discrete regular curves. For the space of triangles in the plane modulo
+rotation, translation and scaling, we further provide heuristics which suggest
+that this space remains stochastically complete even for Sobolev-type metrics
+of order zero and one.
 </summary>
     <author>
-      <name>Zhaoyang Yu</name>
+      <name>Karen Habermann</name>
     </author>
     <author>
-      <name>Jiayi Zhang</name>
+      <name>Emmanuel Hartman</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.24593v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24593v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="58J65, 60J65, 62R30" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.24551v1</id>
+    <updated>2025-10-28T15:47:44Z</updated>
+    <published>2025-10-28T15:47:44Z</published>
+    <title>Generative AI for Healthcare: Fundamentals, Challenges, and Perspectives</title>
+    <summary>  Generative Artificial Intelligence (GenAI) is taking the world by storm. It
+promises transformative opportunities for advancing and disrupting existing
+practices, including healthcare. From large language models (LLMs) for clinical
+note synthesis and conversational assistance to multimodal systems that
+integrate medical imaging, electronic health records, and genomic data for
+decision support, GenAI is transforming the practice of medicine and the
+delivery of healthcare, such as diagnosis and personalized treatments, with
+great potential in reducing the cognitive burden on clinicians, thereby
+improving overall healthcare delivery. However, GenAI deployment in healthcare
+requires an in-depth understanding of healthcare tasks and what can and cannot
+be achieved. In this paper, we propose a data-centric paradigm in the design
+and deployment of GenAI systems for healthcare. Specifically, we reposition the
+data life cycle by making the medical data ecosystem as the foundational
+substrate for generative healthcare systems. This ecosystem is designed to
+sustainably support the integration, representation, and retrieval of diverse
+medical data and knowledge. With effective and efficient data processing
+pipelines, such as semantic vector search and contextual querying, it enables
+GenAI-powered operations for upstream model components and downstream clinical
+applications. Ultimately, it not only supplies foundation models with
+high-quality, multimodal data for large-scale pretraining and domain-specific
+fine-tuning, but also serves as a knowledge retrieval backend to support
+task-specific inference via the agentic layer. The ecosystem enables the
+deployment of GenAI for high-quality and effective healthcare delivery.
+</summary>
+    <author>
+      <name>Gang Chen</name>
     </author>
     <author>
-      <name>Huixue Su</name>
+      <name>Changshuo Liu</name>
     </author>
     <author>
-      <name>Yufan Zhao</name>
+      <name>Gene Anne Ooi</name>
     </author>
     <author>
-      <name>Yifan Wu</name>
+      <name>Marcus Tan</name>
     </author>
     <author>
-      <name>Mingyi Deng</name>
+      <name>Zhongle Xie</name>
     </author>
     <author>
-      <name>Jinyu Xiang</name>
+      <name>Jianwei Yin</name>
     </author>
     <author>
-      <name>Yizhang Lin</name>
+      <name>James Wei Luen Yip</name>
     </author>
     <author>
-      <name>Lingxiao Tang</name>
+      <name>Wenqiao Zhang</name>
     </author>
     <author>
-      <name>Yingchao Li</name>
+      <name>Jiaqi Zhu</name>
     </author>
     <author>
-      <name>Yuyu Luo</name>
+      <name>Beng Chin Ooi</name>
     </author>
-    <author>
-      <name>Bang Liu</name>
-    </author>
-    <author>
-      <name>Chenglin Wu</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.23564v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23564v2" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.24551v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.24551v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.23559v1</id>
-    <updated>2025-10-27T17:31:42Z</updated>
-    <published>2025-10-27T17:31:42Z</published>
-    <title>KongNet: A Multi-headed Deep Learning Model for Detection and
-  Classification of Nuclei in Histopathology Images</title>
-    <summary>  Accurate detection and classification of nuclei in histopathology images are
-critical for diagnostic and research applications. We present KongNet, a
-multi-headed deep learning architecture featuring a shared encoder and
-parallel, cell-type-specialised decoders. Through multi-task learning, each
-decoder jointly predicts nuclei centroids, segmentation masks, and contours,
-aided by Spatial and Channel Squeeze-and-Excitation (SCSE) attention modules
-and a composite loss function. We validate KongNet in three Grand Challenges.
-The proposed model achieved first place on track 1 and second place on track 2
-during the MONKEY Challenge. Its lightweight variant (KongNet-Det) secured
-first place in the 2025 MIDOG Challenge. KongNet pre-trained on the MONKEY
-dataset and fine-tuned on the PUMA dataset ranked among the top three in the
-PUMA Challenge without further optimisation. Furthermore, KongNet established
-state-of-the-art performance on the publicly available PanNuke and CoNIC
-datasets. Our results demonstrate that the specialised multi-decoder design is
-highly effective for nuclei detection and classification across diverse tissue
-and stain types. The pre-trained model weights along with the inference code
-have been publicly released to support future research.
-</summary>
-    <author>
-      <name>Jiaqi Lv</name>
-    </author>
-    <author>
-      <name>Esha Sadia Nasir</name>
-    </author>
-    <author>
-      <name>Kesi Xu</name>
-    </author>
-    <author>
-      <name>Mostafa Jahanifar</name>
-    </author>
-    <author>
-      <name>Brinder Singh Chohan</name>
-    </author>
-    <author>
-      <name>Behnaz Elhaminia</name>
-    </author>
-    <author>
-      <name>Shan E Ahmed Raza</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to Medical Image Analysis, currently under review</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.23559v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23559v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.23550v1</id>
-    <updated>2025-10-27T17:27:18Z</updated>
-    <published>2025-10-27T17:27:18Z</published>
-    <title>Bayesian Nonlinear PDE Inference via Gaussian Process Collocation with
-  Application to the Richards Equation</title>
-    <summary>  The estimation of unknown parameters in nonlinear partial differential
-equations (PDEs) offers valuable insights across a wide range of scientific
-domains. In this work, we focus on estimating plant root parameters in the
-Richards equation, which is essential for understanding the soil-plant system
-in agricultural studies. Since conventional methods are computationally
-intensive and often yield unstable estimates, we develop a new Gaussian process
-collocation method for efficient Bayesian inference. Unlike existing Gaussian
-process-based approaches, our method constructs an approximate posterior
-distribution using samples drawn from a Gaussian process model fitted to the
-observed data, which does not require any structural assumption about the
-underlying PDE. Further, we propose to use an importance sampling procedure to
-correct for the discrepancy between the approximate and true posterior
-distributions. As an alternative, we also devise a prior-guided Bayesian
-optimization algorithm leveraging the approximate posterior. Simulation studies
-demonstrate that our method yields robust estimates under various settings.
-Finally, we apply our method on a real agricultural data set and estimate the
-plant root parameters with uncertainty quantification.
-</summary>
-    <author>
-      <name>Yumo Yang</name>
-    </author>
-    <author>
-      <name>Anass Ben Bouazza</name>
-    </author>
-    <author>
-      <name>Xuejun Dong</name>
-    </author>
-    <author>
-      <name>Quan Zhou</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">37 pages, 7 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.23550v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23550v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.23540v1</id>
-    <updated>2025-10-27T17:14:20Z</updated>
-    <published>2025-10-27T17:14:20Z</published>
-    <title>The causal interpretation of panel vector autoregressions</title>
-    <summary>  This paper discusses the different contemporaneous causal interpretations of
-Panel Vector Autoregressions (PVAR). I show that the interpretation of PVARs
-depends on the distribution of the causing variable, and can range from average
-treatment effects, to average causal responses, to a combination of the two. If
-the researcher is willing to postulate a no residual autocorrelation
-assumption, and some units can be thought of as controls, PVAR can identify
-average treatment effects on the treated. This method complements the toolkits
-already present in the literature, such as staggered-DiD, or LP-DiD, as it
-formulates assumptions in the residuals, and not in the outcome variables. Such
-a method features a notable advantage: it allows units to be ``sparsely''
-treated, capturing the impact of interventions on the innovation component of
-the outcome variables. I provide an example related to the evaluation of the
-effects of natural disasters economic activity at the weekly frequency in the
-US.I conclude by discussing solutions to potential violations of the SUTVA
-assumption arising from interference.
-</summary>
-    <author>
-      <name>Raimondo Pala</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.23540v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23540v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.23534v1</id>
-    <updated>2025-10-27T17:10:43Z</updated>
-    <published>2025-10-27T17:10:43Z</published>
-    <title>Direct Debiased Machine Learning via Bregman Divergence Minimization</title>
-    <summary>  We develop a direct debiased machine learning framework comprising Neyman
-targeted estimation and generalized Riesz regression. Our framework unifies
-Riesz regression for automatic debiased machine learning, covariate balancing,
-targeted maximum likelihood estimation (TMLE), and density-ratio estimation. In
-many problems involving causal effects or structural models, the parameters of
-interest depend on regression functions. Plugging regression functions
-estimated by machine learning methods into the identifying equations can yield
-poor performance because of first-stage bias. To reduce such bias, debiased
-machine learning employs Neyman orthogonal estimating equations. Debiased
-machine learning typically requires estimation of the Riesz representer and the
-regression function. For this problem, we develop a direct debiased machine
-learning framework with an end-to-end algorithm. We formulate estimation of the
-nuisance parameters, the regression function and the Riesz representer, as
-minimizing the discrepancy between Neyman orthogonal scores computed with known
-and unknown nuisance parameters, which we refer to as Neyman targeted
-estimation. Neyman targeted estimation includes Riesz representer estimation,
-and we measure discrepancies using the Bregman divergence. The Bregman
-divergence encompasses various loss functions as special cases, where the
-squared loss yields Riesz regression and the Kullback-Leibler divergence yields
-entropy balancing. We refer to this Riesz representer estimation as generalized
-Riesz regression. Neyman targeted estimation also yields TMLE as a special case
-for regression function estimation. Furthermore, for specific pairs of models
-and Riesz representer estimation methods, we can automatically obtain the
-covariate balancing property without explicitly solving the covariate balancing
-objective.
-</summary>
-    <author>
-      <name>Masahiro Kato</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.23534v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.23534v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
