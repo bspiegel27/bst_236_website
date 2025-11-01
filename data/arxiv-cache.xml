@@ -1,457 +1,514 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-10-31T00:55:33Z -->
+<!-- Last updated: 2025-11-01T00:58:41Z -->
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="http://arxiv.org/api/query?search_query%3Dall%3Acausal%20inference%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
   <title type="html">ArXiv Query: search_query=all:causal inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
   <id>http://arxiv.org/api/SsRksLzRb0LuVhSmQ+N8WbAs+f8</id>
-  <updated>2025-10-30T00:00:00-04:00</updated>
-  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">124962</opensearch:totalResults>
+  <updated>2025-10-31T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">125071</opensearch:totalResults>
   <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
   <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
   <entry>
-    <id>http://arxiv.org/abs/2510.25769v1</id>
-    <updated>2025-10-29T17:59:06Z</updated>
-    <published>2025-10-29T17:59:06Z</published>
-    <title>Neural Stochastic Flows: Solver-Free Modelling and Inference for SDE
-  Solutions</title>
-    <summary>  Stochastic differential equations (SDEs) are well suited to modelling noisy
-and irregularly sampled time series found in finance, physics, and machine
-learning. Traditional approaches require costly numerical solvers to sample
-between arbitrary time points. We introduce Neural Stochastic Flows (NSFs) and
-their latent variants, which directly learn (latent) SDE transition laws using
-conditional normalising flows with architectural constraints that preserve
-properties inherited from stochastic flows. This enables one-shot sampling
-between arbitrary states and yields up to two orders of magnitude speed-ups at
-large time gaps. Experiments on synthetic SDE simulations and on real-world
-tracking and video data show that NSFs maintain distributional accuracy
-comparable to numerical approaches while dramatically reducing computation for
-arbitrary time-point sampling.
+    <id>http://arxiv.org/abs/2510.26802v1</id>
+    <updated>2025-10-30T17:59:55Z</updated>
+    <published>2025-10-30T17:59:55Z</published>
+    <title>Are Video Models Ready as Zero-Shot Reasoners? An Empirical Study with
+  the MME-CoF Benchmark</title>
+    <summary>  Recent video generation models can produce high-fidelity, temporally coherent
+videos, indicating that they may encode substantial world knowledge. Beyond
+realistic synthesis, they also exhibit emerging behaviors indicative of visual
+perception, modeling, and manipulation. Yet, an important question still
+remains: Are video models ready to serve as zero-shot reasoners in challenging
+visual reasoning scenarios? In this work, we conduct an empirical study to
+comprehensively investigate this question, focusing on the leading and popular
+Veo-3. We evaluate its reasoning behavior across 12 dimensions, including
+spatial, geometric, physical, temporal, and embodied logic, systematically
+characterizing both its strengths and failure modes. To standardize this study,
+we curate the evaluation data into MME-CoF, a compact benchmark that enables
+in-depth and thorough assessment of Chain-of-Frame (CoF) reasoning. Our
+findings reveal that while current video models demonstrate promising reasoning
+patterns on short-horizon spatial coherence, fine-grained grounding, and
+locally consistent dynamics, they remain limited in long-horizon causal
+reasoning, strict geometric constraints, and abstract logic. Overall, they are
+not yet reliable as standalone zero-shot reasoners, but exhibit encouraging
+signs as complementary visual engines alongside dedicated reasoning models.
+Project page: https://video-cof.github.io
 </summary>
     <author>
-      <name>Naoki Kiyohara</name>
+      <name>Ziyu Guo</name>
     </author>
     <author>
-      <name>Edward Johns</name>
+      <name>Xinyan Chen</name>
     </author>
     <author>
-      <name>Yingzhen Li</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">NeurIPS 2025 (poster). Project page:
-  https://nkiyohara.github.io/nsf-neurips2025/</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25769v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25769v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.25743v1</id>
-    <updated>2025-10-29T17:46:07Z</updated>
-    <published>2025-10-29T17:46:07Z</published>
-    <title>Agentic Economic Modeling</title>
-    <summary>  We introduce Agentic Economic Modeling (AEM), a framework that aligns
-synthetic LLM choices with small-sample human evidence for reliable econometric
-inference. AEM first generates task-conditioned synthetic choices via LLMs,
-then learns a bias-correction mapping from task features and raw LLM choices to
-human-aligned choices, upon which standard econometric estimators perform
-inference to recover demand elasticities and treatment effects.We validate AEM
-in two experiments. In a large scale conjoint study with millions of
-observations, using only 10% of the original data to fit the correction model
-lowers the error of the demand-parameter estimates, while uncorrected LLM
-choices even increase the errors. In a regional field experiment, a mixture
-model calibrated on 10% of geographic regions estimates an out-of-domain
-treatment effect of -65\pm10 bps, closely matching the full human experiment
-(-60\pm8 bps).Under time-wise extrapolation, training with only day-one human
-data yields -24 bps (95% CI: [-26, -22], p&lt;1e-5),improving over the human-only
-day-one baseline (-17 bps, 95% CI: [-43, +9], p=0.2049).These results
-demonstrate AEM's potential to improve RCT efficiency and establish a
-foundation method for LLM-based counterfactual generation.
-</summary>
-    <author>
-      <name>Bohan Zhang</name>
+      <name>Renrui Zhang</name>
     </author>
     <author>
-      <name>Jiaxuan Li</name>
+      <name>Ruichuan An</name>
     </author>
     <author>
-      <name>Ali Hortaçsu</name>
+      <name>Yu Qi</name>
     </author>
     <author>
-      <name>Xiaoyang Ye</name>
+      <name>Dongzhi Jiang</name>
     </author>
     <author>
-      <name>Victor Chernozhukov</name>
+      <name>Xiangtai Li</name>
     </author>
     <author>
-      <name>Angelo Ni</name>
+      <name>Manyuan Zhang</name>
     </author>
     <author>
-      <name>Edward Huang</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.25743v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25743v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.25739v1</id>
-    <updated>2025-10-29T17:43:31Z</updated>
-    <published>2025-10-29T17:43:31Z</published>
-    <title>Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image
-  Generation</title>
-    <summary>  Autoregressive (AR) image generation models are capable of producing
-high-fidelity images but often suffer from slow inference due to their
-inherently sequential, token-by-token decoding process. Speculative decoding,
-which employs a lightweight draft model to approximate the output of a larger
-AR model, has shown promise in accelerating text generation without
-compromising quality. However, its application to image generation remains
-largely underexplored. The challenges stem from a significantly larger sampling
-space, which complicates the alignment between the draft and target model
-outputs, coupled with the inadequate use of the two-dimensional spatial
-structure inherent in images, thereby limiting the modeling of local
-dependencies. To overcome these challenges, we introduce Hawk, a new approach
-that harnesses the spatial structure of images to guide the speculative model
-toward more accurate and efficient predictions. Experimental results on
-multiple text-to-image benchmarks demonstrate a 1.71x speedup over standard AR
-models, while preserving both image fidelity and diversity.
-</summary>
-    <author>
-      <name>Zhi-Kai Chen</name>
+      <name>Hongsheng Li</name>
     </author>
     <author>
-      <name>Jun-Peng Jiang</name>
+      <name>Pheng-Ann Heng</name>
     </author>
-    <author>
-      <name>Han-Jia Ye</name>
-    </author>
-    <author>
-      <name>De-Chuan Zhan</name>
-    </author>
-    <link href="http://arxiv.org/abs/2510.25739v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25739v1" rel="related" type="application/pdf"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://video-cof.github.io</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.26802v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26802v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.25709v1</id>
-    <updated>2025-10-29T17:19:29Z</updated>
-    <published>2025-10-29T17:19:29Z</published>
-    <title>A new conformal gauge theory of vector-spinors and spin-3/2 particles</title>
-    <summary>  The unique off-shell fermionic gauge invariance of a vector-spinor field
-theory is found, and the invariant action is derived. The latter is Weyl
-invariant in any dimension in the massless limit, and it coincides with the
-singular point of the one-parameter family of Rarita-Schwinger Lagrangians.
-Pure gauge configurations are represented by gamma-trace vector-spinors, which
-can be gauged away in a global way. Previous claims that this theory is
-inconsistent are shown to be flawed, and the Velo-Zwanziger instability is
-proved to be absent. The theory propagates a massive spin-3/2 particle together
-with a spin-1/2 state whose mass is twice that of the j=3/2 mode. This physical
-prediction is derived in a consistent fashion both from the classical field
-equations in d=4 and from the causal construction of a gamma-traceless quantum
-vector-spinor field. The conformal anomaly is derived using known results for
-the heat kernel of non-minimal second-order operators, and it is shown that the
-a-anomaly has an opposite sign w.r.t. known results for lower spin fields.
+    <id>http://arxiv.org/abs/2510.26796v1</id>
+    <updated>2025-10-30T17:59:39Z</updated>
+    <published>2025-10-30T17:59:39Z</published>
+    <title>SEE4D: Pose-Free 4D Generation via Auto-Regressive Video Inpainting</title>
+    <summary>  Immersive applications call for synthesizing spatiotemporal 4D content from
+casual videos without costly 3D supervision. Existing video-to-4D methods
+typically rely on manually annotated camera poses, which are labor-intensive
+and brittle for in-the-wild footage. Recent warp-then-inpaint approaches
+mitigate the need for pose labels by warping input frames along a novel camera
+trajectory and using an inpainting model to fill missing regions, thereby
+depicting the 4D scene from diverse viewpoints. However, this
+trajectory-to-trajectory formulation often entangles camera motion with scene
+dynamics and complicates both modeling and inference. We introduce SEE4D, a
+pose-free, trajectory-to-camera framework that replaces explicit trajectory
+prediction with rendering to a bank of fixed virtual cameras, thereby
+separating camera control from scene modeling. A view-conditional video
+inpainting model is trained to learn a robust geometry prior by denoising
+realistically synthesized warped images and to inpaint occluded or missing
+regions across virtual viewpoints, eliminating the need for explicit 3D
+annotations. Building on this inpainting core, we design a spatiotemporal
+autoregressive inference pipeline that traverses virtual-camera splines and
+extends videos with overlapping windows, enabling coherent generation at
+bounded per-step complexity. We validate See4D on cross-view video generation
+and sparse reconstruction benchmarks. Across quantitative metrics and
+qualitative assessments, our method achieves superior generalization and
+improved performance relative to pose- or trajectory-conditioned baselines,
+advancing practical 4D world modeling from casual videos.
 </summary>
     <author>
-      <name>Dario Sauro</name>
+      <name>Dongyue Lu</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, comments are welcome</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25709v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25709v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <author>
+      <name>Ao Liang</name>
+    </author>
+    <author>
+      <name>Tianxin Huang</name>
+    </author>
+    <author>
+      <name>Xiao Fu</name>
+    </author>
+    <author>
+      <name>Yuyang Zhao</name>
+    </author>
+    <author>
+      <name>Baorui Ma</name>
+    </author>
+    <author>
+      <name>Liang Pan</name>
+    </author>
+    <author>
+      <name>Wei Yin</name>
+    </author>
+    <author>
+      <name>Lingdong Kong</name>
+    </author>
+    <author>
+      <name>Wei Tsang Ooi</name>
+    </author>
+    <author>
+      <name>Ziwei Liu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">26 pages; 21 figures; 3 tables; project page:
+  https://see-4d.github.io/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.26796v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26796v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.25706v1</id>
-    <updated>2025-10-29T17:17:14Z</updated>
-    <published>2025-10-29T17:17:14Z</published>
-    <title>Cosmological Constraints from Dark Energy Survey Year 1 Cluster Lensing
-  and Abundances with Simulation-based Forward-Modeling</title>
-    <summary>  We present a simulation-based forward-modeling framework for cosmological
-inference from optical galaxy-cluster samples, and apply it to the abundance
-and weak-lensing signals of DES-Y1 redMaPPer clusters. The model embeds
-cosmology-dependent optical selection using a counts-in-cylinders approach,
-while also accounting for cluster miscentering and baryonic feedback in
-lensing. Applied to DES-Y1, and assuming a flat $\Lambda$CDM cosmology, we
-obtain $\Omega_m=0.254^{+0.026}_{-0.020}$ and
-$\sigma_8=0.826^{+0.030}_{-0.034}$, consistent with a broad suite of
-low-redshift structure measurements, including recent full-shape analyses, the
-DES/KiDS/HSC 3$\times$2 results, and most cluster-abundance studies. Our
-results are also consistent with \textit{Planck}, with the difference being
-significant at $2.58\sigma$. These results establish simulation-based
-forward-modeling of cluster abundances as a promising new tool for precision
-cosmology with Stage~IV survey data.
+    <id>http://arxiv.org/abs/2510.26788v1</id>
+    <updated>2025-10-30T17:58:11Z</updated>
+    <published>2025-10-30T17:58:11Z</published>
+    <title>Defeating the Training-Inference Mismatch via FP16</title>
+    <summary>  Reinforcement learning (RL) fine-tuning of large language models (LLMs) often
+suffers from instability due to the numerical mismatch between the training and
+inference policies. While prior work has attempted to mitigate this issue
+through algorithmic corrections or engineering alignments, we show that its
+root cause lies in the floating point precision itself. The widely adopted
+BF16, despite its large dynamic range, introduces large rounding errors that
+breaks the consistency between training and inference. In this work, we
+demonstrate that simply reverting to \textbf{FP16} effectively eliminates this
+mismatch. The change is simple, fully supported by modern frameworks with only
+a few lines of code change, and requires no modification to the model
+architecture or learning algorithm. Our results suggest that using FP16
+uniformly yields more stable optimization, faster convergence, and stronger
+performance across diverse tasks, algorithms and frameworks. We hope these
+findings motivate a broader reconsideration of precision trade-offs in RL
+fine-tuning.
 </summary>
     <author>
-      <name>Andrés N. Salcedo</name>
+      <name>Penghui Qi</name>
     </author>
     <author>
-      <name>Eduardo Rozo</name>
+      <name>Zichen Liu</name>
     </author>
     <author>
-      <name>Hao-Yi Wu</name>
+      <name>Xiangxin Zhou</name>
     </author>
     <author>
-      <name>David H. Weinberg</name>
+      <name>Tianyu Pang</name>
     </author>
     <author>
-      <name>Pranav Chiploonkar</name>
+      <name>Chao Du</name>
     </author>
     <author>
-      <name>Chun-Hao To</name>
+      <name>Wee Sun Lee</name>
     </author>
     <author>
-      <name>Shulei Cao</name>
+      <name>Min Lin</name>
     </author>
-    <author>
-      <name>Eli S. Rykoff</name>
-    </author>
-    <author>
-      <name>Nicole Marcelina Gountanis</name>
-    </author>
-    <author>
-      <name>Conghao Zhou</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages, 8 main text figures and 1 table, 2 appendix figures and 1
-  table, submitted to PRD</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25706v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25706v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.25700v1</id>
-    <updated>2025-10-29T17:04:34Z</updated>
-    <published>2025-10-29T17:04:34Z</published>
-    <title>Timelike Holographic Complexity</title>
-    <summary>  Motivated by the pseudo-entropy program, we investigate timelike subregion
-complexity within the holographic ``Complexity=Volume'' framework, extending
-the usual spatial constructions to Lorentzian boundary intervals. For
-hyperbolic timelike regions in AdS geometries, we compute the corresponding
-bulk volumes and demonstrate that, despite the Lorentzian embedding, the
-resulting subregion complexity remains purely real. We further generalize our
-analysis to AdS black brane geometries, where the extremal surfaces can either
-be constant-time hypersurfaces or penetrate the horizon. In all cases, the
-computed complexity exhibits the same universal UV divergences as in the
-spacelike case but shows no imaginary contribution, underscoring its causal and
-geometric origin. This stands in sharp contrast with the complex-valued
-pseudo-entropy and suggests that holographic complexity preserves a genuinely
-geometric and real character even under Lorentzian continuation.
-</summary>
-    <author>
-      <name>Mohsen Alishahiha</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, 2 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25700v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25700v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.25697v2</id>
-    <updated>2025-10-30T12:22:50Z</updated>
-    <published>2025-10-29T17:01:51Z</published>
-    <title>Fourier Neural Operators for Two-Phase, 2D Mold-Filling Problems Related
-  to Metal Casting</title>
-    <summary>  We formulate mold filling in metal casting as a 2D neural operator learning
-problem that maps geometry and boundary data on an unstructured mesh to time
-resolved flow quantities, replacing expensive transient CFD. In the proposed
-method, a graph based encoder aggregates local neighborhood information on the
-input mesh and encodes geometry and boundary data, a Fourier spectral core
-operates on a regular latent grid to capture global interactions across the
-domain, and a graph based decoder projects the latent fields to a target mesh.
-The model is trained to jointly predict velocity components, pressure, and
-liquid volume fraction over a fixed rollout horizon and generalizes across
-different ingate locations and process settings. On held out geometries and
-inlet conditions, it reproduces large scale advection and the fluid-air
-interface evolution with localized errors near steep gradients. The mean
-relative L2 error is about 5% across all fields, and inference is two to three
-orders of magnitude faster than conventional CFD, enabling design in the loop
-exploration. Ablation studies show monotonic accuracy degradation under
-stronger spatial subsampling of input vertices and a smoother decline under
-temporal subsampling. Halving the training set yields only a small increase in
-error. These results establish neural operators as accurate and data efficient
-surrogates for 2D mold filling and enable rapid optimization of gating systems
-in casting workflows.
-</summary>
-    <author>
-      <name>Edgard Moreira Minete</name>
-    </author>
-    <author>
-      <name>Mathis Immertreu</name>
-    </author>
-    <author>
-      <name>Fabian Teichmann</name>
-    </author>
-    <author>
-      <name>Sebastian Müller</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages, 7 figures, 5 tables, 63 references</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25697v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25697v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="I.6.3, J.2, I.2.1" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.25683v1</id>
-    <updated>2025-10-29T16:47:24Z</updated>
-    <published>2025-10-29T16:47:24Z</published>
-    <title>Graph Network-based Structural Simulator: Graph Neural Networks for
-  Structural Dynamics</title>
-    <summary>  Graph Neural Networks (GNNs) have recently been explored as surrogate models
-for numerical simulations. While their applications in computational fluid
-dynamics have been investigated, little attention has been given to structural
-problems, especially for dynamic cases. To address this gap, we introduce the
-Graph Network-based Structural Simulator (GNSS), a GNN framework for surrogate
-modeling of dynamic structural problems.
-  GNSS follows the encode-process-decode paradigm typical of GNN-based machine
-learning models, and its design makes it particularly suited for dynamic
-simulations thanks to three key features: (i) expressing node kinematics in
-node-fixed local frames, which avoids catastrophic cancellation in
-finite-difference velocities; (ii) employing a sign-aware regression loss,
-which reduces phase errors in long rollouts; and (iii) using a
-wavelength-informed connectivity radius, which optimizes graph construction.
-  We evaluate GNSS on a case study involving a beam excited by a 50kHz
-Hanning-modulated pulse. The results show that GNSS accurately reproduces the
-physics of the problem over hundreds of timesteps and generalizes to unseen
-loading conditions, where existing GNNs fail to converge or deliver meaningful
-predictions.
-  Compared with explicit finite element baselines, GNSS achieves substantial
-inference speedups while preserving spatial and temporal fidelity. These
-findings demonstrate that locality-preserving GNNs with physics-consistent
-update rules are a competitive alternative for dynamic, wave-dominated
-structural simulations.
-</summary>
-    <author>
-      <name>Alessandro Lucchetti</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Politecnico di Milano, Department of Mechanical Engineering, Milano, Italy</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Francesco Cadini</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Politecnico di Milano, Department of Mechanical Engineering, Milano, Italy</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Marco Giglio</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Politecnico di Milano, Department of Mechanical Engineering, Milano, Italy</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Luca Lomazzi</name>
-      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Politecnico di Milano, Department of Mechanical Engineering, Milano, Italy</arxiv:affiliation>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 14 figures</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25683v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25683v1" rel="related" type="application/pdf"/>
+    <link href="http://arxiv.org/abs/2510.26788v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26788v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2510.25677v1</id>
-    <updated>2025-10-29T16:43:07Z</updated>
-    <published>2025-10-29T16:43:07Z</published>
-    <title>ZK-SenseLM: Verifiable Large-Model Wireless Sensing with Selective
-  Abstention and Zero-Knowledge Attestation</title>
-    <summary>  ZK-SenseLM is a secure and auditable wireless sensing framework that pairs a
-large-model encoder for Wi-Fi channel state information (and optionally mmWave
-radar or RFID) with a policy-grounded decision layer and end-to-end
-zero-knowledge proofs of inference. The encoder uses masked spectral
-pretraining with phase-consistency regularization, plus a light cross-modal
-alignment that ties RF features to compact, human-interpretable policy tokens.
-To reduce unsafe actions under distribution shift, we add a calibrated
-selective-abstention head; the chosen risk-coverage operating point is
-registered and bound into the proof. We implement a four-stage proving
-pipeline: (C1) feature sanity and commitment, (C2) threshold and version
-binding, (C3) time-window binding, and (C4) PLONK-style proofs that the
-quantized network, given the committed window, produced the logged action and
-confidence. Micro-batched proving amortizes cost across adjacent windows, and a
-gateway option offloads proofs from low-power devices. The system integrates
-with differentially private federated learning and on-device personalization
-without weakening verifiability: model hashes and the registered threshold are
-part of each public statement. Across activity, presence or intrusion,
-respiratory proxy, and RF fingerprinting tasks, ZK-SenseLM improves macro-F1
-and calibration, yields favorable coverage-risk curves under perturbations, and
-rejects tamper and replay with compact proofs and fast verification.
-</summary>
-    <author>
-      <name>Hasan Akgul</name>
-    </author>
-    <author>
-      <name>Mari Eplik</name>
-    </author>
-    <author>
-      <name>Javier Rojas</name>
-    </author>
-    <author>
-      <name>Aina Binti Abdullah</name>
-    </author>
-    <author>
-      <name>Pieter van der Merwe</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">45 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25677v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25677v1" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="C.2.1; D.4.6; E.3; I.2.6; I.5.4" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2510.25674v1</id>
-    <updated>2025-10-29T16:42:07Z</updated>
-    <published>2025-10-29T16:42:07Z</published>
-    <title>Mechanistic Interpretability of RNNs emulating Hidden Markov Models</title>
-    <summary>  Recurrent neural networks (RNNs) provide a powerful approach in neuroscience
-to infer latent dynamics in neural populations and to generate hypotheses about
-the neural computations underlying behavior. However, past work has focused on
-relatively simple, input-driven, and largely deterministic behaviors - little
-is known about the mechanisms that would allow RNNs to generate the richer,
-spontaneous, and potentially stochastic behaviors observed in natural settings.
-Modeling with Hidden Markov Models (HMMs) has revealed a segmentation of
-natural behaviors into discrete latent states with stochastic transitions
-between them, a type of dynamics that may appear at odds with the continuous
-state spaces implemented by RNNs. Here we first show that RNNs can replicate
-HMM emission statistics and then reverse-engineer the trained networks to
-uncover the mechanisms they implement. In the absence of inputs, the activity
-of trained RNNs collapses towards a single fixed point. When driven by
-stochastic input, trajectories instead exhibit noise-sustained dynamics along
-closed orbits. Rotation along these orbits modulates the emission probabilities
-and is governed by transitions between regions of slow, noise-driven dynamics
-connected by fast, deterministic transitions. The trained RNNs develop highly
-structured connectivity, with a small set of "kick neurons" initiating
-transitions between these regions. This mechanism emerges during training as
-the network shifts into a regime of stochastic resonance, enabling it to
-perform probabilistic computations. Analyses across multiple HMM architectures
-- fully connected, cyclic, and linear-chain - reveal that this solution
-generalizes through the modular reuse of the same dynamical motif, suggesting a
-compositional principle by which RNNs can emulate complex discrete latent
-dynamics.
+    <id>http://arxiv.org/abs/2510.26786v1</id>
+    <updated>2025-10-30T17:57:40Z</updated>
+    <published>2025-10-30T17:57:40Z</published>
+    <title>HEIR: Learning Graph-Based Motion Hierarchies</title>
+    <summary>  Hierarchical structures of motion exist across research fields, including
+computer vision, graphics, and robotics, where complex dynamics typically arise
+from coordinated interactions among simpler motion components. Existing methods
+to model such dynamics typically rely on manually-defined or heuristic
+hierarchies with fixed motion primitives, limiting their generalizability
+across different tasks. In this work, we propose a general hierarchical motion
+modeling method that learns structured, interpretable motion relationships
+directly from data. Our method represents observed motions using graph-based
+hierarchies, explicitly decomposing global absolute motions into
+parent-inherited patterns and local motion residuals. We formulate hierarchy
+inference as a differentiable graph learning problem, where vertices represent
+elemental motions and directed edges capture learned parent-child dependencies
+through graph neural networks. We evaluate our hierarchical reconstruction
+approach on three examples: 1D translational motion, 2D rotational motion, and
+dynamic 3D scene deformation via Gaussian splatting. Experimental results show
+that our method reconstructs the intrinsic motion hierarchy in 1D and 2D cases,
+and produces more realistic and interpretable deformations compared to the
+baseline on dynamic 3D Gaussian splatting scenes. By providing an adaptable,
+data-driven hierarchical modeling paradigm, our method offers a formulation
+applicable to a broad range of motion-centric tasks. Project Page:
+https://light.princeton.edu/HEIR/
 </summary>
     <author>
-      <name>Elia Torre</name>
+      <name>Cheng Zheng</name>
     </author>
     <author>
-      <name>Michele Viscione</name>
+      <name>William Koch</name>
     </author>
     <author>
-      <name>Lucas Pompe</name>
+      <name>Baiang Li</name>
     </author>
     <author>
-      <name>Benjamin F Grewe</name>
+      <name>Felix Heide</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code link: https://github.com/princeton-computational-imaging/HEIR</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Advances in Neural Information Processing Systems 38 (NeurIPS
+  2025)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2510.26786v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26786v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26784v1</id>
+    <updated>2025-10-30T17:57:17Z</updated>
+    <published>2025-10-30T17:57:17Z</published>
+    <title>LLMs Process Lists With General Filter Heads</title>
+    <summary>  We investigate the mechanisms underlying a range of list-processing tasks in
+LLMs, and we find that LLMs have learned to encode a compact, causal
+representation of a general filtering operation that mirrors the generic
+"filter" function of functional programming. Using causal mediation analysis on
+a diverse set of list-processing tasks, we find that a small number of
+attention heads, which we dub filter heads, encode a compact representation of
+the filtering predicate in their query states at certain tokens. We demonstrate
+that this predicate representation is general and portable: it can be extracted
+and reapplied to execute the same filtering operation on different collections,
+presented in different formats, languages, or even in tasks. However, we also
+identify situations where transformer LMs can exploit a different strategy for
+filtering: eagerly evaluating if an item satisfies the predicate and storing
+this intermediate result as a flag directly in the item representations. Our
+results reveal that transformer LMs can develop human-interpretable
+implementations of abstract computational operations that generalize in ways
+that are surprisingly similar to strategies used in traditional functional
+programming patterns.
+</summary>
+    <author>
+      <name>Arnab Sen Sharma</name>
     </author>
     <author>
-      <name>Valerio Mante</name>
+      <name>Giordano Rogers</name>
     </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at NeurIPS 2025</arxiv:comment>
-    <link href="http://arxiv.org/abs/2510.25674v1" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2510.25674v1" rel="related" type="application/pdf"/>
+    <author>
+      <name>Natalie Shapira</name>
+    </author>
+    <author>
+      <name>David Bau</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Code and data at https://filter.baulab.info/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.26784v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26784v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26783v1</id>
+    <updated>2025-10-30T17:56:47Z</updated>
+    <published>2025-10-30T17:56:47Z</published>
+    <title>A Unified Theory for Causal Inference: Direct Debiased Machine Learning
+  via Bregman-Riesz Regression</title>
+    <summary>  This note introduces a unified theory for causal inference that integrates
+Riesz regression, covariate balancing, density-ratio estimation (DRE), targeted
+maximum likelihood estimation (TMLE), and the matching estimator in average
+treatment effect (ATE) estimation. In ATE estimation, the balancing weights and
+the regression functions of the outcome play important roles, where the
+balancing weights are referred to as the Riesz representer, bias-correction
+term, and clever covariates, depending on the context. Riesz regression,
+covariate balancing, DRE, and the matching estimator are methods for estimating
+the balancing weights, where Riesz regression is essentially equivalent to DRE
+in the ATE context, the matching estimator is a special case of DRE, and DRE is
+in a dual relationship with covariate balancing. TMLE is a method for
+constructing regression function estimators such that the leading bias term
+becomes zero. Nearest Neighbor Matching is equivalent to Least Squares Density
+Ratio Estimation and Riesz Regression.
+</summary>
+    <author>
+      <name>Masahiro Kato</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.26783v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26783v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.TH" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26781v1</id>
+    <updated>2025-10-30T17:56:31Z</updated>
+    <published>2025-10-30T17:56:31Z</published>
+    <title>ChartAB: A Benchmark for Chart Grounding &amp; Dense Alignment</title>
+    <summary>  Charts play an important role in visualization, reasoning, data analysis, and
+the exchange of ideas among humans. However, existing vision-language models
+(VLMs) still lack accurate perception of details and struggle to extract
+fine-grained structures from charts. Such limitations in chart grounding also
+hinder their ability to compare multiple charts and reason over them. In this
+paper, we introduce a novel "ChartAlign Benchmark (ChartAB)" to provide a
+comprehensive evaluation of VLMs in chart grounding tasks, i.e., extracting
+tabular data, localizing visualization elements, and recognizing various
+attributes from charts of diverse types and complexities. We design a JSON
+template to facilitate the calculation of evaluation metrics specifically
+tailored for each grounding task. By incorporating a novel two-stage inference
+workflow, the benchmark can further evaluate VLMs' capability to align and
+compare elements/attributes across two charts. Our analysis of evaluations on
+several recent VLMs reveals new insights into their perception biases,
+weaknesses, robustness, and hallucinations in chart understanding. These
+findings highlight the fine-grained discrepancies among VLMs in chart
+understanding tasks and point to specific skills that need to be strengthened
+in current models.
+</summary>
+    <author>
+      <name>Aniruddh Bansal</name>
+    </author>
+    <author>
+      <name>Davit Soselia</name>
+    </author>
+    <author>
+      <name>Dang Nguyen</name>
+    </author>
+    <author>
+      <name>Tianyi Zhou</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.26781v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26781v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26776v1</id>
+    <updated>2025-10-30T17:55:19Z</updated>
+    <published>2025-10-30T17:55:19Z</published>
+    <title>Faithful and Fast Influence Function via Advanced Sampling</title>
+    <summary>  How can we explain the influence of training data on black-box models?
+Influence functions (IFs) offer a post-hoc solution by utilizing gradients and
+Hessians. However, computing the Hessian for an entire dataset is
+resource-intensive, necessitating a feasible alternative. A common approach
+involves randomly sampling a small subset of the training data, but this method
+often results in highly inconsistent IF estimates due to the high variance in
+sample configurations. To address this, we propose two advanced sampling
+techniques based on features and logits. These samplers select a small yet
+representative subset of the entire dataset by considering the stochastic
+distribution of features or logits, thereby enhancing the accuracy of IF
+estimations. We validate our approach through class removal experiments, a
+typical application of IFs, using the F1-score to measure how effectively the
+model forgets the removed class while maintaining inference consistency on the
+remaining classes. Our method reduces computation time by 30.1% and memory
+usage by 42.2%, or improves the F1-score by 2.5% compared to the baseline.
+</summary>
+    <author>
+      <name>Jungyeon Koh</name>
+    </author>
+    <author>
+      <name>Hyeonsu Lyu</name>
+    </author>
+    <author>
+      <name>Jonggyu Jang</name>
+    </author>
+    <author>
+      <name>Hyun Jong Yang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2510.26776v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26776v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26774v1</id>
+    <updated>2025-10-30T17:55:01Z</updated>
+    <published>2025-10-30T17:55:01Z</published>
+    <title>Compact Accretion Disks in the Aftermath of Tidal Disruption Events:
+  Parameter Inference from Joint X-ray Spectra and UV/Optical Photometry
+  Fitting</title>
+    <summary>  We present a multi-wavelength analysis of 14 tidal disruption events
+(TDEs)-including an off-nuclear event associated with an ultra-compact dwarf
+galaxy-selected for having available thermal X-ray spectra during their
+late-time UV/optical plateau phase. We show that at these stages, the full
+spectral energy distribution - X-ray spectra and UV/optical photometry - is
+well described by a compact, yet standard accretion disk, the same disk which
+powers the X-rays at all times. By fitting up to three three epochs per source
+with a fully relativistic disk model, we show that many system properties can
+be reliably recovered, including importantly the black hole mass
+($M_{\bullet}$). These accretion-based $M_{\bullet}$ values, which in this
+sample span nearly three orders of magnitude, are consistent with galactic
+scaling relations but are significantly more precise (68\% credible interval $
+&lt; \pm 0.3$ dex) and physically motivated. Expected accretion scaling relations
+(e.g., $L_{Bol}^{ disk} / L_{Edd} \propto T_p^4 \propto M_{\bullet}^{-1}$),
+TDE-specific physics correlations ($L_{plat} \propto M_{\bullet}^{2/3}$ and
+$R_{out}/r_g \propto M_{\bullet}^{-2/3}$) and black hole-host galaxy
+correlations ($M_{\bullet}$-$M_{\star}$ and $M_{\bullet}$-$\sigma_{\star}$)
+naturally emerge from the data and, for the first time, are self-consistently
+extended into the intermediate-mass (IMBH, $M_{\bullet} &lt; 10^{5}$) regime. We
+discuss the implications of these results for TDE physics and modeling. We also
+review and discuss different methods for $M_{\bullet}$ inference in TDEs, and
+find that approaches based on physical models of the early-time UV/optical
+emission are not able to recover (at a statistically significant level) black
+hole-host galaxy scalings.
+</summary>
+    <author>
+      <name>M. Guolo</name>
+    </author>
+    <author>
+      <name>A. Mummery</name>
+    </author>
+    <author>
+      <name>S. van Velzen</name>
+    </author>
+    <author>
+      <name>S. Gezari</name>
+    </author>
+    <author>
+      <name>M. Nicholl</name>
+    </author>
+    <author>
+      <name>Y. Yao</name>
+    </author>
+    <author>
+      <name>M. Karmen</name>
+    </author>
+    <author>
+      <name>Y. Ajay</name>
+    </author>
+    <author>
+      <name>T. Wevers</name>
+    </author>
+    <author>
+      <name>N. LeBaron</name>
+    </author>
+    <author>
+      <name>R. Chornock</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to ApJ</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.26774v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26774v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26771v1</id>
+    <updated>2025-10-30T17:53:42Z</updated>
+    <published>2025-10-30T17:53:42Z</published>
+    <title>STaMP: Sequence Transformation and Mixed Precision for Low-Precision
+  Activation Quantization</title>
+    <summary>  Quantization is the key method for reducing inference latency, power and
+memory footprint of generative AI models. However, accuracy often degrades
+sharply when activations are quantized below eight bits. Recent work suggests
+that invertible linear transformations (e.g. rotations) can aid quantization,
+by reparameterizing feature channels and weights. In this paper, we propose
+\textit{Sequence Transformation and Mixed Precision} (STaMP) quantization, a
+novel strategy that applies linear transformations along the \textit{sequence}
+dimension to exploit the strong local correlation in language and visual data.
+By keeping a small number of tokens in each intermediate activation at higher
+precision, we can maintain model accuracy at lower (average) activations
+bit-widths. We evaluate STaMP on recent LVM and LLM architectures,
+demonstrating that it significantly improves low bit width activation
+quantization and complements established activation and weight quantization
+methods including recent feature transformations.
+</summary>
+    <author>
+      <name>Marco Federici</name>
+    </author>
+    <author>
+      <name>Riccardo Del Chiaro</name>
+    </author>
+    <author>
+      <name>Boris van Breugel</name>
+    </author>
+    <author>
+      <name>Paul Whatmough</name>
+    </author>
+    <author>
+      <name>Markus Nagel</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages main text, 8 pages supplementary material</arxiv:comment>
+    <link href="http://arxiv.org/abs/2510.26771v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2510.26771v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
 </feed>
