@@ -1,308 +1,705 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-11-17T00:58:04Z -->
+<!-- Last updated: 2025-11-18T00:56:48Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-11-17T00:58:04Z</updated>
+  <updated>2025-11-18T00:56:49Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>126099</opensearch:totalResults>
+  <opensearch:totalResults>126196</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2511.10645v1</id>
-    <title>ParoQuant: Pairwise Rotation Quantization for Efficient Reasoning LLM Inference</title>
-    <updated>2025-11-13T18:59:24Z</updated>
-    <link href="https://arxiv.org/abs/2511.10645v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10645v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Weight-only post-training quantization (PTQ) compresses the weights of Large Language Models (LLMs) into low-precision representations to reduce memory footprint and accelerate inference. However, the presence of outliers in weights and activations often leads to large quantization errors and severe accuracy degradation, especially in recent reasoning LLMs where errors accumulate across long chains of thought. Existing PTQ methods either fail to sufficiently suppress outliers or introduce significant overhead during inference. In this paper, we propose Pairwise Rotation Quantization (ParoQuant), a weight-only PTQ method that combines hardware-efficient and optimizable independent Givens rotations with channel-wise scaling to even out the magnitude across channels and narrow the dynamic range within each quantization group. We further co-design the inference kernel to fully exploit GPU parallelism and keep the rotations and scaling lightweight at runtime. ParoQuant achieves an average 2.4% accuracy improvement over AWQ on reasoning tasks with less than 10% overhead. This paves the way for more efficient and accurate deployment of reasoning LLMs.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:59:24Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Yesheng Liang</name>
-    </author>
-    <author>
-      <name>Haisheng Chen</name>
-    </author>
-    <author>
-      <name>Song Han</name>
-    </author>
-    <author>
-      <name>Zhijian Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.10640v1</id>
-    <title>Flexible Simulation Based Inference for Galaxy Photometric Fitting with Synthesizer</title>
-    <updated>2025-11-13T18:56:48Z</updated>
-    <link href="https://arxiv.org/abs/2511.10640v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10640v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We introduce Synference, a new, flexible Python framework for galaxy SED fitting using simulation-based inference (SBI). Synference leverages the Synthesizer package for flexible forward-modelling of galaxy SEDs and integrates the LtU-ILI package to ensure best practices in model training and validation. In this work we demonstrate Synference by training a neural posterior estimator on $10^6$ simulated galaxies, based on a flexible 8-parameter physical model, to infer galaxy properties from 14-band HST and JWST photometry. We validate this model, demonstrating excellent parameter recovery (e.g. R$^2&gt;$0.99 for M$_\star$) and accurate posterior calibration against nested sampling results. We apply our trained model to 3,088 spectroscopically-confirmed galaxies in the JADES GOODS-South field. The amortized inference is exceptionally fast, having nearly fixed cost per posterior evaluation and processing the entire sample in $\sim$3 minutes on a single CPU (18 galaxies/CPU/sec), a $\sim$1700$\times$ speedup over traditional nested sampling or MCMC techniques. We demonstrate Synference's ability to simultaneously infer photometric redshifts and physical parameters, and highlight its utility for rapid Bayesian model comparison by demonstrating systematic stellar mass differences between two commonly used stellar population synthesis models. Synference is a powerful, scalable tool poised to maximise the scientific return of next-generation galaxy surveys.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2511.11568v1</id>
+    <title>Implicit inference of the reionization history with higher-order statistics of the 21-cm signal</title>
+    <updated>2025-11-14T18:58:13Z</updated>
+    <link href="https://arxiv.org/abs/2511.11568v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11568v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Epoch of Reionization (EoR), when the first luminous sources ionised the intergalactic medium, represents a new frontier in cosmology. The Square Kilometre Array Observatory (SKAO) will offer unprecedented insights into this era through observations of the redshifted 21-cm signal, enabling constraints on the Universe's reionization history. We investigate the information content of the average neutral hydrogen fraction ($\bar{x}_{\rm HI}$) in several Gaussian (spherical and cylindrical power spectra) and non-Gaussian (Betti numbers and bispectrum) summary statistics of the 21-cm signal. Mock 21-cm observations are generated using the AA* configuration of SKAO's low-frequency telescope, incorporating noise levels for 100 and 1000 hours. We employ a state-of-the-art implicit inference framework to learn posterior distributions of $\bar{x}_{\rm HI}$ in redshift bins centred at $z=8.0,7.2$ and $6.5$, for each statistic and noise scenario, validating the posteriors through calibration tests. Using the figure of merit to assess constraining power, we find that Betti numbers alone are on average more informative than the power spectra, while the bispectrum provides limited constraints. However, combining higher-order statistics with the cylindrical power spectrum improves the mean figure of merit by $\sim$0.25 dex ($\sim33\%$ reduction in $σ(\bar{x}_{\rm HI})$). The relative contribution of each statistic varies with the stage of reionization. With SKAO observations approaching, our results show that combining power spectra with higher-order statistics can significantly increase the information retrieved from the EoR, maximising the scientific return of future 21-cm observations.</summary>
     <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:56:48Z</published>
-    <arxiv:comment>23 pages, 12 figures. Submitted to MNRAS. The Synference package is available at https://github.com/synthesizer-project/synference/</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Thomas Harvey</name>
-    </author>
-    <author>
-      <name>Christopher C. Lovell</name>
-    </author>
-    <author>
-      <name>Sophie Newman</name>
-    </author>
-    <author>
-      <name>Christopher J. Conselice</name>
-    </author>
-    <author>
-      <name>Duncan Austin</name>
-    </author>
-    <author>
-      <name>Aswin P. Vijayan</name>
-    </author>
-    <author>
-      <name>Stephen M. Wilkins</name>
-    </author>
-    <author>
-      <name>Vadim Rusakov</name>
-    </author>
-    <author>
-      <name>Qiong Li</name>
-    </author>
-    <author>
-      <name>Nathan Adams</name>
-    </author>
-    <author>
-      <name>Kai Magdwick</name>
-    </author>
-    <author>
-      <name>Matthew Ho</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.10635v1</id>
-    <title>Robot Crash Course: Learning Soft and Stylized Falling</title>
-    <updated>2025-11-13T18:55:34Z</updated>
-    <link href="https://arxiv.org/abs/2511.10635v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10635v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Despite recent advances in robust locomotion, bipedal robots operating in the real world remain at risk of falling. While most research focuses on preventing such events, we instead concentrate on the phenomenon of falling itself. Specifically, we aim to reduce physical damage to the robot while providing users with control over a robot's end pose. To this end, we propose a robot agnostic reward function that balances the achievement of a desired end pose with impact minimization and the protection of critical robot parts during reinforcement learning. To make the policy robust to a broad range of initial falling conditions and to enable the specification of an arbitrary and unseen end pose at inference time, we introduce a simulation-based sampling strategy of initial and end poses. Through simulated and real-world experiments, our work demonstrates that even bipedal robots can perform controlled, soft falls.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:55:34Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Pascal Strauch</name>
-    </author>
-    <author>
-      <name>David Müller</name>
-    </author>
-    <author>
-      <name>Sammy Christen</name>
-    </author>
-    <author>
-      <name>Agon Serifi</name>
-    </author>
-    <author>
-      <name>Ruben Grandia</name>
-    </author>
-    <author>
-      <name>Espen Knoop</name>
-    </author>
-    <author>
-      <name>Moritz Bächer</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.10634v1</id>
-    <title>Baryonic Feedback across Halo Mass: Impact on the Matter Power Spectrum</title>
-    <updated>2025-11-13T18:55:17Z</updated>
-    <link href="https://arxiv.org/abs/2511.10634v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10634v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Upcoming weak-lensing surveys will probe the matter distribution at a few percent level on nonlinear scales (k &gt; 1 h/Mpc) where baryonic feedback from galaxy formation modifies the clustering of matter. Using the IllustrisTNG hydrodynamical simulations, we quantify the mass and radial dependence of baryonic suppression of the matter power spectrum by selectively replacing halos in the collisionless run with their full-physics counterparts. We find that group-scale halos with log $M_{200m}/h^{-1} M_{sun}$ in [13, 14] dominate the suppression, contributing a large fraction of the total reduction in power at k ~ 5-30 h/Mpc. The suppression is smaller on either side of this mass bin. Correctly reproducing the full suppression of the power spectrum requires accounting for matter redistribution (while enforcing mass conservation) beyond the virial radius of each halo. Crucially, the same group-scale regime produces the strongest and most detectable deviations in group-galaxy lensing, making stacked group lensing a powerful observational test of feedback models. Our results motivate emulators that jointly predict the matter power spectrum and halo-matter correlations including baryonic effects, enabling unbiased cosmological inference from small scales.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:55:17Z</published>
-    <arxiv:comment>19 pages, 5 figures</arxiv:comment>
+    <published>2025-11-14T18:58:13Z</published>
+    <arxiv:comment>14 pages, 8 figures. Prepared for submission to MNRAS. Comments welcome</arxiv:comment>
     <arxiv:primary_category term="astro-ph.CO"/>
     <author>
-      <name>Kyle Miller</name>
+      <name>Nicolas Cerardi</name>
     </author>
     <author>
-      <name>Surhud More</name>
+      <name>Sambit K. Giri</name>
     </author>
     <author>
-      <name>Bhuvnesh Jain</name>
+      <name>Michele Bianco</name>
+    </author>
+    <author>
+      <name>Davide Piras</name>
+    </author>
+    <author>
+      <name>Emmanuel de Salis</name>
+    </author>
+    <author>
+      <name>Massimo De Santis</name>
+    </author>
+    <author>
+      <name>Merve Selcuk-Simsek</name>
+    </author>
+    <author>
+      <name>Philipp Denzel</name>
+    </author>
+    <author>
+      <name>Kelley M. Hess</name>
+    </author>
+    <author>
+      <name>M. Carmen Toribio</name>
+    </author>
+    <author>
+      <name>Franz Kirsten</name>
+    </author>
+    <author>
+      <name>Hatem Ghorbel</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.10625v1</id>
-    <title>Model-oriented Graph Distances via Partially Ordered Sets</title>
-    <updated>2025-11-13T18:50:21Z</updated>
-    <link href="https://arxiv.org/abs/2511.10625v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10625v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>A well-defined distance on the parameter space is key to evaluating estimators, ensuring consistency, and building confidence sets. While there are typically standard distances to adopt in a continuous space, this is not the case for combinatorial parameters such as graphs that represent statistical models. Existing proposals like the structural Hamming distance are defined on the graphs rather than the models they represent and can hence lead to undesirable behaviors. We propose a model-oriented framework for defining the distance between graphs that is applicable across many different graph classes. Our approach treats each graph as a statistical model and organizes the graphs in a partially ordered set based on model inclusion. This induces a neighborhood structure, from which we define the model-oriented distance as the length of a shortest path through neighbors, yielding a metric in the space of graphs. We apply this framework to both probabilistic graphical models (e.g., undirected graphs and completed partially directed acyclic graphs) and causal graphical models (e.g., directed acyclic graphs and maximally oriented partially directed acyclic graphs). We analyze the theoretical and empirical behaviors of model-oriented distances. Algorithmic tools are also developed for computing and bounding these distances.</summary>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:50:21Z</published>
-    <arxiv:primary_category term="math.ST"/>
+    <id>http://arxiv.org/abs/2511.11541v1</id>
+    <title>An optical--mid-infrared color evolution tool for nova identification using WISE data</title>
+    <updated>2025-11-14T18:23:55Z</updated>
+    <link href="https://arxiv.org/abs/2511.11541v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11541v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a novel approach for characterizing nova candidates by exploiting the infrared capabilities of the Wide-field Infrared Survey Explorer (WISE) catalog. We developed a pipeline to identify novae based on well-defined infrared criteria, and leveraging this pipeline, we successfully identified 41 optically confirmed novae in the WISE catalog. In particular, we focus on the color difference between the optical V band and the WISE 3.4 microns W1 band as a diagnostic. We compared their infrared light curves with their optical counterparts. We identified a strong correlation from which we proposed a color difference model that can be used for further identification and characterization of novae. Our analysis validates the mass-loss timescale theory, which predicts that systems with lower accretion rates accumulate larger envelopes and produce more massive ejecta. We also confirm models' prediction that the early color evolution of novae is governed by ejecta expansion and cooling. From our sample statistics, we infer a Galactic nova rate of approximately 40 to 50 novae per year, consistent with modern and infrared-corrected estimates. The resultant model from this work paves the way for future large-scale investigations of nova candidates.</summary>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T18:23:55Z</published>
+    <arxiv:primary_category term="astro-ph.SR"/>
     <author>
-      <name>Armeen Taeb</name>
+      <name>Joseph Onuegbu</name>
     </author>
     <author>
-      <name>F. Richard Guo</name>
+      <name>Dafne Guetta</name>
     </author>
     <author>
-      <name>Leonard Henckel</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.10618v1</id>
-    <title>Know Your Limits: Entropy Estimation Modeling for Compression and Generalization</title>
-    <updated>2025-11-13T18:46:42Z</updated>
-    <link href="https://arxiv.org/abs/2511.10618v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10618v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Language prediction is constrained by informational entropy intrinsic to language, such that there exists a limit to how accurate any language model can become and equivalently a lower bound to language compression. The most efficient language compression algorithms today are causal (next token prediction) large language models, but the use of these models to form accurate estimates of language entropy is currently computationally infeasible. We introduce encoder-augmented causal decoder model architectures that exhibit superior training efficiency characteristics and achieve higher compression than causal transformers even when trained on modest hardware. We demonstrate how entropy estimates can be obtained on a per-token basis, and show that the generalization of models trained to approach the entropy of their training data necessarily exceeds the generalization of models trained to minimize loss beyond this value. We show empirically that causal models trained to approach but not exceed estimated per-token entropies exhibit greater generalization than models trained without taking entropy into account.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:46:42Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Benjamin L. Badger</name>
+      <name>Yael Hillman</name>
     </author>
     <author>
-      <name>Matthew Neligeorge</name>
+      <name>Volker Perdelwitz</name>
+    </author>
+    <author>
+      <name>Massimo Della Valle</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.10599v1</id>
-    <title>The $L_p$-error rate for randomized quasi-Monte Carlo self-normalized importance sampling of unbounded integrands</title>
-    <updated>2025-11-13T18:37:00Z</updated>
-    <link href="https://arxiv.org/abs/2511.10599v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10599v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Self-normalized importance sampling (SNIS) is a fundamental tool in Bayesian inference when the posterior distribution involves an unknown normalizing constant. Although $L_1$-error (bias) and $L_2$-error (root mean square error) estimates of SNIS are well established for bounded integrands, results for unbounded integrands remain limited, especially under randomized quasi-Monte Carlo (RQMC) sampling. In this work, we derive $L_p$-error rate $(p\ge1)$ for RQMC-based SNIS (RQMC-SNIS) estimators with unbounded integrands on unbounded domains. A key step in our analysis is to first establish the $L_p$-error rate for plain RQMC integration. Our results allow for a broader class of transport maps used to generate samples from RQMC points. Under mild function boundary growth conditions, we further establish \(L_p\)-error rate of order \(\mathcal{O}(N^{-β+ ε})\) for RQMC-SNIS estimators, where $ε&gt;0$ is arbitrarily small, $N$ is the sample size, and \(β\in (0,1]\) depends on the boundary growth rate of the resulting integrand. Numerical experiments validate the theoretical results.</summary>
-    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:37:00Z</published>
-    <arxiv:primary_category term="math.NA"/>
+    <id>http://arxiv.org/abs/2511.11532v1</id>
+    <title>Distracting from the Epstein files? Media attention and short-run shifts in Trump's Truth Social posts</title>
+    <updated>2025-11-14T18:07:39Z</updated>
+    <link href="https://arxiv.org/abs/2511.11532v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11532v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Political "circuses" may undermine democratic accountability if leaders facing scandal can reliably pull media coverage toward fresh topics and away from substantive investigations or evaluations. We investigate whether politicians strategically alter their messaging during damaging media coverage ("strategic diversion") or maintain consistent provocative communication regardless of scandal coverage ("always-on circus"). Using computational text analysis of Donald Trump's Truth Social posts during the 2025 Epstein revelations, we find that a one-standard-deviation increase in scandal coverage is associated with communication patterns that deviate from baseline by 0.28 standard deviations over a 4-day window. Although these findings do not provide formal causal identification, they are robust to timing placebos and falsification tests, are consistent with the interpretation that leaders may deploy diversionary communication specifically within their own friendly media ecosystem, which has implications for accountability in polarized democracies.</summary>
+    <category term="econ.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T18:07:39Z</published>
+    <arxiv:primary_category term="econ.GN"/>
     <author>
-      <name>Jiarui Du</name>
-    </author>
-    <author>
-      <name>Zhijian He</name>
+      <name>Andrew J. Peterson</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.10596v1</id>
-    <title>The Resonance Principle: Empirical Evidence for Emergent Phase Synchronization in Human Causal Reasoning</title>
-    <updated>2025-11-13T18:34:06Z</updated>
-    <link href="https://arxiv.org/abs/2511.10596v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10596v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Current artificial intelligence systems excel at correlational pattern matching but fail to achieve genuine causal understanding, a limitation often described as the "Kepler versus Newton" problem. We argue that this limitation is inherent to deterministic digital architectures. We introduce the Resonance Principle, a theoretical framework proposing that causal understanding emerges only in stochastic, bounded agents with intrinsic cost functions. The agent's substrate is modeled as a network of weakly coupled oscillators, where action proposals arise as stable resonant modes excited by intrinsic noise. We hypothesize that the brain, a stochastic and resonant system, operates according to this principle. To test this, we analyzed high-density EEG data (25 recordings, 500 trials) from a P300 BCI task. We computed the Kuramoto Order Parameter (R) to measure global phase synchronization (resonance) and compared it to the Event-Related Potential (ERP) voltage. Global resonance and voltage were statistically uncorrelated (r = 0.048), yet trial-level analysis revealed a strong correlation (r = 0.590, p &lt; 0.0001). This suggests that resonance is a hidden mechanism coordinating neural firing, giving rise to measurable ERPs. We conclude that phase synchronization is not a byproduct but a fundamental signature of emergent causal understanding.</summary>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:34:06Z</published>
-    <arxiv:primary_category term="eess.SY"/>
-    <author>
-      <name>Ahmed Gamal Eldin</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.10587v1</id>
-    <title>The relationship between warm and hot gas-phase metallicity in massive elliptical galaxies and the influence of AGN feedback</title>
-    <updated>2025-11-13T18:25:57Z</updated>
-    <link href="https://arxiv.org/abs/2511.10587v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10587v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Warm ionized gas is ubiquitous at the centers of X-ray bright elliptical galaxies. While it is believed to play a key role in the feeding and feedback processes of supermassive black holes, its origins remain under debate. Existing studies have primarily focused on the morphology and kinematics of warm ionized gas. This work aims to provide a new perspective on warm (10,000 K) ionized gas and its connection to X-ray-emitting hot gas (&gt;10^6 K) by measuring and comparing their metallicities. We conducted a joint analysis of 13 massive elliptical galaxies using MUSE/VLT and Chandra observations. Emission-line ratios were measured for the warm ionized gas using MUSE observation, and used to infer the ionization mechanisms and derive metallicities of the warm ionized gas using HII, and LIN(E)R calibrations. We also computed the warm phase metallicity using X-ray/EUV, and pAGB stars models. For two sources at higher redshift, direct Te method was also used to measure warm gas metallicities. Our observations reveal that most sources exhibit composite ionization, with contributions from both star formation and LINER-like emission. A positive linear correlation was found between the gas-phase metallicities of the warm and hot phases, ranging from 0.3 to 1.5 Zsun, and suggest the intimate connection between the two gas phases, likely driven by gas cooling and/or mixing. In some sources the warm gas metallicity shows a central drop. A similar radial trend has been reported for the hot gas metallicity in some galaxy clusters. The ionization mechanisms of cooling flow elliptical galaxies are diverse, suggesting multiple channels for powering the warm ionized gas. The large variation in the warm gas metallicity further suggests that cold gas mass derived under the assumption of solar metallicity for the CO-to-H2 conversion factor needs to be revised by approximately an order of magnitude.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T18:25:57Z</published>
-    <arxiv:comment>19 pages, 7 figures. Accepted for publication in Astronomy and Astrophysics</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Valeria Olivares</name>
-    </author>
-    <author>
-      <name>Yuanyuan Su</name>
-    </author>
-    <author>
-      <name>Pasquale Temi</name>
-    </author>
-    <author>
-      <name>Ryan Eskenasy</name>
-    </author>
-    <author>
-      <name>Helen Russell</name>
-    </author>
-    <author>
-      <name>Massimo Gaspari</name>
-    </author>
-    <author>
-      <name>Philippe Salome</name>
-    </author>
-    <author>
-      <name>Francoise Combes</name>
-    </author>
-    <author>
-      <name>Ming Sun</name>
-    </author>
-    <author>
-      <name>Ezequiel Treister</name>
-    </author>
-    <author>
-      <name>Kevin Fogarty</name>
-    </author>
-    <author>
-      <name>Ana Jimenez-Gallardo</name>
-    </author>
-    <author>
-      <name>Patricio Lagos</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.10560v1</id>
-    <title>OmniVGGT: Omni-Modality Driven Visual Geometry Grounded</title>
-    <updated>2025-11-13T17:59:01Z</updated>
-    <link href="https://arxiv.org/abs/2511.10560v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.10560v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>General 3D foundation models have started to lead the trend of unifying diverse vision tasks, yet most assume RGB-only inputs and ignore readily available geometric cues (e.g., camera intrinsics, poses, and depth maps). To address this issue, we introduce OmniVGGT, a novel framework that can effectively benefit from an arbitrary number of auxiliary geometric modalities during both training and inference. In our framework, a GeoAdapter is proposed to encode depth and camera intrinsics/extrinsics into a spatial foundation model. It employs zero-initialized convolutions to progressively inject geometric information without disrupting the foundation model's representation space. This design ensures stable optimization with negligible overhead, maintaining inference speed comparable to VGGT even with multiple additional inputs. Additionally, a stochastic multimodal fusion regimen is proposed, which randomly samples modality subsets per instance during training. This enables an arbitrary number of modality inputs during testing and promotes learning robust spatial representations instead of overfitting to auxiliary cues. Comprehensive experiments on monocular/multi-view depth estimation, multi-view stereo, and camera pose estimation demonstrate that OmniVGGT outperforms prior methods with auxiliary inputs and achieves state-of-the-art results even with RGB-only input. To further highlight its practical utility, we integrated OmniVGGT into vision-language-action (VLA) models. The enhanced VLA model by OmniVGGT not only outperforms the vanilla point-cloud-based baseline on mainstream benchmarks, but also effectively leverages accessible auxiliary inputs to achieve consistent gains on robotic tasks.</summary>
+    <id>http://arxiv.org/abs/2511.11526v1</id>
+    <title>Bridging Hidden States in Vision-Language Models</title>
+    <updated>2025-11-14T17:55:25Z</updated>
+    <link href="https://arxiv.org/abs/2511.11526v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11526v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language Models (VLMs) are a new family of models that align image content with natural language. Existing approaches typically fuse either (a) early: by mixing tokens/features inside the encoders, or (b) late: by comparing pooled embeddings. Many methods also tie fusion to an autoregressive decoder. However, the hidden states of both modalities already carry rich, modality-specific structure (spatial layout in vision; syntax and semantics in text), so directly aligning these states is a natural way to match what the two modalities "think". We propose a lightweight fusion module: a few cross-only, bidirectional attention layers placed near the top of both encoders. Each layer projects the vision and text encoder hidden-state sequences into a shared space, attends across modalities, and sends gated residual updates back, with simple stabilizers to improve alignment. The encoders remain non-causal and strong for understanding, while generation stays cleanly decoupled via an optional decoder. Across standard retrieval, VQA, and visual reasoning benchmarks, BRIDGE outperforms comparable VLMs while preserving the bi-encoder efficiency of contrastive models. We make our code publicly available at https://github.com/jfeinashley/BRIDGE.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-13T17:59:01Z</published>
-    <arxiv:comment>Project Page: https://livioni.github.io/OmniVGGT-offcial/</arxiv:comment>
+    <published>2025-11-14T17:55:25Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Haosong Peng</name>
+      <name>Benjamin Fein-Ashley</name>
     </author>
     <author>
-      <name>Hao Li</name>
+      <name>Jacob Fein-Ashley</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11519v1</id>
+    <title>Experience-Guided Adaptation of Inference-Time Reasoning Strategies</title>
+    <updated>2025-11-14T17:45:28Z</updated>
+    <link href="https://arxiv.org/abs/2511.11519v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11519v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Enabling agentic AI systems to adapt their problem-solving approaches based on post-training interactions remains a fundamental challenge. While systems that update and maintain a memory at inference time have been proposed, existing designs only steer the system by modifying textual input to a language model or agent, which means that they cannot change sampling parameters, remove tools, modify system prompts, or switch between agentic and workflow paradigms. On the other hand, systems that adapt more flexibly require offline optimization and remain static once deployed. We present Experience-Guided Reasoner (EGuR), which generates tailored strategies -- complete computational procedures involving LLM calls, tools, sampling parameters, and control logic -- dynamically at inference time based on accumulated experience. We achieve this using an LLM-based meta-strategy -- a strategy that outputs strategies -- enabling adaptation of all strategy components (prompts, sampling parameters, tool configurations, and control logic). EGuR operates through two components: a Guide generates multiple candidate strategies conditioned on the current problem and structured memory of past experiences, while a Consolidator integrates execution feedback to improve future strategy generation. This produces complete, ready-to-run strategies optimized for each problem, which can be cached, retrieved, and executed as needed without wasting resources. Across five challenging benchmarks (AIME 2025, 3-SAT, and three Big Bench Extra Hard tasks), EGuR achieves up to 14% accuracy improvements over the strongest baselines while reducing computational costs by up to 111x, with both metrics improving as the system gains experience.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T17:45:28Z</published>
+    <arxiv:comment>29 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Adam Stein</name>
     </author>
     <author>
-      <name>Yalun Dai</name>
+      <name>Matthew Trager</name>
     </author>
     <author>
-      <name>Yushi Lan</name>
+      <name>Benjamin Bowman</name>
     </author>
     <author>
-      <name>Yihang Luo</name>
+      <name>Michael Kleinman</name>
     </author>
     <author>
-      <name>Tianyu Qi</name>
+      <name>Aditya Chattopadhyay</name>
     </author>
     <author>
-      <name>Zhengshen Zhang</name>
+      <name>Wei Xia</name>
     </author>
     <author>
-      <name>Yufeng Zhan</name>
+      <name>Stefano Soatto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11518v1</id>
+    <title>W2S-AlignTree: Weak-to-Strong Inference-Time Alignment for Large Language Models via Monte Carlo Tree Search</title>
+    <updated>2025-11-14T17:42:02Z</updated>
+    <link href="https://arxiv.org/abs/2511.11518v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11518v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) demonstrate impressive capabilities, yet their outputs often suffer from misalignment with human preferences due to the inadequacy of weak supervision and a lack of fine-grained control. Training-time alignment methods like Reinforcement Learning from Human Feedback (RLHF) face prohibitive costs in expert supervision and inherent scalability limitations, offering limited dynamic control during inference. Consequently, there is an urgent need for scalable and adaptable alignment mechanisms. To address this, we propose W2S-AlignTree, a pioneering plug-and-play inference-time alignment framework that synergistically combines Monte Carlo Tree Search (MCTS) with the Weak-to-Strong Generalization paradigm for the first time. W2S-AlignTree formulates LLM alignment as an optimal heuristic search problem within a generative search tree. By leveraging weak model's real-time, step-level signals as alignment proxies and introducing an Entropy-Aware exploration mechanism, W2S-AlignTree enables fine-grained guidance during strong model's generation without modifying its parameters. The approach dynamically balances exploration and exploitation in high-dimensional generation search trees. Experiments across controlled sentiment generation, summarization, and instruction-following show that W2S-AlignTree consistently outperforms strong baselines. Notably, W2S-AlignTree raises the performance of Llama3-8B from 1.89 to 2.19, a relative improvement of 15.9 on the summarization task.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T17:42:02Z</published>
+    <arxiv:comment>AAAI 2026 Oral</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zhenyu Ding</name>
     </author>
     <author>
-      <name>Junfei Zhang</name>
+      <name>Yuhao Wang</name>
     </author>
     <author>
-      <name>Wenchao Xu</name>
+      <name>Tengyue Xiao</name>
     </author>
     <author>
-      <name>Ziwei Liu</name>
+      <name>Haoying Wang</name>
+    </author>
+    <author>
+      <name>Guojun Ma</name>
+    </author>
+    <author>
+      <name>Mingyang Wan</name>
+    </author>
+    <author>
+      <name>Caigui Jiang</name>
+    </author>
+    <author>
+      <name>Ning Ding</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11514v1</id>
+    <title>Scalable Coverage Trajectory Synthesis on GPUs as Statistical Inference</title>
+    <updated>2025-11-14T17:37:54Z</updated>
+    <link href="https://arxiv.org/abs/2511.11514v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11514v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coverage motion planning is essential to a wide range of robotic tasks. Unlike conventional motion planning problems, which reason over temporal sequences of states, coverage motion planning requires reasoning over the spatial distribution of entire trajectories, making standard motion planning methods limited in computational efficiency and less amenable to modern parallelization frameworks. In this work, we formulate the coverage motion planning problem as a statistical inference problem from the perspective of flow matching, a generative modeling technique that has gained significant attention in recent years. The proposed formulation unifies commonly used statistical discrepancy measures, such as Kullback-Leibler divergence and Sinkhorn divergence, with a standard linear quadratic regulator problem. More importantly, it decouples the generation of trajectory gradients for coverage from the synthesis of control under nonlinear system dynamics, enabling significant acceleration through parallelization on modern computational architectures, particularly Graphics Processing Units (GPUs). This paper focuses on the advantages of this formulation in terms of scalability through parallelization, highlighting its computational benefits compared to conventional methods based on waypoint tracking.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T17:37:54Z</published>
+    <arxiv:comment>Presented at the "Workshop on Fast Motion Planning and Control in the Era of Parallelism" at Robotics: Science and Systems 2025. Workshop website: https://sites.google.com/rice.edu/parallelized-planning-control/</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Max M. Sun</name>
+    </author>
+    <author>
+      <name>Jueun Kwon</name>
+    </author>
+    <author>
+      <name>Todd Murphey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11509v1</id>
+    <title>\textit{Euclid}: From Galaxies to Gravitational Waves -- Forecasting Stochastic Gravitational Wave Background Anisotropies and Their Cross-Correlation</title>
+    <updated>2025-11-14T17:29:39Z</updated>
+    <link href="https://arxiv.org/abs/2511.11509v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11509v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We estimate the amplitude and spatial anisotropy in the stochastic gravitational wave background (SGWB) energy density due to compact binary coalescence (CBC) events: binary black holes (BBH), binary neutron stars (BNS), and black hole-neutron star (BHNS) mergers. Our starting point is the Flagship Simulation Galaxy Catalogue developed by the Euclid Consortium. For each galaxy in the Catalogue, we use the simulated mass and starformation to constrain the galaxy's star-formation history, and predict its contribution to the gravitational-wave energy density through CBC mergers. Combining such contributions from all galaxies in the Catalogue results in a prediction for the frequency spectrum and spatial anisotropy of the CBC SGWB. We also compare this prediction to semi-analytical models of SGWB generated by compact binaries. We identify a set of effective parameters that capture the key features of these models, and we apply a Bayesian framework to infer these parameters assuming an ideal scenario of cosmic variance-limited search. This represents the first step toward developing a comprehensive framework that will eventually enable the correlation of SGWB anisotropy and \textit{Euclid} galaxy data, potentially allowing us to extract valuable astrophysical information from this new observable.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T17:29:39Z</published>
+    <arxiv:comment>27 pages, 8 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>K. Z. Yang</name>
+    </author>
+    <author>
+      <name>G. Cusin</name>
+    </author>
+    <author>
+      <name>V. Mandic</name>
+    </author>
+    <author>
+      <name>C. Scarlata</name>
+    </author>
+    <author>
+      <name>J. Suresh</name>
+    </author>
+    <author>
+      <name>B. Altieri</name>
+    </author>
+    <author>
+      <name>N. Auricchio</name>
+    </author>
+    <author>
+      <name>C. Baccigalupi</name>
+    </author>
+    <author>
+      <name>M. Baldi</name>
+    </author>
+    <author>
+      <name>S. Bardelli</name>
+    </author>
+    <author>
+      <name>A. Biviano</name>
+    </author>
+    <author>
+      <name>E. Branchini</name>
+    </author>
+    <author>
+      <name>M. Brescia</name>
+    </author>
+    <author>
+      <name>S. Camera</name>
+    </author>
+    <author>
+      <name>G. Cañas-Herrera</name>
+    </author>
+    <author>
+      <name>V. Capobianco</name>
+    </author>
+    <author>
+      <name>C. Carbone</name>
+    </author>
+    <author>
+      <name>J. Carretero</name>
+    </author>
+    <author>
+      <name>S. Casas</name>
+    </author>
+    <author>
+      <name>M. Castellano</name>
+    </author>
+    <author>
+      <name>G. Castignani</name>
+    </author>
+    <author>
+      <name>S. Cavuoti</name>
+    </author>
+    <author>
+      <name>K. C. Chambers</name>
+    </author>
+    <author>
+      <name>A. Cimatti</name>
+    </author>
+    <author>
+      <name>C. Colodro-Conde</name>
+    </author>
+    <author>
+      <name>G. Congedo</name>
+    </author>
+    <author>
+      <name>L. Conversi</name>
+    </author>
+    <author>
+      <name>Y. Copin</name>
+    </author>
+    <author>
+      <name>A. Costille</name>
+    </author>
+    <author>
+      <name>F. Courbin</name>
+    </author>
+    <author>
+      <name>H. M. Courtois</name>
+    </author>
+    <author>
+      <name>H. Degaudenzi</name>
+    </author>
+    <author>
+      <name>G. De Lucia</name>
+    </author>
+    <author>
+      <name>H. Dole</name>
+    </author>
+    <author>
+      <name>F. Dubath</name>
+    </author>
+    <author>
+      <name>X. Dupac</name>
+    </author>
+    <author>
+      <name>S. Dusini</name>
+    </author>
+    <author>
+      <name>S. Escoffier</name>
+    </author>
+    <author>
+      <name>M. Farina</name>
+    </author>
+    <author>
+      <name>R. Farinelli</name>
+    </author>
+    <author>
+      <name>F. Faustini</name>
+    </author>
+    <author>
+      <name>S. Ferriol</name>
+    </author>
+    <author>
+      <name>F. Finelli</name>
+    </author>
+    <author>
+      <name>P. Fosalba</name>
+    </author>
+    <author>
+      <name>N. Fourmanoit</name>
+    </author>
+    <author>
+      <name>M. Frailis</name>
+    </author>
+    <author>
+      <name>E. Franceschi</name>
+    </author>
+    <author>
+      <name>M. Fumana</name>
+    </author>
+    <author>
+      <name>S. Galeotta</name>
+    </author>
+    <author>
+      <name>K. George</name>
+    </author>
+    <author>
+      <name>B. Gillis</name>
+    </author>
+    <author>
+      <name>C. Giocoli</name>
+    </author>
+    <author>
+      <name>P. Gómez-Alvarez</name>
+    </author>
+    <author>
+      <name>J. Gracia-Carpio</name>
+    </author>
+    <author>
+      <name>A. Grazian</name>
+    </author>
+    <author>
+      <name>F. Grupp</name>
+    </author>
+    <author>
+      <name>S. V. H. Haugan</name>
+    </author>
+    <author>
+      <name>W. Holmes</name>
+    </author>
+    <author>
+      <name>F. Hormuth</name>
+    </author>
+    <author>
+      <name>A. Hornstrup</name>
+    </author>
+    <author>
+      <name>K. Jahnke</name>
+    </author>
+    <author>
+      <name>M. Jhabvala</name>
+    </author>
+    <author>
+      <name>B. Joachimi</name>
+    </author>
+    <author>
+      <name>E. Keihänen</name>
+    </author>
+    <author>
+      <name>S. Kermiche</name>
+    </author>
+    <author>
+      <name>A. Kiessling</name>
+    </author>
+    <author>
+      <name>B. Kubik</name>
+    </author>
+    <author>
+      <name>M. Kunz</name>
+    </author>
+    <author>
+      <name>H. Kurki-Suonio</name>
+    </author>
+    <author>
+      <name>A. M. C. Le Brun</name>
+    </author>
+    <author>
+      <name>S. Ligori</name>
+    </author>
+    <author>
+      <name>P. B. Lilje</name>
+    </author>
+    <author>
+      <name>V. Lindholm</name>
+    </author>
+    <author>
+      <name>I. Lloro</name>
+    </author>
+    <author>
+      <name>G. Mainetti</name>
+    </author>
+    <author>
+      <name>D. Maino</name>
+    </author>
+    <author>
+      <name>O. Mansutti</name>
+    </author>
+    <author>
+      <name>S. Marcin</name>
+    </author>
+    <author>
+      <name>O. Marggraf</name>
+    </author>
+    <author>
+      <name>M. Martinelli</name>
+    </author>
+    <author>
+      <name>N. Martinet</name>
+    </author>
+    <author>
+      <name>F. Marulli</name>
+    </author>
+    <author>
+      <name>E. Medinaceli</name>
+    </author>
+    <author>
+      <name>S. Mei</name>
+    </author>
+    <author>
+      <name>Y. Mellier</name>
+    </author>
+    <author>
+      <name>M. Meneghetti</name>
+    </author>
+    <author>
+      <name>E. Merlin</name>
+    </author>
+    <author>
+      <name>G. Meylan</name>
+    </author>
+    <author>
+      <name>A. Mora</name>
+    </author>
+    <author>
+      <name>M. Moresco</name>
+    </author>
+    <author>
+      <name>L. Moscardini</name>
+    </author>
+    <author>
+      <name>C. Neissner</name>
+    </author>
+    <author>
+      <name>S. -M. Niemi</name>
+    </author>
+    <author>
+      <name>C. Padilla</name>
+    </author>
+    <author>
+      <name>S. Paltani</name>
+    </author>
+    <author>
+      <name>F. Pasian</name>
+    </author>
+    <author>
+      <name>K. Pedersen</name>
+    </author>
+    <author>
+      <name>V. Pettorino</name>
+    </author>
+    <author>
+      <name>S. Pires</name>
+    </author>
+    <author>
+      <name>G. Polenta</name>
+    </author>
+    <author>
+      <name>M. Poncet</name>
+    </author>
+    <author>
+      <name>L. A. Popa</name>
+    </author>
+    <author>
+      <name>L. Pozzetti</name>
+    </author>
+    <author>
+      <name>F. Raison</name>
+    </author>
+    <author>
+      <name>A. Renzi</name>
+    </author>
+    <author>
+      <name>J. Rhodes</name>
+    </author>
+    <author>
+      <name>G. Riccio</name>
+    </author>
+    <author>
+      <name>E. Romelli</name>
+    </author>
+    <author>
+      <name>M. Roncarelli</name>
+    </author>
+    <author>
+      <name>R. Saglia</name>
+    </author>
+    <author>
+      <name>Z. Sakr</name>
+    </author>
+    <author>
+      <name>D. Sapone</name>
+    </author>
+    <author>
+      <name>B. Sartoris</name>
+    </author>
+    <author>
+      <name>M. Schirmer</name>
+    </author>
+    <author>
+      <name>P. Schneider</name>
+    </author>
+    <author>
+      <name>A. Secroun</name>
+    </author>
+    <author>
+      <name>E. Sefusatti</name>
+    </author>
+    <author>
+      <name>G. Seidel</name>
+    </author>
+    <author>
+      <name>S. Serrano</name>
+    </author>
+    <author>
+      <name>C. Sirignano</name>
+    </author>
+    <author>
+      <name>G. Sirri</name>
+    </author>
+    <author>
+      <name>L. Stanco</name>
+    </author>
+    <author>
+      <name>J. Steinwagner</name>
+    </author>
+    <author>
+      <name>P. Tallada-Crespí</name>
+    </author>
+    <author>
+      <name>A. N. Taylor</name>
+    </author>
+    <author>
+      <name>I. Tereno</name>
+    </author>
+    <author>
+      <name>N. Tessore</name>
+    </author>
+    <author>
+      <name>S. Toft</name>
+    </author>
+    <author>
+      <name>R. Toledo-Moreo</name>
+    </author>
+    <author>
+      <name>F. Torradeflot</name>
+    </author>
+    <author>
+      <name>I. Tutusaus</name>
+    </author>
+    <author>
+      <name>L. Valenziano</name>
+    </author>
+    <author>
+      <name>J. Valiviita</name>
+    </author>
+    <author>
+      <name>T. Vassallo</name>
+    </author>
+    <author>
+      <name>A. Veropalumbo</name>
+    </author>
+    <author>
+      <name>J. Weller</name>
+    </author>
+    <author>
+      <name>G. Zamorani</name>
+    </author>
+    <author>
+      <name>F. M. Zerbi</name>
+    </author>
+    <author>
+      <name>E. Zucca</name>
+    </author>
+    <author>
+      <name>T. Castro</name>
+    </author>
+    <author>
+      <name>J. García-Bellido</name>
+    </author>
+    <author>
+      <name>V. Scottez</name>
+    </author>
+    <author>
+      <name>M. Viel</name>
+    </author>
+    <author>
+      <name>P. Monaco</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11505v1</id>
+    <title>FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models</title>
+    <updated>2025-11-14T17:25:14Z</updated>
+    <link href="https://arxiv.org/abs/2511.11505v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11505v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Blocking communication presents a major hurdle in running MoEs efficiently in distributed settings. To address this, we present FarSkip-Collective which modifies the architecture of modern models to enable overlapping of their computation with communication. Our approach modifies the architecture to skip connections in the model and it is unclear a priori whether the modified model architecture can remain as capable, especially for large state-of-the-art models and while modifying all of the model layers. We answer this question in the affirmative and fully convert a series of state-of-the-art models varying from 16B to 109B parameters to enable overlapping of their communication while achieving accuracy on par with their original open-source releases. For example, we convert Llama 4 Scout (109B) via self-distillation and achieve average accuracy within 1% of its instruction tuned release averaged across a wide range of downstream evaluations. In addition to demonstrating retained accuracy of the large modified models, we realize the benefits of FarSkip-Collective through optimized implementations that explicitly overlap communication with computation, accelerating both training and inference in existing frameworks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T17:25:14Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yonatan Dukler</name>
+    </author>
+    <author>
+      <name>Guihong Li</name>
+    </author>
+    <author>
+      <name>Deval Shah</name>
+    </author>
+    <author>
+      <name>Vikram Appia</name>
+    </author>
+    <author>
+      <name>Emad Barsoum</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11502v1</id>
+    <title>PAS : Prelim Attention Score for Detecting Object Hallucinations in Large Vision--Language Models</title>
+    <updated>2025-11-14T17:23:55Z</updated>
+    <link href="https://arxiv.org/abs/2511.11502v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11502v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large vision-language models (LVLMs) are powerful, yet they remain unreliable due to object hallucinations. In this work, we show that in many hallucinatory predictions the LVLM effectively ignores the image and instead relies on previously generated output (prelim) tokens to infer new objects. We quantify this behavior via the mutual information between the image and the predicted object conditioned on the prelim, demonstrating that weak image dependence strongly correlates with hallucination. Building on this finding, we introduce the Prelim Attention Score (PAS), a lightweight, training-free signal computed from attention weights over prelim tokens. PAS requires no additional forward passes and can be computed on the fly during inference. Exploiting this previously overlooked signal, PAS achieves state-of-the-art object-hallucination detection across multiple models and datasets, enabling real-time filtering and intervention.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T17:23:55Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Nhat Hoang-Xuan</name>
+    </author>
+    <author>
+      <name>Minh Vu</name>
+    </author>
+    <author>
+      <name>My T. Thai</name>
+    </author>
+    <author>
+      <name>Manish Bhattarai</name>
     </author>
   </entry>
 </feed>
