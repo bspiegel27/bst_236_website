@@ -1,335 +1,325 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-11-27T00:56:13Z -->
+<!-- Last updated: 2025-11-28T00:55:30Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-11-27T00:56:13Z</updated>
+  <updated>2025-11-28T00:55:30Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>127121</opensearch:totalResults>
+  <opensearch:totalResults>127229</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2511.20649v1</id>
-    <title>Infinity-RoPE: Action-Controllable Infinite Video Generation Emerges From Autoregressive Self-Rollout</title>
-    <updated>2025-11-25T18:59:46Z</updated>
-    <link href="https://arxiv.org/abs/2511.20649v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20649v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Current autoregressive video diffusion models are constrained by three core bottlenecks: (i) the finite temporal horizon imposed by the base model's 3D Rotary Positional Embedding (3D-RoPE), (ii) slow prompt responsiveness in maintaining fine-grained action control during long-form rollouts, and (iii) the inability to realize discontinuous cinematic transitions within a single generation stream. We introduce $\infty$-RoPE, a unified inference-time framework that addresses all three limitations through three interconnected components: Block-Relativistic RoPE, KV Flush, and RoPE Cut. Block-Relativistic RoPE reformulates temporal encoding as a moving local reference frame, where each newly generated latent block is rotated relative to the base model's maximum frame horizon while earlier blocks are rotated backward to preserve relative temporal geometry. This relativistic formulation eliminates fixed temporal positions, enabling continuous video generation far beyond the base positional limits. To obtain fine-grained action control without re-encoding, KV Flush renews the KV cache by retaining only two latent frames, the global sink and the last generated latent frame, thereby ensuring immediate prompt responsiveness. Finally, RoPE Cut introduces controlled discontinuities in temporal RoPE coordinates, enabling multi-cut scene transitions within a single continuous rollout. Together, these components establish $\infty$-RoPE as a training-free foundation for infinite-horizon, controllable, and cinematic video diffusion. Comprehensive experiments show that $\infty$-RoPE consistently surpasses previous autoregressive models in overall VBench scores.</summary>
+    <id>http://arxiv.org/abs/2511.21691v1</id>
+    <title>Canvas-to-Image: Compositional Image Generation with Multimodal Controls</title>
+    <updated>2025-11-26T18:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2511.21691v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21691v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While modern diffusion models excel at generating high-quality and diverse images, they still struggle with high-fidelity compositional and multimodal control, particularly when users simultaneously specify text prompts, subject references, spatial arrangements, pose constraints, and layout annotations. We introduce Canvas-to-Image, a unified framework that consolidates these heterogeneous controls into a single canvas interface, enabling users to generate images that faithfully reflect their intent. Our key idea is to encode diverse control signals into a single composite canvas image that the model can directly interpret for integrated visual-spatial reasoning. We further curate a suite of multi-task datasets and propose a Multi-Task Canvas Training strategy that optimizes the diffusion model to jointly understand and integrate heterogeneous controls into text-to-image generation within a unified learning paradigm. This joint training enables Canvas-to-Image to reason across multiple control modalities rather than relying on task-specific heuristics, and it generalizes well to multi-control scenarios during inference. Extensive experiments show that Canvas-to-Image significantly outperforms state-of-the-art methods in identity preservation and control adherence across challenging benchmarks, including multi-person composition, pose-controlled composition, layout-constrained generation, and multi-control generation.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:59:46Z</published>
-    <arxiv:comment>Project Page: https://infinity-rope.github.io/</arxiv:comment>
+    <published>2025-11-26T18:59:56Z</published>
+    <arxiv:comment>24 pages; webpage: https://snap-research.github.io/canvas-to-image/</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Hidir Yesiltepe</name>
+      <name>Yusuf Dalva</name>
     </author>
     <author>
-      <name>Tuna Han Salih Meral</name>
+      <name>Guocheng Gordon Qian</name>
     </author>
     <author>
-      <name>Adil Kaan Akan</name>
+      <name>Maya Goldenberg</name>
     </author>
     <author>
-      <name>Kaan Oktay</name>
+      <name>Tsai-Shien Chen</name>
+    </author>
+    <author>
+      <name>Kfir Aberman</name>
+    </author>
+    <author>
+      <name>Sergey Tulyakov</name>
     </author>
     <author>
       <name>Pinar Yanardag</name>
     </author>
+    <author>
+      <name>Kuan-Chieh Jackson Wang</name>
+    </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.20648v1</id>
-    <title>LocateAnything3D: Vision-Language 3D Detection with Chain-of-Sight</title>
-    <updated>2025-11-25T18:59:45Z</updated>
-    <link href="https://arxiv.org/abs/2511.20648v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20648v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>To act in the world, a model must name what it sees and know where it is in 3D. Today's vision-language models (VLMs) excel at open-ended 2D description and grounding, yet multi-object 3D detection remains largely missing from the VLM toolbox. We present LocateAnything3D, a VLM-native recipe that casts 3D detection as a next-token prediction problem. The key is a short, explicit Chain-of-Sight (CoS) sequence that mirrors how human reason from images: find an object in 2D, then infer its distance, size, and pose. The decoder first emits 2D detections as a visual chain-of-thought, then predicts 3D boxes under an easy-to-hard curriculum: across objects, a near-to-far order reduces early ambiguity and matches ego-centric utility; within each object, a center-from-camera, dimensions, and rotation factorization ranks information by stability and learnability. This VLM-native interface preserves open-vocabulary and visual-prompting capability without specialized heads. On the challenging Omni3D benchmark, our model achieves state-of-the-art results, with 49.89 AP_3D, surpassing the previous best by +15.51 absolute improvement even when the baseline is given ground-truth 2D boxes. It also generalizes zero-shot to held-out categories with strong robustness. By turning 3D detection into a disciplined next-token problem, LocateAnything3D offers a practical foundation for models to perceive in 3D.</summary>
+    <id>http://arxiv.org/abs/2511.21690v1</id>
+    <title>TraceGen: World Modeling in 3D Trace Space Enables Learning from Cross-Embodiment Videos</title>
+    <updated>2025-11-26T18:59:55Z</updated>
+    <link href="https://arxiv.org/abs/2511.21690v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21690v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning new robot tasks on new platforms and in new scenes from only a handful of demonstrations remains challenging. While videos of other embodiments - humans and different robots - are abundant, differences in embodiment, camera, and environment hinder their direct use. We address the small-data problem by introducing a unifying, symbolic representation - a compact 3D "trace-space" of scene-level trajectories - that enables learning from cross-embodiment, cross-environment, and cross-task videos. We present TraceGen, a world model that predicts future motion in trace-space rather than pixel space, abstracting away appearance while retaining the geometric structure needed for manipulation. To train TraceGen at scale, we develop TraceForge, a data pipeline that transforms heterogeneous human and robot videos into consistent 3D traces, yielding a corpus of 123K videos and 1.8M observation-trace-language triplets. Pretraining on this corpus produces a transferable 3D motion prior that adapts efficiently: with just five target robot videos, TraceGen attains 80% success across four tasks while offering 50-600x faster inference than state-of-the-art video-based world models. In the more challenging case where only five uncalibrated human demonstration videos captured on a handheld phone are available, it still reaches 67.5% success on a real robot, highlighting TraceGen's ability to adapt across embodiments without relying on object detectors or heavy pixel-space generation.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:59:45Z</published>
-    <arxiv:comment>Tech report. Project page: https://nvlabs.github.io/LocateAnything3D/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T18:59:55Z</published>
+    <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Yunze Man</name>
+      <name>Seungjae Lee</name>
     </author>
     <author>
-      <name>Shihao Wang</name>
+      <name>Yoonkyo Jung</name>
     </author>
     <author>
-      <name>Guowen Zhang</name>
+      <name>Inkook Chun</name>
     </author>
     <author>
-      <name>Johan Bjorck</name>
+      <name>Yao-Chih Lee</name>
     </author>
     <author>
-      <name>Zhiqi Li</name>
+      <name>Zikui Cai</name>
     </author>
     <author>
-      <name>Liang-Yan Gui</name>
+      <name>Hongjia Huang</name>
     </author>
     <author>
-      <name>Jim Fan</name>
+      <name>Aayush Talreja</name>
     </author>
     <author>
-      <name>Jan Kautz</name>
+      <name>Tan Dat Dao</name>
     </author>
     <author>
-      <name>Yu-Xiong Wang</name>
+      <name>Yongyuan Liang</name>
     </author>
     <author>
-      <name>Zhiding Yu</name>
+      <name>Jia-Bin Huang</name>
+    </author>
+    <author>
+      <name>Furong Huang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.20639v1</id>
-    <title>Latent Collaboration in Multi-Agent Systems</title>
-    <updated>2025-11-25T18:56:57Z</updated>
-    <link href="https://arxiv.org/abs/2511.20639v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20639v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly within the continuous latent space. We introduce LatentMAS, an end-to-end training-free framework that enables pure latent collaboration among LLM agents. In LatentMAS, each agent first performs auto-regressive latent thoughts generation through last-layer hidden embeddings. A shared latent working memory then preserves and transfers each agent's internal representations, ensuring lossless information exchange. We provide theoretical analyses establishing that LatentMAS attains higher expressiveness and lossless information preservation with substantially lower complexity than vanilla text-based MAS. In addition, empirical evaluations across 9 comprehensive benchmarks spanning math and science reasoning, commonsense understanding, and code generation show that LatentMAS consistently outperforms strong single-model and text-based MAS baselines, achieving up to 14.6% higher accuracy, reducing output token usage by 70.8%-83.7%, and providing 4x-4.3x faster end-to-end inference. These results demonstrate that our new latent collaboration framework enhances system-level reasoning quality while offering substantial efficiency gains without any additional training. Code and data are fully open-sourced at https://github.com/Gen-Verse/LatentMAS.</summary>
+    <id>http://arxiv.org/abs/2511.21686v1</id>
+    <title>Matrix: Peer-to-Peer Multi-Agent Synthetic Data Generation Framework</title>
+    <updated>2025-11-26T18:59:28Z</updated>
+    <link href="https://arxiv.org/abs/2511.21686v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21686v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Synthetic data has become increasingly important for training large language models, especially when real data is scarce, expensive, or privacy-sensitive. Many such generation tasks require coordinated multi-agent workflows, where specialized agents collaborate to produce data that is higher quality, more diverse, and structurally richer. However, existing frameworks for multi-agent synthesis often depend on a centralized orchestrator, creating scalability bottlenecks, or are hardcoded for specific domains, limiting flexibility. We present \textbf{Matrix}, a decentralized framework that represents both control and data flow as serialized messages passed through distributed queues. This peer-to-peer design eliminates the central orchestrator. Each task progresses independently through lightweight agents, while compute-intensive operations, such as LLM inference or containerized environments, are handled by distributed services. Built on Ray, Matrix scales to tens of thousands of concurrent agentic workflows and provides a modular, configurable design that enables easy adaptation to a wide range of data generation workflows. We evaluate Matrix across diverse synthesis scenarios, such as multi-agent collaborative dialogue, web-based reasoning data extraction, and tool-use trajectory generation in customer service environments. In all cases, Matrix achieves $2$--$15\times$ higher data generation throughput under identical hardware resources, without compromising output quality.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:56:57Z</published>
-    <arxiv:comment>Project: https://github.com/Gen-Verse/LatentMAS</arxiv:comment>
+    <published>2025-11-26T18:59:28Z</published>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Jiaru Zou</name>
+      <name>Dong Wang</name>
     </author>
     <author>
-      <name>Xiyuan Yang</name>
+      <name>Yang Li</name>
     </author>
     <author>
-      <name>Ruizhong Qiu</name>
+      <name>Ansong Ni</name>
     </author>
     <author>
-      <name>Gaotang Li</name>
+      <name>Ching-Feng Yeh</name>
     </author>
     <author>
-      <name>Katherine Tieu</name>
+      <name>Youssef Emad</name>
     </author>
     <author>
-      <name>Pan Lu</name>
+      <name>Xinjie Lei</name>
     </author>
     <author>
-      <name>Ke Shen</name>
+      <name>Liam Robbins</name>
     </author>
     <author>
-      <name>Hanghang Tong</name>
+      <name>Karthik Padthe</name>
     </author>
     <author>
-      <name>Yejin Choi</name>
+      <name>Hu Xu</name>
     </author>
     <author>
-      <name>Jingrui He</name>
+      <name>Xian Li</name>
     </author>
     <author>
-      <name>James Zou</name>
+      <name>Asli Celikyilmaz</name>
     </author>
     <author>
-      <name>Mengdi Wang</name>
+      <name>Ramya Raghavendra</name>
     </author>
     <author>
-      <name>Ling Yang</name>
+      <name>Lifei Huang</name>
+    </author>
+    <author>
+      <name>Carole-Jean Wu</name>
+    </author>
+    <author>
+      <name>Shang-Wen Li</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.20629v1</id>
-    <title>MapReduce LoRA: Advancing the Pareto Front in Multi-Preference Optimization for Generative Models</title>
-    <updated>2025-11-25T18:49:21Z</updated>
-    <link href="https://arxiv.org/abs/2511.20629v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20629v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reinforcement learning from human feedback (RLHF) with reward models has advanced alignment of generative models to human aesthetic and perceptual preferences. However, jointly optimizing multiple rewards often incurs an alignment tax, improving one dimension while degrading others. To address this, we introduce two complementary methods: MapReduce LoRA and Reward-aware Token Embedding (RaTE). MapReduce LoRA trains preference-specific LoRA experts in parallel and iteratively merges them to refine a shared base model; RaTE learns reward-specific token embeddings that compose at inference for flexible preference control. Experiments on Text-to-Image generation (Stable Diffusion 3.5 Medium and FLUX.1-dev) show improvements of 36.1%, 4.6%, and 55.7%, and 32.7%, 4.3%, and 67.1% on GenEval, PickScore, and OCR, respectively. On Text-to-Video generation (HunyuanVideo), visual and motion quality improve by 48.1% and 90.0%, respectively. On the language task, Helpful Assistant, with Llama-2 7B, helpful and harmless improve by 43.4% and 136.7%, respectively. Our framework sets a new state-of-the-art multi-preference alignment recipe across modalities.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2511.21675v1</id>
+    <title>On Evolution-Based Models for Experimentation Under Interference</title>
+    <updated>2025-11-26T18:53:46Z</updated>
+    <link href="https://arxiv.org/abs/2511.21675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Causal effect estimation in networked systems is central to data-driven decision making. In such settings, interventions on one unit can spill over to others, and in complex physical or social systems, the interaction pathways driving these interference structures remain largely unobserved. We argue that for identifying population-level causal effects, it is not necessary to recover the exact network structure; instead, it suffices to characterize how those interactions contribute to the evolution of outcomes. Building on this principle, we study an evolution-based approach that investigates how outcomes change across observation rounds in response to interventions, hence compensating for missing network information. Using an exposure-mapping perspective, we give an axiomatic characterization of when the empirical distribution of outcomes follows a low-dimensional recursive equation, and identify minimal structural conditions under which such evolution mappings exist. We frame this as a distributional counterpart to difference-in-differences. Rather than assuming parallel paths for individual units, it exploits parallel evolution patterns across treatment scenarios to estimate counterfactual trajectories. A key insight is that treatment randomization plays a role beyond eliminating latent confounding; it induces an implicit sampling from hidden interference channels, enabling consistent learning about heterogeneous spillover effects. We highlight causal message passing as an instantiation of this method in dense networks while extending to more general interference structures, including influencer networks where a small set of units drives most spillovers. Finally, we discuss the limits of this approach, showing that strong temporal trends or endogenous interference can undermine identification.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:49:21Z</published>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T18:53:46Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Sadegh Shirani</name>
+    </author>
+    <author>
+      <name>Mohsen Bayati</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.21669v1</id>
+    <title>DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving</title>
+    <updated>2025-11-26T18:47:25Z</updated>
+    <link href="https://arxiv.org/abs/2511.21669v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21669v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) inference often suffers from high decoding latency and limited scalability across heterogeneous edge-cloud environments. Existing speculative decoding (SD) techniques accelerate token generation but remain confined to single-node execution. We propose DSD, a distributed speculative decoding framework that extends SD to multi-device deployments through coordinated draft-target execution. Given the lack of prior work on simulating this paradigm, we first introduce DSD-Sim, a discrete-event simulator that captures network, batching, and scheduling dynamics. Building on insights from DSD-Sim, we further design an Adaptive Window Control (AWC) policy that dynamically adjusts speculation window size to optimize throughput. Experiments across diverse workloads show that DSD achieves up to 1.1x speedup and 9.7% higher throughput over existing SD baselines, enabling agile and scalable LLM serving across edge and cloud.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T18:47:25Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Fengze Yu</name>
+    </author>
+    <author>
+      <name>Leshu Li</name>
+    </author>
+    <author>
+      <name>Brad McDanel</name>
+    </author>
+    <author>
+      <name>Saiqian Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.21653v1</id>
+    <title>CaFlow: Enhancing Long-Term Action Quality Assessment with Causal Counterfactual Flow</title>
+    <updated>2025-11-26T18:25:41Z</updated>
+    <link href="https://arxiv.org/abs/2511.21653v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21653v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Action Quality Assessment (AQA) predicts fine-grained execution scores from action videos and is widely applied in sports, rehabilitation, and skill evaluation. Long-term AQA, as in figure skating or rhythmic gymnastics, is especially challenging since it requires modeling extended temporal dynamics while remaining robust to contextual confounders. Existing approaches either depend on costly annotations or rely on unidirectional temporal modeling, making them vulnerable to spurious correlations and unstable long-term representations. To this end, we propose CaFlow, a unified framework that integrates counterfactual de-confounding with bidirectional time-conditioned flow. The Causal Counterfactual Regularization (CCR) module disentangles causal and confounding features in a self-supervised manner and enforces causal robustness through counterfactual interventions, while the BiT-Flow module models forward and backward dynamics with a cycle-consistency constraint to produce smoother and more coherent representations. Extensive experiments on multiple long-term AQA benchmarks demonstrate that CaFlow achieves state-of-the-art performance. Code is available at https://github.com/Harrison21/CaFlow</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T18:25:41Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Chieh-Yun Chen</name>
+      <name>Ruisheng Han</name>
     </author>
     <author>
-      <name>Zhonghao Wang</name>
+      <name>Kanglei Zhou</name>
     </author>
     <author>
-      <name>Qi Chen</name>
+      <name>Shuang Chen</name>
     </author>
     <author>
-      <name>Zhifan Ye</name>
+      <name>Amir Atapour-Abarghouei</name>
     </author>
     <author>
-      <name>Min Shi</name>
-    </author>
-    <author>
-      <name>Yue Zhao</name>
-    </author>
-    <author>
-      <name>Yinan Zhao</name>
-    </author>
-    <author>
-      <name>Hui Qu</name>
-    </author>
-    <author>
-      <name>Wei-An Lin</name>
-    </author>
-    <author>
-      <name>Yiru Shen</name>
-    </author>
-    <author>
-      <name>Ajinkya Kale</name>
-    </author>
-    <author>
-      <name>Irfan Essa</name>
-    </author>
-    <author>
-      <name>Humphrey Shi</name>
+      <name>Hubert P. H. Shum</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.20621v1</id>
-    <title>DiFR: Inference Verification Despite Nondeterminism</title>
-    <updated>2025-11-25T18:44:22Z</updated>
-    <link href="https://arxiv.org/abs/2511.20621v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20621v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>As demand for LLM inference grows, it is becoming increasingly important that providers and their customers can verify that inference processes are performed correctly, without errors or tampering. However, re-running the same inference process twice often leads to different results due to benign numerical noise, making it difficult to distinguish legitimate variation from actual problems. To address this problem, we introduce Token-DiFR (Token-Divergence-From-Reference), a method for verifying inference outputs by comparing generated tokens against predictions made by a trusted reference implementation conditioned on the same random seed. Sampling seed synchronization tightly constrains valid outputs, leaving providers minimal room to deviate from correct inference, which allows output tokens themselves to serve as auditable evidence of correctness at zero additional cost to the provider. Token-DiFR reliably identifies sampling errors, simulated bugs, and model quantization, detecting 4-bit quantization with AUC $&gt;$ 0.999 within 300 output tokens. For applications requiring sample-efficient forward-pass verification, we additionally introduce Activation-DiFR, a scheme that uses random orthogonal projections to compress activations into compact fingerprints for subsequent verification. Activation-DiFR detects 4-bit quantization with AUC $&gt;$ 0.999 using just 2 output tokens, while reducing communication overhead by 25-75% relative to existing methods. We release an open-source integration with vLLM to accelerate practical deployment of verifiable inference.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2511.21644v1</id>
+    <title>Factorisation conditions and causality for local measurements in QFT</title>
+    <updated>2025-11-26T18:15:21Z</updated>
+    <link href="https://arxiv.org/abs/2511.21644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum operations that are perfectly admissible in non-relativistic quantum theory can enable signalling between spacelike separated regions when naively imported into quantum field theory (QFT). Prominent examples of such "impossible measurements", in the sense of Sorkin, include certain unitary kicks and projective measurements. It is generally accepted that only those quantum operations whose physical implementation arises from a fully relativistically covariant interaction, between the quantum field and a suitable probe, should be regarded as admissible. While this idea has been realised at the level of abstract algebraic QFT, or via particular measurement models, there is still no general set of operational criteria characterising which measurements are physically implementable. In this work we adopt the local S-matrix formalism, and make use of a hierarchy of factorisation conditions that exclude both superluminal signalling and retrocausality, thereby providing such a criterion. Realising the local S-matrices through explicit interactions between smeared field operators and a pointer degree of freedom, we further derive local causality conditions for the induced Kraus operators, which guarantee the absence of signalling in "impossible measurement" scenarios. Finally, we show that the accuracy with which local field observables can be measured is fundamentally limited by the retarded propagator of the field, which also plays an essential role in a factorisation identity we prove for the field Kraus operators.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T18:15:21Z</published>
+    <arxiv:comment>23 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Robin Simmons</name>
+    </author>
+    <author>
+      <name>Maria Papageorgiou</name>
+    </author>
+    <author>
+      <name>Marios Christodoulou</name>
+    </author>
+    <author>
+      <name>Časlav Brukner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.21636v1</id>
+    <title>Bridging the Unavoidable A Priori: A Framework for Comparative Causal Modeling</title>
+    <updated>2025-11-26T18:08:20Z</updated>
+    <link href="https://arxiv.org/abs/2511.21636v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21636v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI/ML models have rapidly gained prominence as innovations for solving previously unsolved problems and their unintended consequences from amplifying human biases. Advocates for responsible AI/ML have sought ways to draw on the richer causal models of system dynamics to better inform the development of responsible AI/ML. However, a major barrier to advancing this work is the difficulty of bringing together methods rooted in different underlying assumptions (i.e., Dana Meadow's "the unavoidable a priori"). This paper brings system dynamics and structural equation modeling together into a common mathematical framework that can be used to generate systems from distributions, develop methods, and compare results to inform the underlying epistemology of system dynamics for data science and AI/ML applications.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:44:22Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Adam Karvonen</name>
-    </author>
-    <author>
-      <name>Daniel Reuter</name>
-    </author>
-    <author>
-      <name>Roy Rinberg</name>
-    </author>
-    <author>
-      <name>Luke Marks</name>
-    </author>
-    <author>
-      <name>Adrià Garriga-Alonso</name>
-    </author>
-    <author>
-      <name>Keri Warr</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.20616v1</id>
-    <title>Discovering Spatial Patterns of Readmission Risk Using a Bayesian Competing Risks Model with Spatially Varying Coefficients</title>
-    <updated>2025-11-25T18:41:43Z</updated>
-    <link href="https://arxiv.org/abs/2511.20616v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20616v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Time-to-event models are commonly used to study associations between risk factors and disease outcomes in the setting of electronic health records (EHR). In recent years, focus has intensified on social determinants of health, highlighting the need for methods that account for patients' locations. We propose a Bayesian approach for introducing point-referenced spatial effects into a competing risks proportional hazards model. Our method leverages Gaussian process (GP) priors for spatially varying intercept and slope. To improve computational efficiency under a large number of spatial locations, we implemented a Hilbert space low-rank approximation of the GP. We modeled the baseline hazard curves as piecewise constant, and introduced a novel multiplicative gamma process prior to induce shrinkage and smoothing. A loss-based clustering method was then used on the spatial random effects to identify high-risk regions. We demonstrate the utility of this method through simulation and a real-world analysis of EHR data from Duke Hospital to study readmission risk of elderly patients with upper extremity fractures. Our results showed that the proposed method improved inference efficiency and provided valuable insights for downstream policy decisions.</summary>
     <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:41:43Z</published>
-    <arxiv:primary_category term="stat.AP"/>
-    <author>
-      <name>Yueming Shen</name>
-    </author>
-    <author>
-      <name>Christian Pean</name>
-    </author>
-    <author>
-      <name>David Dunson</name>
-    </author>
-    <author>
-      <name>Samuel Berchuck</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.20601v1</id>
-    <title>The Driver-Blindness Phenomenon: Why Deep Sequence Models Default to Autocorrelation in Blood Glucose Forecasting</title>
-    <updated>2025-11-25T18:30:55Z</updated>
-    <link href="https://arxiv.org/abs/2511.20601v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20601v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Deep sequence models for blood glucose forecasting consistently fail to leverage clinically informative drivers--insulin, meals, and activity--despite well-understood physiological mechanisms. We term this Driver-Blindness and formalize it via $Δ_{\text{drivers}}$, the performance gain of multivariate models over matched univariate baselines. Across the literature, $Δ_{\text{drivers}}$ is typically near zero. We attribute this to three interacting factors: architectural biases favoring autocorrelation (C1), data fidelity gaps that render drivers noisy and confounded (C2), and physiological heterogeneity that undermines population-level models (C3). We synthesize strategies that partially mitigate Driver-Blindness--including physiological feature encoders, causal regularization, and personalization--and recommend that future work routinely report $Δ_{\text{drivers}}$ to prevent driver-blind models from being considered state-of-the-art.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:30:55Z</published>
-    <arxiv:comment>7 pages, 1 figure</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Heman Shakeri</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.20595v1</id>
-    <title>Inferring the Impacts of Baryonic Feedback from Kinetic Sunyaev-Zeldovich Cross-Correlations</title>
-    <updated>2025-11-25T18:26:02Z</updated>
-    <link href="https://arxiv.org/abs/2511.20595v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20595v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The complex processes of baryonic feedback associated with galaxy evolution are still poorly understood, and their impact on the clustering of matter on small scales remains difficult to quantify. While many fitting functions and emulators exist to model the matter power spectrum, their input parameters are not directly observable. However, recent studies using hydrodynamical simulations have identified a promising correlation between the gas content of halos and changes to the matter power spectrum from feedback. Building on these findings, we create the first fully data-driven power spectrum emulator. We utilize the kinematic Sunyaev-Zeldovich (kSZ) effect, a secondary anisotropy in the cosmic microwave background, as a tracer of free electrons in and around halos. We train a neural network to learn the mapping between the suppression of the matter power spectrum and the shape of the kSZ power spectrum extracted with a radial velocity template. We train and validate our algorithm using the FLAMINGO suite of hydrodynamical simulations, which encompasses a wide range of feedback models. Our emulator can reconstruct the matter power spectrum at the sub-percent level for scales $k\leq 5\;h/$Mpc and $0.2\leq z \leq 1.25$ directly from the data. Our model is robust and retains percent-level accuracy even for feedback models and cosmological parameter values not seen during training (except in a few extreme cases drastically different from the fiducial model). Due to its robustness, our algorithm offers a new way to identify the sources of suppression in the matter power spectrum, breaking the degeneracies between baryonic feedback and new physics. Finally, we present a forecast for reconstruction of the matter power spectrum combining maps of the microwave background anisotropies from a Simons Observatory-like experiment and galaxy catalogs from the Dark Energy Spectroscopic Instrument.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:26:02Z</published>
-    <arxiv:comment>Comments welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
-    <author>
-      <name>Alex Laguë</name>
-    </author>
-    <author>
-      <name>Mathew S. Madhavacheril</name>
-    </author>
-    <author>
-      <name>Josh Borrow</name>
-    </author>
-    <author>
-      <name>Kendrick M. Smith</name>
-    </author>
-    <author>
-      <name>Xinyi Chen</name>
-    </author>
-    <author>
-      <name>Matthieu Schaller</name>
-    </author>
-    <author>
-      <name>Joop Schaye</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.20594v1</id>
-    <title>Variational bagging: a robust approach for Bayesian uncertainty quantification</title>
-    <updated>2025-11-25T18:24:17Z</updated>
-    <link href="https://arxiv.org/abs/2511.20594v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20594v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Variational Bayes methods are popular due to their computational efficiency and adaptability to diverse applications. In specifying the variational family, mean-field classes are commonly used, which enables efficient algorithms such as coordinate ascent variational inference (CAVI) but fails to capture parameter dependence and typically underestimates uncertainty. In this work, we introduce a variational bagging approach that integrates a bagging procedure with variational Bayes, resulting in a bagged variational posterior for improved inference. We establish strong theoretical guarantees, including posterior contraction rates for general models and a Bernstein-von Mises (BVM) type theorem that ensures valid uncertainty quantification. Notably, our results show that even when using a mean-field variational family, our approach can recover off-diagonal elements of the limiting covariance structure and provide proper uncertainty quantification. In addition, variational bagging is robust to model misspecification, with covariance structures matching those of the target covariance. We illustrate our variational bagging method in numerical studies through applications to parametric models, finite mixture models, deep neural networks, and variational autoencoders (VAEs).</summary>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:24:17Z</published>
-    <arxiv:comment>44 pages, 14 figures</arxiv:comment>
+    <published>2025-11-26T18:08:20Z</published>
+    <arxiv:comment>Presented at 43rd Conference of the International System Dynamics Society in Boston, United States</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Peter S. Hovmand</name>
+    </author>
+    <author>
+      <name>Kari O'Donnell</name>
+    </author>
+    <author>
+      <name>Callie Ogland-Hand</name>
+    </author>
+    <author>
+      <name>Brian Biroscak</name>
+    </author>
+    <author>
+      <name>Douglas D. Gunzler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.21610v1</id>
+    <title>Auxiliary Metrics Help Decoding Skill Neurons in the Wild</title>
+    <updated>2025-11-26T17:31:53Z</updated>
+    <link href="https://arxiv.org/abs/2511.21610v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21610v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) exhibit remarkable capabilities across a wide range of tasks, yet their internal mechanisms remain largely opaque. In this paper, we introduce a simple, lightweight, and broadly applicable method with a focus on isolating neurons that encode specific skills. Building upon prior work that identified "skill neurons" via soft prompt training on classification tasks, our approach extends the analysis to complex scenarios involving multiple skills. We correlate neuron activations with auxiliary metrics -- such as external labels and the model's own confidence score -- thereby uncovering interpretable and task-specific behaviors without the need for manual token aggregation. We empirically validate our method on tasks spanning open-ended text generation and natural language inference, demonstrating its ability to detect neurons that not only drive known skills but also reveal previously unidentified shortcuts in arithmetic reasoning on BigBench.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T17:31:53Z</published>
+    <arxiv:comment>7 pages, 7 figures. Includes additional appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yixiu Zhao</name>
+    </author>
+    <author>
+      <name>Xiaozhi Wang</name>
+    </author>
+    <author>
+      <name>Zijun Yao</name>
+    </author>
+    <author>
+      <name>Lei Hou</name>
+    </author>
+    <author>
+      <name>Juanzi Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.21603v1</id>
+    <title>Uniform inference for kernel instrumental variable regression</title>
+    <updated>2025-11-26T17:18:21Z</updated>
+    <link href="https://arxiv.org/abs/2511.21603v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21603v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Instrumental variable regression is a foundational tool for causal analysis across the social and biomedical sciences. Recent advances use kernel methods to estimate nonparametric causal relationships, with general data types, while retaining a simple closed-form expression. Empirical researchers ultimately need reliable inference on causal estimates; however, uniform confidence sets for the method remain unavailable. To fill this gap, we develop valid and sharp confidence sets for kernel instrumental variable regression, allowing general nonlinearities and data types. Computationally, our bootstrap procedure requires only a single run of the kernel instrumental variable regression estimator. Theoretically, it relies on the same key assumptions. Overall, we provide a practical procedure for inference that substantially increases the value of kernel methods for causal analysis.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T17:18:21Z</published>
     <arxiv:primary_category term="math.ST"/>
     <author>
-      <name>Shitao Fan</name>
+      <name>Marvin Lob</name>
     </author>
     <author>
-      <name>Ilsang Ohn</name>
+      <name>Rahul Singh</name>
     </author>
     <author>
-      <name>David Dunson</name>
-    </author>
-    <author>
-      <name>Lizhen Lin</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2511.20592v1</id>
-    <title>Latent Diffusion Inversion Requires Understanding the Latent Space</title>
-    <updated>2025-11-25T18:21:33Z</updated>
-    <link href="https://arxiv.org/abs/2511.20592v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.20592v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The recovery of training data from generative models (``model inversion'') has been extensively studied for diffusion models in the data domain. The encoder/decoder pair and corresponding latent codes have largely been ignored by inversion techniques applied to latent space generative models, e.g., Latent Diffusion models (LDMs). In this work we describe two key findings: (1) The diffusion model exhibits non-uniform memorization across latent codes, tending to overfit samples located in high-distortion regions of the decoder pullback metric. (2) Even within a single latent code, different dimensions contribute unequally to memorization. We introduce a principled method to rank latent dimensions by their per-dimensional contribution to the decoder pullback metric, identifying those most responsible for memorization. Empirically, removing less-memorizing dimensions when computing attack statistics for score-based membership inference attacker significantly improves performance, with average AUROC gains of 2.7\% and substantial increases in TPR@1\%FPR (6.42\%) across diverse datasets including CIFAR-10, CelebA, ImageNet-1K, Pokémon, MS-COCO, and Flickr. This indicates stronger confidence in identifying members under extremely low false-positive tolerance. Our results highlight the overlooked influence of the auto-encoder geometry on LDM memorization and provide a new perspective for analyzing privacy risks in diffusion-based generative models.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-11-25T18:21:33Z</published>
-    <arxiv:comment>14 pages, 4 figures, 4 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Mingxing Rao</name>
-    </author>
-    <author>
-      <name>Bowen Qu</name>
-    </author>
-    <author>
-      <name>Daniel Moyer</name>
+      <name>Suhas Vijaykumar</name>
     </author>
   </entry>
 </feed>
