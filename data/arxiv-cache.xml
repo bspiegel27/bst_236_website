@@ -1,315 +1,312 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-03T00:58:22Z -->
+<!-- Last updated: 2025-12-04T00:58:16Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-03T00:58:23Z</updated>
+  <updated>2025-12-04T00:58:16Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>127612</opensearch:totalResults>
+  <opensearch:totalResults>127712</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.02020v1</id>
-    <title>EfficientFlow: Efficient Equivariant Flow Policy Learning for Embodied AI</title>
-    <updated>2025-12-01T18:59:59Z</updated>
-    <link href="https://arxiv.org/abs/2512.02020v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.02020v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Generative modeling has recently shown remarkable promise for visuomotor policy learning, enabling flexible and expressive control across diverse embodied AI tasks. However, existing generative policies often struggle with data inefficiency, requiring large-scale demonstrations, and sampling inefficiency, incurring slow action generation during inference. We introduce EfficientFlow, a unified framework for efficient embodied AI with flow-based policy learning. To enhance data efficiency, we bring equivariance into flow matching. We theoretically prove that when using an isotropic Gaussian prior and an equivariant velocity prediction network, the resulting action distribution remains equivariant, leading to improved generalization and substantially reduced data demands. To accelerate sampling, we propose a novel acceleration regularization strategy. As direct computation of acceleration is intractable for marginal flow trajectories, we derive a novel surrogate loss that enables stable and scalable training using only conditional trajectories. Across a wide range of robotic manipulation benchmarks, the proposed algorithm achieves competitive or superior performance under limited data while offering dramatically faster inference. These results highlight EfficientFlow as a powerful and efficient paradigm for high-performance embodied AI.</summary>
+    <id>http://arxiv.org/abs/2512.03044v1</id>
+    <title>Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling</title>
+    <updated>2025-12-02T18:59:53Z</updated>
+    <link href="https://arxiv.org/abs/2512.03044v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03044v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Robust perception and dynamics modeling are fundamental to real-world robotic policy learning. Recent methods employ video diffusion models (VDMs) to enhance robotic policies, improving their understanding and modeling of the physical world. However, existing approaches overlook the coherent and physically consistent motion representations inherently encoded across frames in VDMs. To this end, we propose Video2Act, a framework that efficiently guides robotic action learning by explicitly integrating spatial and motion-aware representations. Building on the inherent representations of VDMs, we extract foreground boundaries and inter-frame motion variations while filtering out background noise and task-irrelevant biases. These refined representations are then used as additional conditioning inputs to a diffusion transformer (DiT) action head, enabling it to reason about what to manipulate and how to move. To mitigate inference inefficiency, we propose an asynchronous dual-system design, where the VDM functions as the slow System 2 and the DiT head as the fast System 1, working collaboratively to generate adaptive actions. By providing motion-aware conditions to System 1, Video2Act maintains stable manipulation even with low-frequency updates from the VDM. For evaluation, Video2Act surpasses previous state-of-the-art VLA methods by 7.7% in simulation and 21.7% in real-world tasks in terms of average success rate, further exhibiting strong generalization capabilities.</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:59:59Z</published>
-    <arxiv:comment>Accepted by AAAI 2026. Project Page: https://efficientflow.github.io/</arxiv:comment>
+    <published>2025-12-02T18:59:53Z</published>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Jianlei Chang</name>
-    </author>
-    <author>
-      <name>Ruofeng Mei</name>
-    </author>
-    <author>
-      <name>Wei Ke</name>
-    </author>
-    <author>
-      <name>Xiangyu Xu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.02013v1</id>
-    <title>ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation</title>
-    <updated>2025-12-01T18:59:50Z</updated>
-    <link href="https://arxiv.org/abs/2512.02013v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.02013v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action (VLA) models have recently emerged, demonstrating strong generalization in robotic scene understanding and manipulation. However, when confronted with long-horizon tasks that require defined goal states, such as LEGO assembly or object rearrangement, existing VLA models still face challenges in coordinating high-level planning with precise manipulation. Therefore, we aim to endow a VLA model with the capability to infer the "how" process from the "what" outcomes, transforming goal states into executable procedures. In this paper, we introduce ManualVLA, a unified VLA framework built upon a Mixture-of-Transformers (MoT) architecture, enabling coherent collaboration between multimodal manual generation and action execution. Unlike prior VLA models that directly map sensory inputs to actions, we first equip ManualVLA with a planning expert that generates intermediate manuals consisting of images, position prompts, and textual instructions. Building upon these multimodal manuals, we design a Manual Chain-of-Thought (ManualCoT) reasoning process that feeds them into the action expert, where each manual step provides explicit control conditions, while its latent representation offers implicit guidance for accurate manipulation. To alleviate the burden of data collection, we develop a high-fidelity digital-twin toolkit based on 3D Gaussian Splatting, which automatically generates manual data for planning expert training. ManualVLA demonstrates strong real-world performance, achieving an average success rate 32% higher than the previous hierarchical SOTA baseline on LEGO assembly and object rearrangement tasks.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:59:50Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Chenyang Gu</name>
+      <name>Yueru Jia</name>
     </author>
     <author>
       <name>Jiaming Liu</name>
     </author>
     <author>
-      <name>Hao Chen</name>
+      <name>Shengbang Liu</name>
     </author>
     <author>
-      <name>Runzhong Huang</name>
+      <name>Rui Zhou</name>
     </author>
     <author>
-      <name>Qingpo Wuwu</name>
+      <name>Wanhe Yu</name>
     </author>
     <author>
-      <name>Zhuoyang Liu</name>
+      <name>Yuyang Yan</name>
     </author>
     <author>
-      <name>Xiaoqi Li</name>
+      <name>Xiaowei Chi</name>
     </author>
     <author>
-      <name>Ying Li</name>
+      <name>Yandong Guo</name>
     </author>
     <author>
-      <name>Renrui Zhang</name>
-    </author>
-    <author>
-      <name>Peng Jia</name>
-    </author>
-    <author>
-      <name>Pheng-Ann Heng</name>
+      <name>Boxin Shi</name>
     </author>
     <author>
       <name>Shanghang Zhang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.02010v1</id>
-    <title>Four Over Six: More Accurate NVFP4 Quantization with Adaptive Block Scaling</title>
-    <updated>2025-12-01T18:59:45Z</updated>
-    <link href="https://arxiv.org/abs/2512.02010v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.02010v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>As large language models have grown larger, low-precision numerical formats such as NVFP4 have become increasingly popular due to the speed and memory benefits they provide. However, to accelerate computation with NVFP4, all matrix multiplication operands--weights and activations in the forward pass, and weights, activations, and gradients in the backward pass--must be quantized to NVFP4, often leading to divergence during training and performance degradation during inference. NVFP4 by evaluating multiple potential scale factors for each block of values. To address this issue, in this work we introduce Four Over Six (4/6), a modification to the NVFP4 quantization algorithm that evaluates two potential scale factors for each block of values. Unlike integer formats, floating-point formats such as FP4 have the most quantization error on near-maximal values in each block, which we find to be primarily responsible for downstream performance degradation. We find that for some blocks, scaling to smaller FP4 values makes the distribution of representable values more uniform, improving representation of near-maximal values. Importantly, 4/6 can be implemented efficiently on NVIDIA Blackwell GPUs, making it viable to use while training LLMs with NVFP4. In pre-training experiments with transformer and hybrid model architectures, we find that 4/6 prevents divergence in several cases, bringing training loss significantly closer to BF16 compared to models trained with current state-of-the-art NVFP4 training recipes. We also find that 4/6 can be easily incorporated into many different post-training quantization methods and generally improves downstream accuracy. We hope this inspires future work in training and deploying models with NVFP4.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2512.03024v1</id>
+    <title>TokenPowerBench: Benchmarking the Power Consumption of LLM Inference</title>
+    <updated>2025-12-02T18:50:17Z</updated>
+    <link href="https://arxiv.org/abs/2512.03024v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03024v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) services now answer billions of queries per day, and industry reports show that inference, not training, accounts for more than 90% of total power consumption. However, existing benchmarks focus on either training/fine-tuning or performance of inference and provide little support for power consumption measurement and analysis of inference. We introduce TokenPowerBench, the first lightweight and extensible benchmark designed for LLM-inference power consumption studies. The benchmark combines (i) a declarative configuration interface covering model choice, prompt set, and inference engine, (ii) a measurement layer that captures GPU-, node-, and system-level power without specialized power meters, and (iii) a phase-aligned metrics pipeline that attributes energy to the prefill and decode stages of every request. These elements make it straight-forward to explore the power consumed by an LLM inference run; furthermore, by varying batch size, context length, parallelism strategy and quantization, users can quickly assess how each setting affects joules per token and other energy-efficiency metrics. We evaluate TokenPowerBench on four of the most widely used model series (Llama, Falcon, Qwen, and Mistral). Our experiments cover from 1 billion parameters up to the frontier-scale Llama3-405B model. Furthermore, we release TokenPowerBench as open source to help users to measure power consumption, forecast operating expenses, and meet sustainability targets when deploying LLM services.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:59:45Z</published>
-    <arxiv:comment>10 pages, 5 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T18:50:17Z</published>
+    <arxiv:comment>Accepted by the AAAI'26 Conference Main Track</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Jack Cook</name>
+      <name>Chenxu Niu</name>
     </author>
     <author>
-      <name>Junxian Guo</name>
+      <name>Wei Zhang</name>
     </author>
     <author>
-      <name>Guangxuan Xiao</name>
+      <name>Jie Li</name>
     </author>
     <author>
-      <name>Yujun Lin</name>
+      <name>Yongjian Zhao</name>
     </author>
     <author>
-      <name>Song Han</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.02008v1</id>
-    <title>The Art of Scaling Test-Time Compute for Large Language Models</title>
-    <updated>2025-12-01T18:59:28Z</updated>
-    <link href="https://arxiv.org/abs/2512.02008v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.02008v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Test-time scaling (TTS) -- the dynamic allocation of compute during inference -- is a promising direction for improving reasoning in large language models (LLMs). However, a systematic comparison of well-known TTS strategies under identical conditions is missing, and the influence of model type and problem difficulty on performance remains unclear. To address these gaps, we conduct the first large-scale study of TTS, spanning over thirty billion tokens generated using eight open-source LLMs (7B to 235B parameters), across four reasoning datasets. We observe three consistent trends: (1) no single TTS strategy universally dominates; (2) reasoning models exhibit distinct trace-quality patterns across problem difficulty and trace length, forming short-horizon and long-horizon categories; and (3) for a given model type, the optimal TTS performance scales monotonically with compute budget. Based on these insights, we provide a practical recipe for selecting the best TTS strategy, considering problem difficulty, model type, and compute budget, providing a practical guide to effective inference-time scaling.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:59:28Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Aradhye Agarwal</name>
+      <name>Tongyang Wang</name>
     </author>
     <author>
-      <name>Ayan Sengupta</name>
+      <name>Xi Wang</name>
     </author>
     <author>
-      <name>Tanmoy Chakraborty</name>
+      <name>Yong Chen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.02007v1</id>
-    <title>The Astrometric Resoeccentric Degeneracy: Eccentric Single Planets Mimic 2:1 Resonant Planet Pairs in Astrometry</title>
-    <updated>2025-12-01T18:59:09Z</updated>
-    <link href="https://arxiv.org/abs/2512.02007v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.02007v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Detections of long-period giant exoplanets will expand dramatically with Gaia Data Release 4 (DR4), but interpreting these signals will require care. We derive the astrometric resoeccentric degeneracy: an astrometric analogue of the well-known radial velocity degeneracy in which a single eccentric planet can mimic two circular planets near a 2:1 period ratio. To first order in eccentricity, the sky-projected motion of a single eccentric orbit decomposes into a fundamental mode and first harmonic with an amplitude proportional to that eccentricity. A pair of coplanar, circular planets in a 2:1 orbital resonance produces the same harmonic structure: the outer planet sets the fundamental mode, while the inner planet supplies an apparent first harmonic. We present a mapping between the harmonic amplitudes and effective eccentricity ($e_\mathrm{eff}$) of a single planet that mimics a 2:1 configuration, demonstrating that $e_\mathrm{eff} = \, 2^{1/3}(M_{p,2}/M_{p,1})$, the masses of the inner and outer planets, respectively. Using simulated Gaia data we show that (1) coplanar 2:1 systems are statistically indistinguishable from a single eccentric planet and (2) mutual inclination can break this degeneracy. This bias favors detecting mutually inclined systems, often fingerprints of a dynamically hot history -- traces for processes such as planet-planet scattering or secular chaos. Determining the planetary architectures in which this degeneracy holds will be essential for measuring cool-giant occurrence rates with Gaia and for inferring their dynamical evolution histories.</summary>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2512.03019v1</id>
+    <title>Distribution-Calibrated Inference time compute for Thinking LLM-as-a-Judge</title>
+    <updated>2025-12-02T18:46:47Z</updated>
+    <link href="https://arxiv.org/abs/2512.03019v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03019v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Thinking Large Language Models (LLMs) used as judges for pairwise preferences remain noisy at the single-sample level, and common aggregation rules (majority vote, soft self-consistency, or instruction-based self-aggregation) are inconsistent when ties are allowed. We study inference-time compute (ITC) for evaluators that generate n independent thinking-rating samples per item, and propose a principled, distribution-calibrated aggregation scheme. Our method models three-way preferences with a Bradley-Terry-Davidson formulation on rating counts, leveraging both polarity (margin among non-ties) and decisiveness (non-tie rate) to distinguish narrow margins from strong consensus. Across various evaluation benchmarks, our approach consistently reduces MAE and increases pairwise accuracy versus standard baselines, and when evaluated against human-consensus meta-labels, matches or exceeds individual human raters. These results show that carefully allocating ITC and aggregating with distribution-aware methods turns noisy individual model judgments into reliable ratings for evaluation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T18:46:47Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hamid Dadkhahi</name>
+    </author>
+    <author>
+      <name>Firas Trabelsi</name>
+    </author>
+    <author>
+      <name>Parker Riley</name>
+    </author>
+    <author>
+      <name>Juraj Juraska</name>
+    </author>
+    <author>
+      <name>Mehdi Mirzazadeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.03018v1</id>
+    <title>AutoBrep: Autoregressive B-Rep Generation with Unified Topology and Geometry</title>
+    <updated>2025-12-02T18:46:25Z</updated>
+    <link href="https://arxiv.org/abs/2512.03018v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03018v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The boundary representation (B-Rep) is the standard data structure used in Computer-Aided Design (CAD) for defining solid models. Despite recent progress, directly generating B-Reps end-to-end with precise geometry and watertight topology remains a challenge. This paper presents AutoBrep, a novel Transformer model that autoregressively generates B-Reps with high quality and validity. AutoBrep employs a unified tokenization scheme that encodes both geometric and topological characteristics of a B-Rep model as a sequence of discrete tokens. Geometric primitives (i.e., surfaces and curves) are encoded as latent geometry tokens, and their structural relationships are defined as special topological reference tokens. Sequence order in AutoBrep naturally follows a breadth first traversal of the B-Rep face adjacency graph. At inference time, neighboring faces and edges along with their topological structure are progressively generated. Extensive experiments demonstrate the advantages of our unified representation when coupled with next-token prediction for B-Rep generation. AutoBrep outperforms baselines with better quality and watertightness. It is also highly scalable to complex solids with good fidelity and inference speed. We further show that autocompleting B-Reps is natively supported through our unified tokenization, enabling user-controllable CAD generation with minimal changes. Code is available at https://github.com/AutodeskAILab/AutoBrep.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T18:46:25Z</published>
+    <arxiv:comment>Accepted to Siggraph Asia 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Xiang Xu</name>
+    </author>
+    <author>
+      <name>Pradeep Kumar Jayaraman</name>
+    </author>
+    <author>
+      <name>Joseph G. Lambourne</name>
+    </author>
+    <author>
+      <name>Yilin Liu</name>
+    </author>
+    <author>
+      <name>Durvesh Malpure</name>
+    </author>
+    <author>
+      <name>Pete Meltzer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.03014v1</id>
+    <title>Instant Video Models: Universal Adapters for Stabilizing Image-Based Networks</title>
+    <updated>2025-12-02T18:41:10Z</updated>
+    <link href="https://arxiv.org/abs/2512.03014v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03014v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When applied sequentially to video, frame-based networks often exhibit temporal inconsistency - for example, outputs that flicker between frames. This problem is amplified when the network inputs contain time-varying corruptions. In this work, we introduce a general approach for adapting frame-based models for stable and robust inference on video. We describe a class of stability adapters that can be inserted into virtually any architecture and a resource-efficient training process that can be performed with a frozen base network. We introduce a unified conceptual framework for describing temporal stability and corruption robustness, centered on a proposed accuracy-stability-robustness loss. By analyzing the theoretical properties of this loss, we identify the conditions where it produces well-behaved stabilizer training. Our experiments validate our approach on several vision tasks including denoising (NAFNet), image enhancement (HDRNet), monocular depth (Depth Anything v2), and semantic segmentation (DeepLabv3+). Our method improves temporal stability and robustness against a range of image corruptions (including compression artifacts, noise, and adverse weather), while preserving or improving the quality of predictions.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T18:41:10Z</published>
+    <arxiv:comment>NeurIPS 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Matthew Dutson</name>
+    </author>
+    <author>
+      <name>Nathan Labiosa</name>
+    </author>
+    <author>
+      <name>Yin Li</name>
+    </author>
+    <author>
+      <name>Mohit Gupta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.03010v1</id>
+    <title>SurfFill: Completion of LiDAR Point Clouds via Gaussian Surfel Splatting</title>
+    <updated>2025-12-02T18:35:54Z</updated>
+    <link href="https://arxiv.org/abs/2512.03010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LiDAR-captured point clouds are often considered the gold standard in active 3D reconstruction. While their accuracy is exceptional in flat regions, the capturing is susceptible to miss small geometric structures and may fail with dark, absorbent materials. Alternatively, capturing multiple photos of the scene and applying 3D photogrammetry can infer these details as they often represent feature-rich regions. However, the accuracy of LiDAR for featureless regions is rarely reached. Therefore, we suggest combining the strengths of LiDAR and camera-based capture by introducing SurfFill: a Gaussian surfel-based LiDAR completion scheme. We analyze LiDAR capturings and attribute LiDAR beam divergence as a main factor for artifacts, manifesting mostly at thin structures and edges. We use this insight to introduce an ambiguity heuristic for completed scans by evaluating the change in density in the point cloud. This allows us to identify points close to missed areas, which we can then use to grow additional points from to complete the scan. For this point growing, we constrain Gaussian surfel reconstruction [Huang et al. 2024] to focus optimization and densification on these ambiguous areas. Finally, Gaussian primitives of the reconstruction in ambiguous areas are extracted and sampled for points to complete the point cloud. To address the challenges of large-scale reconstruction, we extend this pipeline with a divide-and-conquer scheme for building-sized point cloud completion. We evaluate on the task of LiDAR point cloud completion of synthetic and real-world scenes and find that our method outperforms previous reconstruction methods.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T18:35:54Z</published>
+    <arxiv:comment>Project page: https://lfranke.github.io/surffill</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Svenja Strobel</name>
+    </author>
+    <author>
+      <name>Matthias Innmann</name>
+    </author>
+    <author>
+      <name>Bernhard Egger</name>
+    </author>
+    <author>
+      <name>Marc Stamminger</name>
+    </author>
+    <author>
+      <name>Linus Franke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.02996v1</id>
+    <title>Structured Clifford+T Circuits for Efficient Generation of Quantum Chaos</title>
+    <updated>2025-12-02T18:20:50Z</updated>
+    <link href="https://arxiv.org/abs/2512.02996v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.02996v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the emergence of quantum chaos and unitary T-design behavior in derandomized Clifford+T circuits using causal cover architectures. Motivated by the need for deterministic constructions that can exhibit chaotic behavior across diverse quantum hardware platforms, we explore deterministic Clifford circuit architectures (random Clifford circuits with causal cover, bitonic sorting networks, and permutation-based routing circuits) to drive quantum circuits toward Wigner-Dyson (WD) entanglement spectrum statistics and OTOC decay.Our experiments demonstrate that causal connectivity, not circuit depth or randomness, is a critical feature that drives circuits to chaos. We show that initializing with n T-states and adding a second T-layer after a causally covered Clifford evolution yields consistent OTOC decay and WD statistics. This also enables deeper understanding of the circuit structures that generate complex entanglement behavior. Notably, our work suggests polylogarithmic-depth deterministic circuits suffice to approximate chaotic behavior, highlighting that causal connectivity is sufficient for operator spreading to induce Wigner-Dyson entanglement statistics and OTOC decay.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T18:20:50Z</published>
+    <arxiv:comment>6 pages, 4 figures, IEEE QCE 2025</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Asim Sharma</name>
+    </author>
+    <author>
+      <name>Avah Banerjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.02968v1</id>
+    <title>Flexible Gravitational-Wave Parameter Estimation with Transformers</title>
+    <updated>2025-12-02T17:49:08Z</updated>
+    <link href="https://arxiv.org/abs/2512.02968v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.02968v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gravitational-wave data analysis relies on accurate and efficient methods to extract physical information from noisy detector signals, yet the increasing rate and complexity of observations represent a growing challenge. Deep learning provides a powerful alternative to traditional inference, but existing neural models typically lack the flexibility to handle variations in data analysis settings. Such variations accommodate imperfect observations or are required for specialized tests, and could include changes in detector configurations, overall frequency ranges, or localized cuts. We introduce a flexible transformer-based architecture paired with a training strategy that enables adaptation to diverse analysis settings at inference time. Applied to parameter estimation, we demonstrate that a single flexible model -- called Dingo-T1 -- can (i) analyze 48 gravitational-wave events from the third LIGO-Virgo-KAGRA Observing Run under a wide range of analysis configurations, (ii) enable systematic studies of how detector and frequency configurations impact inferred posteriors, and (iii) perform inspiral-merger-ringdown consistency tests probing general relativity. Dingo-T1 also improves median sample efficiency on real events from a baseline of 1.4% to 4.2%. Our approach thus demonstrates flexible and scalable inference with a principled framework for handling missing or incomplete data -- key capabilities for current and next-generation observatories.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:59:09Z</published>
-    <arxiv:comment>12 pages, 2 figures, submitted to AAS journals, comments welcome!</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.EP"/>
-    <author>
-      <name>Daniel A. Yahalomi</name>
-    </author>
-    <author>
-      <name>Tiger Lu</name>
-    </author>
-    <author>
-      <name>Philip J. Armitage</name>
-    </author>
-    <author>
-      <name>Megan Bedell</name>
-    </author>
-    <author>
-      <name>Andrew R. Casey</name>
-    </author>
-    <author>
-      <name>Adrian M. Price-Whelan</name>
-    </author>
-    <author>
-      <name>Malena Rice</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.02004v1</id>
-    <title>AlignSAE: Concept-Aligned Sparse Autoencoders</title>
-    <updated>2025-12-01T18:58:22Z</updated>
-    <link href="https://arxiv.org/abs/2512.02004v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.02004v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Models (LLMs) encode factual knowledge within hidden parametric spaces that are difficult to inspect or control. While Sparse Autoencoders (SAEs) can decompose hidden activations into more fine-grained, interpretable features, they often struggle to reliably align these features with human-defined concepts, resulting in entangled and distributed feature representations. To address this, we introduce AlignSAE, a method that aligns SAE features with a defined ontology through a "pre-train, then post-train" curriculum. After an initial unsupervised training phase, we apply supervised post-training to bind specific concepts to dedicated latent slots while preserving the remaining capacity for general reconstruction. This separation creates an interpretable interface where specific relations can be inspected and controlled without interference from unrelated features. Empirical results demonstrate that AlignSAE enables precise causal interventions, such as reliable "concept swaps", by targeting single, semantically aligned slots.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:58:22Z</published>
-    <arxiv:comment>20 pages, 7 figures, 5 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
+    <published>2025-12-02T17:49:08Z</published>
+    <arxiv:comment>8+11 pages, 3+7 figures</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
     <author>
-      <name>Minglai Yang</name>
+      <name>Annalena Kofler</name>
     </author>
     <author>
-      <name>Xinyu Guo</name>
+      <name>Maximilian Dax</name>
     </author>
     <author>
-      <name>Mihai Surdeanu</name>
+      <name>Stephen R. Green</name>
     </author>
     <author>
-      <name>Liangming Pan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.01989v1</id>
-    <title>PAI-Bench: A Comprehensive Benchmark For Physical AI</title>
-    <updated>2025-12-01T18:47:39Z</updated>
-    <link href="https://arxiv.org/abs/2512.01989v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.01989v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Physical AI aims to develop models that can perceive and predict real-world dynamics; yet, the extent to which current multi-modal large language models and video generative models support these abilities is insufficiently understood. We introduce Physical AI Bench (PAI-Bench), a unified and comprehensive benchmark that evaluates perception and prediction capabilities across video generation, conditional video generation, and video understanding, comprising 2,808 real-world cases with task-aligned metrics designed to capture physical plausibility and domain-specific reasoning. Our study provides a systematic assessment of recent models and shows that video generative models, despite strong visual fidelity, often struggle to maintain physically coherent dynamics, while multi-modal large language models exhibit limited performance in forecasting and causal interpretation. These observations suggest that current systems are still at an early stage in handling the perceptual and predictive demands of Physical AI. In summary, PAI-Bench establishes a realistic foundation for evaluating Physical AI and highlights key gaps that future systems must address.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:47:39Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Fengzhe Zhou</name>
+      <name>Jonas Wildberger</name>
     </author>
     <author>
-      <name>Jiannan Huang</name>
+      <name>Nihar Gupte</name>
     </author>
     <author>
-      <name>Jialuo Li</name>
+      <name>Jakob H. Macke</name>
     </author>
     <author>
-      <name>Deva Ramanan</name>
+      <name>Jonathan Gair</name>
     </author>
     <author>
-      <name>Humphrey Shi</name>
+      <name>Alessandra Buonanno</name>
+    </author>
+    <author>
+      <name>Bernhard Schölkopf</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.01986v1</id>
-    <title>A robust generalizable device-agnostic deep learning model for sleep-wake determination from triaxial wrist accelerometry</title>
-    <updated>2025-12-01T18:43:51Z</updated>
-    <link href="https://arxiv.org/abs/2512.01986v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.01986v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Study Objectives: Wrist accelerometry is widely used for inferring sleep-wake state. Previous works demonstrated poor wake detection, without cross-device generalizability and validation in different age range and sleep disorders. We developed a robust deep learning model for to detect sleep-wakefulness from triaxial accelerometry and evaluated its validity across three devices and in a large adult population spanning a wide range of ages with and without sleep disorders. Methods: We collected wrist accelerometry simultaneous to polysomnography (PSG) in 453 adults undergoing clinical sleep testing at a tertiary care sleep laboratory, using three devices. We extracted features in 30-second epochs and trained a 3-class model to detect wake, sleep, and sleep with arousals, which was then collapsed into wake vs. sleep using a decision tree. To enhance wake detection, the model was specifically trained on randomly selected subjects with low sleep efficiency and/or high arousal index from one device recording and then tested on the remaining recordings. Results: The model showed high performance with F1 Score of 0.86, sensitivity (sleep) of 0.87, and specificity (wakefulness) of 0.78, and significant and moderate correlation to PSG in predicting total sleep time (R=0.69) and sleep efficiency (R=0.63). Model performance was robust to the presence of sleep disorders, including sleep apnea and periodic limb movements in sleep, and was consistent across all three models of accelerometer. Conclusions: We present a deep model to detect sleep-wakefulness from actigraphy in adults with relative robustness to the presence of sleep disorders and generalizability across diverse commonly used wrist accelerometers.</summary>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:43:51Z</published>
-    <arxiv:comment>27 pages, 5 figures, 5 tables</arxiv:comment>
-    <arxiv:primary_category term="q-bio.QM"/>
+    <id>http://arxiv.org/abs/2512.02960v1</id>
+    <title>Conservation of Momentum and Energy in the Lorenz-Abraham-Dirac Equation of Motion</title>
+    <updated>2025-12-02T17:36:13Z</updated>
+    <link href="https://arxiv.org/abs/2512.02960v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.02960v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>After a brief review of the modified causal Lorentz-Abraham classical equation of motion for an extended charged sphere and its limit to the mass-renormalized modified causal Lorentz-Abraham-Dirac equation of motion as the radius of the charged sphere approaches zero, a streamlined derivation is given for the conditions on the external force required for these modified equations of motion to satisfy conservation of momentum and energy.</summary>
+    <category term="physics.class-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T17:36:13Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="physics.class-ph"/>
     <author>
-      <name>Nasim Montazeri</name>
-    </author>
-    <author>
-      <name>Stone Yang</name>
-    </author>
-    <author>
-      <name>Dominik Luszczynski</name>
-    </author>
-    <author>
-      <name>John Zhang</name>
-    </author>
-    <author>
-      <name>Dharmendra Gurve</name>
-    </author>
-    <author>
-      <name>Andrew Centen</name>
-    </author>
-    <author>
-      <name>Maged Goubran</name>
-    </author>
-    <author>
-      <name>Andrew Lim</name>
+      <name>Arthur D. Yaghjian</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.01960v1</id>
-    <title>SpriteHand: Real-Time Versatile Hand-Object Interaction with Autoregressive Video Generation</title>
-    <updated>2025-12-01T18:13:40Z</updated>
-    <link href="https://arxiv.org/abs/2512.01960v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.01960v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Modeling and synthesizing complex hand-object interactions remains a significant challenge, even for state-of-the-art physics engines. Conventional simulation-based approaches rely on explicitly defined rigid object models and pre-scripted hand gestures, making them inadequate for capturing dynamic interactions with non-rigid or articulated entities such as deformable fabrics, elastic materials, hinge-based structures, furry surfaces, or even living creatures. In this paper, we present SpriteHand, an autoregressive video generation framework for real-time synthesis of versatile hand-object interaction videos across a wide range of object types and motion patterns. SpriteHand takes as input a static object image and a video stream in which the hands are imagined to interact with the virtual object embedded in a real-world scene, and generates corresponding hand-object interaction effects in real time. Our model employs a causal inference architecture for autoregressive generation and leverages a hybrid post-training approach to enhance visual realism and temporal coherence. Our 1.3B model supports real-time streaming generation at around 18 FPS and 640x368 resolution, with an approximate 150 ms latency on a single NVIDIA RTX 5090 GPU, and more than a minute of continuous output. Experiments demonstrate superior visual quality, physical plausibility, and interaction fidelity compared to both generative and engine-based baselines.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:13:40Z</published>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2512.02954v1</id>
+    <title>The suppression of the matter power spectrum: strong feedback from X-ray gas mass fractions, kSZ effect profiles, and galaxy-galaxy lensing</title>
+    <updated>2025-12-02T17:31:28Z</updated>
+    <link href="https://arxiv.org/abs/2512.02954v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.02954v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Baryon feedback redistributes gas relative to the underlying dark matter distribution and suppresses the matter power spectrum on small scales, but the amplitude and scale dependence of this effect are uncertain. We constrain the impact of baryon feedback on the matter power spectrum by jointly analysing X-ray gas mass fractions from the eROSITA and HSC-XXL samples and SDSS/DESI+ACT kinetic Sunyaev-Zel'dovich (kSZ) effect profiles; the samples are characterised with galaxy-galaxy lensing and together span group and cluster masses at $0&lt;z&lt;1$. Using the baryonification framework, our joint eROSITA and kSZ model gives precise constraints on the suppression of the matter power spectrum: $10 \pm 2\%$ at $k=1~h~\mathrm{Mpc}^{-1}$. The inferred gas profiles are more extended and the power suppression is stronger than predicted by the fiducial models of recent hydrodynamical simulation suites, including FLAMINGO and BAHAMAS. The HSC-XXL gas mass fractions, which the fiducial simulations were calibrated to reproduce, prefer more moderate power suppression than the kSZ and eROSITA data: $5 \pm 4\%$ at $k=1~h~\mathrm{Mpc}^{-1}$. With a simulated LSST Year 1 weak lensing analysis, we demonstrate a framework for next-generation surveys: calibrating feedback models with multi-wavelength gas observables to recover the small-scale statistical power of cosmic shear.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T17:31:28Z</published>
+    <arxiv:comment>21 pages, submitted to MNRAS</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
     <author>
-      <name>Zisu Li</name>
+      <name>Jared Siegel</name>
     </author>
     <author>
-      <name>Hengye Lyu</name>
+      <name>Leah Bigwood</name>
     </author>
     <author>
-      <name>Jiaxin Shi</name>
+      <name>Alexandra Amon</name>
     </author>
     <author>
-      <name>Yufeng Zeng</name>
+      <name>Jamie McCullough</name>
     </author>
     <author>
-      <name>Mingming Fan</name>
+      <name>Masaya Yamamoto</name>
     </author>
     <author>
-      <name>Hanwang Zhang</name>
+      <name>Ian G. McCarthy</name>
     </author>
     <author>
-      <name>Chen Liang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.01953v1</id>
-    <title>KV Pareto: Systems-Level Optimization of KV Cache and Model Compression for Long Context Inference</title>
-    <updated>2025-12-01T18:03:47Z</updated>
-    <link href="https://arxiv.org/abs/2512.01953v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.01953v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long-context Large Language Models (LLMs) face significant memory bottlenecks during inference due to the linear growth of key-value (KV) cache with sequence length. While individual optimization techniques like KV cache quantization, chunked prefill, and model weight quantization have shown promise, their joint effects and optimal configurations for edge deployment remain underexplored. We introduce KV Pareto, a systems-level framework that systematically maps the trade-off frontier between total memory consumption and task accuracy across these three complementary optimization techniques. Our framework evaluates multiple LLM architectures (Qwen, Llama, Mistral) with varying KV quantization schemes (int2/4/8, mixed-precision), granularities (per-token, per-tensor, per-block), and 4-bit weight quantization via AWQ. Our framework identifies model-specific Pareto-optimal configurations that achieve 68-78% total memory reduction with minimal (1-3%) accuracy degradation on long-context tasks. We additionally verify the selected frontiers on additional benchmarks of Needle-in-a-Haystack, GSM8k and MMLU as well as extended context lengths of up to 128k to demonstrate the practical need of joint optimization for efficient LLM inference.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-01T18:03:47Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Sai Gokhale</name>
+      <name>Matthieu Schaller</name>
     </author>
     <author>
-      <name>Devleena Das</name>
+      <name>Aurel Schneider</name>
     </author>
     <author>
-      <name>Rajeev Patwari</name>
-    </author>
-    <author>
-      <name>Ashish Sirasao</name>
-    </author>
-    <author>
-      <name>Elliott Delaye</name>
+      <name>Joop Schaye</name>
     </author>
   </entry>
 </feed>
