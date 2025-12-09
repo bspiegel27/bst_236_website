@@ -1,335 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-08T00:59:02Z -->
+<!-- Last updated: 2025-12-09T00:58:35Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-08T00:59:03Z</updated>
+  <updated>2025-12-09T00:58:36Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>127895</opensearch:totalResults>
+  <opensearch:totalResults>127969</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.05117v1</id>
-    <title>The Universal Weight Subspace Hypothesis</title>
-    <updated>2025-12-04T18:59:58Z</updated>
-    <link href="https://arxiv.org/abs/2512.05117v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05117v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We show that deep neural networks trained across diverse tasks exhibit remarkably similar low-dimensional parametric subspaces. We provide the first large-scale empirical evidence that demonstrates that neural networks systematically converge to shared spectral subspaces regardless of initialization, task, or domain. Through mode-wise spectral analysis of over 1100 models - including 500 Mistral-7B LoRAs, 500 Vision Transformers, and 50 LLaMA-8B models - we identify universal subspaces capturing majority variance in just a few principal directions. By applying spectral decomposition techniques to the weight matrices of various architectures trained on a wide range of tasks and datasets, we identify sparse, joint subspaces that are consistently exploited, within shared architectures across diverse tasks and datasets. Our findings offer new insights into the intrinsic organization of information within deep networks and raise important questions about the possibility of discovering these universal subspaces without the need for extensive data and computational resources. Furthermore, this inherent structure has significant implications for model reusability, multi-task learning, model merging, and the development of training and inference-efficient algorithms, potentially reducing the carbon footprint of large-scale neural models.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:59:58Z</published>
-    <arxiv:comment>37 pages</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Prakhar Kaushik</name>
-    </author>
-    <author>
-      <name>Shravan Chaudhari</name>
-    </author>
-    <author>
-      <name>Ankit Vaidya</name>
-    </author>
-    <author>
-      <name>Rama Chellappa</name>
-    </author>
-    <author>
-      <name>Alan Yuille</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05113v1</id>
-    <title>Splannequin: Freezing Monocular Mannequin-Challenge Footage with Dual-Detection Splatting</title>
-    <updated>2025-12-04T18:59:53Z</updated>
-    <link href="https://arxiv.org/abs/2512.05113v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05113v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Synthesizing high-fidelity frozen 3D scenes from monocular Mannequin-Challenge (MC) videos is a unique problem distinct from standard dynamic scene reconstruction. Instead of focusing on modeling motion, our goal is to create a frozen scene while strategically preserving subtle dynamics to enable user-controlled instant selection. To achieve this, we introduce a novel application of dynamic Gaussian splatting: the scene is modeled dynamically, which retains nearby temporal variation, and a static scene is rendered by fixing the model's time parameter. However, under this usage, monocular capture with sparse temporal supervision introduces artifacts like ghosting and blur for Gaussians that become unobserved or occluded at weakly supervised timestamps. We propose Splannequin, an architecture-agnostic regularization that detects two states of Gaussian primitives, hidden and defective, and applies temporal anchoring. Under predominantly forward camera motion, hidden states are anchored to their recent well-observed past states, while defective states are anchored to future states with stronger supervision. Our method integrates into existing dynamic Gaussian pipelines via simple loss terms, requires no architectural changes, and adds zero inference overhead. This results in markedly improved visual quality, enabling high-fidelity, user-selectable frozen-time renderings, validated by a 96% user preference. Project page: https://chien90190.github.io/splannequin/</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:59:53Z</published>
-    <arxiv:comment>WACV 2025. Project page: https://chien90190.github.io/splannequin/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Hao-Jen Chien</name>
-    </author>
-    <author>
-      <name>Yi-Chuan Huang</name>
-    </author>
-    <author>
-      <name>Chung-Ho Wu</name>
-    </author>
-    <author>
-      <name>Wei-Lun Chao</name>
-    </author>
-    <author>
-      <name>Yu-Lun Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05107v1</id>
-    <title>STARE-VLA: Progressive Stage-Aware Reinforcement for Fine-Tuning Vision-Language-Action Models</title>
-    <updated>2025-12-04T18:59:22Z</updated>
-    <link href="https://arxiv.org/abs/2512.05107v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05107v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent advances in Vision-Language-Action (VLA) models, powered by large language models and reinforcement learning-based fine-tuning, have shown remarkable progress in robotic manipulation. Existing methods often treat long-horizon actions as linguistic sequences and apply trajectory-level optimization methods such as Trajectory-wise Preference Optimization (TPO) or Proximal Policy Optimization (PPO), leading to coarse credit assignment and unstable training. However, unlike language, where a unified semantic meaning is preserved despite flexible sentence order, action trajectories progress through causally chained stages with different learning difficulties. This motivates progressive stage optimization. Thereby, we present Stage-Aware Reinforcement (STARE), a module that decomposes a long-horizon action trajectory into semantically meaningful stages and provides dense, interpretable, and stage-aligned reinforcement signals. Integrating STARE into TPO and PPO, we yield Stage-Aware TPO (STA-TPO) and Stage-Aware PPO (STA-PPO) for offline stage-wise preference and online intra-stage interaction, respectively. Further building on supervised fine-tuning as initialization, we propose the Imitation -&gt; Preference -&gt; Interaction (IPI), a serial fine-tuning pipeline for improving action accuracy in VLA models. Experiments on SimplerEnv and ManiSkill3 demonstrate substantial gains, achieving state-of-the-art success rates of 98.0 percent on SimplerEnv and 96.4 percent on ManiSkill3 tasks.</summary>
+    <id>http://arxiv.org/abs/2512.05964v1</id>
+    <title>Training-Time Action Conditioning for Efficient Real-Time Chunking</title>
+    <updated>2025-12-05T18:57:28Z</updated>
+    <link href="https://arxiv.org/abs/2512.05964v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05964v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real-time chunking (RTC) enables vision-language-action models (VLAs) to generate smooth, reactive robot trajectories by asynchronously predicting action chunks and conditioning on previously committed actions via inference-time inpainting. However, this inpainting method introduces computational overhead that increases inference latency. In this work, we propose a simple alternative: simulating inference delay at training time and conditioning on action prefixes directly, eliminating any inference-time overhead. Our method requires no modifications to the model architecture or robot runtime, and can be implemented with only a few additional lines of code. In simulated experiments, we find that training-time RTC outperforms inference-time RTC at higher inference delays. In real-world experiments on box building and espresso making tasks with the $π_{0.6}$ VLA, we demonstrate that training-time RTC maintains both task performance and speed parity with inference-time RTC while being computationally cheaper. Our results suggest that training-time action conditioning is a practical drop-in replacement for inference-time inpainting in real-time robot control.</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:59:22Z</published>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T18:57:28Z</published>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Feng Xu</name>
+      <name>Kevin Black</name>
     </author>
     <author>
-      <name>Guangyao Zhai</name>
+      <name>Allen Z. Ren</name>
     </author>
     <author>
-      <name>Xin Kong</name>
+      <name>Michael Equi</name>
     </author>
     <author>
-      <name>Tingzhong Fu</name>
-    </author>
-    <author>
-      <name>Daniel F. N. Gordon</name>
-    </author>
-    <author>
-      <name>Xueli An</name>
-    </author>
-    <author>
-      <name>Benjamin Busam</name>
+      <name>Sergey Levine</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.05106v1</id>
-    <title>NeuralRemaster: Phase-Preserving Diffusion for Structure-Aligned Generation</title>
-    <updated>2025-12-04T18:59:18Z</updated>
-    <link href="https://arxiv.org/abs/2512.05106v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05106v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Standard diffusion corrupts data using Gaussian noise whose Fourier coefficients have random magnitudes and random phases. While effective for unconditional or text-to-image generation, corrupting phase components destroys spatial structure, making it ill-suited for tasks requiring geometric consistency, such as re-rendering, simulation enhancement, and image-to-image translation. We introduce Phase-Preserving Diffusion φ-PD, a model-agnostic reformulation of the diffusion process that preserves input phase while randomizing magnitude, enabling structure-aligned generation without architectural changes or additional parameters. We further propose Frequency-Selective Structured (FSS) noise, which provides continuous control over structural rigidity via a single frequency-cutoff parameter. φ-PD adds no inference-time cost and is compatible with any diffusion model for images or videos. Across photorealistic and stylized re-rendering, as well as sim-to-real enhancement for driving planners, φ-PD produces controllable, spatially aligned results. When applied to the CARLA simulator, φ-PD improves CARLA-to-Waymo planner performance by 50\%. The method is complementary to existing conditioning approaches and broadly applicable to image-to-image and video-to-video generation. Videos, additional examples, and code are available on our \href{https://yuzeng-at-tri.github.io/ppd-page/}{project page}.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2512.05955v1</id>
+    <title>SIMPACT: Simulation-Enabled Action Planning using Vision-Language Models</title>
+    <updated>2025-12-05T18:51:03Z</updated>
+    <link href="https://arxiv.org/abs/2512.05955v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05955v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language Models (VLMs) exhibit remarkable common-sense and semantic reasoning capabilities. However, they lack a grounded understanding of physical dynamics. This limitation arises from training VLMs on static internet-scale visual-language data that contain no causal interactions or action-conditioned changes. Consequently, it remains challenging to leverage VLMs for fine-grained robotic manipulation tasks that require physical understanding, reasoning, and corresponding action planning. To overcome this, we present SIMPACT, a test-time, SIMulation-enabled ACTion Planning framework that equips VLMs with physical reasoning through simulation-in-the-loop world modeling, without requiring any additional training. From a single RGB-D observation, SIMPACT efficiently constructs physics simulations, enabling the VLM to propose informed actions, observe simulated rollouts, and iteratively refine its reasoning. By integrating language reasoning with physics prediction, our simulation-enabled VLM can understand contact dynamics and action outcomes in a physically grounded way. Our method demonstrates state-of-the-art performance on five challenging, real-world rigid-body and deformable manipulation tasks that require fine-grained physical reasoning, outperforming existing general-purpose robotic manipulation models. Our results demonstrate that embedding physics understanding via efficient simulation into VLM reasoning at test time offers a promising path towards generalizable embodied intelligence. Project webpage can be found at https://simpact-bot.github.io</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:59:18Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Yu Zeng</name>
-    </author>
-    <author>
-      <name>Charles Ochoa</name>
-    </author>
-    <author>
-      <name>Mingyuan Zhou</name>
-    </author>
-    <author>
-      <name>Vishal M. Patel</name>
-    </author>
-    <author>
-      <name>Vitor Guizilini</name>
-    </author>
-    <author>
-      <name>Rowan McAllister</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05105v1</id>
-    <title>Semantic Soft Bootstrapping: Long Context Reasoning in LLMs without Reinforcement Learning</title>
-    <updated>2025-12-04T18:59:18Z</updated>
-    <link href="https://arxiv.org/abs/2512.05105v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05105v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long context reasoning in large language models (LLMs) has demonstrated enhancement of their cognitive capabilities via chain-of-thought (CoT) inference. Training such models is usually done via reinforcement learning with verifiable rewards (RLVR) in reasoning based problems, like math and programming. However, RLVR is limited by several bottlenecks, such as, lack of dense reward, and inadequate sample efficiency. As a result, it requires significant compute resources in post-training phase. To overcome these limitations, in this work, we propose \textbf{Semantic Soft Bootstrapping (SSB)}, a self-distillation technique, in which the same base language model plays the role of both teacher and student, but receives different semantic contexts about the correctness of its outcome at training time. The model is first prompted with a math problem and several rollouts are generated. From them, the correct and most common incorrect response are filtered, and then provided to the model in context to produce a more robust, step-by-step explanation with a verified final answer. This pipeline automatically curates a paired teacher-student training set from raw problem-answer data, without any human intervention. This generation process also produces a sequence of logits, which is what the student model tries to match in the training phase just from the bare question alone. In our experiment, Qwen2.5-3B-Instruct on GSM8K dataset via parameter-efficient fine-tuning. We then tested its accuracy on MATH500, and AIME2024 benchmarks. Our experiments show a jump of 10.6%, and 10% improvements in accuracy, respectively, over group relative policy optimization (GRPO), which is a commonly used RLVR algorithm. Our code is available at https://github.com/purbeshmitra/semantic-soft-bootstrapping, and the model, curated dataset is available at https://huggingface.co/purbeshmitra/semantic-soft-bootstrapping.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:59:18Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Purbesh Mitra</name>
-    </author>
-    <author>
-      <name>Sennur Ulukus</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05103v1</id>
-    <title>TV2TV: A Unified Framework for Interleaved Language and Video Generation</title>
-    <updated>2025-12-04T18:59:09Z</updated>
-    <link href="https://arxiv.org/abs/2512.05103v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05103v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Video generation models are rapidly advancing, but can still struggle with complex video outputs that require significant semantic branching or repeated high-level reasoning about what should happen next. In this paper, we introduce a new class of omni video-text models that integrate ideas from recent LM reasoning advances to address this challenge. More specifically, we present TV2TV, a unified generative modeling framework which decomposes video generation into an interleaved text and video generation process. TV2TV jointly learns language modeling (next-token prediction) and video flow matching (next-frame prediction) using a Mixture-of-Transformers (MoT) architecture. At inference time, TV2TV decides when to alternate between generating text and video frames, allowing the model to "think in words" about subsequent content before ``acting in pixels'' to produce frames. This design offloads much of the responsibility for deciding what should happen next to the language modeling tower, enabling improved visual quality and prompt alignment of generated videos. It also enables fine-grained controllability, allowing users to modify the video generation trajectory through text interventions at any point in the process. In controlled experiments on video game data, TV2TV demonstrates substantial improvements in both visual quality and controllability. TV2TV also scales to natural videos, as we show by augmenting sports videos with interleaved natural language action descriptions using vision-language models (VLMs). Training TV2TV on this corpus yields strong visual quality and prompt alignment, showcasing the model's ability to reason about and generate complex real-world action sequences. Together, these results highlight TV2TV as a promising step toward video generation with open-ended textual reasoning and control.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:59:09Z</published>
-    <arxiv:primary_category term="cs.LG"/>
+    <published>2025-12-05T18:51:03Z</published>
+    <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Xiaochuang Han</name>
+      <name>Haowen Liu</name>
     </author>
     <author>
-      <name>Youssef Emad</name>
+      <name>Shaoxiong Yao</name>
     </author>
     <author>
-      <name>Melissa Hall</name>
+      <name>Haonan Chen</name>
     </author>
     <author>
-      <name>John Nguyen</name>
+      <name>Jiawei Gao</name>
     </author>
     <author>
-      <name>Karthik Padthe</name>
+      <name>Jiayuan Mao</name>
     </author>
     <author>
-      <name>Liam Robbins</name>
+      <name>Jia-Bin Huang</name>
     </author>
     <author>
-      <name>Amir Bar</name>
-    </author>
-    <author>
-      <name>Delong Chen</name>
-    </author>
-    <author>
-      <name>Michal Drozdzal</name>
-    </author>
-    <author>
-      <name>Maha Elbayad</name>
-    </author>
-    <author>
-      <name>Yushi Hu</name>
-    </author>
-    <author>
-      <name>Shang-Wen Li</name>
-    </author>
-    <author>
-      <name>Sreya Dutta Roy</name>
-    </author>
-    <author>
-      <name>Jakob Verbeek</name>
-    </author>
-    <author>
-      <name>XuDong Wang</name>
-    </author>
-    <author>
-      <name>Marjan Ghazvininejad</name>
-    </author>
-    <author>
-      <name>Luke Zettlemoyer</name>
-    </author>
-    <author>
-      <name>Emily Dinan</name>
+      <name>Yilun Du</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.05078v1</id>
-    <title>Improving Posterior Inference of Galaxy Properties with Image-Based Conditional Flow Matching</title>
-    <updated>2025-12-04T18:44:14Z</updated>
-    <link href="https://arxiv.org/abs/2512.05078v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05078v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Estimating physical properties of galaxies from wide-field surveys remains a central challenge in astrophysics. While spectroscopy provides precise measurements, it is observationally expensive, and photometry discards morphological information that correlates with mass, star formation history, metallicity, and dust. We present a conditional flow matching (CFM) framework that leverages pixel-level imaging alongside photometry to improve posterior inference of galaxy properties. Using $\sim10^5$ SDSS galaxies, we compare models trained on photometry alone versus photometry plus images. The image+photometry model outperforms the photometry-only model in posterior inference and more reliably recovers known scaling relations. Morphological information also helps mitigate the dust--age degeneracy. Our results highlight the potential of integrating morphology into photometric SED fitting pipelines, opening a pathway towards more accurate and physically informed constraints on galaxy properties.</summary>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:44:14Z</published>
-    <arxiv:comment>Accepted at NeurIPS 2025 ML4PS workshop</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.IM"/>
-    <author>
-      <name>Mikaeel Yunus</name>
-    </author>
-    <author>
-      <name>John F. Wu</name>
-    </author>
-    <author>
-      <name>Benne W. Holwerda</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05073v1</id>
-    <title>David vs. Goliath: Can Small Models Win Big with Agentic AI in Hardware Design?</title>
-    <updated>2025-12-04T18:37:29Z</updated>
-    <link href="https://arxiv.org/abs/2512.05073v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05073v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Model(LLM) inference demands massive compute and energy, making domain-specific tasks expensive and unsustainable. As foundation models keep scaling, we ask: Is bigger always better for hardware design? Our work tests this by evaluating Small Language Models coupled with a curated agentic AI framework on NVIDIA's Comprehensive Verilog Design Problems(CVDP) benchmark. Results show that agentic workflows: through task decomposition, iterative feedback, and correction - not only unlock near-LLM performance at a fraction of the cost but also create learning opportunities for agents, paving the way for efficient, adaptive solutions in complex design tasks.</summary>
+    <id>http://arxiv.org/abs/2512.05950v1</id>
+    <title>Impugan: Learning Conditional Generative Models for Robust Data Imputation</title>
+    <updated>2025-12-05T18:46:33Z</updated>
+    <link href="https://arxiv.org/abs/2512.05950v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05950v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Incomplete data are common in real-world applications. Sensors fail, records are inconsistent, and datasets collected from different sources often differ in scale, sampling rate, and quality. These differences create missing values that make it difficult to combine data and build reliable models. Standard imputation methods such as regression models, expectation-maximization, and multiple imputation rely on strong assumptions about linearity and independence. These assumptions rarely hold for complex or heterogeneous data, which can lead to biased or over-smoothed estimates. We propose Impugan, a conditional Generative Adversarial Network (cGAN) for imputing missing values and integrating heterogeneous datasets. The model is trained on complete samples to learn how missing variables depend on observed ones. During inference, the generator reconstructs missing entries from available features, and the discriminator enforces realism by distinguishing true from imputed data. This adversarial process allows Impugan to capture nonlinear and multimodal relationships that conventional methods cannot represent. In experiments on benchmark datasets and a multi-source integration task, Impugan achieves up to 82\% lower Earth Mover's Distance (EMD) and 70\% lower mutual-information deviation (MI) compared to leading baselines. These results show that adversarially trained generative models provide a scalable and principled approach for imputing and merging incomplete, heterogeneous data. Our model is available at: github.com/zalishmahmud/impuganBigData2025</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:37:29Z</published>
+    <published>2025-12-05T18:46:33Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Shashwat Shankar</name>
+      <name>Zalish Mahmud</name>
     </author>
     <author>
-      <name>Subhranshu Pandey</name>
+      <name>Anantaa Kotal</name>
     </author>
     <author>
-      <name>Innocent Dengkhw Mochahari</name>
-    </author>
-    <author>
-      <name>Bhabesh Mali</name>
-    </author>
-    <author>
-      <name>Animesh Basak Chowdhury</name>
-    </author>
-    <author>
-      <name>Sukanta Bhattacharjee</name>
-    </author>
-    <author>
-      <name>Chandan Karfa</name>
+      <name>Aritran Piplai</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.05070v1</id>
-    <title>Control Consistency Losses for Diffusion Bridges</title>
-    <updated>2025-12-04T18:31:39Z</updated>
-    <link href="https://arxiv.org/abs/2512.05070v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05070v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Simulating the conditioned dynamics of diffusion processes, given their initial and terminal states, is an important but challenging problem in the sciences. The difficulty is particularly pronounced for rare events, for which the unconditioned dynamics rarely reach the terminal state. In this work, we leverage a self-consistency property of the conditioned dynamics to learn the diffusion bridge in an iterative online manner, and demonstrate promising empirical results in a range of settings.</summary>
+    <id>http://arxiv.org/abs/2512.05940v1</id>
+    <title>Designing an Optimal Sensor Network via Minimizing Information Loss</title>
+    <updated>2025-12-05T18:38:30Z</updated>
+    <link href="https://arxiv.org/abs/2512.05940v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05940v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Optimal experimental design is a classic topic in statistics, with many well-studied problems, applications, and solutions. The design problem we study is the placement of sensors to monitor spatiotemporal processes, explicitly accounting for the temporal dimension in our modeling and optimization. We observe that recent advancements in computational sciences often yield large datasets based on physics-based simulations, which are rarely leveraged in experimental design. We introduce a novel model-based sensor placement criterion, along with a highly-efficient optimization algorithm, which integrates physics-based simulations and Bayesian experimental design principles to identify sensor networks that "minimize information loss" from simulated data. Our technique relies on sparse variational inference and (separable) Gauss-Markov priors, and thus may adapt many techniques from Bayesian experimental design. We validate our method through a case study monitoring air temperature in Phoenix, Arizona, using state-of-the-art physics-based simulations. Our results show our framework to be superior to random or quasi-random sampling, particularly with a limited number of sensors. We conclude by discussing practical considerations and implications of our framework, including more complex modeling tools and real-world deployments.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:31:39Z</published>
-    <arxiv:comment>Frontiers in Probabilistic Inference: Sampling Meets Learning Workshop at NeurIPS 2025 (Oral)</arxiv:comment>
-    <arxiv:primary_category term="stat.ML"/>
+    <published>2025-12-05T18:38:30Z</published>
+    <arxiv:comment>37 pages, 15 figures. Accepted to Bayesian Analysis</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Samuel Howard</name>
+      <name>Daniel Waxman</name>
     </author>
     <author>
-      <name>Nikolas Nüsken</name>
+      <name>Fernando Llorente</name>
     </author>
     <author>
-      <name>Jakiw Pidstrigach</name>
+      <name>Katia Lamer</name>
+    </author>
+    <author>
+      <name>Petar M. Djurić</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.05060v1</id>
-    <title>4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer</title>
-    <updated>2025-12-04T18:15:27Z</updated>
-    <link href="https://arxiv.org/abs/2512.05060v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05060v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Constructing 4D language fields is crucial for embodied AI, augmented/virtual reality, and 4D scene understanding, as they provide enriched semantic representations of dynamic environments and enable open-vocabulary querying in complex scenarios. However, existing approaches to 4D semantic field construction primarily rely on scene-specific Gaussian splatting, which requires per-scene optimization, exhibits limited generalization, and is difficult to scale to real-world applications. To address these limitations, we propose 4DLangVGGT, the first Transformer-based feed-forward unified framework for 4D language grounding, that jointly integrates geometric perception and language alignment within a single architecture. 4DLangVGGT has two key components: the 4D Visual Geometry Transformer, StreamVGGT, which captures spatio-temporal geometric representations of dynamic scenes; and the Semantic Bridging Decoder (SBD), which projects geometry-aware features into a language-aligned semantic space, thereby enhancing semantic interpretability while preserving structural fidelity. Unlike prior methods that depend on costly per-scene optimization, 4DLangVGGT can be jointly trained across multiple dynamic scenes and directly applied during inference, achieving both deployment efficiency and strong generalization. This design significantly improves the practicality of large-scale deployment and establishes a new paradigm for open-vocabulary 4D scene understanding. Experiments on HyperNeRF and Neu3D datasets demonstrate that our approach not only generalizes effectively but also achieves state-of-the-art performance, achieving up to 2% gains under per-scene training and 1% improvements under multi-scene training. Our code released in https://github.com/hustvl/4DLangVGGT</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-04T18:15:27Z</published>
-    <arxiv:comment>Code: https://github.com/hustvl/4DLangVGGT, Webpage: https://hustvl.github.io/4DLangVGGT</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2512.05933v1</id>
+    <title>Speech World Model: Causal State-Action Planning with Explicit Reasoning for Speech</title>
+    <updated>2025-12-05T18:19:36Z</updated>
+    <link href="https://arxiv.org/abs/2512.05933v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05933v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Current speech-language models (SLMs) typically use a cascade of speech encoder and large language model, treating speech understanding as a single black box. They analyze the content of speech well but reason weakly about other aspects, especially under sparse supervision. Thus, we argue for explicit reasoning over speech states and actions with modular and transparent decisions. Inspired by cognitive science we adopt a modular perspective and a world model view in which the system learns forward dynamics over latent states. We factorize speech understanding into four modules that communicate through a causal graph, establishing a cognitive state search space. Guided by posterior traces from this space, an instruction-tuned language model produces a concise causal analysis and a user-facing response, enabling counterfactual interventions and interpretability under partial supervision. We present the first graph based modular speech model for explicit reasoning and we will open source the model and data to promote the development of advanced speech understanding.</summary>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T18:19:36Z</published>
+    <arxiv:primary_category term="eess.AS"/>
     <author>
-      <name>Xianfeng Wu</name>
+      <name>Xuanru Zhou</name>
     </author>
     <author>
-      <name>Yajing Bai</name>
+      <name>Jiachen Lian</name>
     </author>
     <author>
-      <name>Minghan Li</name>
+      <name>Henry Hong</name>
     </author>
     <author>
-      <name>Xianzu Wu</name>
+      <name>Xinyi Yang</name>
     </author>
     <author>
-      <name>Xueqi Zhao</name>
+      <name>Gopala Anumanchipalli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05916v1</id>
+    <title>KQ-SVD: Compressing the KV Cache with Provable Guarantees on Attention Fidelity</title>
+    <updated>2025-12-05T17:51:10Z</updated>
+    <link href="https://arxiv.org/abs/2512.05916v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05916v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Key-Value (KV) cache is central to the efficiency of transformer-based large language models (LLMs), storing previously computed vectors to accelerate inference. Yet, as sequence length and batch size grow, the cache becomes a major memory bottleneck. Prior compression methods typically apply low-rank decomposition to keys alone or attempt to jointly embed queries and keys, but both approaches neglect that attention fundamentally depends on their inner products. In this work, we prove that such strategies are suboptimal for approximating the attention matrix. We introduce KQ-SVD, a simple and computationally efficient method that directly performs an optimal low-rank decomposition of the attention matrix via a closed-form solution. By targeting the true source of redundancy, KQ-SVD preserves attention outputs with higher fidelity under compression. Extensive evaluations on LLaMA and Mistral models demonstrate that our approach consistently delivers superior projection quality.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T17:51:10Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Damien Lesens</name>
     </author>
     <author>
-      <name>Zhongyuan Lai</name>
+      <name>Beheshteh T. Rakhshan</name>
     </author>
     <author>
-      <name>Wenyu Liu</name>
+      <name>Guillaume Rabusseau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05909v1</id>
+    <title>Learning the Cosmic Web: Graph-based Classification of Simulated Galaxies by their Dark Matter Environments</title>
+    <updated>2025-12-05T17:44:39Z</updated>
+    <link href="https://arxiv.org/abs/2512.05909v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05909v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a novel graph-based machine learning classifier for identifying the dark matter cosmic web environments of galaxies. Large galaxy surveys offer comprehensive statistical views of how galaxy properties are shaped by large-scale structure, but this requires robust classifications of galaxies' cosmic web environments. Using stellar mass-selected IllustrisTNG-300 galaxies, we apply a three-stage, simulation-based framework to link galaxies to the total (mainly dark) underlying matter distribution. Here, we apply the following three steps: First, we assign the positions of simulated galaxies to a void, wall, filament, or cluster environment using the T-Web classification of the underlying matter distribution. Second, we construct a Delaunay triangulation of the galaxy distribution to summarise the local geometric structure with ten graph metrics for each galaxy. Third, we train a graph attention network (GAT) on each galaxy's graph metrics to predict its cosmic web environment. For galaxies with stellar mass $\mathrm{&gt;10^9 M_{\odot}}$, our GAT+ model achieves an accuracy of $85\,\%$, outperforming graph-agnostic multilayer perceptrons and graph convolutional networks. Our results demonstrate that graph-based representations of galaxy positions provide a powerful and physically meaningful way to infer dark matter environments. We plan to apply this simulation-based graph modelling to investigate how the properties of observed galaxies from the Dark Energy Spectroscopic Instrument (DESI) survey are influenced by their dark matter environments.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T17:44:39Z</published>
+    <arxiv:comment>15 pages, 7 figures, 9 tables, submitted to Royal Astronomical Society Techniques and Instruments</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>Dakshesh Kololgi</name>
     </author>
     <author>
-      <name>Xinggang Wang</name>
+      <name>Krishna Naidoo</name>
+    </author>
+    <author>
+      <name>Amelie Saintonge</name>
+    </author>
+    <author>
+      <name>Ofer Lahav</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05902v1</id>
+    <title>Quantitatively mapping the Eady model onto a two-layer quasi-geostrophic model</title>
+    <updated>2025-12-05T17:33:23Z</updated>
+    <link href="https://arxiv.org/abs/2512.05902v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05902v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The two-layer quasigeostrophic model (2LQG) and the Eady model are two idealized systems illustrating the baroclinic instability of atmospheric jets and ocean currents. The two setups share many ingredients -- background vertically sheared zonal flow of density-stratified fluid in a rapidly rotating frame -- while differing in complexity and dimensionality. The Eady model has a continuous vertical direction, with baroclinic turbulence induced by boundary potential vorticity (PV) gradients at top and bottom. By contrast, the 2LQG sytem typically models baroclinic instability induced by interior PV gradients. This distinction challenges our ability to clearly identify a couple of 'modes' through which the Eady dynamics could be inferred from a simpler 2LQG system. In the present study, we show that this difficulty can be circumvented in the turbulent regime arising for weak bottom drag. Namely, guided by the common organization of both systems into a gas of coherent vortices, we identify a quantitative mapping between the Eady and the 2LQG models. The mapping allows for parameter-free predictions of the eddy diffusivity of the Eady model based on the knowledge of the 2LQG diffusivity. We illustrate these results using numerical simulations of the Eady and 2LQG models with linear or quadratic bottom drag.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T17:33:23Z</published>
+    <arxiv:comment>18 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Julie Meunier</name>
+    </author>
+    <author>
+      <name>Basile Gallet</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05883v1</id>
+    <title>The Bayesian Way: Uncertainty, Learning, and Statistical Reasoning</title>
+    <updated>2025-12-05T16:59:25Z</updated>
+    <link href="https://arxiv.org/abs/2512.05883v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05883v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper offers a comprehensive introduction to Bayesian inference, combining historical context, theoretical foundations, and core analytical examples. Beginning with Bayes' theorem and the philosophical distinctions between Bayesian and frequentist approaches, we develop the inferential framework for estimation, interval construction, hypothesis testing, and prediction. Through canonical models, we illustrate how prior information and observed data are formally integrated to yield posterior distributions. We also explore key concepts including loss functions, credible intervals, Bayes factors, identifiability, and asymptotic behavior. While emphasizing analytical tractability in classical settings, we outline modern extensions that rely on simulation-based methods and discuss challenges related to prior specification and model evaluation. Though focused on foundational ideas, this paper sets the stage for applying Bayesian methods in contemporary domains such as hierarchical modeling, nonparametrics, and structured applications in time series, spatial data, networks, and political science. The goal is to provide a rigorous yet accessible entry point for students and researchers seeking to adopt a Bayesian perspective in statistical practice.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T16:59:25Z</published>
+    <arxiv:comment>56 pages, 1 table, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Juan Sosa</name>
+    </author>
+    <author>
+      <name>Carlos A. Martínez</name>
+    </author>
+    <author>
+      <name>Danna Cruz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05881v1</id>
+    <title>DAE-HardNet: A Physics Constrained Neural Network Enforcing Differential-Algebraic Hard Constraints</title>
+    <updated>2025-12-05T16:55:54Z</updated>
+    <link href="https://arxiv.org/abs/2512.05881v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05881v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional physics-informed neural networks (PINNs) do not always satisfy physics based constraints, especially when the constraints include differential operators. Rather, they minimize the constraint violations in a soft way. Strict satisfaction of differential-algebraic equations (DAEs) to embed domain knowledge and first-principles in data-driven models is generally challenging. This is because data-driven models consider the original functions to be black-box whose derivatives can only be obtained after evaluating the functions. We introduce DAE-HardNet, a physics-constrained (rather than simply physics-informed) neural network that learns both the functions and their derivatives simultaneously, while enforcing algebraic as well as differential constraints. This is done by projecting model predictions onto the constraint manifold using a differentiable projection layer. We apply DAE-HardNet to several systems and test problems governed by DAEs, including the dynamic Lotka-Volterra predator-prey system and transient heat conduction. We also show the ability of DAE-HardNet to estimate unknown parameters through a parameter estimation problem. Compared to multilayer perceptrons (MLPs) and PINNs, DAE-HardNet achieves orders of magnitude reduction in the physics loss while maintaining the prediction accuracy. It has the added benefits of learning the derivatives which improves the constrained learning of the backbone neural network prior to the projection layer. For specific problems, this suggests that the projection layer can be bypassed for faster inference. The current implementation and codes are available at https://github.com/SOULS-TAMU/DAE-HardNet.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T16:55:54Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rahul Golder</name>
+    </author>
+    <author>
+      <name>Bimol Nath Roy</name>
+    </author>
+    <author>
+      <name>M. M. Faruque Hasan</name>
     </author>
   </entry>
 </feed>
