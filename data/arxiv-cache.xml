@@ -1,250 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-09T00:58:35Z -->
+<!-- Last updated: 2025-12-10T01:00:03Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-09T00:58:36Z</updated>
+  <updated>2025-12-10T01:00:04Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>127969</opensearch:totalResults>
+  <opensearch:totalResults>128142</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.05964v1</id>
-    <title>Training-Time Action Conditioning for Efficient Real-Time Chunking</title>
-    <updated>2025-12-05T18:57:28Z</updated>
-    <link href="https://arxiv.org/abs/2512.05964v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05964v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Real-time chunking (RTC) enables vision-language-action models (VLAs) to generate smooth, reactive robot trajectories by asynchronously predicting action chunks and conditioning on previously committed actions via inference-time inpainting. However, this inpainting method introduces computational overhead that increases inference latency. In this work, we propose a simple alternative: simulating inference delay at training time and conditioning on action prefixes directly, eliminating any inference-time overhead. Our method requires no modifications to the model architecture or robot runtime, and can be implemented with only a few additional lines of code. In simulated experiments, we find that training-time RTC outperforms inference-time RTC at higher inference delays. In real-world experiments on box building and espresso making tasks with the $π_{0.6}$ VLA, we demonstrate that training-time RTC maintains both task performance and speed parity with inference-time RTC while being computationally cheaper. Our results suggest that training-time action conditioning is a practical drop-in replacement for inference-time inpainting in real-time robot control.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T18:57:28Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Kevin Black</name>
-    </author>
-    <author>
-      <name>Allen Z. Ren</name>
-    </author>
-    <author>
-      <name>Michael Equi</name>
-    </author>
-    <author>
-      <name>Sergey Levine</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05955v1</id>
-    <title>SIMPACT: Simulation-Enabled Action Planning using Vision-Language Models</title>
-    <updated>2025-12-05T18:51:03Z</updated>
-    <link href="https://arxiv.org/abs/2512.05955v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05955v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language Models (VLMs) exhibit remarkable common-sense and semantic reasoning capabilities. However, they lack a grounded understanding of physical dynamics. This limitation arises from training VLMs on static internet-scale visual-language data that contain no causal interactions or action-conditioned changes. Consequently, it remains challenging to leverage VLMs for fine-grained robotic manipulation tasks that require physical understanding, reasoning, and corresponding action planning. To overcome this, we present SIMPACT, a test-time, SIMulation-enabled ACTion Planning framework that equips VLMs with physical reasoning through simulation-in-the-loop world modeling, without requiring any additional training. From a single RGB-D observation, SIMPACT efficiently constructs physics simulations, enabling the VLM to propose informed actions, observe simulated rollouts, and iteratively refine its reasoning. By integrating language reasoning with physics prediction, our simulation-enabled VLM can understand contact dynamics and action outcomes in a physically grounded way. Our method demonstrates state-of-the-art performance on five challenging, real-world rigid-body and deformable manipulation tasks that require fine-grained physical reasoning, outperforming existing general-purpose robotic manipulation models. Our results demonstrate that embedding physics understanding via efficient simulation into VLM reasoning at test time offers a promising path towards generalizable embodied intelligence. Project webpage can be found at https://simpact-bot.github.io</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T18:51:03Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Haowen Liu</name>
-    </author>
-    <author>
-      <name>Shaoxiong Yao</name>
-    </author>
-    <author>
-      <name>Haonan Chen</name>
-    </author>
-    <author>
-      <name>Jiawei Gao</name>
-    </author>
-    <author>
-      <name>Jiayuan Mao</name>
-    </author>
-    <author>
-      <name>Jia-Bin Huang</name>
-    </author>
-    <author>
-      <name>Yilun Du</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05950v1</id>
-    <title>Impugan: Learning Conditional Generative Models for Robust Data Imputation</title>
-    <updated>2025-12-05T18:46:33Z</updated>
-    <link href="https://arxiv.org/abs/2512.05950v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05950v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Incomplete data are common in real-world applications. Sensors fail, records are inconsistent, and datasets collected from different sources often differ in scale, sampling rate, and quality. These differences create missing values that make it difficult to combine data and build reliable models. Standard imputation methods such as regression models, expectation-maximization, and multiple imputation rely on strong assumptions about linearity and independence. These assumptions rarely hold for complex or heterogeneous data, which can lead to biased or over-smoothed estimates. We propose Impugan, a conditional Generative Adversarial Network (cGAN) for imputing missing values and integrating heterogeneous datasets. The model is trained on complete samples to learn how missing variables depend on observed ones. During inference, the generator reconstructs missing entries from available features, and the discriminator enforces realism by distinguishing true from imputed data. This adversarial process allows Impugan to capture nonlinear and multimodal relationships that conventional methods cannot represent. In experiments on benchmark datasets and a multi-source integration task, Impugan achieves up to 82\% lower Earth Mover's Distance (EMD) and 70\% lower mutual-information deviation (MI) compared to leading baselines. These results show that adversarially trained generative models provide a scalable and principled approach for imputing and merging incomplete, heterogeneous data. Our model is available at: github.com/zalishmahmud/impuganBigData2025</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T18:46:33Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Zalish Mahmud</name>
-    </author>
-    <author>
-      <name>Anantaa Kotal</name>
-    </author>
-    <author>
-      <name>Aritran Piplai</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05940v1</id>
-    <title>Designing an Optimal Sensor Network via Minimizing Information Loss</title>
-    <updated>2025-12-05T18:38:30Z</updated>
-    <link href="https://arxiv.org/abs/2512.05940v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05940v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Optimal experimental design is a classic topic in statistics, with many well-studied problems, applications, and solutions. The design problem we study is the placement of sensors to monitor spatiotemporal processes, explicitly accounting for the temporal dimension in our modeling and optimization. We observe that recent advancements in computational sciences often yield large datasets based on physics-based simulations, which are rarely leveraged in experimental design. We introduce a novel model-based sensor placement criterion, along with a highly-efficient optimization algorithm, which integrates physics-based simulations and Bayesian experimental design principles to identify sensor networks that "minimize information loss" from simulated data. Our technique relies on sparse variational inference and (separable) Gauss-Markov priors, and thus may adapt many techniques from Bayesian experimental design. We validate our method through a case study monitoring air temperature in Phoenix, Arizona, using state-of-the-art physics-based simulations. Our results show our framework to be superior to random or quasi-random sampling, particularly with a limited number of sensors. We conclude by discussing practical considerations and implications of our framework, including more complex modeling tools and real-world deployments.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T18:38:30Z</published>
-    <arxiv:comment>37 pages, 15 figures. Accepted to Bayesian Analysis</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Daniel Waxman</name>
-    </author>
-    <author>
-      <name>Fernando Llorente</name>
-    </author>
-    <author>
-      <name>Katia Lamer</name>
-    </author>
-    <author>
-      <name>Petar M. Djurić</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05933v1</id>
-    <title>Speech World Model: Causal State-Action Planning with Explicit Reasoning for Speech</title>
-    <updated>2025-12-05T18:19:36Z</updated>
-    <link href="https://arxiv.org/abs/2512.05933v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05933v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Current speech-language models (SLMs) typically use a cascade of speech encoder and large language model, treating speech understanding as a single black box. They analyze the content of speech well but reason weakly about other aspects, especially under sparse supervision. Thus, we argue for explicit reasoning over speech states and actions with modular and transparent decisions. Inspired by cognitive science we adopt a modular perspective and a world model view in which the system learns forward dynamics over latent states. We factorize speech understanding into four modules that communicate through a causal graph, establishing a cognitive state search space. Guided by posterior traces from this space, an instruction-tuned language model produces a concise causal analysis and a user-facing response, enabling counterfactual interventions and interpretability under partial supervision. We present the first graph based modular speech model for explicit reasoning and we will open source the model and data to promote the development of advanced speech understanding.</summary>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T18:19:36Z</published>
-    <arxiv:primary_category term="eess.AS"/>
-    <author>
-      <name>Xuanru Zhou</name>
-    </author>
-    <author>
-      <name>Jiachen Lian</name>
-    </author>
-    <author>
-      <name>Henry Hong</name>
-    </author>
-    <author>
-      <name>Xinyi Yang</name>
-    </author>
-    <author>
-      <name>Gopala Anumanchipalli</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05916v1</id>
-    <title>KQ-SVD: Compressing the KV Cache with Provable Guarantees on Attention Fidelity</title>
-    <updated>2025-12-05T17:51:10Z</updated>
-    <link href="https://arxiv.org/abs/2512.05916v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05916v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The Key-Value (KV) cache is central to the efficiency of transformer-based large language models (LLMs), storing previously computed vectors to accelerate inference. Yet, as sequence length and batch size grow, the cache becomes a major memory bottleneck. Prior compression methods typically apply low-rank decomposition to keys alone or attempt to jointly embed queries and keys, but both approaches neglect that attention fundamentally depends on their inner products. In this work, we prove that such strategies are suboptimal for approximating the attention matrix. We introduce KQ-SVD, a simple and computationally efficient method that directly performs an optimal low-rank decomposition of the attention matrix via a closed-form solution. By targeting the true source of redundancy, KQ-SVD preserves attention outputs with higher fidelity under compression. Extensive evaluations on LLaMA and Mistral models demonstrate that our approach consistently delivers superior projection quality.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T17:51:10Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Damien Lesens</name>
-    </author>
-    <author>
-      <name>Beheshteh T. Rakhshan</name>
-    </author>
-    <author>
-      <name>Guillaume Rabusseau</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05909v1</id>
-    <title>Learning the Cosmic Web: Graph-based Classification of Simulated Galaxies by their Dark Matter Environments</title>
-    <updated>2025-12-05T17:44:39Z</updated>
-    <link href="https://arxiv.org/abs/2512.05909v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05909v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present a novel graph-based machine learning classifier for identifying the dark matter cosmic web environments of galaxies. Large galaxy surveys offer comprehensive statistical views of how galaxy properties are shaped by large-scale structure, but this requires robust classifications of galaxies' cosmic web environments. Using stellar mass-selected IllustrisTNG-300 galaxies, we apply a three-stage, simulation-based framework to link galaxies to the total (mainly dark) underlying matter distribution. Here, we apply the following three steps: First, we assign the positions of simulated galaxies to a void, wall, filament, or cluster environment using the T-Web classification of the underlying matter distribution. Second, we construct a Delaunay triangulation of the galaxy distribution to summarise the local geometric structure with ten graph metrics for each galaxy. Third, we train a graph attention network (GAT) on each galaxy's graph metrics to predict its cosmic web environment. For galaxies with stellar mass $\mathrm{&gt;10^9 M_{\odot}}$, our GAT+ model achieves an accuracy of $85\,\%$, outperforming graph-agnostic multilayer perceptrons and graph convolutional networks. Our results demonstrate that graph-based representations of galaxy positions provide a powerful and physically meaningful way to infer dark matter environments. We plan to apply this simulation-based graph modelling to investigate how the properties of observed galaxies from the Dark Energy Spectroscopic Instrument (DESI) survey are influenced by their dark matter environments.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2512.07823v1</id>
+    <title>DESI Strong Lens Foundry V: A Sample of HST-Observed Strong Lenses Modeled with GIGA-Lens</title>
+    <updated>2025-12-08T18:54:28Z</updated>
+    <link href="https://arxiv.org/abs/2512.07823v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07823v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present six galaxy-scale strong lenses with HST imaging modeled using GIGA-Lens. This is Paper V of the DESI Strong Lens Foundry series. These systems were discovered in the DESI Legacy Imaging Surveys using ML/AI methods and confirmed with DESI, Keck/NIRES, and VLT/MUSE spectroscopy. They span $z_d = 0.39 - 1.1$ and $z_s = 1.4 - 3.3$. This is the first HST strong lens sample modeled with full forward modeling -- all lens and source parameters sampled simultaneously in a single inference -- with explicit convergence validation using both $\widehat{R}$ and effective sample size (ESS) for each system. All inferred parameters satisfy $\widehat{R} &lt; 1.1$ and ${\rm ESS} \gtrsim 10,000$, demonstrating that GIGA-Lens achieves statistically robust inference even for some of the most complex galaxy-scale lenses known. These results pave the way for scaling to much larger, high-resolution strong lens samples from HST, Euclid, JWST, and Roman. Convergence-validated modeling will be critical for key science goals, including constraining the mass-density profile of galaxies, detecting low-mass dark matter (sub)halos, and delivering precise and accurate cosmological constraints.</summary>
     <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T17:44:39Z</published>
-    <arxiv:comment>15 pages, 7 figures, 9 tables, submitted to Royal Astronomical Society Techniques and Instruments</arxiv:comment>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:54:28Z</published>
+    <arxiv:comment>40 pages, 26 figures, and 19 tables</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <author>
+      <name>Xiaosheng Huang</name>
+    </author>
+    <author>
+      <name>David Alvarez-Garcia</name>
+    </author>
+    <author>
+      <name>Monica Ubeda</name>
+    </author>
+    <author>
+      <name>Vikram Bhamre</name>
+    </author>
+    <author>
+      <name>Sean Xu</name>
+    </author>
+    <author>
+      <name>S. Baltasar</name>
+    </author>
+    <author>
+      <name>N. Ratier-Werbin</name>
+    </author>
+    <author>
+      <name>F. Urcelay</name>
+    </author>
+    <author>
+      <name>S. Agarwal</name>
+    </author>
+    <author>
+      <name>A. Cikota</name>
+    </author>
+    <author>
+      <name>Y. Hsu</name>
+    </author>
+    <author>
+      <name>E. Lin</name>
+    </author>
+    <author>
+      <name>D. J. Schlegel</name>
+    </author>
+    <author>
+      <name>E. Silver</name>
+    </author>
+    <author>
+      <name>C. J. Storfer</name>
+    </author>
+    <author>
+      <name>M. Tamargo-Arizmend</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07814v1</id>
+    <title>Understanding Privacy Risks in Code Models Through Training Dynamics: A Causal Approach</title>
+    <updated>2025-12-08T18:47:40Z</updated>
+    <link href="https://arxiv.org/abs/2512.07814v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07814v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models for code (LLM4Code) have greatly improved developer productivity but also raise privacy concerns due to their reliance on open-source repositories containing abundant personally identifiable information (PII). Prior work shows that commercial models can reproduce sensitive PII, yet existing studies largely treat PII as a single category and overlook the heterogeneous risks among different types. We investigate whether distinct PII types vary in their likelihood of being learned and leaked by LLM4Code, and whether this relationship is causal. Our methodology includes building a dataset with diverse PII types, fine-tuning representative models of different scales, computing training dynamics on real PII data, and formulating a structural causal model to estimate the causal effect of learnability on leakage. Results show that leakage risks differ substantially across PII types and correlate with their training dynamics: easy-to-learn instances such as IP addresses exhibit higher leakage, while harder types such as keys and passwords leak less frequently. Ambiguous types show mixed behaviors. This work provides the first causal evidence that leakage risks are type-dependent and offers guidance for developing type-aware and learnability-aware defenses for LLM4Code.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:47:40Z</published>
+    <arxiv:comment>21 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Hua Yang</name>
+      <arxiv:affiliation>North Carolina State University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alejandro Velasco</name>
+      <arxiv:affiliation>William &amp; Mary</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sen Fang</name>
+      <arxiv:affiliation>North Carolina State University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bowen Xu</name>
+      <arxiv:affiliation>North Carolina State University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Denys Poshyvanyk</name>
+      <arxiv:affiliation>William &amp; Mary</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07808v1</id>
+    <title>LUNA: LUT-Based Neural Architecture for Fast and Low-Cost Qubit Readout</title>
+    <updated>2025-12-08T18:41:13Z</updated>
+    <link href="https://arxiv.org/abs/2512.07808v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07808v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Qubit readout is a critical operation in quantum computing systems, which maps the analog response of qubits into discrete classical states. Deep neural networks (DNNs) have recently emerged as a promising solution to improve readout accuracy . Prior hardware implementations of DNN-based readout are resource-intensive and suffer from high inference latency, limiting their practical use in low-latency decoding and quantum error correction (QEC) loops. This paper proposes LUNA, a fast and efficient superconducting qubit readout accelerator that combines low-cost integrator-based preprocessing with Look-Up Table (LUT) based neural networks for classification. The architecture uses simple integrators for dimensionality reduction with minimal hardware overhead, and employs LogicNets (DNNs synthesized into LUT logic) to drastically reduce resource usage while enabling ultra-low-latency inference. We integrate this with a differential evolution based exploration and optimization framework to identify high-quality design points. Our results show up to a 10.95x reduction in area and 30% lower latency with little to no loss in fidelity compared to the state-of-the-art. LUNA enables scalable, low-footprint, and high-speed qubit readout, supporting the development of larger and more reliable quantum computing systems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:41:13Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>M. A. Farooq</name>
+    </author>
+    <author>
+      <name>G. Di Guglielmo</name>
+    </author>
+    <author>
+      <name>A. Rajagopala</name>
+    </author>
+    <author>
+      <name>N. Tran</name>
+    </author>
+    <author>
+      <name>V. A. Chhabria</name>
+    </author>
+    <author>
+      <name>A. Arora</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07801v1</id>
+    <title>Collaborative Causal Sensemaking: Closing the Complementarity Gap in Human-AI Decision Support</title>
+    <updated>2025-12-08T18:30:41Z</updated>
+    <link href="https://arxiv.org/abs/2512.07801v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07801v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM-based agents are rapidly being plugged into expert decision-support, yet in messy, high-stakes settings they rarely make the team smarter: human-AI teams often underperform the best individual, experts oscillate between verification loops and over-reliance, and the promised complementarity does not materialise. We argue this is not just a matter of accuracy, but a fundamental gap in how we conceive AI assistance: expert decisions are made through collaborative cognitive processes where mental models, goals, and constraints are continually co-constructed, tested, and revised between human and AI. We propose Collaborative Causal Sensemaking (CCS) as a research agenda and organizing framework for decision-support agents: systems designed as partners in cognitive work, maintaining evolving models of how particular experts reason, helping articulate and revise goals, co-constructing and stress-testing causal hypotheses, and learning from the outcomes of joint decisions so that both human and agent improve over time. We sketch challenges around training ecologies that make collaborative thinking instrumentally valuable, representations and interaction protocols for co-authored models, and evaluation centred on trust and complementarity. These directions can reframe MAS research around agents that participate in collaborative sensemaking and act as AI teammates that think with their human partners.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:30:41Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Raunak Jain</name>
+    </author>
+    <author>
+      <name>Mudita Khurana</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07799v1</id>
+    <title>Quantifying the Carbon Reduction of DAG Workloads: A Job Shop Scheduling Perspective</title>
+    <updated>2025-12-08T18:30:18Z</updated>
+    <link href="https://arxiv.org/abs/2512.07799v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07799v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Carbon-aware schedulers aim to reduce the operational carbon footprint of data centers by running flexible workloads during periods of low carbon intensity. Most schedulers treat workloads as single monolithic tasks, ignoring that many jobs, like video encoding or offline inference, consist of smaller tasks with specific dependencies and resource needs; however, knowledge of this structure enables opportunities for greater carbon efficiency.
+  We quantify the maximum benefit of a dependency-aware approach for batch workloads. We model the problem as a flexible job-shop scheduling variant and use an offline solver to compute upper bounds on carbon and energy savings. Results show up to $25\%$ lower carbon emissions on average without increasing the optimal makespan (total job completion time) compared to a makespan-only baseline. Although in heterogeneous server setup, these schedules may use more energy than energy-optimal ones. Our results also show that allowing twice the optimal makespan nearly doubles the carbon savings, underscoring the tension between carbon, energy, and makespan. We also highlight key factors such as job structure and server count influence the achievable carbon reductions.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:30:18Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Roozbeh Bostandoost</name>
+    </author>
+    <author>
+      <name>Adam Lechowicz</name>
+    </author>
+    <author>
+      <name>Walid A. Hanafy</name>
+    </author>
+    <author>
+      <name>Prashant Shenoy</name>
+    </author>
+    <author>
+      <name>Mohammad Hajiesmaili</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07796v1</id>
+    <title>Large Causal Models from Large Language Models</title>
+    <updated>2025-12-08T18:28:04Z</updated>
+    <link href="https://arxiv.org/abs/2512.07796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a new paradigm for building large causal models (LCMs) that exploits the enormous potential latent in today's large language models (LLMs). We describe our ongoing experiments with an implemented system called DEMOCRITUS (Decentralized Extraction of Manifold Ontologies of Causal Relations Integrating Topos Universal Slices) aimed at building, organizing, and visualizing LCMs that span disparate domains extracted from carefully targeted textual queries to LLMs. DEMOCRITUS is methodologically distinct from traditional narrow domain and hypothesis centered causal inference that builds causal models from experiments that produce numerical data. A high-quality LLM is used to propose topics, generate causal questions, and extract plausible causal statements from a diverse range of domains. The technical challenge is then to take these isolated, fragmented, potentially ambiguous and possibly conflicting causal claims, and weave them into a coherent whole, converting them into relational causal triples and embedding them into a LCM. Addressing this technical challenge required inventing new categorical machine learning methods, which we can only briefly summarize in this paper, as it is focused more on the systems side of building DEMOCRITUS. We describe the implementation pipeline for DEMOCRITUS comprising of six modules, examine its computational cost profile to determine where the current bottlenecks in scaling the system to larger models. We describe the results of using DEMOCRITUS over a wide range of domains, spanning archaeology, biology, climate change, economics, medicine and technology. We discuss the limitations of the current DEMOCRITUS system, and outline directions for extending its capabilities.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:28:04Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Sridhar Mahadevan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07793v1</id>
+    <title>Hot, Photoionized X-ray Gas in Two Luminous Type 2 Quasars: Chandra-HST Evidence for a Wind-Driven Sequence</title>
+    <updated>2025-12-08T18:24:01Z</updated>
+    <link href="https://arxiv.org/abs/2512.07793v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07793v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present new Chandra/ACIS-S imaging spectroscopy of two luminous type 2 quasars, FIRST J120041.4+314745 (z=0.116) and 2MASX J13003807+5454367 (z=0.088), and compare their X-ray emission with Hubble Space Telescope [O III]$λ$5007 morphologies and kinematics. Both systems show kiloparsec-scale soft X-ray emission. In FIRST J120041, the X-ray morphology is clumpy and closely follows the [O III] structures, with surface-brightness peaks co-spatial with the highest [O III] velocities (600-750 km s$^{-1}$) and broadest line widths (FWHM~1700 km s$^{-1}$). In 2MASX J130038, the X-rays are more centrally concentrated and only weakly correlated with the largely rotational [O III] kinematics. Spectral modeling indicates that photoionization dominates the soft X-rays in both quasars. The inferred hot-gas reservoirs are substantial, M$_{\rm x-ray}$ ~ 4.5x10$^{8}$M$_{\odot}$ (FIRST J120041) and M$_{\rm x-ray}$ ~ 1.8x10$^{8}$M$_{\odot}$ (2MASX J130038), exceeding the outflowing [O III] masses (volume-normalized) by factors of ~4 and ~16, respectively. In 2MASX J130038, we also identify a tentative blueshifted Fe XXVI Ly$α$ line at E$_{\rm rest}$ = 7.14 $\pm$ 0.06 keV (v~7600 km s$^{-1}$), consistent with a nascent hot wind confined to the inner few hundred parsecs. Combining these results with a broader sample of twelve type 2 quasars, we argue that luminous quasars evolve along a continuous feedback sequence regulated by the progressive clearing of circumnuclear gas. As AGN radiation and winds pierce through the surrounding medium, systems transition from heavily enshrouded, compact configurations to phases where the X-ray and [O III] components strongly couple and, eventually, to large-scale, energetically dominant outflows. FIRST J120041 and 2MASX J130038 represent two points along this sequence, tracing the emergence and growth of hot winds as primary drivers of quasar-scale feedback.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:24:01Z</published>
     <arxiv:primary_category term="astro-ph.GA"/>
     <author>
-      <name>Dakshesh Kololgi</name>
+      <name>Anna Trindade Falcão</name>
     </author>
     <author>
-      <name>Krishna Naidoo</name>
+      <name>S. Kraemer</name>
     </author>
     <author>
-      <name>Amelie Saintonge</name>
+      <name>L. Feuillet</name>
     </author>
     <author>
-      <name>Ofer Lahav</name>
+      <name>R. Middei</name>
+    </author>
+    <author>
+      <name>T. J. Turner</name>
+    </author>
+    <author>
+      <name>J. Reeves</name>
+    </author>
+    <author>
+      <name>V. Braito</name>
+    </author>
+    <author>
+      <name>A. Ptak</name>
+    </author>
+    <author>
+      <name>H. R. Schmitt</name>
+    </author>
+    <author>
+      <name>T. C. Fischer</name>
+    </author>
+    <author>
+      <name>D. M. Crenshaw</name>
+    </author>
+    <author>
+      <name>Luis C. Ho</name>
+    </author>
+    <author>
+      <name>M. Revalski</name>
+    </author>
+    <author>
+      <name>T. Storchi-Bergmann</name>
+    </author>
+    <author>
+      <name>M. Vestergaard</name>
+    </author>
+    <author>
+      <name>C. M. Gaskell</name>
+    </author>
+    <author>
+      <name>W. P. Maksym</name>
+    </author>
+    <author>
+      <name>M. Elvis</name>
+    </author>
+    <author>
+      <name>M. J. Ward</name>
+    </author>
+    <author>
+      <name>H. Netzer</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.05902v1</id>
-    <title>Quantitatively mapping the Eady model onto a two-layer quasi-geostrophic model</title>
-    <updated>2025-12-05T17:33:23Z</updated>
-    <link href="https://arxiv.org/abs/2512.05902v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05902v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The two-layer quasigeostrophic model (2LQG) and the Eady model are two idealized systems illustrating the baroclinic instability of atmospheric jets and ocean currents. The two setups share many ingredients -- background vertically sheared zonal flow of density-stratified fluid in a rapidly rotating frame -- while differing in complexity and dimensionality. The Eady model has a continuous vertical direction, with baroclinic turbulence induced by boundary potential vorticity (PV) gradients at top and bottom. By contrast, the 2LQG sytem typically models baroclinic instability induced by interior PV gradients. This distinction challenges our ability to clearly identify a couple of 'modes' through which the Eady dynamics could be inferred from a simpler 2LQG system. In the present study, we show that this difficulty can be circumvented in the turbulent regime arising for weak bottom drag. Namely, guided by the common organization of both systems into a gas of coherent vortices, we identify a quantitative mapping between the Eady and the 2LQG models. The mapping allows for parameter-free predictions of the eddy diffusivity of the Eady model based on the knowledge of the 2LQG diffusivity. We illustrate these results using numerical simulations of the Eady and 2LQG models with linear or quadratic bottom drag.</summary>
-    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T17:33:23Z</published>
-    <arxiv:comment>18 pages, 6 figures</arxiv:comment>
-    <arxiv:primary_category term="physics.flu-dyn"/>
+    <id>http://arxiv.org/abs/2512.07783v1</id>
+    <title>On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models</title>
+    <updated>2025-12-08T18:12:10Z</updated>
+    <link href="https://arxiv.org/abs/2512.07783v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07783v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent reinforcement learning (RL) techniques have yielded impressive reasoning improvements in language models, yet it remains unclear whether post-training truly extends a model's reasoning ability beyond what it acquires during pre-training. A central challenge is the lack of control in modern training pipelines: large-scale pre-training corpora are opaque, mid-training is often underexamined, and RL objectives interact with unknown prior knowledge in complex ways. To resolve this ambiguity, we develop a fully controlled experimental framework that isolates the causal contributions of pre-training, mid-training, and RL-based post-training. Our approach employs synthetic reasoning tasks with explicit atomic operations, parseable step-by-step reasoning traces, and systematic manipulation of training distributions. We evaluate models along two axes: extrapolative generalization to more complex compositions and contextual generalization across surface contexts. Using this framework, we reconcile competing views on RL's effectiveness. We show that: 1) RL produces true capability gains (pass@128) only when pre-training leaves sufficient headroom and when RL data target the model's edge of competence, tasks at the boundary that are difficult but not yet out of reach. 2) Contextual generalization requires minimal yet sufficient pre-training exposure, after which RL can reliably transfer. 3) Mid-training significantly enhances performance under fixed compute compared with RL only, demonstrating its central but underexplored role in training pipelines. 4) Process-level rewards reduce reward hacking and improve reasoning fidelity. Together, these results clarify the interplay between pre-training, mid-training, and RL, offering a foundation for understanding and improving reasoning LM training strategies.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:12:10Z</published>
+    <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Julie Meunier</name>
+      <name>Charlie Zhang</name>
     </author>
     <author>
-      <name>Basile Gallet</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.05883v1</id>
-    <title>The Bayesian Way: Uncertainty, Learning, and Statistical Reasoning</title>
-    <updated>2025-12-05T16:59:25Z</updated>
-    <link href="https://arxiv.org/abs/2512.05883v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05883v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This paper offers a comprehensive introduction to Bayesian inference, combining historical context, theoretical foundations, and core analytical examples. Beginning with Bayes' theorem and the philosophical distinctions between Bayesian and frequentist approaches, we develop the inferential framework for estimation, interval construction, hypothesis testing, and prediction. Through canonical models, we illustrate how prior information and observed data are formally integrated to yield posterior distributions. We also explore key concepts including loss functions, credible intervals, Bayes factors, identifiability, and asymptotic behavior. While emphasizing analytical tractability in classical settings, we outline modern extensions that rely on simulation-based methods and discuss challenges related to prior specification and model evaluation. Though focused on foundational ideas, this paper sets the stage for applying Bayesian methods in contemporary domains such as hierarchical modeling, nonparametrics, and structured applications in time series, spatial data, networks, and political science. The goal is to provide a rigorous yet accessible entry point for students and researchers seeking to adopt a Bayesian perspective in statistical practice.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T16:59:25Z</published>
-    <arxiv:comment>56 pages, 1 table, 0 figures</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Juan Sosa</name>
+      <name>Graham Neubig</name>
     </author>
     <author>
-      <name>Carlos A. Martínez</name>
-    </author>
-    <author>
-      <name>Danna Cruz</name>
+      <name>Xiang Yue</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.05881v1</id>
-    <title>DAE-HardNet: A Physics Constrained Neural Network Enforcing Differential-Algebraic Hard Constraints</title>
-    <updated>2025-12-05T16:55:54Z</updated>
-    <link href="https://arxiv.org/abs/2512.05881v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.05881v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Traditional physics-informed neural networks (PINNs) do not always satisfy physics based constraints, especially when the constraints include differential operators. Rather, they minimize the constraint violations in a soft way. Strict satisfaction of differential-algebraic equations (DAEs) to embed domain knowledge and first-principles in data-driven models is generally challenging. This is because data-driven models consider the original functions to be black-box whose derivatives can only be obtained after evaluating the functions. We introduce DAE-HardNet, a physics-constrained (rather than simply physics-informed) neural network that learns both the functions and their derivatives simultaneously, while enforcing algebraic as well as differential constraints. This is done by projecting model predictions onto the constraint manifold using a differentiable projection layer. We apply DAE-HardNet to several systems and test problems governed by DAEs, including the dynamic Lotka-Volterra predator-prey system and transient heat conduction. We also show the ability of DAE-HardNet to estimate unknown parameters through a parameter estimation problem. Compared to multilayer perceptrons (MLPs) and PINNs, DAE-HardNet achieves orders of magnitude reduction in the physics loss while maintaining the prediction accuracy. It has the added benefits of learning the derivatives which improves the constrained learning of the backbone neural network prior to the projection layer. For specific problems, this suggests that the projection layer can be bypassed for faster inference. The current implementation and codes are available at https://github.com/SOULS-TAMU/DAE-HardNet.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-05T16:55:54Z</published>
-    <arxiv:primary_category term="cs.LG"/>
+    <id>http://arxiv.org/abs/2512.07772v1</id>
+    <title>Universal bounds on entropy production from fluctuating coarse-grained trajectories</title>
+    <updated>2025-12-08T17:53:29Z</updated>
+    <link href="https://arxiv.org/abs/2512.07772v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07772v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Entropy production is arguably the most universally applicable measure of non-equilibrium behavior, particularly for systems coupled to a heat bath. This setting encompasses driven soft matter as well as biomolecular, biochemical, and biophysical systems. Despite its central role, direct measurements of entropy production remain challenging - especially in small systems dominated by fluctuations. The main difficulty arises because not all degrees of freedom contributing to entropy production are experimentally accessible. A key question, therefore, is how to infer entropy production from coarse-grained observations, such as time series of experimentally measurable variables. Over the past decade, stochastic thermodynamics has provided several inequalities that yield model-free lower bounds on entropy production from such coarse-grained data. The major approaches rely on observations of coarse-grained states, fluctuating currents or ticks, correlation functions of coarse-grained observables, and waiting-time distributions between so-called Markovian events, which correspond to transitions between mesoscopic states. Here, we systematically review these techniques valid under the sole assumption of a Markovian, i.e., memoryless, dynamics on an underlying, not necessarily observable, network of states or following a possibly high-dimensional Langevin equation. We discuss in detail the large class of non-equilibrium steady states and highlight extensions of these methods to time-dependent and relaxing systems. While our focus is on mean entropy production, we also summarize recent progress in quantifying entropy production along individual coarse-grained trajectories.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T17:53:29Z</published>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
     <author>
-      <name>Rahul Golder</name>
+      <name>Udo Seifert</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07765v1</id>
+    <title>Toward Seamless Physical Human-Humanoid Interaction: Insights from Control, Intent, and Modeling with a Vision for What Comes Next</title>
+    <updated>2025-12-08T17:47:19Z</updated>
+    <link href="https://arxiv.org/abs/2512.07765v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07765v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Physical Human-Humanoid Interaction (pHHI) is a rapidly advancing field with significant implications for deploying robots in unstructured, human-centric environments. In this review, we examine the current state of the art in pHHI through three core pillars: (i) humanoid modeling and control, (ii) human intent estimation, and (iii) computational human models. For each pillar, we survey representative approaches, identify open challenges, and analyze current limitations that hinder robust, scalable, and adaptive interaction. These include the need for whole-body control strategies capable of handling uncertain human dynamics, real-time intent inference under limited sensing, and modeling techniques that account for variability in human physical states. Although significant progress has been made within each domain, integration across pillars remains limited. We propose pathways for unifying methods across these areas to enable cohesive interaction frameworks. This structure enables us not only to map the current landscape but also to propose concrete directions for future research that aim to bridge these domains. Additionally, we introduce a unified taxonomy of interaction types based on modality, distinguishing between direct interactions (e.g., physical contact) and indirect interactions (e.g., object-mediated), and on the level of robot engagement, ranging from assistance to cooperation and collaboration. For each category in this taxonomy, we provide the three core pillars that highlight opportunities for cross-pillar unification. Our goal is to suggest avenues to advance robust, safe, and intuitive physical interaction, providing a roadmap for future research that will allow humanoid systems to effectively understand, anticipate, and collaborate with human partners in diverse real-world settings.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T17:47:19Z</published>
+    <arxiv:comment>60 pages, 5 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Gustavo A. Cardona</name>
     </author>
     <author>
-      <name>Bimol Nath Roy</name>
+      <name>Shubham S. Kumbhar</name>
     </author>
     <author>
-      <name>M. M. Faruque Hasan</name>
+      <name>Panagiotis Artemiadis</name>
     </author>
   </entry>
 </feed>
