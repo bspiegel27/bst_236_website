@@ -1,348 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-15T01:02:17Z -->
+<!-- Last updated: 2025-12-16T01:00:43Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-15T01:02:17Z</updated>
+  <updated>2025-12-16T01:00:44Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>128470</opensearch:totalResults>
+  <opensearch:totalResults>128549</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.10959v1</id>
-    <title>StereoSpace: Depth-Free Synthesis of Stereo Geometry via End-to-End Diffusion in a Canonical Space</title>
-    <updated>2025-12-11T18:59:59Z</updated>
-    <link href="https://arxiv.org/abs/2512.10959v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10959v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We introduce StereoSpace, a diffusion-based framework for monocular-to-stereo synthesis that models geometry purely through viewpoint conditioning, without explicit depth or warping. A canonical rectified space and the conditioning guide the generator to infer correspondences and fill disocclusions end-to-end. To ensure fair and leakage-free evaluation, we introduce an end-to-end protocol that excludes any ground truth or proxy geometry estimates at test time. The protocol emphasizes metrics reflecting downstream relevance: iSQoE for perceptual comfort and MEt3R for geometric consistency. StereoSpace surpasses other methods from the warp &amp; inpaint, latent-warping, and warped-conditioning categories, achieving sharp parallax and strong robustness on layered and non-Lambertian scenes. This establishes viewpoint-conditioned diffusion as a scalable, depth-free solution for stereo generation.</summary>
+    <id>http://arxiv.org/abs/2512.11798v1</id>
+    <title>Particulate: Feed-Forward 3D Object Articulation</title>
+    <updated>2025-12-12T18:59:51Z</updated>
+    <link href="https://arxiv.org/abs/2512.11798v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11798v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present Particulate, a feed-forward approach that, given a single static 3D mesh of an everyday object, directly infers all attributes of the underlying articulated structure, including its 3D parts, kinematic structure, and motion constraints. At its core is a transformer network, Part Articulation Transformer, which processes a point cloud of the input mesh using a flexible and scalable architecture to predict all the aforementioned attributes with native multi-joint support. We train the network end-to-end on a diverse collection of articulated 3D assets from public datasets. During inference, Particulate lifts the network's feed-forward prediction to the input mesh, yielding a fully articulated 3D model in seconds, much faster than prior approaches that require per-object optimization. Particulate can also accurately infer the articulated structure of AI-generated 3D assets, enabling full-fledged extraction of articulated 3D objects from a single (real or synthetic) image when combined with an off-the-shelf image-to-3D generator. We further introduce a new challenging benchmark for 3D articulation estimation curated from high-quality public 3D assets, and redesign the evaluation protocol to be more consistent with human preferences. Quantitative and qualitative results show that Particulate significantly outperforms state-of-the-art approaches.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:59Z</published>
-    <arxiv:comment>Project page: https://hf.co/spaces/prs-eth/stereospace_web</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Tjark Behrens</name>
-    </author>
-    <author>
-      <name>Anton Obukhov</name>
-    </author>
-    <author>
-      <name>Bingxin Ke</name>
-    </author>
-    <author>
-      <name>Fabio Tosi</name>
-    </author>
-    <author>
-      <name>Matteo Poggi</name>
-    </author>
-    <author>
-      <name>Konrad Schindler</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10953v1</id>
-    <title>Bidirectional Normalizing Flow: From Data to Noise and Back</title>
-    <updated>2025-12-11T18:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2512.10953v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10953v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Normalizing Flows (NFs) have been established as a principled framework for generative modeling. Standard NFs consist of a forward process and a reverse process: the forward process maps data to noise, while the reverse process generates samples by inverting it. Typical NF forward transformations are constrained by explicit invertibility, ensuring that the reverse process can serve as their exact analytic inverse. Recent developments in TARFlow and its variants have revitalized NF methods by combining Transformers and autoregressive flows, but have also exposed causal decoding as a major bottleneck. In this work, we introduce Bidirectional Normalizing Flow ($\textbf{BiFlow}$), a framework that removes the need for an exact analytic inverse. BiFlow learns a reverse model that approximates the underlying noise-to-data inverse mapping, enabling more flexible loss functions and architectures. Experiments on ImageNet demonstrate that BiFlow, compared to its causal decoding counterpart, improves generation quality while accelerating sampling by up to two orders of magnitude. BiFlow yields state-of-the-art results among NF-based methods and competitive performance among single-evaluation ("1-NFE") methods. Following recent encouraging progress on NFs, we hope our work will draw further attention to this classical paradigm.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:55Z</published>
-    <arxiv:comment>Tech report</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Yiyang Lu</name>
-    </author>
-    <author>
-      <name>Qiao Sun</name>
-    </author>
-    <author>
-      <name>Xianbang Wang</name>
-    </author>
-    <author>
-      <name>Zhicheng Jiang</name>
-    </author>
-    <author>
-      <name>Hanhong Zhao</name>
-    </author>
-    <author>
-      <name>Kaiming He</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10954v1</id>
-    <title>Group Diffusion: Enhancing Image Generation by Unlocking Cross-Sample Collaboration</title>
-    <updated>2025-12-11T18:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2512.10954v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10954v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In this work, we explore an untapped signal in diffusion model inference. While all previous methods generate images independently at inference, we instead ask if samples can be generated collaboratively. We propose Group Diffusion, unlocking the attention mechanism to be shared across images, rather than limited to just the patches within an image. This enables images to be jointly denoised at inference time, learning both intra and inter-image correspondence. We observe a clear scaling effect - larger group sizes yield stronger cross-sample attention and better generation quality. Furthermore, we introduce a qualitative measure to capture this behavior and show that its strength closely correlates with FID. Built on standard diffusion transformers, our GroupDiff achieves up to 32.2% FID improvement on ImageNet-256x256. Our work reveals cross-sample inference as an effective, previously unexplored mechanism for generative modeling.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:55Z</published>
-    <arxiv:comment>Project Page: https://sichengmo.github.io/GroupDiff/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Sicheng Mo</name>
-    </author>
-    <author>
-      <name>Thao Nguyen</name>
-    </author>
-    <author>
-      <name>Richard Zhang</name>
-    </author>
-    <author>
-      <name>Nick Kolkin</name>
-    </author>
-    <author>
-      <name>Siddharth Srinivasan Iyer</name>
-    </author>
-    <author>
-      <name>Eli Shechtman</name>
-    </author>
-    <author>
-      <name>Krishna Kumar Singh</name>
-    </author>
-    <author>
-      <name>Yong Jae Lee</name>
-    </author>
-    <author>
-      <name>Bolei Zhou</name>
-    </author>
-    <author>
-      <name>Yuheng Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10950v1</id>
-    <title>E-RayZer: Self-supervised 3D Reconstruction as Spatial Visual Pre-training</title>
-    <updated>2025-12-11T18:59:53Z</updated>
-    <link href="https://arxiv.org/abs/2512.10950v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10950v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Self-supervised pre-training has revolutionized foundation models for languages, individual 2D images and videos, but remains largely unexplored for learning 3D-aware representations from multi-view images. In this paper, we present E-RayZer, a self-supervised large 3D Vision model that learns truly 3D-aware representations directly from unlabeled images. Unlike prior self-supervised methods such as RayZer that infer 3D indirectly through latent-space view synthesis, E-RayZer operates directly in 3D space, performing self-supervised 3D reconstruction with Explicit geometry. This formulation eliminates shortcut solutions and yields representations that are geometrically grounded. To ensure convergence and scalability, we introduce a novel fine-grained learning curriculum that organizes training from easy to hard samples and harmonizes heterogeneous data sources in an entirely unsupervised manner. Experiments demonstrate that E-RayZer significantly outperforms RayZer on pose estimation, matches or sometimes surpasses fully supervised reconstruction models such as VGGT. Furthermore, its learned representations outperform leading visual pre-training models (e.g., DINOv3, CroCo v2, VideoMAE V2, and RayZer) when transferring to 3D downstream tasks, establishing E-RayZer as a new paradigm for 3D-aware visual pre-training.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:53Z</published>
-    <arxiv:comment>Project website: https://qitaozhao.github.io/E-RayZer</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Qitao Zhao</name>
-    </author>
-    <author>
-      <name>Hao Tan</name>
-    </author>
-    <author>
-      <name>Qianqian Wang</name>
-    </author>
-    <author>
-      <name>Sai Bi</name>
-    </author>
-    <author>
-      <name>Kai Zhang</name>
-    </author>
-    <author>
-      <name>Kalyan Sunkavalli</name>
-    </author>
-    <author>
-      <name>Shubham Tulsiani</name>
-    </author>
-    <author>
-      <name>Hanwen Jiang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10947v1</id>
-    <title>Towards Efficient and Effective Multi-Camera Encoding for End-to-End Driving</title>
-    <updated>2025-12-11T18:59:46Z</updated>
-    <link href="https://arxiv.org/abs/2512.10947v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10947v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present Flex, an efficient and effective scene encoder that addresses the computational bottleneck of processing high-volume multi-camera data in end-to-end autonomous driving. Flex employs a small set of learnable scene tokens to jointly encode information from all image tokens across different cameras and timesteps. By design, our approach is geometry-agnostic, learning a compact scene representation directly from data without relying on the explicit 3D inductive biases, such as Bird-Eye-View (BEV), occupancy or tri-plane representations, which are common in prior work. This holistic encoding strategy aggressively compresses the visual input for the downstream Large Language Model (LLM) based policy model. Evaluated on a large-scale proprietary dataset of 20,000 driving hours, our Flex achieves 2.2x greater inference throughput while improving driving performance by a large margin compared to state-of-the-art methods. Furthermore, we show that these compact scene tokens develop an emergent capability for scene decomposition without any explicit supervision. Our findings challenge the prevailing assumption that 3D priors are necessary, demonstrating that a data-driven, joint encoding strategy offers a more scalable, efficient and effective path for future autonomous driving systems.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:46Z</published>
-    <arxiv:comment>Project Page: https://jiawei-yang.github.io/Flex/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Jiawei Yang</name>
-    </author>
-    <author>
-      <name>Ziyu Chen</name>
-    </author>
-    <author>
-      <name>Yurong You</name>
-    </author>
-    <author>
-      <name>Yan Wang</name>
-    </author>
-    <author>
-      <name>Yiming Li</name>
-    </author>
-    <author>
-      <name>Yuxiao Chen</name>
-    </author>
-    <author>
-      <name>Boyi Li</name>
-    </author>
-    <author>
-      <name>Boris Ivanovic</name>
-    </author>
-    <author>
-      <name>Marco Pavone</name>
-    </author>
-    <author>
-      <name>Yue Wang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10946v1</id>
-    <title>ImplicitRDP: An End-to-End Visual-Force Diffusion Policy with Structural Slow-Fast Learning</title>
-    <updated>2025-12-11T18:59:46Z</updated>
-    <link href="https://arxiv.org/abs/2512.10946v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10946v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Human-level contact-rich manipulation relies on the distinct roles of two key modalities: vision provides spatially rich but temporally slow global context, while force sensing captures rapid, high-frequency local contact dynamics. Integrating these signals is challenging due to their fundamental frequency and informational disparities. In this work, we propose ImplicitRDP, a unified end-to-end visual-force diffusion policy that integrates visual planning and reactive force control within a single network. We introduce Structural Slow-Fast Learning, a mechanism utilizing causal attention to simultaneously process asynchronous visual and force tokens, allowing the policy to perform closed-loop adjustments at the force frequency while maintaining the temporal coherence of action chunks. Furthermore, to mitigate modality collapse where end-to-end models fail to adjust the weights across different modalities, we propose Virtual-target-based Representation Regularization. This auxiliary objective maps force feedback into the same space as the action, providing a stronger, physics-grounded learning signal than raw force prediction. Extensive experiments on contact-rich tasks demonstrate that ImplicitRDP significantly outperforms both vision-only and hierarchical baselines, achieving superior reactivity and success rates with a streamlined training pipeline. Code and videos will be publicly available at https://implicit-rdp.github.io.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:46Z</published>
-    <arxiv:comment>Project page: https://implicit-rdp.github.io</arxiv:comment>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T18:59:51Z</published>
+    <arxiv:comment>Project page: https://ruiningli.com/particulate</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Ruining Li</name>
+    </author>
+    <author>
+      <name>Yuxin Yao</name>
+    </author>
+    <author>
+      <name>Chuanxia Zheng</name>
+    </author>
+    <author>
+      <name>Christian Rupprecht</name>
+    </author>
+    <author>
+      <name>Joan Lasenby</name>
+    </author>
+    <author>
+      <name>Shangzhe Wu</name>
+    </author>
+    <author>
+      <name>Andrea Vedaldi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11769v1</id>
+    <title>BLURR: A Boosted Low-Resource Inference for Vision-Language-Action Models</title>
+    <updated>2025-12-12T18:30:45Z</updated>
+    <link href="https://arxiv.org/abs/2512.11769v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11769v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-language-action (VLA) models enable impressive zero shot manipulation, but their inference stacks are often too heavy for responsive web demos or high frequency robot control on commodity GPUs. We present BLURR, a lightweight inference wrapper that can be plugged into existing VLA controllers without retraining or changing model checkpoints. Instantiated on the pi-zero VLA controller, BLURR keeps the original observation interfaces and accelerates control by combining an instruction prefix key value cache, mixed precision execution, and a single step rollout schedule that reduces per step computation. In our SimplerEnv based evaluation, BLURR maintains task success rates comparable to the original controller while significantly lowering effective FLOPs and wall clock latency. We also build an interactive web demo that allows users to switch between controllers and toggle inference options in real time while watching manipulation episodes. This highlights BLURR as a practical approach for deploying modern VLA policies under tight compute budgets.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T18:30:45Z</published>
+    <arxiv:comment>10 pages, 3 figures. Code and integration scripts will be released at this http URL: https://github.com/JijiKing-Sam/BLURR-A-Boosted-Low-Resource-Inference-for-Vision-Language-Action-Model</arxiv:comment>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Wendi Chen</name>
+      <name>Xiaoyu Ma</name>
     </author>
     <author>
-      <name>Han Xue</name>
+      <name>Zhengqing Yuan</name>
     </author>
     <author>
-      <name>Yi Wang</name>
+      <name>Zheyuan Zhang</name>
     </author>
     <author>
-      <name>Fangyuan Zhou</name>
+      <name>Kaiwen Shi</name>
     </author>
     <author>
-      <name>Jun Lv</name>
+      <name>Lichao Sun</name>
     </author>
     <author>
-      <name>Yang Jin</name>
-    </author>
-    <author>
-      <name>Shirun Tang</name>
-    </author>
-    <author>
-      <name>Chuan Wen</name>
-    </author>
-    <author>
-      <name>Cewu Lu</name>
+      <name>Yanfang Ye</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.10942v1</id>
-    <title>VL-JEPA: Joint Embedding Predictive Architecture for Vision-language</title>
-    <updated>2025-12-11T18:59:22Z</updated>
-    <link href="https://arxiv.org/abs/2512.10942v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10942v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We introduce VL-JEPA, a vision-language model built on a Joint Embedding Predictive Architecture (JEPA). Instead of autoregressively generating tokens as in classical VLMs, VL-JEPA predicts continuous embeddings of the target texts. By learning in an abstract representation space, the model focuses on task-relevant semantics while abstracting away surface-level linguistic variability. In a strictly controlled comparison against standard token-space VLM training with the same vision encoder and training data, VL-JEPA achieves stronger performance while having 50% fewer trainable parameters. At inference time, a lightweight text decoder is invoked only when needed to translate VL-JEPA predicted embeddings into text. We show that VL-JEPA natively supports selective decoding that reduces the number of decoding operations by 2.85x while maintaining similar performance compared to non-adaptive uniform decoding. Beyond generation, the VL-JEPA's embedding space naturally supports open-vocabulary classification, text-to-video retrieval, and discriminative VQA without any architecture modification. On eight video classification and eight video retrieval datasets, the average performance VL-JEPA surpasses that of CLIP, SigLIP2, and Perception Encoder. At the same time, the model achieves comparable performance as classical VLMs (InstructBLIP, QwenVL) on four VQA datasets: GQA, TallyQA, POPE and POPEv2, despite only having 1.6B parameters.</summary>
+    <id>http://arxiv.org/abs/2512.11761v1</id>
+    <title>Covariate-assisted graph matching</title>
+    <updated>2025-12-12T18:12:56Z</updated>
+    <link href="https://arxiv.org/abs/2512.11761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data integration is essential across diverse domains, from historical records to biomedical research, facilitating joint statistical inference. A crucial initial step in this process involves merging multiple data sources based on matching individual records, often in the absence of unique identifiers. When the datasets are networks, this problem is typically addressed through graph matching methodologies. For such cases, auxiliary features or covariates associated with nodes or edges can be instrumental in achieving improved accuracy. However, most existing graph matching techniques do not incorporate this information, limiting their performance against non-identifiable and erroneous matches. To overcome these limitations, we propose two novel covariate-assisted seeded graph matching methods, where a partial alignment for a set of nodes, called seeds, is known. The first one solves a quadratic assignment problem (QAP) over the whole graph, while the second one only leverages the local neighborhood structure of seed nodes for computational scalability. Both methods are grounded in a conditional modeling framework, where elements of one graph's adjacency matrix are modeled using a generalized linear model (GLM), given the other graph and the available covariates. We establish theoretical guarantees for model estimation error and exact recovery of the solution of the QAP. The effectiveness of our methods is demonstrated through numerical experiments and in an application to matching the statistics academic genealogy and the collaboration networks. By leveraging additional covariates, we achieve improved alignment accuracy. Our work highlights the power of integrating covariate information in the classical graph matching setup, offering a practical and improved framework for combining network data with wide-ranging applications.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T18:12:56Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Trisha Dawn</name>
+    </author>
+    <author>
+      <name>Jesús Arroyo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11758v1</id>
+    <title>The Effect of a Non-universal Extinction Curve on the Wesenheit Function and Cepheid Distances</title>
+    <updated>2025-12-12T18:08:36Z</updated>
+    <link href="https://arxiv.org/abs/2512.11758v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11758v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Wesenheit function is widely used to reduce the effects of interstellar reddening in distance measurements. Its construction, however, relies on the assumption of a universal extinction curve and on fixed values of the total-to-selective extinction ratio, Rv. Recent studies have shown that Rv varies significantly across the Milky Way and between different galaxies, raising concerns about systematic biases in Wesenheit magnitudes and period-Wesenheit relations. In this work, we discuss the impact of non-universal extinction on Wesenheit indices by combining the Rv-dependent extinction curve with a grid of stellar atmosphere models. We compute the integrated extinction in optical and near-infrared passbands, derive Rv-dependent R coefficients for multiple Wesenheit indices, and examine how changes in Rv propagate into Wesenheit magnitudes and Cepheid distances in our Galaxy. We find that the R coefficients in the Wesenheit functions vary strongly with Rv. For classical Cepheids in the Milky Way disk, variations of Rv within the typical observed range (2.6-3.6) can lead to substantial differences in the Wesenheit function, reaching +-0.7 mag from the mean for the Gaia-based Wesenheit index W_G and resulting in distance errors of almost 40%. Near-infrared Wesenheit indices are much less sensitive to Rv changes. Our results clearly show that accounting for variable Rv is essential when applying period-Wesenheit relations, particularly in the optical regime, or that near or mid infrared based distances should be used. While we present this effect for classical Cepheids, it applies to all pulsating stars for which period-Wesenheit relations are used to infer distances.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T18:08:36Z</published>
+    <arxiv:comment>8 pages, 5 figures, 1 table, submitted to AAS Journals</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>D. M. Skowron</name>
+    </author>
+    <author>
+      <name>M. L. Fouesneau</name>
+    </author>
+    <author>
+      <name>R. Drimmel</name>
+    </author>
+    <author>
+      <name>S. Khanna</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11751v1</id>
+    <title>Forest Kernel Balancing Weights: Outcome-Guided Features for Causal Inference</title>
+    <updated>2025-12-12T17:52:03Z</updated>
+    <link href="https://arxiv.org/abs/2512.11751v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11751v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While balancing covariates between groups is central for observational causal inference, selecting which features to balance remains a challenging problem. Kernel balancing is a promising approach that first estimates a kernel that captures similarity across units and then balances a (possibly low-dimensional) summary of that kernel, indirectly learning important features to balance. In this paper, we propose forest kernel balancing, which leverages the underappreciated fact that tree-based machine learning models, namely random forests and Bayesian additive regression trees (BART), implicitly estimate a kernel based on the co-occurrence of observations in the same terminal leaf node. Thus, even though the resulting kernel is solely a function of baseline features, the selected nonlinearities and other interactions are important for predicting the outcome -- and therefore are important for addressing confounding. Through simulations and applied illustrations, we show that forest kernel balancing leads to meaningful computational and statistical improvement relative to standard kernel methods, which do not incorporate outcome information when learning features.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T17:52:03Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Andy A. Shen</name>
+    </author>
+    <author>
+      <name>Eli Ben-Michael</name>
+    </author>
+    <author>
+      <name>Avi Feller</name>
+    </author>
+    <author>
+      <name>Luke Keele</name>
+    </author>
+    <author>
+      <name>Jared Murray</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11749v1</id>
+    <title>SVG-T2I: Scaling Up Text-to-Image Latent Diffusion Model Without Variational Autoencoder</title>
+    <updated>2025-12-12T17:45:03Z</updated>
+    <link href="https://arxiv.org/abs/2512.11749v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11749v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Visual generation grounded in Visual Foundation Model (VFM) representations offers a highly promising unified pathway for integrating visual understanding, perception, and generation. Despite this potential, training large-scale text-to-image diffusion models entirely within the VFM representation space remains largely unexplored. To bridge this gap, we scale the SVG (Self-supervised representations for Visual Generation) framework, proposing SVG-T2I to support high-quality text-to-image synthesis directly in the VFM feature domain. By leveraging a standard text-to-image diffusion pipeline, SVG-T2I achieves competitive performance, reaching 0.75 on GenEval and 85.78 on DPG-Bench. This performance validates the intrinsic representational power of VFMs for generative tasks. We fully open-source the project, including the autoencoder and generation model, together with their training, inference, evaluation pipelines, and pre-trained weights, to facilitate further research in representation-driven visual generation.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:59:22Z</published>
+    <published>2025-12-12T17:45:03Z</published>
+    <arxiv:comment>Code Repository: https://github.com/KlingTeam/SVG-T2I; Model Weights: https://huggingface.co/KlingTeam/SVG-T2I</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Delong Chen</name>
+      <name>Minglei Shi</name>
     </author>
     <author>
-      <name>Mustafa Shukor</name>
+      <name>Haolin Wang</name>
     </author>
     <author>
-      <name>Theo Moutakanni</name>
+      <name>Borui Zhang</name>
     </author>
     <author>
-      <name>Willy Chung</name>
+      <name>Wenzhao Zheng</name>
     </author>
     <author>
-      <name>Jade Yu</name>
+      <name>Bohan Zeng</name>
     </author>
     <author>
-      <name>Tejaswi Kasarla</name>
+      <name>Ziyang Yuan</name>
     </author>
     <author>
-      <name>Allen Bolourchi</name>
+      <name>Xiaoshi Wu</name>
     </author>
     <author>
-      <name>Yann LeCun</name>
+      <name>Yuanxing Zhang</name>
     </author>
     <author>
-      <name>Pascale Fung</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10937v1</id>
-    <title>On Decision-Making Agents and Higher-Order Causal Processes</title>
-    <updated>2025-12-11T18:58:33Z</updated>
-    <link href="https://arxiv.org/abs/2512.10937v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10937v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We establish a precise correspondence between decision-making agents in partially observable Markov decision processes (POMDPs) and one-input process functions, the classical limit of higher-order quantum operations. In this identification an agent's policy and memory update combine into a process function w that interacts with a POMDP environment via the link product. This suggests a dual interpretation: in the physics view, the process function acts as the environment into which local operations (agent interventions) are inserted, whereas in the AI view it encodes the agent and the inserted functions represent environments. We extend this perspective to multi-agent systems by identifying observation-independent decentralized POMDPs as natural domains for multi-input process functions.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:58:33Z</published>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Matt Wilson</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.10927v1</id>
-    <title>FoundationMotion: Auto-Labeling and Reasoning about Spatial Movement in Videos</title>
-    <updated>2025-12-11T18:53:15Z</updated>
-    <link href="https://arxiv.org/abs/2512.10927v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10927v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Motion understanding is fundamental to physical reasoning, enabling models to infer dynamics and predict future states. However, state-of-the-art models still struggle on recent motion benchmarks, primarily due to the scarcity of large-scale, fine-grained motion datasets. Existing motion datasets are often constructed from costly manual annotation, severely limiting scalability. To address this challenge, we introduce FoundationMotion, a fully automated data curation pipeline that constructs large-scale motion datasets. Our approach first detects and tracks objects in videos to extract their trajectories, then leverages these trajectories and video frames with Large Language Models (LLMs) to generate fine-grained captions and diverse question-answer pairs about motion and spatial reasoning. Using datasets produced by this pipeline, we fine-tune open-source models including NVILA-Video-15B and Qwen2.5-7B, achieving substantial improvements in motion understanding without compromising performance on other tasks. Notably, our models outperform strong closed-source baselines like Gemini-2.5 Flash and large open-source models such as Qwen2.5-VL-72B across diverse motion understanding datasets and benchmarks. FoundationMotion thus provides a scalable solution for curating fine-grained motion datasets that enable effective fine-tuning of diverse models to enhance motion understanding and spatial reasoning capabilities.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:53:15Z</published>
-    <arxiv:comment>Code is available at https://github.com/Wolfv0/FoundationMotion/tree/main</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Yulu Gan</name>
+      <name>Huan Yang</name>
     </author>
     <author>
-      <name>Ligeng Zhu</name>
+      <name>Xintao Wang</name>
     </author>
     <author>
-      <name>Dandan Shan</name>
+      <name>Pengfei Wan</name>
     </author>
     <author>
-      <name>Baifeng Shi</name>
+      <name>Kun Gai</name>
     </author>
     <author>
-      <name>Hongxu Yin</name>
+      <name>Jie Zhou</name>
     </author>
     <author>
-      <name>Boris Ivanovic</name>
-    </author>
-    <author>
-      <name>Song Han</name>
-    </author>
-    <author>
-      <name>Trevor Darrell</name>
-    </author>
-    <author>
-      <name>Jitendra Malik</name>
-    </author>
-    <author>
-      <name>Marco Pavone</name>
-    </author>
-    <author>
-      <name>Boyi Li</name>
+      <name>Jiwen Lu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.10912v1</id>
-    <title>Imprint of the black hole interior on thermal four-point correlators</title>
-    <updated>2025-12-11T18:40:27Z</updated>
-    <link href="https://arxiv.org/abs/2512.10912v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.10912v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We consider correlators smeared against directed wavepackets over a thermal state dual to a single-sided planar AdS black hole. In the large frequency limit, our measurement is simplified using a bulk WKB description. We propose a dictionary that maps the action of smeared boundary operators to flat-space oscillators near an interior bulk point on the thermal state, by analytically continuing late-time operators from the right to the left boundary via an integral transform. Using the dictionary the smeared correlator factorizes to a flat-space like scattering amplitude about the interior event. Our transformed correlators describe local physics in the two-sided black hole interior, while incurring a suppression of $\mathcal{O}(e^{-βω/ 2})$. These measurements necessitate a non-trivial time ordering of operators living on boundary hyperboloids which are causally connected to the past light cone of the bulk point, as well as on a corresponding future branch.</summary>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-11T18:40:27Z</published>
-    <arxiv:primary_category term="hep-th"/>
+    <id>http://arxiv.org/abs/2512.11744v1</id>
+    <title>The low-mass and structured stellar halo of M83 argues against a merger origin for its starburst and extended neutral hydrogen disk</title>
+    <updated>2025-12-12T17:38:46Z</updated>
+    <link href="https://arxiv.org/abs/2512.11744v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11744v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A merger origin has been suggested for M83's massive, metal-rich extended HI disk and nuclear starburst. We observe M83's stellar halo to test this idea. We train nearest-neighbor star-galaxy separation on wide-area Subaru imaging with Hubble Space Telescope data to map M83's halo in resolved stars. We find that M83 has an extended, very low density smooth stellar halo of old and metal-poor [M/H]$\sim -1.15$ RGB stars with a mass between 15 and 40 kpc of $\log_{10}M_{*,15-40,maj}/M_{\odot}=8.02\pm0.10$. In addition to M83's well-known Northern Stream, our ground-based Subaru imaging reveals a new stream to M83's south, which modeling suggests could be its trailing arm. The combined stream masses are $\log_{10}M_{stream}/M_{\odot}=7.93\pm0.10$, with metallicity [M/H]$= -1.0\pm0.2$. The stream progenitor was only recently accreted, as its stellar populations suggest that it formed stars until $2.1\pm1.3$ Gyr ago. M83 lies on the stellar halo mass-metallicity correlation seen for other Milky Way mass galaxies, albeit with low stellar halo mass. We infer a total accreted mass of $\log_{10}M_{*,accreted}/M_{\odot}=8.78^{+0.22}_{-0.28}$, with the most massive past merger having $\log_{10}M_{*,dom}/M_{\odot}=8.5\pm0.3$. We identify plausible M83 analogs in TNG-50 with similar stellar halos, finding that while a recent accretion can create a prominent stellar stream, such accretions do not trigger starburst activity, nor do they deliver enough gas to form M83's extended Hi disk. We conclude that other non-merger mechanisms, such as secular evolution or accretion of gas from the IGM, are likely to be responsible for M83's remarkable properties.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T17:38:46Z</published>
+    <arxiv:comment>31 pages, 15 figures. Accepted to AAS Journals December 10, 2025. The Subaru and HST photometric catalogs are available at https://doi.org/10.5281/zenodo.17398573</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
     <author>
-      <name>Joydeep Chakravarty</name>
+      <name>Eric F. Bell</name>
+    </author>
+    <author>
+      <name>Benjamin Harmsen</name>
+    </author>
+    <author>
+      <name>Matthew Cosby</name>
+    </author>
+    <author>
+      <name>Paul A. Price</name>
+    </author>
+    <author>
+      <name>Sarah Pearson</name>
+    </author>
+    <author>
+      <name>Antonela Monachesi</name>
+    </author>
+    <author>
+      <name>Roelof S. de Jong</name>
+    </author>
+    <author>
+      <name>Richard D'Souza</name>
+    </author>
+    <author>
+      <name>Katya Gozman</name>
+    </author>
+    <author>
+      <name>Jacob Nibauer</name>
+    </author>
+    <author>
+      <name>Michael P. Busch</name>
+    </author>
+    <author>
+      <name>Jeremy Bailin</name>
+    </author>
+    <author>
+      <name>Benne W. Holwerda</name>
+    </author>
+    <author>
+      <name>In Sung Jang</name>
+    </author>
+    <author>
+      <name>Adam Smercina</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11738v1</id>
+    <title>Multiscale Causal Geometric Deep Learning for Modeling Brain Structure</title>
+    <updated>2025-12-12T17:29:32Z</updated>
+    <link href="https://arxiv.org/abs/2512.11738v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11738v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal MRI offers complementary multi-scale information to characterize the brain structure. However, it remains challenging to effectively integrate multimodal MRI while achieving neuroscience interpretability. Here we propose to use Laplacian harmonics and spectral graph theory for multimodal alignment and multiscale integration. Based on the cortical mesh and connectome matrix that offer multi-scale representations, we devise Laplacian operators and spectral graph attentions to construct a shared latent space for model alignment. Next, we employ a disentangled learning combined with Graph Variational Autoencoder architectures to separate scale-specific and shared features. Lastly, we design a mutual information-informed bilevel regularizer to separate causal and non-causal factors based on the disentangled features, achieving robust model performance with enhanced interpretability. Our model outperforms baselines and other state-of-the-art models. The ablation studies confirmed the effectiveness of the proposed modules. Our model promises to offer a robust and interpretable framework for multi-scale brain structure analysis.</summary>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T17:29:32Z</published>
+    <arxiv:primary_category term="q-bio.NC"/>
+    <author>
+      <name>Chengzhi Xia</name>
+    </author>
+    <author>
+      <name>Jianwei Chen</name>
+    </author>
+    <author>
+      <name>Yixuan Jiang</name>
+    </author>
+    <author>
+      <name>Qi Yan</name>
+    </author>
+    <author>
+      <name>Chao Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11734v1</id>
+    <title>Model Error Resonance: The Geometric Nature of Error Dynamics</title>
+    <updated>2025-12-12T17:21:58Z</updated>
+    <link href="https://arxiv.org/abs/2512.11734v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11734v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces a geometric theory of model error, treating true and model dynamics as geodesic flows generated by distinct affine connections on a smooth manifold. When these connections differ, the resulting trajectory discrepancy--termed the Latent Error Dynamic Response (LEDR)--acquires an intrinsic dynamical structure governed by curvature. We show that the LEDR satisfies a Jacobi-type equation, where curvature mismatch acts as an explicit forcing term. In the important case of a flat model connection, the LEDR reduces to a classical Jacobi field on the true manifold, causing Model Error Resonance (MER) to emerge under positive sectional curvature. The theory is extended to a discrete-time analogue, establishing that this geometric structure and its resonant behavior persist in sampled systems. A closed-form analysis of a sphere--plane example demonstrates that curvature can be inferred directly from the LEDR evolution. This framework provides a unified geometric interpretation of structured error dynamics and offers foundational tools for curvature-informed model validation.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T17:21:58Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Yuntao Dai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11732v1</id>
+    <title>Spatially Varying Gene Regulatory Networks via Bayesian Nonparametric Covariate-Dependent Directed Cyclic Graphical Models</title>
+    <updated>2025-12-12T17:16:58Z</updated>
+    <link href="https://arxiv.org/abs/2512.11732v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11732v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spatial transcriptomics technologies enable the measurement of gene expression with spatial context, providing opportunities to understand how gene regulatory networks vary across tissue regions. However, existing graphical models focus primarily on undirected graphs or directed acyclic graphs, limiting their ability to capture feedback loops that are prevalent in gene regulation. Moreover, ensuring the so-called stability condition of cyclic graphs, while allowing graph structures to vary continuously with spatial covariates, presents significant statistical and computational challenges. We propose BNP-DCGx, a Bayesian nonparametric approach for learning spatially varying gene regulatory networks via covariate-dependent directed cyclic graphical models. Our method introduces a covariate-dependent random partition as an intermediary layer in a hierarchical model, which discretizes the covariate space into clusters with cluster-specific stable directed cyclic graphs. Through partition averaging, we obtain smoothly varying graph structures over space while maintaining theoretical guarantees of stability. We develop an efficient parallel tempered Markov chain Monte Carlo algorithm for posterior inference and demonstrate through simulations that our method accurately recovers both piecewise constant and continuously varying graph structures. Application to spatial transcriptomics data from human dorsolateral prefrontal cortex reveals spatially varying regulatory networks with feedback loops, identifies potential cell subtypes within established cell types based on distinct regulatory mechanisms, and provides new insights into spatial organization of gene regulation in brain tissue.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T17:16:58Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Trisha Dawn</name>
+    </author>
+    <author>
+      <name>Yang Ni</name>
     </author>
   </entry>
 </feed>
