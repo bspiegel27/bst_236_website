@@ -1,304 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-19T01:00:12Z -->
+<!-- Last updated: 2025-12-20T00:56:45Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-19T01:00:13Z</updated>
+  <updated>2025-12-20T00:56:45Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>128926</opensearch:totalResults>
+  <opensearch:totalResults>129047</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.15713v1</id>
-    <title>DiffusionVL: Translating Any Autoregressive Models into Diffusion Vision Language Models</title>
-    <updated>2025-12-17T18:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2512.15713v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15713v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In recent multimodal research, the diffusion paradigm has emerged as a promising alternative to the autoregressive paradigm (AR), owing to its unique decoding advantages. However, due to the capability limitations of the base diffusion language model, the performance of the diffusion vision language model (dVLM) still lags significantly behind that of mainstream models. This leads to a simple yet fundamental question: Is it possible to construct dVLMs based on existing powerful AR models? In response, we propose DiffusionVL, a dVLM family that could be translated from any powerful AR models. Through simple fine-tuning, we successfully adapt AR pre-trained models into the diffusion paradigm. This approach yields two key observations: (1) The paradigm shift from AR-based multimodal models to diffusion is remarkably effective. (2) Direct conversion of an AR language model to a dVLM is also feasible, achieving performance competitive with LLaVA-style visual-instruction-tuning. Further, we introduce a block-decoding design into dVLMs that supports arbitrary-length generation and KV cache reuse, achieving a significant inference speedup. We conduct a large number of experiments. Despite training with less than 5% of the data required by prior methods, DiffusionVL achieves a comprehensive performance improvement-a 34.4% gain on the MMMU-Pro (vision) bench and 37.5% gain on the MME (Cog.) bench-alongside a 2x inference speedup. The model and code are released at https://github.com/hustvl/DiffusionVL.</summary>
+    <id>http://arxiv.org/abs/2512.16922v1</id>
+    <title>Next-Embedding Prediction Makes Strong Vision Learners</title>
+    <updated>2025-12-18T18:59:58Z</updated>
+    <link href="https://arxiv.org/abs/2512.16922v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16922v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by the success of generative pretraining in natural language, we ask whether the same principles can yield strong self-supervised visual learners. Instead of training models to output features for downstream use, we train them to generate embeddings to perform predictive tasks directly. This work explores such a shift from learning representations to learning models. Specifically, models learn to predict future patch embeddings conditioned on past ones, using causal masking and stop gradient, which we refer to as Next-Embedding Predictive Autoregression (NEPA). We demonstrate that a simple Transformer pretrained on ImageNet-1k with next embedding prediction as its sole learning objective is effective - no pixel reconstruction, discrete tokens, contrastive loss, or task-specific heads. This formulation retains architectural simplicity and scalability, without requiring additional design complexity. NEPA achieves strong results across tasks, attaining 83.8% and 85.3% top-1 accuracy on ImageNet-1K with ViT-B and ViT-L backbones after fine-tuning, and transferring effectively to semantic segmentation on ADE20K. We believe generative pretraining from embeddings provides a simple, scalable, and potentially modality-agnostic alternative to visual self-supervised learning.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:59:55Z</published>
-    <arxiv:comment>11 pages, 5 figures, conference or other essential info</arxiv:comment>
+    <published>2025-12-18T18:59:58Z</published>
+    <arxiv:comment>Project Page: https://sihanxu.me/nepa</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Lunbin Zeng</name>
+      <name>Sihan Xu</name>
     </author>
     <author>
-      <name>Jingfeng Yao</name>
+      <name>Ziqiao Ma</name>
     </author>
     <author>
-      <name>Bencheng Liao</name>
+      <name>Wenhao Chai</name>
     </author>
     <author>
-      <name>Hongyuan Tao</name>
+      <name>Xuweiyi Chen</name>
     </author>
     <author>
-      <name>Wenyu Liu</name>
+      <name>Weiyang Jin</name>
     </author>
     <author>
-      <name>Xinggang Wang</name>
+      <name>Joyce Chai</name>
+    </author>
+    <author>
+      <name>Saining Xie</name>
+    </author>
+    <author>
+      <name>Stella X. Yu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.15705v1</id>
-    <title>Dynamic Rebatching for Efficient Early-Exit Inference with DREX</title>
-    <updated>2025-12-17T18:55:45Z</updated>
-    <link href="https://arxiv.org/abs/2512.15705v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15705v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Early-Exit (EE) is a Large Language Model (LLM) architecture that accelerates inference by allowing easier tokens to be generated using only a subset of the model's layers. However, traditional batching frameworks are ill-suited for EE LLMs, as not all requests in a batch may be ready to exit at the same time. Existing solutions either force a uniform decision on the batch, which overlooks EE opportunities, or degrade output quality by forcing premature exits. We propose Dynamic Rebatching, a solution where we dynamically reorganize the batch at each early-exit point. Requests that meet the exit criteria are immediately processed, while those that continue are held in a buffer, re-grouped into a new batch, and forwarded to deeper layers. We introduce DREX, an early-exit inference system that implements Dynamic Rebatching with two key optimizations: 1) a copy-free rebatching buffer that avoids physical data movement, and 2) an EE and SLA-aware scheduler that analytically predicts whether a given rebatching operation will be profitable. DREX also efficiently handles the missing KV cache from skipped layers using memory-efficient state-copying. Our evaluation shows that DREX improves throughput by 2-12% compared to baseline approaches while maintaining output quality. Crucially, DREX completely eliminates involuntary exits, providing a key guarantee for preserving the output quality intended by the EE model.</summary>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:55:45Z</published>
-    <arxiv:primary_category term="cs.DC"/>
-    <author>
-      <name>Xuting Liu</name>
-    </author>
-    <author>
-      <name>Daniel Alexander</name>
-    </author>
-    <author>
-      <name>Siva Kesava Reddy Kakarla</name>
-    </author>
-    <author>
-      <name>Behnaz Arzani</name>
-    </author>
-    <author>
-      <name>Vincent Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.15702v1</id>
-    <title>End-to-End Training for Autoregressive Video Diffusion via Self-Resampling</title>
-    <updated>2025-12-17T18:53:29Z</updated>
-    <link href="https://arxiv.org/abs/2512.15702v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15702v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Autoregressive video diffusion models hold promise for world simulation but are vulnerable to exposure bias arising from the train-test mismatch. While recent works address this via post-training, they typically rely on a bidirectional teacher model or online discriminator. To achieve an end-to-end solution, we introduce Resampling Forcing, a teacher-free framework that enables training autoregressive video models from scratch and at scale. Central to our approach is a self-resampling scheme that simulates inference-time model errors on history frames during training. Conditioned on these degraded histories, a sparse causal mask enforces temporal causality while enabling parallel training with frame-level diffusion loss. To facilitate efficient long-horizon generation, we further introduce history routing, a parameter-free mechanism that dynamically retrieves the top-k most relevant history frames for each query. Experiments demonstrate that our approach achieves performance comparable to distillation-based baselines while exhibiting superior temporal consistency on longer videos owing to native-length training.</summary>
+    <id>http://arxiv.org/abs/2512.16919v1</id>
+    <title>DVGT: Driving Visual Geometry Transformer</title>
+    <updated>2025-12-18T18:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2512.16919v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16919v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Perceiving and reconstructing 3D scene geometry from visual inputs is crucial for autonomous driving. However, there still lacks a driving-targeted dense geometry perception model that can adapt to different scenarios and camera configurations. To bridge this gap, we propose a Driving Visual Geometry Transformer (DVGT), which reconstructs a global dense 3D point map from a sequence of unposed multi-view visual inputs. We first extract visual features for each image using a DINO backbone, and employ alternating intra-view local attention, cross-view spatial attention, and cross-frame temporal attention to infer geometric relations across images. We then use multiple heads to decode a global point map in the ego coordinate of the first frame and the ego poses for each frame. Unlike conventional methods that rely on precise camera parameters, DVGT is free of explicit 3D geometric priors, enabling flexible processing of arbitrary camera configurations. DVGT directly predicts metric-scaled geometry from image sequences, eliminating the need for post-alignment with external sensors. Trained on a large mixture of driving datasets including nuScenes, OpenScene, Waymo, KITTI, and DDAD, DVGT significantly outperforms existing models on various scenarios. Code is available at https://github.com/wzzheng/DVGT.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:53:29Z</published>
-    <arxiv:comment>Project Page: https://guoyww.github.io/projects/resampling-forcing/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Yuwei Guo</name>
-    </author>
-    <author>
-      <name>Ceyuan Yang</name>
-    </author>
-    <author>
-      <name>Hao He</name>
-    </author>
-    <author>
-      <name>Yang Zhao</name>
-    </author>
-    <author>
-      <name>Meng Wei</name>
-    </author>
-    <author>
-      <name>Zhenheng Yang</name>
-    </author>
-    <author>
-      <name>Weilin Huang</name>
-    </author>
-    <author>
-      <name>Dahua Lin</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.15692v1</id>
-    <title>mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs</title>
-    <updated>2025-12-17T18:47:31Z</updated>
-    <link href="https://arxiv.org/abs/2512.15692v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15692v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Prevailing Vision-Language-Action Models (VLAs) for robotic manipulation are built upon vision-language backbones pretrained on large-scale, but disconnected static web data. As a result, despite improved semantic generalization, the policy must implicitly infer complex physical dynamics and temporal dependencies solely from robot trajectories. This reliance creates an unsustainable data burden, necessitating continuous, large-scale expert data collection to compensate for the lack of innate physical understanding. We contend that while vision-language pretraining effectively captures semantic priors, it remains blind to physical causality. A more effective paradigm leverages video to jointly capture semantics and visual dynamics during pretraining, thereby isolating the remaining task of low-level control. To this end, we introduce \model, a novel Video-Action Model (VAM) that pairs a pretrained Internet-scale video model with a flow matching-based action decoder conditioned on its latent representations. The decoder serves as an Inverse Dynamics Model (IDM), generating low-level robot actions from the latent representation of video-space action plans. Our extensive evaluation shows that our approach achieves state-of-the-art performance on simulated and real-world robotic manipulation tasks, improving sample efficiency by 10x and convergence speed by 2x compared to traditional VLA architectures.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:59:57Z</published>
+    <arxiv:comment>Code is available at https://github.com/wzzheng/DVGT</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Sicheng Zuo</name>
+    </author>
+    <author>
+      <name>Zixun Xie</name>
+    </author>
+    <author>
+      <name>Wenzhao Zheng</name>
+    </author>
+    <author>
+      <name>Shaoqing Xu</name>
+    </author>
+    <author>
+      <name>Fang Li</name>
+    </author>
+    <author>
+      <name>Shengyin Jiang</name>
+    </author>
+    <author>
+      <name>Long Chen</name>
+    </author>
+    <author>
+      <name>Zhi-Xin Yang</name>
+    </author>
+    <author>
+      <name>Jiwen Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16918v1</id>
+    <title>AdaTooler-V: Adaptive Tool-Use for Images and Videos</title>
+    <updated>2025-12-18T18:59:55Z</updated>
+    <link href="https://arxiv.org/abs/2512.16918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances have shown that multimodal large language models (MLLMs) benefit from multimodal interleaved chain-of-thought (CoT) with vision tool interactions. However, existing open-source models often exhibit blind tool-use reasoning patterns, invoking vision tools even when they are unnecessary, which significantly increases inference overhead and degrades model performance. To this end, we propose AdaTooler-V, an MLLM that performs adaptive tool-use by determining whether a visual problem truly requires tools. First, we introduce AT-GRPO, a reinforcement learning algorithm that adaptively adjusts reward scales based on the Tool Benefit Score of each sample, encouraging the model to invoke tools only when they provide genuine improvements. Moreover, we construct two datasets to support training: AdaTooler-V-CoT-100k for SFT cold start and AdaTooler-V-300k for RL with verifiable rewards across single-image, multi-image, and video data. Experiments across twelve benchmarks demonstrate the strong reasoning capability of AdaTooler-V, outperforming existing methods in diverse visual reasoning tasks. Notably, AdaTooler-V-7B achieves an accuracy of 89.8\% on the high-resolution benchmark V*, surpassing the commercial proprietary model GPT-4o and Gemini 1.5 Pro. All code, models, and data are released.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:59:55Z</published>
+    <arxiv:comment>Project page: https://github.com/CYWang735/AdaTooler-V</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Chaoyang Wang</name>
+    </author>
+    <author>
+      <name>Kaituo Feng</name>
+    </author>
+    <author>
+      <name>Dongyang Chen</name>
+    </author>
+    <author>
+      <name>Zhongyu Wang</name>
+    </author>
+    <author>
+      <name>Zhixun Li</name>
+    </author>
+    <author>
+      <name>Sicheng Gao</name>
+    </author>
+    <author>
+      <name>Meng Meng</name>
+    </author>
+    <author>
+      <name>Xu Zhou</name>
+    </author>
+    <author>
+      <name>Manyuan Zhang</name>
+    </author>
+    <author>
+      <name>Yuzhang Shang</name>
+    </author>
+    <author>
+      <name>Xiangyu Yue</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16916v1</id>
+    <title>Discovering gravitational waveform distortions from lensing: a deep dive into GW231123</title>
+    <updated>2025-12-18T18:59:53Z</updated>
+    <link href="https://arxiv.org/abs/2512.16916v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16916v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gravitational waves (GWs) are unique messengers as they travel through the Universe without alteration except for gravitational lensing. Their long wavelengths make them susceptible to diffraction by cosmic structures, providing an unprecedented opportunity to map dark matter substructures. Identifying lensed events requires the analysis of thousands to millions of simulated events to reach high statistical significances. This is computationally prohibitive with standard GW parameter estimation methods. We build on top of state-of-the-art neural posterior algorithms to accelerate the lensed inference from CPU days to minutes with DINGO-lensing. We showcase its capabilities by reanalyzing GW231123, the most promising lensed candidate so far, and find that its statistical significance cannot exceed 4$σ$. We observe that 8% of GW231123-like nonlensed simulations favor lensing, which could be explained by the self-similarity of short-duration signals. Still, 58% of GW231123-like lensed simulations have larger support for lensing, showing that higher detection statistics are possible. Although GW231123 exposes the challenges of claiming the first GW lensing detection, our deep-learning methods have demonstrated to be powerful enough to enable the upcoming discovery of lensed GWs.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:59:53Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <author>
+      <name>Juno C. L. Chan</name>
+    </author>
+    <author>
+      <name>Jose María Ezquiaga</name>
+    </author>
+    <author>
+      <name>Rico K. L. Lo</name>
+    </author>
+    <author>
+      <name>Joey Bowman</name>
+    </author>
+    <author>
+      <name>Lorena Magaña Zertuche</name>
+    </author>
+    <author>
+      <name>Luka Vujeva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16910v1</id>
+    <title>SFTok: Bridging the Performance Gap in Discrete Tokenizers</title>
+    <updated>2025-12-18T18:59:04Z</updated>
+    <link href="https://arxiv.org/abs/2512.16910v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16910v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in multimodal models highlight the pivotal role of image tokenization in high-resolution image generation. By compressing images into compact latent representations, tokenizers enable generative models to operate in lower-dimensional spaces, thereby improving computational efficiency and reducing complexity. Discrete tokenizers naturally align with the autoregressive paradigm but still lag behind continuous ones, limiting their adoption in multimodal systems. To address this, we propose \textbf{SFTok}, a discrete tokenizer that incorporates a multi-step iterative mechanism for precise reconstruction. By integrating \textbf{self-forcing guided visual reconstruction} and \textbf{debias-and-fitting training strategy}, SFTok resolves the training-inference inconsistency in multi-step process, significantly enhancing image reconstruction quality. At a high compression rate of only 64 tokens per image, SFTok achieves state-of-the-art reconstruction quality on ImageNet (rFID = 1.21) and demonstrates exceptional performance in class-to-image generation tasks (gFID = 2.29).</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:47:31Z</published>
-    <arxiv:primary_category term="cs.RO"/>
+    <published>2025-12-18T18:59:04Z</published>
+    <arxiv:comment>Under review. Code is available at https://github.com/Neur-IO/SFTok</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Jonas Pai</name>
+      <name>Qihang Rao</name>
     </author>
     <author>
-      <name>Liam Achenbach</name>
+      <name>Borui Zhang</name>
     </author>
     <author>
-      <name>Victoriano Montesinos</name>
+      <name>Wenzhao Zheng</name>
     </author>
     <author>
-      <name>Benedek Forrai</name>
+      <name>Jie Zhou</name>
     </author>
     <author>
-      <name>Oier Mees</name>
-    </author>
-    <author>
-      <name>Elvis Nava</name>
+      <name>Jiwen Lu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.15689v1</id>
-    <title>Error mitigation for logical circuits using decoder confidence</title>
-    <updated>2025-12-17T18:45:27Z</updated>
-    <link href="https://arxiv.org/abs/2512.15689v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15689v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Fault-tolerant quantum computers use decoders to monitor for errors and find a plausible correction. A decoder may provide a decoder confidence score (DCS) to gauge its success. We adopt a swim distance DCS, computed from the shortest path between syndrome clusters. By contracting tensor networks, we compare its performance to the well-known complementary gap and find that both reliably estimate the logical error probability (LEP) in a decoding window. We explore ways to use this to mitigate the LEP in entire circuits. For shallow circuits, we just abort if any decoding window produces an exceptionally low DCS: for a distance-13 surface code, rejecting a mere 0.1% of possible DCS values improves the entire circuit's LEP by more than 5 orders of magnitude. For larger algorithms comprising up to trillions of windows, DCS-based rejection remains effective for enhancing observable estimation. Moreover, one can use DCS to assign each circuit's output a unique LEP, and use it as a basis for maximum likelihood inference. This can reduce the effects of noise by an order of magnitude at no quantum cost; methods can be combined for further improvements.</summary>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:45:27Z</published>
-    <arxiv:comment>16 pages (11 main, 5 appendix). 13 figures (8 main, 5 appendix)</arxiv:comment>
-    <arxiv:primary_category term="quant-ph"/>
-    <author>
-      <name>Maria Dincă</name>
-    </author>
-    <author>
-      <name>Tim Chan</name>
-    </author>
-    <author>
-      <name>Simon C. Benjamin</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.15676v1</id>
-    <title>Data-driven controlled subgroup selection in clinical trials</title>
-    <updated>2025-12-17T18:28:33Z</updated>
-    <link href="https://arxiv.org/abs/2512.15676v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15676v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Subgroup selection in clinical trials is essential for identifying patient groups that react differently to a treatment, thereby enabling personalised medicine. In particular, subgroup selection can identify patient groups that respond particularly well to a treatment or that encounter adverse events more often. However, this is a post-selection inference problem, which may pose challenges for traditional techniques used for subgroup analysis, such as increased Type I error rates and potential biases from data-driven subgroup identification. In this paper, we present two methods for subgroup selection in regression problems: one based on generalised linear modelling and another on isotonic regression. We demonstrate how these methods can be used for data-driven subgroup identification in the analysis of clinical trials, focusing on two distinct tasks: identifying patient groups that are safe from manifesting adverse events and identifying patient groups with high treatment effect, while controlling for Type I error in both cases. A thorough simulation study is conducted to evaluate the strengths and weaknesses of each method, providing detailed insight into the sensitivity of the Type I error rate control to modelling assumptions.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:28:33Z</published>
-    <arxiv:comment>37 pages, 10 figures</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Manuel M. Müller</name>
-    </author>
-    <author>
-      <name>Björn Bornkamp</name>
-    </author>
-    <author>
-      <name>Frank Bretz</name>
-    </author>
-    <author>
-      <name>Timothy I. Cannings</name>
-    </author>
-    <author>
-      <name>Wei Liu</name>
-    </author>
-    <author>
-      <name>Henry W. J. Reeve</name>
-    </author>
-    <author>
-      <name>Richard J. Samworth</name>
-    </author>
-    <author>
-      <name>Nikolaos Sfikas</name>
-    </author>
-    <author>
-      <name>Fang Wan</name>
-    </author>
-    <author>
-      <name>Konstantinos Sechidis</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.15671v1</id>
-    <title>When sufficiency is insufficient: the functional information bottleneck for identifying probabilistic neural representations</title>
-    <updated>2025-12-17T18:23:54Z</updated>
-    <link href="https://arxiv.org/abs/2512.15671v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15671v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The neural basis of probabilistic computations remains elusive, even amidst growing evidence that humans and other animals track their uncertainty. Recent work has proposed that probabilistic representations arise naturally in task-optimized neural networks trained without explicitly probabilistic inductive biases. However, prior work has lacked clear criteria for distinguishing probabilistic representations, those that perform transformations characteristic of probabilistic computation, from heuristic neural codes that merely reformat inputs. We propose a novel information bottleneck framework, the functional information bottleneck (fIB), that crucially evaluates a neural representation based not only on its statistical sufficiency but also on its minimality, allowing us to disambiguate heuristic from probabilistic coding. To demonstrate the power of this framework, we study a variety of task-optimized neural networks that had been suggested to develop probabilistic representations in earlier work: networks trained to perform static inference tasks (such as cue combination and coordinate transformation) or dynamic state estimation tasks (Kalman filtering). In contrast to earlier claims, our minimality requirement reveals that probabilistic representations fail to emerge in these networks: they do not develop minimal codes of Bayesian posteriors in their hidden layer activities, and instead rely on heuristic input recoding. Therefore, it remains an open question under which conditions truly probabilistic representations emerge in neural networks. More generally, our work provides a stringent framework for identifying probabilistic neural codes. Thus, it lays the foundation for systematically examining whether, how, and which posteriors are represented in neural circuits during complex decision-making tasks.</summary>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:23:54Z</published>
-    <arxiv:comment>20 pages, 10 figures</arxiv:comment>
-    <arxiv:primary_category term="q-bio.NC"/>
-    <author>
-      <name>Ishan Kalburge</name>
-    </author>
-    <author>
-      <name>Máté Lengyel</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.15663v1</id>
-    <title>Explaining the Reasoning of Large Language Models Using Attribution Graphs</title>
-    <updated>2025-12-17T18:15:26Z</updated>
-    <link href="https://arxiv.org/abs/2512.15663v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15663v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large language models (LLMs) exhibit remarkable capabilities, yet their reasoning remains opaque, raising safety and trust concerns. Attribution methods, which assign credit to input features, have proven effective for explaining the decision making of computer vision models. From these, context attributions have emerged as a promising approach for explaining the behavior of autoregressive LLMs. However, current context attributions produce incomplete explanations by directly relating generated tokens to the prompt, discarding inter-generational influence in the process. To overcome these shortcomings, we introduce the Context Attribution via Graph Explanations (CAGE) framework. CAGE introduces an attribution graph: a directed graph that quantifies how each generation is influenced by both the prompt and all prior generations. The graph is constructed to preserve two properties-causality and row stochasticity. The attribution graph allows context attributions to be computed by marginalizing intermediate contributions along paths in the graph. Across multiple models, datasets, metrics, and methods, CAGE improves context attribution faithfulness, achieving average gains of up to 40%.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2512.16902v1</id>
+    <title>In-Context Algebra</title>
+    <updated>2025-12-18T18:56:50Z</updated>
+    <link href="https://arxiv.org/abs/2512.16902v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16902v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the mechanisms that arise when transformers are trained to solve arithmetic on sequences where tokens are variables whose meaning is determined only through their interactions. While prior work has found that transformers develop geometric embeddings that mirror algebraic structure, those previous findings emerge from settings where arithmetic-valued tokens have fixed meanings. We devise a new task in which the assignment of symbols to specific algebraic group elements varies from one sequence to another. Despite this challenging setup, transformers achieve near-perfect accuracy on the task and even generalize to unseen algebraic groups. We develop targeted data distributions to create causal tests of a set of hypothesized mechanisms, and we isolate three mechanisms models consistently learn: commutative copying where a dedicated head copies answers, identity element recognition that distinguishes identity-containing facts, and closure-based cancellation that tracks group membership to constrain valid answers. Complementary to the geometric representations found in fixed-symbol settings, our findings show that models develop symbolic reasoning mechanisms when trained to reason in-context with variables whose meanings are not fixed.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:15:26Z</published>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Chase Walker</name>
-    </author>
-    <author>
-      <name>Rickard Ewetz</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.15653v1</id>
-    <title>Characterizing Mamba's Selective Memory using Auto-Encoders</title>
-    <updated>2025-12-17T18:05:25Z</updated>
-    <link href="https://arxiv.org/abs/2512.15653v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15653v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>State space models (SSMs) are a promising alternative to transformers for language modeling because they use fixed memory during inference. However, this fixed memory usage requires some information loss in the hidden state when processing long sequences. While prior work has studied the sequence length at which this information loss occurs, it does not characterize the types of information SSM language models (LMs) tend to forget. In this paper, we address this knowledge gap by identifying the types of tokens (e.g., parts of speech, named entities) and sequences (e.g., code, math problems) that are more frequently forgotten by SSM LMs. We achieve this by training an auto-encoder to reconstruct sequences from the SSM's hidden state, and measure information loss by comparing inputs with their reconstructions. We perform experiments using the Mamba family of SSM LMs (130M--1.4B) on sequences ranging from 4--256 tokens. Our results show significantly higher rates of information loss on math-related tokens (e.g., numbers, variables), mentions of organization entities, and alternative dialects to Standard American English. We then examine the frequency that these tokens appear in Mamba's pretraining data and find that less prevalent tokens tend to be the ones Mamba is most likely to forget. By identifying these patterns, our work provides clear direction for future research to develop methods that better control Mamba's ability to retain important information.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T18:05:25Z</published>
-    <arxiv:comment>AACL 2025. Oral Presentation</arxiv:comment>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:56:50Z</published>
+    <arxiv:comment>28 pages, 18 figures. Code and data at https://algebra.baulab.info</arxiv:comment>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Tamanna Hossain</name>
+      <name>Eric Todd</name>
     </author>
     <author>
-      <name>Robert L. Logan</name>
+      <name>Jannik Brinkmann</name>
     </author>
     <author>
-      <name>Ganesh Jagadeesan</name>
+      <name>Rohit Gandikota</name>
     </author>
     <author>
-      <name>Sameer Singh</name>
-    </author>
-    <author>
-      <name>Joel Tetreault</name>
-    </author>
-    <author>
-      <name>Alejandro Jaimes</name>
+      <name>David Bau</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.15649v1</id>
-    <title>VTCBench: Can Vision-Language Models Understand Long Context with Vision-Text Compression?</title>
-    <updated>2025-12-17T17:58:35Z</updated>
-    <link href="https://arxiv.org/abs/2512.15649v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.15649v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The computational and memory overheads associated with expanding the context window of LLMs severely limit their scalability. A noteworthy solution is vision-text compression (VTC), exemplified by frameworks like DeepSeek-OCR and Glyph, which convert long texts into dense 2D visual representations, thereby achieving token compression ratios of 3x-20x. However, the impact of this high information density on the core long-context capabilities of vision-language models (VLMs) remains under-investigated. To address this gap, we introduce the first benchmark for VTC and systematically assess the performance of VLMs across three long-context understanding settings: VTC-Retrieval, which evaluates the model's ability to retrieve and aggregate information; VTC-Reasoning, which requires models to infer latent associations to locate facts with minimal lexical overlap; and VTC-Memory, which measures comprehensive question answering within long-term dialogue memory. Furthermore, we establish the VTCBench-Wild to simulate diverse input scenarios.We comprehensively evaluate leading open-source and proprietary models on our benchmarks. The results indicate that, despite being able to decode textual information (e.g., OCR) well, most VLMs exhibit a surprisingly poor long-context understanding ability with VTC-compressed information, failing to capture long associations or dependencies in the context.This study provides a deep understanding of VTC and serves as a foundation for designing more efficient and scalable VLMs.</summary>
+    <id>http://arxiv.org/abs/2512.16900v1</id>
+    <title>FlashPortrait: 6x Faster Infinite Portrait Animation with Adaptive Latent Prediction</title>
+    <updated>2025-12-18T18:56:05Z</updated>
+    <link href="https://arxiv.org/abs/2512.16900v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16900v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Current diffusion-based acceleration methods for long-portrait animation struggle to ensure identity (ID) consistency. This paper presents FlashPortrait, an end-to-end video diffusion transformer capable of synthesizing ID-preserving, infinite-length videos while achieving up to 6x acceleration in inference speed. In particular, FlashPortrait begins by computing the identity-agnostic facial expression features with an off-the-shelf extractor. It then introduces a Normalized Facial Expression Block to align facial features with diffusion latents by normalizing them with their respective means and variances, thereby improving identity stability in facial modeling. During inference, FlashPortrait adopts a dynamic sliding-window scheme with weighted blending in overlapping areas, ensuring smooth transitions and ID consistency in long animations. In each context window, based on the latent variation rate at particular timesteps and the derivative magnitude ratio among diffusion layers, FlashPortrait utilizes higher-order latent derivatives at the current timestep to directly predict latents at future timesteps, thereby skipping several denoising steps and achieving 6x speed acceleration. Experiments on benchmarks show the effectiveness of FlashPortrait both qualitatively and quantitatively.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-17T17:58:35Z</published>
+    <published>2025-12-18T18:56:05Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Hongbo Zhao</name>
+      <name>Shuyuan Tu</name>
     </author>
     <author>
-      <name>Meng Wang</name>
+      <name>Yueming Pan</name>
     </author>
     <author>
-      <name>Fei Zhu</name>
+      <name>Yinming Huang</name>
     </author>
     <author>
-      <name>Wenzhuo Liu</name>
+      <name>Xintong Han</name>
     </author>
     <author>
-      <name>Bolin Ni</name>
+      <name>Zhen Xing</name>
     </author>
     <author>
-      <name>Fanhu Zeng</name>
+      <name>Qi Dai</name>
     </author>
     <author>
-      <name>Gaofeng Meng</name>
+      <name>Kai Qiu</name>
     </author>
     <author>
-      <name>Zhaoxiang Zhang</name>
+      <name>Chong Luo</name>
+    </author>
+    <author>
+      <name>Zuxuan Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16893v1</id>
+    <title>Instant Expressive Gaussian Head Avatar via 3D-Aware Expression Distillation</title>
+    <updated>2025-12-18T18:53:28Z</updated>
+    <link href="https://arxiv.org/abs/2512.16893v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16893v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Portrait animation has witnessed tremendous quality improvements thanks to recent advances in video diffusion models. However, these 2D methods often compromise 3D consistency and speed, limiting their applicability in real-world scenarios, such as digital twins or telepresence. In contrast, 3D-aware facial animation feedforward methods -- built upon explicit 3D representations, such as neural radiance fields or Gaussian splatting -- ensure 3D consistency and achieve faster inference speed, but come with inferior expression details. In this paper, we aim to combine their strengths by distilling knowledge from a 2D diffusion-based method into a feed-forward encoder, which instantly converts an in-the-wild single image into a 3D-consistent, fast yet expressive animatable representation. Our animation representation is decoupled from the face's 3D representation and learns motion implicitly from data, eliminating the dependency on pre-defined parametric models that often constrain animation capabilities. Unlike previous computationally intensive global fusion mechanisms (e.g., multiple attention layers) for fusing 3D structural and animation information, our design employs an efficient lightweight local fusion strategy to achieve high animation expressivity. As a result, our method runs at 107.31 FPS for animation and pose control while achieving comparable animation quality to the state-of-the-art, surpassing alternative designs that trade speed for quality or vice versa. Project website is https://research.nvidia.com/labs/amri/projects/instant4d</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:53:28Z</published>
+    <arxiv:comment>Project website is https://research.nvidia.com/labs/amri/projects/instant4d</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Kaiwen Jiang</name>
+    </author>
+    <author>
+      <name>Xueting Li</name>
+    </author>
+    <author>
+      <name>Seonwook Park</name>
+    </author>
+    <author>
+      <name>Ravi Ramamoorthi</name>
+    </author>
+    <author>
+      <name>Shalini De Mello</name>
+    </author>
+    <author>
+      <name>Koki Nagano</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16891v1</id>
+    <title>LinkedOut: Linking World Knowledge Representation Out of Video LLM for Next-Generation Video Recommendation</title>
+    <updated>2025-12-18T18:52:18Z</updated>
+    <link href="https://arxiv.org/abs/2512.16891v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16891v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Video Large Language Models (VLLMs) unlock world-knowledge-aware video understanding through pretraining on internet-scale data and have already shown promise on tasks such as movie analysis and video question answering. However, deploying VLLMs for downstream tasks such as video recommendation remains challenging, since real systems require multi-video inputs, lightweight backbones, low-latency sequential inference, and rapid response. In practice, (1) decode-only generation yields high latency for sequential inference, (2) typical interfaces do not support multi-video inputs, and (3) constraining outputs to language discards fine-grained visual details that matter for downstream vision tasks. We argue that these limitations stem from the absence of a representation that preserves pixel-level detail while leveraging world knowledge. We present LinkedOut, a representation that extracts VLLM world knowledge directly from video to enable fast inference, supports multi-video histories, and removes the language bottleneck. LinkedOut extracts semantically grounded, knowledge-aware tokens from raw frames using VLLMs, guided by promptable queries and optional auxiliary modalities. We introduce a cross-layer knowledge fusion MoE that selects the appropriate level of abstraction from the rich VLLM features, enabling personalized, interpretable, and low-latency recommendation. To our knowledge, LinkedOut is the first VLLM-based video recommendation method that operates on raw frames without handcrafted labels, achieving state-of-the-art results on standard benchmarks. Interpretability studies and ablations confirm the benefits of layer diversity and layer-wise fusion, pointing to a practical path that fully leverages VLLM world-knowledge priors and visual reasoning for downstream vision tasks such as recommendation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:52:18Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Haichao Zhang</name>
+    </author>
+    <author>
+      <name>Yao Lu</name>
+    </author>
+    <author>
+      <name>Lichen Wang</name>
+    </author>
+    <author>
+      <name>Yunzhe Li</name>
+    </author>
+    <author>
+      <name>Daiwei Chen</name>
+    </author>
+    <author>
+      <name>Yunpeng Xu</name>
+    </author>
+    <author>
+      <name>Yun Fu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16874v1</id>
+    <title>Pixel Seal: Adversarial-only training for invisible image and video watermarking</title>
+    <updated>2025-12-18T18:42:19Z</updated>
+    <link href="https://arxiv.org/abs/2512.16874v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16874v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Invisible watermarking is essential for tracing the provenance of digital content. However, training state-of-the-art models remains notoriously difficult, with current approaches often struggling to balance robustness against true imperceptibility. This work introduces Pixel Seal, which sets a new state-of-the-art for image and video watermarking. We first identify three fundamental issues of existing methods: (i) the reliance on proxy perceptual losses such as MSE and LPIPS that fail to mimic human perception and result in visible watermark artifacts; (ii) the optimization instability caused by conflicting objectives, which necessitates exhaustive hyperparameter tuning; and (iii) reduced robustness and imperceptibility of watermarks when scaling models to high-resolution images and videos. To overcome these issues, we first propose an adversarial-only training paradigm that eliminates unreliable pixel-wise imperceptibility losses. Second, we introduce a three-stage training schedule that stabilizes convergence by decoupling robustness and imperceptibility. Third, we address the resolution gap via high-resolution adaptation, employing JND-based attenuation and training-time inference simulation to eliminate upscaling artifacts. We thoroughly evaluate the robustness and imperceptibility of Pixel Seal on different image types and across a wide range of transformations, and show clear improvements over the state-of-the-art. We finally demonstrate that the model efficiently adapts to video via temporal watermark pooling, positioning Pixel Seal as a practical and scalable solution for reliable provenance in real-world image and video settings.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T18:42:19Z</published>
+    <arxiv:comment>Code and model available at https://github.com/facebookresearch/videoseal</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Tomáš Souček</name>
+    </author>
+    <author>
+      <name>Pierre Fernandez</name>
+    </author>
+    <author>
+      <name>Hady Elsahar</name>
+    </author>
+    <author>
+      <name>Sylvestre-Alvise Rebuffi</name>
+    </author>
+    <author>
+      <name>Valeriu Lacatusu</name>
+    </author>
+    <author>
+      <name>Tuan Tran</name>
+    </author>
+    <author>
+      <name>Tom Sander</name>
+    </author>
+    <author>
+      <name>Alexandre Mourachko</name>
     </author>
   </entry>
 </feed>
