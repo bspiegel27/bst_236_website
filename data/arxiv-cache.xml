@@ -1,308 +1,419 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-25T01:00:04Z -->
+<!-- Last updated: 2025-12-26T01:00:28Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-25T01:00:12Z</updated>
+  <updated>2025-12-26T01:00:29Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>129409</opensearch:totalResults>
+  <opensearch:totalResults>129489</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.20612v1</id>
-    <title>Making Large Language Models Efficient Dense Retrievers</title>
-    <updated>2025-12-23T18:58:25Z</updated>
-    <link href="https://arxiv.org/abs/2512.20612v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20612v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent work has shown that directly fine-tuning large language models (LLMs) for dense retrieval yields strong performance, but their substantial parameter counts make them computationally inefficient. While prior studies have revealed significant layer redundancy in LLMs for generative tasks, it remains unclear whether similar redundancy exists when these models are adapted for retrieval tasks, which require encoding entire sequences into fixed representations rather than generating tokens iteratively. To this end, we conduct a comprehensive analysis of layer redundancy in LLM-based dense retrievers. We find that, in contrast to generative settings, MLP layers are substantially more prunable, while attention layers remain critical for semantic aggregation. Building on this insight, we propose EffiR, a framework for developing efficient retrievers that performs large-scale MLP compression through a coarse-to-fine strategy (coarse-grained depth reduction followed by fine-grained width reduction), combined with retrieval-specific fine-tuning. Across diverse BEIR datasets and LLM backbones, EffiR achieves substantial reductions in model size and inference cost while preserving the performance of full-size models.</summary>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:58:25Z</published>
-    <arxiv:primary_category term="cs.IR"/>
+    <id>http://arxiv.org/abs/2512.21338v1</id>
+    <title>HiStream: Efficient High-Resolution Video Generation via Redundancy-Eliminated Streaming</title>
+    <updated>2025-12-24T18:59:58Z</updated>
+    <link href="https://arxiv.org/abs/2512.21338v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21338v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-resolution video generation, while crucial for digital media and film, is computationally bottlenecked by the quadratic complexity of diffusion models, making practical inference infeasible. To address this, we introduce HiStream, an efficient autoregressive framework that systematically reduces redundancy across three axes: i) Spatial Compression: denoising at low resolution before refining at high resolution with cached features; ii) Temporal Compression: a chunk-by-chunk strategy with a fixed-size anchor cache, ensuring stable inference speed; and iii) Timestep Compression: applying fewer denoising steps to subsequent, cache-conditioned chunks. On 1080p benchmarks, our primary HiStream model (i+ii) achieves state-of-the-art visual quality while demonstrating up to 76.2x faster denoising compared to the Wan2.1 baseline and negligible quality loss. Our faster variant, HiStream+, applies all three optimizations (i+ii+iii), achieving a 107.5x acceleration over the baseline, offering a compelling trade-off between speed and quality, thereby making high-resolution video generation both practical and scalable.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T18:59:58Z</published>
+    <arxiv:comment>Project Page: http://haonanqiu.com/projects/HiStream.html</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yibin Lei</name>
+      <name>Haonan Qiu</name>
     </author>
     <author>
-      <name>Shwai He</name>
+      <name>Shikun Liu</name>
     </author>
     <author>
-      <name>Ang Li</name>
+      <name>Zijian Zhou</name>
     </author>
     <author>
-      <name>Andrew Yates</name>
+      <name>Zhaochong An</name>
+    </author>
+    <author>
+      <name>Weiming Ren</name>
+    </author>
+    <author>
+      <name>Zhiheng Liu</name>
+    </author>
+    <author>
+      <name>Jonas Schult</name>
+    </author>
+    <author>
+      <name>Sen He</name>
+    </author>
+    <author>
+      <name>Shoufa Chen</name>
+    </author>
+    <author>
+      <name>Yuren Cong</name>
+    </author>
+    <author>
+      <name>Tao Xiang</name>
+    </author>
+    <author>
+      <name>Ziwei Liu</name>
+    </author>
+    <author>
+      <name>Juan-Manuel Perez-Rua</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.20605v1</id>
-    <title>Emergent temporal abstractions in autoregressive models enable hierarchical reinforcement learning</title>
-    <updated>2025-12-23T18:51:50Z</updated>
-    <link href="https://arxiv.org/abs/2512.20605v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20605v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large-scale autoregressive models pretrained on next-token prediction and finetuned with reinforcement learning (RL) have achieved unprecedented success on many problem domains. During RL, these models explore by generating new outputs, one token at a time. However, sampling actions token-by-token can result in highly inefficient learning, particularly when rewards are sparse. Here, we show that it is possible to overcome this problem by acting and exploring within the internal representations of an autoregressive model. Specifically, to discover temporally-abstract actions, we introduce a higher-order, non-causal sequence model whose outputs control the residual stream activations of a base autoregressive model. On grid world and MuJoCo-based tasks with hierarchical structure, we find that the higher-order model learns to compress long activation sequence chunks onto internal controllers. Critically, each controller executes a sequence of behaviorally meaningful actions that unfold over long timescales and are accompanied with a learned termination condition, such that composing multiple controllers over time leads to efficient exploration on novel tasks. We show that direct internal controller reinforcement, a process we term "internal RL", enables learning from sparse rewards in cases where standard RL finetuning fails. Our results demonstrate the benefits of latent action generation and reinforcement in autoregressive models, suggesting internal RL as a promising avenue for realizing hierarchical RL within foundation models.</summary>
+    <id>http://arxiv.org/abs/2512.21335v1</id>
+    <title>Autonomous Uncertainty Quantification for Computational Point-of-care Sensors</title>
+    <updated>2025-12-24T18:59:47Z</updated>
+    <link href="https://arxiv.org/abs/2512.21335v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21335v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Computational point-of-care (POC) sensors enable rapid, low-cost, and accessible diagnostics in emergency, remote and resource-limited areas that lack access to centralized medical facilities. These systems can utilize neural network-based algorithms to accurately infer a diagnosis from the signals generated by rapid diagnostic tests or sensors. However, neural network-based diagnostic models are subject to hallucinations and can produce erroneous predictions, posing a risk of misdiagnosis and inaccurate clinical decisions. To address this challenge, here we present an autonomous uncertainty quantification technique developed for POC diagnostics. As our testbed, we used a paper-based, computational vertical flow assay (xVFA) platform developed for rapid POC diagnosis of Lyme disease, the most prevalent tick-borne disease globally. The xVFA platform integrates a disposable paper-based assay, a handheld optical reader and a neural network-based inference algorithm, providing rapid and cost-effective Lyme disease diagnostics in under 20 min using only 20 uL of patient serum. By incorporating a Monte Carlo dropout (MCDO)-based uncertainty quantification approach into the diagnostics pipeline, we identified and excluded erroneous predictions with high uncertainty, significantly improving the sensitivity and reliability of the xVFA in an autonomous manner, without access to the ground truth diagnostic information of patients. Blinded testing using new patient samples demonstrated an increase in diagnostic sensitivity from 88.2% to 95.7%, indicating the effectiveness of MCDO-based uncertainty quantification in enhancing the robustness of neural network-driven computational POC sensing systems.</summary>
+    <category term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T18:59:47Z</published>
+    <arxiv:comment>18 Pages, 5 Figures</arxiv:comment>
+    <arxiv:primary_category term="physics.med-ph"/>
+    <author>
+      <name>Artem Goncharov</name>
+    </author>
+    <author>
+      <name>Rajesh Ghosh</name>
+    </author>
+    <author>
+      <name>Hyou-Arm Joung</name>
+    </author>
+    <author>
+      <name>Dino Di Carlo</name>
+    </author>
+    <author>
+      <name>Aydogan Ozcan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21333v1</id>
+    <title>Fast SAM2 with Text-Driven Token Pruning</title>
+    <updated>2025-12-24T18:59:05Z</updated>
+    <link href="https://arxiv.org/abs/2512.21333v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21333v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Segment Anything Model 2 (SAM2), a vision foundation model has significantly advanced in prompt-driven video object segmentation, yet their practical deployment remains limited by the high computational and memory cost of processing dense visual tokens across time. The SAM2 pipelines typically propagate all visual tokens produced by the image encoder through downstream temporal reasoning modules, regardless of their relevance to the target object, resulting in reduced scalability due to quadratic memory attention overhead. In this work, we introduce a text-guided token pruning framework that improves inference efficiency by selectively reducing token density prior to temporal propagation, without modifying the underlying segmentation architecture. Operating after visual encoding and before memory based propagation, our method ranks tokens using a lightweight routing mechanism that integrates local visual context, semantic relevance derived from object-centric textual descriptions (either user-provided or automatically generated), and uncertainty cues that help preserve ambiguous or boundary critical regions. By retaining only the most informative tokens for downstream processing, the proposed approach reduces redundant computation while maintaining segmentation fidelity. Extensive experiments across multiple challenging video segmentation benchmarks demonstrate that post-encoder token pruning provides a practical and effective pathway to efficient, prompt-aware video segmentation, achieving up to 42.50 percent faster inference and 37.41 percent lower GPU memory usage compared to the unpruned baseline SAM2, while preserving competitive J and F performance. These results highlight the potential of early token selection to improve the scalability of transformer-based video segmentation systems for real-time and resource-constrained applications.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T18:59:05Z</published>
+    <arxiv:comment>28 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Avilasha Mandal</name>
+    </author>
+    <author>
+      <name>Chaoning Zhang</name>
+    </author>
+    <author>
+      <name>Fachrina Dewi Puspitasari</name>
+    </author>
+    <author>
+      <name>Xudong Wang</name>
+    </author>
+    <author>
+      <name>Jiaquan Zhang</name>
+    </author>
+    <author>
+      <name>Caiyan Qin</name>
+    </author>
+    <author>
+      <name>Guoqing Wang</name>
+    </author>
+    <author>
+      <name>Yang Yang</name>
+    </author>
+    <author>
+      <name>Heng Tao Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21332v1</id>
+    <title>C2LLM Technical Report: A New Frontier in Code Retrieval via Adaptive Cross-Attention Pooling</title>
+    <updated>2025-12-24T18:59:01Z</updated>
+    <link href="https://arxiv.org/abs/2512.21332v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21332v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present C2LLM - Contrastive Code Large Language Models, a family of code embedding models in both 0.5B and 7B sizes. Building upon Qwen-2.5-Coder backbones, C2LLM adopts a Pooling by Multihead Attention (PMA) module for generating sequence embedding from token embeddings, effectively 1) utilizing the LLM's causal representations acquired during pretraining, while also 2) being able to aggregate information from all tokens in the sequence, breaking the information bottleneck in EOS-based sequence embeddings, and 3) supporting flexible adaptation of embedding dimension, serving as an alternative to MRL. Trained on three million publicly available data, C2LLM models set new records on MTEB-Code among models of similar sizes, with C2LLM-7B ranking 1st on the overall leaderboard.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:51:50Z</published>
+    <published>2025-12-24T18:59:01Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jin Qin</name>
+    </author>
+    <author>
+      <name>Zihan Liao</name>
+    </author>
+    <author>
+      <name>Ziyin Zhang</name>
+    </author>
+    <author>
+      <name>Hang Yu</name>
+    </author>
+    <author>
+      <name>Peng Di</name>
+    </author>
+    <author>
+      <name>Rui Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21311v1</id>
+    <title>Learning to Solve PDEs on Neural Shape Representations</title>
+    <updated>2025-12-24T18:14:02Z</updated>
+    <link href="https://arxiv.org/abs/2512.21311v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21311v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Solving partial differential equations (PDEs) on shapes underpins many shape analysis and engineering tasks; yet, prevailing PDE solvers operate on polygonal/triangle meshes while modern 3D assets increasingly live as neural representations. This mismatch leaves no suitable method to solve surface PDEs directly within the neural domain, forcing explicit mesh extraction or per-instance residual training, preventing end-to-end workflows. We present a novel, mesh-free formulation that learns a local update operator conditioned on neural (local) shape attributes, enabling surface PDEs to be solved directly where the (neural) data lives. The operator integrates naturally with prevalent neural surface representations, is trained once on a single representative shape, and generalizes across shape and topology variations, enabling accurate, fast inference without explicit meshing or per-instance optimization while preserving differentiability. Across analytic benchmarks (heat equation and Poisson solve on sphere) and real neural assets across different representations, our method slightly outperforms CPM while remaining reasonably close to FEM, and, to our knowledge, delivers the first end-to-end pipeline that solves surface PDEs on both neural and classical surface representations. Code will be released on acceptance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T18:14:02Z</published>
+    <arxiv:comment>Article webpage link: https://welschinger.github.io/Learning-to-Solve-PDEs-on-Neural-Shape-Representations/</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Seijin Kobayashi</name>
+      <name>Lilian Welschinger</name>
     </author>
     <author>
-      <name>Yanick Schimpf</name>
+      <name>Yilin Liu</name>
     </author>
     <author>
-      <name>Maximilian Schlegel</name>
+      <name>Zican Wang</name>
     </author>
     <author>
-      <name>Angelika Steger</name>
-    </author>
-    <author>
-      <name>Maciej Wolczyk</name>
-    </author>
-    <author>
-      <name>Johannes von Oswald</name>
-    </author>
-    <author>
-      <name>Nino Scherre</name>
-    </author>
-    <author>
-      <name>Kaitlin Maile</name>
-    </author>
-    <author>
-      <name>Guillaume Lajoie</name>
-    </author>
-    <author>
-      <name>Blake A. Richards</name>
-    </author>
-    <author>
-      <name>Rif A. Saurous</name>
-    </author>
-    <author>
-      <name>James Manyika</name>
-    </author>
-    <author>
-      <name>Blaise Agüera y Arcas</name>
-    </author>
-    <author>
-      <name>Alexander Meulemans</name>
-    </author>
-    <author>
-      <name>João Sacramento</name>
+      <name>Niloy Mitra</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.20591v1</id>
-    <title>LightTact: A Visual-Tactile Fingertip Sensor for Deformation-Independent Contact Sensing</title>
-    <updated>2025-12-23T18:38:25Z</updated>
-    <link href="https://arxiv.org/abs/2512.20591v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20591v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Contact often occurs without macroscopic surface deformation, such as during interaction with liquids, semi-liquids, or ultra-soft materials. Most existing tactile sensors rely on deformation to infer contact, making such light-contact interactions difficult to perceive robustly. To address this, we present LightTact, a visual-tactile fingertip sensor that makes contact directly visible via a deformation-independent, optics-based principle. LightTact uses an ambient-blocking optical configuration that suppresses both external light and internal illumination at non-contact regions, while transmitting only the diffuse light generated at true contacts. As a result, LightTact produces high-contrast raw images in which non-contact pixels remain near-black (mean gray value &lt; 3) and contact pixels preserve the natural appearance of the contacting surface. Built on this, LightTact achieves accurate pixel-level contact segmentation that is robust to material properties, contact force, surface appearance, and environmental lighting. We further integrate LightTact on a robotic arm and demonstrate manipulation behaviors driven by extremely light contact, including water spreading, facial-cream dipping, and thin-film interaction. Finally, we show that LightTact's spatially aligned visual-tactile images can be directly interpreted by existing vision-language models, enabling resistor value reasoning for robotic sorting.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:38:25Z</published>
-    <arxiv:primary_category term="cs.RO"/>
+    <id>http://arxiv.org/abs/2512.21284v1</id>
+    <title>Surgical Scene Segmentation using a Spike-Driven Video Transformer with Real-Time Potential</title>
+    <updated>2025-12-24T17:05:09Z</updated>
+    <link href="https://arxiv.org/abs/2512.21284v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21284v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern surgical systems increasingly rely on intelligent scene understanding to provide timely situational awareness for enhanced intra-operative safety. Within this pipeline, surgical scene segmentation plays a central role in accurately perceiving operative events. Although recent deep learning models, particularly large-scale foundation models, achieve remarkable segmentation accuracy, their substantial computational demands and power consumption hinder real-time deployment in resource-constrained surgical environments. To address this limitation, we explore the emerging SNN as a promising paradigm for highly efficient surgical intelligence. However, their performance is still constrained by the scarcity of labeled surgical data and the inherently sparse nature of surgical video representations. To this end, we propose \textit{SpikeSurgSeg}, the first spike-driven video Transformer framework tailored for surgical scene segmentation with real-time potential on non-GPU platforms. To address the limited availability of surgical annotations, we introduce a surgical-scene masked autoencoding pretraining strategy for SNNs that enables robust spatiotemporal representation learning via layer-wise tube masking. Building on this pretrained backbone, we further adopt a lightweight spike-driven segmentation head that produces temporally consistent predictions while preserving the low-latency characteristics of SNNs. Extensive experiments on EndoVis18 and our in-house SurgBleed dataset demonstrate that SpikeSurgSeg achieves mIoU comparable to SOTA ANN-based models while reducing inference latency by at least $8\times$. Notably, it delivers over $20\times$ acceleration relative to most foundation-model baselines, underscoring its potential for time-critical surgical scene segmentation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T17:05:09Z</published>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Changyi Lin</name>
+      <name>Shihao Zou</name>
     </author>
     <author>
-      <name>Boda Huo</name>
+      <name>Jingjing Li</name>
     </author>
     <author>
-      <name>Mingyang Yu</name>
+      <name>Wei Ji</name>
     </author>
     <author>
-      <name>Emily Ruppel</name>
+      <name>Jincai Huang</name>
     </author>
     <author>
-      <name>Bingqing Chen</name>
+      <name>Kai Wang</name>
     </author>
     <author>
-      <name>Jonathan Francis</name>
+      <name>Guo Dan</name>
     </author>
     <author>
-      <name>Ding Zhao</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.20587v1</id>
-    <title>Quantum Gates from Wolfram Model Multiway Rewriting Systems</title>
-    <updated>2025-12-23T18:34:42Z</updated>
-    <link href="https://arxiv.org/abs/2512.20587v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20587v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We show how representations of finite-dimensional quantum operators can be constructed using nondeterministic rewriting systems. In particular, we investigate Wolfram model multiway rewriting systems based on string substitutions. Multiway systems were proposed by S. Wolfram as generic model systems for multicomputational processes, emphasizing their significance as a foundation for modeling complexity, nondeterminism, and branching structures of measurement outcomes. Here, we investigate a specific class of multiway systems based on cyclic character strings with a neighborhood constraint - the latter called Leibnizian strings. We show that such strings exhibit a Fermi-Dirac distribution for expectation values of occupation numbers of character neighborhoods. A Leibnizian string serves as an abstraction of a $N$-fermion system. A multiway system of these strings encodes causal relations between rewriting events in a nondeterministic manner. The collection of character strings realizes a $\mathbb{Z}$-module with a symmetric $\mathbb{Z}$-bilinear form. For discrete spaces, this generalizes the notion of an inner product over a vector field. This admits a discrete analogue of the path integral and a $S$-matrix for multiway systems of Leibnizian strings. The elements of this $S$-matrix yield transition amplitudes between states of the multiway system based on an action defined over a sequence of Leibnizian strings. We then show that these $S$-matrices give explicit representations of quantum gates for qubits and qudits, and also circuits composed of such gates. We find that, as formal models of nondeterministic computation, rewriting systems of Leibnizian strings with causal structure encode representations of the CNOT, $π/8$, and Hadamard gates. Hence, using multiway systems one can represent quantum circuits for qubits.</summary>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:34:42Z</published>
-    <arxiv:comment>39 pages, 15 figures</arxiv:comment>
-    <arxiv:primary_category term="quant-ph"/>
-    <author>
-      <name>Furkan Semih Dündar</name>
+      <name>Weixin Si</name>
     </author>
     <author>
-      <name>Xerxes D. Arsiwalla</name>
-    </author>
-    <author>
-      <name>Hatem Elshatlawy</name>
+      <name>Yi Pan</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.20586v1</id>
-    <title>Automated stereotactic radiosurgery planning using a human-in-the-loop reasoning large language model agent</title>
-    <updated>2025-12-23T18:32:17Z</updated>
-    <link href="https://arxiv.org/abs/2512.20586v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20586v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Stereotactic radiosurgery (SRS) demands precise dose shaping around critical structures, yet black-box AI systems have limited clinical adoption due to opacity concerns. We tested whether chain-of-thought reasoning improves agentic planning in a retrospective cohort of 41 patients with brain metastases treated with 18 Gy single-fraction SRS. We developed SAGE (Secure Agent for Generative Dose Expertise), an LLM-based planning agent for automated SRS treatment planning. Two variants generated plans for each case: one using a non-reasoning model, one using a reasoning model. The reasoning variant showed comparable plan dosimetry relative to human planners on primary endpoints (PTV coverage, maximum dose, conformity index, gradient index; all p &gt; 0.21) while reducing cochlear dose below human baselines (p = 0.022). When prompted to improve conformity, the reasoning model demonstrated systematic planning behaviors including prospective constraint verification (457 instances) and trade-off deliberation (609 instances), while the standard model exhibited none of these deliberative processes (0 and 7 instances, respectively). Content analysis revealed that constraint verification and causal explanation concentrated in the reasoning agent. The optimization traces serve as auditable logs, offering a path toward transparent automated planning.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:32:17Z</published>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Humza Nusrat</name>
-    </author>
-    <author>
-      <name>Luke Francisco</name>
-    </author>
-    <author>
-      <name>Bing Luo</name>
-    </author>
-    <author>
-      <name>Hassan Bagher-Ebadian</name>
-    </author>
-    <author>
-      <name>Joshua Kim</name>
-    </author>
-    <author>
-      <name>Karen Chin-Snyder</name>
-    </author>
-    <author>
-      <name>Salim Siddiqui</name>
-    </author>
-    <author>
-      <name>Mira Shah</name>
-    </author>
-    <author>
-      <name>Eric Mellon</name>
-    </author>
-    <author>
-      <name>Mohammad Ghassemi</name>
-    </author>
-    <author>
-      <name>Anthony Doemer</name>
-    </author>
-    <author>
-      <name>Benjamin Movsas</name>
-    </author>
-    <author>
-      <name>Kundan Thind</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.20581v1</id>
-    <title>MERGE-RNA: a physics-based model to predict RNA secondary structure ensembles with chemical probing</title>
-    <updated>2025-12-23T18:26:57Z</updated>
-    <link href="https://arxiv.org/abs/2512.20581v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20581v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The function of RNA molecules is deeply related to their secondary structure, which determines which nucleobases are accessible for pairing. Most RNA molecules however function through dynamic and heterogeneous structural ensembles. Chemical probing methods (e.g., DMS probing) rely on selective chemical modification of accessible RNA nucleotides to infer base-pairing status, yet the resulting nucleotide-resolution data represent ensemble averages over dynamic RNA conformations. We present MERGE-RNA, a unified, physics-based framework that explicitly models the full experimental pipeline, from the thermodynamics of probe binding to the mutational profiling readout. By integrating measurements across probe concentrations and replicates, our model learns a small set of transferable and interpretable parameters together with minimal sequence-specific soft constraints. This enables the prediction of secondary structure ensembles that best explain the data and the detection of suboptmal structures involved in dynamic processes. We validate MERGE-RNA on diverse RNAs, showing that it achieves strong structural accuracy while preserving essential conformational heterogeneity. In a designed RNA for which we report new DMS data, MERGE-RNA detects transient intermediate states associated with strand displacement, dynamics that remain invisible to traditional methods.</summary>
-    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:26:57Z</published>
-    <arxiv:primary_category term="q-bio.BM"/>
-    <author>
-      <name>Giuseppe Sacco</name>
-    </author>
-    <author>
-      <name>Jianhui Li</name>
-    </author>
-    <author>
-      <name>Redmond P. Smyth</name>
-    </author>
-    <author>
-      <name>Guido Sanguinetti</name>
-    </author>
-    <author>
-      <name>Giovanni Bussi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.20579v1</id>
-    <title>Spin-induced quadrupole moment based test for eccentric binaries</title>
-    <updated>2025-12-23T18:26:37Z</updated>
-    <link href="https://arxiv.org/abs/2512.20579v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20579v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The spin-induced quadrupole moment-based test of black hole nature is routinely used to probe the true nature of detected binary signals, assuming a circular orbit. We extend the applicability of the method to binaries in eccentric orbits. Considering simulated signals of varying masses, spins, and signal strengths, we demonstrate how the systematic errors resulting from neglecting orbital eccentricity compare with the statistical errors, using a semi-analytic Fisher matrix-based formalism that accounts for both current and future detectors. Further, we quantify the systematic errors by developing a Bayesian inference framework for the current detector network. The inspiral-only aligned spin gravitational wave waveform model for eccentric binaries, TaylorF2Ecc, is employed. For the current detector network, neglecting an initial eccentricity of $e_0^{\rm inj}=0.1$ defined at $20\,\mathrm {Hz} $ can lead to a serious bias in binary parameter inference. Notably, a nearly equal-mass, moderately spinning binary black hole in an eccentric orbit can be identified as a non-black hole binary with extreme spins and asymmetric masses. We demonstrate the criticality of biased estimates that may arise when neglecting the orbital eccentricity while performing tests of black hole nature and discuss prospects.</summary>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:26:37Z</published>
-    <arxiv:comment>10 pages, 5 figures</arxiv:comment>
-    <arxiv:primary_category term="gr-qc"/>
-    <author>
-      <name>N. V. Krishnendu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.20578v1</id>
-    <title>Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits</title>
-    <updated>2025-12-23T18:21:32Z</updated>
-    <link href="https://arxiv.org/abs/2512.20578v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20578v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large language models (LLMs) generate fluent and complex outputs but often fail to recognize their own mistakes and hallucinations. Existing approaches typically rely on external judges, multi-sample consistency, or text-based self-critique, which incur additional compute or correlate weakly with true correctness. We ask: can LLMs predict their own failures by inspecting internal states during inference? We introduce Gnosis, a lightweight self-awareness mechanism that enables frozen LLMs to perform intrinsic self-verification by decoding signals from hidden states and attention patterns. Gnosis passively observes internal traces, compresses them into fixed-budget descriptors, and predicts correctness with negligible inference cost, adding only ~5M parameters and operating independently of sequence length. Across math reasoning, open-domain question answering, and academic knowledge benchmarks, and over frozen backbones ranging from 1.7B to 20B parameters, Gnosis consistently outperforms strong internal baselines and large external judges in both accuracy and calibration. Moreover, it generalizes zero-shot to partial generations, enabling early detection of failing trajectories and compute-aware control. These results show that reliable correctness cues are intrinsic to generation process and can be extracted efficiently without external supervision.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:21:32Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Amirhosein Ghasemabadi</name>
-    </author>
-    <author>
-      <name>Di Niu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.20569v1</id>
-    <title>Distilling to Hybrid Attention Models via KL-Guided Layer Selection</title>
-    <updated>2025-12-23T18:12:22Z</updated>
-    <link href="https://arxiv.org/abs/2512.20569v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20569v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Distilling pretrained softmax attention Transformers into more efficient hybrid architectures that interleave softmax and linear attention layers is a promising approach for improving the inference efficiency of LLMs without requiring expensive pretraining from scratch. A critical factor in the conversion process is layer selection, i.e., deciding on which layers to convert to linear attention variants. This paper describes a simple and efficient recipe for layer selection that uses layer importance scores derived from a small amount of training on generic text data. Once the layers have been selected we use a recent pipeline for the distillation process itself \citep[RADLADS;][]{goldstein2025radlads}, which consists of attention weight transfer, hidden state alignment, KL-based distribution matching, followed by a small amount of finetuning. We find that this approach is more effective than existing approaches for layer selection, including heuristics that uniformly interleave linear attentions based on a fixed ratio, as well as more involved approaches that rely on specialized diagnostic datasets.</summary>
+    <id>http://arxiv.org/abs/2512.21280v1</id>
+    <title>SMART SLM: Structured Memory and Reasoning Transformer, A Small Language Model for Accurate Document Assistance</title>
+    <updated>2025-12-24T16:59:04Z</updated>
+    <link href="https://arxiv.org/abs/2512.21280v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21280v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The user of Engineering Manuals (EM) finds it difficult to read EM s because they are long, have a dense format which includes written documents, step by step procedures, and standard parameter lists for engineering equipment. Off the shelf transformers, especially compact ones, treat this material as a flat stream of tokens. This approach leads to confident but incorrect numeric answers and forces the models to memorize separate facts inefficiently. SMART (Structured Memory and Reasoning Transformer) offers a different and practical solution to the above problem. SMART structures its processing by using a hierarchical approach, and is based upon three main job categories (1) A syntax-aware Fact Extractor (Grammarian) Tree LSTM which extracts facts as subject relation object relations from EM sentences (2) A compact indexed memory MANN (Memory Augmented Neural Network) that indexes these Rational Subject Relation Objects as 384 dimensional vectors that are associated with the source of the information, and (3) A 6 layer Transformer that learns to fuse the previously retrieved facts into its generated response. The entire SMART model utilizes 45.51M parameters, which is 64% less than GPT-2 (124M) and 69% less than BERT (133M), and it achieves a 21.3% higher accuracy than GPT-2, indicating that SMART fits the data better with the least amount of processing requirements. SMART employs dual modes of inference an indexed fast path for known documents (sub-second answer times) and an indexed dynamic path assisted by RAGs for new uploads (FAISS Top 20 results with memory severed at 64 slots). In real world deployment, this framework leads to more well supported results with reduced hallucinations than comparable small transformer models.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T18:12:22Z</published>
+    <published>2025-12-24T16:59:04Z</published>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Yanhong Li</name>
+      <name>Divij Dudeja</name>
     </author>
     <author>
-      <name>Songlin Yang</name>
-    </author>
-    <author>
-      <name>Shawn Tan</name>
-    </author>
-    <author>
-      <name>Mayank Mishra</name>
-    </author>
-    <author>
-      <name>Rameswar Panda</name>
-    </author>
-    <author>
-      <name>Jiawei Zhou</name>
-    </author>
-    <author>
-      <name>Yoon Kim</name>
+      <name>Mayukha Pal</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.20555v1</id>
-    <title>A Manifestly Causal Approach to Quantum Field Theory</title>
-    <updated>2025-12-23T17:55:35Z</updated>
-    <link href="https://arxiv.org/abs/2512.20555v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.20555v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We develop a probability-level, manifestly causal formalism for calculations in QFT. The approach involves an implicit summation over final states, which makes causality manifest since retarded propagators emerge naturally. This inclusive summation over final states may also offer insights into the cancellation of IR divergences in physical observables within gauge theories, in accordance with the BN and KLN theorems. To study this, we first conduct particle scattering calculations using conventional methods, determining the quark-antiquark production cross section at first-order in gluon corrections, with careful tracking and cancellation of both IR and UV divergences. We then apply the causal formalism to analogous processes in scalar field theory, introducing novel diagrams that represent algebraic terms at the probability level, akin to Feynman diagrams at the amplitude level. We present a list of rules that generate all probability-level diagrams for particle scattering processes in which one is fully inclusive over final states that contain no initial-state particles. We also investigate the Unruh effect through the lens of the causal formalism. We calculate the transition rate of an accelerating UdW detector coupled to a massive scalar field, from both the perspective of an inertial observer and an accelerating observer. We confirm that the two perspectives give the same transition rate, despite the Rindler observer describing the Minkowski vacuum state as a thermal bath of particles. Numerical results for the transition rate are presented, highlighting the transient effects caused by forcing the field to initially be in the Minkowski vacuum state. Finally, we review the literature regarding the response of an UdW detector on various trajectories in the spacetime of a (3+1)-D Schwarzschild black hole, with a view to extending the analysis in the future using our causal formalism.</summary>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-23T17:55:35Z</published>
-    <arxiv:comment>PhD thesis, University of Manchester, 2025</arxiv:comment>
-    <arxiv:primary_category term="hep-th"/>
+    <id>http://arxiv.org/abs/2512.21276v1</id>
+    <title>GriDiT: Factorized Grid-Based Diffusion for Efficient Long Image Sequence Generation</title>
+    <updated>2025-12-24T16:46:04Z</updated>
+    <link href="https://arxiv.org/abs/2512.21276v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21276v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern deep learning methods typically treat image sequences as large tensors of sequentially stacked frames. However, is this straightforward representation ideal given the current state-of-the-art (SoTA)? In this work, we address this question in the context of generative models and aim to devise a more effective way of modeling image sequence data. Observing the inefficiencies and bottlenecks of current SoTA image sequence generation methods, we showcase that rather than working with large tensors, we can improve the generation process by factorizing it into first generating the coarse sequence at low resolution and then refining the individual frames at high resolution. We train a generative model solely on grid images comprising subsampled frames. Yet, we learn to generate image sequences, using the strong self-attention mechanism of the Diffusion Transformer (DiT) to capture correlations between frames. In effect, our formulation extends a 2D image generator to operate as a low-resolution 3D image-sequence generator without introducing any architectural modifications. Subsequently, we super-resolve each frame individually to add the sequence-independent high-resolution details. This approach offers several advantages and can overcome key limitations of the SoTA in this domain. Compared to existing image sequence generation models, our method achieves superior synthesis quality and improved coherence across sequences. It also delivers high-fidelity generation of arbitrary-length sequences and increased efficiency in inference time and training data usage. Furthermore, our straightforward formulation enables our method to generalize effectively across diverse data domains, which typically require additional priors and supervision to model in a generative context. Our method consistently outperforms SoTA in quality and inference speed (at least twice-as-fast) across datasets.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T16:46:04Z</published>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Ross Jenkinson</name>
+      <name>Snehal Singh Tomar</name>
+    </author>
+    <author>
+      <name>Alexandros Graikos</name>
+    </author>
+    <author>
+      <name>Arjun Krishna</name>
+    </author>
+    <author>
+      <name>Dimitris Samaras</name>
+    </author>
+    <author>
+      <name>Klaus Mueller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21264v1</id>
+    <title>AnyAD: Unified Any-Modality Anomaly Detection in Incomplete Multi-Sequence MRI</title>
+    <updated>2025-12-24T16:16:09Z</updated>
+    <link href="https://arxiv.org/abs/2512.21264v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21264v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reliable anomaly detection in brain MRI remains challenging due to the scarcity of annotated abnormal cases and the frequent absence of key imaging modalities in real clinical workflows. Existing single-class or multi-class anomaly detection (AD) models typically rely on fixed modality configurations, require repetitive training, or fail to generalize to unseen modality combinations, limiting their clinical scalability. In this work, we present a unified Any-Modality AD framework that performs robust anomaly detection and localization under arbitrary MRI modality availability. The framework integrates a dual-pathway DINOv2 encoder with a feature distribution alignment mechanism that statistically aligns incomplete-modality features with full-modality representations, enabling stable inference even with severe modality dropout. To further enhance semantic consistency, we introduce an Intrinsic Normal Prototypes (INPs) extractor and an INP-guided decoder that reconstruct only normal anatomical patterns while naturally amplifying abnormal deviations. Through randomized modality masking and indirect feature completion during training, the model learns to adapt to all modality configurations without re-training. Extensive experiments on BraTS2018, MU-Glioma-Post, and Pretreat-MetsToBrain-Masks demonstrate that our approach consistently surpasses state-of-the-art industrial and medical AD baselines across 7 modality combinations, achieving superior generalization. This study establishes a scalable paradigm for multimodal medical AD under real-world, imperfect modality conditions. Our source code is available at https://github.com/wuchangw/AnyAD.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T16:16:09Z</published>
+    <arxiv:comment>15 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Changwei Wu</name>
+    </author>
+    <author>
+      <name>Yifei Chen</name>
+    </author>
+    <author>
+      <name>Yuxin Du</name>
+    </author>
+    <author>
+      <name>Mingxuan Liu</name>
+    </author>
+    <author>
+      <name>Jinying Zong</name>
+    </author>
+    <author>
+      <name>Beining Wu</name>
+    </author>
+    <author>
+      <name>Jie Dong</name>
+    </author>
+    <author>
+      <name>Feiwei Qin</name>
+    </author>
+    <author>
+      <name>Yunkang Cao</name>
+    </author>
+    <author>
+      <name>Qiyuan Tian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21257v1</id>
+    <title>ReaSeq: Unleashing World Knowledge via Reasoning for Sequential Modeling</title>
+    <updated>2025-12-24T16:06:20Z</updated>
+    <link href="https://arxiv.org/abs/2512.21257v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21257v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial recommender systems face two fundamental limitations under the log-driven paradigm: (1) knowledge poverty in ID-based item representations that causes brittle interest modeling under data sparsity, and (2) systemic blindness to beyond-log user interests that constrains model performance within platform boundaries. These limitations stem from an over-reliance on shallow interaction statistics and close-looped feedback while neglecting the rich world knowledge about product semantics and cross-domain behavioral patterns that Large Language Models have learned from vast corpora.
+  To address these challenges, we introduce ReaSeq, a reasoning-enhanced framework that leverages world knowledge in Large Language Models to address both limitations through explicit and implicit reasoning. Specifically, ReaSeq employs explicit Chain-of-Thought reasoning via multi-agent collaboration to distill structured product knowledge into semantically enriched item representations, and latent reasoning via Diffusion Large Language Models to infer plausible beyond-log behaviors. Deployed on Taobao's ranking system serving hundreds of millions of users, ReaSeq achieves substantial gains: &gt;6.0% in IPV and CTR, &gt;2.9% in Orders, and &gt;2.5% in GMV, validating the effectiveness of world-knowledge-enhanced reasoning over purely log-driven approaches.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T16:06:20Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Chuan Wang</name>
+    </author>
+    <author>
+      <name>Gaoming Yang</name>
+    </author>
+    <author>
+      <name>Han Wu</name>
+    </author>
+    <author>
+      <name>Jiakai Tang</name>
+    </author>
+    <author>
+      <name>Jiahao Yu</name>
+    </author>
+    <author>
+      <name>Jian Wu</name>
+    </author>
+    <author>
+      <name>Jianwu Hu</name>
+    </author>
+    <author>
+      <name>Junjun Zheng</name>
+    </author>
+    <author>
+      <name>Shuwen Xiao</name>
+    </author>
+    <author>
+      <name>Yeqiu Yang</name>
+    </author>
+    <author>
+      <name>Yuning Jiang</name>
+    </author>
+    <author>
+      <name>Ahjol Nurlanbek</name>
+    </author>
+    <author>
+      <name>Binbin Cao</name>
+    </author>
+    <author>
+      <name>Bo Zheng</name>
+    </author>
+    <author>
+      <name>Fangmei Zhu</name>
+    </author>
+    <author>
+      <name>Gaoming Zhou</name>
+    </author>
+    <author>
+      <name>Huimin Yi</name>
+    </author>
+    <author>
+      <name>Huiping Chu</name>
+    </author>
+    <author>
+      <name>Jin Huang</name>
+    </author>
+    <author>
+      <name>Jinzhe Shan</name>
+    </author>
+    <author>
+      <name>Kenan Cui</name>
+    </author>
+    <author>
+      <name>Longbin Li</name>
+    </author>
+    <author>
+      <name>Silu Zhou</name>
+    </author>
+    <author>
+      <name>Wen Chen</name>
+    </author>
+    <author>
+      <name>Xia Ming</name>
+    </author>
+    <author>
+      <name>Xiang Gao</name>
+    </author>
+    <author>
+      <name>Xin Yao</name>
+    </author>
+    <author>
+      <name>Xingyu Wen</name>
+    </author>
+    <author>
+      <name>Yan Zhang</name>
+    </author>
+    <author>
+      <name>Yiwen Hu</name>
+    </author>
+    <author>
+      <name>Yulin Wang</name>
+    </author>
+    <author>
+      <name>Ziheng Bao</name>
+    </author>
+    <author>
+      <name>Zongyuan Wu</name>
     </author>
   </entry>
 </feed>
