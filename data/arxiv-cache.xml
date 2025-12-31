@@ -1,272 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2025-12-30T01:00:37Z -->
+<!-- Last updated: 2025-12-31T01:01:54Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2025-12-30T01:00:37Z</updated>
+  <updated>2025-12-31T01:01:54Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>129566</opensearch:totalResults>
+  <opensearch:totalResults>129730</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2512.22120v1</id>
-    <title>See Less, See Right: Bi-directional Perceptual Shaping For Multimodal Reasoning</title>
-    <updated>2025-12-26T18:59:47Z</updated>
-    <link href="https://arxiv.org/abs/2512.22120v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22120v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large vision-language models (VLMs) often benefit from intermediate visual cues, either injected via external tools or generated as latent visual tokens during reasoning, but these mechanisms still overlook fine-grained visual evidence (e.g., polylines in charts), generalize poorly across domains, and incur high inference-time cost. In this paper, we propose Bi-directional Perceptual Shaping (BiPS), which transforms question-conditioned masked views into bidirectional where-to-look signals that shape perception during training. BiPS first applies a KL-consistency constraint between the original image and an evidence-preserving view that keeps only question-relevant regions, encouraging coarse but complete coverage of supporting pixels. It then applies a KL-separation constraint between the original and an evidence-ablated view where critical pixels are masked so the image no longer supports the original answer, discouraging text-only shortcuts (i.e., answering from text alone) and enforcing fine-grained visual reliance. Across eight benchmarks, BiPS boosts Qwen2.5-VL-7B by 8.2% on average and shows strong out-of-domain generalization to unseen datasets and image types.</summary>
+    <id>http://arxiv.org/abs/2512.23709v1</id>
+    <title>Stream-DiffVSR: Low-Latency Streamable Video Super-Resolution via Auto-Regressive Diffusion</title>
+    <updated>2025-12-29T18:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2512.23709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion-based video super-resolution (VSR) methods achieve strong perceptual quality but remain impractical for latency-sensitive settings due to reliance on future frames and expensive multi-step denoising. We propose Stream-DiffVSR, a causally conditioned diffusion framework for efficient online VSR. Operating strictly on past frames, it combines a four-step distilled denoiser for fast inference, an Auto-regressive Temporal Guidance (ARTG) module that injects motion-aligned cues during latent denoising, and a lightweight temporal-aware decoder with a Temporal Processor Module (TPM) that enhances detail and temporal coherence. Stream-DiffVSR processes 720p frames in 0.328 seconds on an RTX4090 GPU and significantly outperforms prior diffusion-based methods. Compared with the online SOTA TMP, it boosts perceptual quality (LPIPS +0.095) while reducing latency by over 130x. Stream-DiffVSR achieves the lowest latency reported for diffusion-based VSR, reducing initial delay from over 4600 seconds to 0.328 seconds, thereby making it the first diffusion VSR method suitable for low-latency online deployment. Project page: https://jamichss.github.io/stream-diffvsr-project-page/</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T18:59:47Z</published>
+    <published>2025-12-29T18:59:57Z</published>
+    <arxiv:comment>Project page: https://jamichss.github.io/stream-diffvsr-project-page/</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Shuoshuo Zhang</name>
+      <name>Hau-Shiang Shiu</name>
     </author>
     <author>
-      <name>Yizhen Zhang</name>
+      <name>Chin-Yang Lin</name>
     </author>
     <author>
-      <name>Jingjing Fu</name>
+      <name>Zhixiang Wang</name>
     </author>
     <author>
-      <name>Lei Song</name>
+      <name>Chi-Wei Hsiao</name>
     </author>
     <author>
-      <name>Jiang Bian</name>
+      <name>Po-Fan Yu</name>
     </author>
     <author>
-      <name>Yujiu Yang</name>
+      <name>Yu-Chih Chen</name>
     </author>
     <author>
-      <name>Rui Wang</name>
+      <name>Yu-Lun Liu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.22102v1</id>
-    <title>Explainable Multimodal Regression via Information Decomposition</title>
-    <updated>2025-12-26T18:07:18Z</updated>
-    <link href="https://arxiv.org/abs/2512.22102v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22102v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Multimodal regression aims to predict a continuous target from heterogeneous input sources and typically relies on fusion strategies such as early or late fusion. However, existing methods lack principled tools to disentangle and quantify the individual contributions of each modality and their interactions, limiting the interpretability of multimodal fusion. We propose a novel multimodal regression framework grounded in Partial Information Decomposition (PID), which decomposes modality-specific representations into unique, redundant, and synergistic components. The basic PID framework is inherently underdetermined. To resolve this, we introduce inductive bias by enforcing Gaussianity in the joint distribution of latent representations and the transformed response variable (after inverse normal transformation), thereby enabling analytical computation of the PID terms. Additionally, we derive a closed-form conditional independence regularizer to promote the isolation of unique information within each modality. Experiments on six real-world datasets, including a case study on large-scale brain age prediction from multimodal neuroimaging data, demonstrate that our framework outperforms state-of-the-art methods in both predictive accuracy and interpretability, while also enabling informed modality selection for efficient inference. Implementation is available at https://github.com/zhaozhaoma/PIDReg.</summary>
+    <id>http://arxiv.org/abs/2512.23702v1</id>
+    <title>The operational no-signalling constraints and their implications</title>
+    <updated>2025-12-29T18:57:33Z</updated>
+    <link href="https://arxiv.org/abs/2512.23702v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23702v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The study of quantum correlations within relativistic spacetimes, and the consequences of relativistic causality on information processing using such correlations, has gained much attention in recent years. In this paper, we establish a unified framework in the form of operational no-signalling constraints to study both nonlocal and temporal correlations within general relativistic spacetimes. We explore several intriguing consequences arising from our framework. Firstly, we show that the violation of the operational no-signalling constraints in Minkowski spacetime implies either a logical paradox or an operational infringement of Poincaré symmetry. We thereby examine and subvert recent claims in [Phys. Rev. Lett. 129, 110401 (2022)] on the possibility of witnessing operationally detectable causal loops in Minkowski spacetime. Secondly, we explore the possibility of jamming of nonlocal correlations, controverting a recent claim in [Nat. Comm. 16, 269 (2025)] that a physical mechanism for jamming would necessarily lead to superluminal signalling. Finally, we show that in black hole spacetimes certain nonlocal correlations under and across the event horizon can be jammed by any agent without spoiling the operational no-signalling constraints.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T18:57:33Z</published>
+    <arxiv:comment>Comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Michał Eckstein</name>
+    </author>
+    <author>
+      <name>Tomasz Miller</name>
+    </author>
+    <author>
+      <name>Ryszard Horodecki</name>
+    </author>
+    <author>
+      <name>Ravishankar Ramanathan</name>
+    </author>
+    <author>
+      <name>Paweł Horodecki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.23675v1</id>
+    <title>End-to-End Test-Time Training for Long Context</title>
+    <updated>2025-12-29T18:30:14Z</updated>
+    <link href="https://arxiv.org/abs/2512.23675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on the given context, compressing the context it reads into its weights. In addition, we improve the model's initialization for learning at test time via meta-learning at training time. Overall, our method, a form of Test-Time Training (TTT), is End-to-End (E2E) both at test time (via next-token prediction) and training time (via meta-learning), in contrast to previous forms. We conduct extensive experiments with a focus on scaling properties. In particular, for 3B models trained with 164B tokens, our method (TTT-E2E) scales with context length in the same way as Transformer with full attention, while others, such as Mamba 2 and Gated DeltaNet, do not. However, similar to RNNs, TTT-E2E has constant inference latency regardless of context length, making it 2.7 times faster than full attention for 128K context. Our code is publicly available.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T18:07:18Z</published>
-    <arxiv:comment>Project Page: https://github.com/zhaozhaoma/PIDReg</arxiv:comment>
+    <published>2025-12-29T18:30:14Z</published>
+    <arxiv:comment>Code: https://github.com/test-time-training/e2e</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Zhaozhao Ma</name>
+      <name>Arnuv Tandon</name>
     </author>
     <author>
-      <name>Shujian Yu</name>
+      <name>Karan Dalal</name>
+    </author>
+    <author>
+      <name>Xinhao Li</name>
+    </author>
+    <author>
+      <name>Daniel Koceja</name>
+    </author>
+    <author>
+      <name>Marcel Rød</name>
+    </author>
+    <author>
+      <name>Sam Buchanan</name>
+    </author>
+    <author>
+      <name>Xiaolong Wang</name>
+    </author>
+    <author>
+      <name>Jure Leskovec</name>
+    </author>
+    <author>
+      <name>Sanmi Koyejo</name>
+    </author>
+    <author>
+      <name>Tatsunori Hashimoto</name>
+    </author>
+    <author>
+      <name>Carlos Guestrin</name>
+    </author>
+    <author>
+      <name>Jed McCaleb</name>
+    </author>
+    <author>
+      <name>Yejin Choi</name>
+    </author>
+    <author>
+      <name>Yu Sun</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.22098v1</id>
-    <title>Exact inference via quasi-conjugacy in two-parameter Poisson-Dirichlet hidden Markov models</title>
-    <updated>2025-12-26T17:54:58Z</updated>
-    <link href="https://arxiv.org/abs/2512.22098v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22098v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We introduce a nonparametric model for time-evolving, unobserved probability distributions from discrete-time data consisting of unlabelled partitions. The latent process is a two-parameter Poisson-Dirichlet diffusion, and observations arise via exchangeable sampling. Applications include social and genetic data where only aggregate clustering summaries are observed. To address the intractable likelihood, we develop a tractable inferential framework that avoids label enumeration and direct simulation of the latent state. We exploit a duality between the diffusion and a pure-death process on partitions, together with coagulation operators that encode the effect of new data. These yield closed-form, recursive updates for forward and backward inference. We compute exact posterior distributions of the latent state at arbitrary times and predictive distributions of future or interpolated partitions. This enables online and offline inference and forecasting with full uncertainty quantification, bypassing MCMC and sequential Monte Carlo. Compared to particle filtering, our method achieves higher accuracy, lower variance, and substantial computational gains. We illustrate the methodology with synthetic experiments and a social network application, recovering interpretable patterns in time-varying heterozygosity.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T17:54:58Z</published>
-    <arxiv:primary_category term="stat.ME"/>
+    <id>http://arxiv.org/abs/2512.23665v1</id>
+    <title>Automating the Analysis of Parsing Algorithms (and other Dynamic Programs)</title>
+    <updated>2025-12-29T18:19:43Z</updated>
+    <link href="https://arxiv.org/abs/2512.23665v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23665v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Much algorithmic research in NLP aims to efficiently manipulate rich formal structures. An algorithm designer typically seeks to provide guarantees about their proposed algorithm -- for example, that its running time or space complexity is upper-bounded as a certain function of its input size. They may also wish to determine the necessary properties of the quantities derived by the algorithm to synthesize efficient data structures and verify type errors. In this paper, we develop a system for helping programmers to perform these types of analyses. We apply our system to a number of NLP algorithms and find that it successfully infers types, dead and redundant code, and parametric runtime and space complexity bounds.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T18:19:43Z</published>
+    <arxiv:comment>2021 manuscript; accepted by TACL but not revised for publication</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
     <author>
-      <name>Marco Dalla Pria</name>
+      <name>Tim Vieira</name>
     </author>
     <author>
-      <name>Matteo Ruggiero</name>
+      <name>Ryan Cotterell</name>
     </author>
     <author>
-      <name>Dario Spanò</name>
+      <name>Jason Eisner</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.22096v1</id>
-    <title>Yume-1.5: A Text-Controlled Interactive World Generation Model</title>
-    <updated>2025-12-26T17:52:49Z</updated>
-    <link href="https://arxiv.org/abs/2512.22096v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22096v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent approaches have demonstrated the promise of using diffusion models to generate interactive and explorable worlds. However, most of these methods face critical challenges such as excessively large parameter sizes, reliance on lengthy inference steps, and rapidly growing historical context, which severely limit real-time performance and lack text-controlled generation capabilities. To address these challenges, we propose \method, a novel framework designed to generate realistic, interactive, and continuous worlds from a single image or text prompt. \method achieves this through a carefully designed framework that supports keyboard-based exploration of the generated worlds. The framework comprises three core components: (1) a long-video generation framework integrating unified context compression with linear attention; (2) a real-time streaming acceleration strategy powered by bidirectional attention distillation and an enhanced text embedding scheme; (3) a text-controlled method for generating world events. We have provided the codebase in the supplementary material.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T17:52:49Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Xiaofeng Mao</name>
-    </author>
-    <author>
-      <name>Zhen Li</name>
-    </author>
-    <author>
-      <name>Chuanhao Li</name>
-    </author>
-    <author>
-      <name>Xiaojie Xu</name>
-    </author>
-    <author>
-      <name>Kaining Ying</name>
-    </author>
-    <author>
-      <name>Tong He</name>
-    </author>
-    <author>
-      <name>Jiangmiao Pang</name>
-    </author>
-    <author>
-      <name>Yu Qiao</name>
-    </author>
-    <author>
-      <name>Kaipeng Zhang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.22080v1</id>
-    <title>Classifying Urban Regions by Aggregated Pollutant Weather Correlation Strength: A Spatiotemporal Study</title>
-    <updated>2025-12-26T16:48:14Z</updated>
-    <link href="https://arxiv.org/abs/2512.22080v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22080v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Understanding pollutant meteorology interactions is essential for environmental risk assessment. This study develops an entropy-based statistical framework to analyze static and temporal dependencies between urban air pollutants and meteorological variables across multiple Indian cities. Dependence is quantified using complementary linear and nonlinear measures, including Pearson correlation, mutual information, and relative conditional entropy. A key methodological contribution is a PCA based composite indexing framework that integrates these heterogeneous metrics into a unified and interpretable correlation score. For each pollutant meteorological pair within a city, PCA is used to extract a joint variability index, while spatial variability is assessed by aggregating correlations across cities. These indices are further combined to derive a comprehensive city-level correlation score that represents overall pollutant meteorology coupling strength and enables classification of cities into distinct interaction regimes. Sensitivity analysis, performed by systematically excluding individual variable pairs, demonstrates the robustness of the framework, with no single pair exerting disproportionate influence. Temporal dependencies are examined using transfer entropy and time-delayed mutual information. Results indicate that relative humidity generally leads changes in pollutant concentrations, whereas ambient temperature tends to lag, highlighting contrasting causal influences. Mutual information peaks at zero lag and decays rapidly, indicating strong short term interactions with limited persistence. Overall, the proposed framework provides a unified and interpretable approach for assessing complex pollutant meteorology interactions across diverse locations and time.</summary>
-    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T16:48:14Z</published>
-    <arxiv:comment>28 pages, 6 figures, 13 tables. arXiv admin note: substantial text overlap with arXiv:2508.17453</arxiv:comment>
-    <arxiv:primary_category term="physics.soc-ph"/>
-    <author>
-      <name>Koyena Ghosh</name>
-    </author>
-    <author>
-      <name>Suchismita Banerjee</name>
-    </author>
-    <author>
-      <name>Urna Basu</name>
-    </author>
-    <author>
-      <name>Banasri Basu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.22075v1</id>
-    <title>Primordial black holes and smooth coarse-graining in excursion set theory</title>
-    <updated>2025-12-26T16:29:28Z</updated>
-    <link href="https://arxiv.org/abs/2512.22075v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22075v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The excursion-set formalism enables us to infer the mass distribution of collapsed objects, such as primordial black holes (PBHs), by the language of stochastic processes. Within the framework, this article investigates how a smooth coarse-graining procedure affects the resulting PBH mass function. As a demonstrative example, we employ a Gaussian window function, for which the stochastic noise becomes fully correlated across scales. It is found that these correlated noises result in a mass function of PBHs, whose maximum and its neighbourhood are predominantly determined by the probability that the density contrast exceeds a given threshold at each mass scale. Our results clarify the role of noise correlations induced by smooth coarse-graining and highlight their importance in predicting the abundance of PBHs.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T16:29:28Z</published>
-    <arxiv:comment>25 pages, 6 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
-    <author>
-      <name>Daiki Saito</name>
-    </author>
-    <author>
-      <name>Koki Tokeshi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.22066v1</id>
-    <title>Prefill vs. Decode Bottlenecks: SRAM-Frequency Tradeoffs and the Memory-Bandwidth Ceiling</title>
-    <updated>2025-12-26T15:42:29Z</updated>
-    <link href="https://arxiv.org/abs/2512.22066v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22066v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Energy consumption dictates the cost and environmental impact of deploying Large Language Models. This paper investigates the impact of on-chip SRAM size and operating frequency on the energy efficiency and performance of LLM inference, focusing on the distinct behaviors of the compute-bound prefill and memory-bound decode phases. Our simulation methodology combines OpenRAM for energy modeling, LLMCompass for latency simulation, and ScaleSIM for systolic array operational intensity. Our findings show that total energy use is predominantly determined by SRAM size in both phases, with larger buffers significantly increasing static energy due to leakage, which is not offset by corresponding latency benefits. We quantitatively explore the memory-bandwidth bottleneck, demonstrating that while high operating frequencies reduce prefill latency, their positive impact on memory-bound decode latency is capped by the external memory bandwidth. Counter-intuitively, high compute frequency can reduce total energy by reducing execution time and consequently decreasing static energy consumption more than the resulting dynamic power increase. We identify an optimal hardware configuration for the simulated workload: high operating frequencies (1200MHz-1400MHz) and a small local buffer size of 32KB to 64KB. This combination achieves the best energy-delay product, balancing low latency with high energy efficiency. Furthermore, we demonstrate how memory bandwidth acts as a performance ceiling, and that increasing compute frequency only yields performance gains up to the point where the workload becomes memory-bound. This analysis provides concrete architectural insights for designing energy-efficient LLM accelerators, especially for datacenters aiming to minimize their energy overhead.</summary>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T15:42:29Z</published>
-    <arxiv:primary_category term="cs.AR"/>
-    <author>
-      <name>Hannah Atmer</name>
-    </author>
-    <author>
-      <name>Yuan Yao</name>
-    </author>
-    <author>
-      <name>Thiemo Voigt</name>
-    </author>
-    <author>
-      <name>Stefanos Kaxiras</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.22065v1</id>
-    <title>StreamAvatar: Streaming Diffusion Models for Real-Time Interactive Human Avatars</title>
-    <updated>2025-12-26T15:41:24Z</updated>
-    <link href="https://arxiv.org/abs/2512.22065v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22065v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Real-time, streaming interactive avatars represent a critical yet challenging goal in digital human research. Although diffusion-based human avatar generation methods achieve remarkable success, their non-causal architecture and high computational costs make them unsuitable for streaming. Moreover, existing interactive approaches are typically limited to head-and-shoulder region, limiting their ability to produce gestures and body motions. To address these challenges, we propose a two-stage autoregressive adaptation and acceleration framework that applies autoregressive distillation and adversarial refinement to adapt a high-fidelity human video diffusion model for real-time, interactive streaming. To ensure long-term stability and consistency, we introduce three key components: a Reference Sink, a Reference-Anchored Positional Re-encoding (RAPR) strategy, and a Consistency-Aware Discriminator. Building on this framework, we develop a one-shot, interactive, human avatar model capable of generating both natural talking and listening behaviors with coherent gestures. Extensive experiments demonstrate that our method achieves state-of-the-art performance, surpassing existing approaches in generation quality, real-time efficiency, and interaction naturalness. Project page: https://streamavatar.github.io .</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2512.23626v1</id>
+    <title>Regret-Based Federated Causal Discovery with Unknown Interventions</title>
+    <updated>2025-12-29T17:30:01Z</updated>
+    <link href="https://arxiv.org/abs/2512.23626v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23626v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Most causal discovery methods recover a completed partially directed acyclic graph representing a Markov equivalence class from observational data. Recent work has extended these methods to federated settings to address data decentralization and privacy constraints, but often under idealized assumptions that all clients share the same causal model. Such assumptions are unrealistic in practice, as client-specific policies or protocols, for example, across hospitals, naturally induce heterogeneous and unknown interventions. In this work, we address federated causal discovery under unknown client-level interventions. We propose I-PERI, a novel federated algorithm that first recovers the CPDAG of the union of client graphs and then orients additional edges by exploiting structural differences induced by interventions across clients. This yields a tighter equivalence class, which we call the $\mathbfΦ$-Markov Equivalence Class, represented by the $\mathbfΦ$-CPDAG. We provide theoretical guarantees on the convergence of I-PERI, as well as on its privacy-preserving properties, and present empirical evaluations on synthetic data demonstrating the effectiveness of the proposed algorithm.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T15:41:24Z</published>
-    <arxiv:comment>Project page: https://streamavatar.github.io</arxiv:comment>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T17:30:01Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Federico Baldo</name>
+    </author>
+    <author>
+      <name>Charles K. Assaad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.23622v1</id>
+    <title>Information is localized in growing network models</title>
+    <updated>2025-12-29T17:27:54Z</updated>
+    <link href="https://arxiv.org/abs/2512.23622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mechanistic network models can capture salient characteristics of empirical networks using a small set of domain-specific, interpretable mechanisms. Yet inference remains challenging because the likelihood is often intractable. We show that, for a broad class of growing network models, information about model parameters is localized in the network, i.e., the likelihood can be expressed in terms of small subgraphs. We take a Bayesian perspective to inference and develop neural density estimators (NDEs) to approximate the posterior distribution of model parameters using graph neural networks (GNNs) with limited receptive size, i.e., the GNN can only "see" small subgraphs. We characterize nine growing network models in terms of their localization and demonstrate that localization predictions agree with NDEs on simulated data. Even for non-localized models, NDEs can infer high-fidelity posteriors matching model-specific inference methods at a fraction of the cost. Our findings establish information localization as a fundamental property of network growth, theoretically justifying the analysis of local subgraphs embedded in larger, unobserved networks and the use of GNNs with limited receptive field for likelihood-free inference.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T17:27:54Z</published>
+    <arxiv:comment>7 pages, 2 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Till Hoffmann</name>
+    </author>
+    <author>
+      <name>Jukka-Pekka Onnela</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.23610v1</id>
+    <title>Enhanced Web Payload Classification Using WAMM: An AI-Based Framework for Dataset Refinement and Model Evaluation</title>
+    <updated>2025-12-29T17:10:36Z</updated>
+    <link href="https://arxiv.org/abs/2512.23610v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23610v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Web applications increasingly face evasive and polymorphic attack payloads, yet traditional web application firewalls (WAFs) based on static rule sets such as the OWASP Core Rule Set (CRS) often miss obfuscated or zero-day patterns without extensive manual tuning. This work introduces WAMM, an AI-driven multiclass web attack detection framework designed to reveal the limitations of rule-based systems by reclassifying HTTP requests into OWASP-aligned categories for a specific technology stack. WAMM applies a multi-phase enhancement pipeline to the SR-BH 2020 dataset that includes large-scale deduplication, LLM-guided relabeling, realistic attack data augmentation, and LLM-based filtering, producing three refined datasets. Four machine and deep learning models are evaluated using a unified feature space built from statistical and text-based representations. Results show that using an augmented and LLM-filtered dataset on the same technology stack, XGBoost reaches 99.59% accuracy with microsecond-level inference while deep learning models degrade under noisy augmentation. When tested against OWASP CRS using an unseen augmented dataset, WAMM achieves true positive block rates between 96 and 100% with improvements of up to 86%. These findings expose gaps in widely deployed rule-based defenses and demonstrate that curated training pipelines combined with efficient machine learning models enable a more resilient, real-time approach to web attack detection suitable for production WAF environments.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T17:10:36Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Heba Osama</name>
+    </author>
+    <author>
+      <name>Omar Elebiary</name>
+    </author>
+    <author>
+      <name>Youssef Qassim</name>
+    </author>
+    <author>
+      <name>Mohamed Amgad</name>
+    </author>
+    <author>
+      <name>Ahmed Maghawry</name>
+    </author>
+    <author>
+      <name>Ahmed Saafan</name>
+    </author>
+    <author>
+      <name>Haitham Ghalwash</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.23599v1</id>
+    <title>Paradox-free classical non-causality and unambiguous non-locality without entanglement are equivalent</title>
+    <updated>2025-12-29T16:51:30Z</updated>
+    <link href="https://arxiv.org/abs/2512.23599v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23599v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Closed timelike curves (CTCs) challenge our conception of causality by allowing information to loop back into its own past. Any consistent description of such scenarios must avoid time-travel paradoxes while respecting the no-new-physics principle, which requires that the set of operations available within any local spacetime region remain unchanged, irrespective of whether CTCs exist elsewhere. Within an information-theoretic framework, this leads to process functions: deterministic classical communication structures that remain logically consistent under arbitrary local operations, yet can exhibit correlations incompatible with any definite causal order - a phenomenon known as non-causality. In this work, we provide the first complete recursive characterization of process functions and of (non-)causal process functions. We use it to establish a correspondence between process functions and unambiguous complete product bases, i.e., product bases in which every local state belongs to a unique local basis. This equivalence implies that non-causality of process functions is exactly mirrored by quantum nonlocality without entanglement (QNLWE) - the impossibility of perfectly distinguishing separable states using local operations and causal classical communication - for such bases. Our results generalize previous special cases to arbitrary local dimensions and any number of parties, enable systematic constructions of non-causal process functions and unambiguous QNLWE bases, and reveal an unexpected connection between certain non-signaling inequalities and causal inequalities.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T16:51:30Z</published>
+    <arxiv:comment>14 + 13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Hippolyte Dourdent</name>
+    </author>
+    <author>
+      <name>Kyrylo Simonov</name>
+    </author>
+    <author>
+      <name>Andreas Leitherer</name>
+    </author>
+    <author>
+      <name>Emanuel-Cristian Boghiu</name>
+    </author>
+    <author>
+      <name>Ravi Kunjwal</name>
+    </author>
+    <author>
+      <name>Saronath Halder</name>
+    </author>
+    <author>
+      <name>Remigiusz Augusiak</name>
+    </author>
+    <author>
+      <name>Antonio Acín</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.23576v1</id>
+    <title>LiveTalk: Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation</title>
+    <updated>2025-12-29T16:17:36Z</updated>
+    <link href="https://arxiv.org/abs/2512.23576v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23576v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real-time video generation via diffusion is essential for building general-purpose multimodal interactive AI systems. However, the simultaneous denoising of all video frames with bidirectional attention via an iterative process in diffusion models prevents real-time interaction. While existing distillation methods can make the model autoregressive and reduce sampling steps to mitigate this, they focus primarily on text-to-video generation, leaving the human-AI interaction unnatural and less efficient. This paper targets real-time interactive video diffusion conditioned on a multimodal context, including text, image, and audio, to bridge the gap. Given the observation that the leading on-policy distillation approach Self Forcing encounters challenges (visual artifacts like flickering, black frames, and quality degradation) with multimodal conditioning, we investigate an improved distillation recipe with emphasis on the quality of condition inputs as well as the initialization and schedule for the on-policy optimization. On benchmarks for multimodal-conditioned (audio, image, and text) avatar video generation including HDTF, AVSpeech, and CelebV-HQ, our distilled model matches the visual quality of the full-step, bidirectional baselines of similar or larger size with 20x less inference cost and latency. Further, we integrate our model with audio language models and long-form video inference technique Anchor-Heavy Identity Sinks to build LiveTalk, a real-time multimodal interactive avatar system. System-level evaluation on our curated multi-turn interaction benchmark shows LiveTalk outperforms state-of-the-art models (Sora2, Veo3) in multi-turn video coherence and content quality, while reducing response latency from 1 to 2 minutes to real-time generation, enabling seamless human-AI multimodal interaction.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T16:17:36Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Zhiyao Sun</name>
+      <name>Ethan Chern</name>
     </author>
     <author>
-      <name>Ziqiao Peng</name>
+      <name>Zhulin Hu</name>
     </author>
     <author>
-      <name>Yifeng Ma</name>
+      <name>Bohao Tang</name>
     </author>
     <author>
-      <name>Yi Chen</name>
+      <name>Jiadi Su</name>
     </author>
     <author>
-      <name>Zhengguang Zhou</name>
+      <name>Steffi Chern</name>
     </author>
     <author>
-      <name>Zixiang Zhou</name>
+      <name>Zhijie Deng</name>
     </author>
     <author>
-      <name>Guozhen Zhang</name>
-    </author>
-    <author>
-      <name>Youliang Zhang</name>
-    </author>
-    <author>
-      <name>Yuan Zhou</name>
-    </author>
-    <author>
-      <name>Qinglin Lu</name>
-    </author>
-    <author>
-      <name>Yong-Jin Liu</name>
+      <name>Pengfei Liu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2512.22048v1</id>
-    <title>Classification and stability of black hole event horizon births: a contact geometry approach</title>
-    <updated>2025-12-26T14:55:35Z</updated>
-    <link href="https://arxiv.org/abs/2512.22048v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22048v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>A classical result by Penrose establishes that null geodesics generating a black hole event horizon can only intersect at their entrance to the horizon in ``crossover'' points. This points together with limit points of this set, namely caustics, form the so-called "crease set". Light rays enter into the horizon through the crease set, characterizing the latter as the birth of the horizon. A natural question in this context refers to the classification and stability of the structural possibilities of black hole crease sets. In this work we revisit the strategy adopted by Gadioux &amp; Reall for such a classification in the setting of singularity theory in contact geometry. Specifically, in such contact geometry setting, the event horizon is identified as a component (not connected to null infinity) of a so-called ``BigFront''. The characterization of BigFronts as Legendrian projections of Legendrian submanifolds permits to classify the crease sets and ``cuspidal sets'' (or caustics in Penrose's terminology) by applying classical results established by V.I. Arnol'd. Here we refine the stability discussion presented by Gadioux &amp; Reall of that connected component of the crease set that is not causally connected to null infinity and that constitutes the event horizon birth. In addition, we identify the existence of other components of the crease set that lie in the part of the BigFront that is causally connected to null infinity.</summary>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T14:55:35Z</published>
-    <arxiv:comment>4 pages, 2 figures, talk presented in conference 24th International Conference on General Relativity and Gravitation &amp; 16th Edoardo Amaldi Conference on Gravitational Waves</arxiv:comment>
-    <arxiv:primary_category term="gr-qc"/>
+    <id>http://arxiv.org/abs/2512.23573v1</id>
+    <title>ProGuard: Towards Proactive Multimodal Safeguard</title>
+    <updated>2025-12-29T16:13:23Z</updated>
+    <link href="https://arxiv.org/abs/2512.23573v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23573v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid evolution of generative models has led to a continuous emergence of multimodal safety risks, exposing the limitations of existing defense methods. To address these challenges, we propose ProGuard, a vision-language proactive guard that identifies and describes out-of-distribution (OOD) safety risks without the need for model adjustments required by traditional reactive approaches. We first construct a modality-balanced dataset of 87K samples, each annotated with both binary safety labels and risk categories under a hierarchical multimodal safety taxonomy, effectively mitigating modality bias and ensuring consistent moderation across text, image, and text-image inputs. Based on this dataset, we train our vision-language base model purely through reinforcement learning (RL) to achieve efficient and concise reasoning. To approximate proactive safety scenarios in a controlled setting, we further introduce an OOD safety category inference task and augment the RL objective with a synonym-bank-based similarity reward that encourages the model to generate concise descriptions for unseen unsafe categories. Experimental results show that ProGuard achieves performance comparable to closed-source large models on binary safety classification, substantially outperforms existing open-source guard models on unsafe content categorization. Most notably, ProGuard delivers a strong proactive moderation ability, improving OOD risk detection by 52.6% and OOD risk description by 64.8%.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T16:13:23Z</published>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Oscar Meneses Rojas</name>
+      <name>Shaohan Yu</name>
     </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2512.22044v1</id>
-    <title>Inferring Eccentricity of Binary Black Holes from Spin-Orbit Misalignment</title>
-    <updated>2025-12-26T14:38:02Z</updated>
-    <link href="https://arxiv.org/abs/2512.22044v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2512.22044v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Orbital eccentricity remains one of the least accessible parameters in observations of binary black hole (BBH) systems, largely erased by gravitational radiation long before detection. We introduce a new method to recover this lost parameter by using a more accessible and routinely measurable quantity: spin-orbit misalignment. In isolated binary evolution, a natal kick from the second supernova both tilts the orbital plane and injects orbital eccentricity, forging a direct and quantifiable connection between spin-tilt and post-supernova eccentricity. By measuring this spin-tilt using gravitational waves, we can not only constrain the natal kick, but we can also reconstruct the binary's formation eccentricity. We apply this method to GW190412 and GW241011, assuming an isolated formation channel, and show how their eccentricity at formation can be constrained even in the absence of direct eccentricity measurements. As more advanced detectors come online, improved signal-to-noise ratios will tighten spin-tilt constraints, allowing more precise and reliable estimates of BBH formation eccentricity. Combining this method with multiband observations from LISA and next-generation (XG) detectors will allow us to recover not only eccentricity but also the binary's orbital separation and redshift at formation, offering a clearer picture of the birth environments of BBH systems and processes that drive their merger.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-12-26T14:38:02Z</published>
-    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
     <author>
-      <name>Vishal Baibhav</name>
+      <name>Lijun Li</name>
+    </author>
+    <author>
+      <name>Chenyang Si</name>
+    </author>
+    <author>
+      <name>Lu Sheng</name>
+    </author>
+    <author>
+      <name>Jing Shao</name>
     </author>
   </entry>
 </feed>
