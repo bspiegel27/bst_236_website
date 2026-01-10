@@ -1,352 +1,289 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-01-09T01:02:29Z -->
+<!-- Last updated: 2026-01-10T01:00:20Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-01-09T01:02:30Z</updated>
+  <updated>2026-01-10T01:00:20Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>130329</opensearch:totalResults>
+  <opensearch:totalResults>130432</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2601.04181v1</id>
-    <title>Lightweight Test-Time Adaptation for EMG-Based Gesture Recognition</title>
-    <updated>2026-01-07T18:48:31Z</updated>
-    <link href="https://arxiv.org/abs/2601.04181v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04181v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reliable long-term decoding of surface electromyography (EMG) is hindered by signal drift caused by electrode shifts, muscle fatigue, and posture changes. While state-of-the-art models achieve high intra-session accuracy, their performance often degrades sharply. Existing solutions typically demand large datasets or high-compute pipelines that are impractical for energy-efficient wearables. We propose a lightweight framework for Test-Time Adaptation (TTA) using a Temporal Convolutional Network (TCN) backbone. We introduce three deployment-ready strategies: (i) causal adaptive batch normalization for real-time statistical alignment; (ii) a Gaussian Mixture Model (GMM) alignment with experience replay to prevent forgetting; and (iii) meta-learning for rapid, few-shot calibration. Evaluated on the NinaPro DB6 multi-session dataset, our framework significantly bridges the inter-session accuracy gap with minimal overhead. Our results show that experience-replay updates yield superior stability under limited data, while meta-learning achieves competitive performance in one- and two-shot regimes using only a fraction of the data required by current benchmarks. This work establishes a path toward robust, "plug-and-play" myoelectric control for long-term prosthetic use.</summary>
+    <id>http://arxiv.org/abs/2601.05251v1</id>
+    <title>Mesh4D: 4D Mesh Reconstruction and Tracking from Monocular Video</title>
+    <updated>2026-01-08T18:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2601.05251v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05251v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose Mesh4D, a feed-forward model for monocular 4D mesh reconstruction. Given a monocular video of a dynamic object, our model reconstructs the object's complete 3D shape and motion, represented as a deformation field. Our key contribution is a compact latent space that encodes the entire animation sequence in a single pass. This latent space is learned by an autoencoder that, during training, is guided by the skeletal structure of the training objects, providing strong priors on plausible deformations. Crucially, skeletal information is not required at inference time. The encoder employs spatio-temporal attention, yielding a more stable representation of the object's overall deformation. Building on this representation, we train a latent diffusion model that, conditioned on the input video and the mesh reconstructed from the first frame, predicts the full animation in one shot. We evaluate Mesh4D on reconstruction and novel view synthesis benchmarks, outperforming prior methods in recovering accurate 3D shape and deformation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:59:56Z</published>
+    <arxiv:comment>15 pages, 8 figures, project page: https://mesh-4d.github.io/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zeren Jiang</name>
+    </author>
+    <author>
+      <name>Chuanxia Zheng</name>
+    </author>
+    <author>
+      <name>Iro Laina</name>
+    </author>
+    <author>
+      <name>Diane Larlus</name>
+    </author>
+    <author>
+      <name>Andrea Vedaldi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05248v1</id>
+    <title>LaST$_{0}$: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model</title>
+    <updated>2026-01-08T18:59:53Z</updated>
+    <link href="https://arxiv.org/abs/2601.05248v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05248v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language-Action (VLA) models have recently demonstrated strong generalization capabilities in robotic manipulation. Some existing VLA approaches attempt to improve action accuracy by explicitly generating linguistic reasoning traces or future visual observations before action execution. However, explicit reasoning typically incurs non-negligible inference latency, which constrains the temporal resolution required for robotic manipulation. Moreover, such reasoning is confined to the linguistic space, imposing a representational bottleneck that struggles to faithfully capture ineffable physical attributes. To mitigate these limitations, we propose LaST$_0$, a framework that enables efficient reasoning before acting through a Latent Spatio-Temporal Chain-of-Thought (CoT), capturing fine-grained physical and robotic dynamics that are often difficult to verbalize. Specifically, we introduce a token-efficient latent CoT space that models future visual dynamics, 3D structural information, and robot proprioceptive states, and further extends these representations across time to enable temporally consistent implicit reasoning trajectories. Furthermore, LaST$_0$ adopts a dual-system architecture implemented via a Mixture-of-Transformers design, where a reasoning expert conducts low-frequency latent inference and an acting expert generates high-frequency actions conditioned on robotics-oriented latent representations. To facilitate coordination, LaST$_0$ is trained with heterogeneous operation frequencies, enabling adaptive switching between reasoning and action inference rates during deployment. Across ten simulated and six real-world manipulation tasks, LaST$_0$ improves mean success rates by 8% and 13% over prior VLA methods, respectively, while achieving substantially faster inference. Project website: https://sites.google.com/view/last0</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:59:53Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Zhuoyang Liu</name>
+    </author>
+    <author>
+      <name>Jiaming Liu</name>
+    </author>
+    <author>
+      <name>Hao Chen</name>
+    </author>
+    <author>
+      <name>Ziyu Guo</name>
+    </author>
+    <author>
+      <name>Chengkai Hou</name>
+    </author>
+    <author>
+      <name>Chenyang Gu</name>
+    </author>
+    <author>
+      <name>Jiale Yu</name>
+    </author>
+    <author>
+      <name>Xiangju Mi</name>
+    </author>
+    <author>
+      <name>Renrui Zhang</name>
+    </author>
+    <author>
+      <name>Zhengping Che</name>
+    </author>
+    <author>
+      <name>Jian Tang</name>
+    </author>
+    <author>
+      <name>Pheng-Ann Heng</name>
+    </author>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05240v1</id>
+    <title>Robust Reasoning as a Symmetry-Protected Topological Phase</title>
+    <updated>2026-01-08T18:58:34Z</updated>
+    <link href="https://arxiv.org/abs/2601.05240v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05240v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models suffer from "hallucinations"-logical inconsistencies induced by semantic noise. We propose that current architectures operate in a "Metric Phase," where causal order is vulnerable to spontaneous symmetry breaking. Here, we identify robust inference as an effective Symmetry-Protected Topological phase, where logical operations are formally isomorphic to non-Abelian anyon braiding, replacing fragile geometric interpolation with robust topological invariants. Empirically, we demonstrate a sharp topological phase transition: while Transformers and RNNs exhibit gapless decay, our Holonomic Network reveals a macroscopic "mass gap," maintaining invariant fidelity below a critical noise threshold. Furthermore, in a variable-binding task on $S_{10}$ ($3.6 \times 10^6$ states) representing symbolic manipulation, we demonstrate holonomic generalization: the topological model maintains perfect fidelity extrapolating $100\times$ beyond training ($L=50 \to 5000$), consistent with a theoretically indefinite causal horizon, whereas Transformers lose logical coherence. Ablation studies indicate this protection emerges strictly from non-Abelian gauge symmetry. This provides strong evidence for a new universality class for logical reasoning, linking causal stability to the topology of the semantic manifold.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:48:31Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Nia Touko</name>
-    </author>
-    <author>
-      <name>Matthew O A Ellis</name>
-    </author>
-    <author>
-      <name>Cristiano Capone</name>
-    </author>
-    <author>
-      <name>Alessio Burrello</name>
-    </author>
-    <author>
-      <name>Elisa Donati</name>
-    </author>
-    <author>
-      <name>Luca Manneschi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04178v1</id>
-    <title>Sound Event Detection with Boundary-Aware Optimization and Inference</title>
-    <updated>2026-01-07T18:45:29Z</updated>
-    <link href="https://arxiv.org/abs/2601.04178v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04178v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Temporal detection problems appear in many fields including time-series estimation, activity recognition and sound event detection (SED). In this work, we propose a new approach to temporal event modeling by explicitly modeling event onsets and offsets, and by introducing boundary-aware optimization and inference strategies that substantially enhance temporal event detection. The presented methodology incorporates new temporal modeling layers - Recurrent Event Detection (RED) and Event Proposal Network (EPN) - which, together with tailored loss functions, enable more effective and precise temporal event detection. We evaluate the proposed method in the SED domain using a subset of the temporally-strongly annotated portion of AudioSet. Experimental results show that our approach not only outperforms traditional frame-wise SED models with state-of-the-art post-processing, but also removes the need for post-processing hyperparameter tuning, and scales to achieve new state-of-the-art performance across all AudioSet Strong classes.</summary>
-    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:45:29Z</published>
-    <arxiv:comment>Submitted to IEEE Signal Processing Letters</arxiv:comment>
-    <arxiv:primary_category term="eess.AS"/>
-    <author>
-      <name>Florian Schmid</name>
-    </author>
-    <author>
-      <name>Chi Ian Tang</name>
-    </author>
-    <author>
-      <name>Sanjeel Parekh</name>
-    </author>
-    <author>
-      <name>Vamsi Krishna Ithapu</name>
-    </author>
-    <author>
-      <name>Juan Azcarreta Ortiz</name>
-    </author>
-    <author>
-      <name>Giacomo Ferroni</name>
-    </author>
-    <author>
-      <name>Yijun Qian</name>
-    </author>
-    <author>
-      <name>Arnoldas Jasonas</name>
-    </author>
-    <author>
-      <name>Cosmin Frateanu</name>
-    </author>
-    <author>
-      <name>Camilla Clark</name>
-    </author>
-    <author>
-      <name>Gerhard Widmer</name>
-    </author>
-    <author>
-      <name>Çağdaş Bilen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04171v1</id>
-    <title>Agentic Rubrics as Contextual Verifiers for SWE Agents</title>
-    <updated>2026-01-07T18:38:23Z</updated>
-    <link href="https://arxiv.org/abs/2601.04171v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04171v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Verification is critical for improving agents: it provides the reward signal for Reinforcement Learning and enables inference-time gains through Test-Time Scaling (TTS). Despite its importance, verification in software engineering (SWE) agent settings often relies on code execution, which can be difficult to scale due to environment setup overhead. Scalable alternatives such as patch classifiers and heuristic methods exist, but they are less grounded in codebase context and harder to interpret. To this end, we explore Agentic Rubrics: an expert agent interacts with the repository to create a context-grounded rubric checklist, and candidate patches are then scored against it without requiring test execution. On SWE-Bench Verified under parallel TTS evaluation, Agentic Rubrics achieve a score of 54.2% on Qwen3-Coder-30B-A3B and 40.6% on Qwen3-32B, with at least a +3.5 percentage-point gain over the strongest baseline in our comparison set. We further analyze rubric behavior, showing that rubric scores are consistent with ground-truth tests while also flagging issues that tests do not capture. Our ablations show that agentic context gathering is essential for producing codebase-specific, unambiguous criteria. Together, these results suggest that Agentic Rubrics provide an efficient, scalable, and granular verification signal for SWE agents.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:38:23Z</published>
-    <arxiv:comment>31 pages, 11 Figures</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Mohit Raghavendra</name>
-    </author>
-    <author>
-      <name>Anisha Gunjal</name>
-    </author>
-    <author>
-      <name>Bing Liu</name>
-    </author>
-    <author>
-      <name>Yunzhong He</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04168v1</id>
-    <title>A framework for LISA population inference</title>
-    <updated>2026-01-07T18:35:53Z</updated>
-    <link href="https://arxiv.org/abs/2601.04168v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04168v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The Laser Interferometer Space Antenna (LISA) is expected to have a source rich data stream containing signals from large numbers of many different types of source. This will include both individually resolvable signals and overlapping stochastic backgrounds, a regime intermediate between current ground-based detectors and pulsar timing arrays. The resolved sources and backgrounds will be fitted together in a high dimensional Global Fit. To extract information about the astrophysical populations to which the sources belong, we need to decode the information in the Global Fit, which requires new methodology that has not been required for the analysis of current gravitational wave detectors. Here, we %start that development, presenting present a hierarchical Bayesian framework to infer the properties of astrophysical populations directly from the output of a LISA Global Fit, consistently accounting for information encoded in both the resolved sources and the unresolved background. Using a simplified model of the Global Fit, we illustrate how the interplay between resolved and unresolved components affects population inference and highlight the impact of data analysis choices, such as the signal-to-noise threshold for resolved sources, on the results. Our approach provides a practical foundation for population inference using LISA data.</summary>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:35:53Z</published>
-    <arxiv:comment>16 pages, 22 with appendix, 4 figures</arxiv:comment>
-    <arxiv:primary_category term="gr-qc"/>
-    <author>
-      <name>Alexandre Toubiana</name>
-    </author>
-    <author>
-      <name>Jonathan Gair</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04166v1</id>
-    <title>Expectation Propagation for Distributed Inference in Grant-Free Cell-Free Massive MIMO</title>
-    <updated>2026-01-07T18:30:00Z</updated>
-    <link href="https://arxiv.org/abs/2601.04166v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04166v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Grant-free cell-free massive multiple-input multiple-output (GF-CF-MaMIMO) systems are anticipated to be a key enabling technology for next-generation Internet-of-Things (IoT) networks, as they support massive connectivity without explicit scheduling. However, the large amount of connected devices prevents the use of orthogonal pilot sequences, resulting in severe pilot contamination (PC) that degrades channel estimation and data detection performance. Furthermore, scalable GF-CF-MaMIMO networks inherently rely on distributed signal processing. In this work, we consider the uplink of a GF-CF-MaMIMO system and propose two novel distributed algorithms for joint activity detection, channel estimation, and data detection (JACD) based on expectation propagation (EP). The first algorithm, denoted as JACD-EP, uses Gaussian approximations for the channel variables, whereas the second, referred to as JACD-EP-BG, models them as Bernoulli-Gaussian (BG) random variables. To integrate the BG distribution into the EP framework, we derive its exponential family representation and develop the two algorithms as efficient message passing over a factor graph constructed from the a posteriori probability (APP) distribution. The proposed framework is inherently scalable with respect to both the number of access points (APs) and user equipments (UEs). Simulation results show the efficient mitigation of PC by the proposed distributed algorithms and their superior detection accuracy compared to (genie-aided) centralized linear detectors.</summary>
-    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:30:00Z</published>
-    <arxiv:comment>13 pages, 5 figures, submitted for possible journal publication</arxiv:comment>
-    <arxiv:primary_category term="cs.IT"/>
-    <author>
-      <name>Christian Forsch</name>
-    </author>
-    <author>
-      <name>Laura Cottatellucci</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04158v1</id>
-    <title>Radio Activity from the Rapidly Rotating T dwarf 2MASS 2228-4310</title>
-    <updated>2026-01-07T18:13:49Z</updated>
-    <link href="https://arxiv.org/abs/2601.04158v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04158v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present the detection of 2MASS J22282889-4310262 (2M2228), a T6/T6.5 brown dwarf, using the Karl G. Jansky Very Large Array (VLA) archival data observed at C band (4-8 GHz) over two observing epochs ($2\times96$ minutes). 2M2228 is detected at time and frequency averaged Stokes I and V peak flux densities of $67.3\pm4.9\ μ \rm{Jy beam}^{-1}$ and $14.4\pm3.0\ μ\text{Jy beam}^{-1}$ in the first epoch and $107.2\pm5.2\ μ\rm{Jy\ beam}^{-1}$ and $-20.7\pm1.2\ μ\text{Jy beam}^{-1}$ in the second epoch. This discovery constitutes the eighth and, notably, the most rapidly rotating T dwarf detected to date at radio wavelengths. Our observations reveal highly polarised bursts at fractional polarisation ratios $f_\text{c}&gt;50$%. Using Stokes I light curves, we measure occurrence intervals of $\sim47$ and $\sim58$ minutes in the two observing epochs respectively with the first burst aligning within a half period timescale of the the previously measured mid infrared photometric period of $85.8\pm0.32$ minutes. We attribute the emission to the electron cyclotron maser emission (ECME) and constrain the magnetic field strength to $B\gtrsim1.4$ kG. We emphasise that the periods inferred are provisional considering the short observing durations. The combination of previously demonstrated atmospheric stability and newly detected radio emission in 2M2228 makes it a promising laboratory for testing magnetospheric currents-driven auroral models and for guiding future coordinated James Webb Space Telescope (JWST) and radio observations to probe the link between auroral activity and atmospheric dynamics in T-type brown dwarfs.</summary>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:13:49Z</published>
-    <arxiv:comment>7 pages, 2 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.SR"/>
-    <author>
-      <name>Kelvin Wandia</name>
-    </author>
-    <author>
-      <name>Michael A. Garrett</name>
-    </author>
-    <author>
-      <name>Aaron Golden</name>
-    </author>
-    <author>
-      <name>Gregg Hallinan</name>
-    </author>
-    <author>
-      <name>David Williams-Baldwin</name>
-    </author>
-    <author>
-      <name>Geferson Lucatelli</name>
-    </author>
-    <author>
-      <name>Robert J. Beswick</name>
-    </author>
-    <author>
-      <name>Jack F. Radcliffe</name>
-    </author>
-    <author>
-      <name>Andrew Siemion</name>
-    </author>
-    <author>
-      <name>Talon Myburgh</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04157v1</id>
-    <title>FLEx: Language Modeling with Few-shot Language Explanations</title>
-    <updated>2026-01-07T18:12:05Z</updated>
-    <link href="https://arxiv.org/abs/2601.04157v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04157v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Language models have become effective at a wide range of tasks, from math problem solving to open-domain question answering. However, they still make mistakes, and these mistakes are often repeated across related queries. Natural language explanations can help correct these errors, but collecting them at scale may be infeasible, particularly in domains where expert annotators are required. To address this issue, we introduce FLEx ($\textbf{F}$ew-shot $\textbf{L}$anguage $\textbf{Ex}$planations), a method for improving model behavior using a small number of explanatory examples. FLEx selects representative model errors using embedding-based clustering, verifies that the associated explanations correct those errors, and summarizes them into a prompt prefix that is prepended at inference-time. This summary guides the model to avoid similar errors on new inputs, without modifying model weights. We evaluate FLEx on CounterBench, GSM8K, and ReasonIF. We find that FLEx consistently outperforms chain-of-thought (CoT) prompting across all three datasets and reduces up to 83\% of CoT's remaining errors.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T18:12:05Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Adar Avsian</name>
-    </author>
-    <author>
-      <name>Christopher Richardson</name>
-    </author>
-    <author>
-      <name>Anirudh Sundar</name>
-    </author>
-    <author>
-      <name>Larry Heck</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04133v1</id>
-    <title>A census of star-formation and gas mass tracers in two lensed $z \sim 4$ dusty star-forming galaxies</title>
-    <updated>2026-01-07T17:48:10Z</updated>
-    <link href="https://arxiv.org/abs/2601.04133v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04133v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present new and archival Atacama Large Millimeter/submillimeter Array (ALMA) observations of two strongly lensed dusty star-forming galaxies (DSFGs) selected from the South Pole Telescope survey, SPT0418-47 $(z = 4.225)$ and SPT2147-50 $(z = 3.760)$. We study the [C II], CO(7-6), [C I](2-1), and, in SPT0418-47, $p$-H$_2$O emission, which along with the underlying continuum (rest-frame 160 $μ$m and 380 $μ$m) are routinely used as tracers of gas mass and/or star-formation rate (SFR). We perform a pixel-by-pixel analysis of both sources in the image plane to study the resolved Kennicutt-Schmidt relation, finding generally good agreement between the slopes of the SFR versus gas mass surface density using the different tracers. Using lens modeling methods, we find that the dust emission is more compact than the line emission in both sources, with CO(7-6) and [C I](2-1) similar in extent and [C II] the most extended, reminiscent of recent findings of extended [C II] spatial distributions in galaxies at similar cosmic epochs. We develop the [C I](2-1) / CO(7-6) flux density ratio as an observable proxy for gas depletion timescale ($τ_{\rm dep}$), which can be applied to large samples of DSFGs, in lieu of more detailed inferences of this timescale which require analysis of observations at multiple wavelengths. Furthermore, the extended [C II] emission in both sources, compared to the total continuum and line emission, suggests that [C II], used in recent years as a molecular gas mass and SFR tracer in high-$z$ galaxies, may not always be a suitable tracer of these physical quantities.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T17:48:10Z</published>
-    <arxiv:comment>26 pages, 14 figures, 5 tables. Accepted for publication in ApJ</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>David Vizgan</name>
-    </author>
-    <author>
-      <name>Joaquin D. Vieira</name>
-    </author>
-    <author>
-      <name>Justin S. Spilker</name>
-    </author>
-    <author>
-      <name>Simon Birrer</name>
-    </author>
-    <author>
-      <name>Nan Zhang</name>
-    </author>
-    <author>
-      <name>Manuel Aravena</name>
-    </author>
-    <author>
-      <name>Melanie A. Archipley</name>
-    </author>
-    <author>
-      <name>Jack E. Birkin</name>
-    </author>
-    <author>
-      <name>Jared Cathey</name>
-    </author>
-    <author>
-      <name>Scott C. Chapman</name>
-    </author>
-    <author>
-      <name>Veronica J. Dike</name>
-    </author>
-    <author>
-      <name>Anthony H. Gonzalez</name>
-    </author>
-    <author>
-      <name>Thomas R. Greve</name>
-    </author>
-    <author>
-      <name>Gayathri Gururajan</name>
-    </author>
-    <author>
-      <name>Ryley Hill</name>
-    </author>
-    <author>
-      <name>Matthew A. Malkan</name>
-    </author>
-    <author>
-      <name>Desika Narayanan</name>
-    </author>
-    <author>
-      <name>Kedar A. Phadke</name>
-    </author>
-    <author>
-      <name>Vismaya Pillai</name>
-    </author>
-    <author>
-      <name>Ana C. Posses</name>
-    </author>
-    <author>
-      <name>Manuel Solimano</name>
-    </author>
-    <author>
-      <name>Nikolaus Sulzenauer</name>
-    </author>
-    <author>
-      <name>Dazhi Zhou</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.04131v1</id>
-    <title>ContextFocus: Activation Steering for Contextual Faithfulness in Large Language Models</title>
-    <updated>2026-01-07T17:45:20Z</updated>
-    <link href="https://arxiv.org/abs/2601.04131v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04131v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Models (LLMs) encode vast amounts of parametric knowledge during pre-training. As world knowledge evolves, effective deployment increasingly depends on their ability to faithfully follow externally retrieved context. When such evidence conflicts with the model's internal knowledge, LLMs often default to memorized facts, producing unfaithful outputs. In this work, we introduce ContextFocus, a lightweight activation steering approach that improves context faithfulness in such knowledge-conflict settings while preserving fluency and efficiency. Unlike prior approaches, our solution requires no model finetuning and incurs minimal inference-time overhead, making it highly efficient. We evaluate ContextFocus on the ConFiQA benchmark, comparing it against strong baselines including ContextDPO, COIECD, and prompting-based methods. Furthermore, we show that our method is complementary to prompting strategies and remains effective on larger models. Extensive experiments show that ContextFocus significantly improves contextual-faithfulness. Our results highlight the effectiveness, robustness, and efficiency of ContextFocus in improving contextual-faithfulness of LLM outputs.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T17:45:20Z</published>
-    <arxiv:primary_category term="cs.CL"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:58:34Z</published>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Nikhil Anand</name>
-    </author>
-    <author>
-      <name>Shwetha Somasundaram</name>
-    </author>
-    <author>
-      <name>Anirudh Phukan</name>
-    </author>
-    <author>
-      <name>Apoorv Saxena</name>
-    </author>
-    <author>
-      <name>Koyel Mukherjee</name>
+      <name>Ilmo Sung</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.04110v1</id>
-    <title>Causal Data Augmentation for Robust Fine-Tuning of Tabular Foundation Models</title>
-    <updated>2026-01-07T17:16:39Z</updated>
-    <link href="https://arxiv.org/abs/2601.04110v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.04110v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Fine-tuning tabular foundation models (TFMs) under data scarcity is challenging, as early stopping on even scarcer validation data often fails to capture true generalization performance. We propose CausalMixFT, a method that enhances fine-tuning robustness and downstream performance by generating structurally consistent synthetic samples using Structural Causal Models (SCMs) fitted on the target dataset. This approach augments limited real data with causally informed synthetic examples, preserving feature dependencies while expanding training diversity. Evaluated across 33 classification datasets from TabArena and over 2300 fine-tuning runs, our CausalMixFT method consistently improves median normalized ROC-AUC from 0.10 (standard fine-tuning) to 0.12, outperforming purely statistical generators such as CTGAN (-0.01), TabEBM (-0.04), and TableAugment (-0.09). Moreover, it narrows the median validation-test performance correlation gap from 0.67 to 0.30, enabling more reliable validation-based early stopping, a key step toward improving fine-tuning stability under data scarcity. These results demonstrate that incorporating causal structure into data augmentation provides an effective and principled route to fine-tuning tabular foundation models in low-data regimes.</summary>
+    <id>http://arxiv.org/abs/2601.05233v1</id>
+    <title>Three-dimensional scene reconstruction using Roman slitless spectra</title>
+    <updated>2026-01-08T18:57:07Z</updated>
+    <link href="https://arxiv.org/abs/2601.05233v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05233v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Nancy Grace Roman Space Telescope will carry out a wide-field imaging and slitless spectroscopic survey of Type Ia Supernovae to improve our understanding of dark energy. Crucial to this endeavor is obtaining supernova spectra uncontaminated by light from their host galaxies. However, obtaining such spectra is made more difficult by the inherent problem in wide-field slitless spectroscopic surveys: the blending of spectra of close objects. The spectrum of a supernova will blend with the host galaxy, even from regions distant from the supernova on the sky. If not properly removed, this contamination will introduce systematic bias when the supernova spectra are later used to determine intrinsic supernova parameters and to infer the parameters of dark energy. To address this problem we developed an algorithm that makes use of the spectroscopic observations of the host galaxy at all available observatory roll angles to reconstruct a three-dimensional (3d; 2d spatial, 1d spectral) representation of the underlying host galaxy that accurately matches the 2d slitless spectrum of the host galaxy when projected to an arbitrary rotation angle. We call this ``scene reconstruction''. The projection of the reconstructed scene can be subtracted from an observation of a supernova to remove the contamination from the underlying host. Using simulated Roman data, we show that our method has extremely small systematic errors and significantly less random noise than if we subtracted a single perfectly aligned spectrum of the host obtained before or after the supernova was visible.</summary>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:57:07Z</published>
+    <arxiv:comment>57 pages, 52 figures. Accepted for publication in The Astrophysical Journal (ApJ). Reconstruction and simulation source code available at https://gitlab.com/astraatmadja/Ilia</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.IM"/>
+    <author>
+      <name>Tri L. Astraatmadja</name>
+    </author>
+    <author>
+      <name>Andrew S. Fruchter</name>
+    </author>
+    <author>
+      <name>Susana E. Deustua</name>
+    </author>
+    <author>
+      <name>Helen Qu</name>
+    </author>
+    <author>
+      <name>Masao Sako</name>
+    </author>
+    <author>
+      <name>Russell E. Ryan</name>
+    </author>
+    <author>
+      <name>Yannick Copin</name>
+    </author>
+    <author>
+      <name>Greg Aldering</name>
+    </author>
+    <author>
+      <name>Rebekah A. Hounsell</name>
+    </author>
+    <author>
+      <name>David Rubin</name>
+    </author>
+    <author>
+      <name>Lluís Galbany</name>
+    </author>
+    <author>
+      <name>Saul Perlmutter</name>
+    </author>
+    <author>
+      <name>Benjamin M. Rose</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05229v1</id>
+    <title>Mitigating Simulator Dependence in AI Parameter Inference for the Epoch of Reionization: The Importance of Simulation Diversity</title>
+    <updated>2026-01-08T18:55:01Z</updated>
+    <link href="https://arxiv.org/abs/2601.05229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The 21cm signal of neutral hydrogen contains a wealth of information about the poorly constrained era of cosmological history, the Epoch of Reionization (EoR). Recently, AI models trained on EoR simulations have gained significant attention as a powerful and flexible option for inferring parameters from 21cm observations. However, previous works show that AI models trained on data from one simulator fail to generalize to data from another, raising doubts about AI models' ability to accurately infer parameters from observation. We develop a new strategy for training AI models on cosmological simulations based on the principle that increasing the diversity of the training dataset improves model robustness by averaging out spurious and contradictory information. We train AI models on data from different combinations of four simulators, then compare the models' performance when predicting on data from held-out simulators acting as proxies for the real universe. We find that models trained on data from multiple simulators perform better on data from a held-out simulator than models trained on data from a single simulator, indicating that increasing the diversity of the training dataset improves a model's ability to generalize. This result suggests that future EoR parameter inference methods can mitigate simulator-specific bias by incorporating multiple simulation approaches into their analyses.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:55:01Z</published>
+    <arxiv:comment>Submitted for review to the Monthly Notices of the Royal Astronomical Society</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <author>
+      <name>Jasper Solt</name>
+    </author>
+    <author>
+      <name>Jonathan C. Pober</name>
+    </author>
+    <author>
+      <name>Stephen H. Bach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05227v1</id>
+    <title>Stochastic Deep Learning: A Probabilistic Framework for Modeling Uncertainty in Structured Temporal Data</title>
+    <updated>2026-01-08T18:53:59Z</updated>
+    <link href="https://arxiv.org/abs/2601.05227v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05227v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>I propose a novel framework that integrates stochastic differential equations (SDEs) with deep generative models to improve uncertainty quantification in machine learning applications involving structured and temporal data. This approach, termed Stochastic Latent Differential Inference (SLDI), embeds an Itô SDE in the latent space of a variational autoencoder, allowing for flexible, continuous-time modeling of uncertainty while preserving a principled mathematical foundation. The drift and diffusion terms of the SDE are parameterized by neural networks, enabling data-driven inference and generalizing classical time series models to handle irregular sampling and complex dynamic structure.
+  A central theoretical contribution is the co-parameterization of the adjoint state with a dedicated neural network, forming a coupled forward-backward system that captures not only latent evolution but also gradient dynamics. I introduce a pathwise-regularized adjoint loss and analyze variance-reduced gradient flows through the lens of stochastic calculus, offering new tools for improving training stability in deep latent SDEs. My paper unifies and extends variational inference, continuous-time generative modeling, and control-theoretic optimization, providing a rigorous foundation for future developments in stochastic probabilistic machine learning.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-07T17:16:39Z</published>
-    <arxiv:comment>Accepted for oral presentation at the EurIPS 2025 Workshop on AI for Tabular Data (Copenhagen)</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:53:59Z</published>
+    <arxiv:comment>20 pages, 6330 words</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
     <author>
-      <name>Magnus Bühler</name>
+      <name>James Rice</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05214v1</id>
+    <title>Internal Representations as Indicators of Hallucinations in Agent Tool Selection</title>
+    <updated>2026-01-08T18:38:45Z</updated>
+    <link href="https://arxiv.org/abs/2601.05214v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05214v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown remarkable capabilities in tool calling and tool usage, but suffer from hallucinations where they choose incorrect tools, provide malformed parameters and exhibit 'tool bypass' behavior by performing simulations and generating outputs instead of invoking specialized tools or external systems. This undermines the reliability of LLM based agents in production systems as it leads to inconsistent results, and bypasses security and audit controls. Such hallucinations in agent tool selection require early detection and error handling. Unlike existing hallucination detection methods that require multiple forward passes or external validation, we present a computationally efficient framework that detects tool-calling hallucinations in real-time by leveraging LLMs' internal representations during the same forward pass used for generation. We evaluate this approach on reasoning tasks across multiple domains, demonstrating strong detection performance (up to 86.4\% accuracy) while maintaining real-time inference capabilities with minimal computational overhead, particularly excelling at detecting parameter-level hallucinations and inappropriate tool selections, critical for reliable agent deployment.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:38:45Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Kait Healy</name>
     </author>
     <author>
-      <name>Lennart Purucker</name>
+      <name>Bharathi Srinivasan</name>
     </author>
     <author>
-      <name>Frank Hutter</name>
+      <name>Visakh Madathil</name>
+    </author>
+    <author>
+      <name>Jing Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05212v1</id>
+    <title>FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching</title>
+    <updated>2026-01-08T18:36:29Z</updated>
+    <link href="https://arxiv.org/abs/2601.05212v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05212v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Brain Magnetic Resonance Imaging (MRI) plays a central role in studying neurological development, aging, and diseases. One key application is Brain Age Prediction (BAP), which estimates an individual's biological brain age from MRI data. Effective BAP models require large, diverse, and age-balanced datasets, whereas existing 3D MRI datasets are demographically skewed, limiting fairness and generalizability. Acquiring new data is costly and ethically constrained, motivating generative data augmentation. Current generative methods are often based on latent diffusion models, which operate in learned low dimensional latent spaces to address the memory demands of volumetric MRI data. However, these methods are typically slow at inference, may introduce artifacts due to latent compression, and are rarely conditioned on age, thereby affecting the BAP performance. In this work, we propose FlowLet, a conditional generative framework that synthesizes age-conditioned 3D MRIs by leveraging flow matching within an invertible 3D wavelet domain, helping to avoid reconstruction artifacts and reducing computational demands. Experiments show that FlowLet generates high-fidelity volumes with few sampling steps. Training BAP models with data generated by FlowLet improves performance for underrepresented age groups, and region-based analysis confirms preservation of anatomical structures.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:36:29Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Danilo Danese</name>
+    </author>
+    <author>
+      <name>Angela Lombardi</name>
+    </author>
+    <author>
+      <name>Matteo Attimonelli</name>
+    </author>
+    <author>
+      <name>Giuseppe Fasano</name>
+    </author>
+    <author>
+      <name>Tommaso Di Noia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05200v1</id>
+    <title>Multivector Reranking in the Era of Strong First-Stage Retrievers</title>
+    <updated>2026-01-08T18:22:18Z</updated>
+    <link href="https://arxiv.org/abs/2601.05200v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05200v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learned multivector representations power modern search systems with strong retrieval effectiveness, but their real-world use is limited by the high cost of exhaustive token-level retrieval. Therefore, most systems adopt a \emph{gather-and-refine} strategy, where a lightweight gather phase selects candidates for full scoring. However, this approach requires expensive searches over large token-level indexes and often misses the documents that would rank highest under full similarity. In this paper, we reproduce several state-of-the-art multivector retrieval methods on two publicly available datasets, providing a clear picture of the current multivector retrieval field and observing the inefficiency of token-level gathering. Building on top of that, we show that replacing the token-level gather phase with a single-vector document retriever -- specifically, a learned sparse retriever (LSR) -- produces a smaller and more semantically coherent candidate set. This recasts the gather-and-refine pipeline into the well-established two-stage retrieval architecture. As retrieval latency decreases, query encoding with two neural encoders becomes the dominant computational bottleneck. To mitigate this, we integrate recent inference-free LSR methods, demonstrating that they preserve the retrieval effectiveness of the dual-encoder pipeline while substantially reducing query encoding time. Finally, we investigate multiple reranking configurations that balance efficiency, memory, and effectiveness, and we introduce two optimization techniques that prune low-quality candidates early. Empirical results show that these techniques improve retrieval efficiency by up to 1.8$\times$ with no loss in quality. Overall, our two-stage approach achieves over $24\times$ speedup over the state-of-the-art multivector retrieval systems, while maintaining comparable or superior retrieval quality.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:22:18Z</published>
+    <arxiv:comment>17 pages, 2 figures, ECIR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Silvio Martinico</name>
+    </author>
+    <author>
+      <name>Franco Maria Nardini</name>
+    </author>
+    <author>
+      <name>Cosimo Rulli</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05193v1</id>
+    <title>Cell size control in bacteria is modulated through extrinsic noise, single-cell- and population-growth</title>
+    <updated>2026-01-08T18:17:17Z</updated>
+    <link href="https://arxiv.org/abs/2601.05193v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05193v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Living cells maintain size homeostasis by actively compensating for size fluctuations. Here, we present two stochastic maps that unify phenomenological models by integrating fluctuating single-cell growth rates and size-dependent noise mechanisms with cell size control. One map is applicable to mother machine lineages and the other to lineage trees of exponentially-growing cell populations, which reveals that population dynamics alter size control measured in mother machine experiments. For example, an adder can become more sizer-like or more timer-like at the population level depending on the noise statistics. Our analysis of bacterial data identifies extrinsic noise as the dominant mechanism of size variability, characterized by a quadratic conditional variance-mean relationship for division size across growth conditions. This finding contradicts the reported independence of added size relative to birth size but is consistent with the adder property in terms of the independence of the mean added size. Finally, we derive a trade-off between population-growth-rate gain and division-size noise. Correlations between size control quantifiers and single-cell growth rates inferred from data indicate that bacteria prioritize a narrow division-size distribution over growth rate maximisation.</summary>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.CB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T18:17:17Z</published>
+    <arxiv:primary_category term="q-bio.PE"/>
+    <author>
+      <name>Arthur Genthon</name>
+    </author>
+    <author>
+      <name>Philipp Thomas</name>
     </author>
   </entry>
 </feed>
