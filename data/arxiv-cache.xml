@@ -1,390 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-01-15T01:00:27Z -->
+<!-- Last updated: 2026-01-16T01:02:53Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-01-15T01:00:30Z</updated>
+  <updated>2026-01-16T01:02:53Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>130812</opensearch:totalResults>
+  <opensearch:totalResults>130898</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2601.08831v1</id>
-    <title>3AM: Segment Anything with Geometric Consistency in Videos</title>
-    <updated>2026-01-13T18:59:54Z</updated>
-    <link href="https://arxiv.org/abs/2601.08831v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08831v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Video object segmentation methods like SAM2 achieve strong performance through memory-based architectures but struggle under large viewpoint changes due to reliance on appearance features. Traditional 3D instance segmentation methods address viewpoint consistency but require camera poses, depth maps, and expensive preprocessing. We introduce 3AM, a training-time enhancement that integrates 3D-aware features from MUSt3R into SAM2. Our lightweight Feature Merger fuses multi-level MUSt3R features that encode implicit geometric correspondence. Combined with SAM2's appearance features, the model achieves geometry-consistent recognition grounded in both spatial position and visual similarity. We propose a field-of-view aware sampling strategy ensuring frames observe spatially consistent object regions for reliable 3D correspondence learning. Critically, our method requires only RGB input at inference, with no camera poses or preprocessing. On challenging datasets with wide-baseline motion (ScanNet++, Replica), 3AM substantially outperforms SAM2 and extensions, achieving 90.6% IoU and 71.7% Positive IoU on ScanNet++'s Selected Subset, improving over state-of-the-art VOS methods by +15.9 and +30.4 points. Project page: https://jayisaking.github.io/3AM-Page/</summary>
+    <id>http://arxiv.org/abs/2601.09708v1</id>
+    <title>Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning</title>
+    <updated>2026-01-14T18:59:59Z</updated>
+    <link href="https://arxiv.org/abs/2601.09708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language-Action (VLA) tasks require reasoning over complex visual scenes and executing adaptive actions in dynamic environments. While recent studies on reasoning VLAs show that explicit chain-of-thought (CoT) can improve generalization, they suffer from high inference latency due to lengthy reasoning traces. We propose Fast-ThinkAct, an efficient reasoning framework that achieves compact yet performant planning through verbalizable latent reasoning. Fast-ThinkAct learns to reason efficiently with latent CoTs by distilling from a teacher, driven by a preference-guided objective to align manipulation trajectories that transfers both linguistic and visual planning capabilities for embodied control. This enables reasoning-enhanced policy learning that effectively connects compact reasoning to action execution. Extensive experiments across diverse embodied manipulation and reasoning benchmarks demonstrate that Fast-ThinkAct achieves strong performance with up to 89.3\% reduced inference latency over state-of-the-art reasoning VLAs, while maintaining effective long-horizon planning, few-shot adaptation, and failure recovery.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T18:59:54Z</published>
-    <arxiv:comment>Project page: https://jayisaking.github.io/3AM-Page/</arxiv:comment>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T18:59:59Z</published>
+    <arxiv:comment>Project page: https://jasper0314-huang.github.io/fast-thinkact/</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yang-Che Sun</name>
+      <name>Chi-Pin Huang</name>
     </author>
     <author>
-      <name>Cheng Sun</name>
+      <name>Yunze Man</name>
     </author>
     <author>
-      <name>Chin-Yang Lin</name>
-    </author>
-    <author>
-      <name>Fu-En Yang</name>
+      <name>Zhiding Yu</name>
     </author>
     <author>
       <name>Min-Hung Chen</name>
     </author>
     <author>
-      <name>Yen-Yu Lin</name>
+      <name>Jan Kautz</name>
     </author>
     <author>
-      <name>Yu-Lun Liu</name>
+      <name>Yu-Chiang Frank Wang</name>
+    </author>
+    <author>
+      <name>Fu-En Yang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.08800v1</id>
-    <title>MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm</title>
-    <updated>2026-01-13T18:38:18Z</updated>
-    <link href="https://arxiv.org/abs/2601.08800v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08800v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The Mixture of Experts (MoE) models are emerging as the latest paradigm for Large Language Models (LLMs). However, due to memory constraints, MoE models with billions or even trillions of parameters can only be deployed in multi-GPU or even multi-node &amp; multi-GPU based serving systems. Thus, communication has became a major bottleneck in distributed serving systems, especially inter-node communication. Contemporary distributed MoE models are primarily implemented using all-reduce (AR) based tensor parallelism (TP) and all-to-all (A2A) based expert parallelism (EP). However, TP generally exhibits low inter-node efficiency and is thus confined to high-speed intra-node bandwidth. In contrast, EP tends to suffer from load imbalance, especially when the parallel degree is high.
-  In this work, we introduce MixServe, a novel automatic distributed serving system for efficient deployment of MoE models by a novel TP-EP hybrid parallelism based on fused AR-A2A communication algorithm. MixServe begins by evaluating the communication overhead associated with various parallel strategies, taking into account the model hyperparameters and the configurations of network and hardware resources, and then automatically selects the most efficient parallel strategy. Then, we propose the TP-EP hybrid parallelism based on fused AR-A2A communication algorithm that overlaps intra-node AR communication and inter-node A2A communication. Extensive experiments on DeepSeek-R1 and Qwen3 models demonstrate that MixServe achieves superior inference performance, with 1.08~3.80x acceleration in time to first token (TTFT), 1.03~1.66x acceleration in inter-token latency (ITL), and 5.2%~50.3% throughput improvement compared to existing approaches.</summary>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T18:38:18Z</published>
-    <arxiv:comment>Submitted to ICDCS 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.DC"/>
-    <author>
-      <name>Bowen Zhou</name>
-    </author>
-    <author>
-      <name>Jinrui Jia</name>
-    </author>
-    <author>
-      <name>Wenhao He</name>
-    </author>
-    <author>
-      <name>Yong Zhang</name>
-    </author>
-    <author>
-      <name>Fang Dong</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.08770v1</id>
-    <title>Memory DisOrder: Memory Re-orderings as a Timerless Side-channel</title>
-    <updated>2026-01-13T17:59:28Z</updated>
-    <link href="https://arxiv.org/abs/2601.08770v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08770v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>To improve efficiency, nearly all parallel processing units (CPUs and GPUs) implement relaxed memory models in which memory operations may be re-ordered, i.e., executed out-of-order. Prior testing work in this area found that memory re-orderings are observed more frequently when other cores are active, e.g., stressing the memory system, which likely triggers aggressive hardware optimizations.
-  In this work, we present Memory DisOrder: a timerless side-channel that uses memory re-orderings to infer activity on other processes. We first perform a fuzzing campaign and show that many mainstream processors (X86/Arm/Apple CPUs, NVIDIA/AMD/Apple GPUs) are susceptible to cross-process signals. We then show how the vulnerability can be used to implement classic attacks, including a covert channel, achieving up to 16 bits/second with 95% accuracy on an Apple M3 GPU, and application fingerprinting, achieving reliable closed-world DNN architecture fingerprinting on several CPUs and an Apple M3 GPU. Finally, we explore how low-level system details can be exploited to increase re-orderings, showing the potential for a covert channel to achieve nearly 30K bits/second on X86 CPUs. More precise attacks can likely be developed as the vulnerability becomes better understood.</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T17:59:28Z</published>
-    <arxiv:primary_category term="cs.CR"/>
-    <author>
-      <name>Sean Siddens</name>
-    </author>
-    <author>
-      <name>Sanya Srivastava</name>
-    </author>
-    <author>
-      <name>Reese Levine</name>
-    </author>
-    <author>
-      <name>Josiah Dykstra</name>
-    </author>
-    <author>
-      <name>Tyler Sorensen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.08743v1</id>
-    <title>TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL</title>
-    <updated>2026-01-13T17:20:55Z</updated>
-    <link href="https://arxiv.org/abs/2601.08743v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08743v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In Text-to-SQL tasks, existing LLM-based methods often include extensive database schemas in prompts, leading to long context lengths and increased prefilling latency. While user queries typically focus on recurrent table sets-offering an opportunity for KV cache sharing across queries-current inference engines, such as SGLang and vLLM, generate redundant prefix cache copies when processing user queries with varying table orders. To address this inefficiency, we propose precomputing table representations as KV caches offline and querying the required ones online. A key aspect of our approach is the computation of table caches while preserving primary foreign key relationships between tables. Additionally, we construct a Table Trie structure to facilitate efficient KV cache lookups during inference. To enhance cache performance, we introduce a cache management system with a query reranking strategy to improve cache hit rates and a computation loading pipeline for parallelizing model inference and cache loading. Experimental results show that our proposed TableCache achieves up to a 3.62x speedup in Time to First Token (TTFT) with negligible performance degradation.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2601.09703v1</id>
+    <title>ShortCoder: Knowledge-Augmented Syntax Optimization for Token-Efficient Code Generation</title>
+    <updated>2026-01-14T18:57:31Z</updated>
+    <link href="https://arxiv.org/abs/2601.09703v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09703v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Code generation tasks aim to automate the conversion of user requirements into executable code, significantly reducing manual development efforts and enhancing software productivity. The emergence of large language models (LLMs) has significantly advanced code generation, though their efficiency is still impacted by certain inherent architectural constraints. Each token generation necessitates a complete inference pass, requiring persistent retention of contextual information in memory and escalating resource consumption. While existing research prioritizes inference-phase optimizations such as prompt compression and model quantization, the generation phase remains underexplored. To tackle these challenges, we propose a knowledge-infused framework named ShortCoder, which optimizes code generation efficiency while preserving semantic equivalence and readability. In particular, we introduce: (1) ten syntax-level simplification rules for Python, derived from AST-preserving transformations, achieving 18.1% token reduction without functional compromise; (2) a hybrid data synthesis pipeline integrating rule-based rewriting with LLM-guided refinement, producing ShorterCodeBench, a corpus of validated tuples of original code and simplified code with semantic consistency; (3) a fine-tuning strategy that injects conciseness awareness into the base LLMs. Extensive experimental results demonstrate that ShortCoder consistently outperforms state-of-the-art methods on HumanEval, achieving an improvement of 18.1%-37.8% in generation efficiency over previous methods while ensuring the performance of code generation.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T17:20:55Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Jinbo Su</name>
-    </author>
-    <author>
-      <name>Yuxuan Hu</name>
-    </author>
-    <author>
-      <name>Cuiping Li</name>
-    </author>
-    <author>
-      <name>Hong Chen</name>
-    </author>
-    <author>
-      <name>Jia Li</name>
-    </author>
-    <author>
-      <name>Lintao Ma</name>
-    </author>
-    <author>
-      <name>Jing Zhang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.08742v1</id>
-    <title>Inferring Latent Intentions: Attributional Natural Language Inference in LLM Agents</title>
-    <updated>2026-01-13T17:18:38Z</updated>
-    <link href="https://arxiv.org/abs/2601.08742v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08742v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Attributional inference, the ability to predict latent intentions behind observed actions, is a critical yet underexplored capability for large language models (LLMs) operating in multi-agent environments. Traditional natural language inference (NLI), in fact, fails to capture the nuanced, intention-driven reasoning essential for complex interactive systems. To address this gap, we introduce Attributional NLI (Att-NLI), a framework that extends NLI with principles from social psychology to assess an agent's capacity for abductive intentional inference (generating hypotheses about latent intentions), and subsequent deductive verification (drawing valid logical conclusions). We instantiate Att-NLI via a textual game, Undercover-V, experimenting with three types of LLM agents with varying reasoning capabilities and access to external tools: a standard NLI agent using only deductive inference, an Att-NLI agent employing abductive-deductive inference, and a neuro-symbolic Att-NLI agent performing abductive-deductive inference with external theorem provers. Extensive experiments demonstrate a clear hierarchy of attributional inference capabilities, with neuro-symbolic agents consistently outperforming others, achieving an average win rate of 17.08%. Our results underscore the role that Att-NLI can play in developing agents with sophisticated reasoning capabilities, highlighting, at the same time, the potential impact of neuro-symbolic AI in building rational LLM agents acting in multi-agent environments.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T17:18:38Z</published>
-    <arxiv:primary_category term="cs.CL"/>
+    <published>2026-01-14T18:57:31Z</published>
+    <arxiv:primary_category term="cs.SE"/>
     <author>
-      <name>Xin Quan</name>
+      <name>Sicong Liu</name>
     </author>
     <author>
-      <name>Jiafeng Xiong</name>
+      <name>Yanxian Huang</name>
     </author>
     <author>
-      <name>Marco Valentino</name>
+      <name>Mingwei Liu</name>
     </author>
     <author>
-      <name>André Freitas</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.08724v1</id>
-    <title>Kernel Learning for Regression via Quantum Annealing Based Spectral Sampling</title>
-    <updated>2026-01-13T16:50:07Z</updated>
-    <link href="https://arxiv.org/abs/2601.08724v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08724v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>While quantum annealing (QA) has been developed for combinatorial optimization, practical QA devices operate at finite temperature and under noise, and their outputs can be regarded as stochastic samples close to a Gibbs--Boltzmann distribution. In this study, we propose a QA-in-the-loop kernel learning framework that integrates QA not merely as a substitute for Markov-chain Monte Carlo sampling but as a component that directly determines the learned kernel for regression. Based on Bochner's theorem, a shift-invariant kernel is represented as an expectation over a spectral distribution, and random Fourier features (RFF) approximate the kernel by sampling frequencies. We model the spectral distribution with a (multi-layer) restricted Boltzmann machine (RBM), generate discrete RBM samples using QA, and map them to continuous frequencies via a Gaussian--Bernoulli transformation. Using the resulting RFF, we construct a data-adaptive kernel and perform Nadaraya--Watson (NW) regression. Because the RFF approximation based on $\cos(\bmω^{\top}Δ\bm{x})$ can yield small negative values and cancellation across neighbors, the Nadaraya--Watson denominator $\sum_j k_{ij}$ may become close to zero. We therefore employ nonnegative squared-kernel weights $w_{ij}=k(\bm{x}_i,\bm{x}_j)^2$, which also enhances the contrast of kernel weights. The kernel parameters are trained by minimizing the leave-one-out NW mean squared error, and we additionally evaluate local linear regression with the same squared-kernel weights at inference. Experiments on multiple benchmark regression datasets demonstrate a decrease in training loss, accompanied by structural changes in the kernel matrix, and show that the learned kernel tends to improve $R^2$ and RMSE over the baseline Gaussian-kernel NW. Increasing the number of random features at inference further enhances accuracy.</summary>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T16:50:07Z</published>
-    <arxiv:comment>15pages, 5 figures, 4 tables</arxiv:comment>
-    <arxiv:primary_category term="quant-ph"/>
-    <author>
-      <name>Yasushi Hasegawa</name>
+      <name>Jiachi Chen</name>
     </author>
     <author>
-      <name>Masayuki Ohzeki</name>
+      <name>Ensheng Shi</name>
+    </author>
+    <author>
+      <name>Yuchi Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Zhang</name>
+    </author>
+    <author>
+      <name>Yin Zhang</name>
+    </author>
+    <author>
+      <name>Yanlin Wang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.08698v1</id>
-    <title>Double Strike: Breaking Approximation-Based Side-Channel Countermeasures for DNNs</title>
-    <updated>2026-01-13T16:24:58Z</updated>
-    <link href="https://arxiv.org/abs/2601.08698v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08698v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Deep neural networks (DNNs), which support services such as driving assistants and medical diagnoses, undergo lengthy and expensive training procedures. Therefore, the training's outcome - the DNN weights - represents a significant intellectual property asset to protect. Side-channel analysis (SCA) has recently appeared as an effective approach to recover this confidential asset from DNN implementations. In response, researchers have proposed to defend DNN implementations through classic side-channel countermeasures, at the cost of higher energy consumption, inference time, and resource utilisation. Following a different approach, Ding et al. (HOST'25) introduced MACPRUNING, a novel SCA countermeasure based on pruning, a performance-oriented Approximate Computing technique: at inference time, the implementation randomly prunes (or skips) non-important weights (i.e., with low contribution to the DNN's accuracy) of the first layer, exponentially increasing the side-channel resilience of the protected DNN implementation. However, the original security analysis of MACPRUNING did not consider a control-flow dependency intrinsic to the countermeasure design. This dependency may allow an attacker to circumvent MACPRUNING and recover the weights important to the DNN's accuracy. This paper describes a preprocessing methodology to exploit the above-mentioned control-flow dependency. Through practical experiments on a Chipwhisperer-Lite running a MACPRUNING-protected Multi-Layer Perceptron, we target the first 8 weights of each neuron and recover 96% of the important weights, demonstrating the drastic reduction in security of the protected implementation. Moreover, we show how microarchitectural leakage improves the effectiveness of our methodology, even allowing for the recovery of up to 100% of the targeted non-important weights. Lastly, by adapting our methodology [continue in pdf].</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T16:24:58Z</published>
-    <arxiv:comment>To appear at IEEE International Symposium on Hardware Oriented Security and Trust (HOST) 2026. 10 pages, 7 figures, 4 algorithms, 1 code listing</arxiv:comment>
-    <arxiv:primary_category term="cs.CR"/>
+    <id>http://arxiv.org/abs/2601.09691v1</id>
+    <title>Detection of Oscillations in a Type I X-Ray Burst of 4U 0614+091 with SVOM/ECLAIRs</title>
+    <updated>2026-01-14T18:43:28Z</updated>
+    <link href="https://arxiv.org/abs/2601.09691v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09691v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On 2025 January 10, a thermonuclear (Type I) X-ray burst from the neutron star low-mass X-ray binary \textit{4U~0614+091} was detected with the ECLAIRs instrument on board the \textit{SVOM} mission. We present here a time-resolved spectroscopic analysis of the burst, along with the detection of burst oscillations within a 51-second interval during the decay phase. The oscillation frequency is measured to be $ν= 413.674 \pm 0.002\,\mathrm{Hz}$, consistent with previous reports. However, we detect a significant downward frequency drift over the burst duration, characterized by $\dotν = (-4.7 \pm 0.3) \times 10^{-3}\,\mathrm{Hz\,s^{-1}}$. This frequency evolution is atypical compared to those observed in similar burst oscillation sources. We tentatively attribute the observed drift to a Doppler shift induced by orbital motion. Under this interpretation, the inferred orbital period must be shorter than 20 minutes, placing \textit{4U~0614+091} among the most compact known low-mass X-ray binaries.</summary>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T18:43:28Z</published>
+    <arxiv:comment>Accepted for publication in APJL</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.HE"/>
     <author>
-      <name>Lorenzo Casalino</name>
+      <name>Sébastien Le Stum</name>
     </author>
     <author>
-      <name>Maria Méndez Real</name>
+      <name>Floriane Cangemi</name>
     </author>
     <author>
-      <name>Jean-Christophe Prévotet</name>
+      <name>Alexis Coleiro</name>
     </author>
     <author>
-      <name>Rubén Salvador</name>
+      <name>Sébastien Guillot</name>
+    </author>
+    <author>
+      <name>Jérôme Chenevez</name>
+    </author>
+    <author>
+      <name>Philippe Bacon</name>
+    </author>
+    <author>
+      <name>Nicolas Bellemont</name>
+    </author>
+    <author>
+      <name>Laurent Bouchet</name>
+    </author>
+    <author>
+      <name>Tristan Bouchet</name>
+    </author>
+    <author>
+      <name>Cécile Cavet</name>
+    </author>
+    <author>
+      <name>Bertrand Cordier</name>
+    </author>
+    <author>
+      <name>Antoine Foisseau</name>
+    </author>
+    <author>
+      <name>Olivier Godet</name>
+    </author>
+    <author>
+      <name>Andrea Goldwurm</name>
+    </author>
+    <author>
+      <name>Xu-Hui Han</name>
+    </author>
+    <author>
+      <name>Cyril Lachaud</name>
+    </author>
+    <author>
+      <name>Zhaosheng Li</name>
+    </author>
+    <author>
+      <name>Hua-Li Li</name>
+    </author>
+    <author>
+      <name>Yu-Lei Qiu</name>
+    </author>
+    <author>
+      <name>Jérôme Rodriguez</name>
+    </author>
+    <author>
+      <name>Wen-Jun Tan</name>
+    </author>
+    <author>
+      <name>L. Tao</name>
+    </author>
+    <author>
+      <name>Lauryne Verwaerde</name>
+    </author>
+    <author>
+      <name>Chen-Wei Wang</name>
+    </author>
+    <author>
+      <name>Jing Wang</name>
+    </author>
+    <author>
+      <name>Jianyan Wei</name>
+    </author>
+    <author>
+      <name>Chao Wu</name>
+    </author>
+    <author>
+      <name>Wen-Jin Xie</name>
+    </author>
+    <author>
+      <name>Li-Ping Xin</name>
+    </author>
+    <author>
+      <name>Shaolin Xiong</name>
+    </author>
+    <author>
+      <name>Shuang-Nan Zhang</name>
+    </author>
+    <author>
+      <name>S. J. Zheng</name>
+    </author>
+    <arxiv:doi>10.3847/2041-8213/ae3174</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3847/2041-8213/ae3174" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.09678v1</id>
+    <title>The impact of waveform systematics and Gaussian noise on the interpretation of GW231123</title>
+    <updated>2026-01-14T18:22:32Z</updated>
+    <link href="https://arxiv.org/abs/2601.09678v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09678v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>GW231123 is an exceptional gravitational-wave event consistent with the merger of two massive, highly-spinning black holes. Reliable inference of the source properties is crucial for accurate interpretation of its astrophysical implications. However, characterization of GW231123 is challenging: only few signal cycles are observed and different signal models result in systematically different parameters. We investigate whether the interpretation of GW231123 is robust against model systematics and Gaussian detector noise. We show that the model systematics observed in GW231123 can be reproduced for a simulated signal based on the numerical-relativity surrogate model NRSur7dq4. Simulating data using the maximum-likelihood NRSur7dq4 waveform for GW231123 and no noise realization, we closely recover the systematics observed for the real signal. We then explore how the headline properties of GW231123 are impacted by Gaussian detector noise. Using the NRSur7dq4 maximum-likelihood waveform and different noise realizations, we consistently find support for large masses, high spin magnitudes (median $χ_1\geq 0.7$), and high spin precession (median $χ_\mathrm{p}\geq 0.68$). The spin in the direction of the angular momentum ($χ_\mathrm{eff}$) fluctuates more. Finally, again comparing to simulated signals, we show that any differences in the GW231123 inference based on each separate detector are not statistically significant. These results show that the properties of GW231123, and most importantly the high mass and high spin magnitudes inferred by NRSur7dq4, are robust.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T18:22:32Z</published>
+    <arxiv:comment>18 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Sophie Bini</name>
+    </author>
+    <author>
+      <name>Krzysztof Król</name>
+    </author>
+    <author>
+      <name>Katerina Chatziioannou</name>
+    </author>
+    <author>
+      <name>Maximiliano Isi</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.08694v1</id>
-    <title>Precise measurement of the $Λ$-binding energy difference between $^3_Λ$H and $^4_Λ$H via decay-pion spectroscopy at MAMI</title>
-    <updated>2026-01-13T16:17:56Z</updated>
-    <link href="https://arxiv.org/abs/2601.08694v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08694v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We performed high-precision decay-pion spectroscopy of light $Λ$ hypernuclei at the Mainz Microtron (MAMI) using the A1 spectrometer facility. By measuring the monochromatic $π^-$ momentum from the two-body weak decay $^3_Λ\mathrm{H} \to {}^3\mathrm{He} + π^-$ and referencing it to the $^4_Λ\mathrm{H} \to {}^4\mathrm{He} + π^-$ decay, we determined the $Λ$ binding energy of $^3_Λ\mathrm{H}$ with unprecedented accuracy. The obtained value, $B_Λ(^3_Λ\mathrm{H}) = 0.523 \pm 0.013~(\mathrm{stat.}) \pm 0.075~(\mathrm{syst.})$~MeV, is consistent with the STAR result, but indicates a significantly deeper binding than inferred from earlier measurements. This result implies a stronger $Λ$-deuteron interaction and provides stringent constraints on hyperon-nucleon interactions.</summary>
-    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T16:17:56Z</published>
-    <arxiv:primary_category term="nucl-ex"/>
+    <id>http://arxiv.org/abs/2601.09667v1</id>
+    <title>Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning</title>
+    <updated>2026-01-14T17:57:43Z</updated>
+    <link href="https://arxiv.org/abs/2601.09667v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09667v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-agent systems have evolved into practical LLM-driven collaborators for many applications, gaining robustness from diversity and cross-checking. However, multi-agent RL (MARL) training is resource-intensive and unstable: co-adapting teammates induce non-stationarity, and rewards are often sparse and high-variance. Therefore, we introduce \textbf{Multi-Agent Test-Time Reinforcement Learning (MATTRL)}, a framework that injects structured textual experience into multi-agent deliberation at inference time. MATTRL forms a multi-expert team of specialists for multi-turn discussions, retrieves and integrates test-time experiences, and reaches consensus for final decision-making. We also study credit assignment for constructing a turn-level experience pool, then reinjecting it into the dialogue. Across challenging benchmarks in medicine, math, and education, MATTRL improves accuracy by an average of 3.67\% over a multi-agent baseline, and by 8.67\% over comparable single-agent baselines. Ablation studies examine different credit-assignment schemes and provide a detailed comparison of how they affect training outcomes. MATTRL offers a stable, effective and efficient path to distribution-shift-robust multi-agent reasoning without tuning.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T17:57:43Z</published>
+    <arxiv:comment>Work in Progress</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Ryoko Kino</name>
+      <name>Zhiyuan Hu</name>
     </author>
     <author>
-      <name>Sho Nagao</name>
+      <name>Yunhai Hu</name>
     </author>
     <author>
-      <name>Patrick Achenbach</name>
+      <name>Juncheng Liu</name>
     </author>
     <author>
-      <name>Satoshi N. Nakamura</name>
+      <name>Shuyue Stella Li</name>
     </author>
     <author>
-      <name>Josef Pochodzalla</name>
+      <name>Yucheng Wang</name>
     </author>
     <author>
-      <name>Takeru Akiyama</name>
+      <name>Zhen Xu</name>
     </author>
     <author>
-      <name>Ralph Böhm</name>
+      <name>See-Kiong Ng</name>
     </author>
     <author>
-      <name>Mirco Christmann</name>
+      <name>Anh Tuan Luu</name>
     </author>
     <author>
-      <name>Michael O. Distler</name>
+      <name>Xinxing Xu</name>
     </author>
     <author>
-      <name>Luca Doria</name>
+      <name>Bryan Hooi</name>
     </author>
     <author>
-      <name>Anselm Esser</name>
+      <name>Cynthia Breazeal</name>
     </author>
     <author>
-      <name>Julian Geratz</name>
-    </author>
-    <author>
-      <name>Christian Helmel</name>
-    </author>
-    <author>
-      <name>Matthias Hoek</name>
-    </author>
-    <author>
-      <name>Tatsuhiro Ishige</name>
-    </author>
-    <author>
-      <name>Masashi Kaneta</name>
-    </author>
-    <author>
-      <name>Pascal Klag</name>
-    </author>
-    <author>
-      <name>David Markus</name>
-    </author>
-    <author>
-      <name>Harald Merkel</name>
-    </author>
-    <author>
-      <name>Masaya Mizuno</name>
-    </author>
-    <author>
-      <name>Ulrich Müller</name>
-    </author>
-    <author>
-      <name>Kotaro Nishi</name>
-    </author>
-    <author>
-      <name>Ken Nishida</name>
-    </author>
-    <author>
-      <name>Kazuki Okuyama</name>
-    </author>
-    <author>
-      <name>Jonas Pätschke</name>
-    </author>
-    <author>
-      <name>Björn Sören Schlimme</name>
-    </author>
-    <author>
-      <name>Concettina Sfienti</name>
-    </author>
-    <author>
-      <name>Tianhao Shao</name>
-    </author>
-    <author>
-      <name>Daniel Steger</name>
-    </author>
-    <author>
-      <name>Marcell Steinen</name>
-    </author>
-    <author>
-      <name>Liguang Tang</name>
-    </author>
-    <author>
-      <name>Michaela Thiel</name>
-    </author>
-    <author>
-      <name>Philipp Vonwirth</name>
-    </author>
-    <author>
-      <name>Luca Wilhelm</name>
+      <name>Hae Won Park</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.08693v1</id>
-    <title>Stellar masses of optically dark galaxies: uncertainty introduced by the attenuation law and star-formation histories</title>
-    <updated>2026-01-13T16:17:04Z</updated>
-    <link href="https://arxiv.org/abs/2601.08693v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08693v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>JWST observations have suggested that some high-redshift galaxies may be ultra-massive, thereby challenging standard models of early galaxy formation and cosmology. We analyse the stellar masses using different modelling assumptions and with new data of three galaxies (S1, S2 and S3), whose NIRCam/grism redshifts were consistent with $z&gt;5$. These three optically dark galaxies have previously been reported to host exceptionally high stellar masses and star-formation rates, implying extremely high star-formation efficiencies. Recent NIRSpec/IFU observations for S1 indicate a spectroscopic redshift of $z_{\rm spec}=3.2461^{+0.0001}_{-0.0002}$, which is lower than previously reported. Using the Bayesian spectral energy distribution (SED) modelling tool \texttt{Prospector}, we investigate the impact of key model assumptions on stellar mass estimates, such as the choice of star-formation history (SFH) priors (constant versus rising SFH base for the non-parametric prior), the dust attenuation law, and the treatment of emission line fluxes. Our analysis yields revised stellar masses of $\log(M_{\star}/M_{\odot}) \approx 10.36^{+0.47}_{-0.32}, 10.95^{+0.11}_{-0.10}$ and $10.31^{+0.24}_{-0.19}$ for S1, S2, and S3, respectively. We find that adopting a rising SFH base prior results in lower inferred stellar masses compared to a constant SFH base prior. We identify a significant degeneracy between the dust attenuation curve slope, the amount of dust attenuation, and stellar mass. Our results highlight various systematics in SED modelling due to SFH priors and dust attenuation that can influence stellar mass estimates of heavily dust obscured sources. Nevertheless, even with these revised stellar mass estimates, two of the three galaxies remain among the most massive and actively star-forming systems at their respective redshifts, implying high star-formation efficiencies.</summary>
+    <id>http://arxiv.org/abs/2601.09660v1</id>
+    <title>Constitutive parameter inference using physics-based data-driven modeling in full volume datasets of intact and torn rotator cuff tendons</title>
+    <updated>2026-01-14T17:51:44Z</updated>
+    <link href="https://arxiv.org/abs/2601.09660v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09660v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we characterized the material properties of an animal model of the rotator cuff tendon using full volume datasets of both its intact and injured states by capturing internal strain behavior throughout the tendon. Our experimental setup, involving tension along the fiber direction, activated volumetric, tensile, and shear mechanisms due to the tendon's complex geometry. We implemented an approach to model inference that we refer to as variational system identification (VSI) to solve the weak form of the stress equilibrium equation using these full volume displacements. Three constitutive models were used for parameter inference: a neo-Hookean model, a modified Holzapfel-Gasser-Ogden (HGO) model with higher-order terms in the first and second invariants, and a reduced polynomial model consisting of terms based on the first, second, and fiber-related invariants. Inferred parameters were further refined using an adjoint-based partial differential equation (PDE)-constrained optimization framework. Our results show that the modified HGO model captures the tendon's deformation mechanisms with reasonable accuracy, while the neo-Hookean model fails to reproduce key internal features, particularly the shear behavior in the injured tendon. Surprisingly, the simplified polynomial model performed comparably to the modified HGO formulation using only three terms. These findings suggest that while current constitutive models do not fully replicate the complex internal mechanics of the tendon, they are capable of capturing key trends in both intact and damaged tissue, using a homogeneous modeling approach. Continued model development is needed to bridge this gap and enable clinical-grade, predictive simulations of tendon injury and repair.</summary>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.TO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T17:51:44Z</published>
+    <arxiv:primary_category term="physics.bio-ph"/>
+    <author>
+      <name>Carla Nathaly Villacís Núñez</name>
+    </author>
+    <author>
+      <name>Siddhartha Srivastava</name>
+    </author>
+    <author>
+      <name>Ulrich Scheven</name>
+    </author>
+    <author>
+      <name>Asheesh Bedi</name>
+    </author>
+    <author>
+      <name>Krishna Garikipati</name>
+    </author>
+    <author>
+      <name>Ellen M. Arruda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.09658v1</id>
+    <title>Image2Garment: Simulation-ready Garment Generation from a Single Image</title>
+    <updated>2026-01-14T17:47:33Z</updated>
+    <link href="https://arxiv.org/abs/2601.09658v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09658v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Estimating physically accurate, simulation-ready garments from a single image is challenging due to the absence of image-to-physics datasets and the ill-posed nature of this problem. Prior methods either require multi-view capture and expensive differentiable simulation or predict only garment geometry without the material properties required for realistic simulation. We propose a feed-forward framework that sidesteps these limitations by first fine-tuning a vision-language model to infer material composition and fabric attributes from real images, and then training a lightweight predictor that maps these attributes to the corresponding physical fabric parameters using a small dataset of material-physics measurements. Our approach introduces two new datasets (FTAG and T2P) and delivers simulation-ready garments from a single image without iterative optimization. Experiments show that our estimator achieves superior accuracy in material composition estimation and fabric attribute prediction, and by passing them through our physics parameter estimator, we further achieve higher-fidelity simulations compared to state-of-the-art image-to-garment methods.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T17:47:33Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Selim Emir Can</name>
+    </author>
+    <author>
+      <name>Jan Ackermann</name>
+    </author>
+    <author>
+      <name>Kiyohiro Nakayama</name>
+    </author>
+    <author>
+      <name>Ruofan Liu</name>
+    </author>
+    <author>
+      <name>Tong Wu</name>
+    </author>
+    <author>
+      <name>Yang Zheng</name>
+    </author>
+    <author>
+      <name>Hugo Bertiche</name>
+    </author>
+    <author>
+      <name>Menglei Chai</name>
+    </author>
+    <author>
+      <name>Thabo Beeler</name>
+    </author>
+    <author>
+      <name>Gordon Wetzstein</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.09655v1</id>
+    <title>A Closed-Form Surrogate for the Equivalent Diameter of the Kerr Shadow</title>
+    <updated>2026-01-14T17:44:54Z</updated>
+    <link href="https://arxiv.org/abs/2601.09655v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09655v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a closed-form surrogate for the equivalent diameter of the Kerr black-hole shadow, defined as the diameter of the circle with the same area as the shadow's critical curve. The construction enforces the exact face-on (polar) limit by explicitly separating an analytically computed polar contribution based on the spherical photon-orbit branch where the horizontal impact parameter vanishes. The remaining inclination dependence is captured by a compact 15-parameter polynomial placed inside an exponential correction. The coefficients are determined by ordinary least squares on a deterministic reference grid generated from the Kerr critical-curve area. Over the practical domain of dimensionless spin from 0 to 0.998 and inclination from just above 0 degrees up to 90 degrees (with the exactly polar point treated analytically), the surrogate achieves sub-percent accuracy. On the training grid the median absolute percent error is 0.0105 percent with a worst case of 0.782 percent, and on a denser out-of-sample validation set (including inclinations down to 0.5 degrees) the median, 95th-percentile, and worst-case errors are 0.023 percent, 0.471 percent, and 1.64 percent, respectively. The resulting expression provides fast evaluations of the shadow size without numerical ray tracing, making it convenient for repeated calls in parameter inference and rapid model comparisons.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T17:44:54Z</published>
+    <arxiv:comment>8 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Arseny Pantsialei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.09644v1</id>
+    <title>A New Constraint on the Optical Depth from the Reionization History Independent of CMB Large-Scale E-Mode Polarization</title>
+    <updated>2026-01-14T17:28:14Z</updated>
+    <link href="https://arxiv.org/abs/2601.09644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent studies report a mild discrepancy between baryon acoustic oscillation (BAO) and cosmic microwave background (CMB) measurements within the $Λ$CDM framework. This discrepancy could be explained if the optical depth $τ$ inferred from the CMB large-scale E-mode polarization is underestimated, which may be biased by foreground-subtraction or instrumental systematics. In this work, we present a determination of $τ$ independent of the large-scale E-mode polarization, using the latest measurements of the redshift evolution of the neutral hydrogen fraction $x_\mathrm{HI}(z)$, which is constrained by Lyman-$α$ forest and damping-wing absorption measurements at $z\sim5$-$14$, based on ground-based optical and JWST observations. Combining $x_\mathrm{HI}(z)$ with the Planck CMB power spectra excluding the large-scale E-mode polarization, we obtain $τ=0.0552^{+0.0019}_{-0.0026}$, a stringent constraint consistent with the previous CMB results including the large-scale E-mode. We also evaluate a potential systematic error in our method associated with absorption modeling, obtaining $τ=0.0552^{+0.0075}_{-0.0049}$. Using this constraint on $τ$, we resolve the degeneracy in the $τ$-$Ω_m$ plane and find a $2.4σ$ tension with the DESI DR2 BAO results, thereby confirming the claimed mild discrepancy suggestive of physics beyond $Λ$CDM. Finally, we derive an upper limit on the sum of neutrino masses, $Σm_ν&lt;0.0550\,(0.0717)$ eV at the 95% (99%) confidence level. This limit favors the normal mass ordering and, when combined with the lower limits from neutrino oscillation experiments, yields a further constraint, $Σm_ν=0.0594_{-0.0007}^{+0.0113}$ eV. However, the cosmological upper limit and the oscillation-based lower limit show a mild $2.2σ$ tension, providing an independent indication of possible physics beyond $Λ$CDM.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T16:17:04Z</published>
-    <arxiv:comment>13 pages, 8 figures, to be submitted to MNRAS, comments are welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
+    <published>2026-01-14T17:28:14Z</published>
+    <arxiv:comment>19 pages, 9 figures, submitted to ApJ</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
     <author>
-      <name>Yash Lapasia</name>
+      <name>Yuta Kageura</name>
     </author>
     <author>
-      <name>Sandro Tacchella</name>
+      <name>Masami Ouchi</name>
     </author>
     <author>
-      <name>Francesco D'Eugenio</name>
+      <name>Fumihiro Naokawa</name>
     </author>
     <author>
-      <name>Dávid Puskás</name>
+      <name>Hiroya Umeda</name>
     </author>
     <author>
-      <name>Andrew J. Bunker</name>
+      <name>Akinori Matsumoto</name>
     </author>
     <author>
-      <name>A. Lola Danhaive</name>
+      <name>Yuichi Harikane</name>
     </author>
     <author>
-      <name>Benjamin D. Johnson</name>
+      <name>Minami Nakane</name>
     </author>
     <author>
-      <name>Roberto Maiolino</name>
-    </author>
-    <author>
-      <name>Brant Robertson</name>
-    </author>
-    <author>
-      <name>Charlotte Simmonds</name>
-    </author>
-    <author>
-      <name>Irene Shivaei</name>
-    </author>
-    <author>
-      <name>Christina C. Williams</name>
-    </author>
-    <author>
-      <name>Christopher Willmer</name>
+      <name>Tran Thi Thai</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.08671v1</id>
-    <title>Ultrafast quantum optics with attosecond control</title>
-    <updated>2026-01-13T15:47:48Z</updated>
-    <link href="https://arxiv.org/abs/2601.08671v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.08671v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Modern Quantum optics largely remains quasi-stationary, far from intrinsic optical field timescales. Ultrafast quantum optics seeks to generate, shape, and measure quantum states of light on femtosecond and attosecond timescales. Here we introduce a quantum light field squeezer (QLFS) that enables the generation and attosecond control of ultrafast broadband squeezed light. Using degenerate four-wave mixing in a quasi-collinear focusing geometry, our approach overcomes conventional broadband phase-matching limits, producing intensity- and phase-squeezed states directly from few-cycle laser pulses. Our ultrafast quantum optical metrology reveals a time-dependent squeezing distribution across individual half-cycles of the electric field. Incorporating this time-dependent squeezing into strong-field simulations shows that the temporal redistribution of quantum uncertainty reshapes the high-harmonic emission. Moreover, by tuning the relative pulse delay and phase-matching angle, we achieve attosecond precision in controlling the squeezing characteristics by visualizing inferred effective Wigner representations of the quantum light field. Beyond characterization, we demonstrate that the quantum light-induced tunneling-current noise is sensitive to the nonclassical intensity-noise statistics of the driving squeezed light, with sub-femtosecond control. Together, these results extend the generation, control, and effective phase-space representation of squeezed light into the ultrafast and attosecond regime, opening new avenues for quantum optics in strong-field and solid-state systems.</summary>
-    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-13T15:47:48Z</published>
-    <arxiv:comment>36 pages, 5 figures</arxiv:comment>
-    <arxiv:primary_category term="physics.optics"/>
+    <id>http://arxiv.org/abs/2601.09634v1</id>
+    <title>Human Ancestries Simulation and Inference: a Review of Ancestral Recombination Graph Samplers</title>
+    <updated>2026-01-14T17:09:42Z</updated>
+    <link href="https://arxiv.org/abs/2601.09634v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09634v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There is little debate about the importance of the ancestral recombination graph in population genetics. An important theoretical tool, the main obstacle to its widespread usage is the computational cost required to match the ever-increasing scale of the data being analyzed. Many of these difficulties have been overcome in the past two decades, which have consequently seen the development of increasingly sophisticated ARG simulation and inference software. Nonetheless, challenges remain, especially in the area of ancestry inference. This paper is a comprehensive review of ARG samplers that have emerged in the past three decades to meet the need for scalable and flexible ancestry simulation and inference solutions. It specifically focuses on their performance, usability, and the biological realism of the underlying algorithm, and aims primarily to provide a technical overview of the field for researchers seeking to write their own coalescent-with-recombination sampler. As a complement to this article, we have compiled links to software, source code and documentation and made them available at https://www.patrickfournier.ca/arg-samplers-review/graph.</summary>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T17:09:42Z</published>
+    <arxiv:primary_category term="q-bio.PE"/>
     <author>
-      <name>Mohamed Sennary</name>
+      <name>Patrick Fournier</name>
     </author>
     <author>
-      <name>Javier Rivera-Dean</name>
-    </author>
-    <author>
-      <name>Maciej Lewenstein</name>
-    </author>
-    <author>
-      <name>Mohammed Th. Hassan</name>
+      <name>Fabrice Larribe</name>
     </author>
   </entry>
 </feed>
