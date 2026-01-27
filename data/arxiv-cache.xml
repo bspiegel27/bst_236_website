@@ -1,234 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-01-26T01:07:47Z -->
+<!-- Last updated: 2026-01-27T01:06:42Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-01-26T01:07:47Z</updated>
+  <updated>2026-01-27T01:06:42Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>131531</opensearch:totalResults>
+  <opensearch:totalResults>131607</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2601.16212v1</id>
-    <title>Point Bridge: 3D Representations for Cross Domain Policy Learning</title>
-    <updated>2026-01-22T18:59:24Z</updated>
-    <link href="https://arxiv.org/abs/2601.16212v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16212v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Robot foundation models are beginning to deliver on the promise of generalist robotic agents, yet progress remains constrained by the scarcity of large-scale real-world manipulation datasets. Simulation and synthetic data generation offer a scalable alternative, but their usefulness is limited by the visual domain gap between simulation and reality. In this work, we present Point Bridge, a framework that leverages unified, domain-agnostic point-based representations to unlock synthetic datasets for zero-shot sim-to-real policy transfer, without explicit visual or object-level alignment. Point Bridge combines automated point-based representation extraction via Vision-Language Models (VLMs), transformer-based policy learning, and efficient inference-time pipelines to train capable real-world manipulation agents using only synthetic data. With additional co-training on small sets of real demonstrations, Point Bridge further improves performance, substantially outperforming prior vision-based sim-and-real co-training methods. It achieves up to 44% gains in zero-shot sim-to-real transfer and up to 66% with limited real data across both single-task and multitask settings. Videos of the robot are best viewed at: https://pointbridge3d.github.io/</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:59:24Z</published>
-    <arxiv:primary_category term="cs.RO"/>
+    <id>http://arxiv.org/abs/2601.16981v1</id>
+    <title>SyncLight: Controllable and Consistent Multi-View Relighting</title>
+    <updated>2026-01-23T18:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2601.16981v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16981v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present SyncLight, the first method to enable consistent, parametric relighting across multiple uncalibrated views of a static scene. While single-view relighting has advanced significantly, existing generative approaches struggle to maintain the rigorous lighting consistency essential for multi-camera broadcasts, stereoscopic cinema, and virtual production. SyncLight addresses this by enabling precise control over light intensity and color across a multi-view capture of a scene, conditioned on a single reference edit. Our method leverages a multi-view diffusion transformer trained using a latent bridge matching formulation, achieving high-fidelity relighting of the entire image set in a single inference step. To facilitate training, we introduce a large-scale hybrid dataset comprising diverse synthetic environments -- curated from existing sources and newly designed scenes -- alongside high-fidelity, real-world multi-view captures under calibrated illumination. Surprisingly, though trained only on image pairs, SyncLight generalizes zero-shot to an arbitrary number of viewpoints, effectively propagating lighting changes across all views, without requiring camera pose information. SyncLight enables practical relighting workflows for multi-view capture systems.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T18:59:57Z</published>
+    <arxiv:comment>Project page: http://sync-light.github.io</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Siddhant Haldar</name>
+      <name>David Serrano-Lozano</name>
     </author>
     <author>
-      <name>Lars Johannsmeier</name>
+      <name>Anand Bhattad</name>
     </author>
     <author>
-      <name>Lerrel Pinto</name>
+      <name>Luis Herranz</name>
     </author>
     <author>
-      <name>Abhishek Gupta</name>
+      <name>Jean-François Lalonde</name>
     </author>
     <author>
-      <name>Dieter Fox</name>
-    </author>
-    <author>
-      <name>Yashraj Narang</name>
-    </author>
-    <author>
-      <name>Ajay Mandlekar</name>
+      <name>Javier Vazquez-Corral</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.16207v1</id>
-    <title>IVRA: Improving Visual-Token Relations for Robot Action Policy with Training-Free Hint-Based Guidance</title>
-    <updated>2026-01-22T18:57:13Z</updated>
-    <link href="https://arxiv.org/abs/2601.16207v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16207v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Many Vision-Language-Action (VLA) models flatten image patches into a 1D token sequence, weakening the 2D spatial cues needed for precise manipulation. We introduce IVRA, a lightweight, training-free method that improves spatial understanding by exploiting affinity hints already available in the model's built-in vision encoder, without requiring any external encoder or retraining. IVRA selectively injects these affinity signals into a language-model layer in which instance-level features reside. This inference-time intervention realigns visual-token interactions and better preserves geometric structure while keeping all model parameters fixed. We demonstrate the generality of IVRA by applying it to diverse VLA architectures (LLaRA, OpenVLA, and FLOWER) across simulated benchmarks spanning both 2D and 3D manipulation (VIMA and LIBERO) and on various real-robot tasks. On 2D VIMA, IVRA improves average success by +4.2% over the baseline LLaRA in a low-data regime. On 3D LIBERO, it yields consistent gains over the OpenVLA and FLOWER baselines, including improvements when baseline accuracy is near saturation (96.3% to 97.1%). All code and models will be released publicly. Visualizations are available at: jongwoopark7978.github.io/IVRA</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:57:13Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Jongwoo Park</name>
-    </author>
-    <author>
-      <name>Kanchana Ranasinghe</name>
-    </author>
-    <author>
-      <name>Jinhyeok Jang</name>
-    </author>
-    <author>
-      <name>Cristina Mata</name>
-    </author>
-    <author>
-      <name>Yoo Sung Jang</name>
-    </author>
-    <author>
-      <name>Michael S Ryoo</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.16199v1</id>
-    <title>PAL*M: Property Attestation for Large Generative Models</title>
-    <updated>2026-01-22T18:51:13Z</updated>
-    <link href="https://arxiv.org/abs/2601.16199v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16199v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Machine learning property attestations allow provers (e.g., model providers or owners) to attest properties of their models/datasets to verifiers (e.g., regulators, customers), enabling accountability towards regulations and policies. But, current approaches do not support generative models or large datasets. We present PAL*M, a property attestation framework for large generative models, illustrated using large language models. PAL*M defines properties across training and inference, leverages confidential virtual machines with security-aware GPUs for coverage of CPU-GPU operations, and proposes using incremental multiset hashing over memory-mapped datasets to efficiently track their integrity. We implement PAL*M on Intel TDX and NVIDIA H100, showing it is efficient, scalable, versatile, and secure.</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:51:13Z</published>
-    <arxiv:primary_category term="cs.CR"/>
-    <author>
-      <name>Prach Chantasantitam</name>
-    </author>
-    <author>
-      <name>Adam Ilyas Caulfield</name>
-    </author>
-    <author>
-      <name>Vasisht Duddu</name>
-    </author>
-    <author>
-      <name>Lachlan J. Gunn</name>
-    </author>
-    <author>
-      <name>N. Asokan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.16196v1</id>
-    <title>Inference on the Significance of Modalities in Multimodal Generalized Linear Models</title>
-    <updated>2026-01-22T18:48:34Z</updated>
-    <link href="https://arxiv.org/abs/2601.16196v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16196v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Despite the popular of multimodal statistical models, there lacks rigorous statistical inference tools for inferring the significance of a single modality within a multimodal model, especially in high-dimensional models. For high-dimensional multimodal generalized linear models, we propose a novel entropy-based metric, called the expected relative entropy, to quantify the information gain of one modality in addition to all other modalities in the model. We propose a deviance-based statistic to estimate the expected relative entropy, prove that it is consistent and its asymptotic distribution can be approximated by a non-central chi-squared distribution. That enables the calculation of confidence intervals and p-values to assess the significance of the expected relative entropy for a given modality. We numerically evaluate the empirical performance of our proposed inference tool by simulations and apply it to a multimodal neuroimaging dataset to demonstrate its good performance on various high-dimensional multimodal generalized linear models.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:48:34Z</published>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Wanting Jin</name>
-    </author>
-    <author>
-      <name>Guorong Wu</name>
-    </author>
-    <author>
-      <name>Quefeng Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.16195v1</id>
-    <title>Pushing the limits of unconstrained machine-learned interatomic potentials</title>
-    <updated>2026-01-22T18:46:58Z</updated>
-    <link href="https://arxiv.org/abs/2601.16195v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16195v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Machine-learned interatomic potentials (MLIPs) are increasingly used to replace computationally demanding electronic-structure calculations to model matter at the atomic scale. The most commonly used model architectures are constrained to fulfill a number of physical laws exactly, from geometric symmetries to energy conservation. Evidence is mounting that relaxing some of these constraints can be beneficial to the efficiency and (somewhat surprisingly) accuracy of MLIPs, even though care should be taken to avoid qualitative failures associated with the breaking of physical symmetries. Given the recent trend of \emph{scaling up} models to larger numbers of parameters and training samples, a very important question is how unconstrained MLIPs behave in this limit. Here we investigate this issue, showing that -- when trained on large datasets -- unconstrained models can be superior in accuracy and speed when compared to physically constrained models. We assess these models both in terms of benchmark accuracy and in terms of usability in practical scenarios, focusing on static simulation workflows such as geometry optimization and lattice dynamics. We conclude that accurate unconstrained models can be applied with confidence, especially since simple inference-time modifications can be used to recover observables that are consistent with the relevant physical symmetries.</summary>
-    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:46:58Z</published>
-    <arxiv:comment>21 pages, 8 figures</arxiv:comment>
-    <arxiv:primary_category term="physics.chem-ph"/>
-    <author>
-      <name>Filippo Bigi</name>
-    </author>
-    <author>
-      <name>Paolo Pegolo</name>
-    </author>
-    <author>
-      <name>Arslan Mazitov</name>
-    </author>
-    <author>
-      <name>Michele Ceriotti</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.16180v1</id>
-    <title>Studying energy-resolved transport with wavepacket dynamics on quantum computers</title>
-    <updated>2026-01-22T18:30:30Z</updated>
-    <link href="https://arxiv.org/abs/2601.16180v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16180v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Probing energy-dependent transport in quantum simulators requires preparing states with tunable energy and small energy variance. Existing approaches often study quench dynamics of simple initial states, such as computational basis states, which are far from energy eigenstates and therefore limit the achievable energy resolution. In this work, we propose using wavepackets to probe transport properties with improved energy resolution. To demonstrate the utility of this approach, we prepare and evolve wavepackets on Quantinuum's H2-2 quantum computer and identify an energy-dependent localization transition in the Anderson model on an 8x7 lattice--a finite-size mobility edge. We observe that a wavepacket initialized at low energy remains spatially localized under time evolution, while a high-energy wavepacket delocalizes, consistent with the presence of a mobility edge. Crucial to our experiments is an error mitigation strategy that infers the noiseless output bit string distribution using maximum-likelihood estimation. Compared to post-selection, this method removes systematic errors and reduces statistical uncertainty by up to a factor of 5. We extend our methods to the many-particle regime by developing a quantum algorithm for preparing quasiparticle wavepackets in a one-dimensional model of interacting fermions. This technique has modest quantum resource requirements, making wavepacket-based studies of transport in many-body systems a promising application for near-term quantum computers.</summary>
+    <id>http://arxiv.org/abs/2601.16974v1</id>
+    <title>Formalising an operational continuum limit of quantum combs</title>
+    <updated>2026-01-23T18:49:41Z</updated>
+    <link href="https://arxiv.org/abs/2601.16974v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16974v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum combs are powerful conceptual tools for capturing multi-time processes in quantum information theory, constituting the most general quantum mechanical process. But, despite their causal nature, they lack a meaningful physical connection to time -- and are, by and large, arguably incompatible with it without extra structure. The subclass of quantum combs which assumes an underlying process is described by the so-called process tensor framework, which has been successfully used to study and characterise non-Markovian open quantum systems. But, although process tensors are motivated by an underlying dynamics, it is not a priori clear how to connect to a continuous process tensor object mathematically -- leaving an uncomfortable conceptual gap. In this work, we take a decisive step toward remedying this situation. We introduce a fully continuous process tensor framework by showing how the discrete multi-partite Choi state becomes a field-theoretic state in bosonic Fock space, which is intrinsically and rigorously defined in the continuum. With this equipped, we lay out the core structural elements of this framework and its properties. This translation allows for an information-theoretic treatment of multi-time correlations in the continuum via the analysis of their continuous matrix product state representatives. Our work closes a gap in the quantum information literature, and opens up the opportunity for the application of many-body physics insights to our understanding of quantum stochastic processes in the continuum.</summary>
     <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:30:30Z</published>
-    <arxiv:comment>21 pages, 11 figures, 4 tables</arxiv:comment>
+    <published>2026-01-23T18:49:41Z</published>
+    <arxiv:comment>28 pages + 13 page Appendix, 1 figure. Comments welcome!</arxiv:comment>
     <arxiv:primary_category term="quant-ph"/>
     <author>
-      <name>Melody Lee</name>
+      <name>Clara Wassner</name>
     </author>
     <author>
-      <name>Roland C. Farrell</name>
+      <name>Jonáš Fuksa</name>
+    </author>
+    <author>
+      <name>Jens Eisert</name>
+    </author>
+    <author>
+      <name>Gregory A. L. White</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.16179v1</id>
-    <title>A general spectral solver for the axisymmetric Jeans equations: fast galaxy modelling with arbitrary anisotropy</title>
-    <updated>2026-01-22T18:29:48Z</updated>
-    <link href="https://arxiv.org/abs/2601.16179v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16179v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Dynamical modelling is a fundamental tool for measuring galaxy masses and density profiles in the era of large integral-field spectroscopic surveys and Bayesian inference. Solutions based on the Jeans equations are popular due to their robustness and computational efficiency. However, traditional semi-analytic Jeans solvers often require restrictive assumptions about the velocity anisotropy to remain computationally tractable. This paper presents a new spectral solver for the axisymmetric Jeans equations designed to overcome these limitations. I first illustrate, using orbit integrations in realistic potentials, that spherical alignment of the velocity ellipsoid is a physically well-motivated approximation for galaxy modelling. The new method employs a spectral technique to solve the Jeans partial differential equations directly. Two design choices are critical for accuracy and speed: (i) solving for the slowly-varying velocity dispersion rather than the rapidly varying pressure, and (ii) imposing a Robin boundary condition to enforce the asymptotic decay on a finite domain. This formulation supports arbitrary anisotropy distributions beta(r, theta) while simultaneously increasing computational speed by orders of magnitude compared to standard high-accuracy quadratures. Validated against exact analytic benchmarks, the solver recovers intrinsic moments with sub-percent accuracy. The implementation will be included in the public JamPy package and is structured to be optimally suited for massive parallelization on specialized hardware such as GPUs, enabling the rigorous exploration of complex parameter spaces.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:29:48Z</published>
-    <arxiv:comment>15 pages, 7 figures. LaTeX. Submitted to MNRAS. Implementation will be included in the JamPy package at https://pypi.org/project/jampy/</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
+    <id>http://arxiv.org/abs/2601.16971v1</id>
+    <title>Auto-Regressive Masked Diffusion Models</title>
+    <updated>2026-01-23T18:42:30Z</updated>
+    <link href="https://arxiv.org/abs/2601.16971v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16971v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Masked diffusion models (MDMs) have emerged as a promising approach for language modeling, yet they face a performance gap compared to autoregressive models (ARMs) and require more training iterations. In this work, we present the Auto-Regressive Masked Diffusion (ARMD) model, an architecture designed to close this gap by unifying the training efficiency of autoregressive models with the parallel generation capabilities of diffusion-based models. Our key insight is to reframe the masked diffusion process as a block-wise causal model. This perspective allows us to design a strictly causal, permutation-equivariant architecture that computes all conditional probabilities across multiple denoising steps in a single, parallel forward pass. The resulting architecture supports efficient, autoregressive-style decoding and a progressive permutation training scheme, allowing the model to learn both canonical left-to-right and random token orderings. Leveraging this flexibility, we introduce a novel strided parallel generation strategy that accelerates inference by generating tokens in parallel streams while maintaining global coherence. Empirical results demonstrate that ARMD achieves state-of-the-art performance on standard language modeling benchmarks, outperforming established diffusion baselines while requiring significantly fewer training steps. Furthermore, it establishes a new benchmark for parallel text generation, effectively bridging the performance gap between parallel and sequential decoding.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T18:42:30Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>29th International Conference on Artificial Intelligence and Statistics (AISTATS) 2026</arxiv:journal_ref>
     <author>
-      <name>Michele Cappellari</name>
-      <arxiv:affiliation>University of Oxford</arxiv:affiliation>
+      <name>Mahdi Karami</name>
+    </author>
+    <author>
+      <name>Ali Ghodsi</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.16172v1</id>
-    <title>Structured Hints for Sample-Efficient Lean Theorem Proving</title>
-    <updated>2026-01-22T18:16:46Z</updated>
-    <link href="https://arxiv.org/abs/2601.16172v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16172v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>State-of-the-art neural theorem provers like DeepSeek-Prover-V1.5 combine large language models with reinforcement learning, achieving impressive results through sophisticated training. We ask: do these highly-trained models still benefit from simple structural guidance at inference time? We evaluate a lightweight intervention -- a fixed prompt schedule over 15 common tactic skeletons -- on the miniF2F benchmark. This simple approach yields 21.7% pass@16 compared to 15.2% for standard sampling from the same model, a 43% relative improvement using the same number of samples (k=16) and same maximum generation length (1024 tokens). Our results suggest that even capable RL-trained provers underutilize structural priors available in the tactic language, and that simple inference-time guidance remains a cheap, complementary boost.</summary>
+    <id>http://arxiv.org/abs/2601.16945v1</id>
+    <title>A new class of colored Gaussian graphical models with explicit normalizing constants</title>
+    <updated>2026-01-23T18:01:37Z</updated>
+    <link href="https://arxiv.org/abs/2601.16945v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16945v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Bayesian model selection in colored Gaussian graphical models (CGGMs), which combine sparsity of conditional independencies with symmetry constraints encoded by vertex- and edge-colored graphs. A computational bottleneck in Bayesian inference for CGGMs is the evaluation of Diaconis-Ylvisaker normalizing constants, given by gamma-type integrals over cones of precision matrices with prescribed zeros and equality constraints. While explicit formulas are known for standard Gaussian graphical models only in special cases (e.g. decomposable graphs) and for a limited class of RCOP models, no general tractable framework has been available for broader families of CGGMs.
+  We introduce a new subclass of RCON models for which these normalizing constants admit closed-form expressions. On the algebraic side, we identify conditions on spaces of colored precision matrices that guarantee tractability of the associated integrals, leading to Block-Cholesky spaces (BC-spaces) and Diagonally Commutative Block-Cholesky spaces (DCBC-spaces). On the combinatorial side, we characterize the colored graphs inducing such spaces via a color perfect elimination ordering and a 2-path regularity condition, and define the resulting Color Elimination-Regular (CER) graphs and their symmetric variants. This class strictly extends decomposable graphs in the uncolored setting and contains all RCOP models associated with decomposable graphs. In the one-color case, our framework reveals a close connection between DCBC-spaces and Bose-Mesner algebras.
+  For models defined on BC- and DCBC-spaces, we derive explicit closed-form formulas for the normalizing constants in terms of a finite collection of structure constants and propose an efficient method for computing them in the commutative case. Our results broaden the range of CGGMs amenable to principled Bayesian structure learning in high-dimensional applications.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T18:01:37Z</published>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Adam Chojecki</name>
+    </author>
+    <author>
+      <name>Piotr Graczyk</name>
+    </author>
+    <author>
+      <name>Hideyuki Ishi</name>
+    </author>
+    <author>
+      <name>Bartosz Kołodziejek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16934v1</id>
+    <title>Information Representation Fairness in Long-Document Embeddings: The Peculiar Interaction of Positional and Language Bias</title>
+    <updated>2026-01-23T17:48:31Z</updated>
+    <link href="https://arxiv.org/abs/2601.16934v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16934v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To be discoverable in an embedding-based search process, each part of a document should be reflected in its embedding representation. To quantify any potential reflection biases, we introduce a permutation-based evaluation framework. With this, we observe that state-of-the-art embedding models exhibit systematic positional and language biases when documents are longer and consist of multiple segments. Specifically, early segments and segments in higher-resource languages like English are over-represented, while later segments and segments in lower-resource languages are marginalized. In our further analysis, we find that the positional bias stems from front-loaded attention distributions in pooling-token embeddings, where early tokens receive more attention. To mitigate this issue, we introduce an inference-time attention calibration method that redistributes attention more evenly across document positions, increasing discoverabiltiy of later segments. Our evaluation framework and attention calibration is available at https://github.com/impresso/fair-sentence-transformers</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:16:46Z</published>
-    <arxiv:comment>9 pages, 1 figure</arxiv:comment>
+    <published>2026-01-23T17:48:31Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Elias Schuhmacher</name>
+    </author>
+    <author>
+      <name>Andrianos Michail</name>
+    </author>
+    <author>
+      <name>Juri Opitz</name>
+    </author>
+    <author>
+      <name>Rico Sennrich</name>
+    </author>
+    <author>
+      <name>Simon Clematide</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16886v1</id>
+    <title>MAGE-KT: Multi-Agent Graph-Enhanced Knowledge Tracing with Subgraph Retrieval and Asymmetric Fusion</title>
+    <updated>2026-01-23T16:51:08Z</updated>
+    <link href="https://arxiv.org/abs/2601.16886v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16886v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge Tracing (KT) aims to model a student's learning trajectory and predict performance on the next question. A key challenge is how to better represent the relationships among students, questions, and knowledge concepts (KCs). Recently, graph-based KT paradigms have shown promise for this problem. However, existing methods have not sufficiently explored inter-concept relations, often inferred solely from interaction sequences. In addition, the scale and heterogeneity of KT graphs make full-graph encoding both computationally both costly and noise-prone, causing attention to bleed into student-irrelevant regions and degrading the fidelity of inter-KC relations. To address these issues, we propose a novel framework: Multi-Agent Graph-Enhanced Knowledge Tracing (MAGE-KT). It constructs a multi-view heterogeneous graph by combining a multi-agent KC relation extractor and a student-question interaction graph, capturing complementary semantic and behavioral signals. Conditioned on the target student's history, it retrieves compact, high-value subgraphs and integrates them using an Asymmetric Cross-attention Fusion Module to enhance prediction while avoiding attention diffusion and irrelevant computation. Experiments on three widely used KT datasets show substantial improvements in KC-relation accuracy and clear gains in next-question prediction over existing methods.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T16:51:08Z</published>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Zachary Burton</name>
+      <name>Chi Yu</name>
+    </author>
+    <author>
+      <name>Hongyu Yuan</name>
+    </author>
+    <author>
+      <name>Zhiyi Duan</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.16159v1</id>
-    <title>Magnetar fraction in Core-Collapse Supernovae</title>
-    <updated>2026-01-22T18:00:26Z</updated>
-    <link href="https://arxiv.org/abs/2601.16159v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16159v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Magnetars are extreme neutron stars powered by ultra-strong magnetic fields ($\sim10^{14}$ Gauss) and are compelling engines for some of the most powerful extragalactic transients such as Super Luminous Supernovae, Gamma-Ray Bursts, and Fast Radio Bursts. Yet their formation rate relative to ordinary neutron stars remains uncertain, often precluding direct comparisons with the rates of these extragalactic transients. Furthermore, magnetars have been recently shown to be evolutionarily related to other neutron star classes, complicating the estimate of the exact magnetar fraction within the neutron star population. We study the magnetar birth fraction in core-collapse supernovae using pulsar population synthesis of all isolated neutron star classes in our Galaxy, incorporating self-consistently the Galactic dynamical evolution, spin-down and magneto-thermal evolution. This approach allows us to derive strong constraints from small close-to-complete observational samples. In particular, looking at the age-limited young ($&lt;$2 kyr) neutron star population in the Milky Way we find 24 detected young neutron stars, with only 10 of them (41%) being classical rotational powered pulsars, while the others (59%) are either magnetars or central compact objects, the latter believed to be equally magnetically powered. We further compare the results with the nearby volume-limited class ($&lt;$500 pc) of X-ray Dim Isolated Neutron stars, old nearby magnetars. We conclude that the observed population of isolated neutron stars in the Galaxy can be reproduced only by assuming a core-collapse supernova rate larger than two, and a larger magnetar fraction than previously inferred. By assuming a bimodal initial magnetic field ($B_0$) distribution at birth, we find that the magnetar class peaks between $B_0\sim 1-2.5\times10^{14}$ Gauss and represents on average $\sim50$% of the entire neutron star population.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T18:00:26Z</published>
-    <arxiv:comment>51 pages, 9 figures, 4 tables; Submitted; Comments welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
+    <id>http://arxiv.org/abs/2601.16872v1</id>
+    <title>From Atom to Community: Structured and Evolving Agent Memory for User Behavior Modeling</title>
+    <updated>2026-01-23T16:24:57Z</updated>
+    <link href="https://arxiv.org/abs/2601.16872v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16872v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>User behavior modeling lies at the heart of personalized applications like recommender systems. With LLM-based agents, user preference representation has evolved from latent embeddings to semantic memory. While existing memory mechanisms show promise in textual dialogues, modeling non-textual behaviors remains challenging, as preferences must be inferred from implicit signals like clicks without ground truth supervision. Current approaches rely on a single unstructured summary, updated through simple overwriting. However, this is suboptimal: users exhibit multi-faceted interests that get conflated, preferences evolve yet naive overwriting causes forgetting, and sparse individual interactions necessitate collaborative signals. We present STEAM (\textit{\textbf{ST}ructured and \textbf{E}volving \textbf{A}gent \textbf{M}emory}), a novel framework that reimagines how agent memory is organized and updated. STEAM decomposes preferences into atomic memory units, each capturing a distinct interest dimension with explicit links to observed behaviors. To exploit collaborative patterns, STEAM organizes similar memories across users into communities and generates prototype memories for signal propagation. The framework further incorporates adaptive evolution mechanisms, including consolidation for refining memories and formation for capturing emerging interests. Experiments on three real-world datasets demonstrate that STEAM substantially outperforms state-of-the-art baselines in recommendation accuracy, simulation fidelity, and diversity.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T16:24:57Z</published>
+    <arxiv:primary_category term="cs.IR"/>
     <author>
-      <name>Celsa Pardo-Araujo</name>
+      <name>Yuxin Liao</name>
     </author>
     <author>
-      <name>Nanda Rea</name>
+      <name>Le Wu</name>
     </author>
     <author>
-      <name>Michele Ronchi</name>
+      <name>Min Hou</name>
     </author>
     <author>
-      <name>Vanessa Graber</name>
+      <name>Yu Wang</name>
+    </author>
+    <author>
+      <name>Han Wu</name>
+    </author>
+    <author>
+      <name>Meng Wang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.16152v1</id>
-    <title>Substrate Stability Under Persistent Disagreement: Structural Constraints for Neutral Ontological Substrates</title>
-    <updated>2026-01-22T17:51:02Z</updated>
-    <link href="https://arxiv.org/abs/2601.16152v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.16152v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Modern data systems increasingly operate under conditions of persistent legal, political, and analytic disagreement. In such settings, interoperability cannot rely on shared interpretation, negotiated semantics, or centralized authority. Instead, representations must function as neutral substrates that preserve stable reference across incompatible extensions. This paper investigates the structural constraints imposed on ontological design by this requirement. Building on a neutrality framework that treats interpretive non-commitment and stability under extension as explicit design constraints, we ask what minimal ontological structure is forced if accountability relationships are to remain referable and comparable under disagreement. Minimality here is not mere parsimony: a reduction is admissible only if it does not reintroduce stability-critical distinctions as hidden roles, flags, or contextual predicates. We establish a conditional lower-bound result: any ontology capable of supporting accountability under persistent disagreement must realize at least six distinct identity-and-persistence regimes. We further show that a construction with exactly six such regimes is sufficient to satisfy the stated requirements without embedding causal or normative commitments in the substrate. The result is not a proposal for a universal ontology, but a constraint on what is possible when neutrality and stable reference are treated as non-negotiable design goals.</summary>
-    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2601.16848v1</id>
+    <title>Stochastic Modeling and Resource Dimensioning of Multi-Cellular Edge Intelligent Systems</title>
+    <updated>2026-01-23T15:55:43Z</updated>
+    <link href="https://arxiv.org/abs/2601.16848v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16848v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Edge intelligence enables AI inference at the network edge, co-located with or near the radio access network, rather than in centralized clouds or on mobile devices. It targets low-latency, resource-constrained applications with large data volumes, requiring tight integration of wireless access and on-site computing. Yet system performance and cost-efficiency hinge on joint pre-deployment dimensioning of radio and computational resources, especially under spatial and temporal uncertainty. Prior work largely emphasizes run-time allocation or relies on simplified models that decouple radio and computing, missing end-to-end correlations in large-scale deployments. This paper introduces a unified stochastic framework to dimension multi-cell edge-intelligent systems. We model network topology with Poisson point processes, capturing random user and base-station locations, inter-cell interference, distance-based fractional power control, and peak-power constraints. By combining this with queueing theory and empirical AI inference workload profiling, we derive tractable expressions for end-to-end offloading delay. These enable a non-convex joint optimization that minimizes deployment cost under statistical QoS guarantees, expressed through strict tail-latency and inference-accuracy constraints. We prove the problem decomposes into convex subproblems, yielding global optimality. Numerical results in noise- and interference-limited regimes identify cost-efficient design regions and configurations that cause under-utilization or user unfairness. Smaller cells reduce transmission delay but raise per-request computing cost due to weaker server multiplexing, whereas larger cells show the opposite trend. Densification reduces computational costs only when frequency reuse scales with base-station density; otherwise, sparser deployments improve fairness and efficiency in interference-limited settings.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T15:55:43Z</published>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Jaume Anguera Peris</name>
+    </author>
+    <author>
+      <name>Joakim Jaldén</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16842v1</id>
+    <title>Parametric Mean-Field empirical Bayes in high-dimensional linear regression</title>
+    <updated>2026-01-23T15:44:01Z</updated>
+    <link href="https://arxiv.org/abs/2601.16842v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16842v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we consider the problem of parametric empirical Bayes estimation of an i.i.d. prior in high-dimensional Bayesian linear regression, with random design. We obtain the asymptotic distribution of the variational Empirical Bayes (vEB) estimator, which approximately maximizes a variational lower bound of the intractable marginal likelihood. We characterize a sharp phase transition behavior for the vEB estimator -- namely that it is information theoretically optimal (in terms of limiting variance) up to $p=o(n^{2/3})$ while it suffers from a sub-optimal convergence rate in higher dimensions. In the first regime, i.e., when $p=o(n^{2/3})$, we show how the estimated prior can be calibrated to enable valid coordinate-wise and delocalized inference, both under the \emph{empirical Bayes posterior} and the oracle posterior. In the second regime, we propose a debiasing technique as a way to improve the performance of the vEB estimator beyond $p=o(n^{2/3})$. Extensive numerical experiments corroborate our theoretical findings.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T15:44:01Z</published>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Seunghyun Lee</name>
+    </author>
+    <author>
+      <name>Nabarun Deb</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16823v1</id>
+    <title>Trapped in the past? Disentangling fluid and crystallized intelligence of large language models using chess</title>
+    <updated>2026-01-23T15:23:08Z</updated>
+    <link href="https://arxiv.org/abs/2601.16823v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16823v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) exhibit remarkable capabilities, yet it remains unclear to what extent these reflect sophisticated recall (crystallized intelligence) or reasoning ability (fluid intelligence). We introduce chess as a controlled testbed for disentangling these faculties. Leveraging the game's structure and scalable engine evaluations, we construct a taxonomy of positions varying in training corpus proximity--ranging from common states solvable by memorization to novel ones requiring first-principles reasoning. We systematically evaluate multiple GPT generations under varying reasoning intensities. Our analysis reveals a clear gradient: performance consistently degrades as fluid intelligence demands increase. Notably, in out-of-distribution tasks, performance collapses to random levels. While newer models improve, progress slows significantly for tasks outside the training distribution. Furthermore, while reasoning-augmented inference improves performance, its marginal benefit per token decreases with distributional proximity. These results suggest current architectures remain limited in systematic generalization, highlighting the need for mechanisms beyond scale to achieve robust fluid intelligence.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-22T17:51:02Z</published>
-    <arxiv:comment>29 pages</arxiv:comment>
-    <arxiv:primary_category term="cs.LO"/>
+    <published>2026-01-23T15:23:08Z</published>
+    <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Denise M. Case</name>
+      <name>Leonard S. Pleiss</name>
+    </author>
+    <author>
+      <name>Maximilian Schiffer</name>
+    </author>
+    <author>
+      <name>Robert K. von Weizsäcker</name>
     </author>
   </entry>
 </feed>
