@@ -1,286 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-02-02T01:15:51Z -->
+<!-- Last updated: 2026-02-03T01:16:29Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-02-02T01:15:51Z</updated>
+  <updated>2026-02-03T01:16:29Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>132191</opensearch:totalResults>
+  <opensearch:totalResults>132350</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2601.22157v1</id>
-    <title>Discovering Hidden Gems in Model Repositories</title>
-    <updated>2026-01-29T18:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2601.22157v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22157v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Public repositories host millions of fine-tuned models, yet community usage remains disproportionately concentrated on a small number of foundation checkpoints. We investigate whether this concentration reflects efficient market selection or if superior models are systematically overlooked. Through an extensive evaluation of over 2,000 models, we show the prevalence of "hidden gems", unpopular fine-tunes that significantly outperform their popular counterparts. Notably, within the Llama-3.1-8B family, we find rarely downloaded checkpoints that improve math performance from 83.2% to 96.0% without increasing inference costs. However, discovering these models through exhaustive evaluation of every uploaded model is computationally infeasible. We therefore formulate model discovery as a Multi-Armed Bandit problem and accelerate the Sequential Halving search algorithm by using shared query sets and aggressive elimination schedules. Our method retrieves top models with as few as 50 queries per candidate, accelerating discovery by over 50x.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:59:55Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Jonathan Kahana</name>
-    </author>
-    <author>
-      <name>Eliahu Horwitz</name>
-    </author>
-    <author>
-      <name>Yedid Hoshen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22156v1</id>
-    <title>Hybrid Linear Attention Done Right: Efficient Distillation and Effective Architectures for Extremely Long Contexts</title>
-    <updated>2026-01-29T18:59:53Z</updated>
-    <link href="https://arxiv.org/abs/2601.22156v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22156v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Hybrid Transformer architectures, which combine softmax attention blocks and recurrent neural networks (RNNs), have shown a desirable performance-throughput tradeoff for long-context modeling, but their adoption and studies are hindered by the prohibitive cost of large-scale pre-training from scratch. Some recent studies have shown that pre-trained softmax attention blocks can be converted into RNN blocks through parameter transfer and knowledge distillation. However, these transfer methods require substantial amounts of training data (more than 10B tokens), and the resulting hybrid models also exhibit poor long-context performance, which is the scenario where hybrid models enjoy significant inference speedups over Transformer-based models. In this paper, we present HALO (Hybrid Attention via Layer Optimization), a pipeline for distilling Transformer models into RNN-attention hybrid models. We then present HypeNet, a hybrid architecture with superior length generalization enabled by a novel position encoding scheme (named HyPE) and various architectural modifications. We convert the Qwen3 series into HypeNet using HALO, achieving performance comparable to the original Transformer models while enjoying superior long-context performance and efficiency. The conversion requires just 2.3B tokens, less than 0.01% of their pre-training data</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:59:53Z</published>
-    <arxiv:comment>20 pages, 8 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Yingfa Chen</name>
-    </author>
-    <author>
-      <name>Zhen Leng Thai</name>
-    </author>
-    <author>
-      <name>Zihan Zhou</name>
-    </author>
-    <author>
-      <name>Zhu Zhang</name>
-    </author>
-    <author>
-      <name>Xingyu Shen</name>
-    </author>
-    <author>
-      <name>Shuo Wang</name>
-    </author>
-    <author>
-      <name>Chaojun Xiao</name>
-    </author>
-    <author>
-      <name>Xu Han</name>
-    </author>
-    <author>
-      <name>Zhiyuan Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22153v1</id>
-    <title>DynamicVLA: A Vision-Language-Action Model for Dynamic Object Manipulation</title>
-    <updated>2026-01-29T18:59:51Z</updated>
-    <link href="https://arxiv.org/abs/2601.22153v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22153v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Manipulating dynamic objects remains an open challenge for Vision-Language-Action (VLA) models, which, despite strong generalization in static manipulation, struggle in dynamic scenarios requiring rapid perception, temporal anticipation, and continuous control. We present DynamicVLA, a framework for dynamic object manipulation that integrates temporal reasoning and closed-loop adaptation through three key designs: 1) a compact 0.4B VLA using a convolutional vision encoder for spatially efficient, structurally faithful encoding, enabling fast multimodal inference; 2) Continuous Inference, enabling overlapping reasoning and execution for lower latency and timely adaptation to object motion; and 3) Latent-aware Action Streaming, which bridges the perception-execution gap by enforcing temporally aligned action execution. To fill the missing foundation of dynamic manipulation data, we introduce the Dynamic Object Manipulation (DOM) benchmark, built from scratch with an auto data collection pipeline that efficiently gathers 200K synthetic episodes across 2.8K scenes and 206 objects, and enables fast collection of 2K real-world episodes without teleoperation. Extensive evaluations demonstrate remarkable improvements in response speed, perception, and generalization, positioning DynamicVLA as a unified framework for general dynamic object manipulation across embodiments.</summary>
+    <id>http://arxiv.org/abs/2601.23285v1</id>
+    <title>End-to-end Optimization of Belief and Policy Learning in Shared Autonomy Paradigms</title>
+    <updated>2026-01-30T18:59:16Z</updated>
+    <link href="https://arxiv.org/abs/2601.23285v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23285v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Shared autonomy systems require principled methods for inferring user intent and determining appropriate assistance levels. This is a central challenge in human-robot interaction, where systems must be successful while being mindful of user agency. Previous approaches relied on static blending ratios or separated goal inference from assistance arbitration, leading to suboptimal performance in unstructured environments. We introduce BRACE (Bayesian Reinforcement Assistance with Context Encoding), a novel framework that fine-tunes Bayesian intent inference and context-adaptive assistance through an architecture enabling end-to-end gradient flow between intent inference and assistance arbitration. Our pipeline conditions collaborative control policies on environmental context and complete goal probability distributions. We provide analysis showing (1) optimal assistance levels should decrease with goal uncertainty and increase with environmental constraint severity, and (2) integrating belief information into policy learning yields a quadratic expected regret advantage over sequential approaches. We validated our algorithm against SOTA methods (IDA, DQN) using a three-part evaluation progressively isolating distinct challenges of end-effector control: (1) core human-interaction dynamics in a 2D human-in-the-loop cursor task, (2) non-linear dynamics of a robotic arm, and (3) integrated manipulation under goal ambiguity and environmental constraints. We demonstrate improvements over SOTA, achieving 6.3% higher success rates and 41% increased path efficiency, and 36.3% success rate and 87% path efficiency improvement over unassisted control. Our results confirmed that integrated optimization is most beneficial in complex, goal-ambiguous scenarios, and is generalizable across robotic domains requiring goal-directed assistance, advancing the SOTA for adaptive shared autonomy.</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:59:51Z</published>
-    <arxiv:comment>Project Page: https://www.infinitescript.com/project/dynamic-vla/ GitHub: https://github.com/hzxie/DynamicVLA</arxiv:comment>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T18:59:16Z</published>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Haozhe Xie</name>
+      <name>MH Farhadi</name>
     </author>
     <author>
-      <name>Beichen Wen</name>
+      <name>Ali Rabiee</name>
     </author>
     <author>
-      <name>Jiarui Zheng</name>
+      <name>Sima Ghafoori</name>
     </author>
     <author>
-      <name>Zhaoxi Chen</name>
+      <name>Anna Cetera</name>
     </author>
     <author>
-      <name>Fangzhou Hong</name>
+      <name>Andrew Fisher</name>
     </author>
     <author>
-      <name>Haiwen Diao</name>
-    </author>
-    <author>
-      <name>Ziwei Liu</name>
+      <name>Reza Abiri</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.22132v1</id>
-    <title>Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference</title>
-    <updated>2026-01-29T18:52:54Z</updated>
-    <link href="https://arxiv.org/abs/2601.22132v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22132v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Models (LLMs) deliver state-of-the-art performance on complex reasoning tasks, but their inference costs limit deployment at scale. Small Language Models (SLMs) offer dramatic cost savings yet lag substantially in accuracy. Existing approaches - routing and cascading - treat the LLM as an all-or-nothing resource: either the query bypasses the LLM entirely, or the LLM generates a complete response at full cost. We introduce LLM Shepherding, a framework that requests only a short prefix (a hint) from the LLM and provides it to SLM. This simple mechanism is surprisingly effective for math and coding tasks: even hints comprising 10-30% of the full LLM response improve SLM accuracy significantly. Shepherding generalizes both routing and cascading, and it achieves lower cost under oracle decision-making. We develop a two-stage predictor that jointly determines whether a hint is needed and how many tokens to request. On the widely-used mathematical reasoning (GSM8K, CNK12) and code generation (HumanEval, MBPP) benchmarks, Shepherding reduces costs by 42-94% relative to LLM-only inference. Compared to state-of-the-art routing and cascading baselines, shepherding delivers up to 2.8x cost reduction while matching accuracy. To our knowledge, this is the first work to exploit token-level budget control for SLM-LLM collaboration.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:52:54Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Ziming Dong</name>
-    </author>
-    <author>
-      <name>Hardik Sharma</name>
-    </author>
-    <author>
-      <name>Evan O'Toole</name>
-    </author>
-    <author>
-      <name>Jaya Prakash Champati</name>
-    </author>
-    <author>
-      <name>Kui Wu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22123v1</id>
-    <title>Learning Hamiltonian Flow Maps: Mean Flow Consistency for Large-Timestep Molecular Dynamics</title>
-    <updated>2026-01-29T18:47:46Z</updated>
-    <link href="https://arxiv.org/abs/2601.22123v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22123v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Simulating the long-time evolution of Hamiltonian systems is limited by the small timesteps required for stable numerical integration. To overcome this constraint, we introduce a framework to learn Hamiltonian Flow Maps by predicting the mean phase-space evolution over a chosen time span $Δt$, enabling stable large-timestep updates far beyond the stability limits of classical integrators. To this end, we impose a Mean Flow consistency condition for time-averaged Hamiltonian dynamics. Unlike prior approaches, this allows training on independent phase-space samples without access to future states, avoiding expensive trajectory generation. Validated across diverse Hamiltonian systems, our method in particular improves upon molecular dynamics simulations using machine-learned force fields (MLFF). Our models maintain comparable training and inference cost, but support significantly larger integration timesteps while trained directly on widely-available trajectory-free MLFF datasets.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:47:46Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Winfried Ripken</name>
-    </author>
-    <author>
-      <name>Michael Plainer</name>
-    </author>
-    <author>
-      <name>Gregor Lied</name>
-    </author>
-    <author>
-      <name>Thorben Frank</name>
-    </author>
-    <author>
-      <name>Oliver T. Unke</name>
-    </author>
-    <author>
-      <name>Stefan Chmiela</name>
-    </author>
-    <author>
-      <name>Frank Noé</name>
-    </author>
-    <author>
-      <name>Klaus Robert Müller</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22114v1</id>
-    <title>SINA: A Circuit Schematic Image-to-Netlist Generator Using Artificial Intelligence</title>
-    <updated>2026-01-29T18:41:52Z</updated>
-    <link href="https://arxiv.org/abs/2601.22114v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22114v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Current methods for converting circuit schematic images into machine-readable netlists struggle with component recognition and connectivity inference. In this paper, we present SINA, an open-source, fully automated circuit schematic image-to-netlist generator. SINA integrates deep learning for accurate component detection, Connected-Component Labeling (CCL) for precise connectivity extraction, and Optical Character Recognition (OCR) for component reference designator retrieval, while employing a Vision-Language Model (VLM) for reliable reference designator assignments. In our experiments, SINA achieves 96.47% overall netlist-generation accuracy, which is 2.72x higher than state-of-the-art approaches.</summary>
+    <id>http://arxiv.org/abs/2601.23281v1</id>
+    <title>User Prompting Strategies and Prompt Enhancement Methods for Open-Set Object Detection in XR Environments</title>
+    <updated>2026-01-30T18:55:38Z</updated>
+    <link href="https://arxiv.org/abs/2601.23281v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23281v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Open-set object detection (OSOD) localizes objects while identifying and rejecting unknown classes at inference. While recent OSOD models perform well on benchmarks, their behavior under realistic user prompting remains underexplored. In interactive XR settings, user-generated prompts are often ambiguous, underspecified, or overly detailed. To study prompt-conditioned robustness, we evaluate two OSOD models, GroundingDINO and YOLO-E, on real-world XR images and simulate diverse user prompting behaviors using vision-language models. We consider four prompt types: standard, underdetailed, overdetailed, and pragmatically ambiguous, and examine the impact of two enhancement strategies on these prompts. Results show that both models exhibit stable performance under underdetailed and standard prompts, while they suffer degradation under ambiguous prompts. Overdetailed prompts primarily affect GroundingDINO. Prompt enhancement substantially improves robustness under ambiguity, yielding gains exceeding 55% mIoU and 41% average confidence. Based on the findings, we propose several prompting strategies and prompt enhancement methods for OSOD models in XR environments.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:41:52Z</published>
+    <published>2026-01-30T18:55:38Z</published>
+    <arxiv:comment>Accepted by IEEE VR 2026: GenAI-XR workshop</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Saoud Aldowaish</name>
+      <name>Junfeng Lin</name>
     </author>
     <author>
-      <name>Yashwanth Karumanchi</name>
+      <name>Yanming Xiu</name>
     </author>
     <author>
-      <name>Kai-Chen Chiang</name>
-    </author>
-    <author>
-      <name>Soroosh Noorzad</name>
-    </author>
-    <author>
-      <name>Morteza Fayazi</name>
+      <name>Maria Gorlatova</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2601.22106v1</id>
-    <title>Information-geometry-driven graph sequential growth</title>
-    <updated>2026-01-29T18:37:08Z</updated>
-    <link href="https://arxiv.org/abs/2601.22106v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22106v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We investigate the properties of a class of regularisation-free approaches for Gaussian graphical inference based on the information-geometry-driven sequential growth of initially edgeless graphs. Relating the growth of a graph to a coordinate descent process, we characterise the fully-corrective descents corresponding to information-optimal growths, and propose numerically efficient strategies for their approximation. We demonstrate the ability of the proposed procedures to reliably extract sparse graphical models while limiting the number of false detections, and illustrate how activation ranks can provide insight into the informational relevance of edge sets. The considered approaches are tuning-parameter-free and have complexities akin to coordinate descents.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:37:08Z</published>
-    <arxiv:comment>23 pages, 10 figures</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Harry T. Bond</name>
-    </author>
-    <author>
-      <name>Bertrand Gauthier</name>
-    </author>
-    <author>
-      <name>Kirstin Strokorb</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22093v1</id>
-    <title>Investigating Associational Biases in Inter-Model Communication of Large Generative Models</title>
-    <updated>2026-01-29T18:29:55Z</updated>
-    <link href="https://arxiv.org/abs/2601.22093v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22093v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Social bias in generative AI can manifest not only as performance disparities but also as associational bias, whereby models learn and reproduce stereotypical associations between concepts and demographic groups, even in the absence of explicit demographic information (e.g., associating doctors with men). These associations can persist, propagate, and potentially amplify across repeated exchanges in inter-model communication pipelines, where one generative model's output becomes another's input. This is especially salient for human-centred perception tasks, such as human activity recognition and affect prediction, where inferences about behaviour and internal states can lead to errors or stereotypical associations that propagate into unequal treatment. In this work, focusing on human activity and affective expression, we study how such associations evolve within an inter-model communication pipeline that alternates between image generation and image description. Using the RAF-DB and PHASE datasets, we quantify demographic distribution drift induced by model-to-model information exchange and assess whether these drifts are systematic using an explainability pipeline. Our results reveal demographic drifts toward younger representations for both actions and emotions, as well as toward more female-presenting representations, primarily for emotions. We further find evidence that some predictions are supported by spurious visual regions (e.g., background or hair) rather than concept-relevant cues (e.g., body or face). We also examine whether these demographic drifts translate into measurable differences in downstream behaviour, i.e., while predicting activity and emotion labels. Finally, we outline mitigation strategies spanning data-centric, training and deployment interventions, and emphasise the need for careful safeguards when deploying interconnected models in human-centred AI systems.</summary>
-    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:29:55Z</published>
-    <arxiv:primary_category term="cs.CY"/>
-    <author>
-      <name>Fethiye Irmak Dogan</name>
-    </author>
-    <author>
-      <name>Yuval Weiss</name>
-    </author>
-    <author>
-      <name>Kajal Patel</name>
-    </author>
-    <author>
-      <name>Jiaee Cheong</name>
-    </author>
-    <author>
-      <name>Hatice Gunes</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22079v1</id>
-    <title>The Economics of No-regret Learning Algorithms</title>
-    <updated>2026-01-29T18:19:22Z</updated>
-    <link href="https://arxiv.org/abs/2601.22079v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22079v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>A fundamental challenge for modern economics is to understand what happens when actors in an economy are replaced with algorithms. Like rationality has enabled understanding of outcomes of classical economic actors, no-regret can enable the understanding of outcomes of algorithmic actors. This review article covers the classical computer science literature on no-regret algorithms to provide a foundation for an overview of the latest economics research on no-regret algorithms, focusing on the emerging topics of manipulation, statistical inference, and algorithmic collusion.</summary>
-    <category term="econ.TH" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:19:22Z</published>
-    <arxiv:comment>Accepted to Advances in Economics and Econometrics: Thirteenth World Congress, Volume 2</arxiv:comment>
-    <arxiv:primary_category term="econ.TH"/>
-    <author>
-      <name>Jason Hartline</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2601.22076v1</id>
-    <title>Where Do the Joules Go? Diagnosing Inference Energy Consumption</title>
-    <updated>2026-01-29T18:16:45Z</updated>
-    <link href="https://arxiv.org/abs/2601.22076v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2601.22076v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Energy is now a critical ML computing resource. While measuring energy consumption and observing trends is a valuable first step, accurately understanding and diagnosing why those differences occur is crucial for optimization. To that end, we begin by presenting a large-scale measurement study of inference time and energy across the generative AI landscape with 46 models, 7 tasks, and 1,858 different configurations on NVIDIA H100 and B200 GPUs. Our empirical findings span order-of-magnitude variations: LLM task type can lead to 25$\times$ energy differences, video generation sometimes consumes more than 100$\times$ the energy of images, and GPU utilization differences can result in 3--5$\times$ energy differences. Based on our observations, we present a framework for reasoning about the underlying mechanisms that govern time and energy consumption. The essence is that time and energy are determined by latent metrics like memory and utilization, which are in turn affected by various factors across the algorithm, software, and hardware layers. Our framework also extends directly to throughput per watt, a critical metric for power-constrained datacenters.</summary>
+    <id>http://arxiv.org/abs/2601.23278v1</id>
+    <title>FOCUS: DLLMs Know How to Tame Their Compute Bound</title>
+    <updated>2026-01-30T18:52:06Z</updated>
+    <link href="https://arxiv.org/abs/2601.23278v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23278v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion Large Language Models (DLLMs) offer a compelling alternative to Auto-Regressive models, but their deployment is constrained by high decoding cost. In this work, we identify a key inefficiency in DLLM decoding: while computation is parallelized over token blocks, only a small subset of tokens is decodable at each diffusion step, causing most compute to be wasted on non-decodable tokens. We further observe a strong correlation between attention-derived token importance and token-wise decoding probability. Based on this insight, we propose FOCUS -- an inference system designed for DLLMs. By dynamically focusing computation on decodable tokens and evicting non-decodable ones on-the-fly, FOCUS increases the effective batch size, alleviating compute limitations and enabling scalable throughput. Empirical evaluations demonstrate that FOCUS achieves up to 3.52$\times$ throughput improvement over the production-grade engine LMDeploy, while preserving or improving generation quality across multiple benchmarks. The FOCUS system is publicly available on GitHub: https://github.com/sands-lab/FOCUS.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-01-29T18:16:45Z</published>
-    <arxiv:comment>The ML.ENERGY Leaderboard v3.0 is open https://ml.energy/leaderboard</arxiv:comment>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T18:52:06Z</published>
+    <arxiv:comment>22 pages, 15 figures</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Jae-Won Chung</name>
+      <name>Kaihua Liang</name>
     </author>
     <author>
-      <name>Ruofan Wu</name>
+      <name>Xin Tan</name>
     </author>
     <author>
-      <name>Jeff J. Ma</name>
+      <name>An Zhong</name>
     </author>
     <author>
-      <name>Mosharaf Chowdhury</name>
+      <name>Hong Xu</name>
+    </author>
+    <author>
+      <name>Marco Canini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23273v1</id>
+    <title>UPA: Unsupervised Prompt Agent via Tree-Based Search and Selection</title>
+    <updated>2026-01-30T18:39:09Z</updated>
+    <link href="https://arxiv.org/abs/2601.23273v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23273v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prompt agents have recently emerged as a promising paradigm for automated prompt optimization, framing refinement as a sequential decision-making problem over a structured prompt space. While this formulation enables the use of advanced planning algorithms, these methods typically assume access to supervised reward signals, which are often unavailable in practical scenarios. In this work, we propose UPA, an Unsupervised Prompt Agent that realizes structured search and selection without relying on supervised feedback. Specifically, during search, UPA iteratively constructs an evolving tree structure to navigate the prompt space, guided by fine-grained and order-invariant pairwise comparisons from Large Language Models (LLMs). Crucially, as these local comparisons do not inherently yield a consistent global scale, we decouple systematic prompt exploration from final selection, introducing a two-stage framework grounded in the Bradley-Terry-Luce (BTL) model. This framework first performs path-wise Bayesian aggregation of local comparisons to filter candidates under uncertainty, followed by global tournament-style comparisons to infer latent prompt quality and identify the optimal prompt. Experiments across multiple tasks demonstrate that UPA consistently outperforms existing prompt optimization methods, showing that agent-style optimization remains highly effective even in fully unsupervised settings.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T18:39:09Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Siran Peng</name>
+    </author>
+    <author>
+      <name>Weisong Zhao</name>
+    </author>
+    <author>
+      <name>Tianyu Fu</name>
+    </author>
+    <author>
+      <name>Chenxu Zhao</name>
+    </author>
+    <author>
+      <name>Tianshuo Zhang</name>
+    </author>
+    <author>
+      <name>Haoyuan Zhang</name>
+    </author>
+    <author>
+      <name>Xiangyu Zhu</name>
+    </author>
+    <author>
+      <name>Minghui Wu</name>
+    </author>
+    <author>
+      <name>Zhen Lei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23257v1</id>
+    <title>Outcome-Conditioned Reasoning Distillation for Resolving Software Issues</title>
+    <updated>2026-01-30T18:25:39Z</updated>
+    <link href="https://arxiv.org/abs/2601.23257v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23257v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Software issue resolution in large repositories is a long-range decision process: choices made during localization shape the space of viable edits, and missteps can compound into incorrect patches. Despite this, many LLM-based repair pipelines still operate in a reset-and-solve manner, producing fresh reasoning for every new issue instead of carrying forward what worked in past fixes. This is wasteful because repositories routinely contain earlier issues with overlapping structure, failure modes, or constraints, where prior repair experience could provide useful guidance. Existing approaches typically harvest this signal through forward-time trial procedures, such as repeated refinement or search, incurring high inference cost while still risking divergence from the eventual correct patch. We present an Outcome-Conditioned Reasoning Distillation(O-CRD) framework that uses resolved in-repository issues with verified patches as supervision. Starting from a historical fix, the method reconstructs a stage-wise repair trace backward from the verified outcome, then reuses the distilled guidance at inference time to steer file/function localization and patch synthesis, without fine-tuning or online search. On SWE-Bench Lite, this approach increases Pass@1 by 10.4% with GPT-4o, 8.6% with DeepSeek-V3, and 10.3% with GPT-5, indicating that outcome-conditioned reuse of verified repairs can replace costly forward exploration for software issue resolution.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T18:25:39Z</published>
+    <arxiv:comment>17 pages, 3 figures, 5 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Chenglin Li</name>
+      <arxiv:affiliation>Peter</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yisen Xu</name>
+      <arxiv:affiliation>Peter</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zehao Wang</name>
+      <arxiv:affiliation>Peter</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shin Hwei Tan</name>
+      <arxiv:affiliation>Peter</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Tse-Hsun</name>
+      <arxiv:affiliation>Peter</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23253v1</id>
+    <title>Training-Free Test-Time Adaptation with Brownian Distance Covariance in Vision-Language Models</title>
+    <updated>2026-01-30T18:21:45Z</updated>
+    <link href="https://arxiv.org/abs/2601.23253v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23253v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-language models suffer performance degradation under domain shift, limiting real-world applicability. Existing test-time adaptation methods are computationally intensive, rely on back-propagation, and often focus on single modalities. To address these issues, we propose Training-free Test-Time Adaptation with Brownian Distance Covariance (TaTa). TaTa leverages Brownian Distance Covariance-a powerful statistical measure that captures both linear and nonlinear dependencies via pairwise distances-to dynamically adapt VLMs to new domains without training or back-propagation. This not only improves efficiency but also enhances stability by avoiding disruptive weight updates. TaTa further integrates attribute-enhanced prompting to improve vision-language inference with descriptive visual cues. Combined with dynamic clustering and pseudo-label refinement, it effectively recalibrates the model for novel visual contexts. Experiments across diverse datasets show that TaTa significantly reduces computational cost while achieving state-of-the-art performance in domain and cross-dataset generalization.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T18:21:45Z</published>
+    <arxiv:comment>Accepted in ICASSP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+    <author>
+      <name>Chun-Wun Cheng</name>
+    </author>
+    <author>
+      <name>Angelica I. Aviles-Rivero</name>
+    </author>
+    <author>
+      <name>Zhihai He</name>
+    </author>
+    <author>
+      <name>Liang-Jie Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23252v1</id>
+    <title>Nested Slice Sampling: Vectorized Nested Sampling for GPU-Accelerated Inference</title>
+    <updated>2026-01-30T18:20:32Z</updated>
+    <link href="https://arxiv.org/abs/2601.23252v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23252v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Model comparison and calibrated uncertainty quantification often require integrating over parameters, but scalable inference can be challenging for complex, multimodal targets. Nested Sampling is a robust alternative to standard MCMC, yet its typically sequential structure and hard constraints make efficient accelerator implementations difficult. This paper introduces Nested Slice Sampling (NSS), a GPU-friendly, vectorized formulation of Nested Sampling that uses Hit-and-Run Slice Sampling for constrained updates. A tuning analysis yields a simple near-optimal rule for setting the slice width, improving high-dimensional behavior and making per-step compute more predictable for parallel execution. Experiments on challenging synthetic targets, high dimensional Bayesian inference, and Gaussian process hyperparameter marginalization show that NSS maintains accurate evidence estimates and high-quality posterior samples, and is particularly robust on difficult multimodal problems where current state-of-the-art methods such as tempered SMC baselines can struggle. An open-source implementation is released to facilitate adoption and reproducibility.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T18:20:32Z</published>
+    <arxiv:comment>54 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>David Yallup</name>
+    </author>
+    <author>
+      <name>Namu Kroupa</name>
+    </author>
+    <author>
+      <name>Will Handley</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23231v1</id>
+    <title>Solving Inverse Problems with Flow-based Models via Model Predictive Control</title>
+    <updated>2026-01-30T17:59:09Z</updated>
+    <link href="https://arxiv.org/abs/2601.23231v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23231v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow-based generative models provide strong unconditional priors for inverse problems, but guiding their dynamics for conditional generation remains challenging. Recent work casts training-free conditional generation in flow models as an optimal control problem; however, solving the resulting trajectory optimisation is computationally and memory intensive, requiring differentiation through the flow dynamics or adjoint solves. We propose MPC-Flow, a model predictive control framework that formulates inverse problem solving with flow-based generative models as a sequence of control sub-problems, enabling practical optimal control-based guidance at inference time. We provide theoretical guarantees linking MPC-Flow to the underlying optimal control objective and show how different algorithmic choices yield a spectrum of guidance algorithms, including regimes that avoid backpropagation through the generative model trajectory. We evaluate MPC-Flow on benchmark image restoration tasks, spanning linear and non-linear settings such as in-painting, deblurring, and super-resolution, and demonstrate strong performance and scalability to massive state-of-the-art architectures via training-free guidance of FLUX.2 (32B) in a quantised setting on consumer hardware.</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T17:59:09Z</published>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>George Webber</name>
+    </author>
+    <author>
+      <name>Alexander Denker</name>
+    </author>
+    <author>
+      <name>Riccardo Barbano</name>
+    </author>
+    <author>
+      <name>Andrew J Reader</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23226v1</id>
+    <title>Toward Digital Twins in 3D IC Packaging: A Critical Review of Physics, Data, and Hybrid Architectures</title>
+    <updated>2026-01-30T17:49:57Z</updated>
+    <link href="https://arxiv.org/abs/2601.23226v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23226v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Three-dimensional integrated circuit (3D IC) pack-aging and heterogeneous integration have emerged as central pillars of contemporary semiconductor scaling. Yet, the multi-physics coupling inherent to stacked architectures manifesting as thermal hot spots, warpage-induced stresses, and interconnect aging demands monitoring and control capabilities that surpass traditional offline metrology. Although Digital Twin (DT) technology provides a principled route to real-time reliability management, the existing literature remains fragmented and frequently blurs the distinction between static multiphysics simulation workflows and truly dynamic, closed-loop twins. This critical review distinguishes itself by addressing these deficiencies through three specific contributions. First, we clarify the Digital Twin hierarchy to resolve terminological ambiguity between digital models, shadows, and twins. Second, we synthesize three foundational enabling technologies: (1) physics-based modeling, emphasizing the shift from computationally intensive finite-element analysis (FEA) to real-time surrogate models; (2) data-driven paradigms, highlighting virtual metrology (VM) for inferring latent metrics; and (3) in-situ sensing, the nervous system coupling the physical stack to its virtual counterpart. Third, beyond a descriptive survey, we propose a unified hybrid DT architecture that leverages physics-informed machine learning (e.g., PINNs) to reconcile data scarcity with latency constraints. Finally, we outline a standards-aligned roadmap incorporating IEEE 1451 and UCIe protocols to accelerate the transition from passive digital shadows to autonomous, self-optimizing Digital Twins for 3D IC manufacturing and field operation.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T17:49:57Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Gourab Datta</name>
+    </author>
+    <author>
+      <name>Sarah Safura Sharif</name>
+    </author>
+    <author>
+      <name>Yaser Mike Banad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23224v1</id>
+    <title>Video-o3: Native Interleaved Clue Seeking for Long Video Multi-Hop Reasoning</title>
+    <updated>2026-01-30T17:47:30Z</updated>
+    <link href="https://arxiv.org/abs/2601.23224v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23224v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Existing multimodal large language models for long-video understanding predominantly rely on uniform sampling and single-turn inference, limiting their ability to identify sparse yet critical evidence amid extensive redundancy. We introduce Video-o3, a novel framework that supports iterative discovery of salient visual clues, fine-grained inspection of key segments, and adaptive termination once sufficient evidence is acquired. Technically, we address two core challenges in interleaved tool invocation. First, to mitigate attention dispersion induced by the heterogeneity of reasoning and tool-calling, we propose Task-Decoupled Attention Masking, which isolates per-step concentration while preserving shared global context. Second, to control context length growth in multi-turn interactions, we introduce a Verifiable Trajectory-Guided Reward that balances exploration coverage with reasoning efficiency. To support training at scale, we further develop a data synthesis pipeline and construct Seeker-173K, comprising 173K high-quality tool-interaction trajectories for effective supervised and reinforcement learning. Extensive experiments show that Video-o3 substantially outperforms state-of-the-art methods, achieving 72.1% accuracy on MLVU and 46.5% on Video-Holmes. These results demonstrate Video-o3's strong multi-hop evidence-seeking and reasoning capabilities, and validate the effectiveness of native tool invocation in long-video scenarios.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T17:47:30Z</published>
+    <arxiv:comment>24 pages, 15 figures, 11 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Xiangyu Zeng</name>
+    </author>
+    <author>
+      <name>Zhiqiu Zhang</name>
+    </author>
+    <author>
+      <name>Yuhan Zhu</name>
+    </author>
+    <author>
+      <name>Xinhao Li</name>
+    </author>
+    <author>
+      <name>Zikang Wang</name>
+    </author>
+    <author>
+      <name>Changlian Ma</name>
+    </author>
+    <author>
+      <name>Qingyu Zhang</name>
+    </author>
+    <author>
+      <name>Zizheng Huang</name>
+    </author>
+    <author>
+      <name>Kun Ouyang</name>
+    </author>
+    <author>
+      <name>Tianxiang Jiang</name>
+    </author>
+    <author>
+      <name>Ziang Yan</name>
+    </author>
+    <author>
+      <name>Yi Wang</name>
+    </author>
+    <author>
+      <name>Hongjie Zhang</name>
+    </author>
+    <author>
+      <name>Yali Wang</name>
+    </author>
+    <author>
+      <name>Limin Wang</name>
     </author>
   </entry>
 </feed>
