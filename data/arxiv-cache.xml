@@ -1,263 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-02-05T01:12:46Z -->
+<!-- Last updated: 2026-02-06T01:11:34Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-02-05T01:12:46Z</updated>
+  <updated>2026-02-06T01:11:34Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>132913</opensearch:totalResults>
+  <opensearch:totalResults>133043</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2602.03839v1</id>
-    <title>Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL</title>
-    <updated>2026-02-03T18:56:48Z</updated>
-    <link href="https://arxiv.org/abs/2602.03839v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03839v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reinforcement learning (RL) is a critical component for post-training large language models (LLMs). However, in bandwidth-constrained distributed RL, scalability is often bottlenecked by the synchronization of policy weights from trainers to inference workers, particularly over commodity networks or in decentralized settings. While recent studies suggest that RL updates modify only a small fraction of model parameters, these observations are typically based on coarse checkpoint differences. We present a systematic empirical study of weight-update sparsity at both step-level and multi-step granularities, examining its evolution across training dynamics, off-policy delay, and model scale. We find that update sparsity is consistently high, frequently exceeding 99% across practically relevant settings. Leveraging this structure, we propose PULSE (Patch Updates via Lossless Sparse Encoding), a simple yet highly efficient lossless weight synchronization method that transmits only the indices and values of modified parameters. PULSE is robust to transmission errors and avoids floating-point drift inherent in additive delta schemes. In bandwidth-constrained decentralized environments, our approach achieves over 100x (14 GB to ~108 MB) communication reduction while maintaining bit-identical training dynamics and performance compared to full weight synchronization. By exploiting this structure, PULSE enables decentralized RL training to approach centralized throughput, reducing the bandwidth required for weight synchronization from 20 Gbit/s to 0.2 Gbit/s to maintain high GPU utilization.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:56:48Z</published>
-    <arxiv:comment>32 pages, 14 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Erfan Miahi</name>
-    </author>
-    <author>
-      <name>Eugene Belilovsky</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.03829v1</id>
-    <title>An Open Database of Lunar Regolith and Simulants Properties</title>
-    <updated>2026-02-03T18:44:32Z</updated>
-    <link href="https://arxiv.org/abs/2602.03829v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03829v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Lunar regolith, the layer of unconsolidated material covering the Moon's surface, is central to the science and technology developed for the Moon, notably related to in-situ science investigations, resource utilization, surface infrastructure, and mobility systems. However, data on lunar soil properties remain fragmented across decades of mission reports, often in formats that are difficult to access or interpret. We present a newly compiled database of lunar regolith physical and geotechnical properties, including data collected by direct in-situ measurements from crewed missions, estimates inferred from surface interactions on the Moon and using remote sensing, as well as laboratory analyses of samples returned to Earth. The data collected include, among others, the angle of internal friction and cohesion (both Mohr-Coulomb model parameters), bulk density, and static bearing capacity, extracted from Luna and Apollo-era historical mission documentation all the way to contemporary Lunar programs. The dataset specifies the type and location of the tests from which each value was obtained. Our database also includes parameters for lunar regolith simulants, providing a direct link between mission data and laboratory studies. In addition to centralizing this information, we developed a user interface that facilitates data retrieval, filtering, and visualization. This interface enables users to generate customized plots for comparative analysis. Developed in an open-science perspective, it is designed to evolve in response to the community's needs. The database and its associated tools significantly enhance the accessibility and usability of lunar regolith and simulants data for scientific and engineering research.</summary>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.space-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:44:32Z</published>
-    <arxiv:primary_category term="astro-ph.EP"/>
-    <author>
-      <name>Léonie Gasteiner</name>
-    </author>
-    <author>
-      <name>Naomi Murdoch</name>
-    </author>
-    <author>
-      <name>Olfa D'Angelo</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.03826v1</id>
-    <title>Continuous Control of Editing Models via Adaptive-Origin Guidance</title>
-    <updated>2026-02-03T18:33:39Z</updated>
-    <link href="https://arxiv.org/abs/2602.03826v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03826v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Diffusion-based editing models have emerged as a powerful tool for semantic image and video manipulation. However, existing models lack a mechanism for smoothly controlling the intensity of text-guided edits. In standard text-conditioned generation, Classifier-Free Guidance (CFG) impacts prompt adherence, suggesting it as a potential control for edit intensity in editing models. However, we show that scaling CFG in these models does not produce a smooth transition between the input and the edited result. We attribute this behavior to the unconditional prediction, which serves as the guidance origin and dominates the generation at low guidance scales, while representing an arbitrary manipulation of the input content. To enable continuous control, we introduce Adaptive-Origin Guidance (AdaOr), a method that adjusts this standard guidance origin with an identity-conditioned adaptive origin, using an identity instruction corresponding to the identity manipulation. By interpolating this identity prediction with the standard unconditional prediction according to the edit strength, we ensure a continuous transition from the input to the edited result. We evaluate our method on image and video editing tasks, demonstrating that it provides smoother and more consistent control compared to current slider-based editing approaches. Our method incorporates an identity instruction into the standard training framework, enabling fine-grained control at inference time without per-edit procedure or reliance on specialized datasets.</summary>
+    <id>http://arxiv.org/abs/2602.04864v1</id>
+    <title>When LLaVA Meets Objects: Token Composition for Vision-Language-Models</title>
+    <updated>2026-02-04T18:50:46Z</updated>
+    <link href="https://arxiv.org/abs/2602.04864v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04864v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Current autoregressive Vision Language Models (VLMs) usually rely on a large number of visual tokens to represent images, resulting in a need for more compute especially at inference time. To address this problem, we propose Mask-LLaVA, a framework that leverages different levels of visual features to create a compact yet information-rich visual representation for autoregressive VLMs. Namely, we combine mask-based object representations together with global tokens and local patch tokens. While all tokens are used during training, it shows that the resulting model can flexibly drop especially the number of mask-based object-tokens at test time, allowing to adapt the number of tokens during inference without the need to retrain the model and without a significant drop in performance. We evaluate the proposed approach on a suite of standard benchmarks showing results competitive to current token efficient methods and comparable to the original LLaVA baseline using only a fraction of visual tokens. Our analysis demonstrates that combining multi-level features enables efficient learning with fewer tokens while allowing dynamic token selection at test time for good performance.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:33:39Z</published>
-    <arxiv:comment>Project page at https://adaor-paper.github.io/</arxiv:comment>
+    <published>2026-02-04T18:50:46Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Alon Wolf</name>
+      <name>Soumya Jahagirdar</name>
     </author>
     <author>
-      <name>Chen Katzir</name>
+      <name>Walid Bousselham</name>
     </author>
     <author>
-      <name>Kfir Aberman</name>
+      <name>Anna Kukleva</name>
     </author>
     <author>
-      <name>Or Patashnik</name>
+      <name>Hilde Kuehne</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.03819v1</id>
-    <title>Global Testing in Multivariate Regression Discontinuity Designs</title>
-    <updated>2026-02-03T18:22:14Z</updated>
-    <link href="https://arxiv.org/abs/2602.03819v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03819v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Regression discontinuity (RD) designs with multiple running variables arise in a growing number of empirical applications, including geographic boundaries and multi-score assignment rules. Although recent methodological work has extended estimation and inference tools to multivariate settings, far less attention has been devoted to developing global testing methods that formally assess whether a discontinuity exists anywhere along a multivariate treatment boundary. Existing approaches perform well in large samples, but can exhibit severe size distortions in moderate or small samples due to the sparsity of observations near any particular boundary point. This paper introduces a complementary global testing procedure that mitigates the small-sample weaknesses of existing multivariate RD methods by integrating multivariate machine learning estimators with a distance-based aggregation strategy, yielding a test statistic that remains reliable with limited data. Simulations demonstrate that the proposed method maintains near-nominal size and strong power, including in settings where standard multivariate estimators break down. The procedure is applied to an empirical setting to demonstrate its implementation and to illustrate how it can complement existing multivariate RD estimators.</summary>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:22:14Z</published>
-    <arxiv:primary_category term="econ.EM"/>
+    <id>http://arxiv.org/abs/2602.04855v1</id>
+    <title>Marginal Likelihood Inference for Fitting Dynamical Survival Analysis Models to Epidemic Count Data</title>
+    <updated>2026-02-04T18:42:39Z</updated>
+    <link href="https://arxiv.org/abs/2602.04855v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04855v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stochastic compartmental models are prevalent tools for describing disease spread, but inference under these models is challenging for many types of surveillance data when the marginal likelihood function becomes intractable due to missing information. To address this, we develop a closed-form likelihood for discretely observed incidence count data under the dynamical survival analysis (DSA) paradigm. The method approximates the stochastic population-level hazard by a large population limit while retaining a count-valued stochastic model, and leads to survival analytic inferential strategies that are both computationally efficient and flexible to model generalizations. Through simulation, we show that parameter estimation is competitive with recent exact but computationally expensive likelihood-based methods in partially observed settings. Previous work has shown that the DSA approximation is generalizable, and we show that the inferential developments here also carry over to models featuring individual heterogeneity, such as frailty models. We consider case studies of both Ebola and COVID-19 data on variants of the model, including a network-based epidemic model and a model with distributions over susceptibility, demonstrating its flexibility and practical utility on real, partially observed datasets.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T18:42:39Z</published>
+    <arxiv:comment>25 pages, 2 figures and 6 tables</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Artem Samiahulin</name>
+      <name>Suchismita Roy</name>
+    </author>
+    <author>
+      <name>Alexander A. Fisher</name>
+    </author>
+    <author>
+      <name>Jason Xu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.03817v1</id>
-    <title>Adaptive Evidence Weighting for Audio-Spatiotemporal Fusion</title>
-    <updated>2026-02-03T18:21:13Z</updated>
-    <link href="https://arxiv.org/abs/2602.03817v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03817v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Many machine learning systems have access to multiple sources of evidence for the same prediction target, yet these sources often differ in reliability and informativeness across inputs. In bioacoustic classification, species identity may be inferred both from the acoustic signal and from spatiotemporal context such as location and season; while Bayesian inference motivates multiplicative evidence combination, in practice we typically only have access to discriminative predictors rather than calibrated generative models. We introduce \textbf{F}usion under \textbf{IN}dependent \textbf{C}onditional \textbf{H}ypotheses (\textbf{FINCH}), an adaptive log-linear evidence fusion framework that integrates a pre-trained audio classifier with a structured spatiotemporal predictor. FINCH learns a per-sample gating function that estimates the reliability of contextual information from uncertainty and informativeness statistics. The resulting fusion family \emph{contains} the audio-only classifier as a special case and explicitly bounds the influence of contextual evidence, yielding a risk-contained hypothesis class with an interpretable audio-only fallback. Across benchmarks, FINCH consistently outperforms fixed-weight fusion and audio-only baselines, improving robustness and error trade-offs even when contextual information is weak in isolation. We achieve state-of-the-art performance on CBI and competitive or improved performance on several subsets of BirdSet using a lightweight, interpretable, evidence-based approach. Code is available: \texttt{\href{https://anonymous.4open.science/r/birdnoise-85CD/README.md}{anonymous-repository}}</summary>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2602.04843v1</id>
+    <title>Fluid Representations in Reasoning Models</title>
+    <updated>2026-02-04T18:34:50Z</updated>
+    <link href="https://arxiv.org/abs/2602.04843v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04843v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reasoning language models, which generate long chains of thought, dramatically outperform non-reasoning language models on abstract problems. However, the internal model mechanisms that allow this superior performance remain poorly understood. We present a mechanistic analysis of how QwQ-32B - a model specifically trained to produce extensive reasoning traces - process abstract structural information. On Mystery Blocksworld - a semantically obfuscated planning domain - we find that QwQ-32B gradually improves its internal representation of actions and concepts during reasoning. The model develops abstract encodings that focus on structure rather than specific action names. Through steering experiments, we establish causal evidence that these adaptations improve problem solving: injecting refined representations from successful traces boosts accuracy, while symbolic representations can replace many obfuscated encodings with minimal performance loss. We find that one of the factors driving reasoning model performance is in-context refinement of token representations, which we dub Fluid Reasoning Representations.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:21:13Z</published>
-    <arxiv:primary_category term="cs.SD"/>
+    <published>2026-02-04T18:34:50Z</published>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Oscar Ovanger</name>
+      <name>Dmitrii Kharlapenko</name>
     </author>
     <author>
-      <name>Levi Harris</name>
+      <name>Alessandro Stolfo</name>
     </author>
     <author>
-      <name>Timothy H. Keitt</name>
+      <name>Arthur Conmy</name>
+    </author>
+    <author>
+      <name>Mrinmaya Sachan</name>
+    </author>
+    <author>
+      <name>Zhijing Jin</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.03815v1</id>
-    <title>Fast-Slow Efficient Training for Multimodal Large Language Models via Visual Token Pruning</title>
-    <updated>2026-02-03T18:18:11Z</updated>
-    <link href="https://arxiv.org/abs/2602.03815v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03815v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Multimodal Large Language Models (MLLMs) suffer from severe training inefficiency issue, which is associated with their massive model sizes and visual token numbers. Existing efforts in efficient training focus on reducing model sizes or trainable parameters. Inspired by the success of Visual Token Pruning (VTP) in improving inference efficiency, we are exploring another substantial research direction for efficient training by reducing visual tokens. However, applying VTP at the training stage results in a training-inference mismatch: pruning-trained models perform poorly when inferring on non-pruned full visual token sequences. To close this gap, we propose DualSpeed, a fast-slow framework for efficient training of MLLMs. The fast-mode is the primary mode, which incorporates existing VTP methods as plugins to reduce visual tokens, along with a mode isolator to isolate the model's behaviors. The slow-mode is the auxiliary mode, where the model is trained on full visual sequences to retain training-inference consistency. To boost its training, it further leverages self-distillation to learn from the sufficiently trained fast-mode. Together, DualSpeed can achieve both training efficiency and non-degraded performance. Experiments show DualSpeed accelerates the training of LLaVA-1.5 by 2.1$\times$ and LLaVA-NeXT by 4.0$\times$, retaining over 99% performance. Code: https://github.com/dingkun-zhang/DualSpeed</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2602.04821v1</id>
+    <title>Safe Urban Traffic Control via Uncertainty-Aware Conformal Prediction and World-Model Reinforcement Learning</title>
+    <updated>2026-02-04T18:10:59Z</updated>
+    <link href="https://arxiv.org/abs/2602.04821v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04821v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Urban traffic management demands systems that simultaneously predict future conditions, detect anomalies, and take safe corrective actions -- all while providing reliability guarantees. We present STREAM-RL, a unified framework that introduces three novel algorithmic contributions: (1) PU-GAT+, an Uncertainty-Guided Adaptive Conformal Forecaster that uses prediction uncertainty to dynamically reweight graph attention via confidence-monotonic attention, achieving distribution-free coverage guarantees; (2) CRFN-BY, a Conformal Residual Flow Network that models uncertainty-normalized residuals via normalizing flows with Benjamini-Yekutieli FDR control under arbitrary dependence; and (3) LyCon-WRL+, an Uncertainty-Guided Safe World-Model RL agent with Lyapunov stability certificates, certified Lipschitz bounds, and uncertainty-propagated imagination rollouts. To our knowledge, this is the first framework to propagate calibrated uncertainty from forecasting through anomaly detection to safe policy learning with end-to-end theoretical guarantees. Experiments on multiple real-world traffic trajectory data demonstrate that STREAM-RL achieves 91.4\% coverage efficiency, controls FDR at 4.1\% under verified dependence, and improves safety rate to 95.2\% compared to 69\% for standard PPO while achieving higher reward, with 23ms end-to-end inference latency.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:18:11Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Dingkun Zhang</name>
-    </author>
-    <author>
-      <name>Shuhan Qi</name>
-    </author>
-    <author>
-      <name>Yulin Wu</name>
-    </author>
-    <author>
-      <name>Xinyu Xiao</name>
-    </author>
-    <author>
-      <name>Xuan Wang</name>
-    </author>
-    <author>
-      <name>Long Chen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.03801v1</id>
-    <title>Digital-Twin Empowered Deep Reinforcement Learning For Site-Specific Radio Resource Management in NextG Wireless Aerial Corridor</title>
-    <updated>2026-02-03T18:02:11Z</updated>
-    <link href="https://arxiv.org/abs/2602.03801v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03801v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Joint base station (BS) association and beam selection in multi-UAV aerial corridors constitutes a challenging radio resource management (RRM) problem. It is driven by high-dimensional action spaces, need for substantial overhead to acquire global channel state information (CSI), rapidly varying propagation channels, and stringent latency requirements. Conventional combinatorial optimization methods, while near-optimal, are computationally prohibitive for real-time operation in such dynamic environments. While learning-based approaches can mitigate computational complexity and CSI overhead, the need for extensive site-specific (SS) datasets for model training remains a key challenge. To address these challenges, we develop a Digital Twin (DT)-enabled two-stage optimization framework that couples physics-based beam gain modeling with DRL for scalable online decision-making. In the first stage, a channel twin (CT) is constructed using a high-fidelity ray-tracing solver with geo-spatial contexts, and network information to capture SS propagation characteristics, and dual annealing algorithm is employed to precompute optimal transmission beam directions. In the second stage, a Multi-Head Proximal Policy Optimization (MH-PPO) agent, equipped with a scalable multi-head actor-critic architecture, is trained on the DT-generated channel dataset to directly map complex channel and beam states to jointly execute UAV-BS-beam association decisions. The proposed PPO agent achieves a 44%-121% improvement over DQN and 249%-807% gain over traditional heuristic based optimization schemes in a dense UAV scenario, while reducing inference latency by several orders of magnitude. These results demonstrate that DT-driven training pipelines can deliver high-performance, low-latency RRM policies tailored to SS deployments suitable for real-time resource management in next-generation aerial corridor networks.</summary>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T18:02:11Z</published>
-    <arxiv:comment>Submitted for possible publication to IEEE. Paper currently under review. The contents of this paper may change at any time without notice</arxiv:comment>
-    <arxiv:primary_category term="eess.SP"/>
-    <author>
-      <name>Pulok Tarafder</name>
-    </author>
-    <author>
-      <name>Zoheb Hassan</name>
-    </author>
-    <author>
-      <name>Imtiaz Ahmed</name>
-    </author>
-    <author>
-      <name>Danda B. Rawat</name>
-    </author>
-    <author>
-      <name>Kamrul Hasan</name>
-    </author>
-    <author>
-      <name>Cong Pu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.03787v1</id>
-    <title>Inference-time Unlearning Using Conformal Prediction</title>
-    <updated>2026-02-03T17:46:50Z</updated>
-    <link href="https://arxiv.org/abs/2602.03787v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03787v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Machine unlearning is the process of efficiently removing specific information from a trained machine learning model without retraining from scratch. Existing unlearning methods, which often provide provable guarantees, typically involve retraining a subset of model parameters based on a forget set. While these approaches show promise in certain scenarios, their underlying assumptions are often challenged in real-world applications -- particularly when applied to generative models. Furthermore, updating parameters using these unlearning procedures often degrades the general-purpose capabilities the model acquired during pre-training. Motivated by these shortcomings, this paper considers the paradigm of inference time unlearning -- wherein, the generative model is equipped with an (approximately correct) verifier that judges whether the model's response satisfies appropriate unlearning guarantees. This paper introduces a framework that iteratively refines the quality of the generated responses using feedback from the verifier without updating the model parameters. The proposed framework leverages conformal prediction to reduce computational overhead and provide distribution-free unlearning guarantees. This paper's approach significantly outperforms existing state-of-the-art methods, reducing unlearning error by up to 93% across challenging unlearning benchmarks.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T17:46:50Z</published>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T18:10:59Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Somnath Basu Roy Chowdhury</name>
+      <name>Joydeep Chandra</name>
     </author>
     <author>
-      <name>Rahul Kidambi</name>
+      <name>Satyam Kumar Navneet</name>
     </author>
     <author>
-      <name>Avinava Dubey</name>
+      <name>Aleksandr Algazinov</name>
     </author>
     <author>
-      <name>David Wang</name>
-    </author>
-    <author>
-      <name>Gokhan Mergen</name>
-    </author>
-    <author>
-      <name>Amr Ahmed</name>
-    </author>
-    <author>
-      <name>Aranyak Mehta</name>
+      <name>Yong Zhang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.03784v1</id>
-    <title>Context Compression via Explicit Information Transmission</title>
-    <updated>2026-02-03T17:44:12Z</updated>
-    <link href="https://arxiv.org/abs/2602.03784v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03784v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long-context inference with Large Language Models (LLMs) is costly due to quadratic attention and growing key-value caches, motivating context compression. In this work, we study soft context compression, where a long context is condensed into a small set of continuous representations. Existing methods typically re-purpose the LLM itself as a trainable compressor, relying on layer-by-layer self-attention to iteratively aggregate information. We argue that this paradigm suffers from two structural limitations: (i) progressive representation overwriting across layers (ii) uncoordinated allocation of compression capacity across tokens. We propose ComprExIT (Context Compression via Explicit Information Transmission), a lightweight framework that formulates soft compression into a new paradigm: explicit information transmission over frozen LLM hidden states. This decouples compression from the model's internal self-attention dynamics. ComprExIT performs (i) depth-wise transmission to selectively transmit multi-layer information into token anchors, mitigating progressive overwriting, and (ii) width-wise transmission to aggregate anchors into a small number of slots via a globally optimized transmission plan, ensuring coordinated allocation of information. Across six question-answering benchmarks, ComprExIT consistently outperforms state-of-the-art context compression methods while introducing only ~1% additional parameters, demonstrating that explicit and coordinated information transmission enables more effective and robust long-context compression.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T17:44:12Z</published>
-    <arxiv:primary_category term="cs.CL"/>
+    <id>http://arxiv.org/abs/2602.04820v1</id>
+    <title>Toward Reliable and Explainable Nail Disease Classification: Leveraging Adversarial Training and Grad-CAM Visualization</title>
+    <updated>2026-02-04T18:08:13Z</updated>
+    <link href="https://arxiv.org/abs/2602.04820v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04820v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Human nail diseases are gradually observed over all age groups, especially among older individuals, often going ignored until they become severe. Early detection and accurate diagnosis of such conditions are important because they sometimes reveal our body's health problems. But it is challenging due to the inferred visual differences between disease types. This paper presents a machine learning-based model for automated classification of nail diseases based on a publicly available dataset, which contains 3,835 images scaling six categories. In 224x224 pixels, all images were resized to ensure consistency. To evaluate performance, four well-known CNN models-InceptionV3, DenseNet201, EfficientNetV2, and ResNet50 were trained and analyzed. Among these, InceptionV3 outperformed the others with an accuracy of 95.57%, while DenseNet201 came next with 94.79%. To make the model stronger and less likely to make mistakes on tricky or noisy images, we used adversarial training. To help understand how the model makes decisions, we used SHAP to highlight important features in the predictions. This system could be a helpful support for doctors, making nail disease diagnosis more accurate and faster.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T18:08:13Z</published>
+    <arxiv:comment>6 pages, 12 figures. This is the author's accepted manuscript of a paper accepted for publication in the Proceedings of the 16th International IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT 2025). The final published version will be available via IEEE Xplore</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Jiangnan Ye</name>
+      <name>Farzia Hossain</name>
     </author>
     <author>
-      <name>Hanqi Yan</name>
+      <name>Samanta Ghosh</name>
     </author>
     <author>
-      <name>Zhenyi Shen</name>
+      <name>Shahida Begum</name>
     </author>
     <author>
-      <name>Heng Chang</name>
+      <name>B. M. Shahria Alam</name>
     </author>
     <author>
-      <name>Ye Mao</name>
+      <name>Mohammad Tahmid Noor</name>
     </author>
     <author>
-      <name>Yulan He</name>
+      <name>Md Parvez Mia</name>
+    </author>
+    <author>
+      <name>Nishat Tasnim Niloy</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.03781v1</id>
-    <title>A Scene Graph Backed Approach to Open Set Semantic Mapping</title>
-    <updated>2026-02-03T17:41:51Z</updated>
-    <link href="https://arxiv.org/abs/2602.03781v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.03781v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>While Open Set Semantic Mapping and 3D Semantic Scene Graphs (3DSSGs) are established paradigms in robotic perception, deploying them effectively to support high-level reasoning in large-scale, real-world environments remains a significant challenge. Most existing approaches decouple perception from representation, treating the scene graph as a derivative layer generated post hoc. This limits both consistency and scalability. In contrast, we propose a mapping architecture where the 3DSSG serves as the foundational backend, acting as the primary knowledge representation for the entire mapping process.
-  Our approach leverages prior work on incremental scene graph prediction to infer and update the graph structure in real-time as the environment is explored. This ensures that the map remains topologically consistent and computationally efficient, even during extended operations in large-scale settings. By maintaining an explicit, spatially grounded representation that supports both flat and hierarchical topologies, we bridge the gap between sub-symbolic raw sensor data and high-level symbolic reasoning. Consequently, this provides a stable, verifiable structure that knowledge-driven frameworks, ranging from knowledge graphs and ontologies to Large Language Models (LLMs), can directly exploit, enabling agents to operate with enhanced interpretability, trustworthiness, and alignment to human concepts.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-03T17:41:51Z</published>
-    <arxiv:primary_category term="cs.RO"/>
+    <id>http://arxiv.org/abs/2602.04798v1</id>
+    <title>Score-Based Change-Point Detection and Region Localization for Spatio-Temporal Point Processes</title>
+    <updated>2026-02-04T17:44:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.04798v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04798v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study sequential change-point detection for spatio-temporal point processes, where actionable detection requires not only identifying when a distributional change occurs but also localizing where it manifests in space. While classical quickest change detection methods provide strong guarantees on detection delay and false-alarm rates, existing approaches for point-process data predominantly focus on temporal changes and do not explicitly infer affected spatial regions. We propose a likelihood-free, score-based detection framework that jointly estimates the change time and the change region in continuous space-time without assuming parametric knowledge of the pre- or post-change dynamics. The method leverages a localized and conditionally weighted Hyvärinen score to quantify event-level deviations from nominal behavior and aggregates these scores using a spatio-temporal CUSUM-type statistic over a prescribed class of spatial regions. Operating sequentially, the procedure outputs both a stopping time and an estimated change region, enabling real-time detection with spatial interpretability. We establish theoretical guarantees on false-alarm control, detection delay, and spatial localization accuracy, and demonstrate the effectiveness of the proposed approach through simulations and real-world spatio-temporal event data.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T17:44:41Z</published>
+    <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Martin Günther</name>
+      <name>Wenbin Zhou</name>
     </author>
     <author>
-      <name>Felix Igelbrink</name>
+      <name>Liyan Xie</name>
     </author>
     <author>
-      <name>Oscar Lima</name>
+      <name>Shixiang Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04794v1</id>
+    <title>A Hierarchical Bayesian Analysis of Neutron-Skin Thicknesses and Implications for the Symmetry-Energy Slope</title>
+    <updated>2026-02-04T17:43:02Z</updated>
+    <link href="https://arxiv.org/abs/2602.04794v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04794v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neutron-skin thicknesses provide a sensitive probe of the isovector sector of the nuclear equation of state and its density dependence, commonly characterized by the symmetry-energy slope parameter L. A wide variety of experimental and observational methods have been used to extract neutron skins, ranging from hadronic and electromagnetic probes of finite nuclei to inferences from neutron-star observations. Each approach carries distinct theoretical and systematic uncertainties, complicating global interpretations and obscuring genuine physical trends. In this work we present a hierarchical Bayesian framework for the statistically consistent synthesis of heterogeneous neutron-skin constraints. The neutron-skin thickness is modeled as a smooth latent function of isospin asymmetry and nuclear size, while method-dependent bias parameters and intrinsic nuisance widths are introduced to account for unmodeled experimental and theoretical systematics. Focusing on the tin isotopes, we infer probabilistic neutron-skin trends from 100Sn to 140Sn, finding minimal uncertainties near stability and increasing uncertainties toward the proton-rich and neutron-rich extremes. We assess the consistency of nuclear energy-density functionals and obtain conditional constraints on the symmetry-energy parameters. The resulting posterior exhibits a pronounced compression of the symmetry-energy slope parameter L, reflecting the dominant sensitivity of neutron skins to sub-saturation symmetry pressure. We demonstrate that our hierarchical Bayesian framework provides robust and transparent constraints on the sub-saturation isovector sector of the nuclear equation of state.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T17:43:02Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>A. Azizi</name>
     </author>
     <author>
-      <name>Lennart Niecksch</name>
+      <name>C. A. Bertulani</name>
     </author>
     <author>
-      <name>Marian Renz</name>
+      <name>C. Davila</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04770v1</id>
+    <title>Generative Modeling via Drifting</title>
+    <updated>2026-02-04T17:06:49Z</updated>
+    <link href="https://arxiv.org/abs/2602.04770v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04770v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative modeling can be formulated as learning a mapping f such that its pushforward distribution matches the data distribution. The pushforward behavior can be carried out iteratively at inference time, for example in diffusion and flow-based models. In this paper, we propose a new paradigm called Drifting Models, which evolve the pushforward distribution during training and naturally admit one-step inference. We introduce a drifting field that governs the sample movement and achieves equilibrium when the distributions match. This leads to a training objective that allows the neural network optimizer to evolve the distribution. In experiments, our one-step generator achieves state-of-the-art results on ImageNet at 256 x 256 resolution, with an FID of 1.54 in latent space and 1.61 in pixel space. We hope that our work opens up new opportunities for high-quality one-step generation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T17:06:49Z</published>
+    <arxiv:comment>Project page: https://lambertae.github.io/projects/drifting/</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mingyang Deng</name>
     </author>
     <author>
-      <name>Martin Atzmueller</name>
+      <name>He Li</name>
+    </author>
+    <author>
+      <name>Tianhong Li</name>
+    </author>
+    <author>
+      <name>Yilun Du</name>
+    </author>
+    <author>
+      <name>Kaiming He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04769v1</id>
+    <title>NeuroCanvas: VLLM-Powered Robust Seizure Detection by Reformulating Multichannel EEG as Image</title>
+    <updated>2026-02-04T17:06:38Z</updated>
+    <link href="https://arxiv.org/abs/2602.04769v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04769v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate and timely seizure detection from Electroencephalography (EEG) is critical for clinical intervention, yet manual review of long-term recordings is labor-intensive. Recent efforts to encode EEG signals into large language models (LLMs) show promise in handling neural signals across diverse patients, but two significant challenges remain: (1) multi-channel heterogeneity, as seizure-relevant information varies substantially across EEG channels, and (2) computing inefficiency, as the EEG signals need to be encoded into a massive number of tokens for the prediction. To address these issues, we draw the EEG signal and propose the novel NeuroCanvas framework. Specifically, NeuroCanvas consists of two modules: (i) The Entropy-guided Channel Selector (ECS) selects the seizure-relevant channels input to LLM and (ii) the following Canvas of Neuron Signal (CNS) converts selected multi-channel heterogeneous EEG signals into structured visual representations. The ECS module alleviates the multi-channel heterogeneity issue, and the CNS uses compact visual tokens to represent the EEG signals that improve the computing efficiency. We evaluate NeuroCanvas across multiple seizure detection datasets, demonstrating a significant improvement of $20\%$ in F1 score and reductions of $88\%$ in inference latency. These results highlight NeuroCanvas as a scalable and effective solution for real-time and resource-efficient seizure detection in clinical practice.The code will be released at https://github.com/Yanchen30247/seizure_detect.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T17:06:38Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yan Chen</name>
+    </author>
+    <author>
+      <name>Jie Peng</name>
+    </author>
+    <author>
+      <name>Moajjem Hossain Chowdhury</name>
+    </author>
+    <author>
+      <name>Tianlong Chen</name>
+    </author>
+    <author>
+      <name>Yunmei Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04766v1</id>
+    <title>Measurement of the Hubble constant using the Dark Energy Survey Year 6 Gold galaxy catalog and the fourth Gravitational-Wave Transient Catalog</title>
+    <updated>2026-02-04T17:02:33Z</updated>
+    <link href="https://arxiv.org/abs/2602.04766v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04766v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gravitational wave standard sirens enable independent measurements of the Hubble constant $H_0$. In the absence of electromagnetic counterparts, the "dark siren" method statistically correlates GW events with potential host galaxies. We present a measurement of $H_0$ using 142 compact binary coalescences from the fourth Gravitational-Wave Transient Catalog (GWTC-4.0) combined with the Dark Energy Survey Year 6 Gold photometric galaxy catalog. Using the gwcosmo pipeline, we jointly infer cosmological and GW population parameters. We analyze the impact of galaxy catalog properties on the inference, identifying significant features in the galaxy redshift distribution which can introduce biases. By restricting the galaxy catalog to $0.05&lt;z&lt;0.35$ to maintain consistency with a uniform in comoving volume galaxy distribution, we obtain a result of $H_0 = 70.9^{+22.3}_{-18.6}\;\text{km}\;\text{s}^{-1}\;\text{Mpc}^{-1}$ from dark sirens and $H_0=73.1^{+11.7}_{-8.6}\;\text{km}\;\text{s}^{-1}\;\text{Mpc}^{-1}$ when combined with the bright siren GW170817. This study demonstrates the adaptation of deep galaxy catalogs for GW cosmology, highlighting key challenges and methodologies essential for maximizing the potential of next-generation galaxy surveys.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T17:02:33Z</published>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <author>
+      <name>Isaac McMahon</name>
+    </author>
+    <author>
+      <name>Danny Laghi</name>
+    </author>
+    <author>
+      <name>Marcelle Soares-Santos</name>
+    </author>
+    <author>
+      <name>Kendall Ackley</name>
+    </author>
+    <author>
+      <name>Gergely Dálya</name>
+    </author>
+    <author>
+      <name>Yavuz Gençel</name>
+    </author>
+    <author>
+      <name>David Sánchez-Cid</name>
+    </author>
+    <author>
+      <name>Felipe Andrade-Oliveira</name>
+    </author>
+    <author>
+      <name>Sean MacBride</name>
+    </author>
+    <author>
+      <name>Christian Chapman-Bird</name>
+    </author>
+    <author>
+      <name>Rachel Gray</name>
+    </author>
+    <author>
+      <name>Alexander Papadopoulos</name>
     </author>
   </entry>
 </feed>
