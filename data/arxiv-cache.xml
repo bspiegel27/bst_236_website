@@ -1,279 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-02-09T01:18:12Z -->
+<!-- Last updated: 2026-02-10T01:26:48Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-02-09T01:18:12Z</updated>
+  <updated>2026-02-10T01:26:48Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>133197</opensearch:totalResults>
+  <opensearch:totalResults>133320</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2602.06041v1</id>
-    <title>Predicting Camera Pose from Perspective Descriptions for Spatial Reasoning</title>
-    <updated>2026-02-05T18:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2602.06041v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06041v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Multi-image spatial reasoning remains challenging for current multimodal large language models (MLLMs). While single-view perception is inherently 2D, reasoning over multiple views requires building a coherent scene understanding across viewpoints. In particular, we study perspective taking, where a model must build a coherent 3D understanding from multi-view observations and use it to reason from a new, language-specified viewpoint. We introduce CAMCUE, a pose-aware multi-image framework that uses camera pose as an explicit geometric anchor for cross-view fusion and novel-view reasoning. CAMCUE injects per-view pose into visual tokens, grounds natural-language viewpoint descriptions to a target camera pose, and synthesizes a pose-conditioned imagined target view to support answering. To support this setting, we curate CAMCUE-DATA with 27,668 training and 508 test instances pairing multi-view images and poses with diverse target-viewpoint descriptions and perspective-shift questions. We also include human-annotated viewpoint descriptions in the test split to evaluate generalization to human language. CAMCUE improves overall accuracy by 9.06% and predicts target poses from natural-language viewpoint descriptions with over 90% rotation accuracy within 20° and translation accuracy within a 0.5 error threshold. This direct grounding avoids expensive test-time search-and-match, reducing inference time from 256.6s to 1.45s per example and enabling fast, interactive use in real-world scenarios.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:59:55Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Xuejun Zhang</name>
-    </author>
-    <author>
-      <name>Aditi Tiwari</name>
-    </author>
-    <author>
-      <name>Zhenhailong Wang</name>
-    </author>
-    <author>
-      <name>Heng Ji</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06036v1</id>
-    <title>DFlash: Block Diffusion for Flash Speculative Decoding</title>
-    <updated>2026-02-05T18:59:30Z</updated>
-    <link href="https://arxiv.org/abs/2602.06036v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06036v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Autoregressive large language models (LLMs) deliver strong performance but require inherently sequential decoding, leading to high inference latency and poor GPU utilization. Speculative decoding mitigates this bottleneck by using a fast draft model whose outputs are verified in parallel by the target LLM; however, existing methods still rely on autoregressive drafting, which remains sequential and limits practical speedups. Diffusion LLMs offer a promising alternative by enabling parallel generation, but current diffusion models typically underperform compared with autoregressive models. In this paper, we introduce DFlash, a speculative decoding framework that employs a lightweight block diffusion model for parallel drafting. By generating draft tokens in a single forward pass and conditioning the draft model on context features extracted from the target model, DFlash enables efficient drafting with high-quality outputs and higher acceptance rates. Experiments show that DFlash achieves over 6x lossless acceleration across a range of models and tasks, delivering up to 2.5x higher speedup than the state-of-the-art speculative decoding method EAGLE-3.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:59:30Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Jian Chen</name>
-    </author>
-    <author>
-      <name>Yesheng Liang</name>
-    </author>
-    <author>
-      <name>Zhijian Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06030v1</id>
-    <title>PhysicsAgentABM: Physics-Guided Generative Agent-Based Modeling</title>
-    <updated>2026-02-05T18:59:01Z</updated>
-    <link href="https://arxiv.org/abs/2602.06030v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06030v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large language model (LLM)-based multi-agent systems enable expressive agent reasoning but are expensive to scale and poorly calibrated for timestep-aligned state-transition simulation, while classical agent-based models (ABMs) offer interpretability but struggle to integrate rich individual-level signals and non-stationary behaviors. We propose PhysicsAgentABM, which shifts inference to behaviorally coherent agent clusters: state-specialized symbolic agents encode mechanistic transition priors, a multimodal neural transition model captures temporal and interaction dynamics, and uncertainty-aware epistemic fusion yields calibrated cluster-level transition distributions. Individual agents then stochastically realize transitions under local constraints, decoupling population inference from entity-level variability. We further introduce ANCHOR, an LLM agent-driven clustering strategy based on cross-contextual behavioral responses and a novel contrastive loss, reducing LLM calls by up to 6-8 times. Experiments across public health, finance, and social sciences show consistent gains in event-time accuracy and calibration over mechanistic, neural, and LLM baselines. By re-architecting generative ABM around population-level inference with uncertainty-aware neuro-symbolic fusion, PhysicsAgentABM establishes a new paradigm for scalable and calibrated simulation with LLMs.</summary>
-    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:59:01Z</published>
-    <arxiv:primary_category term="cs.MA"/>
-    <author>
-      <name>Kavana Venkatesh</name>
-    </author>
-    <author>
-      <name>Yinhan He</name>
-    </author>
-    <author>
-      <name>Jundong Li</name>
-    </author>
-    <author>
-      <name>Jiaming Cui</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06029v1</id>
-    <title>Curiosity is Knowledge: Self-Consistent Learning and No-Regret Optimization with Active Inference</title>
-    <updated>2026-02-05T18:58:32Z</updated>
-    <link href="https://arxiv.org/abs/2602.06029v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06029v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Active inference (AIF) unifies exploration and exploitation by minimizing the Expected Free Energy (EFE), balancing epistemic value (information gain) and pragmatic value (task performance) through a curiosity coefficient. Yet it has been unclear when this balance yields both coherent learning and efficient decision-making: insufficient curiosity can drive myopic exploitation and prevent uncertainty resolution, while excessive curiosity can induce unnecessary exploration and regret. We establish the first theoretical guarantee for EFE-minimizing agents, showing that a single requirement--sufficient curiosity--simultaneously ensures self-consistent learning (Bayesian posterior consistency) and no-regret optimization (bounded cumulative regret). Our analysis characterizes how this mechanism depends on initial uncertainty, identifiability, and objective alignment, thereby connecting AIF to classical Bayesian experimental design and Bayesian optimization within one theoretical framework. We further translate these theories into practical design guidelines for tuning the epistemic-pragmatic trade-off in hybrid learning-optimization problems, validated through real-world experiments.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:58:32Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Yingke Li</name>
-    </author>
-    <author>
-      <name>Anjali Parashar</name>
-    </author>
-    <author>
-      <name>Enlu Zhou</name>
-    </author>
-    <author>
-      <name>Chuchu Fan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06025v1</id>
-    <title>Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory</title>
-    <updated>2026-02-05T18:57:09Z</updated>
-    <link href="https://arxiv.org/abs/2602.06025v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06025v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Memory is increasingly central to Large Language Model (LLM) agents operating beyond a single context window, yet most existing systems rely on offline, query-agnostic memory construction that can be inefficient and may discard query-critical information. Although runtime memory utilization is a natural alternative, prior work often incurs substantial overhead and offers limited explicit control over the performance-cost trade-off. In this work, we present \textbf{BudgetMem}, a runtime agent memory framework for explicit, query-aware performance-cost control. BudgetMem structures memory processing as a set of memory modules, each offered in three budget tiers (i.e., \textsc{Low}/\textsc{Mid}/\textsc{High}). A lightweight router performs budget-tier routing across modules to balance task performance and memory construction cost, which is implemented as a compact neural policy trained with reinforcement learning. Using BudgetMem as a unified testbed, we study three complementary strategies for realizing budget tiers: implementation (method complexity), reasoning (inference behavior), and capacity (module model size). Across LoCoMo, LongMemEval, and HotpotQA, BudgetMem surpasses strong baselines when performance is prioritized (i.e., high-budget setting), and delivers better accuracy-cost frontiers under tighter budgets. Moreover, our analysis disentangles the strengths and weaknesses of different tiering strategies, clarifying when each axis delivers the most favorable trade-offs under varying budget regimes.</summary>
+    <id>http://arxiv.org/abs/2602.06960v1</id>
+    <title>InftyThink+: Effective and Efficient Infinite-Horizon Reasoning via Reinforcement Learning</title>
+    <updated>2026-02-06T18:59:27Z</updated>
+    <link href="https://arxiv.org/abs/2602.06960v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06960v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large reasoning models achieve strong performance by scaling inference-time chain-of-thought, but this paradigm suffers from quadratic cost, context length limits, and degraded reasoning due to lost-in-the-middle effects. Iterative reasoning mitigates these issues by periodically summarizing intermediate thoughts, yet existing methods rely on supervised learning or fixed heuristics and fail to optimize when to summarize, what to preserve, and how to resume reasoning. We propose InftyThink+, an end-to-end reinforcement learning framework that optimizes the entire iterative reasoning trajectory, building on model-controlled iteration boundaries and explicit summarization. InftyThink+ adopts a two-stage training scheme with supervised cold-start followed by trajectory-level reinforcement learning, enabling the model to learn strategic summarization and continuation decisions. Experiments on DeepSeek-R1-Distill-Qwen-1.5B show that InftyThink+ improves accuracy by 21% on AIME24 and outperforms conventional long chain-of-thought reinforcement learning by a clear margin, while also generalizing better to out-of-distribution benchmarks. Moreover, InftyThink+ significantly reduces inference latency and accelerates reinforcement learning training, demonstrating improved reasoning efficiency alongside stronger performance.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:57:09Z</published>
-    <arxiv:comment>Code is available at https://github.com/ViktorAxelsen/BudgetMem</arxiv:comment>
+    <published>2026-02-06T18:59:27Z</published>
+    <arxiv:comment>Project Page: https://zju-real.github.io/InftyThink-Plus Code: https://github.com/ZJU-REAL/InftyThink-Plus</arxiv:comment>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Haozhen Zhang</name>
+      <name>Yuchen Yan</name>
     </author>
     <author>
-      <name>Haodong Yue</name>
+      <name>Liang Jiang</name>
     </author>
     <author>
-      <name>Tao Feng</name>
+      <name>Jin Jiang</name>
     </author>
     <author>
-      <name>Quanyu Long</name>
+      <name>Shuaicheng Li</name>
     </author>
     <author>
-      <name>Jianzhu Bao</name>
+      <name>Zujie Wen</name>
     </author>
     <author>
-      <name>Bowen Jin</name>
+      <name>Zhiqiang Zhang</name>
     </author>
     <author>
-      <name>Weizhi Zhang</name>
+      <name>Jun Zhou</name>
     </author>
     <author>
-      <name>Xiao Li</name>
+      <name>Jian Shao</name>
     </author>
     <author>
-      <name>Jiaxuan You</name>
+      <name>Yueting Zhuang</name>
     </author>
     <author>
-      <name>Chengwei Qin</name>
+      <name>Yongliang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06953v1</id>
+    <title>DAWN: Dependency-Aware Fast Inference for Diffusion LLMs</title>
+    <updated>2026-02-06T18:51:29Z</updated>
+    <link href="https://arxiv.org/abs/2602.06953v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06953v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion large language models (dLLMs) have shown advantages in text generation, particularly due to their inherent ability for parallel decoding. However, constrained by the quality--speed trade-off, existing inference solutions adopt conservative parallel strategies, leaving substantial efficiency potential underexplored. A core challenge is that parallel decoding assumes each position can be filled independently, but tokens are often semantically coupled. Thus, the correct choice at one position constrains valid choices at others. Without modeling these inter-token dependencies, parallel strategies produce deteriorated outputs. Motivated by this insight, we propose DAWN, a training-free, dependency-aware decoding method for fast dLLM inference. DAWN extracts token dependencies and leverages two key motivations: (1) positions dependent on unmasked certain positions become more reliable, (2) simultaneously unmasking strongly coupled uncertain positions induces errors. Given those findings, DAWN leverages a dependency graph to select more reliable unmasking positions at each iteration, achieving high parallelism with negligible loss in generation quality. Extensive experiments across multiple models and datasets demonstrate that DAWN speedups the inference by 1.80-8.06x over baselines while preserving the generation quality. Code is released at https://github.com/lizhuo-luo/DAWN.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T18:51:29Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Lizhuo Luo</name>
+    </author>
+    <author>
+      <name>Zhuoran Shi</name>
+    </author>
+    <author>
+      <name>Jiajun Luo</name>
+    </author>
+    <author>
+      <name>Zhi Wang</name>
+    </author>
+    <author>
+      <name>Shen Ren</name>
     </author>
     <author>
       <name>Wenya Wang</name>
     </author>
+    <author>
+      <name>Tianwei Zhang</name>
+    </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.06022v1</id>
-    <title>Correctness-Optimized Residual Activation Lens (CORAL): Transferrable and Calibration-Aware Inference-Time Steering</title>
-    <updated>2026-02-05T18:55:56Z</updated>
-    <link href="https://arxiv.org/abs/2602.06022v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06022v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large language models (LLMs) exhibit persistent miscalibration, especially after instruction tuning and preference alignment. Modified training objectives can improve calibration, but retraining is expensive. Inference-time steering offers a lightweight alternative, yet most existing methods optimize proxies for correctness rather than correctness itself. We introduce CORAL (Correctness-Optimized Residual Activation Lens), a regularized inference-time steering method that captures distributed correctness signals from model internal activations using weight-decay MLP probes. We evaluate CORAL across three 7B-parameter models and find that it consistently improves accuracy by 10\% and expected calibration error (ECE) by 50\% on average. We additionally demonstrate that these gains transfer without retraining to the complete published test sets of four held-out benchmarks (ARC-Challenge, HellaSwag, Math-MC, OpenBookQA), averaging 14\% accuracy improvements and 49\% ECE improvements. Our results support the hypothesis that distributed information in model internals can be extracted using regularized probes when individual neurons are insufficient. CORAL thus provides a compute-efficient, transferable, and calibration-aware approach to improve MCQA performance during inference.</summary>
+    <id>http://arxiv.org/abs/2602.06952v1</id>
+    <title>Mapping plasma properties of Cassiopeia A with XRISM/Resolve: a Bayesian analysis via UltraSPEX</title>
+    <updated>2026-02-06T18:51:26Z</updated>
+    <link href="https://arxiv.org/abs/2602.06952v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06952v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mapping the physical conditions of the shocked plasma of young supernova remnants (SNR) is crucial for understanding their explosion mechanisms, ejecta structure, and large-scale asymmetries. Using $&gt;350$ ks of XRISM/Resolve high spectral resolution observations of Cassiopeia A (Cas A), the youngest known Galactic core-collapse SNR, we present the first microcalorimeter-based plasma parameter maps of any SNR. We tessellate Cas A into $1'\times1'$ regions and fit the broadband spectra as thermal emission from two pure-metal ejecta components -- corresponding to intermediate-mass elements (IMEs) and iron-group elements (IGEs) -- plus nonthermal synchrotron radiation. For robust inference, we introduce UltraSPEX, a Bayesian framework that couples the SPEX plasma code with the UltraNest nested-sampling algorithm, yielding full posterior distributions and exploration of parameter degeneracies. Key findings include enhanced Ar/Si and Ca/Si abundance ratios near the base of the Si-rich jets, and a high Ni/Fe mass ratio ($0.08\pm0.015$) in the base of NE jet. IGEs ejecta exhibit systematically higher Doppler velocities and broadenings than IMEs ejecta in most regions, with maximum differences of $\sim800$ km/s and $\sim1200$ km/s, respectively; Ca shows distinct (faster) kinematics from other IMEs in several SE regions. The ionization timescale and electron temperature show a robust anti-correlation, particularly for IGEs. This relation and measured parameter values could be explained by semi-analytical models with significant ejecta clumping (overdensities of $\sim10$ for IGEs and up to $\sim100$ for IMEs) and reduced historical reverse-shock velocities. Nonthermal emission accounts for a substantial fraction, with at least 47% of the 4--6 keV continuum and dominates in the western regions, where the spectrum hardens.</summary>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T18:51:26Z</published>
+    <arxiv:comment>Submitted version (33 pages, 21 figures). Accepted for publication in ApJ</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.HE"/>
+    <author>
+      <name>Manan Agarwal</name>
+    </author>
+    <author>
+      <name>Jacco Vink</name>
+    </author>
+    <author>
+      <name>Liyi Gu</name>
+    </author>
+    <author>
+      <name>Paul P. Plucinsky</name>
+    </author>
+    <author>
+      <name>Aya Bamba</name>
+    </author>
+    <author>
+      <name>Toshiki Sato</name>
+    </author>
+    <author>
+      <name>Daniele Rogantini</name>
+    </author>
+    <author>
+      <name>Yuken Ohshiro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06941v1</id>
+    <title>Endogenous Resistance to Activation Steering in Language Models</title>
+    <updated>2026-02-06T18:41:12Z</updated>
+    <link href="https://arxiv.org/abs/2602.06941v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06941v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models can resist task-misaligned activation steering during inference, sometimes recovering mid-generation to produce improved responses even when steering remains active. We term this Endogenous Steering Resistance (ESR). Using sparse autoencoder (SAE) latents to steer model activations, we find that Llama-3.3-70B shows substantial ESR, while smaller models from the Llama-3 and Gemma-2 families exhibit the phenomenon less frequently. We identify 26 SAE latents that activate differentially during off-topic content and are causally linked to ESR in Llama-3.3-70B. Zero-ablating these latents reduces the multi-attempt rate by 25%, providing causal evidence for dedicated internal consistency-checking circuits. We demonstrate that ESR can be deliberately enhanced through both prompting and training: meta-prompts instructing the model to self-monitor increase the multi-attempt rate by 4x for Llama-3.3-70B, and fine-tuning on self-correction examples successfully induces ESR-like behavior in smaller models. These findings have dual implications: ESR could protect against adversarial manipulation but might also interfere with beneficial safety interventions that rely on activation steering. Understanding and controlling these resistance mechanisms is important for developing transparent and controllable AI systems. Code is available at github.com/agencyenterprise/endogenous-steering-resistance.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:55:56Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Miranda Muqing Miao</name>
-    </author>
-    <author>
-      <name>Young-Min Cho</name>
-    </author>
-    <author>
-      <name>Lyle Ungar</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06021v1</id>
-    <title>Diffusion Model's Generalization Can Be Characterized by Inductive Biases toward a Data-Dependent Ridge Manifold</title>
-    <updated>2026-02-05T18:55:03Z</updated>
-    <link href="https://arxiv.org/abs/2602.06021v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06021v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>When a diffusion model is not memorizing the training data set, how does it generalize exactly? A quantitative understanding of the distribution it generates would be beneficial to, for example, an assessment of the model's performance for downstream applications. We thus explicitly characterize what diffusion model generates, by proposing a log-density ridge manifold and quantifying how the generated data relate to this manifold as inference dynamics progresses. More precisely, inference undergoes a reach-align-slide process centered around the ridge manifold: trajectories first reach a neighborhood of the manifold, then align as being pushed toward or away from the manifold in normal directions, and finally slide along the manifold in tangent directions. Within the scope of this general behavior, different training errors will lead to different normal and tangent motions, which can be quantified, and these detailed motions characterize when inter-mode generations emerge. More detailed understanding of training dynamics will lead to more accurate quantification of the generation inductive bias, and an example of random feature model will be considered, for which we can explicitly illustrate how diffusion model's inductive biases originate as a composition of architectural bias and training accuracy, and how they evolve with the inference dynamics. Experiments on synthetic multimodal distributions and MNIST latent diffusion support the predicted directional effects, in both low- and high-dimensions.</summary>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:55:03Z</published>
-    <arxiv:primary_category term="stat.ML"/>
-    <author>
-      <name>Ye He</name>
-    </author>
-    <author>
-      <name>Yitong Qiu</name>
-    </author>
-    <author>
-      <name>Molei Tao</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06020v1</id>
-    <title>Mechanisms of AI Protein Folding in ESMFold</title>
-    <updated>2026-02-05T18:54:54Z</updated>
-    <link href="https://arxiv.org/abs/2602.06020v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06020v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>How do protein structure prediction models fold proteins? We investigate this question by tracing how ESMFold folds a beta hairpin, a prevalent structural motif. Through counterfactual interventions on model latents, we identify two computational stages in the folding trunk. In the first stage, early blocks initialize pairwise biochemical signals: residue identities and associated biochemical features such as charge flow from sequence representations into pairwise representations. In the second stage, late blocks develop pairwise spatial features: distance and contact information accumulate in the pairwise representation. We demonstrate that the mechanisms underlying structural decisions of ESMFold can be localized, traced through interpretable representations, and manipulated with strong causal effects.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:54:54Z</published>
-    <arxiv:comment>Our code, data, and results are available at https://folding.baulab.info</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Kevin Lu</name>
-    </author>
-    <author>
-      <name>Jannik Brinkmann</name>
-    </author>
-    <author>
-      <name>Stefan Huber</name>
-    </author>
-    <author>
-      <name>Aaron Mueller</name>
-    </author>
-    <author>
-      <name>Yonatan Belinkov</name>
-    </author>
-    <author>
-      <name>David Bau</name>
-    </author>
-    <author>
-      <name>Chris Wendler</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.06019v1</id>
-    <title>Multi-Token Prediction via Self-Distillation</title>
-    <updated>2026-02-05T18:54:48Z</updated>
-    <link href="https://arxiv.org/abs/2602.06019v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06019v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Existing techniques for accelerating language model inference, such as speculative decoding, require training auxiliary speculator models and building and deploying complex inference pipelines. We consider a new approach for converting a pretrained autoregressive language model from a slow single next token prediction model into a fast standalone multi-token prediction model using a simple online distillation objective. The final model retains the exact same implementation as the pretrained initial checkpoint and is deployable without the addition of any auxiliary verifier or other specialized inference code. On GSM8K, our method produces models that can decode more than $3\times$ faster on average at $&lt;5\%$ drop in accuracy relative to single token decoding performance.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:54:48Z</published>
-    <arxiv:comment>8 pages and 5 figures in the main body</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
+    <published>2026-02-06T18:41:12Z</published>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>John Kirchenbauer</name>
+      <name>Alex McKenzie</name>
     </author>
     <author>
-      <name>Abhimanyu Hans</name>
+      <name>Keenan Pepper</name>
     </author>
     <author>
-      <name>Brian Bartoldson</name>
+      <name>Stijn Servaes</name>
     </author>
     <author>
-      <name>Micah Goldblum</name>
+      <name>Martin Leitgab</name>
     </author>
     <author>
-      <name>Ashwinee Panda</name>
+      <name>Murat Cubuktepe</name>
     </author>
     <author>
-      <name>Tom Goldstein</name>
+      <name>Mike Vaiana</name>
+    </author>
+    <author>
+      <name>Diogo de Lucena</name>
+    </author>
+    <author>
+      <name>Judd Rosenblatt</name>
+    </author>
+    <author>
+      <name>Michael S. A. Graziano</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.06014v1</id>
-    <title>Optimism Stabilizes Thompson Sampling for Adaptive Inference</title>
-    <updated>2026-02-05T18:52:54Z</updated>
-    <link href="https://arxiv.org/abs/2602.06014v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.06014v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Thompson sampling (TS) is widely used for stochastic multi-armed bandits, yet its inferential properties under adaptive data collection are subtle. Classical asymptotic theory for sample means can fail because arm-specific sample sizes are random and coupled with the rewards through the action-selection rule. We study this phenomenon in the $K$-armed Gaussian bandit and identify \emph{optimism} as a key mechanism for restoring \emph{stability}, a sufficient condition for valid asymptotic inference requiring each arm's pull count to concentrate around a deterministic scale. First, we prove that variance-inflated TS \citep{halder2025stable} is stable for any $K \ge 2$, including the challenging regime where multiple arms are optimal. This resolves the open question raised by \citet{halder2025stable} through extending their results from the two-armed setting to the general $K$-armed setting. Second, we analyze an alternative optimistic modification that keeps the posterior variance unchanged but adds an explicit mean bonus to posterior mean, and establish the same stability conclusion. In summary, suitably implemented optimism stabilizes Thompson sampling and enables asymptotically valid inference in multi-armed bandits, while incurring only a mild additional regret cost.</summary>
+    <id>http://arxiv.org/abs/2602.06940v1</id>
+    <title>From Core to Detail: Unsupervised Disentanglement with Entropy-Ordered Flows</title>
+    <updated>2026-02-06T18:41:03Z</updated>
+    <link href="https://arxiv.org/abs/2602.06940v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06940v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning unsupervised representations that are both semantically meaningful and stable across runs remains a central challenge in modern representation learning. We introduce entropy-ordered flows (EOFlows), a normalizing-flow framework that orders latent dimensions by their explained entropy, analogously to PCA's explained variance. This ordering enables adaptive injective flows: after training, one may retain only the top C latent variables to form a compact core representation while the remaining variables capture fine-grained detail and noise, with C chosen flexibly at inference time rather than fixed during training. EOFlows build on insights from Independent Mechanism Analysis, Principal Component Flows and Manifold Entropic Metrics. We combine likelihood-based training with local Jacobian regularization and noise augmentation into a method that scales well to high-dimensional data such as images. Experiments on the CelebA dataset show that our method uncovers a rich set of semantically interpretable features, allowing for high compression and strong denoising.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-05T18:52:54Z</published>
+    <published>2026-02-06T18:41:03Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Shunxing Yan</name>
+      <name>Daniel Galperin</name>
     </author>
     <author>
-      <name>Han Zhong</name>
+      <name>Ullrich Köthe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06932v1</id>
+    <title>When RL Meets Adaptive Speculative Training: A Unified Training-Serving System</title>
+    <updated>2026-02-06T18:28:54Z</updated>
+    <link href="https://arxiv.org/abs/2602.06932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Speculative decoding can significantly accelerate LLM serving, yet most deployments today disentangle speculator training from serving, treating speculator training as a standalone offline modeling problem. We show that this decoupled formulation introduces substantial deployment and adaptation lag: (1) high time-to-serve, since a speculator must be trained offline for a considerable period before deployment; (2) delayed utility feedback, since the true end-to-end decoding speedup is only known after training and cannot be inferred reliably from acceptance rate alone due to model-architecture and system-level overheads; and (3) domain-drift degradation, as the target model is repurposed to new domains and the speculator becomes stale and less effective.
+  To address these issues, we present Aurora, a unified training-serving system that closes the loop by continuously learning a speculator directly from live inference traces. Aurora reframes online speculator learning as an asynchronous reinforcement-learning problem: accepted tokens provide positive feedback, while rejected speculator proposals provide implicit negative feedback that we exploit to improve sample efficiency. Our design integrates an SGLang-based inference server with an asynchronous training server, enabling hot-swapped speculator updates without service interruption. Crucially, Aurora supports day-0 deployment: a speculator can be served immediately and rapidly adapted to live traffic, improving system performance while providing immediate utility feedback. Across experiments, Aurora achieves a 1.5x day-0 speedup on recently released frontier models (e.g., MiniMax M2.1 229B and Qwen3-Coder-Next 80B). Aurora also adapts effectively to distribution shifts in user traffic, delivering an additional 1.25x speedup over a well-trained but static speculator on widely used models (e.g., Qwen3 and Llama3).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T18:28:54Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Junxiong Wang</name>
+    </author>
+    <author>
+      <name>Fengxiang Bie</name>
+    </author>
+    <author>
+      <name>Jisen Li</name>
+    </author>
+    <author>
+      <name>Zhongzhu Zhou</name>
+    </author>
+    <author>
+      <name>Zelei Shao</name>
+    </author>
+    <author>
+      <name>Yubo Wang</name>
+    </author>
+    <author>
+      <name>Yinghui Liu</name>
+    </author>
+    <author>
+      <name>Qingyang Wu</name>
+    </author>
+    <author>
+      <name>Avner May</name>
+    </author>
+    <author>
+      <name>Sri Yanamandra</name>
+    </author>
+    <author>
+      <name>Yineng Zhang</name>
+    </author>
+    <author>
+      <name>Ce Zhang</name>
+    </author>
+    <author>
+      <name>Tri Dao</name>
+    </author>
+    <author>
+      <name>Percy Liang</name>
+    </author>
+    <author>
+      <name>Ben Athiwaratkun</name>
+    </author>
+    <author>
+      <name>Shuaiwen Leon Song</name>
+    </author>
+    <author>
+      <name>Chenfeng Xu</name>
+    </author>
+    <author>
+      <name>Xiaoxia Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06923v1</id>
+    <title>From Kepler to Newton: Inductive Biases Guide Learned World Models in Transformers</title>
+    <updated>2026-02-06T18:17:37Z</updated>
+    <link href="https://arxiv.org/abs/2602.06923v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06923v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Can general-purpose AI architectures go beyond prediction to discover the physical laws governing the universe? True intelligence relies on "world models" -- causal abstractions that allow an agent to not only predict future states but understand the underlying governing dynamics. While previous "AI Physicist" approaches have successfully recovered such laws, they typically rely on strong, domain-specific priors that effectively "bake in" the physics. Conversely, Vafa et al. recently showed that generic Transformers fail to acquire these world models, achieving high predictive accuracy without capturing the underlying physical laws. We bridge this gap by systematically introducing three minimal inductive biases. We show that ensuring spatial smoothness (by formulating prediction as continuous regression) and stability (by training with noisy contexts to mitigate error accumulation) enables generic Transformers to surpass prior failures and learn a coherent Keplerian world model, successfully fitting ellipses to planetary trajectories. However, true physical insight requires a third bias: temporal locality. By restricting the attention window to the immediate past -- imposing the simple assumption that future states depend only on the local state rather than a complex history -- we force the model to abandon curve-fitting and discover Newtonian force representations. Our results demonstrate that simple architectural choices determine whether an AI becomes a curve-fitter or a physicist, marking a critical step toward automated scientific discovery.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.class-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T18:17:37Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ziming Liu</name>
+    </author>
+    <author>
+      <name>Sophia Sanborn</name>
+    </author>
+    <author>
+      <name>Surya Ganguli</name>
+    </author>
+    <author>
+      <name>Andreas Tolias</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06913v1</id>
+    <title>Symmetry and localisation in causally constrained quantum operator dynamics</title>
+    <updated>2026-02-06T18:09:26Z</updated>
+    <link href="https://arxiv.org/abs/2602.06913v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06913v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper explores the connection between causality and many-body dynamics by studying the algebraic structure of tri-partite unitaries ('walls') which permanently arrest local operator spreading in their time-periodic evolution. We show that the resulting causally independent subsystems arise from the invariance of an embedded sub-algebra in the system (ie. a generalised symmetry) that leads to the splitting of operator space into commuting sub-algebras. The commutant structure of the invariant algebra is then used to construct local conserved quantities. Using representation theory of finite matrix algebras, the general form of wall gates is derived as unitary automorphisms. Taking causal independence as a minimal model for non-ergodic dynamics, we study its effect on probes of many-body quantum chaos. We prove an entanglement area-law due to local constraints and we study its stability against projective measurements. In a random ensemble exhibiting causal independence, we compare spectral correlations with the universal (chaotic) ensemble using the spectral form factor. Our results offer a rigorous understanding of locally constrained quantum dynamics from a quantum information perspective.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.other" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T18:09:26Z</published>
+    <arxiv:comment>21 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Marcell D. Kovács</name>
+    </author>
+    <author>
+      <name>Christopher J. Turner</name>
+    </author>
+    <author>
+      <name>Lluís Masanes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06910v1</id>
+    <title>Assessment of evidence against homogeneity in exhaustive subgroup treatment effect plots</title>
+    <updated>2026-02-06T18:03:25Z</updated>
+    <link href="https://arxiv.org/abs/2602.06910v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06910v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Exhaustive subgroup treatment effect plots are constructed by displaying all subgroup treatment effects of interest against subgroup sample size, providing a useful overview of the observed treatment effect heterogeneity in a clinical trial. As in any exploratory subgroup analysis, however, the observed estimates suffer from small sample sizes and multiplicity issues. To facilitate more interpretable exploratory assessments, this paper introduces a computationally efficient method to generate homogeneity regions within exhaustive subgroup treatment effect plots. Using the Doubly Robust (DR) learner, pseudo-outcomes are used to estimate subgroup effects and derive reference distributions, quantifying how surprising observed heterogeneity is under a homogeneous effects model. Explicit formulas are derived for the homogeneity region and different methods for calculation of the critical values are compared. The method is illustrated with a cardiovascular trial and evaluated via simulation, showing well-calibrated inference and improved performance over standard approaches using simple differences of observed group means.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T18:03:25Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Björn Bornkamp</name>
+    </author>
+    <author>
+      <name>Jiarui Lu</name>
+    </author>
+    <author>
+      <name>Frank Bretz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06900v1</id>
+    <title>Supercharging Simulation-Based Inference for Bayesian Optimal Experimental Design</title>
+    <updated>2026-02-06T17:50:00Z</updated>
+    <link href="https://arxiv.org/abs/2602.06900v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06900v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bayesian optimal experimental design (BOED) seeks to maximize the expected information gain (EIG) of experiments. This requires a likelihood estimate, which in many settings is intractable. Simulation-based inference (SBI) provides powerful tools for this regime. However, existing work explicitly connecting SBI and BOED is restricted to a single contrastive EIG bound. We show that the EIG admits multiple formulations which can directly leverage modern SBI density estimators, encompassing neural posterior, likelihood, and ratio estimation. Building on this perspective, we define a novel EIG estimator using neural likelihood estimation. Further, we identify optimization as a key bottleneck of gradient based EIG maximization and show that a simple multi-start parallel gradient ascent procedure can substantially improve reliability and performance. With these innovations, our SBI-based BOED methods are able to match or outperform by up to $22\%$ existing state-of-the-art approaches across standard BOED benchmarks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T17:50:00Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Samuel Klein</name>
+    </author>
+    <author>
+      <name>Willie Neiswanger</name>
+    </author>
+    <author>
+      <name>Daniel Ratner</name>
+    </author>
+    <author>
+      <name>Michael Kagan</name>
+    </author>
+    <author>
+      <name>Sean Gasiorowski</name>
     </author>
   </entry>
 </feed>
