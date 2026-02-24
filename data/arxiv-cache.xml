@@ -1,294 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-02-23T01:16:14Z -->
+<!-- Last updated: 2026-02-24T01:14:46Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-02-23T01:16:14Z</updated>
+  <updated>2026-02-24T01:14:46Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>134579</opensearch:totalResults>
+  <opensearch:totalResults>134663</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2602.17664v1</id>
-    <title>Sink-Aware Pruning for Diffusion Language Models</title>
-    <updated>2026-02-19T18:59:50Z</updated>
-    <link href="https://arxiv.org/abs/2602.17664v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17664v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Diffusion Language Models (DLMs) incur high inference cost due to iterative denoising, motivating efficient pruning. Existing pruning heuristics largely inherited from autoregressive (AR) LLMs, typically preserve attention sink tokens because AR sinks serve as stable global anchors. We show that this assumption does not hold for DLMs: the attention-sink position exhibits substantially higher variance over the full generation trajectory (measured by how the dominant sink locations shift across timesteps), indicating that sinks are often transient and less structurally essential than in AR models. Based on this observation, we propose ${\bf \texttt{Sink-Aware Pruning}}$, which automatically identifies and prunes unstable sinks in DLMs (prior studies usually keep sinks for AR LLMs). Without retraining, our method achieves a better quality-efficiency trade-off and outperforms strong prior pruning baselines under matched compute. Our code is available at https://github.com/VILA-Lab/Sink-Aware-Pruning.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:59:50Z</published>
-    <arxiv:comment>Code at: https://github.com/VILA-Lab/Sink-Aware-Pruning</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
+    <id>http://arxiv.org/abs/2602.18432v1</id>
+    <title>SARAH: Spatially Aware Real-time Agentic Humans</title>
+    <updated>2026-02-20T18:59:35Z</updated>
+    <link href="https://arxiv.org/abs/2602.18432v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18432v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As embodied agents become central to VR, telepresence, and digital human applications, their motion must go beyond speech-aligned gestures: agents should turn toward users, respond to their movement, and maintain natural gaze. Current methods lack this spatial awareness. We close this gap with the first real-time, fully causal method for spatially-aware conversational motion, deployable on a streaming VR headset. Given a user's position and dyadic audio, our approach produces full-body motion that aligns gestures with speech while orienting the agent according to the user. Our architecture combines a causal transformer-based VAE with interleaved latent tokens for streaming inference and a flow matching model conditioned on user trajectory and audio. To support varying gaze preferences, we introduce a gaze scoring mechanism with classifier-free guidance to decouple learning from control: the model captures natural spatial alignment from data, while users can adjust eye contact intensity at inference time. On the Embody 3D dataset, our method achieves state-of-the-art motion quality at over 300 FPS -- 3x faster than non-causal baselines -- while capturing the subtle spatial dynamics of natural conversation. We validate our approach on a live VR system, bringing spatially-aware conversational agents to real-time deployment. Please see https://evonneng.github.io/sarah/ for details.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T18:59:35Z</published>
+    <arxiv:comment>Project page: https://evonneng.github.io/sarah/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Aidar Myrzakhan</name>
+      <name>Evonne Ng</name>
     </author>
     <author>
-      <name>Tianyi Li</name>
+      <name>Siwei Zhang</name>
     </author>
     <author>
-      <name>Bowei Guo</name>
+      <name>Zhang Chen</name>
     </author>
     <author>
-      <name>Shengkun Tang</name>
+      <name>Michael Zollhoefer</name>
     </author>
     <author>
-      <name>Zhiqiang Shen</name>
+      <name>Alexander Richard</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.17659v1</id>
-    <title>When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs</title>
-    <updated>2026-02-19T18:59:20Z</updated>
-    <link href="https://arxiv.org/abs/2602.17659v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17659v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action models (VLAs) promise to ground language instructions in robot control, yet in practice often fail to faithfully follow language. When presented with instructions that lack strong scene-specific supervision, VLAs suffer from counterfactual failures: they act based on vision shortcuts induced by dataset biases, repeatedly executing well-learned behaviors and selecting objects frequently seen during training regardless of language intent. To systematically study it, we introduce LIBERO-CF, the first counterfactual benchmark for VLAs that evaluates language following capability by assigning alternative instructions under visually plausible LIBERO layouts. Our evaluation reveals that counterfactual failures are prevalent yet underexplored across state-of-the-art VLAs. We propose Counterfactual Action Guidance (CAG), a simple yet effective dual-branch inference scheme that explicitly regularizes language conditioning in VLAs. CAG combines a standard VLA policy with a language-unconditioned Vision-Action (VA) module, enabling counterfactual comparison during action selection. This design reduces reliance on visual shortcuts, improves robustness on under-observed tasks, and requires neither additional demonstrations nor modifications to existing architectures or pretrained models. Extensive experiments demonstrate its plug-and-play integration across diverse VLAs and consistent improvements. For example, on LIBERO-CF, CAG improves $π_{0.5}$ by 9.7% in language following accuracy and 3.6% in task success on under-observed tasks using a training-free strategy, with further gains of 15.5% and 8.5%, respectively, when paired with a VA model. In real-world evaluations, CAG reduces counterfactual failures of 9.4% and improves task success by 17.2% on average.</summary>
+    <id>http://arxiv.org/abs/2602.18425v1</id>
+    <title>RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering</title>
+    <updated>2026-02-20T18:48:05Z</updated>
+    <link href="https://arxiv.org/abs/2602.18425v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18425v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers. We introduce retrieve-verify-retrieve (RVR), a multi-round retrieval framework designed to maximize answer coverage. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high-quality subset. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds. RVR is effective even with off-the-shelf retrievers, and fine-tuning retrievers for our inference procedure brings further gains. Our method outperforms baselines, including agentic search approaches, achieving at least 10% relative and 3% absolute gain in complete recall percentage on a multi-answer retrieval dataset (QAMPARI). We also see consistent gains on two out-of-domain datasets (QUEST and WebQuestionsSP) across different base retrievers. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T18:48:05Z</published>
+    <arxiv:comment>18 pages, 12 figures, 12 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Deniz Qian</name>
+    </author>
+    <author>
+      <name>Hung-Ting Chen</name>
+    </author>
+    <author>
+      <name>Eunsol Choi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.18422v1</id>
+    <title>Generated Reality: Human-centric World Simulation using Interactive Video Generation with Hand and Camera Control</title>
+    <updated>2026-02-20T18:45:29Z</updated>
+    <link href="https://arxiv.org/abs/2602.18422v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18422v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Extended reality (XR) demands generative models that respond to users' tracked real-world motion, yet current video world models accept only coarse control signals such as text or keyboard input, limiting their utility for embodied interaction. We introduce a human-centric video world model that is conditioned on both tracked head pose and joint-level hand poses. For this purpose, we evaluate existing diffusion transformer conditioning strategies and propose an effective mechanism for 3D head and hand control, enabling dexterous hand--object interactions. We train a bidirectional video diffusion model teacher using this strategy and distill it into a causal, interactive system that generates egocentric virtual environments. We evaluate this generated reality system with human subjects and demonstrate improved task performance as well as a significantly higher level of perceived amount of control over the performed actions compared with relevant baselines.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T18:45:29Z</published>
+    <arxiv:comment>Project page here: https://codeysun.github.io/generated-reality</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Linxi Xie</name>
+    </author>
+    <author>
+      <name>Lisong C. Sun</name>
+    </author>
+    <author>
+      <name>Ashley Neall</name>
+    </author>
+    <author>
+      <name>Tong Wu</name>
+    </author>
+    <author>
+      <name>Shengqu Cai</name>
+    </author>
+    <author>
+      <name>Gordon Wetzstein</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.18420v1</id>
+    <title>SPQ: An Ensemble Technique for Large Language Model Compression</title>
+    <updated>2026-02-20T18:44:16Z</updated>
+    <link href="https://arxiv.org/abs/2602.18420v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18420v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This study presents an ensemble technique, SPQ (SVD-Pruning-Quantization), for large language model (LLM) compression that combines variance-retained singular value decomposition (SVD), activation-based pruning, and post-training linear quantization. Each component targets a different source of inefficiency: i) pruning removes redundant neurons in MLP layers, ii) SVD reduces attention projections into compact low-rank factors, iii) and 8-bit quantization uniformly compresses all linear layers. At matched compression ratios, SPQ outperforms individual methods (SVD-only, pruning-only, or quantization-only) in perplexity, demonstrating the benefit of combining complementary techniques. Applied to LLaMA-2-7B, SPQ achieves up to 75% memory reduction while maintaining or improving perplexity (e.g., WikiText-2 5.47 to 4.91) and preserving accuracy on downstream benchmarks such as C4, TruthfulQA, and GSM8K. Compared to strong baselines like GPTQ and SparseGPT, SPQ offers competitive perplexity and accuracy while using less memory (6.86 GB vs. 7.16 GB for GPTQ). Moreover, SPQ improves inference throughput over GPTQ, achieving up to a 1.9x speedup, which further enhances its practicality for real-world deployment. The effectiveness of SPQ's robust compression through layer-aware and complementary compression techniques may provide practical deployment of LLMs in memory-constrained environments. Code is available at: https://github.com/JiaminYao/SPQ_LLM_Compression/</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T18:44:16Z</published>
+    <arxiv:comment>Accepted to LREC 2026 Main Conference</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jiamin Yao</name>
+    </author>
+    <author>
+      <name>Eren Gultepe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.18400v1</id>
+    <title>Exploiting Completeness Perception with Diffusion Transformer for Unified 3D MRI Synthesis</title>
+    <updated>2026-02-20T18:05:39Z</updated>
+    <link href="https://arxiv.org/abs/2602.18400v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18400v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Missing data problems, such as missing modalities in multi-modal brain MRI and missing slices in cardiac MRI, pose significant challenges in clinical practice. Existing methods rely on external guidance to supply detailed missing state for instructing generative models to synthesize missing MRIs. However, manual indicators are not always available or reliable in real-world scenarios due to the unpredictable nature of clinical environments. Moreover, these explicit masks are not informative enough to provide guidance for improving semantic consistency. In this work, we argue that generative models should infer and recognize missing states in a self-perceptive manner, enabling them to better capture subtle anatomical and pathological variations. Towards this goal, we propose CoPeDiT, a general-purpose latent diffusion model equipped with completeness perception for unified synthesis of 3D MRIs. Specifically, we incorporate dedicated pretext tasks into our tokenizer, CoPeVAE, empowering it to learn completeness-aware discriminative prompts, and design MDiT3D, a specialized diffusion transformer architecture for 3D MRI synthesis, that effectively uses the learned prompts as guidance to enhance semantic consistency in 3D space. Comprehensive evaluations on three large-scale MRI datasets demonstrate that CoPeDiT significantly outperforms state-of-the-art methods, achieving superior robustness, generalizability, and flexibility. The code is available at https://github.com/JK-Liu7/CoPeDiT .</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T18:05:39Z</published>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>Junkai Liu</name>
+    </author>
+    <author>
+      <name>Nay Aung</name>
+    </author>
+    <author>
+      <name>Theodoros N. Arvanitis</name>
+    </author>
+    <author>
+      <name>Joao A. C. Lima</name>
+    </author>
+    <author>
+      <name>Steffen E. Petersen</name>
+    </author>
+    <author>
+      <name>Daniel C. Alexander</name>
+    </author>
+    <author>
+      <name>Le Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.18397v1</id>
+    <title>How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf</title>
+    <updated>2026-02-20T18:02:28Z</updated>
+    <link href="https://arxiv.org/abs/2602.18397v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18397v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language-Action (VLA) models have recently demonstrated impressive capabilities across various embodied AI tasks. While deploying VLA models on real-world robots imposes strict real-time inference constraints, the inference performance landscape of VLA remains poorly understood due to the large combinatorial space of model architectures and inference systems. In this paper, we ask a fundamental research question: How should we design future VLA models and systems to support real-time inference? To address this question, we first introduce VLA-Perf, an analytical performance model that can analyze inference performance for arbitrary combinations of VLA models and inference systems. Using VLA-Perf, we conduct the first systematic study of the VLA inference performance landscape. From a model-design perspective, we examine how inference performance is affected by model scaling, model architectural choices, long-context video inputs, asynchronous inference, and dual-system model pipelines. From the deployment perspective, we analyze where VLA inference should be executed -- on-device, on edge servers, or in the cloud -- and how hardware capability and network performance jointly determine end-to-end latency. By distilling 15 key takeaways from our comprehensive evaluation, we hope this work can provide practical guidance for the design of future VLA models and inference systems.</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:59:20Z</published>
-    <arxiv:comment>Website: https://vla-va.github.io/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <published>2026-02-20T18:02:28Z</published>
+    <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Yu Fang</name>
+      <name>Wenqi Jiang</name>
     </author>
     <author>
-      <name>Yuchun Feng</name>
+      <name>Jason Clemons</name>
     </author>
     <author>
-      <name>Dong Jing</name>
+      <name>Karu Sankaralingam</name>
     </author>
     <author>
-      <name>Jiaqi Liu</name>
-    </author>
-    <author>
-      <name>Yue Yang</name>
-    </author>
-    <author>
-      <name>Zhenyu Wei</name>
-    </author>
-    <author>
-      <name>Daniel Szafir</name>
-    </author>
-    <author>
-      <name>Mingyu Ding</name>
+      <name>Christos Kozyrakis</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.17655v1</id>
-    <title>What Language is This? Ask Your Tokenizer</title>
-    <updated>2026-02-19T18:58:39Z</updated>
-    <link href="https://arxiv.org/abs/2602.17655v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17655v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Language Identification (LID) is an important component of many multilingual natural language processing pipelines, where it facilitates corpus curation, training data analysis, and cross-lingual evaluation of large language models. Despite near-perfect performance on high-resource languages, existing systems remain brittle in low-resource and closely related language settings. We introduce UniLID, a simple and efficient LID method based on the UnigramLM tokenization algorithm, leveraging its probabilistic framing, parameter estimation technique and inference strategy. In short, we learn language-conditional unigram distributions over a shared tokenizer vocabulary but treat segmentation as a language-specific phenomenon. Our formulation is data- and compute-efficient, supports incremental addition of new languages without retraining existing models, and can naturally be integrated into existing language model tokenization pipelines. Empirical evaluations against widely used baselines, including fastText, GlotLID, and CLD3, show that UniLID achieves competitive performance on standard benchmarks, substantially improves sample efficiency in low-resource settings - surpassing 70% accuracy with as few as five labeled samples per language - and delivers large gains on fine-grained dialect identification.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:58:39Z</published>
-    <arxiv:primary_category term="cs.CL"/>
+    <id>http://arxiv.org/abs/2602.18383v1</id>
+    <title>Design-based inference for generalized causal effects in randomized experiments</title>
+    <updated>2026-02-20T17:45:01Z</updated>
+    <link href="https://arxiv.org/abs/2602.18383v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18383v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalized causal effect estimands, including the Mann-Whitney parameter and causal net benefit, provide flexible summaries of treatment effects in randomized experiments with non-Gaussian or multivariate outcomes. We develop a unified design-based inference framework for regression adjustment and variance estimation of a broad class of generalized causal effect estimands defined through pairwise contrast functions. Leveraging the theory of U-statistics and finite-population asymptotics, we establish the consistency and asymptotic normality of regression estimators constructed from individual pairs and per-unit pair averages, even when the working models are misspecified. Consequently, these estimators are model-assisted rather than model-based. In contrast to classical average treatment effect estimands, we show that for nonlinear contrast functions, covariate adjustment preserves consistency but does not admit a universal efficiency guarantee. For inference, we demonstrate that standard heteroskedasticity-robust and cluster-robust variance estimators are generally inconsistent in this setting. As a remedy, we prove that a complete two-way cluster-robust variance estimator, which fully accounts for pairwise dependence and reverse comparisons, is consistent.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T17:45:01Z</published>
+    <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Clara Meister</name>
+      <name>Xinyuan Chen</name>
     </author>
     <author>
-      <name>Ahmetcan Yavuz</name>
-    </author>
-    <author>
-      <name>Pietro Lesci</name>
-    </author>
-    <author>
-      <name>Tiago Pimentel</name>
+      <name>Fan Li</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.17650v1</id>
-    <title>Human-level 3D shape perception emerges from multi-view learning</title>
-    <updated>2026-02-19T18:56:05Z</updated>
-    <link href="https://arxiv.org/abs/2602.17650v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17650v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Humans can infer the three-dimensional structure of objects from two-dimensional visual inputs. Modeling this ability has been a longstanding goal for the science and engineering of visual intelligence, yet decades of computational methods have fallen short of human performance. Here we develop a modeling framework that predicts human 3D shape inferences for arbitrary objects, directly from experimental stimuli. We achieve this with a novel class of neural networks trained using a visual-spatial objective over naturalistic sensory data; given a set of images taken from different locations within a natural scene, these models learn to predict spatial information related to these images, such as camera location and visual depth, without relying on any object-related inductive biases. Notably, these visual-spatial signals are analogous to sensory cues readily available to humans. We design a zero-shot evaluation approach to determine the performance of these `multi-view' models on a well established 3D perception task, then compare model and human behavior. Our modeling framework is the first to match human accuracy on 3D shape inferences, even without task-specific training or fine-tuning. Remarkably, independent readouts of model responses predict fine-grained measures of human behavior, including error patterns and reaction times, revealing a natural correspondence between model dynamics and human perception. Taken together, our findings indicate that human-level 3D perception can emerge from a simple, scalable learning objective over naturalistic visual-spatial data. All code, human behavioral data, and experimental stimuli needed to reproduce our findings can be found on our project page.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:56:05Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Tyler Bonnen</name>
-    </author>
-    <author>
-      <name>Jitendra Malik</name>
-    </author>
-    <author>
-      <name>Angjoo Kanazawa</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.17642v1</id>
-    <title>A.R.I.S.: Automated Recycling Identification System for E-Waste Classification Using Deep Learning</title>
-    <updated>2026-02-19T18:54:06Z</updated>
-    <link href="https://arxiv.org/abs/2602.17642v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17642v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Traditional electronic recycling processes suffer from significant resource loss due to inadequate material separation and identification capabilities, limiting material recovery. We present A.R.I.S. (Automated Recycling Identification System), a low-cost, portable sorter for shredded e-waste that addresses this efficiency gap. The system employs a YOLOx model to classify metals, plastics, and circuit boards in real time, achieving low inference latency with high detection accuracy. Experimental evaluation yielded 90% overall precision, 82.2% mean average precision (mAP), and 84% sortation purity. By integrating deep learning with established sorting methods, A.R.I.S. enhances material recovery efficiency and lowers barriers to advanced recycling adoption. This work complements broader initiatives in extending product life cycles, supporting trade-in and recycling programs, and reducing environmental impact across the supply chain.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:54:06Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Dhruv Talwar</name>
-    </author>
-    <author>
-      <name>Harsh Desai</name>
-    </author>
-    <author>
-      <name>Wendong Yin</name>
-    </author>
-    <author>
-      <name>Goutam Mohanty</name>
-    </author>
-    <author>
-      <name>Rafael Reveles</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.17634v1</id>
-    <title>Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting</title>
-    <updated>2026-02-19T18:48:08Z</updated>
-    <link href="https://arxiv.org/abs/2602.17634v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17634v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Learning time series foundation models has been shown to be a promising approach for zero-shot time series forecasting across diverse time series domains. Insofar as scaling has been a critical driver of performance of foundation models in other modalities such as language and vision, much recent work on time series foundation modeling has focused on scaling. This has resulted in time series foundation models with hundreds of millions of parameters that are, while performant, inefficient and expensive to use in practice. This paper describes a simple recipe for learning efficient foundation models for zero-shot time series forecasting that are orders of magnitude smaller. We show that large-scale transformers are not necessary: small hybrid models that interleave long convolution and linear RNN layers (in particular DeltaNet layers) can match the performance of larger transformer-based models while being more than a hundred times smaller. We also describe several data augmentation and inference strategies that further improve performance. This recipe results in Reverso, a family of efficient time series foundation models for zero-shot forecasting that significantly push the performance-efficiency Pareto frontier.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:48:08Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Xinghong Fu</name>
-    </author>
-    <author>
-      <name>Yanhong Li</name>
-    </author>
-    <author>
-      <name>Georgios Papaioannou</name>
-    </author>
-    <author>
-      <name>Yoon Kim</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.17608v1</id>
-    <title>Towards Anytime-Valid Statistical Watermarking</title>
-    <updated>2026-02-19T18:32:26Z</updated>
-    <link href="https://arxiv.org/abs/2602.17608v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17608v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The proliferation of Large Language Models (LLMs) necessitates efficient mechanisms to distinguish machine-generated content from human text. While statistical watermarking has emerged as a promising solution, existing methods suffer from two critical limitations: the lack of a principled approach for selecting sampling distributions and the reliance on fixed-horizon hypothesis testing, which precludes valid early stopping. In this paper, we bridge this gap by developing the first e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal sampling with anytime-valid inference. Unlike traditional approaches where optional stopping invalidates Type-I error guarantees, our framework enables valid, anytime-inference by constructing a test supermartingale for the detection process. By leveraging an anchor distribution to approximate the target model, we characterize the optimal e-value with respect to the worst-case log-growth rate and derive the optimal expected stopping time. Our theoretical claims are substantiated by simulations and evaluations on established benchmarks, showing that our framework can significantly enhance sample efficiency, reducing the average token budget required for detection by 13-15% relative to state-of-the-art baselines.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:32:26Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Baihe Huang</name>
-    </author>
-    <author>
-      <name>Eric Xu</name>
-    </author>
-    <author>
-      <name>Kannan Ramchandran</name>
-    </author>
-    <author>
-      <name>Jiantao Jiao</name>
-    </author>
-    <author>
-      <name>Michael I. Jordan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.17598v1</id>
-    <title>The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\rightarrow$LLM Pipelines?</title>
-    <updated>2026-02-19T18:22:39Z</updated>
-    <link href="https://arxiv.org/abs/2602.17598v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17598v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Current speech LLMs largely perform implicit ASR: on tasks solvable from a transcript, they are behaviorally and mechanistically equivalent to simple Whisper$\to$LLM cascades. We show this through matched-backbone testing across four speech LLMs and six tasks, controlling for the LLM backbone for the first time. Ultravox is statistically indistinguishable from its matched cascade ($κ{=}0.93$); logit lens reveals literal text emerging in hidden states; LEACE concept erasure confirms text representations are causally necessary in both architectures tested, collapsing accuracy to near-zero. Qwen2-Audio genuinely diverges, revealing cascade equivalence is architecture-dependent, not universal. For most deployed use cases, current speech LLMs are expensive cascades, and under noise, they are worse ones, with clean-condition advantages reversing by up to 7.6% at 0 dB.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2602.18355v1</id>
+    <title>Rethinking Flow and Diffusion Bridge Models for Speech Enhancement</title>
+    <updated>2026-02-20T17:04:49Z</updated>
+    <link href="https://arxiv.org/abs/2602.18355v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18355v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow matching and diffusion bridge models have emerged as leading paradigms in generative speech enhancement, modeling stochastic processes between paired noisy and clean speech signals based on principles such as flow matching, score matching, and Schrödinger bridge. In this paper, we present a framework that unifies existing flow and diffusion bridge models by interpreting them as constructions of Gaussian probability paths with varying means and variances between paired data. Furthermore, we investigate the underlying consistency between the training/inference procedures of these generative models and conventional predictive models. Our analysis reveals that each sampling step of a well-trained flow or diffusion bridge model optimized with a data prediction loss is theoretically analogous to executing predictive speech enhancement. Motivated by this insight, we introduce an enhanced bridge model that integrates an effective probability path design with key elements from predictive paradigms, including improved network architecture, tailored loss functions, and optimized training strategies. Experiments on denoising and dereverberation tasks demonstrate that the proposed method outperforms existing flow and diffusion baselines with fewer parameters and reduced computational complexity. The results also highlight that the inherently predictive nature of this generative framework imposes limitations on its achievable upper-bound performance.</summary>
     <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T18:22:39Z</published>
-    <arxiv:comment>10 pages, 6 figures, 7 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
+    <published>2026-02-20T17:04:49Z</published>
+    <arxiv:comment>Accepted by the 40th AAAI Conference on Artificial Intelligence (AAAI-26)</arxiv:comment>
+    <arxiv:primary_category term="eess.AS"/>
     <author>
-      <name>Jayadev Billa</name>
+      <name>Dahan Wang</name>
+    </author>
+    <author>
+      <name>Jun Gao</name>
+    </author>
+    <author>
+      <name>Tong Lei</name>
+    </author>
+    <author>
+      <name>Yuxiang Hu</name>
+    </author>
+    <author>
+      <name>Changbao Zhu</name>
+    </author>
+    <author>
+      <name>Kai Chen</name>
+    </author>
+    <author>
+      <name>Jing Lu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.17560v1</id>
-    <title>ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment</title>
-    <updated>2026-02-19T17:13:44Z</updated>
-    <link href="https://arxiv.org/abs/2602.17560v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17560v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \textit{(i)} the lack of a unified theoretical framework for guiding the design of steering directions, and \textit{(ii)} an over-reliance on \textit{one-step steering} that fail to capture complex patterns of activation distributions. In this work, we propose a unified ordinary differential equations (ODEs)-based \textit{theoretical} framework for activation steering in LLM alignment. We show that conventional activation addition can be interpreted as a first-order approximation to the solution of an ODE. Based on this ODE perspective, identifying a steering direction becomes equivalent to designing a \textit{barrier function} from control theory. Derived from this framework, we introduce ODESteer, a kind of ODE-based steering guided by barrier functions, which shows \textit{empirical} advancement in LLM alignment. ODESteer identifies steering directions by defining the barrier function as the log-density ratio between positive and negative activations, and employs it to construct an ODE for \textit{multi-step and adaptive} steering. Compared to state-of-the-art activation steering methods, ODESteer achieves consistent empirical improvements on diverse LLM alignment benchmarks, a notable $5.7\%$ improvement over TruthfulQA, $2.5\%$ over UltraFeedback, and $2.4\%$ over RealToxicityPrompts. Our work establishes a principled new view of activation steering in LLM alignment by unifying its theoretical foundations via ODEs, and validating it empirically through the proposed ODESteer method.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T17:13:44Z</published>
-    <arxiv:comment>Accepted by ICLR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
+    <id>http://arxiv.org/abs/2602.18328v1</id>
+    <title>Smoothness and other hyperparameter estimation for inverse problems related to data assimilation</title>
+    <updated>2026-02-20T16:33:22Z</updated>
+    <link href="https://arxiv.org/abs/2602.18328v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18328v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider Bayesian inverse problems arising in data assimilation for dynamical systems governed by partial and stochastic partial differential equations. The space-time dependent field is inferred jointly with static parameters of the prior and likelihood densities. Particular emphasis is placed on the hyperparameter controlling the prior smoothness and regularity, which is critical in ensuring well-posedness, shaping posterior structure, and determining predictive uncertainty. Commonly it is assumed to be known and fixed a priori; however in this paper we will adopt a hierarchical Bayesian framework in which smoothness and other hyperparameters are treated as unknown and assigned hyperpriors. Posterior inference is performed using Metropolis-within-Gibbs sampling suitable to high dimensions, for which hyperparameter estimation involves little computational overhead. The methodology is demonstrated on inverse problems for the Navier-Stokes equations and the stochastic advection-diffusion equation, under sparse and dense observation regimes, using Gaussian priors with different covariance structure. Numerical results show that jointly estimating the smoothness substantially reduces the errors in uncertainty quantification and parameter estimation induced by smoothness misspecification, by achieving performance comparable to scenarios in which the true smoothness is known.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T16:33:22Z</published>
+    <arxiv:comment>28 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.CO"/>
     <author>
-      <name>Hongjue Zhao</name>
+      <name>Baptiste Simandoux</name>
     </author>
     <author>
-      <name>Haosen Sun</name>
+      <name>Nikolas Kantas</name>
     </author>
     <author>
-      <name>Jiangtao Kong</name>
-    </author>
-    <author>
-      <name>Xiaochang Li</name>
-    </author>
-    <author>
-      <name>Qineng Wang</name>
-    </author>
-    <author>
-      <name>Liwei Jiang</name>
-    </author>
-    <author>
-      <name>Qi Zhu</name>
-    </author>
-    <author>
-      <name>Tarek Abdelzaher</name>
-    </author>
-    <author>
-      <name>Yejin Choi</name>
-    </author>
-    <author>
-      <name>Manling Li</name>
-    </author>
-    <author>
-      <name>Huajie Shao</name>
+      <name>Dan Crisan</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.17559v1</id>
-    <title>Revisiting Weight Regularization for Low-Rank Continual Learning</title>
-    <updated>2026-02-19T17:13:00Z</updated>
-    <link href="https://arxiv.org/abs/2602.17559v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.17559v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Continual Learning (CL) with large-scale pre-trained models (PTMs) has recently gained wide attention, shifting the focus from training from scratch to continually adapting PTMs. This has given rise to a promising paradigm: parameter-efficient continual learning (PECL), where task interference is typically mitigated by assigning a task-specific module during training, such as low-rank adapters. However, weight regularization techniques, such as Elastic Weight Consolidation (EWC)-a key strategy in CL-remain underexplored in this new paradigm. In this paper, we revisit weight regularization in low-rank CL as a new perspective for mitigating task interference in PECL. Unlike existing low-rank CL methods, we mitigate task interference by regularizing a shared low-rank update through EWC, thereby keeping the storage requirement and inference costs constant regardless of the number of tasks. Our proposed method EWC-LoRA leverages a low-rank representation to estimate parameter importance over the full-dimensional space. This design offers a practical, computational- and memory-efficient solution for CL with PTMs, and provides insights that may inform the broader application of regularization techniques within PECL. Extensive experiments on various benchmarks demonstrate the effectiveness of EWC-LoRA, achieving a stability-plasticity trade-off superior to existing low-rank CL approaches. These results indicate that, even under low-rank parameterizations, weight regularization remains an effective mechanism for mitigating task interference. Code is available at: https://github.com/yaoyz96/low-rank-cl.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-19T17:13:00Z</published>
-    <arxiv:comment>Accepted by ICLR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
+    <id>http://arxiv.org/abs/2602.18312v1</id>
+    <title>Learning Smooth Time-Varying Linear Policies with an Action Jacobian Penalty</title>
+    <updated>2026-02-20T16:11:19Z</updated>
+    <link href="https://arxiv.org/abs/2602.18312v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18312v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reinforcement learning provides a framework for learning control policies that can reproduce diverse motions for simulated characters. However, such policies often exploit unnatural high-frequency signals that are unachievable by humans or physical robots, making them poor representations of real-world behaviors. Existing work addresses this issue by adding a reward term that penalizes a large change in actions over time. This term often requires substantial tuning efforts. We propose to use the action Jacobian penalty, which penalizes changes in action with respect to the changes in simulated state directly through auto differentiation. This effectively eliminates unrealistic high-frequency control signals without task specific tuning. While effective, the action Jacobian penalty introduces significant computational overhead when used with traditional fully connected neural network architectures. To mitigate this, we introduce a new architecture called a Linear Policy Net (LPN) that significantly reduces the computational burden for calculating the action Jacobian penalty during training. In addition, a LPN requires no parameter tuning, exhibits faster learning convergence compared to baseline methods, and can be more efficiently queried during inference time compared to a fully connected neural network. We demonstrate that a Linear Policy Net, combined with the action Jacobian penalty, is able to learn policies that generate smooth signals while solving a number of motion imitation tasks with different characteristics, including dynamic motions such as a backflip and various challenging parkour skills. Finally, we apply this approach to create policies for dynamic motions on a physical quadrupedal robot equipped with an arm.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-20T16:11:19Z</published>
+    <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Yaoyue Zheng</name>
+      <name>Zhaoming Xie</name>
     </author>
     <author>
-      <name>Yin Zhang</name>
+      <name>Kevin Karol</name>
     </author>
     <author>
-      <name>Joost van de Weijer</name>
-    </author>
-    <author>
-      <name>Gido M van de Ven</name>
-    </author>
-    <author>
-      <name>Shaoyi Du</name>
-    </author>
-    <author>
-      <name>Xuetao Zhang</name>
-    </author>
-    <author>
-      <name>Zhiqiang Tian</name>
+      <name>Jessica Hodgins</name>
     </author>
   </entry>
 </feed>
