@@ -1,304 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-02-27T01:11:56Z -->
+<!-- Last updated: 2026-02-28T01:06:48Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-02-27T01:11:56Z</updated>
+  <updated>2026-02-28T01:06:49Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>135103</opensearch:totalResults>
+  <opensearch:totalResults>135241</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2602.22212v1</id>
-    <title>Neu-PiG: Neural Preconditioned Grids for Fast Dynamic Surface Reconstruction on Long Sequences</title>
-    <updated>2026-02-25T18:59:53Z</updated>
-    <link href="https://arxiv.org/abs/2602.22212v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22212v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Temporally consistent surface reconstruction of dynamic 3D objects from unstructured point cloud data remains challenging, especially for very long sequences. Existing methods either optimize deformations incrementally, risking drift and requiring long runtimes, or rely on complex learned models that demand category-specific training. We present Neu-PiG, a fast deformation optimization method based on a novel preconditioned latent-grid encoding that distributes spatial features parameterized on the position and normal direction of a keyframe surface. Our method encodes entire deformations across all time steps at various spatial scales into a multi-resolution latent grid, parameterized by the position and normal direction of a reference surface from a single keyframe. This latent representation is then augmented for time modulation and decoded into per-frame 6-DoF deformations via a lightweight multilayer perceptron (MLP). To achieve high-fidelity, drift-free surface reconstructions in seconds, we employ Sobolev preconditioning during gradient-based training of the latent space, completely avoiding the need for any explicit correspondences or further priors. Experiments across diverse human and animal datasets demonstrate that Neu-PiG outperforms state-the-art approaches, offering both superior accuracy and scalability to long sequences while running at least 60x faster than existing training-free methods and achieving inference speeds on the same order as heavy pretrained models.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T18:59:53Z</published>
-    <arxiv:comment>CVPR 2026, Code: https://github.com/vc-bonn/neu-pig</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2602.23355v1</id>
+    <title>Robust model selection using likelihood as data</title>
+    <updated>2026-02-26T18:57:26Z</updated>
+    <link href="https://arxiv.org/abs/2602.23355v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23355v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Model selection is a central task in statistics, but standard methods are not robust in misspecified settings where the true data-generating process (DGP) is not in the set of candidate models. The key limitation is that existing methods -- including information criteria and Bayesian posteriors -- do not quantify uncertainty about how well each candidate model approximates the true DGP. In this paper, we introduce a novel approach to model selection based on modeling the likelihood values themselves. Specifically, given $K$ candidate models and $n$ observations, we view the $n\times K$ matrix of negative log-likelihood values as a random data matrix and observe that the expectation of each row is equal to the vector of Kullback--Leibler divergences between the $K$ models and the true DGP, up to an additive constant. We use a multivariate normal model to estimate and quantify uncertainty in this expectation, providing calibrated inferences for robust model selection under misspecification. The procedure is easy to compute, interpretable, and comes with theoretical guarantees, including consistency.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:57:26Z</published>
+    <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Julian Kaltheuner</name>
+      <name>Jongwoo Choi</name>
     </author>
     <author>
-      <name>Hannah Dröge</name>
+      <name>Neil A. Spencer</name>
     </author>
     <author>
-      <name>Markus Plack</name>
-    </author>
-    <author>
-      <name>Patrick Stotko</name>
-    </author>
-    <author>
-      <name>Reinhard Klein</name>
+      <name>Jeffrey W. Miller</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.22208v1</id>
-    <title>Solaris: Building a Multiplayer Video World Model in Minecraft</title>
-    <updated>2026-02-25T18:59:01Z</updated>
-    <link href="https://arxiv.org/abs/2602.22208v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22208v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player settings, our system supports coordinated multi-agent interaction and synchronized videos + actions capture. Using this system, we collect 12.64 million multiplayer frames and propose an evaluation framework for multiplayer movement, memory, grounding, building, and view consistency. We train Solaris using a staged pipeline that progressively transitions from single-player to multiplayer modeling, combining bidirectional, causal, and Self Forcing training. In the final stage, we introduce Checkpointed Self Forcing, a memory-efficient Self Forcing variant that enables a longer-horizon teacher. Results show our architecture and training design outperform existing baselines. Through open-sourcing our system and models, we hope to lay the groundwork for a new generation of multi-agent world models.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T18:59:01Z</published>
-    <arxiv:comment>Project website: https://solaris-wm.github.io/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Georgy Savva</name>
-    </author>
-    <author>
-      <name>Oscar Michel</name>
-    </author>
-    <author>
-      <name>Daohan Lu</name>
-    </author>
-    <author>
-      <name>Suppakit Waiwitlikhit</name>
-    </author>
-    <author>
-      <name>Timothy Meehan</name>
-    </author>
-    <author>
-      <name>Dhairya Mishra</name>
-    </author>
-    <author>
-      <name>Srivats Poddar</name>
-    </author>
-    <author>
-      <name>Jack Lu</name>
-    </author>
-    <author>
-      <name>Saining Xie</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.22188v1</id>
-    <title>Surrogate models for Rock-Fluid Interaction: A Grid-Size-Invariant Approach</title>
-    <updated>2026-02-25T18:34:03Z</updated>
-    <link href="https://arxiv.org/abs/2602.22188v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22188v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Modelling rock-fluid interaction requires solving a set of partial differential equations (PDEs) to predict the flow behaviour and the reactions of the fluid with the rock on the interfaces. Conventional high-fidelity numerical models require a high resolution to obtain reliable results, resulting in huge computational expense. This restricts the applicability of these models for multi-query problems, such as uncertainty quantification and optimisation, which require running numerous scenarios. As a cheaper alternative to high-fidelity models, this work develops eight surrogate models for predicting the fluid flow in porous media. Four of these are reduced-order models (ROM) based on one neural network for compression and another for prediction. The other four are single neural networks with the property of grid-size invariance; a term which we use to refer to image-to-image models that are capable of inferring on computational domains that are larger than those used during training. In addition to the novel grid-size-invariant framework for surrogate models, we compare the predictive performance of UNet and UNet++ architectures, and demonstrate that UNet++ outperforms UNet for surrogate models. Furthermore, we show that the grid-size-invariant approach is a reliable way to reduce memory consumption during training, resulting in good correlation between predicted and ground-truth values and outperforming the ROMs analysed. The application analysed is particularly challenging because fluid-induced rock dissolution results in a non-static solid field and, consequently, it cannot be used to help in adjustments of the future prediction.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T18:34:03Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Nathalie C. Pinheiro</name>
-    </author>
-    <author>
-      <name>Donghu Guo</name>
-    </author>
-    <author>
-      <name>Hannah P. Menke</name>
-    </author>
-    <author>
-      <name>Aniket C. Joshi</name>
-    </author>
-    <author>
-      <name>Claire E. Heaney</name>
-    </author>
-    <author>
-      <name>Ahmed H. ElSheikh</name>
-    </author>
-    <author>
-      <name>Christopher C. Pain</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.22159v1</id>
-    <title>CASR: A Robust Cyclic Framework for Arbitrary Large-Scale Super-Resolution with Distribution Alignment and Self-Similarity Awareness</title>
-    <updated>2026-02-25T18:05:51Z</updated>
-    <link href="https://arxiv.org/abs/2602.22159v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22159v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Arbitrary-Scale SR (ASISR) remains fundamentally limited by cross-scale distribution shift: once the inference scale leaves the training range, noise, blur, and artifacts accumulate sharply. We revisit this challenge from a cross-scale distribution transition perspective and propose CASR, a simple yet highly efficient cyclic SR framework that reformulates ultra-magnification as a sequence of in-distribution scale transitions. This design ensures stable inference at arbitrary scales while requiring only a single model. CASR tackles two major bottlenecks: distribution drift across iterations and patch-wise diffusion inconsistencies. The proposed SDAM module aligns structural distributions via superpixel aggregation, preventing error accumulation, while SARM module restores high-frequency textures by enforcing autocorrelation and embedding LR self-similarity priors. Despite using only a single model, our approach significantly reduces distribution drift, preserves long-range texture consistency, and achieves superior generalization even at extreme magnification.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T18:05:51Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Wenhao Guo</name>
-    </author>
-    <author>
-      <name>Zhaoran Zhao</name>
-    </author>
-    <author>
-      <name>Peng Lu</name>
-    </author>
-    <author>
-      <name>Sheng Li</name>
-    </author>
-    <author>
-      <name>Qian Qiao</name>
-    </author>
-    <author>
-      <name>RuiDe Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.22153v1</id>
-    <title>Time in gravitational subregions and in closed universes</title>
-    <updated>2026-02-25T18:00:45Z</updated>
-    <link href="https://arxiv.org/abs/2602.22153v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22153v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>What are gauge-invariant local observables in a subregion in quantum gravity? How does one even define such a subregion non-perturbatively? We study these questions in JT gravity. One can define a subregion by specifying the value of the dilaton at the boundary of the region. We study conformal matter correlators in such a subregion. There is a gravitational constraint associated with York time evolution within the causal diamond of the subregion. This constraint can be leveraged to construct gauge-invariant observables in quantum gravity, using a crossed product construction. The extrinsic curvature of Cauchy slices acts as the physical clock. This is a simple example of how gauge-invariant observables can be obtained by dressing to features of a spacetime (or other fields), without the need for introducing an external observer. The entropy associated with this algebra of observables is not an area, or any boundary term. We show that gravitational constraints only give boundary formulas for entropy when gauging isometric diffeomorphisms. York time flow is merely a conformal isometry, not an actual isometry, and thus leads to bulk contributions to entropy. We repeat our construction for Milne-type closed Big-Bang universes, which may be of independent interest.</summary>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T18:00:45Z</published>
-    <arxiv:comment>49+5 pages, 11 figures</arxiv:comment>
-    <arxiv:primary_category term="hep-th"/>
-    <author>
-      <name>Andreas Blommaert</name>
-    </author>
-    <author>
-      <name>Chang-Han Chen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.22142v1</id>
-    <title>WeaveTime: Stream from Earlier Frames into Emergent Memory in VideoLLMs</title>
-    <updated>2026-02-25T17:45:45Z</updated>
-    <link href="https://arxiv.org/abs/2602.22142v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22142v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent advances in Multimodal Large Language Models have greatly improved visual understanding and reasoning, yet their quadratic attention and offline training protocols make them ill-suited for streaming settings where frames arrive sequentially and future observations are inaccessible. We diagnose a core limitation of current Video-LLMs, namely Time-Agnosticism, in which videos are treated as an unordered bag of evidence rather than a causally ordered sequence, yielding two failures in streams: temporal order ambiguity, in which the model cannot follow or reason over the correct chronological order, and past-current focus blindness where it fails to distinguish present observations from accumulated history. We present WeaveTime, a simple, efficient, and model agnostic framework that first teaches order and then uses order. We introduce a lightweight Temporal Reconstruction objective-our Streaming Order Perception enhancement-that instills order aware representations with minimal finetuning and no specialized streaming data. At inference, a Past-Current Dynamic Focus Cache performs uncertainty triggered, coarse-to-fine retrieval, expanding history only when needed. Plugged into exsiting Video-LLM without architectural changes, WeaveTime delivers consistent gains on representative streaming benchmarks, improving accuracy while reducing latency. These results establish WeaveTime as a practical path toward time aware stream Video-LLMs under strict online, time causal constraints. Code and weights will be made publicly available. Project Page: https://zhangyl4.github.io/publications/weavetime/</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T17:45:45Z</published>
-    <arxiv:comment>Accepted at CVPR 2026 (preview; camera-ready in preparation)</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Yulin Zhang</name>
-    </author>
-    <author>
-      <name>Cheng Shi</name>
-    </author>
-    <author>
-      <name>Sibei Yang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2602.22136v1</id>
-    <title>SigmaQuant: Hardware-Aware Heterogeneous Quantization Method for Edge DNN Inference</title>
-    <updated>2026-02-25T17:34:14Z</updated>
-    <link href="https://arxiv.org/abs/2602.22136v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22136v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Deep neural networks (DNNs) are essential for performing advanced tasks on edge or mobile devices, yet their deployment is often hindered by severe resource constraints, including limited memory, energy, and computational power. While uniform quantization provides a straightforward approach to compress model and reduce hardware requirement, it fails to fully leverage the varying robustness across layers, and often lead to accuracy degradation or suboptimal resource usage, particularly at low bitwidths. In contrast, heterogeneous quantization, which allocates different bitwidths to individual layers, can mitigate these drawbacks. Nonetheless, current heterogeneous quantization methods either needs huge brute-force design space search or lacks the adaptability to meet different hardware conditions, such as memory size, energy budget, and latency requirement. Filling these gaps, this work introduces \textbf{\textit{SigmaQuant}}, an adaptive layer-wise heterogeneous quantization framework designed to efficiently balance accuracy and resource usage for varied edge environments without exhaustive search.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2602.23334v1</id>
+    <title>Bitwise Systolic Array Architecture for Runtime-Reconfigurable Multi-precision Quantized Multiplication on Hardware Accelerators</title>
+    <updated>2026-02-26T18:40:02Z</updated>
+    <link href="https://arxiv.org/abs/2602.23334v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23334v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural network accelerators have been widely applied to edge devices for complex tasks like object tracking, image recognition, etc. Previous works have explored the quantization technologies in related lightweight accelerator designs to reduce hardware resource consumption. However, low precision leads to high accuracy loss in inference. Therefore, mixed-precision quantization becomes an alternative solution by applying different precision in different layers to trade off resource consumption and accuracy. Because regular designs for multiplication on hardware cannot support the precision reconfiguration for a multi-precision Quantized Neural Network (QNN) model in runtime, we propose a runtime reconfigurable multi-precision multi-channel bitwise systolic array design for QNN accelerators. We have implemented and evaluated our work on the Ultra96 FPGA platform. Results show that our work can achieve 1.3185 to 3.5671 times speedup in inferring mixed-precision models and has less critical path delay, supporting a higher clock frequency (250MHz).</summary>
     <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T17:34:14Z</published>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:40:02Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Yuhao Liu</name>
+    </author>
+    <author>
+      <name>Salim Ullah</name>
+    </author>
+    <author>
+      <name>Akash Kumar</name>
+    </author>
+    <arxiv:doi>10.1109/ISQED65160.2025.11014376</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ISQED65160.2025.11014376" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23330v1</id>
+    <title>Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks</title>
+    <updated>2026-02-26T18:37:36Z</updated>
+    <link href="https://arxiv.org/abs/2602.23330v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23330v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advancement of large language models (LLMs) has accelerated the development of autonomous financial trading systems. While mainstream approaches deploy multi-agent systems mimicking analyst and manager roles, they often rely on abstract instructions that overlook the intricacies of real-world workflows, which can lead to degraded inference performance and less transparent decision-making. Therefore, we propose a multi-agent LLM trading framework that explicitly decomposes investment analysis into fine-grained tasks, rather than providing coarse-grained instructions. We evaluate the proposed framework using Japanese stock data, including prices, financial statements, news, and macro information, under a leakage-controlled backtesting setting. Experimental results show that fine-grained task decomposition significantly improves risk-adjusted returns compared to conventional coarse-grained designs. Crucially, further analysis of intermediate agent outputs suggests that alignment between analytical outputs and downstream decision preferences is a critical driver of system performance. Moreover, we conduct standard portfolio optimization, exploiting low correlation with the stock index and the variance of each system's output. This approach achieves superior performance. These findings contribute to the design of agent structure and task configuration when applying LLM agents to trading systems in practical settings.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.TR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:37:36Z</published>
+    <arxiv:comment>14 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Kunihiro Miyazaki</name>
+    </author>
+    <author>
+      <name>Takanobu Kawahara</name>
+    </author>
+    <author>
+      <name>Stephen Roberts</name>
+    </author>
+    <author>
+      <name>Stefan Zohren</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23315v1</id>
+    <title>Invariant Transformation and Resampling based Epistemic-Uncertainty Reduction</title>
+    <updated>2026-02-26T18:22:40Z</updated>
+    <link href="https://arxiv.org/abs/2602.23315v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23315v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An artificial intelligence (AI) model can be viewed as a function that maps inputs to outputs in high-dimensional spaces. Once designed and well trained, the AI model is applied for inference. However, even optimized AI models can produce inference errors due to aleatoric and epistemic uncertainties. Interestingly, we observed that when inferring multiple samples based on invariant transformations of an input, inference errors can show partial independences due to epistemic uncertainty. Leveraging this insight, we propose a "resampling" based inferencing that applies to a trained AI model with multiple transformed versions of an input, and aggregates inference outputs to a more accurate result. This approach has the potential to improve inference accuracy and offers a strategy for balancing model size and performance.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:22:40Z</published>
+    <arxiv:comment>5 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Sha Hu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23306v1</id>
+    <title>ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding</title>
+    <updated>2026-02-26T18:10:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.23306v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23306v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Omni-modal reasoning is essential for intelligent systems to understand and draw inferences from diverse data sources. While existing omni-modal large language models (OLLM) excel at perceiving diverse modalities, they lack the complex reasoning abilities of recent large reasoning models (LRM). However, enhancing the reasoning ability of OLLMs through additional training presents significant challenges, including the need for high-quality data, task-specific adaptation, and substantial computational costs. To address these limitations, we propose ThinkOmni, a training-free and data-free framework that lifts textual reasoning to omni-modal scenarios. ThinkOmni introduces two key components: 1) LRM-as-a-Guide, which leverages off-the-shelf LRMs to guide the OLLM decoding process; 2) Stepwise Contrastive Scaling, which adaptively balances perception and reasoning signals without manual hyperparameter tuning. Experiments on six multi-modal reasoning benchmarks demonstrate that ThinkOmni consistently delivers performance improvements, with main results achieving 70.2 on MathVista and 75.5 on MMAU. Overall, ThinkOmni offers a flexible and generalizable solution for omni-modal reasoning and provides new insights into the generalization and application of reasoning capabilities.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:10:41Z</published>
+    <arxiv:comment>Accept by ICLR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yiran Guan</name>
+    </author>
+    <author>
+      <name>Sifan Tu</name>
+    </author>
+    <author>
+      <name>Dingkang Liang</name>
+    </author>
+    <author>
+      <name>Linghao Zhu</name>
+    </author>
+    <author>
+      <name>Jianzhong Ju</name>
+    </author>
+    <author>
+      <name>Zhenbo Luo</name>
+    </author>
+    <author>
+      <name>Jian Luan</name>
+    </author>
+    <author>
+      <name>Yuliang Liu</name>
+    </author>
+    <author>
+      <name>Xiang Bai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23303v1</id>
+    <title>Inferential Mechanics Part 1: Causal Mechanistic Theories of Machine Learning in Chemical Biology with Implications</title>
+    <updated>2026-02-26T18:09:16Z</updated>
+    <link href="https://arxiv.org/abs/2602.23303v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23303v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning techniques are now routinely encountered in research laboratories across the globe. Impressive progress has been made through ML and AI techniques with regards to large data set processing. This progress has increased the ability of the experimenter to digest data and make novel predictions regarding phenomena of interest. However, machine learning predictors generated from data sets taken from the natural sciences are often treated as black boxes which are used broadly and generally without detailed consideration of the causal structure of the data set of interest. Work has been attempted to bring causality into discussions of machine learning models of natural phenomena; however, a firm and unified theoretical treatment is lacking. This series of three papers explores the union of chemical theory, biological theory, probability theory and causality that will correct current causal flaws of machine learning in the natural sciences. This paper, Part 1 of the series, provides the formal framework of the foundational causal structure of phenomena in chemical biology and is extended to machine learning through the novel concept of focus, defined here as the ability of a machine learning algorithm to narrow down to a hidden underpinning mechanism in large data sets. Initial proof of these principles on a family of Akt inhibitors is also provided. The second paper containing Part 2 will provide a formal exploration of chemical similarity, and Part 3 will present extensive experimental evidence of how hidden causal structures weaken all machine learning in chemical biology. This series serves to establish for chemical biology a new kind of mathematical framework for modeling mechanisms in Nature without the need for the tools of reductionism: inferential mechanics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:09:16Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Qunyou Liu</name>
+      <name>Ilya Balabin</name>
     </author>
     <author>
-      <name>Pengbo Yu</name>
-    </author>
-    <author>
-      <name>Marina Zapater</name>
-    </author>
-    <author>
-      <name>David Atienza</name>
+      <name>Thomas M. Kaiser</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.22134v1</id>
-    <title>Secure Semantic Communications via AI Defenses: Fundamentals, Solutions, and Future Directions</title>
-    <updated>2026-02-25T17:28:07Z</updated>
-    <link href="https://arxiv.org/abs/2602.22134v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22134v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Semantic communication (SemCom) redefines wireless communication from reproducing symbols to transmitting task-relevant semantics. However, this AI-native architecture also introduces new vulnerabilities, as semantic failures may arise from adversarial perturbations to models, corrupted training data, desynchronized priors, or misaligned inference even when lower-layer transmission reliability and cryptographic protection remain intact. This survey provides a defense-centered and system-oriented synthesis of security in SemCom via AI defense. We analyze AI-centric threat models by consolidating existing studies and organizing attack surfaces across model-level, channel-realizable, knowledge-based, and networked inference vectors. Building on this foundation, we present a structured taxonomy of defense strategies organized by where semantic integrity can be compromised in SemCom systems despite correct symbol delivery, spanning semantic encoding, wireless transmission, knowledge integrity, and coordination among multiple agents. These categories correspond to distinct security failure modes, including representation fragility, channel-realizable manipulation, semantic prior poisoning or desynchronization, and adversarial propagation through distributed inference. We also examine security utility operating envelopes that capture tradeoffs among semantic fidelity, robustness, latency, and energy under realistic constraints, survey evaluation frameworks and representative applications, and identify open challenges in cross-layer composition and deployment-time certification. Overall, this survey offers a unified system-level perspective that enables readers to understand major threat and defense mechanisms in AI-native SemCom systems and to leverage emerging security techniques in the design and deployment of robust SemCom architectures for next-generation intelligent networks.</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T17:28:07Z</published>
-    <arxiv:primary_category term="cs.CR"/>
+    <id>http://arxiv.org/abs/2602.23291v1</id>
+    <title>Identifiability of Treatment Effects with Unobserved Spatially Varying Confounders</title>
+    <updated>2026-02-26T18:03:18Z</updated>
+    <link href="https://arxiv.org/abs/2602.23291v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23291v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The study of causal effects in the presence of unmeasured spatially varying confounders has garnered increasing attention. However, a general framework for identifiability, which is critical for reliable causal inference from observational data, has yet to be advanced. In this paper, we study a linear model with various parametric model assumptions on the covariance structure between the unmeasured confounder and the exposure of interest. We establish identifiability of the treatment effect for many commonly 20 used spatial models for both discrete and continuous data, under mild conditions on the structure of observation locations and the exposure-confounder association. We also emphasize models or scenarios where identifiability may not hold, under which statistical inference should be conducted with caution.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T18:03:18Z</published>
+    <arxiv:comment>8 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Lan Zhang</name>
+      <name>Tommy Tang</name>
     </author>
     <author>
-      <name>Chengsi Liang</name>
+      <name>Xinran Li</name>
     </author>
     <author>
-      <name>Zeming Zhuang</name>
-    </author>
-    <author>
-      <name>Yao Sun</name>
-    </author>
-    <author>
-      <name>Fang Fang</name>
-    </author>
-    <author>
-      <name>Xiaoyong Yuan</name>
-    </author>
-    <author>
-      <name>Dusit Niyato</name>
+      <name>Bo Li</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.22098v1</id>
-    <title>Brain3D: Brain Report Automation via Inflated Vision Transformers in 3D</title>
-    <updated>2026-02-25T16:46:45Z</updated>
-    <link href="https://arxiv.org/abs/2602.22098v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22098v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Current medical vision-language models (VLMs) process volumetric brain MRI using 2D slice-based approximations, fragmenting the spatial context required for accurate neuroradiological interpretation. We developed \textbf{Brain3D}, a staged vision-language framework for automated radiology report generation from 3D brain tumor MRI. Our approach inflates a pretrained 2D medical encoder into a native 3D architecture and progressively aligns it with a causal language model through three stages: contrastive grounding, supervised projector warmup, and LoRA-based linguistic specialization. Unlike generalist 3D medical VLMs, \textbf{Brain3D} is tailored to neuroradiology, where hemispheric laterality, tumor infiltration patterns, and anatomical localization are critical. Evaluated on 468 subjects (BraTS pathological cases plus healthy controls), our model achieves a Clinical Pathology F1 of 0.951 versus 0.413 for a strong 2D baseline while maintaining perfect specificity on healthy scans. The staged alignment proves essential: contrastive grounding establishes visual-textual correspondence, projector warmup stabilizes conditioning, and LoRA adaptation shifts output from verbose captions to structured clinical reports\footnote{Our code is publicly available for transparency and reproducibility</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T16:46:45Z</published>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2602.23271v1</id>
+    <title>Evaluating Stochasticity in Deep Research Agents</title>
+    <updated>2026-02-26T17:46:42Z</updated>
+    <link href="https://arxiv.org/abs/2602.23271v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23271v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep Research Agents (DRAs) are promising agentic systems that gather and synthesize information to support research across domains such as financial decision-making, medical analysis, and scientific discovery. Despite recent improvements in research quality (e.g., outcome accuracy when ground truth is available), DRA system design often overlooks a critical barrier to real-world deployment: stochasticity. Under identical queries, repeated executions of DRAs can exhibit substantial variability in terms of research outcome, findings, and citations. In this paper, we formalize the study of stochasticity in DRAs by modeling them as information acquisition Markov Decision Processes. We introduce an evaluation framework that quantifies variance in the system and identify three sources of it: information acquisition, information compression, and inference. Through controlled experiments, we investigate how stochasticity from these modules across different decision steps influences the variance of DRA outputs. Our results show that reducing stochasticity can improve research output quality, with inference and early-stage stochasticity contributing the most to DRA output variance. Based on these findings, we propose strategies for mitigating stochasticity while maintaining output quality via structured output and ensemble-based query generation. Our experiments on DeepSearchQA show that our proposed mitigation methods reduce average stochasticity by 22% while maintaining high research quality.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T17:46:42Z</published>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Mariano Barone</name>
+      <name>Haotian Zhai</name>
     </author>
     <author>
-      <name>Francesco Di Serio</name>
+      <name>Elias Stengel-Eskin</name>
     </author>
     <author>
-      <name>Giuseppe Riccio</name>
+      <name>Pratik Patil</name>
     </author>
     <author>
-      <name>Antonio Romano</name>
-    </author>
-    <author>
-      <name>Marco Postiglione</name>
-    </author>
-    <author>
-      <name>Antonino Ferraro</name>
-    </author>
-    <author>
-      <name>Vincenzo Moscato</name>
+      <name>Liu Leqi</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2602.22091v1</id>
-    <title>Learning to Drive is a Free Gift: Large-Scale Label-Free Autonomy Pretraining from Unposed In-The-Wild Videos</title>
-    <updated>2026-02-25T16:38:53Z</updated>
-    <link href="https://arxiv.org/abs/2602.22091v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2602.22091v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Ego-centric driving videos available online provide an abundant source of visual data for autonomous driving, yet their lack of annotations makes it difficult to learn representations that capture both semantic structure and 3D geometry. Recent advances in large feedforward spatial models demonstrate that point maps and ego-motion can be inferred in a single forward pass, suggesting a promising direction for scalable driving perception. We therefore propose a label-free, teacher-guided framework for learning autonomous driving representations directly from unposed videos. Unlike prior self-supervised approaches that focus primarily on frame-to-frame consistency, we posit that safe and reactive driving depends critically on temporal context. To this end, we leverage a feedforward architecture equipped with a lightweight autoregressive module, trained using multi-modal supervisory signals that guide the model to jointly predict current and future point maps, camera poses, semantic segmentation, and motion masks. Multi-modal teachers provide sequence-level pseudo-supervision, enabling LFG to learn a unified pseudo-4D representation from raw YouTube videos without poses, labels, or LiDAR. The resulting encoder not only transfers effectively to downstream autonomous driving planning on the NAVSIM benchmark, surpassing multi-camera and LiDAR baselines with only a single monocular camera, but also yields strong performance when evaluated on a range of semantic, geometric, and qualitative motion prediction tasks. These geometry and motion-aware features position LFG as a compelling video-centric foundation model for autonomous driving.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-02-25T16:38:53Z</published>
-    <arxiv:comment>Accepted at CVPR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2602.23266v1</id>
+    <title>Discourse-Aware Dual-Track Streaming Response for Low-Latency Spoken Dialogue Systems</title>
+    <updated>2026-02-26T17:39:56Z</updated>
+    <link href="https://arxiv.org/abs/2602.23266v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23266v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Achieving human-like responsiveness is a critical yet challenging goal for cascaded spoken dialogue systems. Conventional ASR-LLM-TTS pipelines follow a strictly sequential paradigm, requiring complete transcription and full reasoning before speech synthesis can begin, which results in high response latency. We propose the Discourse-Aware Dual-Track Streaming Response (DDTSR) framework, a low-latency architecture that enables listen-while-thinking and speak-while-thinking. DDTSR is built upon three key mechanisms: (1) connective-guided small-large model synergy, where an auxiliary small model generates minimal-committal discourse connectives while a large model performs knowledge-intensive reasoning in parallel; (2) streaming-based cross-modal collaboration, which dynamically overlaps ASR, LLM inference, and TTS to advance the earliest speakable moment; and (3) curriculum-learning-based discourse continuity enhancement, which maintains coherence and logical consistency between early responses and subsequent reasoning outputs. Experiments on two spoken dialogue benchmarks demonstrate that DDTSR reduces response latency by 19%-51% while preserving discourse quality. Further analysis shows that DDTSR functions as a plug-and-play module compatible with diverse LLM backbones, and remains robust across varying utterance lengths, indicating strong practicality and scalability for real-time spoken interaction.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T17:39:56Z</published>
+    <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Matthew Strong</name>
+      <name>Siyuan Liu</name>
     </author>
     <author>
-      <name>Wei-Jer Chang</name>
+      <name>Jiahui Xu</name>
     </author>
     <author>
-      <name>Quentin Herau</name>
+      <name>Feng Jiang</name>
     </author>
     <author>
-      <name>Jiezhi Yang</name>
+      <name>Kuang Wang</name>
     </author>
     <author>
-      <name>Yihan Hu</name>
+      <name>Zefeng Zhao</name>
     </author>
     <author>
-      <name>Chensheng Peng</name>
+      <name>Chu-Ren Huang</name>
     </author>
     <author>
-      <name>Wei Zhan</name>
+      <name>Jinghang Gu</name>
+    </author>
+    <author>
+      <name>Changqing Yin</name>
+    </author>
+    <author>
+      <name>Haizhou Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23257v1</id>
+    <title>Randomization Tests in Switchback Experiments</title>
+    <updated>2026-02-26T17:30:22Z</updated>
+    <link href="https://arxiv.org/abs/2602.23257v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23257v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Switchback experiments--alternating treatment and control over time--are widely used when unit-level randomization is infeasible, outcomes are aggregated, or user interference is unavoidable. In practice, experimentation must support fast product cycles, so teams often run studies for limited durations and make decisions with modest samples. At the same time, outcomes in these time-indexed settings exhibit serial dependence, seasonality, and occasional heavy-tailed shocks, and temporal interference (carryover or anticipation) can render standard asymptotics and naive randomization tests unreliable. In this paper, we develop a randomization-test framework that delivers finite-sample valid, distribution-free p-values for several null hypotheses of interest using only the known assignment mechanism, without parametric assumptions on the outcome process. For causal effects of interests, we impose two primitive conditions--non-anticipation and a finite carryover horizon m--and construct conditional randomization tests (CRTs) based on an ex ante pooling of design blocks into "sections," which yields a tractable conditional assignment law and ensures imputability of focal outcomes. We provide diagnostics for learning the carryover window and assessing non-anticipation, and we introduce studentized CRTs for a session-wise weak null that accommodates within-session seasonality with asymptotic validity. Power approximations under distributed-lag effects with AR(1) noise guide design and analysis choices, and simulations demonstrate favorable size and power relative to common alternatives. Our framework extends naturally to other time-indexed designs.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T17:30:22Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Jizhou Liu</name>
+    </author>
+    <author>
+      <name>Liang Zhong</name>
     </author>
   </entry>
 </feed>
