@@ -1,261 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-03-10T01:09:52Z -->
+<!-- Last updated: 2026-03-11T01:10:39Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-03-10T01:09:52Z</updated>
+  <updated>2026-03-11T01:10:43Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>136281</opensearch:totalResults>
+  <opensearch:totalResults>136540</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2603.07399v1</id>
-    <title>Interpretable Aneurysm Classification via 3D Concept Bottleneck Models: Integrating Morphological and Hemodynamic Clinical Features</title>
-    <updated>2026-03-08T01:03:48Z</updated>
-    <link href="https://arxiv.org/abs/2603.07399v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07399v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We are concerned with the challenge of reliably classifying and assessing intracranial aneurysms using deep learning without compromising clinical transparency. While traditional black-box models achieve high predictive accuracy, their lack of inherent interpretability remains a significant barrier to clinical adoption and regulatory approval. Explainability is paramount in medical modeling to ensure that AI-driven diagnoses align with established neurosurgical principles. Unlike traditional eXplainable AI (XAI) methods -- such as saliency maps, which often provide post-hoc, non-causal visual correlations -- Concept Bottleneck Models (CBMs) offer a robust alternative by constraining the model's internal logic to human-understandable clinical indices.
-  In this article, we propose an end-to-end 3D Concept Bottleneck framework that maps high-dimensional neuroimaging features to a discrete set of morphological and hemodynamic concepts for aneurysm identification. We implemented this pipeline using a pre-trained 3D ResNet-34 backbone and a 3D DenseNet-121 to extract features from CTA volumes, which were subsequently processed through a soft bottleneck layer representing human-interpretable clinical concepts. The model was optimized using a joint-loss function to balance diagnostic focal loss and concept mean squared error (MSE), validated via stratified five-fold cross-validation.
-  Our results demonstrate a peak task classification accuracy of 93.33% +/- 4.5% for the ResNet-34 architecture and 91.43% +/- 5.8% for the DenseNet-121 model. Furthermore, the implementation of 8-pass Test-Time Augmentation (TTA) yielded a robust mean accuracy of 88.31%, ensuring diagnostic stability during inference. By maintaining an accuracy-generalization gap of less than 0.04, this framework proves that high predictive performance can be achieved without sacrificing interpretability.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-08T01:03:48Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Toqa Khaled</name>
-    </author>
-    <author>
-      <name>Ahmad Al-Kabbany</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07394v1</id>
-    <title>AQuA: Toward Strategic Response Generation for Ambiguous Visual Questions</title>
-    <updated>2026-03-08T00:48:19Z</updated>
-    <link href="https://arxiv.org/abs/2603.07394v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07394v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Visual Question Answering (VQA) is a core task for evaluating the capabilities of Vision-Language Models (VLMs). Existing VQA benchmarks primarily feature clear and unambiguous image-question pairs, whereas real-world scenarios often involve varying degrees of ambiguity that require nuanced reasoning and context-appropriate response strategies. Although recent studies have begun to address ambiguity in VQA, they lack (1) a systematic categorization of ambiguity levels and (2) datasets and models that support strategy-aware responses. In this paper, we introduce Ambiguous Visual Question Answering (AQuA), a fine-grained dataset that classifies ambiguous VQA instances into four levels according to the nature and degree of ambiguity, along with the optimal response strategy for each case. Our evaluation of diverse open-source and proprietary VLMs shows that most models fail to adapt their strategy to the ambiguity type, frequently producing overconfident answers rather than seeking clarification or acknowledging uncertainty. To address this challenge, we fine-tune VLMs on AQuA, enabling them to adaptively choose among multiple response strategies, such as directly answering, inferring intent from contextual cues, listing plausible alternatives, or requesting clarification. VLMs trained on AQuA achieve strategic response generation for ambiguous VQA, demonstrating the ability to recognize ambiguity, manage uncertainty, and respond with context-appropriate strategies, while outperforming both open-source and closed-source baselines.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-08T00:48:19Z</published>
-    <arxiv:comment>ICLR 2026 (28 pages); Project website: https://aqua-iclr2026.github.io/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Jihyoung Jang</name>
-    </author>
-    <author>
-      <name>Hyounghun Kim</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07392v1</id>
-    <title>Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams</title>
-    <updated>2026-03-08T00:38:39Z</updated>
-    <link href="https://arxiv.org/abs/2603.07392v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07392v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>LLMs operating in dynamic real-world contexts often encounter knowledge that evolves continuously or emerges incrementally. To remain accurate and effective, models must adapt to newly arriving information on the fly. We introduce Online Adaptation to Continual Knowledge Streams(OAKS) to evaluate this capability, establishing a benchmark for online adaptation over streaming, continually updating knowledge. Specifically, the benchmark is structured as a sequence of fine-grained context chunks where facts change dynamically across time intervals. OAKS comprises two datasets: OAKS-BABI and OAKS-Novel, where individual facts evolve multiple times across context chunks. These datasets include dense annotations to measure whether models track changes accurately. Evaluating 14 models with varied inference approaches, we observe significant limitations in current methodologies. Both state-of-the-art models and agentic memory systems fail to adapt robustly on OAKS, demonstrating delays in state-tracking and susceptibility to distraction within streaming environments.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-08T00:38:39Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Jiyeon Kim</name>
-    </author>
-    <author>
-      <name>Hyunji Lee</name>
-    </author>
-    <author>
-      <name>Dylan Zhou</name>
-    </author>
-    <author>
-      <name>Sue Hyun Park</name>
-    </author>
-    <author>
-      <name>Seunghyun Yoon</name>
-    </author>
-    <author>
-      <name>Trung Bui</name>
-    </author>
-    <author>
-      <name>Franck Dernoncourt</name>
-    </author>
-    <author>
-      <name>Sungmin Cha</name>
-    </author>
-    <author>
-      <name>Minjoon Seo</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07383v1</id>
-    <title>DiffSIM: Unconditional and conditional facies simulation based on denoising diffusion generative models</title>
-    <updated>2026-03-07T23:51:16Z</updated>
-    <link href="https://arxiv.org/abs/2603.07383v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07383v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Constructing subsurface facies models that are geologically plausible and constrained by well facies is essential for analyzing sedimentary evolution, reservoir characterization, and flow simulation. Recent deep generative model-based geomodelling methods have demonstrated promising capabilities for both unconditional and conditional settings. We investigate denoising diffusion models as a generative framework for producing realistic and diverse facies realizations in both settings. Diffusion models generate samples through a fixed forward noising process and a learned reverse denoising process. For unconditional geomodelling, we use denoising diffusion probabilistic models (DDPMs) to learn geological patterns from training facies models, and adopt denoising diffusion implicit models (DDIMs) to accelerate sampling by reducing inference steps from 1500 to 50 (30x fewer steps). We assess the geological plausibility using data distribution, class proportions, variograms, and geometric features. To enable conditional generation, we encode well facies and their spatial locations as conditional indicators and apply a mask-based denoising strategy that generates facies only in between-well regions, guaranteeing hard conditioning without introducing additional loss weights. We evaluate both unconditional and conditional generation on three scenarios: two two-dimensional cases (meandering channels and point bars) and one three-dimensional point-bar case. Across these scenarios, unconditional generation reproduces geological realism, and conditional generation honors well data while producing geologically consistent between-well realizations, demonstrating practical utility for facies geomodelling applications.</summary>
-    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T23:51:16Z</published>
-    <arxiv:primary_category term="physics.geo-ph"/>
-    <author>
-      <name>Minghui Xu</name>
-    </author>
-    <author>
-      <name>Suihong Song</name>
-    </author>
-    <author>
-      <name>Tapan Mukerji</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07369v1</id>
-    <title>Task learning increases information redundancy of neural responses in macaque visual cortex</title>
-    <updated>2026-03-07T22:41:26Z</updated>
-    <link href="https://arxiv.org/abs/2603.07369v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07369v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>How does the brain optimize sensory information for decision-making in new tasks? One hypothesis suggests learning reduces redundancy in neural representations to improve efficiency, while another, based on Bayesian inference, predicts learning increases redundancy by distributing information across neurons. We tested these hypotheses by tracking population responses in macaque cortical area V4 as monkeys learned visual discrimination tasks. We found strong support for the Bayesian predictions: task learning increased redundancy in neural responses over weeks of training and within single trials. This redundancy did not reduce information but instead increased the information carried by individual neurons. These insights suggest sensory processing in the brain reflects a generative rather than discriminative inference process.</summary>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T22:41:26Z</published>
-    <arxiv:comment>published in Science, accepted manuscript prior to editing, main text: 33 pages, 5 figures, 39 supplementary pages, 22 supplementary figures, 7 supplementary tables</arxiv:comment>
-    <arxiv:primary_category term="q-bio.NC"/>
-    <arxiv:journal_ref>Science, 391(6789), 1029-1035 (2026)</arxiv:journal_ref>
-    <author>
-      <name>Shizhao Liu</name>
-    </author>
-    <author>
-      <name>Anton Pletenev</name>
-    </author>
-    <author>
-      <name>Ralf M. Haefner</name>
-    </author>
-    <author>
-      <name>Adam C. Snyder</name>
-    </author>
-    <arxiv:doi>10.1126/science.adw7707</arxiv:doi>
-    <link rel="related" href="https://doi.org/10.1126/science.adw7707" title="doi"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07368v1</id>
-    <title>Position: LLMs Must Use Functor-Based and RAG-Driven Bias Mitigation for Fairness</title>
-    <updated>2026-03-07T22:40:44Z</updated>
-    <link href="https://arxiv.org/abs/2603.07368v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07368v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Biases in large language models (LLMs) often manifest as systematic distortions in associations between demographic attributes and professional or social roles, reinforcing harmful stereotypes across gender, ethnicity, and geography. This position paper advocates for addressing demographic and gender biases in LLMs through a dual-pronged methodology, integrating category-theoretic transformations and retrieval-augmented generation (RAG). Category theory provides a rigorous, structure-preserving mathematical framework that maps biased semantic domains to unbiased canonical forms via functors, ensuring bias elimination while preserving semantic integrity. Complementing this, RAG dynamically injects diverse, up-to-date external knowledge during inference, directly countering ingrained biases within model parameters. By combining structural debiasing through functor-based mappings and contextual grounding via RAG, we outline a comprehensive framework capable of delivering equitable and fair model outputs. Our synthesis of the current literature validates the efficacy of each approach individually, while addressing potential critiques demonstrates the robustness of this integrated strategy. Ensuring fairness in LLMs, therefore, demands both the mathematical rigor of category-theoretic transformations and the adaptability of retrieval augmentation.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T22:40:44Z</published>
-    <arxiv:comment>24 pages, 3 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
-    <arxiv:journal_ref>Review available from NeurIPS 2025 reviwers</arxiv:journal_ref>
-    <author>
-      <name>Ravi Ranjan</name>
-    </author>
-    <author>
-      <name>Utkarsh Grover</name>
-    </author>
-    <author>
-      <name>Agorista Polyzou</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07364v1</id>
-    <title>Neural Control and Learning of Simulated Hand Movements With an EMG-Based Closed-Loop Interface</title>
-    <updated>2026-03-07T22:17:38Z</updated>
-    <link href="https://arxiv.org/abs/2603.07364v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07364v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The standard engineering approach when facing uncertainty is modelling. Mixing data from a well-calibrated model with real recordings has led to breakthroughs in many applications of AI, from computer vision to autonomous driving. This type of model-based data augmentation is now beginning to show promising results in biosignal processing as well. However, while these simulated data are necessary, they are not sufficient for virtual neurophysiological experiments. Simply generating neural signals that reproduce a predetermined motor behaviour does not capture the flexibility, variability, and causal structure required to probe neural mechanisms during control tasks.
-  In this study, we present an in silico neuromechanical model that combines a fully forward musculoskeletal simulation, reinforcement learning, and sequential, online electromyography synthesis. This framework provides not only synchronised kinematics, dynamics, and corresponding neural activity, but also explicitly models feedback and feedforward control in a virtual participant. In this way, online control problems can be represented, as the simulated human adapts its behaviour via a learned RL policy in response to a neural interface. For example, the virtual user can learn hand movements robust to perturbations or the control of a virtual gesture decoder. We illustrate the approach using a gesturing task within a biomechanical hand model, and lay the groundwork for using this technique to evaluate neural controllers, augment training datasets, and generate synthetic data for neurological conditions.</summary>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T22:17:38Z</published>
-    <arxiv:primary_category term="q-bio.QM"/>
-    <author>
-      <name>Balint K. Hodossy</name>
-    </author>
-    <author>
-      <name>Dario Farina</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.07361v1</id>
-    <title>N-Tree Diffusion for Long-Horizon Wildfire Risk Forecasting</title>
-    <updated>2026-03-07T22:14:26Z</updated>
-    <link href="https://arxiv.org/abs/2603.07361v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07361v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long-horizon wildfire risk forecasting requires generating probabilistic spatial fields under sparse event supervision while maintaining computational efficiency across multiple prediction horizons. Extending diffusion models to multi-step forecasting typically repeats the denoising process independently for each horizon, leading to redundant computation. We introduce N-Tree Diffusion (NT-Diffusion), a hierarchical diffusion model designed for long-horizon wildfire risk forecasting. Fire occurrences are represented as continuous Fire Risk Maps (FRMs), which provide a smoothed spatial risk field suitable for probabilistic modeling. Instead of running separate diffusion trajectories for each predicted timestamp, NT-Diffusion shares early denoising stages and branches at later levels, allowing horizon-specific refinement while reducing redundant sampling. We evaluate the proposed framework on a newly collected real-world wildfire dataset constructed for long-horizon probabilistic prediction. Results indicate that NT-Diffusion achieves consistent accuracy improvements and reduced inference cost compared to baseline forecasting approaches.</summary>
+    <id>http://arxiv.org/abs/2603.09661v1</id>
+    <title>FreqCycle: A Multi-Scale Time-Frequency Analysis Method for Time Series Forecasting</title>
+    <updated>2026-03-10T13:34:36Z</updated>
+    <link href="https://arxiv.org/abs/2603.09661v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09661v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mining time-frequency features is critical for time series forecasting. Existing research has predominantly focused on modeling low-frequency patterns, where most time series energy is concentrated. The overlooking of mid to high frequency continues to limit further performance gains in deep learning models. We propose FreqCycle, a novel framework integrating: (i) a Filter-Enhanced Cycle Forecasting (FECF) module to extract low-frequency features by explicitly learning shared periodic patterns in the time domain, and (ii) a Segmented Frequency-domain Pattern Learning (SFPL) module to enhance mid to high frequency energy proportion via learnable filters and adaptive weighting. Furthermore, time series data often exhibit coupled multi-periodicity, such as intertwined weekly and daily cycles. To address coupled multi-periodicity as well as long lookback window challenges, we extend FreqCycle hierarchically into MFreqCycle, which decouples nested periodic features through cross-scale interactions. Extensive experiments on seven diverse domain benchmarks demonstrate that FreqCycle achieves state-of-the-art accuracy while maintaining faster inference speeds, striking an optimal balance between performance and efficiency.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T22:14:26Z</published>
-    <arxiv:comment>15 pages, 6 figures</arxiv:comment>
+    <published>2026-03-10T13:34:36Z</published>
+    <arxiv:comment>18 pages, 17 figures, accepted to AAAI 2026. Code available at https://github.com/boya-zhang-ai/FreqCycle</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Yucheng Xing</name>
+      <name>Boya Zhang</name>
     </author>
     <author>
-      <name>Xin Wang</name>
+      <name>Shuaijie Yin</name>
+    </author>
+    <author>
+      <name>Huiwen Zhu</name>
+    </author>
+    <author>
+      <name>Xing He</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.07336v1</id>
-    <title>Explainable and Hardware-Efficient Jamming Detection for 5G Networks Using the Convolutional Tsetlin Machine</title>
-    <updated>2026-03-07T20:54:10Z</updated>
-    <link href="https://arxiv.org/abs/2603.07336v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07336v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>All applications in fifth-generation (5G) networks rely on stable radio-frequency (RF) environments to support mission-critical services in mobility, automation, and connected intelligence. Their exposure to intentional interference or low-power jamming threatens availability and reliability, especially when such attacks remain below link-layer observability. This paper investigates lightweight, explainable, and hardware-efficient jamming detection using the Convolutional Tsetlin Machine (CTM) operating directly on 5G Synchronization Signal Block (SSB) features. CTM formulates Boolean logic clauses over quantized inputs, enabling bit-level inference and deterministic deployment on FPGA fabrics. These properties make CTM well suited for real-time, resource-constrained edge environments anticipated in 5G. The proposed approach is experimentally validated on a real 5G testbed using over-the-air SSB data, emulating practical downlink conditions. We benchmark CTM against a convolutional neural network (CNN) baseline under identical preprocessing and training pipelines. On the real dataset, CTM achieves comparable detection performance (Accuracy 91.53 +/- 1.01 vs. 96.83 +/- 1.19 for CNN) while training $9.5\times$ faster and requiring 14x less memory (45~MB vs.\ 624~MB). Furthermore, we outline a compact FPGA-oriented design for Zybo~Z7 (Zynq-7000) and provide resource projections (not measured) under three deployment profiles optimized for latency, power, and accuracy trade-offs. The results show that the CTM provides a practical, interpretable, and resource-efficient alternative to conventional DNNs for RF-domain jamming detection, establishing it as a strong candidate for edge-deployed, low-latency, and security-critical 5G applications while laying the groundwork for B5G systems.</summary>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.09647v1</id>
+    <title>Extracting the speed of sound of QCD from transverse momentum fluctuations</title>
+    <updated>2026-03-10T13:23:02Z</updated>
+    <link href="https://arxiv.org/abs/2603.09647v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09647v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We extract the speed of sound ($c_s$) in the quark-gluon plasma from ATLAS data on the probability distribution of the transverse momentum per particle, $[p_T]$, in ultra-central Pb+Pb collisions. With an ideal detector, $c_s$ can be inferred from the rise of the mean $[p_T]$ with the collision multiplicity. In practice, however, low-$p_T$ particles escape detection, which biases the analysis. We show how to correct for this bias by using data on the variance of $[p_T]$, as well as information from the recently-measured $v_0(p_T)$. We also introduce a systematic method for deblurring the noise from the hadronization process. Assuming that the size of the quark-gluon plasma is independent of the hadron multiplicity in collisions at zero impact parameter, which is the scenario preferred both by high-energy QCD and heavy-ion data, we obtain $c_s/c=0.496\pm 0.008$ at temperature $T=221\pm 13$ MeV, in perfect agreement with first-principles calculations from lattice QCD.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T13:23:02Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Mubarak Alqahtani</name>
+    </author>
+    <author>
+      <name>Tribhuban Parida</name>
+    </author>
+    <author>
+      <name>Jean-Yves Ollitrault</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09642v1</id>
+    <title>Multi-DNN Inference of Sparse Models on Edge SoCs</title>
+    <updated>2026-03-10T13:16:59Z</updated>
+    <link href="https://arxiv.org/abs/2603.09642v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09642v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern edge applications increasingly require multi-DNN inference systems to execute tasks on heterogeneous processors, gaining performance from both concurrent execution and from matching each model to the most suited accelerator. However, existing systems support only a single model (or a few sparse variants) per task, which impedes the efficiency of this matching and results in high Service Level Objective violation rates. We introduce model stitching for multi-DNN inference systems, which creates model variants by recombining subgraphs from sparse models without re-training. We present a demonstrator system, SparseLoom, that shows model stitching can be deployed to SoCs. We show experimentally that SparseLoom reduces SLO violation rates by up to 74%, improves throughput by up to 2.31x, and lowers memory overhead by an average of 28% compared to state-of-the-art multi-DNN inference systems.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T20:54:10Z</published>
-    <arxiv:comment>6 pages, 4 figures. IEEE ICC 2026 Workshops (under submission)</arxiv:comment>
-    <arxiv:primary_category term="eess.SP"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T13:16:59Z</published>
+    <arxiv:primary_category term="cs.DC"/>
     <author>
-      <name>Vojtech Halenka</name>
+      <name>Jiawei Luo</name>
     </author>
     <author>
-      <name>Mohammadreza Amini</name>
+      <name>Di Wu</name>
     </author>
     <author>
-      <name>Per-Arne Andersen</name>
+      <name>Simon Dobson</name>
     </author>
     <author>
-      <name>Ole-Christoffer Granmo</name>
-    </author>
-    <author>
-      <name>Burak Kantarci</name>
+      <name>Blesson Varghese</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.07335v1</id>
-    <title>VisualScratchpad: Inference-time Visual Concepts Analysis in Vision Language Models</title>
-    <updated>2026-03-07T20:52:09Z</updated>
-    <link href="https://arxiv.org/abs/2603.07335v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.07335v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>High-performing vision language models still produce incorrect answers, yet their failure modes are often difficult to explain. To make model internals more accessible and enable systematic debugging, we introduce VisualScratchpad, an interactive interface for visual concept analysis during inference. We apply sparse autoencoders to the vision encoder and link the resulting visual concepts to text tokens via text-to-image attention, allowing us to examine which visual concepts are both captured by the vision encoder and utilized by the language model. VisualScratchpad also provides a token-latent heatmap view that suggests a sufficient set of latents for effective concept ablation in causal analysis. Through case studies, we reveal three underexplored failure modes: limited cross-modal alignment, misleading visual concepts, and unused hidden cues. Project page: https://hyesulim.github.io/visual_scratchpad_projectpage/</summary>
+    <id>http://arxiv.org/abs/2603.09621v1</id>
+    <title>Physics-Driven 3D Gaussian Rendering for Zero-Shot MRI Super-Resolution</title>
+    <updated>2026-03-10T13:00:42Z</updated>
+    <link href="https://arxiv.org/abs/2603.09621v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09621v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-resolution Magnetic Resonance Imaging (MRI) is vital for clinical diagnosis but limited by long acquisition times and motion artifacts. Super-resolution (SR) reconstructs low-resolution scans into high-resolution images, yet existing methods are mutually constrained: paired-data methods achieve efficiency only by relying on costly aligned datasets, while implicit neural representation approaches avoid such data needs at the expense of heavy computation. We propose a zero-shot MRI SR framework using explicit Gaussian representation to balance data requirements and efficiency. MRI-tailored Gaussian parameters embed tissue physical properties, reducing learnable parameters while preserving MR signal fidelity. A physics-grounded volume rendering strategy models MRI signal formation via normalized Gaussian aggregation. Additionally, a brick-based order-independent rasterization scheme enables highly parallel 3D computation, lowering training and inference costs. Experiments on two public MRI datasets show superior reconstruction quality and efficiency, demonstrating the method's potential for clinical MRI SR.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T13:00:42Z</published>
+    <arxiv:comment>Accepted to ICASSP</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Shuting Liu</name>
+    </author>
+    <author>
+      <name>Lei Zhang</name>
+    </author>
+    <author>
+      <name>Wei Huang</name>
+    </author>
+    <author>
+      <name>Zhao Zhang</name>
+    </author>
+    <author>
+      <name>Zizhou Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09590v1</id>
+    <title>Benchmarking Dataset for Presence-Only Passive Reconnaissance in Wireless Smart-Grid Communications</title>
+    <updated>2026-03-10T12:39:03Z</updated>
+    <link href="https://arxiv.org/abs/2603.09590v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09590v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Benchmarking presence-only passive reconnaissance in smart-grid communications is challenging because the adversary is receive-only, yet nearby observers can still alter propagation through additional shadowing and multipath that reshapes channel coherence. Public smart-grid cybersecurity datasets largely target active protocol- or measurement-layer attacks and rarely provide propagation-driven observables with tiered topology context, which limits reproducible evaluation under strictly passive threat models. This paper introduces an IEEE-inspired, literature-anchored benchmark dataset generator for passive reconnaissance over a tiered Home Area Network (HAN), Neighborhood Area Network (NAN), and Wide Area Network (WAN) communication graph with heterogeneous wireless and wireline links. Node-level time series are produced through a physically consistent channel-to-metrics mapping where channel state information (CSI) is represented via measurement-realistic amplitude and phase proxies that drive inferred signal-to-noise ratio (SNR), packet error behavior, and delay dynamics. Passive attacks are modeled only as windowed excess attenuation and coherence degradation with increased channel innovation, so reliability and latency deviations emerge through the same causal mapping without labels or feature shortcuts. The release provides split-independent realizations with burn-in removal, strictly causal temporal descriptors, adjacency-weighted neighbor aggregates and deviation features, and federated-ready per-node train, validation, and test partitions with train-only normalization metadata. Baseline federated experiments highlight technology-dependent detectability and enable standardized benchmarking of graph-temporal and federated detectors for passive reconnaissance.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T12:39:03Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Bochra Al Agha</name>
+    </author>
+    <author>
+      <name>Razane Tajeddine</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09580v1</id>
+    <title>ZX-Flow: A Flexible Criterion for Deterministic Computation with ZX-Diagrams</title>
+    <updated>2026-03-10T12:26:09Z</updated>
+    <link href="https://arxiv.org/abs/2603.09580v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09580v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow criteria are used to efficiently extract computations, either in the form of measurement patterns or quantum circuits, from ZX-diagrams. Existing criteria such as causal flow, generalised flow, and Pauli flow, were all originally formulated for graph states, so they require ZX-diagrams to be in a very particular graph-state-like form. This form is easily broken by applying basic ZX rules and makes establishing some desirable properties very complicated. Here, we introduce a new "ZX-native" flow criterion called ZX-flow, formulated using a new type of decoration of a ZX-diagram we call Pauli semiwebs. These are a generalisation of Pauli webs, which have recently been used extensively in reasoning about fault-tolerant computations in the ZX-calculus. We show that ZX-flow is straightforwardly preserved by all Clifford rewrites and furthermore that a ZX-diagram has ZX-flow if and only if it is Clifford-equivalent to a graph-like ZX-diagram with Pauli flow. Finally, we show that any diagram with ZX-flow can be readily interpreted either as a deterministic measurement-based computation or as a Clifford isometry followed by a sequence of Pauli exponentials. The latter can then be efficiently extracted to a quantum circuit.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T12:26:09Z</published>
+    <arxiv:comment>12 pages, plus appendix</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Aleks Kissinger</name>
+    </author>
+    <author>
+      <name>John van de Wetering</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09574v1</id>
+    <title>SCDP: Learning Humanoid Locomotion from Partial Observations via Mixed-Observation Distillation</title>
+    <updated>2026-03-10T12:21:11Z</updated>
+    <link href="https://arxiv.org/abs/2603.09574v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09574v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Distilling humanoid locomotion control from offline datasets into deployable policies remains a challenge, as existing methods rely on privileged full-body states that require complex and often unreliable state estimation. We present Sensor-Conditioned Diffusion Policies (SCDP) that enables humanoid locomotion using only onboard sensors, eliminating the need for explicit state estimation. SCDP decouples sensing from supervision through mixed-observation training: diffusion model conditions on sensor histories while being supervised to predict privileged future state-action trajectories, enforcing the model to infer the motion dynamics under partial observability. We further develop restricted denoising, context distribution alignment, and context-aware attention masking to encourage implicit state estimation within the model and to prevent train-deploy mismatch. We validate SCDP on velocity-commanded locomotion and motion reference tracking tasks. In simulation, SCDP achieves near-perfect success on velocity control (99-100%) and 93% tracking success in AMASS test set, performing comparable to privileged baselines while using only onboard sensors. Finally, we deploy the trained policy on a real G1 humanoid at 50 Hz, demonstrating robust real robot locomotion without external sensing or state estimation.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T12:21:11Z</published>
+    <arxiv:comment>6 pages, 8 figures, 5 tables, iRos</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Milo Carroll</name>
+    </author>
+    <author>
+      <name>Tianhu Peng</name>
+    </author>
+    <author>
+      <name>Lingfan Bao</name>
+    </author>
+    <author>
+      <name>Chengxu Zhou</name>
+    </author>
+    <author>
+      <name>Zhibin Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09555v1</id>
+    <title>Compiler-First State Space Duality and Portable $O(1)$ Autoregressive Caching for Inference</title>
+    <updated>2026-03-10T12:03:00Z</updated>
+    <link href="https://arxiv.org/abs/2603.09555v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09555v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-space model releases are typically coupled to fused CUDA and Triton kernels, inheriting a hard dependency on NVIDIA hardware. We show that Mamba-2's state space duality algorithm -- diagonal state structure, chunkable recurrence, and einsum-dominated compute with static control flow -- maps cleanly onto what XLA's fusion and tiling passes actually optimise, making custom kernels optional rather than required. We implement the full inference path (prefill, cached autoregressive decoding) as shaped standard primitives under XLA, without hand-written kernels, and realise the architecture's theoretical $O(1)$ state management as a compiled on-device cache requiring no host synchronisation during generation. The implementation runs unmodified on CPU, NVIDIA GPU, and Google Cloud TPU from a single JAX source. On TPU v6e across five model scales (130M--2.7B parameters), XLA-generated code reaches approximately 140 TFLOPS on single-stream prefill ($15%$ MFU) and up to $64%$ bandwidth utilisation on decode. Greedy decoding matches the PyTorch/CUDA reference token-for-token across 64 steps, with hidden-state agreement within float32 rounding tolerance. The pattern transfers to any SSM recurrence satisfying the same structural conditions, on any platform with a mature XLA backend. The implementation is publicly available at https://github.com/CosmoNaught/mamba2-jax and merged into the Bonsai JAX model library.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-07T20:52:09Z</published>
-    <arxiv:comment>Accetped at ICLR 2026 Turstworthy AI Workshop</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T12:03:00Z</published>
+    <arxiv:comment>18 pages, 6 figures. Code available at: https://github.com/CosmoNaught/mamba2-jax</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Hyesu Lim</name>
+      <name>Cosmo Santoni</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09541v1</id>
+    <title>Memory-Guided View Refinement for Dynamic Human-in-the-loop EQA</title>
+    <updated>2026-03-10T11:51:54Z</updated>
+    <link href="https://arxiv.org/abs/2603.09541v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09541v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Embodied Question Answering (EQA) has traditionally been evaluated in temporally stable environments where visual evidence can be accumulated reliably. However, in dynamic, human-populated scenes, human activities and occlusions introduce significant perceptual non-stationarity: task-relevant cues are transient and view-dependent, while a store-then-retrieve strategy over-accumulates redundant evidence and increases inference cost. This setting exposes two practical challenges for EQA agents: resolving ambiguity caused by viewpoint-dependent occlusions, and maintaining compact yet up-to-date evidence for efficient inference. To enable systematic study of this setting, we introduce DynHiL-EQA, a human-in-the-loop EQA dataset with two subsets: a Dynamic subset featuring human activities and temporal changes, and a Static subset with temporally stable observations. To address the above challenges, we present DIVRR (Dynamic-Informed View Refinement and Relevance-guided Adaptive Memory Selection), a training-free framework that couples relevance-guided view refinement with selective memory admission. By verifying ambiguous observations before committing them and retaining only informative evidence, DIVRR improves robustness under occlusions while preserving fast inference with compact memory. Extensive experiments on DynHiL-EQA and the established HM-EQA dataset demonstrate that DIVRR consistently improves over existing baselines in both dynamic and static settings while maintaining high inference efficiency.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T11:51:54Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Xin Lu</name>
     </author>
     <author>
-      <name>Jinho Choi</name>
+      <name>Rui Li</name>
     </author>
     <author>
-      <name>Taekyung Kim</name>
+      <name>Xun Huang</name>
     </author>
     <author>
-      <name>Byeongho Heo</name>
+      <name>Weixin Li</name>
     </author>
     <author>
-      <name>Jaegul Choo</name>
+      <name>Chuanqing Zhuang</name>
     </author>
     <author>
-      <name>Dongyoon Han</name>
+      <name>Jiayuan Li</name>
+    </author>
+    <author>
+      <name>Zhengda Lu</name>
+    </author>
+    <author>
+      <name>Jun Xiao</name>
+    </author>
+    <author>
+      <name>Yunhong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09532v1</id>
+    <title>What Do We Care About in Bandits with Noncompliance? BRACE: Bandits with Recommendations, Abstention, and Certified Effects</title>
+    <updated>2026-03-10T11:40:42Z</updated>
+    <link href="https://arxiv.org/abs/2603.09532v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09532v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bandits with noncompliance separate the learner's recommendation from the treatment actually delivered, so the learning target itself must be chosen. A platform may care about recommendation welfare in the current mediated workflow, treatment learning for a future direct-control regime, or anytime-valid uncertainty for one of those targets. These objectives need not agree. We formalize this objective-choice problem, identify the direct-control regime in which recommendation and treatment objectives collapse, and show by example that recommendation welfare can strictly exceed every learner-measurable treatment policy when downstream actors use private information. For finite-context square-IV problems we propose BRACE, a parameter-free phase-doubling algorithm that performs IV inversion only after matrix certification and otherwise returns full-range but honest structural intervals. BRACE delivers simultaneous policy-value validity, fixed-gap identification of the operationally optimal recommendation policy, and fixed-gap identification of the structurally optimal treatment policy under contextual homogeneity and invertibility. We complement the theory with a finite-context empirical benchmark spanning direct control, mediated present-versus-future tradeoffs, weak identification, homogeneity failure, and rectangular overidentification. The experiments show that safety appears as regret on easy problems, as abstention and wide valid intervals under weak identification, as a reason to prefer recommendation welfare under homogeneity failure, and as tighter structural uncertainty when extra instruments are available. For rich contexts, we also derive an orthogonal score whose conditional bias factorizes into compliance-model and outcome-model errors, clarifying what must be stabilized for anytime-valid semiparametric IV inference.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T11:40:42Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Nicolás Della Penna</name>
     </author>
   </entry>
 </feed>
