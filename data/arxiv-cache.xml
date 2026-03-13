@@ -1,278 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-03-12T01:07:46Z -->
+<!-- Last updated: 2026-03-13T01:14:00Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-03-12T01:07:46Z</updated>
+  <updated>2026-03-13T01:14:01Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>136668</opensearch:totalResults>
+  <opensearch:totalResults>136830</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2603.10899v1</id>
-    <title>LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation</title>
-    <updated>2026-03-11T15:44:32Z</updated>
-    <link href="https://arxiv.org/abs/2603.10899v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10899v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Transformer-based large language models (LLMs) rely on key-value (KV) caching to avoid redundant computation during autoregressive inference. While this mechanism greatly improves efficiency, the cache size grows linearly with the input sequence length, quickly becoming a bottleneck for long-context tasks. Existing solutions mitigate this problem by evicting prompt KV that are deemed unimportant, guided by estimated importance scores. Notably, a recent line of work proposes to improve eviction quality by "glimpsing into the future", in which a draft generator produces a surrogate future response approximating the target model's true response, and this surrogate is subsequently used to estimate the importance of cached KV more accurately. However, these approaches rely on computationally expensive draft generation, which introduces substantial prefilling overhead and limits their practicality in real-world deployment. To address this challenge, we propose LookaheadKV, a lightweight eviction framework that leverages the strength of surrogate future response without requiring explicit draft generation. LookaheadKV augments transformer layers with parameter-efficient modules trained to predict true importance scores with high accuracy. Our design ensures negligible runtime overhead comparable to existing inexpensive heuristics, while achieving accuracy superior to more costly approximation methods. Extensive experiments on long-context understanding benchmarks, across a wide range of models, demonstrate that our method not only outperforms recent competitive baselines in various long-context understanding tasks, but also reduces the eviction cost by up to 14.5x, leading to significantly faster time-to-first-token. Our code is available at https://github.com/SamsungLabs/LookaheadKV.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T15:44:32Z</published>
-    <arxiv:comment>ICLR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Jinwoo Ahn</name>
-    </author>
-    <author>
-      <name>Ingyu Seong</name>
-    </author>
-    <author>
-      <name>Akhil Kedia</name>
-    </author>
-    <author>
-      <name>Junhan Kim</name>
-    </author>
-    <author>
-      <name>Hyemi Jang</name>
-    </author>
-    <author>
-      <name>Kangwook Lee</name>
-    </author>
-    <author>
-      <name>Yongkweon Jeon</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10887v1</id>
-    <title>Dynamics-Predictive Sampling for Active RL Finetuning of Large Reasoning Models</title>
-    <updated>2026-03-11T15:31:14Z</updated>
-    <link href="https://arxiv.org/abs/2603.10887v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10887v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reinforcement learning (RL) finetuning has become a key technique for enhancing the reasoning abilities of large language models (LLMs). However, its effectiveness critically depends on the selection of training data. Recent advances underscore the importance of online prompt selection methods, which typically concentrate training on partially solved or moderately challenging examples under the current policy, thereby yielding more effective model updates. While significantly accelerating RL finetuning in terms of training steps, they also incur substantial computational overhead by requiring extensive LLM rollouts over large candidate batches to identify informative samples, an expense that can outweigh the finetuning process itself. To address this challenge, this work proposes Dynamics-Predictive Sampling (DPS), which online predicts and selects informative prompts by inferring their learning dynamics prior to costly rollouts. Specifically, we introduce a new perspective by modeling each prompt's solving progress during RL finetuning as a dynamical system, where the extent of solving is represented as the state and the transition is characterized by a hidden Markov model. Using historical rollout reward signals, we perform online Bayesian inference to estimate evolving state distributions, and the inference outcome provides a predictive prior for efficient prompt selection without rollout-intensive filtering. Empirical results across diverse reasoning tasks, including mathematics, planning, and visual geometry, demonstrate that DPS substantially reduces redundant rollouts, accelerates the training process, and achieves superior reasoning performance.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T15:31:14Z</published>
-    <arxiv:comment>Accepted to ICLR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Yixiu Mao</name>
-    </author>
-    <author>
-      <name>Yun Qu</name>
-    </author>
-    <author>
-      <name>Qi Wang</name>
-    </author>
-    <author>
-      <name>Heming Zou</name>
-    </author>
-    <author>
-      <name>Xiangyang Ji</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10873v1</id>
-    <title>SNPgen: Phenotype-Supervised Genotype Representation and Synthetic Data Generation via Latent Diffusion</title>
-    <updated>2026-03-11T15:23:37Z</updated>
-    <link href="https://arxiv.org/abs/2603.10873v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10873v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Polygenic risk scores and other genomic analyses require large individual-level genotype datasets, yet strict data access restrictions impede sharing. Synthetic genotype generation offers a privacy-preserving alternative, but most existing methods operate unconditionally, producing samples without phenotype alignment, or rely on unsupervised compression, creating a gap between statistical fidelity and downstream task utility. We present SNPgen, a two-stage conditional latent diffusion framework for generating phenotype-supervised synthetic genotypes. SNPgen combines GWAS-guided variant selection (1,024-2,048 trait-associated SNPs) with a variational autoencoder for genotype compression and a latent diffusion model conditioned on binary disease labels via classifier-free guidance. Evaluated on 458,724 UK Biobank individuals across four complex diseases (coronary artery disease, breast cancer, type 1 and type 2 diabetes), models trained on synthetic data matched real-data predictive performance in a train-on-synthetic, test-on-real protocol, approaching genome-wide PRS methods that use $2$-$6\times$ more variants. Privacy analysis confirmed zero identical matches, near-random membership inference (AUC $\approx 0.50$), preserved linkage disequilibrium structure, and high allele frequency correlation ($r \geq 0.95$) with source data. A controlled simulation with known causal effects verified faithful recovery of the imposed genetic association structure.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T15:23:37Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Andrea Lampis</name>
-    </author>
-    <author>
-      <name>Michela Carlotta Massi</name>
-    </author>
-    <author>
-      <name>Nicola Pirastu</name>
-    </author>
-    <author>
-      <name>Francesca Ieva</name>
-    </author>
-    <author>
-      <name>Matteo Matteucci</name>
-    </author>
-    <author>
-      <name>Emanuele Di Angelantonio</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10869v1</id>
-    <title>Risk time splitting for improved estimation of screening programs effect on later mortality</title>
-    <updated>2026-03-11T15:20:51Z</updated>
-    <link href="https://arxiv.org/abs/2603.10869v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10869v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>There is a great need for evaluating screening programs, but analysing data from population screening is often complicated by a delayed screening effect. In cancer screening, only new, not yet clinically diagnosed cases, might benefit from screening through earlier treatment. Hence, mortality data following screening should be analysed based on refined mortality, separating cases based on diagnosis before and after first screening invitation. Historically, refined mortality has been implemented by selecting comparison groups from the available data to disentangle the causal effect. While giving valid estimates, the ignorance of large parts of the available data has limited study precision. In BMJ 2014, Weedon-Fekjær et al. used a new estimation approach applying all the available Norwegian mammography screening data. The estimation uses historic pre-screening data on time from clinical diagnosis to death estimating the proportion of post-screening mortality which is expected to be based on cases incident before first screening invitation, in the absence of a screening effect. Utilizing this expected proportion of post-screening incident cases, Poisson regression offsets are added to align the expected number of cases. The screening effect is then estimated adjusting for relevant covariables. While the method increases study precision, it has not been easily available and widely adopted. We here explain the method in detail, add maximum likelihood estimation, and lay the foundation for widespread use. Applying the method on Norwegian and Danish data, bootstrap confidence intervals are considerably narrower than intervals seen using other refined mortality methods, especially for the gradually introduced Norwegian program.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T15:20:51Z</published>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Harald Weedon-Fekjær</name>
-    </author>
-    <author>
-      <name>Elsebeth Lynge</name>
-    </author>
-    <author>
-      <name>Niels Keiding</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10862v1</id>
-    <title>OSUM-Pangu: An Open-Source Multidimension Speech Understanding Foundation Model Built upon OpenPangu on Ascend NPUs</title>
-    <updated>2026-03-11T15:15:04Z</updated>
-    <link href="https://arxiv.org/abs/2603.10862v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10862v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent advancements in Speech Large Language Models have significantly enhanced multi-dimensional speech understanding. However, the majority of high-performance frameworks are predominantly optimized for GPU centric ecosystems and proprietary backbones, creating a significant gap for deployment on non-CUDA computing infrastructures. In this paper, we present OSUM-Pangu, a fully open-source speech understanding foundation model developed on a completely non-CUDA software and hardware stack. By integrating an audio encoder with the openPangu-7B LLM backbone, we successfully implement the entire training and inference pipeline on the Ascend NPU platform. To facilitate efficient task alignment under non-CUDA resource constraints, we adopt a practical training process that sequentially bridges speech perception and user intent recognition. Experimental results demonstrate that OSUM-Pangu achieves task accuracy comparable to mainstream GPU-based models while maintaining robust natural language interaction capabilities. Our work provides a reproducible, non-CUDA baseline for the open-source speech community, promoting the independent evolution of multimodal intelligence.</summary>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T15:15:04Z</published>
-    <arxiv:comment>5 pages, 2 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.SD"/>
-    <author>
-      <name>Yujie Liao</name>
-    </author>
-    <author>
-      <name>Xuelong Geng</name>
-    </author>
-    <author>
-      <name>Hongfei Xue</name>
-    </author>
-    <author>
-      <name>Shuiyuan Wang</name>
-    </author>
-    <author>
-      <name>Lei Xie</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10830v1</id>
-    <title>Bayesian Design and Analysis of Precision Trials with Partial Borrowing</title>
-    <updated>2026-03-11T14:37:36Z</updated>
-    <link href="https://arxiv.org/abs/2603.10830v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10830v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>With the advancement of precision medicine there is an increasing need for design and analysis methods in clinical trials with the objective of investigating effect heterogeneity and estimating subgroup effects. As this requires precise estimation of interaction effects, borrowing information from external data sources including retrospective studies and early phase clinical trials to enrich the trial in sparse subgroups is pertinent. Motivated by a trial in gastric cancer we consider a practical design and analysis framework for borrowing from external data sources that only partially inform the inference. As the analysis model we propose an individually weighted model where the external data are weighted based on their fit with the target population based on the distribution of a set of covariates. In a simulation study we assess the performance of the model under various scenarios and make comparisons to dynamic borrowing. In addition, we provide a Bayesian design framework where design priors are extracted from the external data to determine decision boundaries and sample sizes. The design procedure is demonstrated within the context of our motivating example.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T14:37:36Z</published>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Shirin Golchi</name>
-    </author>
-    <author>
-      <name>Satoshi Morita</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10806v1</id>
-    <title>Backdoor Directions in Vision Transformers</title>
-    <updated>2026-03-11T14:13:48Z</updated>
-    <link href="https://arxiv.org/abs/2603.10806v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10806v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This paper investigates how Backdoor Attacks are represented within Vision Transformers (ViTs). By assuming knowledge of the trigger, we identify a specific ``trigger direction'' in the model's activations that corresponds to the internal representation of the trigger. We confirm the causal role of this linear direction by showing that interventions in both activation and parameter space consistently modulate the model's backdoor behavior across multiple datasets and attack types. Using this direction as a diagnostic tool, we trace how backdoor features are processed across layers. Our analysis reveals distinct qualitative differences: static-patch triggers follow a different internal logic than stealthy, distributed triggers. We further examine the link between backdoors and adversarial attacks, specifically testing whether PGD-based perturbations (de-)activate the identified trigger mechanism. Finally, we propose a data-free, weight-based detection scheme for stealthy-trigger attacks. Our findings show that mechanistic interpretability offers a robust framework for diagnosing and addressing security vulnerabilities in computer vision.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T14:13:48Z</published>
-    <arxiv:comment>31 pages, 16 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Sengim Karayalcin</name>
-    </author>
-    <author>
-      <name>Marina Krcek</name>
-    </author>
-    <author>
-      <name>Pin-Yu Chen</name>
-    </author>
-    <author>
-      <name>Stjepan Picek</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10782v1</id>
-    <title>Phase-Interface Instance Segmentation as a Visual Sensor for Laboratory Process Monitoring</title>
-    <updated>2026-03-11T13:55:04Z</updated>
-    <link href="https://arxiv.org/abs/2603.10782v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10782v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reliable visual monitoring of chemical experiments remains challenging in transparent glassware, where weak phase boundaries and optical artifacts degrade conventional segmentation. We formulate laboratory phenomena as the time evolution of phase interfaces and introduce the Chemical Transparent Glasses dataset 2.0 (CTG 2.0), a vessel-aware benchmark with 3,668 images, 23 glassware categories, and five multiphase interface types for phase-interface instance segmentation. Building on YOLO11m-seg, we propose LGA-RCM-YOLO, which combines Local-Global Attention (LGA) for robust semantic representation and a Rectangular Self-Calibration Module (RCM) for boundary refinement of thin, elongated interfaces. On CTG 2.0, the proposed model achieves 84.4% AP@0.5 and 58.43% AP@0.5-0.95, improving over the YOLO11m baseline by 6.42 and 8.75 AP points, respectively, while maintaining near real-time inference (13.67 FPS, RTX 3060). An auxiliary color-attribute head further labels liquid instances as colored or colorless with 98.71% precision and 98.32% recall. Finally, we demonstrate continuous process monitoring in separatory-funnel phase separation and crystallization, showing that phase-interface instance segmentation can serve as a practical visual sensor for laboratory automation.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T13:55:04Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Mingyue Li</name>
-    </author>
-    <author>
-      <name>Xin Yang</name>
-    </author>
-    <author>
-      <name>Shilin Yan</name>
-    </author>
-    <author>
-      <name>Jinye Ran</name>
-    </author>
-    <author>
-      <name>Morui Zhu</name>
-    </author>
-    <author>
-      <name>Zirui Peng</name>
-    </author>
-    <author>
-      <name>Huanqing Peng</name>
-    </author>
-    <author>
-      <name>Wei Peng</name>
-    </author>
-    <author>
-      <name>Guanghua Zhang</name>
-    </author>
-    <author>
-      <name>Shuo Li</name>
-    </author>
-    <author>
-      <name>Hao Zhang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.10777v1</id>
-    <title>Dynamics-Informed Deep Learning for Predicting Extreme Events</title>
-    <updated>2026-03-11T13:51:17Z</updated>
-    <link href="https://arxiv.org/abs/2603.10777v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10777v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Predicting extreme events in high-dimensional chaotic dynamical systems remains a fundamental challenge, as such events are rare, intermittent, and arise from transient dynamical mechanisms that are difficult to infer from limited observations. Accordingly, real-time forecasting calls for precursors that encode the mechanisms driving extremes, rather than relying solely on statistical associations. We propose a fully data-driven framework for long-lead prediction of extreme events that constructs interpretable, mechanism-aware precursors by explicitly tracking transient instabilities preceding event onset. The approach leverages a reduced-order formulation to compute finite-time Lyapunov exponent (FTLE)-like precursors directly from state snapshots, without requiring knowledge of the governing equations. To avoid the prohibitive computational cost of classical FTLE computation, instability growth is evaluated in an adaptively evolving low-dimensional subspace spanned by Optimal Time-Dependent (OTD) modes, enabling efficient identification of transiently amplifying directions. These precursors are then provided as input to a Transformer-based model, enabling forecast of extreme event observables. We demonstrate the framework on Kolmogorov flow, a canonical model of intermittent turbulence. The results show that explicitly encoding transient instability mechanisms substantially extends practical prediction horizons compared to baseline observable-based approaches.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.12111v1</id>
+    <title>Breaching the Barrier: Transition Pathways of Coral Larval Connectivity Across the Eastern Pacific</title>
+    <updated>2026-03-12T16:15:39Z</updated>
+    <link href="https://arxiv.org/abs/2603.12111v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12111v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Genetic analyses indicate minimal gene flow across the so-called Eastern Pacific Barrier (EPB) in larvae of the reef-building coral \emph{Porites lobata}. Notably, Clipperton Atoll, situated on the eastern side of the EPB, is the only site that exhibits detectable genetic connectivity with the Line Islands, which lie to the west of the EPB. To elucidate the relationship between this genetic signal and large-scale Pacific Ocean circulation, we analyze historical trajectories of surface-drifting buoys from the Global Drifter Program (GDP). We first discretize the GDP drifter trajectories into a Markov chain representation and subsequently apply transition path theory (TPT) in combination with Bayesian inference. The TPT analysis identifies reactive trajectories -- pathways that connect the Line Islands to Clipperton Atoll with minimal detours -- whose travel times do not exceed 5 months, which is taken as an upper bound for the larval survival time of \emph{P. lobata}. Consistently, the posterior distribution of transport from Pacific islands west of the EPB to Clipperton Atoll attains a local maximum in the Line Islands at a travel time of approximately 2.5 months. Our probabilistic characterization of the Lagrangian dynamics therefore supports a scenario of weak, but non-negligible, permeability of the EPB, in agreement with the genetic evidence, and it motivates a refined dynamical definition of the EPB based on the remaining duration of reactive trajectories. Furthermore, our results indicate that the connectivity between the Line Islands and Clipperton Atoll is governed primarily by the seasonal modulation of the North Equatorial Countercurrent, rather than by the phase of the El Niño--Southern Oscillation (ENSO). Finally, Clipperton Atoll's role as a terminal sink for trajectories is relevant to the planned mining operations.</summary>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T13:51:17Z</published>
-    <arxiv:primary_category term="cs.LG"/>
+    <published>2026-03-12T16:15:39Z</published>
+    <arxiv:primary_category term="physics.ao-ph"/>
     <author>
-      <name>Eirini Katsidoniotaki</name>
+      <name>Maria Olascoaga</name>
     </author>
     <author>
-      <name>Themistoklis P. Sapsis</name>
+      <name>Francisco Beron-Vera</name>
+    </author>
+    <author>
+      <name>Gage Bonner</name>
+    </author>
+    <author>
+      <name>Cora McKean</name>
+    </author>
+    <author>
+      <name>Ramona Joss</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.10775v1</id>
-    <title>Large Language Models as Annotators for Machine Translation Quality Estimation</title>
-    <updated>2026-03-11T13:50:42Z</updated>
-    <link href="https://arxiv.org/abs/2603.10775v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.10775v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Models (LLMs) have demonstrated excellent performance on Machine Translation Quality Estimation (MTQE), yet their high inference costs make them impractical for direct application. In this work, we propose applying LLMs to generate MQM-style annotations for training a COMET model: following Fernandes et al. (2023), we reckon that segment-level annotations provide a strong rationale for LLMs and are key to good segment-level QE. We propose a simplified MQM scheme, mostly restricted to top-level categories, to guide LLM selection. We present a systematic approach for the development of a GPT-4o-based prompt, called PPbMQM (Prompt-Pattern-based-MQM). We show that the resulting annotations correlate well with human annotations and that training COMET on them leads to competitive performance on segment-level QE for Chinese-English and English-German.</summary>
+    <id>http://arxiv.org/abs/2603.12098v1</id>
+    <title>Maximum-Entropy Random Walks on Hypergraphs</title>
+    <updated>2026-03-12T16:03:30Z</updated>
+    <link href="https://arxiv.org/abs/2603.12098v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12098v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Random walks are fundamental tools for analyzing complex networked systems, including social networks, biological systems, and communication infrastructures. While classical random walks focus on pairwise interactions, many real-world systems exhibit higher-order interactions naturally modeled by hypergraphs. Existing random walk models on hypergraphs often focus on undirected structures or do not incorporate entropy-based inference, limiting their ability to capture directional flows, uncertainty, or information diffusion in complex systems. In this article, we develop a maximum-entropy random walk framework on directed hypergraphs with two interaction mechanisms: broadcasting where a pivot node activates multiple receiver nodes and merging where multiple pivot nodes jointly influence a receiver node. We infer a transition kernel via a Kullback--Leibler divergence projection onto constraints enforcing stochasticity and stationarity. The resulting optimality conditions yield a multiplicative scaling form, implemented using Sinkhorn--Schrödinger-type iterations with tensor contractions. We further analyze ergodicity, including projected linear kernels for broadcasting and tensor spectral criteria for polynomial dynamics in merging. The effectiveness of our framework is demonstrated with both synthetic and real-world examples.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T16:03:30Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Anqi Dong</name>
+    </author>
+    <author>
+      <name>Anzhi Sheng</name>
+    </author>
+    <author>
+      <name>Xin Mao</name>
+    </author>
+    <author>
+      <name>Can Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12094v1</id>
+    <title>Human-Centred LLM Privacy Audits: Findings and Frictions</title>
+    <updated>2026-03-12T16:01:01Z</updated>
+    <link href="https://arxiv.org/abs/2603.12094v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12094v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) learn statistical associations from massive training corpora and user interactions, and deployed systems can surface or infer information about individuals. Yet people lack practical ways to inspect what a model associates with their name. We report interim findings from an ongoing study and introduce LMP2, a browser-based self-audit tool. In two user studies ($N_{total}{=}458$), GPT-4o predicts 11 of 50 features for everyday people with $\ge$60\% accuracy, and participants report wanting control over LLM-generated associations despite not considering all outputs privacy violations. To validate our probing method, we evaluate eight LLMs on public figures and non-existent names, observing clear separation between stable name-conditioned associations and model defaults. Our findings also contribute to exposing a broader generative AI evaluation crisis: when outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model--individual associations even include is under-specified and operationalisation relies on crafting probes and metrics that are hard to validate or compare. To move towards reliable, actionable human-centred LLM privacy audits, we identify nine frictions that emerged in our study and offer recommendations for future work and the design of human-centred LLM privacy audits.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-11T13:50:42Z</published>
-    <arxiv:comment>11 pages, 3 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T16:01:01Z</published>
+    <arxiv:primary_category term="cs.HC"/>
     <author>
-      <name>Sidi Wang</name>
+      <name>Dimitri Staufer</name>
     </author>
     <author>
-      <name>Sophie Arnoult</name>
+      <name>Kirsten Morehouse</name>
     </author>
     <author>
-      <name>Amir Kamran</name>
+      <name>David Hartmann</name>
+    </author>
+    <author>
+      <name>Bettina Berendt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12086v1</id>
+    <title>Intelligent 6G Edge Connectivity: A Knowledge Driven Optimization Framework for Small Cell Selection</title>
+    <updated>2026-03-12T15:54:31Z</updated>
+    <link href="https://arxiv.org/abs/2603.12086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sixth-generation (6G) wireless networks are expected to support immersive and mission-critical applications requiring ultra-reliable communication, sub-second responsiveness, and multi-Gbps data rates. Dense small-cell deployments are a key enabler of these capabilities; however, the large number of candidate cells available to mobile users makes efficient user-cell association increasingly complex. Conventional signal-strength-based or heuristic approaches often lead to load imbalance, increased latency, packet loss, and inefficient utilization of radio resources. To address these challenges, this paper proposes a Knowledge-Defined Networking (KDN) framework for intelligent user association in dense 6G small-cell environments. The proposed architecture integrates the knowledge, control, and data planes to enable adaptive, data-driven decision-making. Small-cell conditions are modeled using queueing-theoretic indicators that capture traffic load and waiting-time dynamics. Based on these indicators, a joint optimization objective reflecting latency and packet loss is formulated and solved via Lagrangian relaxation to obtain globally guided association policies. These optimization outcomes are then used to supervise a lightweight Learning Vector Quantization (LVQ) model, enabling fast and scalable inference at the network edge. Extensive NS-3 simulations under varying mobility, traffic load, packet size, and network density demonstrate that the proposed approach consistently outperforms conventional baselines. The framework reduces average latency by 30-45% in high-mobility and heavy-traffic scenarios and decreases packet loss by more than 35% under congestion. The results confirm that combining optimization-driven knowledge with lightweight learning enables scalable, QoS-aware user association for future dense 6G networks.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:54:31Z</published>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Tuğçe Bilen</name>
+    </author>
+    <author>
+      <name>Ian F. Akyildiz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12081v1</id>
+    <title>Direct Boltzmann inversion method from particle configurations at arbitrary state points</title>
+    <updated>2026-03-12T15:50:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.12081v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12081v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a direct Boltzmann inversion method to infer the interaction potential in particle systems using as input particle configurations generated at an arbitrary state point of the system. Unlike iterative Boltzmann inversion, the proposed method does not require performing a new Monte Carlo simulation at each step of the iteration process. It relies instead on enforcing consistency between two independent estimates of the pair correlation function, respectively obtained from interparticle distances and from pairwise forces. As a result, the approach is computationally inexpensive and straightforward to implement. Because it relies on the sole expression of interparticle forces, our method naturally applies to any state point, including when the density is large and alternative methods may fail. Here we present the basic principles of the method and benchmark its performance on a diverse set of test potentials studied using computer simulations. Practical aspects and detailed implementation of the method are also discussed. Owing to its simplicity and generality, the method should be broadly applicable, from the construction of coarse-grained interaction potentials to the inference of effective interactions in non-equilibrium systems.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:50:57Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Olivier Coquand</name>
+    </author>
+    <author>
+      <name>Davide Paolino</name>
+    </author>
+    <author>
+      <name>Ludovic Berthier</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12076v1</id>
+    <title>Operationalism, Causality, and Quantum Theory: a mostly time symmetric perspective</title>
+    <updated>2026-03-12T15:44:17Z</updated>
+    <link href="https://arxiv.org/abs/2603.12076v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12076v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is a book about operational probabilistic theories. The standard approach in such theories is from a time forward perspective. In this book we mostly take a time symmetric perspective. This presents a branding problem. Is this a niche book merely about time symmetry? No. This is a comprehensive book about operational probabilistic theories, but mostly from a time symmetric perspective. In fact, this book consists of (1) a simple book about simple operations having simple causal structure (where all the inputs are before all the outputs), and (2) a complex book about complex operations that can have complicated causal structure (a complex operation is equipped with a causal diagram). For the simple case we are able to show that the time symmetric perspective is equivalent to the time forward perspective. In each book we set up (A) operational probabilistic theories (OPTs) in terms of operations, (B) Operational Quantum Theory (OQT) in terms of operator tensors which correspond to operations, and (C) the theory of Hilbert objects which can be doubled up to give operator tensors. Operations are required to be physical which guarantees that circuits built out of operations have probabilities between 0 and 1 and that certain causality conditions are met. We prove that when we wire together operations the resulting networks are also physical. We model Sorkin's impossible measurements with complex operations and show that physicality prevents anomalous signalling. We develop diagrammatic notation for Hilbert objects. This includes mirrors for doubling up and mirror theorems. We use this framework to prove time symmetric causal dilation theorems for various causal diagrams.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:44:17Z</published>
+    <arxiv:comment>~700 pages. Many figures. Comments welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Lucien Hardy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12056v1</id>
+    <title>XSkill: Continual Learning from Experience and Skills in Multimodal Agents</title>
+    <updated>2026-03-12T15:25:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.12056v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12056v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings. A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories. We identify two complementary forms of reusable knowledge essential for this goal: experiences, providing concise action-level guidance for tool selection and decision making, and skills, providing structured task-level guidance for planning and tool use. To this end, we propose XSkill, a dual-stream framework for continual learning from experience and skills in multimodal agents. XSkill grounds both knowledge extraction and retrieval in visual observations. During accumulation, XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique. During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop. Evaluated on five benchmarks across diverse domains with four backbone models, XSkill consistently and substantially outperforms both tool-only and learning-based baselines. Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents and show superior zero-shot generalization.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:25:57Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Guanyu Jiang</name>
+      <arxiv:affiliation>May</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zhaochen Su</name>
+      <arxiv:affiliation>May</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaoye Qu</name>
+      <arxiv:affiliation>May</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yi R.</name>
+      <arxiv:affiliation>May</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Fung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12055v1</id>
+    <title>Continual Learning with Vision-Language Models via Semantic-Geometry Preservation</title>
+    <updated>2026-03-12T15:25:53Z</updated>
+    <link href="https://arxiv.org/abs/2603.12055v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12055v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continual learning of pretrained vision-language models (VLMs) is prone to catastrophic forgetting, yet current approaches adapt to new tasks without explicitly preserving the cross-modal semantic geometry inherited from pretraining and previous stages, allowing new-task supervision to induce geometric distortion. We observe that the most pronounced drift tends to concentrate in vulnerable neighborhoods near the old-new semantic interface, where shared visual patterns are easily re-explained by new textual semantics. To address this under an exemplar-free constraint, we propose Semantic Geometry Preservation for Continual Learning (SeGP-CL). SeGP-CL first probes the drift-prone region by constructing a compact set of adversarial anchors with dual-targeted projected gradient descent (DPGD), which drives selected new-task seeds toward old-class semantics while remaining faithful in raw visual space. During training, we preserve cross-modal structure by anchor-guided cross-modal geometry distillation (ACGD), and stabilize the textual reference frame across tasks via a lightweight text semantic-geometry regularization (TSGR). After training, we estimate anchor-induced raw-space drift to transfer old visual prototypes and perform dual-path inference by fusing cross-modal and visual cues. Extensive experiments on five continual learning benchmarks demonstrate that SeGP-CL consistently improves stability and forward transfer, achieving state-of-the-art performance while better preserving semantic geometry of VLMs.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:25:53Z</published>
+    <arxiv:comment>14 pages, 11 figures, under review</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Chiyuan He</name>
+    </author>
+    <author>
+      <name>Zihuan Qiu</name>
+    </author>
+    <author>
+      <name>Fanman Meng</name>
+    </author>
+    <author>
+      <name>Runtong Zhang</name>
+    </author>
+    <author>
+      <name>Linfeng Xu</name>
+    </author>
+    <author>
+      <name>Qingbo Wu</name>
+    </author>
+    <author>
+      <name>Hongliang Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12038v1</id>
+    <title>Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability</title>
+    <updated>2026-03-12T15:14:48Z</updated>
+    <link href="https://arxiv.org/abs/2603.12038v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12038v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Long-context autoregressive decoding remains expensive because each decoding step must repeatedly process a growing history. We observe a consistent pattern during decoding: within a sentence, and more generally within a short semantically coherent span, the dominant attention support often remains largely stable. Motivated by this observation, we propose Slow-Fast Inference (SFI), a training-free decoding framework that decouples generation into frequent low-cost fast steps and occasional dense-attention slow steps. Fast steps reuse a compact sparse memory for efficient decoding. Slow steps are triggered near semantic boundaries. At slow steps, the model revisits the broader context and uses the Selector to refresh the selected memory for subsequent fast steps. Across the evaluated context lengths, SFI delivers approximately $1.6\times$--$14.4\times$ higher decoding throughput while generally maintaining quality on par with the full-KV baseline across long-context and long-CoT settings. Because SFI is training-free and applies directly to existing checkpoints, it offers a practical path to reducing inference cost for contemporary autoregressive reasoning models in long-context, long-horizon, and agentic workloads.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:14:48Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xingyu Xie</name>
+    </author>
+    <author>
+      <name>Zhaochen Yu</name>
+    </author>
+    <author>
+      <name>Yue Liao</name>
+    </author>
+    <author>
+      <name>Tao Wang</name>
+    </author>
+    <author>
+      <name>Kim-Chuan Toh</name>
+    </author>
+    <author>
+      <name>Shuicheng Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12037v1</id>
+    <title>Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference</title>
+    <updated>2026-03-12T15:14:35Z</updated>
+    <link href="https://arxiv.org/abs/2603.12037v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12037v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators. In this work, we address this gap by analyzing the frequentist consistency of PFN-based estimators for the average treatment effect (ATE). (1) We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency. (2) As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size). (3) Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs. In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC. In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty and (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T15:14:35Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Valentyn Melnychuk</name>
+    </author>
+    <author>
+      <name>Vahid Balazadeh</name>
+    </author>
+    <author>
+      <name>Stefan Feuerriegel</name>
+    </author>
+    <author>
+      <name>Rahul G. Krishnan</name>
     </author>
   </entry>
 </feed>
