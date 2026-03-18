@@ -1,272 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-03-17T01:16:02Z -->
+<!-- Last updated: 2026-03-18T01:19:36Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-03-17T01:16:02Z</updated>
+  <updated>2026-03-18T01:19:36Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>137091</opensearch:totalResults>
+  <opensearch:totalResults>137379</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2603.14135v1</id>
-    <title>Solving physics-constrained inverse problems with conditional flow matching</title>
-    <updated>2026-03-14T21:43:48Z</updated>
-    <link href="https://arxiv.org/abs/2603.14135v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14135v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This study presents a conditional flow matching framework for solving physics-constrained Bayesian inverse problems. In this setting, samples from the joint distribution of inferred variables and measurements are assumed available, while explicit evaluation of the prior and likelihood densities is not required. We derive a simple and self-contained formulation of both the unconditional and conditional flow matching algorithms, tailored specifically to inverse problems. In the conditional setting, a neural network is trained to learn the velocity field of a probability flow ordinary differential equation that transports samples from a chosen source distribution directly to the posterior distribution conditioned on observed measurements. This black-box formulation accommodates nonlinear, high-dimensional, and potentially non-differentiable forward models without restrictive assumptions on the noise model. We further analyze the behavior of the learned velocity field in the regime of finite training data. Under mild architectural assumptions, we show that overtraining can induce degenerate behavior in the generated conditional distributions, including variance collapse and a phenomenon termed selective memorization, wherein generated samples concentrate around training data points associated with similar observations. A simplified theoretical analysis explains this behavior, and numerical experiments confirm it in practice. We demonstrate that standard early-stopping criteria based on monitoring test loss effectively mitigate such degeneracy. The proposed method is evaluated on several physics-based inverse problems. We investigate the impact of different choices of source distributions, including Gaussian and data-informed priors. Across these examples, conditional flow matching accurately captures complex, multimodal posterior distributions while maintaining computational efficiency.</summary>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T21:43:48Z</published>
-    <arxiv:primary_category term="stat.ML"/>
-    <author>
-      <name>Agnimitra Dasgupta</name>
-    </author>
-    <author>
-      <name>Ali Fardisi</name>
-    </author>
-    <author>
-      <name>Mehrnegar Aminy</name>
-    </author>
-    <author>
-      <name>Brianna Binder</name>
-    </author>
-    <author>
-      <name>Bryan Shaddy</name>
-    </author>
-    <author>
-      <name>Assad Oberai</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14128v1</id>
-    <title>Diffusion Reinforcement Learning via Centered Reward Distillation</title>
-    <updated>2026-03-14T21:29:33Z</updated>
-    <link href="https://arxiv.org/abs/2603.14128v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14128v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Diffusion and flow models achieve State-Of-The-Art (SOTA) generative performance, yet many practically important behaviors such as fine-grained prompt fidelity, compositional correctness, and text rendering are weakly specified by score or flow matching pretraining objectives. Reinforcement Learning (RL) fine-tuning with external, black-box rewards is a natural remedy, but diffusion RL is often brittle. Trajectory-based methods incur high memory cost and high-variance gradient estimates; forward-process approaches converge faster but can suffer from distribution drift, and hence reward hacking. In this work, we present \textbf{Centered Reward Distillation (CRD)}, a diffusion RL framework derived from KL-regularized reward maximization built on forward-process-based fine-tuning. The key insight is that the intractable normalizing constant cancels under \emph{within-prompt centering}, yielding a well-posed reward-matching objective. To enable reliable text-to-image fine-tuning, we introduce techniques that explicitly control distribution drift: (\textit{i}) decoupling the sampler from the moving reference to prevent ratio-signal collapse, (\textit{ii}) KL anchoring to a CFG-guided pretrained model to control long-run drift and align with the inference-time semantics of the pre-trained model, and (\textit{iii}) reward-adaptive KL strength to accelerate early learning under large KL regularization while reducing late-stage exploitation of reward-model loopholes. Experiments on text-to-image post-training with \texttt{GenEval} and \texttt{OCR} rewards show that CRD achieves competitive SOTA reward optimization results with fast convergence and reduced reward hacking, as validated on unseen preference metrics.</summary>
+    <id>http://arxiv.org/abs/2603.16444v1</id>
+    <title>Fast-HaMeR: Boosting Hand Mesh Reconstruction using Knowledge Distillation</title>
+    <updated>2026-03-17T12:28:02Z</updated>
+    <link href="https://arxiv.org/abs/2603.16444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fast and accurate 3D hand reconstruction is essential for real-time applications in VR/AR, human-computer interaction, robotics, and healthcare. Most state-of-the-art methods rely on heavy models, limiting their use on resource-constrained devices like headsets, smartphones, and embedded systems. In this paper, we investigate how the use of lightweight neural networks, combined with Knowledge Distillation, can accelerate complex 3D hand reconstruction models by making them faster and lighter, while maintaining comparable reconstruction accuracy. While our approach is suited for various hand reconstruction frameworks, we focus primarily on boosting the HaMeR model, currently the leading method in terms of reconstruction accuracy. We replace its original ViT-H backbone with lighter alternatives, including MobileNet, MobileViT, ConvNeXt, and ResNet, and evaluate three knowledge distillation strategies: output-level, feature-level, and a hybrid of both. Our experiments show that using lightweight backbones that are only 35% the size of the original achieves 1.5x faster inference speed while preserving similar performance quality with only a minimal accuracy difference of 0.4mm. More specifically, we show how output-level distillation notably improves student performance, while feature-level distillation proves more effective for higher-capacity students. Overall, the findings pave the way for efficient real-world applications on low-power devices. The code and models are publicly available under https://github.com/hunainahmedj/Fast-HaMeR.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T21:29:33Z</published>
+    <published>2026-03-17T12:28:02Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yuanzhi Zhu</name>
+      <name>Hunain Ahmed Jillani</name>
     </author>
     <author>
-      <name>Xi Wang</name>
+      <name>Ahmed Tawfik Aboukhadra</name>
     </author>
     <author>
-      <name>Stéphane Lathuilière</name>
+      <name>Ahmed Elhayek</name>
     </author>
     <author>
-      <name>Vicky Kalogeiton</name>
+      <name>Jameel Malik</name>
+    </author>
+    <author>
+      <name>Nadia Robertini</name>
+    </author>
+    <author>
+      <name>Didier Stricker</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.14122v1</id>
-    <title>Towards Agentic Honeynet Configuration</title>
-    <updated>2026-03-14T21:15:49Z</updated>
-    <link href="https://arxiv.org/abs/2603.14122v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14122v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Honeypots are deception systems that emulate vulnerable services to collect threat intelligence. While deploying many honeypots increases the opportunity to observe attacker behaviour, in practise network and computational resources limit the number of honeypots that can be exposed. Hence, practitioners must select the assets to deploy, a decision that is typically made statically despite attackers' tactics evolving over time. This work investigates an AI-driven agentic architecture that autonomously manages honeypot exposure in response to ongoing attacks. The proposed agent analyses Intrusion Detection System (IDS) alerts and network state to infer the progression of the attack, identify compromised assets, and predict likely attacker targets. Based on this assessment, the agent dynamically reconfigures the system to maintain attacker engagement while minimizing unnecessary exposure. The approach is evaluated in a simulated environment where attackers execute Proof-of-Concept exploits for known CVEs. Preliminary results indicate that the agent can effectively infer the intent of the attacker and improve the efficiency of exposure under resource constraints</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.16437v1</id>
+    <title>Dimensional Type Systems and Deterministic Memory Management: Design-Time Semantic Preservation in Native Compilation</title>
+    <updated>2026-03-17T12:19:07Z</updated>
+    <link href="https://arxiv.org/abs/2603.16437v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16437v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a compilation framework in which dimensional type annotations persist through multi-stage MLIR lowering, enabling the compiler to jointly resolve numeric representation selection and deterministic memory management as coeffect properties of a single program semantic graph (PSG). Dimensional inference determines value ranges; value ranges determine representation selection; representation selection determines word width and memory footprint; and memory footprint, combined with escape classification, determines allocation strategy and cross-target transfer fidelity. The Dimensional Type System (DTS) extends Hindley-Milner unification with constraints drawn from finitely generated abelian groups, yielding inference that is decidable in polynomial time, complete, and principal. Where conventional systems erase dimensional annotations before code generation, DTS carries them as compilation metadata through each lowering stage, making them available where representation and memory placement decisions occur. Deterministic Memory Management (DMM), formalized as a coeffect discipline within the same graph, unifies escape analysis and memory placement with the dimensional framework. Escape analysis classifies value lifetimes into four categories (stack-scoped, closure-captured, return-escaping, byref-escaping), each mapping to a verified allocation strategy. We identify implications for auto-differentiation: the dimensional algebra is closed under the chain rule, and forward-mode gradient computation exhibits a coeffect signature that the framework can verify. The practical consequence is a development environment where escape diagnostics, allocation strategy, representation fidelity, and cache locality estimation are design-time views over the compilation graph.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T12:19:07Z</published>
+    <arxiv:comment>29 pages, 1 table, 3 appendices with extended examples</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Houston Haynes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16430v1</id>
+    <title>EngGPT2: Sovereign, Efficient and Open Intelligence</title>
+    <updated>2026-03-17T12:08:35Z</updated>
+    <link href="https://arxiv.org/abs/2603.16430v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16430v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>EngGPT2-16B-A3B is the latest iteration of Engineering Group's Italian LLM and it's built to be a Sovereign, Efficient and Open model. EngGPT2 is trained on 2.5 trillion tokens - less than Qwen3's 36T or Llama3's 15T - and delivers performance on key benchmarks, including MMLU-Pro, GSM8K, IFEval and HumanEval, comparable to dense models in the 8B-16B range, while requiring one-fifth to half of the inference power, and between one-tenth to one-sixth of the training data and consequent needed training power. Designed as a trained-from-scratch Mixture-of-Experts (MoE) architecture, EngGPT2 features 16 billion parameters with 3 billion active per inference, with expert sizes positioned between those used in GPT-OSS and Qwen3. Approximately 25% of its training corpus consists of Italian-language data, to deliver strong capabilities for European and Italian NLP tasks among models of similar scale. This efficiency aims to position EngGPT2 as a key contributor to the growing portfolio of open-weight European models, combining performance and efficiency with full alignment to the EU AI Act. EngGPT2 is also a single model capable of multiple reasoning modes: non-reasoning, reasoning in Italian or English, and turbo-reasoning (a concise, bullet-point style reasoning available in both languages designed for real-time reasoning use cases). EngGPT2 aims to set a new standard for resource-conscious, high-performance LLMs tailored to European and Italian contexts.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T21:15:49Z</published>
-    <arxiv:comment>Accepted at AgenNet 2026 - Colocated with NOMS 2026</arxiv:comment>
+    <published>2026-03-17T12:08:35Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>G. Ciarfaglia</name>
+    </author>
+    <author>
+      <name>A. Rosanova</name>
+    </author>
+    <author>
+      <name>S. Cipolla</name>
+    </author>
+    <author>
+      <name>J. Bartoli</name>
+    </author>
+    <author>
+      <name>A. Di Domenico</name>
+    </author>
+    <author>
+      <name>C. Fioroni</name>
+    </author>
+    <author>
+      <name>A. Fontana</name>
+    </author>
+    <author>
+      <name>M. R. Scoleri</name>
+    </author>
+    <author>
+      <name>M. I. Mone</name>
+    </author>
+    <author>
+      <name>D. Franchi</name>
+    </author>
+    <author>
+      <name>M. C. Del Gaudio</name>
+    </author>
+    <author>
+      <name>F. Picariello</name>
+    </author>
+    <author>
+      <name>M. Gabusi</name>
+    </author>
+    <author>
+      <name>S. Bonura</name>
+    </author>
+    <author>
+      <name>V. Morreale</name>
+    </author>
+    <author>
+      <name>I. Bailo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16423v1</id>
+    <title>SF-Mamba: Rethinking State Space Model for Vision</title>
+    <updated>2026-03-17T11:59:11Z</updated>
+    <link href="https://arxiv.org/abs/2603.16423v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16423v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The realm of Mamba for vision has been advanced in recent years to strike for the alternatives of Vision Transformers (ViTs) that suffer from the quadratic complexity. While the recurrent scanning mechanism of Mamba offers computational efficiency, it inherently limits non-causal interactions between image patches. Prior works have attempted to address this limitation through various multi-scan strategies; however, these approaches suffer from inefficiencies due to suboptimal scan designs and frequent data rearrangement. Moreover, Mamba exhibits relatively slow computational speed under short token lengths, commonly used in visual tasks. In pursuit of a truly efficient vision encoder, we rethink the scan operation for vision and the computational efficiency of Mamba. To this end, we propose SF-Mamba, a novel visual Mamba with two key proposals: auxiliary patch swapping for encoding bidirectional information flow under an unidirectional scan and batch folding with periodic state reset for advanced GPU parallelism. Extensive experiments on image classification, object detection, and instance and semantic segmentation consistently demonstrate that our proposed SF-Mamba significantly outperforms state-of-the-art baselines while improving throughput across different model sizes. We will release the source code after publication.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:59:11Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Masakazu Yoshimura</name>
+    </author>
+    <author>
+      <name>Teruaki Hayashi</name>
+    </author>
+    <author>
+      <name>Yuki Hoshino</name>
+    </author>
+    <author>
+      <name>Wei-Yao Wang</name>
+    </author>
+    <author>
+      <name>Takeshi Ohashi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16419v1</id>
+    <title>Early Prediction of Creep Failure via Bayesian Inference of Evolving Barriers</title>
+    <updated>2026-03-17T11:55:13Z</updated>
+    <link href="https://arxiv.org/abs/2603.16419v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16419v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Creep under a sustained load can persist for long times yet culminate in abrupt yielding or rupture, implying a finite lifetime even when the material appears solid. Here, we formulate lifetime prediction as Bayesian inference over an evolving activation-energy landscape. A time-dependent distribution of activation barriers controls deformation: stress lowers barriers, while irreversible rearrangements deplete the weakest sites and reshape the low-barrier tail. Using early-time acoustic emission data, Bayesian inference estimates the evolving barrier statistics in each sample and yields posterior predictive distributions for the time-to-failure. This approach provides uncertainty-aware lifetime forecasts that link microscopic barrier evolution to macroscopic creep dynamics.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:55:13Z</published>
+    <arxiv:comment>7 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Juan Carlos Verano-Espitia</name>
+    </author>
+    <author>
+      <name>Tero Mäkinen</name>
+    </author>
+    <author>
+      <name>Mikko J. Alava</name>
+    </author>
+    <author>
+      <name>Jérôme Weiss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16415v1</id>
+    <title>IndexRAG: Bridging Facts for Cross-Document Reasoning at Index Time</title>
+    <updated>2026-03-17T11:51:31Z</updated>
+    <link href="https://arxiv.org/abs/2603.16415v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16415v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-hop question answering (QA) requires reasoning across multiple documents, yet existing retrieval-augmented generation (RAG) approaches address this either through graph-based methods requiring additional online processing or iterative multi-step reasoning. We present IndexRAG, a novel approach that shifts cross-document reasoning from online inference to offline indexing. IndexRAG identifies bridge entities shared across documents and generates bridging facts as independently retrievable units, requiring no additional training or fine-tuning. Experiments on three widely-used multi-hop QA benchmarks (HotpotQA, 2WikiMultiHopQA, MuSiQue) show that IndexRAG improves F1 over Naive RAG by 4.6 points on average, while requiring only single-pass retrieval and a single LLM call at inference time. When combined with IRCoT, IndexRAG outperforms all graph-based baselines on average, including HippoRAG and FastGraphRAG, while relying solely on flat retrieval. Our code will be released upon acceptance.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:51:31Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zhenghua Bao</name>
+    </author>
+    <author>
+      <name>Yi Shi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16413v1</id>
+    <title>Trained Persistent Memory for Frozen Encoder--Decoder LLMs: Six Architectural Methods</title>
+    <updated>2026-03-17T11:51:21Z</updated>
+    <link href="https://arxiv.org/abs/2603.16413v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16413v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Frozen encoder--decoder language models are stateless: the latent representation is discarded after every forward pass, so no information persists across sessions. This paper presents a \textbf{proof-of-concept pilot study} showing that persistent memory in the \emph{continuous latent space} of a frozen LLM is feasible -- even under severe resource constraints (a single frozen Flan-T5-XL backbone, small trainable adapters, a single dataset). We implement six architectural methods spanning three injection points and four write mechanisms; unlike text-level memory systems, every write and read is a differentiable operation on dense vectors. After training only the adapter, the memory bank continues to accumulate at inference time without gradients, enabling \emph{conversational learning}. Under a forgetting-curve evaluation on LoCoMo at two capacity scales (1$\times$ and 10$\times$), the stateless baseline scores exactly zero; at 10$\times$ all six trained adapters produce positive memory-recall curves; at 1$\times$ three methods collapse, revealing capacity as a critical design parameter. Because the memory bank is a compact numerical array, it can be scaled to arbitrarily large capacity without altering the backbone. We argue that full end-to-end training with larger models, larger data, and orders-of-magnitude larger memory will yield substantially stronger results; this pilot study establishes the feasibility baseline and design-space taxonomy that such efforts require.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:51:21Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hong Jeong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16393v1</id>
+    <title>Robust Physics-Guided Diffusion for Full-Waveform Inversion</title>
+    <updated>2026-03-17T11:27:37Z</updated>
+    <link href="https://arxiv.org/abs/2603.16393v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16393v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a robust physics-guided diffusion framework for full-waveform inversion that combines a score-based generative prior with likelihood guidance computed through wave-equation simulations. We adopt a transport-based data-consistency potential (Wasserstein-2), incorporating wavefield enhancement via bounded weighting and observation-dependent normalization, thereby improving robustness to amplitude imbalance and time/phase misalignment. On the inference side, we introduce a preconditioned guided reverse-diffusion scheme that adapts the guidance strength and spatial scaling throughout the reverse-time dynamics, yielding a more stable and effective data-consistency guidance step than standard diffusion posterior sampling (DPS). Numerical experiments on OpenFWI datasets demonstrate improved reconstruction quality over deterministic optimization baselines and standard DPS under comparable computational budgets.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:27:37Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Jishen Peng</name>
+    </author>
+    <author>
+      <name>Enze Jiang</name>
+    </author>
+    <author>
+      <name>Zheng Ma</name>
+    </author>
+    <author>
+      <name>Xiongbin Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16382v1</id>
+    <title>Rotated Robustness: A Training-Free Defense against Bit-Flip Attacks on Large Language Models</title>
+    <updated>2026-03-17T11:11:17Z</updated>
+    <link href="https://arxiv.org/abs/2603.16382v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16382v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hardware faults, specifically bit-flips in quantized weights, pose a severe reliability threat to Large Language Models (LLMs), often triggering catastrophic model collapses. We demonstrate that this vulnerability fundamentally stems from the spatial alignment between sensitive weight bits and extreme activation outliers, which causes a single hardware fault to be massively amplified. To address this, we propose Rotated Robustness (RoR), a training-free defense utilizing orthogonal Householder transformations. By applying an orthogonal rotation to the activation space, RoR geometrically smooths extreme outliers across all feature dimensions. This mechanism effectively breaks the alignment between outliers and vulnerable weights, mathematically guaranteeing original model accuracy. Extensive empirical evaluations across Llama-2/3, OPT, and Qwen families demonstrate the superior reliability of our approach. Under random bit-flip attacks, RoR reduces the stochastic collapse rate from 3.15\% to 0.00\% on Qwen2.5-7B. Furthermore, under severe targeted attacks with 50 Progressive Bit Search flips, RoR sustains robust reasoning on Llama-2-7B, maintaining a 43.9\% MMLU accuracy that nearly matches its 45.2\% unattacked accuracy, while competing defenses collapse to random guessing. Most notably, against the Single-Point Fault Attack (SPFA) -- the most aggressive targeted threat -- RoR exponentially inflates the attack complexity from a few bits to over 17,000 precise bit-flips. With a negligible storage overhead of 0.31\% and a minimal inference latency increase of 9.1\% on Llama-2-7B, RoR achieves true lossless robustness, providing a practical and highly reliable defense for LLM deployment.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:11:17Z</published>
+    <arxiv:comment>13 pages, 8 figures. Preprint. Under review at IEEE Transactions on Information Forensics and Security</arxiv:comment>
     <arxiv:primary_category term="cs.CR"/>
     <author>
-      <name>Federico Mirra</name>
+      <name>Deng Liu</name>
     </author>
     <author>
-      <name>Matteo Boffa</name>
-    </author>
-    <author>
-      <name>Idilio Drago</name>
-    </author>
-    <author>
-      <name>Danilo Giordano</name>
-    </author>
-    <author>
-      <name>Marco Mellia</name>
+      <name>Song Chen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.14117v1</id>
-    <title>Improving Visual Reasoning with Iterative Evidence Refinement</title>
-    <updated>2026-03-14T21:08:21Z</updated>
-    <link href="https://arxiv.org/abs/2603.14117v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14117v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision language models (VLMs) are increasingly capable of reasoning over images, but robust visual reasoning often requires re-grounding intermediate steps in the underlying visual evidence. Recent approaches typically rely on external image operations such as zooming or cropping to re-access fine-grained details during inference, which requires additional image re-encoding and can disrupt the reasoning trajectory. We argue that VLMs already provide strong internal signals for identifying and reusing visual evidence, and that these signals can be directly leveraged to support image-grounded reasoning. Motivated by this insight, we propose an end-to-end self-revisit framework, SIEVE, that trains models to re-engage image evidence through internal representations. SIEVE automatically extracts embeddings of salient image regions and injects them into the reasoning chain when additional grounding is needed, enabling later steps to condition on relevant visual cues without external tool calls or re-encoding. We use reinforcement learning to teach the model when to trigger visual revisiting and which region embeddings to retrieve and insert during the reasoning process. Experiments on multiple visual reasoning benchmarks, together with perception, reasoning, and hallucination evaluations, show that SIEVE yields consistent gains, improving performance by 8 percent on average across several benchmarks.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T21:08:21Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Zeru Shi</name>
-    </author>
-    <author>
-      <name>Kai Mei</name>
-    </author>
-    <author>
-      <name>Yihao Quan</name>
-    </author>
-    <author>
-      <name>Dimitris N. Metaxas</name>
-    </author>
-    <author>
-      <name>Ruixiang Tang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14115v1</id>
-    <title>A Lagrangian Conditional Gaussian Koopman Network for Data Assimilation and Prediction</title>
-    <updated>2026-03-14T21:05:24Z</updated>
-    <link href="https://arxiv.org/abs/2603.14115v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14115v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Lagrangian data assimilation aims to recover hidden Eulerian flow fields from sparse, indirect observations of moving tracers. This problem is challenging because tracer trajectories are nonlinearly coupled with the underlying flow, making posterior inference computationally intractable in realistic, high-dimensional systems. In this work, we develop a Lagrangian conditional Gaussian Koopman network (LaCGKN), a structure-preserving, data-driven framework for joint data assimilation and prediction from Lagrangian observations. LaCGKN embeds Eulerian flow dynamics into a low-dimensional latent space governed by a nonlinear stochastic system with conditional Gaussian structure, enabling analytic posterior updates without ensemble forecasting. Unlike existing conditional Gaussian Koopman formulations that assume direct Eulerian observations, the Lagrangian setting imposes additional demands on the latent representation, which must simultaneously encode the flow dynamics and mediate nonlinear tracer-flow interactions. To address these challenges, the LaCGKN incorporates three key components: (i) tracer homogenization to enforce permutation equivariance and generalize across varying numbers of tracers; (ii) Fourier positional encoding to capture spatial dependence and reconstruct local flow features at moving tracer locations; and (iii) an SVD-inspired low-rank parameterization of the latent transition operator, which reduces model complexity while retaining expressiveness. An application to a two-layer quasi-geostrophic flow with surface tracer observations shows that LaCGKN achieves accurate and efficient Lagrangian data assimilation and prediction, without reliance on ensemble methods or the governing physical model. These results establish the LaCGKN as a unified and computationally tractable alternative to both traditional model-based approaches and purely black-box data-driven methods.</summary>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T21:05:24Z</published>
-    <arxiv:primary_category term="cs.CE"/>
-    <author>
-      <name>Zhongrui Wang</name>
-    </author>
-    <author>
-      <name>Chuanqi Chen</name>
-    </author>
-    <author>
-      <name>Jin-Long Wu</name>
-    </author>
-    <author>
-      <name>Nan Chen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14114v1</id>
-    <title>Rotation Curve of the Milky Way</title>
-    <updated>2026-03-14T21:02:44Z</updated>
-    <link href="https://arxiv.org/abs/2603.14114v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14114v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We investigate the rotation curve of the Milky Way using a multi-component mass model including a stellar disk, a gaseous disk, a bulge/bar component, and a dark-matter halo. The stellar and gas contributions are calibrated using recent observational determinations of the Galactic surface-density distribution, while the dark-matter halo is modelled with standard spherical profiles. We compute the circular-velocity contributions of the different components using a combination of spherical mass reconstruction for the bulge and halo, and thin-disk Hankel-transform methods for the disk and gas components. We first fit the stellar surface-density profile to determine a fiducial bulge-disk decomposition and then use this calibration to predict the Galactic rotation curve. We find that, although the resulting stellar mass model reproduces the observed surface-density profile reasonably well, it does not provide a fully satisfactory description of the rotation-curve data, with the largest discrepancies arising in the inner Galaxy. We then consider an alternative RC-first calibration strategy, in which the bulge and disk parameters are adjusted to improve the kinematic fit. While this significantly improves the agreement with the observed rotation curve, the corresponding stellar surface-density profile becomes inconsistent with the independently inferred baryonic distribution. Our results highlight a tension between photometric and kinematic constraints within simplified axisymmetric models and indicate that a fully consistent description of the Milky Way mass distribution likely requires a more realistic treatment of the bulge/bar structure and of baryonic systematic uncertainties.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T21:02:44Z</published>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Zi Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14110v1</id>
-    <title>SVD Contextual Sparsity Predictors for Fast LLM Inference</title>
-    <updated>2026-03-14T20:36:13Z</updated>
-    <link href="https://arxiv.org/abs/2603.14110v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14110v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Contextual sparsity is one of the approaches used to reduce computational complexity in the inference process of large language models (LLMs). Existing techniques for efficient LLM inference acceleration based on contextual sparsity with minimal accuracy degradation require training sparse pattern predictors. This paper presents a framework for accelerating inference of ReGLU-based feed-forward networks (FFNs) within LLMs. The proposed framework provides a fast, training-free method for building sparse pattern predictors using truncation-aware singular value decomposition (SVD) of the gate projection matrix, along with a threshold calibration algorithm, and inference executors supporting conditional computation on CUDA and CANN devices. Experiments on three sparse LLMs with an average activation sparsity level of 90% in the FFNs demonstrate up to a 1.8x reduction in end-to-end decoding time while maintaining less than 1% degradation in benchmark scores on tasks involving complex math and code generation. This work advances the deployment of LLMs on edge devices.</summary>
+    <id>http://arxiv.org/abs/2603.16377v1</id>
+    <title>Age Predictors Through the Lens of Generalization, Bias Mitigation, and Interpretability: Reflections on Causal Implications</title>
+    <updated>2026-03-17T11:10:11Z</updated>
+    <link href="https://arxiv.org/abs/2603.16377v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16377v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chronological age predictors often fail to achieve out-of-distribution (OOD) gen- eralization due to exogenous attributes such as race, gender, or tissue. Learning an invariant representation with respect to those attributes is therefore essential to improve OOD generalization and prevent overly optimistic results. In predic- tive settings, these attributes motivate bias mitigation; in causal analyses, they appear as confounders; and when protected, their suppression leads to fairness. We coherently explore these concepts with theoretical rigor and discuss the scope of an interpretable neural network model based on adversarial representation learning. Using publicly available mouse transcriptomic datasets, we illustrate the behavior of this model relative to conventional machine learning models. We observe that the outcome of this model is consistent with the predictive results of a published study demonstrating the effects of Elamipretide on mouse skeletal and cardiac muscle. We conclude by discussing the limitations of deriving causal interpretation from such purely predictive models.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T20:36:13Z</published>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T11:10:11Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Georgii Serbin</name>
+      <name>Debdas Paul</name>
     </author>
     <author>
-      <name>Kirill Koshkin</name>
+      <name>Elisa Ferrari</name>
     </author>
     <author>
-      <name>Zhongao Sun</name>
+      <name>Irene Gravili</name>
     </author>
     <author>
-      <name>Anastasiya Bistrigova</name>
-    </author>
-    <author>
-      <name>C. C. Korikov</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14091v1</id>
-    <title>Evaluating Four FPGA-accelerated Space Use Cases based on Neural Network Algorithms for On-board Inference</title>
-    <updated>2026-03-14T19:32:33Z</updated>
-    <link href="https://arxiv.org/abs/2603.14091v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14091v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Space missions increasingly deploy high-fidelity sensors that produce data volumes exceeding onboard buffering and downlink capacity. This work evaluates FPGA acceleration of neural networks (NNs) across four space use cases on the AMD ZCU104 board. We use Vitis AI (AMD DPU) and Vitis HLS to implement inference, quantify throughput and energy, and expose toolchain and architectural constraints relevant to deployment. Vitis AI achieves up to 34.16$\times$ higher inference rate than the embedded ARM CPU baseline, while custom HLS designs reach up to 5.4$\times$ speedup and add support for operators (e.g., sigmoids, 3D layers) absent in the DPU. For these implementations, measured MPSoC inference power spans 1.5-6.75 W, reducing energy per inference versus CPU execution in all use cases. These results show that NN FPGA acceleration can enable onboard filtering, compression, and event detection, easing downlink pressure in future missions.</summary>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T19:32:33Z</published>
-    <arxiv:comment>Accepted at MCSoC 2025</arxiv:comment>
-    <arxiv:primary_category term="cs.AR"/>
-    <author>
-      <name>Pedro Antunes</name>
-    </author>
-    <author>
-      <name>Muhammad Ihsan Al Hafiz</name>
-    </author>
-    <author>
-      <name>Jonah Ekelund</name>
-    </author>
-    <author>
-      <name>Ekaterina Dineva</name>
-    </author>
-    <author>
-      <name>George Miloshevich</name>
-    </author>
-    <author>
-      <name>Panagiotis Gonidakis</name>
-    </author>
-    <author>
-      <name>Artur Podobas</name>
-    </author>
-    <arxiv:doi>10.1109/MCSoC67473.2025.00126</arxiv:doi>
-    <link rel="related" href="https://doi.org/10.1109/MCSoC67473.2025.00126" title="doi"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14086v1</id>
-    <title>Effective Feature Learning for 3D Medical Registration via Domain-Specialized DINO Pretraining</title>
-    <updated>2026-03-14T19:14:18Z</updated>
-    <link href="https://arxiv.org/abs/2603.14086v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14086v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Medical image registration is a critical component of clinical imaging workflows, enabling accurate longitudinal assessment, multi-modal data fusion, and image-guided interventions. Intensity-based approaches often struggle with interscanner variability and complex anatomical deformations, whereas feature-based methods offer improved robustness by leveraging semantically informed representations. In this work, we investigate DINO-style self-supervised pretraining directly on 3D medical imaging data, aiming to learn dense volumetric features well suited for deformable registration. We assess the resulting representations on challenging interpatient abdominal registration task across both MRI and CT modalities. Our domain-specialized pretraining outperforms the DINOv2 model trained on a large-scale collection of natural images, while requiring substantially lower computational resources at inference time. Moreover, it surpasses established registration models under out-of-domain evaluation, demonstrating the value of task-agnostic yet medical imaging-focused pretraining for robust and efficient 3D image registration.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T19:14:18Z</published>
-    <arxiv:comment>Accepted for International Symposium on Biomedical Imaging 2026 (ISBI 2026)</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Eytan Kats</name>
-    </author>
-    <author>
-      <name>Mattias P. Heinrich</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.14084v1</id>
-    <title>Bootstrapped Physically-Primed Neural Networks for Robust T2 Distribution Estimation in Low-SNR Pancreatic MRI</title>
-    <updated>2026-03-14T19:10:46Z</updated>
-    <link href="https://arxiv.org/abs/2603.14084v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.14084v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Estimating multi-component T2 relaxation distributions from Multi-Echo Spin Echo (MESE) MRI is a severely ill-posed inverse problem, traditionally solved using regularized non-negative least squares (NNLS). In abdominal imaging, particularly the pancreas, low SNR and residual uncorrelated noise challenge classical solvers and deterministic deep learning models. We introduce a bootstrap-based inference framework for robust distributional T2 estimation that performs stochastic resampling of the echo train and aggregates predictions across multiple subsets. This treats the acquisition as a distribution rather than a fixed input, yielding variance-reduced, physically consistent estimates and converting deterministic relaxometry networks into probabilistic ensemble predictors. Applied to the P2T2 architecture, our method uses inference-time bootstrapping to smooth noise artifacts and enhance fidelity to the underlying relaxation distribution.
-  Noninvasive pancreatic evaluation is limited by location and biopsy risks, highlighting the need for biomarkers capable of capturing early pathophysiological changes. In type 1 diabetes (T1DM), progressive beta-cell destruction begins years before overt hyperglycemia, yet current imaging cannot assess early islet decline.
-  We evaluate clinical utility via a test-retest reproducibility study (N=7) and a T1DM versus healthy differentiation task (N=8). Our approach achieves the lowest Wasserstein distances across repeated scans and superior sensitivity to physiology-driven shifts in the relaxation-time distribution, outperforming NNLS and deterministic deep learning baselines. These results establish inference-time bootstrapping as an effective enhancement for quantitative T2 relaxometry in low-SNR abdominal imaging.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-14T19:10:46Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Hadas Ben Atya</name>
-    </author>
-    <author>
-      <name>Nicole Abramenkov</name>
-    </author>
-    <author>
-      <name>Noa Mashiah</name>
-    </author>
-    <author>
-      <name>Luise Brock</name>
-    </author>
-    <author>
-      <name>Daphna Link Sourani</name>
-    </author>
-    <author>
-      <name>Ram Weiss</name>
-    </author>
-    <author>
-      <name>Moti Freiman</name>
+      <name>Alessandro Cellerino</name>
     </author>
   </entry>
 </feed>
