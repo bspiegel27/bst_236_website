@@ -1,297 +1,304 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-03-22T01:19:14Z -->
+<!-- Last updated: 2026-03-23T01:19:59Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-03-22T01:19:14Z</updated>
+  <updated>2026-03-23T01:20:00Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>137709</opensearch:totalResults>
+  <opensearch:totalResults>137794</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2603.19233v1</id>
-    <title>Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models</title>
-    <updated>2026-03-19T17:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2603.19233v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19233v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recovers near-identical behavior, while cross-task injection steers robots toward source-task positions (99.8\% of X-VLA episodes align with the source trajectory), exposing spatially bound motor programs tied to scene coordinates rather than abstract task representations. Language sensitivity depends on task structure, not model design: when visual context uniquely specifies the task, language is ignored; when multiple goals share a scene, language becomes essential (X-VLA \texttt{libero\_goal}: 94\%$\to$10\% under wrong prompts vs.\ \texttt{libero\_object}: 60--100\% regardless). In all three multi-pathway architectures (\pizhalf{}, SmolVLA, GR00T), expert pathways encode motor programs while VLM pathways encode goal semantics ($2\times$ greater behavioral displacement from expert injection), and subspace injection confirms these occupy separable activation subspaces. Per-token SAE processing is essential for action fidelity on most architectures, though mean-pooling improves fidelity on X-VLA. Contrastive identification recovers 82+ manipulation concepts, and causal ablation reveals sensitivity spanning 28--92\% zero-effect rates independent of representation width. We release \textbf{Action Atlas} (https://action-atlas.com) for interactive exploration of VLA representations across all six models.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:59:55Z</published>
-    <arxiv:comment>Accepted to Multimodal Intelligence Workshop @ ICLR</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Bryce Grant</name>
-    </author>
-    <author>
-      <name>Xijia Zhao</name>
-    </author>
-    <author>
-      <name>Peng Wang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.19231v1</id>
-    <title>MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction</title>
-    <updated>2026-03-19T17:59:52Z</updated>
-    <link href="https://arxiv.org/abs/2603.19231v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19231v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt, a unified framework grounded in progressive structural reasoning. Rather than predicting articulation directly from image features, MonoArt progressively transforms visual observations into canonical geometry, structured part representations, and motion-aware embeddings within a single architecture. This structured reasoning process enables stable and interpretable articulation inference without external motion templates or multi-stage pipelines. Extensive experiments on PartNet-Mobility demonstrate that OM achieves state-of-the-art performance in both reconstruction accuracy and inference speed. The framework further generalizes to robotic manipulation and articulated scene reconstruction.</summary>
+    <id>http://arxiv.org/abs/2603.20045v1</id>
+    <title>Investigating a Policy-Based Formulation for Endoscopic Camera Pose Recovery</title>
+    <updated>2026-03-20T15:30:59Z</updated>
+    <link href="https://arxiv.org/abs/2603.20045v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20045v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In endoscopic surgery, surgeons continuously locate the endoscopic view relative to the anatomy by interpreting the evolving visual appearance of the intraoperative scene in the context of their prior knowledge. Vision-based navigation systems seek to replicate this capability by recovering camera pose directly from endoscopic video, but most approaches do not embody the same principles of reasoning about new frames that makes surgeons successful. Instead, they remain grounded in feature matching and geometric optimization over keyframes, an approach that has been shown to degrade under the challenging conditions of endoscopic imaging like low texture and rapid illumination changes. Here, we pursue an alternative approach and investigate a policy-based formulation of endoscopic camera pose recovery that seeks to imitate experts in estimating trajectories conditioned on the previous camera state. Our approach directly predicts short-horizon relative motions without maintaining an explicit geometric representation at inference time. It thus addresses, by design, some of the notorious challenges of geometry-based approaches, such as brittle correspondence matching, instability in texture-sparse regions, and limited pose coverage due to reconstruction failure. We evaluate the proposed formulation on cadaveric sinus endoscopy. Under oracle state conditioning, we compare short-horizon motion prediction quality to geometric baselines achieving lowest mean translation error and competitive rotational accuracy. We analyze robustness by grouping prediction windows according to texture richness and illumination change indicating reduced sensitivity to low-texture conditions. These findings suggest that a learned motion policy offers a viable alternative formulation for endoscopic camera pose recovery.</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:59:52Z</published>
-    <arxiv:comment>Project page: https://lihaitian.com/MonoArt</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <published>2026-03-20T15:30:59Z</published>
+    <arxiv:primary_category term="eess.IV"/>
     <author>
-      <name>Haitian Li</name>
+      <name>Jan Emily Mangulabnan</name>
     </author>
     <author>
-      <name>Haozhe Xie</name>
+      <name>Akshat Chauhan</name>
     </author>
     <author>
-      <name>Junxiang Xu</name>
+      <name>Laura Fleig</name>
     </author>
     <author>
-      <name>Beichen Wen</name>
+      <name>Lalithkumar Seenivasan</name>
     </author>
     <author>
-      <name>Fangzhou Hong</name>
+      <name>Roger D. Soberanis-Mukul</name>
     </author>
     <author>
-      <name>Ziwei Liu</name>
+      <name>S. Swaroop Vedula</name>
+    </author>
+    <author>
+      <name>Russell H. Taylor</name>
+    </author>
+    <author>
+      <name>Masaru Ishii</name>
+    </author>
+    <author>
+      <name>Gregory D. Hager</name>
+    </author>
+    <author>
+      <name>Mathias Unberath</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.19222v1</id>
-    <title>Spectrally-Guided Diffusion Noise Schedules</title>
-    <updated>2026-03-19T17:59:12Z</updated>
-    <link href="https://arxiv.org/abs/2603.19222v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19222v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral properties. By deriving theoretical bounds on the efficacy of minimum and maximum noise levels, we design ``tight'' noise schedules that eliminate redundant steps. During inference, we propose to conditionally sample such noise schedules. Experiments show that our noise schedules improve generative quality of single-stage pixel diffusion models, particularly in the low-step regime.</summary>
+    <id>http://arxiv.org/abs/2603.20037v1</id>
+    <title>Federated Hyperdimensional Computing for Resource-Constrained Industrial IoT</title>
+    <updated>2026-03-20T15:22:12Z</updated>
+    <link href="https://arxiv.org/abs/2603.20037v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20037v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the Industrial Internet of Things (IIoT) systems, edge devices often operate under strict constraints in memory, compute capability, and wireless bandwidth. These limitations challenge the deployment of advanced data analytics tasks, such as predictive and prescriptive maintenance. In this work, we explore hyperdimensional computing (HDC) as a lightweight learning paradigm for resource-constrained IIoT. Conventional centralized HDC leverages the properties of high-dimensional vector spaces to enable energy-efficient training and inference. We integrate this paradigm into a federated learning (FL) framework where devices exchange only prototype representations, which significantly reduces communication overhead. Our numerical results highlight the potential of federated HDC to support collaborative learning in IIoT with fast convergence speed and communication efficiency. These results indicate that HDC represents a lightweight and resilient framework for distributed intelligence in large-scale and resource-constrained IIoT environments.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T15:22:12Z</published>
+    <arxiv:comment>Submitted to the IEEE for possible publication</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nikita Zeulin</name>
+    </author>
+    <author>
+      <name>Olga Galinina</name>
+    </author>
+    <author>
+      <name>Nageen Himayat</name>
+    </author>
+    <author>
+      <name>Sergey Andreev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.20017v1</id>
+    <title>RouterKGQA: Specialized--General Model Routing for Constraint-Aware Knowledge Graph Question Answering</title>
+    <updated>2026-03-20T15:01:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.20017v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20017v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph question answering (KGQA) is a promising approach for mitigating LLM hallucination by grounding reasoning in structured and verifiable knowledge graphs. Existing approaches fall into two paradigms: retrieval-based methods utilize small specialized models, which are efficient but often produce unreachable paths and miss implicit constraints, while agent-based methods utilize large general models, which achieve stronger structural grounding at substantially higher cost. We propose RouterKGQA, a framework for specialized--general model collaboration, in which a specialized model generates reasoning paths and a general model performs KG-guided repair only when needed, improving performance at minimal cost. We further equip the specialized with constraint-aware answer filtering, which reduces redundant answers. In addition, we design a more efficient general agent workflow, further lowering inference cost. Experimental results show that RouterKGQA outperforms the previous best by 3.57 points in F1 and 0.49 points in Hits@1 on average across benchmarks, while requiring only 1.15 average LLM calls per question. Codes and models are available at https://github.com/Oldcircle/RouterKGQA.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T15:01:57Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Bo Yuan</name>
+    </author>
+    <author>
+      <name>Hexuan Deng</name>
+    </author>
+    <author>
+      <name>Xuebo Liu</name>
+    </author>
+    <author>
+      <name>Min Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.20004v1</id>
+    <title>ReViSQL: Achieving Human-Level Text-to-SQL</title>
+    <updated>2026-03-20T14:49:27Z</updated>
+    <link href="https://arxiv.org/abs/2603.20004v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20004v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Translating natural language to SQL (Text-to-SQL) is a critical challenge in both database research and data analytics applications. Recent efforts have focused on enhancing SQL reasoning by developing large language models and AI agents that decompose Text-to-SQL tasks into manually designed, step-by-step pipelines. However, despite these extensive architectural engineering efforts, a significant gap remains: even state-of-the-art (SOTA) AI agents have not yet achieved the human-level accuracy on the BIRD benchmark. In this paper, we show that closing this gap does not require further architectural complexity, but rather clean training data to improve SQL reasoning of the underlying models.
+  We introduce ReViSQL, a streamlined framework that achieves human-level accuracy on BIRD for the first time. Instead of complex AI agents, ReViSQL leverages reinforcement learning with verifiable rewards (RLVR) on BIRD-Verified, a dataset we curated comprising 2.5k verified Text-to-SQL instances based on the BIRD Train set. To construct BIRD-Verified, we design a data correction and verification workflow involving SQL experts. We identified and corrected data errors in 61.1% of a subset of BIRD Train. By training on BIRD-Verified, we show that improving data quality alone boosts the single-generation accuracy by 8.2-13.9% under the same RLVR algorithm. To further enhance performance, ReViSQL performs inference-time scaling via execution-based reconciliation and majority voting. Empirically, we demonstrate the superiority of our framework with two model scales: ReViSQL-235B-A22B and ReViSQL-30B-A3B. On an expert-verified BIRD Mini-Dev set, ReViSQL-235B-A22B achieves 93.2% execution accuracy, exceeding the proxy human-level accuracy (92.96%) and outperforming the prior open-source SOTA method by 9.8%. Our lightweight ReViSQL-30B-A3B matches the prior SOTA at a 7.5$\times$ lower per-query cost.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T14:49:27Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Yuxuan Zhu</name>
+    </author>
+    <author>
+      <name>Tengjun Jin</name>
+    </author>
+    <author>
+      <name>Yoojin Choi</name>
+    </author>
+    <author>
+      <name>Daniel Kang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.19997v1</id>
+    <title>When Contextual Inference Fails: Cancelability in Interactive Instruction Following</title>
+    <updated>2026-03-20T14:46:59Z</updated>
+    <link href="https://arxiv.org/abs/2603.19997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.19997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the separation of literal interpretation from contextual inference in a collaborative block-building task where a builder must resolve underspecified instructions using contextual inferences. Building on an existing two-speaker psycholinguistic paradigm -- which contrasts a pragmatically cooperative speaker with one who is only literally reliable -- we introduce Build What I Mean (BWIM), an interactive benchmark for contextual meaning construction. In BWIM, models must resolve ambiguity by either performing a contextual inference or requesting clarification at a small communication cost. Evaluating several state-of-the-art LLMs, we find a dissociation between judgment and action: while models detect speaker unreliability in explicit confidence ratings, they fail to exploit this information to guide efficient clarification behavior. Instead, we observe suboptimal strategies, such as partner-blind over-clarification and question-averse guessing under uncertainty.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T14:46:59Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Natalia Bila</name>
+    </author>
+    <author>
+      <name>Kata Naszádi</name>
+    </author>
+    <author>
+      <name>Alexandra Mayn</name>
+    </author>
+    <author>
+      <name>Christof Monz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.19994v1</id>
+    <title>Evaluating Test-Time Adaptation For Facial Expression Recognition Under Natural Cross-Dataset Distribution Shifts</title>
+    <updated>2026-03-20T14:44:25Z</updated>
+    <link href="https://arxiv.org/abs/2603.19994v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.19994v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep learning models often struggle under natural distribution shifts, a common challenge in real-world deployments. Test-Time Adaptation (TTA) addresses this by adapting models during inference without labeled source data. We present the first evaluation of TTA methods for FER under natural domain shifts, performing cross-dataset experiments with widely used FER datasets. This moves beyond synthetic corruptions to examine real-world shifts caused by differing collection protocols, annotation standards, and demographics. Results show TTA can boost FER performance under natural shifts by up to 11.34\%. Entropy minimization methods such as TENT and SAR perform best when the target distribution is clean. In contrast, prototype adjustment methods like T3A excel under larger distributional distance scenarios. Finally, feature alignment methods such as SHOT deliver the largest gains when the target distribution is noisier than our source. Our cross-dataset analysis shows that TTA effectiveness is governed by the distributional distance and the severity of the natural shift across domains.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:59:12Z</published>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T14:44:25Z</published>
+    <arxiv:comment>Accepted at ICASSP 2026</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Carlos Esteves</name>
+      <name>John Turnbull</name>
     </author>
     <author>
-      <name>Ameesh Makadia</name>
+      <name>Shivam Grover</name>
+    </author>
+    <author>
+      <name>Amin Jalali</name>
+    </author>
+    <author>
+      <name>Ali Etemad</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.19213v1</id>
-    <title>Constitutive vs. Corrective: A Causal Taxonomy of Human Runtime Involvement in AI Systems</title>
-    <updated>2026-03-19T17:57:07Z</updated>
-    <link href="https://arxiv.org/abs/2603.19213v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19213v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>As AI systems increasingly permeate high-stakes decision-making, the terminology regarding human involvement - Human-in-the-Loop (HITL), Human-on-the-Loop (HOTL), and Human Oversight - has become vexingly ambiguous. This ambiguity complicates interdisciplinary collaboration between computer science, law, philosophy, psychology, and sociology and can lead to regulatory uncertainty. We propose a clarification grounded in causal structure, focused on human involvement during the runtime of AI systems. The distinction between HITL and HOTL, we argue, is not primarily spatial but causal: HITL is constitutive (a human contribution is necessary for the decision output), while HOTL is corrective (external to the primary causal chain, capable of preventing or modifying outputs). Within HOTL, we distinguish three temporal modes - synchronous, asynchronous, and anticipatory - situated within a nested model of provider and deployer runtime that clarifies their different capacities for intervention. A second, orthogonal dimension captures cognitive integration: whether human and machine operate as complementary or hybrid intelligence, yielding four structurally distinct configurations. Finally, we distinguish these descriptive categories from the normative requirements they serve: statutory "Human Oversight" is a specific normative mode of HOTL that demands not merely a corrective causal position, but genuine preparedness and capacity for effective intervention. Because the same person may occupy both HITL and HOTL roles simultaneously, we argue that this role duality must be treated as a design problem requiring architectural and epistemic mitigation rather than mere acknowledgment.</summary>
-    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:57:07Z</published>
-    <arxiv:primary_category term="cs.CY"/>
+    <id>http://arxiv.org/abs/2603.19964v1</id>
+    <title>2K Retrofit: Entropy-Guided Efficient Sparse Refinement for High-Resolution 3D Geometry Prediction</title>
+    <updated>2026-03-20T14:05:44Z</updated>
+    <link href="https://arxiv.org/abs/2603.19964v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.19964v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-resolution geometric prediction is essential for robust perception in autonomous driving, robotics, and AR/MR, but current foundation models are fundamentally limited by their scalability to real-world, high-resolution scenarios. Direct inference on 2K images with these models incurs prohibitive computational and memory demands, making practical deployment challenging. To tackle the issue, we present 2K Retrofit, a novel framework that enables efficient 2K-resolution inference for any geometric foundation model, without modifying or retraining the backbone. Our approach leverages fast coarse predictions and an entropy-based sparse refinement to selectively enhance high-uncertainty regions, achieving precise and high-fidelity 2K outputs with minimal overhead. Extensive experiments on widely used benchmark demonstrate that 2K Retrofit consistently achieves state-of-the-art accuracy and speed, bridging the gap between research advances and scalable deployment in high-resolution 3D vision applications. Code will be released upon acceptance.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T14:05:44Z</published>
+    <arxiv:comment>15pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Kevin Baum</name>
+      <name>Tianbao Zhang</name>
     </author>
     <author>
-      <name>Johann Laux</name>
+      <name>Zhenyu Liang</name>
+    </author>
+    <author>
+      <name>Zhenbo Song</name>
+    </author>
+    <author>
+      <name>Nana Wang</name>
+    </author>
+    <author>
+      <name>Xiaomei Zhang</name>
+    </author>
+    <author>
+      <name>Xudong Cai</name>
+    </author>
+    <author>
+      <name>Zheng Zhu</name>
+    </author>
+    <author>
+      <name>Kejian Wu</name>
+    </author>
+    <author>
+      <name>Gang Wang</name>
+    </author>
+    <author>
+      <name>Zhaoxin Fan</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.19211v1</id>
-    <title>Synthetic Control Misconceptions: Recommendations for Practice</title>
-    <updated>2026-03-19T17:56:42Z</updated>
-    <link href="https://arxiv.org/abs/2603.19211v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19211v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>To estimate the causal effect of an intervention, researchers need to identify a control group that represents what might have happened to the treatment group in the absence of that intervention. This is challenging without a randomized experiment and further complicated when few units (possibly only one) are treated. Nevertheless, when data are available on units over time, synthetic control (SC) methods provide an opportunity to construct a valid comparison by differentially weighting control units that did not receive the treatment so that their resulting pre-treatment trajectory is similar to that of the treated unit. The hope is that this weighted ``pseudo-counterfactual" can serve as a valid counterfactual in the post-treatment time period. Since its origin twenty years ago, SC has been used over 5,000 times in the literature (Web of Science, December 2025), leading to a proliferation of descriptions of the method and guidance on proper usage that is not always accurate and does not always align with what the original developers appear to have intended. As such, a number of accepted pieces of wisdom have arisen: (1) SC is robust to various implementations; (2) covariates are unnecessary, and (3) pre-treatment prediction error should guide model selection. We describe each in detail and conduct simulations that suggest, both for standard and alternative implementations of SC, that these purported truths are not supported by empirical evidence and thus actually represent misconceptions about best practice. Instead of relying on these misconceptions, we offer practical advice for more cautious implementation and interpretation of results.</summary>
+    <id>http://arxiv.org/abs/2603.19945v1</id>
+    <title>Cancer Survival Rates Are Misleading</title>
+    <updated>2026-03-20T13:48:48Z</updated>
+    <link href="https://arxiv.org/abs/2603.19945v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.19945v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Five-year cancer survival rates are widely reported and often interpreted to mean that early detection saves lives, that a late fatal diagnosis would have been prevented by earlier detection, and that increasing survival over time proves better treatment. This expository article explains why such inferences are not supported by survival statistics alone. A simple Markov model of tumor progression, calibrated to patterns like those in SEER data, shows that high survival after early diagnosis, large gaps between early and late stage, and improving survival can all appear even when treatment is ineffective and screening does not reduce mortality. The discussion ties these points to the clinical literature and argues that randomized trials and mortality outcomes are needed to support screening and treatment claims; five-year survival alone provides little actionable evidence and is easily misread.</summary>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:56:42Z</published>
+    <published>2026-03-20T13:48:48Z</published>
+    <arxiv:comment>10 pages, 1 PDF figure. Companion analysis notebook: https://colab.research.google.com/github/AllenDowney/ThinkBayes2/blob/master/examples/cancer.ipynb</arxiv:comment>
     <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Robert Pickett</name>
-    </author>
-    <author>
-      <name>Jennifer Hill</name>
-    </author>
-    <author>
-      <name>Sarah Cowan</name>
+      <name>Allen B. Downey</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.19201v1</id>
-    <title>OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation</title>
-    <updated>2026-03-19T17:52:42Z</updated>
-    <link href="https://arxiv.org/abs/2603.19201v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19201v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Contact-rich manipulation tasks, such as wiping and assembly, require accurate perception of contact forces, friction changes, and state transitions that cannot be reliably inferred from vision alone. Despite growing interest in visuo-tactile manipulation, progress is constrained by two persistent limitations: existing datasets are small in scale and narrow in task coverage, and current methods treat tactile signals as passive observations rather than using them to model contact dynamics or enable closed-loop control explicitly. In this paper, we present \textbf{OmniViTac}, a large-scale visuo-tactile-action dataset comprising $21{,}000+$ trajectories across $86$ tasks and $100+$ objects, organized into six physics-grounded interaction patterns. Building on this dataset, we propose \textbf{OmniVTA}, a world-model-based visuo-tactile manipulation framework that integrates four tightly coupled modules: a self-supervised tactile encoder, a two-stream visuo-tactile world model for predicting short-horizon contact evolution, a contact-aware fusion policy for action generation, and a 60Hz reflexive controller that corrects deviations between predicted and observed tactile signals in a closed loop. Real-robot experiments across all six interaction categories show that OmniVTA outperforms existing methods and generalizes well to unseen objects and geometric configurations, confirming the value of combining predictive contact modeling with high-frequency tactile feedback for contact-rich manipulation. All data, models, and code will be made publicly available on the project website at https://mrsecant.github.io/OmniVTA.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:52:42Z</published>
-    <arxiv:comment>TARS Robotics Project Page: https://mrsecant.github.io/OmniVTA</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Yuhang Zheng</name>
-    </author>
-    <author>
-      <name>Songen Gu</name>
-    </author>
-    <author>
-      <name>Weize Li</name>
-    </author>
-    <author>
-      <name>Yupeng Zheng</name>
-    </author>
-    <author>
-      <name>Yujie Zang</name>
-    </author>
-    <author>
-      <name>Shuai Tian</name>
-    </author>
-    <author>
-      <name>Xiang Li</name>
-    </author>
-    <author>
-      <name>Ruihai Wu</name>
-    </author>
-    <author>
-      <name>Ce Hao</name>
-    </author>
-    <author>
-      <name>Chen Gao</name>
-    </author>
-    <author>
-      <name>Si Liu</name>
-    </author>
-    <author>
-      <name>Haoran Li</name>
-    </author>
-    <author>
-      <name>Yilun Chen</name>
-    </author>
-    <author>
-      <name>Shuicheng Yan</name>
-    </author>
-    <author>
-      <name>Wenchao Ding</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.19199v1</id>
-    <title>FASTER: Rethinking Real-Time Flow VLAs</title>
-    <updated>2026-03-19T17:51:37Z</updated>
-    <link href="https://arxiv.org/abs/2603.19199v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19199v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Real-time execution is crucial for deploying Vision-Language-Action (VLA) models in the physical world. Existing asynchronous inference methods primarily optimize trajectory smoothness, but neglect the critical latency in reacting to environmental changes. By rethinking the notion of reaction in action chunking policies, this paper presents a systematic analysis of the factors governing reaction time. We show that reaction time follows a uniform distribution determined jointly by the Time to First Action (TTFA) and the execution horizon. Moreover, we reveal that the standard practice of applying a constant schedule in flow-based VLAs can be inefficient and forces the system to complete all sampling steps before any movement can start, forming the bottleneck in reaction latency. To overcome this issue, we propose Fast Action Sampling for ImmediaTE Reaction (FASTER). By introducing a Horizon-Aware Schedule, FASTER adaptively prioritizes near-term actions during flow sampling, compressing the denoising of the immediate reaction by tenfold (e.g., in $π_{0.5}$ and X-VLA) into a single step, while preserving the quality of long-horizon trajectory. Coupled with a streaming client-server pipeline, FASTER substantially reduces the effective reaction latency on real robots, especially when deployed on consumer-grade GPUs. Real-world experiments, including a highly dynamic table tennis task, prove that FASTER unlocks unprecedented real-time responsiveness for generalist policies, enabling rapid generation of accurate and smooth trajectories.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.19939v1</id>
+    <title>Timestep-Aware Block Masking for Efficient Diffusion Model Inference</title>
+    <updated>2026-03-20T13:35:03Z</updated>
+    <link href="https://arxiv.org/abs/2603.19939v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.19939v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion Probabilistic Models (DPMs) have achieved great success in image generation but suffer from high inference latency due to their iterative denoising nature. Motivated by the evolving feature dynamics across the denoising trajectory, we propose a novel framework to optimize the computational graph of pre-trained DPMs on a per-timestep basis. By learning timestep-specific masks, our method dynamically determines which blocks to execute or bypass through feature reuse at each inference stage. Unlike global optimization methods that incur prohibitive memory costs via full-chain backpropagation, our method optimizes masks for each timestep independently, ensuring a memory-efficient training process. To guide this process, we introduce a timestep-aware loss scaling mechanism that prioritizes feature fidelity during sensitive denoising phases, complemented by a knowledge-guided mask rectification strategy to prune redundant spatial-temporal dependencies. Our approach is architecture-agnostic and demonstrates significant efficiency gains across a broad spectrum of models, including DDPM, LDM, DiT, and PixArt. Experimental results show that by treating the denoising process as a sequence of optimized computational paths, our method achieves a superior balance between sampling speed and generative quality. Our code will be released.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:51:37Z</published>
-    <arxiv:comment>Project page: https://innovator-zero.github.io/FASTER</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
+    <published>2026-03-20T13:35:03Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yuxiang Lu</name>
+      <name>Haodong He</name>
     </author>
     <author>
-      <name>Zhe Liu</name>
+      <name>Yuan Gao</name>
     </author>
     <author>
-      <name>Xianzhe Fan</name>
+      <name>Weizhong Zhang</name>
     </author>
     <author>
-      <name>Zhenya Yang</name>
-    </author>
-    <author>
-      <name>Jinghua Hou</name>
-    </author>
-    <author>
-      <name>Junyi Li</name>
-    </author>
-    <author>
-      <name>Kaixin Ding</name>
-    </author>
-    <author>
-      <name>Hengshuang Zhao</name>
+      <name>Gui-Song Xia</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.19186v1</id>
-    <title>Improving RCT-Based Treatment Effect Estimation Under Covariate Mismatch via Calibrated Alignment</title>
-    <updated>2026-03-19T17:43:12Z</updated>
-    <link href="https://arxiv.org/abs/2603.19186v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19186v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Randomized controlled trials (RCTs) are the gold standard for estimating heterogeneous treatment effects, yet they are often underpowered for detecting effect heterogeneity. Large observational studies (OS) can supplement RCTs for conditional average treatment effect (CATE) estimation, but a key barrier is covariate mismatch: the two sources measure different, only partially overlapping, covariates. We propose CALM (Calibrated ALignment under covariate Mismatch), which bypasses imputation by learning embeddings that map each source's features into a common representation space. OS outcome models are transferred to the RCT embedding space and calibrated using trial data, preserving causal identification from randomization. Finite-sample risk bounds decompose into alignment error, outcome-model complexity, and calibration complexity terms, identifying when embedding alignment outperforms imputation. Under the calibration-based linear variant, the framework provides protection against negative transfer; the neural variant can be vulnerable under severe distributional shift. Under sparse linear models, the embedding approach strictly generalizes imputation. Simulations across 51 settings confirm that (i) calibration-based methods are equivalent for linear CATEs, and (ii) the neural embedding variant wins all 22 nonlinear-regime settings with large margins.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:43:12Z</published>
-    <arxiv:primary_category term="cs.LG"/>
+    <id>http://arxiv.org/abs/2603.19933v1</id>
+    <title>A decade of airborne electromagnetic surveying Lake Menindee (Australia) under varying water levels</title>
+    <updated>2026-03-20T13:21:09Z</updated>
+    <link href="https://arxiv.org/abs/2603.19933v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.19933v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Time domain airborne electromagnetic (AEM) surveying is a mature geophysical tool for imaging the Earth's shallow subsurface. It produces images of the electromagnetic conductivity structure of the earth, down to depths of a few hundred metres. The AEM method is fast, with aircraft acquiring data at speeds of 100-300 km/hr, making it an ideal near-surface reconnaissance tool. The physics of the AEM method are sensitive primarily to the subsurface conductivity, which is influenced by a range of geological factors such as mineral content, porosity, and water content and chemistry. In addition, the inferred subsurface conductivity depends on the accurate measurement and modelling of airborne transmitter and receiver geometries. In this work, we present inferences of the subsurface conductivity over Lake Menindee, New South Wales, Australia, using data from various AEM systems over the period 2014-2024. The lake storage has varied dramatically over this time and while this difference in storage volume undoubtedly influences the near surface conductivity, a remarkably consistent interpretation of the regional geology emerges. While the upper ten metres of the modelled depth sections exhibit the greatest time-variability in inferred electromagnetic conductivity, a correlation of lakebed near-surface conductivity with the lake water volume cannot robustly be established. We also provide information theoretic calculations for each inversion result to aid in their quantitative comparison. The implications of our study are that subtle, shallow, hydrogeological changes are difficult to image with repeat overflights. Conversely, we establish that different AEM systems robustly image the regional geo-electric structure of the near surface, validated by known stratigraphy and borehole conductivity logs.</summary>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T13:21:09Z</published>
+    <arxiv:primary_category term="physics.geo-ph"/>
     <author>
-      <name>Amir Asiaee</name>
+      <name>Anandaroop Ray</name>
     </author>
     <author>
-      <name>Samhita Pal</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.19185v1</id>
-    <title>MIDST Challenge at SaTML 2025: Membership Inference over Diffusion-models-based Synthetic Tabular data</title>
-    <updated>2026-03-19T17:42:46Z</updated>
-    <link href="https://arxiv.org/abs/2603.19185v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19185v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Synthetic data is often perceived as a silver-bullet solution to data anonymization and privacy-preserving data publishing. Drawn from generative models like diffusion models, synthetic data is expected to preserve the statistical properties of the original dataset while remaining resilient to privacy attacks. Recent developments of diffusion models have been effective on a wide range of data types, but their privacy resilience, particularly for tabular formats, remains largely unexplored. MIDST challenge sought a quantitative evaluation of the privacy gain of synthetic tabular data generated by diffusion models, with a specific focus on its resistance to membership inference attacks (MIAs). Given the heterogeneity and complexity of tabular data, multiple target models were explored for MIAs, including diffusion models for single tables of mixed data types and multi-relational tables with interconnected constraints. MIDST inspired the development of novel black-box and white-box MIAs tailored to these target diffusion models as a key outcome, enabling a comprehensive evaluation of their privacy efficacy. The MIDST GitHub repository is available at https://github.com/VectorInstitute/MIDST</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:42:46Z</published>
-    <arxiv:comment>4 page, 1 table</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Masoumeh Shafieinejad</name>
+      <name>Andrew McPherson</name>
     </author>
     <author>
-      <name>Xi He</name>
+      <name>Ross C. Brodie</name>
     </author>
     <author>
-      <name>Mahshid Alinoori</name>
+      <name>Alan Yusen Ley-Cooper</name>
     </author>
     <author>
-      <name>John Jewell</name>
+      <name>Kok Piang Tan</name>
     </author>
     <author>
-      <name>Sana Ayromlou</name>
+      <name>Michael Hatch</name>
     </author>
     <author>
-      <name>Wei Pang</name>
+      <name>Ravin N. Deo</name>
     </author>
     <author>
-      <name>Veronica Chatrath</name>
+      <name>Sebastian Wong</name>
     </author>
     <author>
-      <name>Garui Sharma</name>
+      <name>Francesco Dauti</name>
     </author>
     <author>
-      <name>Deval Pandya</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.19183v1</id>
-    <title>Sparse Autoencoders Reveal Interpretable and Steerable Features in VLA Models</title>
-    <updated>2026-03-19T17:42:05Z</updated>
-    <link href="https://arxiv.org/abs/2603.19183v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.19183v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action (VLA) models have emerged as a promising approach for general-purpose robot manipulation. However, their generalization is inconsistent: while these models can perform impressively in some settings, fine-tuned variants often fail on novel objects, scenes, and instructions. We apply mechanistic interpretability techniques to better understand the inner workings of VLA models. To probe internal representations, we train Sparse Autoencoders (SAEs) on hidden layer activations of the VLA. SAEs learn a sparse dictionary whose features act as a compact, interpretable basis for the model's computation. We find that the large majority of extracted SAE features correspond to memorized sequences from specific training demonstrations. However, some features correspond to interpretable, general, and steerable motion primitives and semantic properties, offering a promising glimpse toward VLA generalizability. We propose a metric to categorize features according to whether they represent generalizable transferable primitives or episode-specific memorization. We validate these findings through steering experiments on the LIBERO benchmark. We show that individual SAE features causally influence robot behavior. Steering general features induces behaviors consistent with their semantic meaning and can be applied across tasks and scenes. This work provides the first mechanistic evidence that VLAs can learn generalizable features across tasks and scenes. We observe that supervised fine-tuning on small robotics datasets disproportionately amplifies memorization. In contrast, training on larger, more diverse datasets (e.g., DROID) or using knowledge insulation promotes more general features. We provide an open-source codebase and user-friendly interface for activation collection, SAE training, and feature steering. Our project page is located at http://drvla.github.io</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-19T17:42:05Z</published>
-    <arxiv:comment>25 pages, 12 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Aiden Swann</name>
+      <name>Wayne Cook</name>
     </author>
     <author>
-      <name>Lachlain McGranahan</name>
-    </author>
-    <author>
-      <name>Hugo Buurmeijer</name>
-    </author>
-    <author>
-      <name>Monroe Kennedy</name>
-    </author>
-    <author>
-      <name>Mac Schwager</name>
+      <name>Tim Scarr</name>
     </author>
   </entry>
 </feed>
