@@ -1,330 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-03-24T01:13:20Z -->
+<!-- Last updated: 2026-03-25T01:18:07Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-03-24T01:13:21Z</updated>
+  <updated>2026-03-25T01:18:07Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>137947</opensearch:totalResults>
+  <opensearch:totalResults>138208</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2603.21105v1</id>
-    <title>ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models</title>
-    <updated>2026-03-22T07:44:45Z</updated>
-    <link href="https://arxiv.org/abs/2603.21105v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21105v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Vision-Language Models (LVLMs) rely on dense visual tokens to capture fine-grained visual information, but processing all these tokens incurs substantial computational and memory overhead during inference. To address this issue, we propose ResPrune, a training-free visual token pruning framework that enables efficient LVLM inference by selecting a compact yet informative subset of visual tokens. ResPrune formulates visual token pruning as a subspace reconstruction problem and employs a greedy subspace expansion strategy guided by residual energy, allowing it to preserve the geometric structure of the original visual token space. To further incorporate cross modal alignment, the selection process is conditioned on textual relevance, encouraging the retention of tokens that are both informative and instruction-relevant. The proposed method is lightweight and model-agnostic, and can be seamlessly integrated into existing LVLM pipelines without retraining or architectural modifications. Extensive experiments on multiple LVLM backbones, including LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL, demonstrate that ResPrune consistently outperforms existing pruning approaches across a wide range of benchmarks, while achieving effective reductions in computation, memory consumption, and inference latency.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T07:44:45Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Xu Li</name>
-    </author>
-    <author>
-      <name>Yi Zheng</name>
-    </author>
-    <author>
-      <name>Yuxuan Liang</name>
-    </author>
-    <author>
-      <name>Zhe Liu</name>
-    </author>
-    <author>
-      <name>Xiaolei Chen</name>
-    </author>
-    <author>
-      <name>Haotian Chen</name>
-    </author>
-    <author>
-      <name>Rui Zhu</name>
-    </author>
-    <author>
-      <name>Xiangyang Xue</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21104v1</id>
-    <title>CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation</title>
-    <updated>2026-03-22T07:44:16Z</updated>
-    <link href="https://arxiv.org/abs/2603.21104v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21104v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Generating safety-critical driving scenarios requires understanding why dangerous interactions arise, rather than merely forcing collisions. However, existing methods rely on heuristic adversarial agent selection and unstructured perturbations, lacking explicit modeling of interaction dependencies and thus exhibiting a realism--adversarial trade-off. We present CounterScene, a framework that endows closed-loop generative BEV world models with structured counterfactual reasoning for safety-critical scenario generation. Given a safe scene, CounterScene asks: what if the causally critical agent had behaved differently? To answer this, we introduce causal adversarial agent identification to identify the critical agent and classify conflict types, and develop a conflict-aware interactive world model in which a causal interaction graph is used to explicitly model dynamic inter-agent dependencies. Building on this structure, stage-adaptive counterfactual guidance performs minimal interventions on the identified agent, removing its spatial and temporal safety margins while allowing risk to emerge through natural interaction propagation. Extensive experiments on nuScenes demonstrate that CounterScene achieves the strongest adversarial effectiveness while maintaining superior trajectory realism across all horizons, improving long-horizon collision rate from 12.3% to 22.7% over the strongest baseline with better realism (ADE 1.88 vs.2.09). Notably, this advantage further widens over longer rollouts, and CounterScene generalizes zero-shot to nuPlan with state-of-the-art realism.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.23179v1</id>
+    <title>Gimbal360: Differentiable Auto-Leveling for Canonicalized $360^\circ$ Panoramic Image Completion</title>
+    <updated>2026-03-24T13:27:49Z</updated>
+    <link href="https://arxiv.org/abs/2603.23179v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23179v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models excel at 2D outpainting, but extending them to $360^\circ$ panoramic completion from unposed perspective images is challenging due to the geometric and topological mismatch between perspective projections and spherical panoramas. We present Gimbal360, a principled framework that explicitly bridges perspective observations and spherical panoramas. We introduce a Canonical Viewing Space that regularizes projective geometry and provides a consistent intermediate representation between the two domains. To anchor in-the-wild inputs to this space, we propose a Differentiable Auto-Leveling module that stabilizes feature orientation without requiring camera parameters at inference. Panoramic generation also introduces a topological challenge. Standard generative architectures assume a bounded Euclidean image plane, while Equirectangular Projection (ERP) panoramas exhibit intrinsic $S^1$ periodicity. Euclidean operations therefore break boundary continuity. We address this mismatch by enforcing topological equivariance in the latent space to preserve seamless periodic structure. To support this formulation, we introduce Horizon360, a curated large-scale dataset of gravity-aligned panoramic environments. Extensive experiments show that explicitly standardizing geometric and topological priors enables Gimbal360 to achieve state-of-the-art performance in structurally consistent $360^\circ$ scene completion.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T07:44:16Z</published>
-    <arxiv:comment>28 pages, 7 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Bowen Jing</name>
-    </author>
-    <author>
-      <name>Ruiyang Hao</name>
-    </author>
-    <author>
-      <name>Weitao Zhou</name>
-    </author>
-    <author>
-      <name>Haibao Yu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21103v1</id>
-    <title>On the origin of the strong internal magnetic fields of central compact objects</title>
-    <updated>2026-03-22T07:36:58Z</updated>
-    <link href="https://arxiv.org/abs/2603.21103v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21103v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Central compact objects are radio-quite young neutron stars associated with supernova remnants. They have relatively small dipole fields, $B_{\rm p} \sim 10^{10}\,{\rm G}$ as inferred from their spin parameters. X-ray observations and theoretical arguments imply the presence of stronger internal magnetic fields. We argue that the dipole fields of these objects are very close to what they had inherited from the \textit{core} of the progenitor by flux conservation and their small initial rotation frequency does not allow for the $α$-process to enhance their poloidal fields. Although a full-fledged dynamo process can not proceed, relatively strong toroidal magnetic fields, $B_φ\sim 10^{13}\,{\rm G}$, can be generated from the seed poloidal fields via the $Ω$-effect in the proto-neutron star stage. We present a simplistic model for these processes and further speculate that the reason why these objects are born relatively slow-rotating is that they were not spun-up by acquiring angular momentum from the fallback matter.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T07:36:58Z</published>
-    <arxiv:comment>MNRAS submitted, 8 pages, 3 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
-    <author>
-      <name>Kazım Yavuz Ekşi</name>
-    </author>
-    <author>
-      <name>İrem Bakır</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21102v1</id>
-    <title>Evidential Quantum Vertical Federated Learning</title>
-    <updated>2026-03-22T07:36:21Z</updated>
-    <link href="https://arxiv.org/abs/2603.21102v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21102v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Quantum federated learning (QFL) has recently emerged as a promising paradigm for privacy-preserving collaborative learning, yet most existing studies focus on horizontal federated learning and ignore the vertical federated learning (VFL), where parties hold complementary features of aligned samples. In this work, we propose Evidential Quantum Vertical Federated Learning (eviQVFL), a VFL-tailored QFL framework that employs a hybrid classical-quantum architecture for party-side feature processing, mapping local features into a quantum state. To preserve privacy and avoid information loss, party-side output states are directly transmitted to the server via quantum teleportation, and the server fuses the received quantum states with a non-parametric evidential fusion circuit grounded in evidence theory, followed by measurement-based inference. Extensive simulations on image classification and other real-world datasets demonstrate that eviQVFL consistently achieves higher classification accuracy than other classical and quantum baselines under comparable parameter budgets. Both empirical observations and theoretical analysis indicate that eviQVFL achieve less approximation error with limited quantum resources, while maintaining training stability and offering stronger feature privacy.</summary>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T07:36:21Z</published>
-    <arxiv:primary_category term="quant-ph"/>
-    <author>
-      <name>Hao Luo</name>
-    </author>
-    <author>
-      <name>Zhiyuan Zhai</name>
-    </author>
-    <author>
-      <name>Qianli Zhou</name>
-    </author>
-    <author>
-      <name>Jun Qi</name>
-    </author>
-    <author>
-      <name>Yong Deng</name>
-    </author>
-    <author>
-      <name>Xin Wang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21090v1</id>
-    <title>StreamTGN: A GPU-Efficient Serving System for Streaming Temporal Graph Neural Networks</title>
-    <updated>2026-03-22T07:04:35Z</updated>
-    <link href="https://arxiv.org/abs/2603.21090v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21090v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Temporal Graph Neural Networks (TGNs) achieve state-of-the-art performance on dynamic graph tasks, yet existing systems focus exclusively on accelerating training -- at inference time, every new edge triggers $O(|V|)$ embedding updates even though only a small fraction of nodes are affected. We present \textbf{StreamTGN}, the first streaming TGN inference system exploiting the inherent locality of temporal graph updates: in an $L$-layer TGN, a new edge affects only nodes within $L$ hops of the endpoints, typically less than 0.2\% on million-node graphs. StreamTGN maintains persistent GPU-resident node memory and uses dirty-flag propagation to identify the affected set $\mathcal{A}$, reducing per-batch complexity from $O(|V|)$ to $O(|\mathcal{A}|)$ with zero accuracy loss. Drift-aware adaptive rebuild scheduling and batched streaming with relaxed ordering further maximize throughput. Experiments on eight temporal graphs (2K--2.6M nodes) show 4.5$\times$--739$\times$ speedup for TGN and up to 4,207$\times$ for TGAT, with identical accuracy. StreamTGN is orthogonal to training optimizations: combining SWIFT with StreamTGN yields 24$\times$ end-to-end speedup across three architectures (TGN, TGAT, DySAT).</summary>
-    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T07:04:35Z</published>
-    <arxiv:primary_category term="cs.DB"/>
-    <author>
-      <name>Lingling Zhang</name>
-    </author>
-    <author>
-      <name>Pengpeng Qiao</name>
-    </author>
-    <author>
-      <name>Zhiwei Zhang</name>
-    </author>
-    <author>
-      <name>Ye Yuan</name>
-    </author>
-    <author>
-      <name>Guoren Wang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21084v1</id>
-    <title>ViCLSR: A Supervised Contrastive Learning Framework with Natural Language Inference for Natural Language Understanding Tasks</title>
-    <updated>2026-03-22T06:46:26Z</updated>
-    <link href="https://arxiv.org/abs/2603.21084v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21084v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>High-quality text representations are crucial for natural language understanding (NLU), but low-resource languages like Vietnamese face challenges due to limited annotated data. While pre-trained models like PhoBERT and CafeBERT perform well, their effectiveness is constrained by data scarcity. Contrastive learning (CL) has recently emerged as a promising approach for improving sentence representations, enabling models to effectively distinguish between semantically similar and dissimilar sentences. We propose ViCLSR (Vietnamese Contrastive Learning for Sentence Representations), a novel supervised contrastive learning framework specifically designed to optimize sentence embeddings for Vietnamese, leveraging existing natural language inference (NLI) datasets. Additionally, we propose a process to adapt existing Vietnamese datasets for supervised learning, ensuring compatibility with CL methods. Our experiments demonstrate that ViCLSR significantly outperforms the powerful monolingual pre-trained model PhoBERT on five benchmark NLU datasets such as ViNLI (+6.97% F1), ViWikiFC (+4.97% F1), ViFactCheck (+9.02% F1), UIT-ViCTSD (+5.36% F1), and ViMMRC2.0 (+4.33% Accuracy). ViCLSR shows that supervised contrastive learning can effectively address resource limitations in Vietnamese NLU tasks and improve sentence representation learning for low-resource languages. Furthermore, we conduct an in-depth analysis of the experimental results to uncover the factors contributing to the superior performance of contrastive learning models. ViCLSR is released for research purposes in advancing natural language processing tasks.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T06:46:26Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Tin Van Huynh</name>
-    </author>
-    <author>
-      <name>Kiet Van Nguyen</name>
-    </author>
-    <author>
-      <name>Ngan Luu-Thuy Nguyen</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21075v1</id>
-    <title>Neural Inference Functions for Margins for Time Series Copula Models</title>
-    <updated>2026-03-22T06:01:49Z</updated>
-    <link href="https://arxiv.org/abs/2603.21075v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21075v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Copula models are widely employed in multivariate time series analysis because they permit flexible modelling of marginal distributions independently of the dependence structure, which is fully characterised by the copula function. However, Bayesian inference with these models becomes computationally demanding as the number of variables in the time series increases. Motivated by the classical inference functions for margins (IFM) approach, we propose a new neural-network based inference framework for estimating parameters in copula models, termed the neural inference functions for margins (N-IFM). N-IFM enables rapid parameter estimation for new data, fast sequential prediction, and efficient model comparison via time-series validation. We assess the performance of N-IFM using both simulated and real datasets and compare it to Hamiltonian Monte Carlo, demonstrating substantial computational gains with comparable inferential accuracy.</summary>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T06:01:49Z</published>
-    <arxiv:comment>83 pages, 25 figures</arxiv:comment>
-    <arxiv:primary_category term="stat.CO"/>
-    <author>
-      <name>Daniel Fynn</name>
-    </author>
-    <author>
-      <name>David Gunawan</name>
-    </author>
-    <author>
-      <name>Andrew Zammit-Mangion</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.21069v1</id>
-    <title>NoOVD: Novel Category Discovery and Embedding for Open-Vocabulary Object Detection</title>
-    <updated>2026-03-22T05:49:37Z</updated>
-    <link href="https://arxiv.org/abs/2603.21069v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21069v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Despite the remarkable progress in open-vocabulary object detection (OVD), a significant gap remains between the training and testing phases. During training, the RPN and RoI heads often misclassify unlabeled novel-category objects as background, causing some proposals to be prematurely filtered out by the RPN while others are further misclassified by the RoI head. During testing, these proposals again receive low scores and are removed in post-processing, leading to a significant drop in recall and ultimately weakening novel-category detection performance.To address these issues, we propose a novel training framework-NoOVD-which innovatively integrates a self-distillation mechanism grounded in the knowledge of frozen vision-language models (VLMs). Specifically, we design K-FPN, which leverages the pretrained knowledge of VLMs to guide the model in discovering novel-category objects and facilitates knowledge distillation-without requiring additional data-thus preventing forced alignment of novel objects with background.Additionally, we introduce R-RPN, which adjusts the confidence scores of proposals during inference to improve the recall of novel-category objects. Cross-dataset evaluations on OV-LVIS, OV-COCO, and Objects365 demonstrate that our approach consistently achieves superior performance across multiple metrics.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T05:49:37Z</published>
-    <arxiv:comment>CVPR 2026 Accept</arxiv:comment>
+    <published>2026-03-24T13:27:49Z</published>
+    <arxiv:comment>Project page: https://orange-3dv-team.github.io/Gimbal360</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yupeng Zhang</name>
+      <name>Yuqin Lu</name>
     </author>
     <author>
-      <name>Ruize Han</name>
+      <name>Haofeng Liu</name>
     </author>
     <author>
-      <name>Zhiwei Chen</name>
+      <name>Yang Zhou</name>
     </author>
     <author>
-      <name>Wei Feng</name>
+      <name>Jun Liang</name>
     </author>
     <author>
-      <name>Liang Wan</name>
+      <name>Shengfeng He</name>
+    </author>
+    <author>
+      <name>Jing Li</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.21065v1</id>
-    <title>LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning</title>
-    <updated>2026-03-22T05:16:09Z</updated>
-    <link href="https://arxiv.org/abs/2603.21065v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21065v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We introduce LongCat-Flash-Prover, a flagship 560-billion-parameter open-source Mixture-of- Experts (MoE) model that advances Native Formal Reasoning in Lean4 through agentic tool-integrated reasoning (TIR). We decompose the native formal reasoning task into three independent formal capabilities, i.e., auto-formalization, sketching, and proving. To facilitate these capabilities, we propose a Hybrid-Experts Iteration Framework to expand high-quality task trajectories, including generating a formal statement based on a given informal problem, producing a whole-proof directly from the statement, or a lemma-style sketch. During agentic RL, we present a Hierarchical Importance Sampling Policy Optimization (HisPO) algorithm, which aims to stabilize the MoE model training on such long-horizon tasks. It employs a gradient masking strategy that accounts for the policy staleness and the inherent train-inference engine discrepancies at both sequence and token levels. Additionally, we also incorporate theorem consistency and legality detection mechanisms to eliminate reward hacking issues. Extensive evaluations show that our LongCat-Flash-Prover sets a new state-of-the-art for open-weights models in both auto-formalization and theorem proving. Demonstrating remarkable sample efficiency, it achieves a 97.1% pass rate on MiniF2F-Test using only 72 inference budget per problem. On more challenging benchmarks, it solves 70.8% of ProverBench and 41.5% of PutnamBench with no more than 220 attempts per problem, significantly outperforming existing open-weights baselines.</summary>
+    <id>http://arxiv.org/abs/2603.23171v1</id>
+    <title>Robust Safety Monitoring of Language Models via Activation Watermarking</title>
+    <updated>2026-03-24T13:13:23Z</updated>
+    <link href="https://arxiv.org/abs/2603.23171v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23171v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) can be misused to reveal sensitive information, such as weapon-making instructions or writing malware. LLM providers rely on $\emph{monitoring}$ to detect and flag unsafe behavior during inference. An open security challenge is $\emph{adaptive}$ adversaries who craft attacks that simultaneously (i) evade detection while (ii) eliciting unsafe behavior. Adaptive attackers are a major concern as LLM providers cannot patch their security mechanisms, since they are unaware of how their models are being misused. We cast $\emph{robust}$ LLM monitoring as a security game, where adversaries who know about the monitor try to extract sensitive information, while a provider must accurately detect these adversarial queries at low false positive rates. Our work (i) shows that existing LLM monitors are vulnerable to adaptive attackers and (ii) designs improved defenses through $\emph{activation watermarking}$ by carefully introducing uncertainty for the attacker during inference. We find that $\emph{activation watermarking}$ outperforms guard baselines by up to $52\%$ under adaptive attackers who know the monitoring algorithm but not the secret key.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T05:16:09Z</published>
-    <arxiv:comment>43 pages, 5 figures</arxiv:comment>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T13:13:23Z</published>
+    <arxiv:comment>20 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Toluwani Aremu</name>
+    </author>
+    <author>
+      <name>Daniil Ognev</name>
+    </author>
+    <author>
+      <name>Samuele Poppi</name>
+    </author>
+    <author>
+      <name>Nils Lukas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23149v1</id>
+    <title>Describe-Then-Act: Proactive Agent Steering via Distilled Language-Action World Models</title>
+    <updated>2026-03-24T12:49:25Z</updated>
+    <link href="https://arxiv.org/abs/2603.23149v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23149v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying safety-critical agents requires anticipating the consequences of actions before they are executed. While world models offer a paradigm for this proactive foresight, current approaches relying on visual simulation incur prohibitive latencies, often exceeding several seconds per step. In this work, we challenge the assumption that visual processing is necessary for failure prevention. We show that a trained policy's latent state, combined with its planned actions, already encodes sufficient information to anticipate action outcomes, making visual simulation redundant for failure prevention. To this end, we introduce DILLO (DIstiLLed Language-ActiOn World Model), a fast steering layer that shifts the paradigm from "simulate-then-act" to "describe-then-act." DILLO is trained via cross-modal distillation, where a privileged Vision Language Model teacher annotates offline trajectories and a latent-conditioned Large Language Model student learns to predict semantic outcomes. This creates a text-only inference path, bypassing heavy visual generation entirely, achieving a 14x speedup over baselines. Experiments on MetaWorld and LIBERO demonstrate that DILLO produces high-fidelity descriptions of the next state and is able to steer the policy, improving episode success rate by up to 15 pp and 9.3 pp on average across tasks.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T12:49:25Z</published>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Jianing Wang</name>
+      <name>Massimiliano Pappa</name>
     </author>
     <author>
-      <name>Jianfei Zhang</name>
+      <name>Luca Romani</name>
     </author>
     <author>
-      <name>Qi Guo</name>
+      <name>Valentino Sacco</name>
     </author>
     <author>
-      <name>Linsen Guo</name>
+      <name>Alessio Palma</name>
     </author>
     <author>
-      <name>Rumei Li</name>
+      <name>Stéphane Lathuilière</name>
     </author>
     <author>
-      <name>Chao Zhang</name>
+      <name>Fabio Galasso</name>
     </author>
     <author>
-      <name>Chong Peng</name>
+      <name>Xavier Alameda-Pineda</name>
     </author>
     <author>
-      <name>Cunguang Wang</name>
-    </author>
-    <author>
-      <name>Dengchang Zhao</name>
-    </author>
-    <author>
-      <name>Jiarong Shi</name>
-    </author>
-    <author>
-      <name>Jingang Wang</name>
-    </author>
-    <author>
-      <name>Liulin Feng</name>
-    </author>
-    <author>
-      <name>Mengxia Shen</name>
-    </author>
-    <author>
-      <name>Qi Li</name>
-    </author>
-    <author>
-      <name>Shengnan An</name>
-    </author>
-    <author>
-      <name>Shun Wang</name>
-    </author>
-    <author>
-      <name>Wei Shi</name>
-    </author>
-    <author>
-      <name>Xiangyu Xi</name>
-    </author>
-    <author>
-      <name>Xiaoyu Li</name>
-    </author>
-    <author>
-      <name>Xuezhi Cao</name>
-    </author>
-    <author>
-      <name>Yi Lu</name>
-    </author>
-    <author>
-      <name>Yunke Zhao</name>
-    </author>
-    <author>
-      <name>Zhengyu Chen</name>
-    </author>
-    <author>
-      <name>Zhimin Lin</name>
-    </author>
-    <author>
-      <name>Wei Wang</name>
-    </author>
-    <author>
-      <name>Peng Pei</name>
-    </author>
-    <author>
-      <name>Xunliang Cai</name>
+      <name>Indro Spinelli</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.21045v1</id>
-    <title>LPNSR: Prior-Enhanced Diffusion Image Super-Resolution via LR-Guided Noise Prediction</title>
-    <updated>2026-03-22T03:52:38Z</updated>
-    <link href="https://arxiv.org/abs/2603.21045v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.21045v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Diffusion-based image super-resolution (SR), which aims to reconstruct high-resolution (HR) images from corresponding low-resolution (LR) observations, faces a fundamental trade-off between inference efficiency and reconstruction quality. The state-of-the-art residual-shifting diffusion framework achieves efficient 4-step inference, yet suffers from severe performance degradation in compact sampling trajectories. This is mainly attributed to two core limitations: the inherent suboptimality of unconstrained random Gaussian noise in intermediate steps, which leads to error accumulation and insufficient LR prior guidance, and the initialization bias caused by naive bicubic upsampling. In this paper, we propose LPNSR, a prior-enhanced efficient diffusion framework to address these issues. We first mathematically derive the closed-form analytical solution of the optimal intermediate noise for the residual-shifting diffusion paradigm, and accordingly design an LR-guided multi-input-aware noise predictor to replace random Gaussian noise, embedding LR structural priors into the reverse process while fully preserving the framework's core efficient residual-shifting mechanism. We further mitigate initial bias with a high-quality pre-upsampling network to optimize the diffusion starting point. With a compact 4-step trajectory, LPNSR can be optimized in an end-to-end manner. Extensive experiments demonstrate that LPNSR achieves state-of-the-art perceptual performance on both synthetic and real-world datasets, without relying on any large-scale text-to-image priors. The source code of our method can be found at https://github.com/Faze-Hsw/LPNSR.</summary>
+    <id>http://arxiv.org/abs/2603.23147v1</id>
+    <title>Stable Inversion of Discrete-Time Linear Periodically Time-Varying Systems via Cyclic Reformulation</title>
+    <updated>2026-03-24T12:48:38Z</updated>
+    <link href="https://arxiv.org/abs/2603.23147v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23147v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stable inverse systems for periodically time-varying plants are essential for feedforward control and iterative learning control of multirate and periodic systems, yet existing approaches either require complex-valued Floquet factors and noncausal processing or operate on a block time scale via lifting. This paper proposes a systematic method for constructing stable inverse systems for discrete-time linear periodically time-varying (LPTV) systems that avoids these limitations. The proposed approach proceeds in three steps: (i) cyclic reformulation transforms the LPTV system into an equivalent LTI representation; (ii) the inverse of the resulting LTI system is constructed using standard LTI inversion theory; and (iii) the periodically time-varying inverse matrices are recovered from the block structure of the cycled inverse through parameter extraction. For the fundamental case of relative degree zero, where the output depends directly on the current input, the inverse system is obtained as an explicit closed-form time-varying matrix expression. For systems with periodic relative degree r &gt;= 1, the r-step-delayed inverse is similarly obtained in explicit closed form via the periodic Markov parameters. The stability of the resulting inverse system is characterized by the transmission zeros of the cycled plant, generalizing the minimum phase condition from the LTI case. Numerical examples for both relative degree zero and higher relative degree systems confirm the validity of the stability conditions and demonstrate the effectiveness of the proposed framework, including exact input reconstruction via causal real-valued inverse systems.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T12:48:38Z</published>
+    <arxiv:comment>Submitted to Automatica</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Hiroshi Okajima</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23129v1</id>
+    <title>Polaris: A Gödel Agent Framework for Small Language Models through Experience-Abstracted Policy Repair</title>
+    <updated>2026-03-24T12:25:32Z</updated>
+    <link href="https://arxiv.org/abs/2603.23129v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23129v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gödel agent realize recursive self-improvement: an agent inspects its own policy and traces and then modifies that policy in a tested loop. We introduce Polaris, a Gödel agent for compact models that performs policy repair via experience abstraction, turning failures into policy updates through a structured cycle of analysis, strategy formation, abstraction, and minimal code pat ch repair with conservative checks. Unlike response level self correction or parameter tuning, Polaris makes policy level changes with small, auditable patches that persist in the policy and are reused on unseen instances within each benchmark. As part of the loop, the agent engages in meta reasoning: it explains its errors, proposes concrete revisions to its own policy, and then updates the policy. To enable cumulative policy refinement, we introduce experience abstraction, which distills failures into compact, reusable strategies that transfer to unseen instances. On MGSM, DROP, GPQA, and LitBench (covering arithmetic reasoning, compositional inference, graduate-level problem solving, and creative writing evaluation), a 7-billion-parameter model equipped with Polaris achieves consistent gains over the base policy and competitive baselines.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T12:25:32Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Aditya Kakade</name>
+    </author>
+    <author>
+      <name>Vivek Srivastava</name>
+    </author>
+    <author>
+      <name>Shirish Karande</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23116v1</id>
+    <title>Automatic Segmentation of 3D CT scans with SAM2 using a zero-shot approach</title>
+    <updated>2026-03-24T12:10:52Z</updated>
+    <link href="https://arxiv.org/abs/2603.23116v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23116v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation models for image segmentation have shown strong generalization in natural images, yet their applicability to 3D medical imaging remains limited. In this work, we study the zero-shot use of Segment Anything Model 2 (SAM2) for automatic segmentation of volumetric CT data, without any fine-tuning or domain-specific training. We analyze how SAM2 should be applied to CT volumes and identify its main limitation: the lack of inherent volumetric awareness. To address this, we propose a set of inference-alone architectural and procedural modifications that adapt SAM2's video-based memory mechanism to 3D data by treating CT slices as ordered sequences. We conduct a systematic ablation study on a subset of 500 CT scans from the TotalSegmentator dataset to evaluate prompt strategies, memory propagation schemes and multi-pass refinement. Based on these findings, we select the best-performing configuration and report final results on a bigger sample of the TotalSegmentator dataset comprising 2,500 CT scans. Our results show that, even with frozen weights, SAM2 can produce coherent 3D segmentations when its inference pipeline is carefully structured, demonstrating the feasibility of a fully zero-shot approach for volumetric medical image segmentation.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-22T03:52:38Z</published>
+    <published>2026-03-24T12:10:52Z</published>
+    <arxiv:comment>11 pages, 5 figures</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Shuwei Huang</name>
+      <name>Miquel Lopez Escoriza</name>
     </author>
     <author>
-      <name>Shizhuo Liu</name>
+      <name>Pau Amargant Alvarez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23115v1</id>
+    <title>AgentFoX: LLM Agent-Guided Fusion with eXplainability for AI-Generated Image Detection</title>
+    <updated>2026-03-24T12:10:21Z</updated>
+    <link href="https://arxiv.org/abs/2603.23115v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23115v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing realism of AI-Generated Images (AIGI) has created an urgent need for forensic tools capable of reliably distinguishing synthetic content from authentic imagery. Existing detectors are typically tailored to specific forgery artifacts--such as frequency-domain patterns or semantic inconsistencies--leading to specialized performance and, at times, conflicting judgments. To address these limitations, we present \textbf{AgentFoX}, a Large Language Model-driven framework that redefines AIGI detection as a dynamic, multi-phase analytical process. Our approach employs a quick-integration fusion mechanism guided by a curated knowledge base comprising calibrated Expert Profiles and contextual Clustering Profiles. During inference, the agent begins with high-level semantic assessment, then transitions to fine-grained, context-aware synthesis of signal-level expert evidence, resolving contradictions through structured reasoning. Instead of returning a coarse binary output, AgentFoX produces a detailed, human-readable forensic report that substantiates its verdict, enhancing interpretability and trustworthiness for real-world deployment. Beyond providing a novel detection solution, this work introduces a scalable agentic paradigm that facilitates intelligent integration of future and evolving forensic tools.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T12:10:21Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yangxin Yu</name>
     </author>
     <author>
-      <name>Zijun Wei</name>
+      <name>Yue Zhou</name>
+    </author>
+    <author>
+      <name>Bin Li</name>
+    </author>
+    <author>
+      <name>Kaiqing Lin</name>
+    </author>
+    <author>
+      <name>Haodong Li</name>
+    </author>
+    <author>
+      <name>Jiangqun Ni</name>
+    </author>
+    <author>
+      <name>Bo Cao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23093v1</id>
+    <title>Extended-Target Classification and Localization for Near-Field ISAC</title>
+    <updated>2026-03-24T11:41:04Z</updated>
+    <link href="https://arxiv.org/abs/2603.23093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Near-field integrated sensing and communication (ISAC) enables object-level sensing from distance-dependent array responses, yet most existing near-field methods still rely on point-target models and realistic extended targets remain largely unexplored. In this paper, joint target classification and range-azimuth localization are studied from channel responses of realistic extended targets. A dual-branch inference framework is proposed. Semantic and geometric branches are used for classification and localization, respectively. Cross-task attention is introduced after task-specific encoding so that complementary cues can be exchanged without forcing full feature sharing from the input stage. To improve localization on the same backbone, uncertainty-aware regression and a physics-guided structured objective are adopted, including planar consistency, peak-response regularization, and geometry-coupling constraints. Training and evaluation data are generated from full-wave electromagnetic scattering simulations of voxelized vehicle targets with randomized heading angles, material contrasts, and placements. The compared variants show that cross-task attention mainly benefits classification, while uncertainty-aware and structured supervision are needed to recover strong localization performance on the same backbone. Under the adopted shared-OFDM benchmark, the proposed framework reaches the best joint operating point with fewer sensing tones for the same target performance region.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T11:41:04Z</published>
+    <arxiv:comment>13 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Zongyao Zhao</name>
+    </author>
+    <author>
+      <name>Zhaolin Wang</name>
+    </author>
+    <author>
+      <name>Lincong Han</name>
+    </author>
+    <author>
+      <name>Jing Jin</name>
+    </author>
+    <author>
+      <name>Yuanwei Liu</name>
+    </author>
+    <author>
+      <name>Kaibin Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23086v1</id>
+    <title>Policy-based Tuning of Autoregressive Image Models with Instance- and Distribution-Level Rewards</title>
+    <updated>2026-03-24T11:28:36Z</updated>
+    <link href="https://arxiv.org/abs/2603.23086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Autoregressive (AR) models are highly effective for image generation, yet their standard maximum-likelihood estimation training lacks direct optimization for sample quality and diversity. While reinforcement learning (RL) has been used to align diffusion models, these methods typically suffer from output diversity collapse. Similarly, concurrent RL methods for AR models rely strictly on instance-level rewards, often trading off distributional coverage for quality. To address these limitations, we propose a lightweight RL framework that casts token-based AR synthesis as a Markov Decision Process, optimized via Group Relative Policy Optimization (GRPO). Our core contribution is the introduction of a novel distribution-level Leave-One-Out FID (LOO-FID) reward; by leveraging an exponential moving average of feature moments, it explicitly encourages sample diversity and prevents mode collapse during policy updates. We integrate this with composite instance-level rewards (CLIP and HPSv2) for strict semantic and perceptual fidelity, and stabilize the multi-objective learning with an adaptive entropy regularization term. Extensive experiments on LlamaGen and VQGAN architectures demonstrate clear improvements across standard quality and diversity metrics within only a few hundred tuning iterations. The results also show that the model can be updated to produce competitive samples even without Classifier-Free Guidance, and bypass its 2x inference cost.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T11:28:36Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Orhun Buğra Baran</name>
+    </author>
+    <author>
+      <name>Melih Kandemir</name>
+    </author>
+    <author>
+      <name>Ramazan Gokberk Cinbis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.23085v1</id>
+    <title>MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical Vision-Language Models</title>
+    <updated>2026-03-24T11:28:15Z</updated>
+    <link href="https://arxiv.org/abs/2603.23085v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.23085v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language Models (VLMs) have enabled interpretable medical diagnosis by integrating visual perception with linguistic reasoning. Yet, existing medical chain-of-thought (CoT) models lack explicit mechanisms to represent and enforce causal reasoning, leaving them vulnerable to spurious correlations and limiting their clinical reliability. We pinpoint three core challenges in medical CoT reasoning: how to adaptively trigger causal correction, construct high-quality causal-spurious contrastive samples, and maintain causal consistency across reasoning trajectories. To address these challenges, we propose MedCausalX, an end-to-end framework explicitly models causal reasoning chains in medical VLMs. We first introduce the CRMed dataset providing fine-grained anatomical annotations, structured causal reasoning chains, and counterfactual variants that guide the learning of causal relationships beyond superficial correlations. Building upon CRMed, MedCausalX employs a two-stage adaptive reflection architecture equipped with $\langle$causal$\rangle$ and $\langle$verify$\rangle$ tokens, enabling the model to autonomously determine when and how to perform causal analysis and verification. Finally, a trajectory-level causal correction objective optimized through error-attributed reinforcement learning refines the reasoning chain, allowing the model to distinguish genuine causal dependencies from shortcut associations. Extensive experiments on multiple benchmarks show that MedCausalX consistently outperforms state-of-the-art methods, improving diagnostic consistency by +5.4 points, reducing hallucination by over 10 points, and attaining top spatial grounding IoU, thereby setting a new standard for causally grounded medical reasoning.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T11:28:15Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jianxin Lin</name>
+    </author>
+    <author>
+      <name>Chunzheng Zhu</name>
+    </author>
+    <author>
+      <name>Peter J. Kneuertz</name>
+    </author>
+    <author>
+      <name>Yunfei Bai</name>
+    </author>
+    <author>
+      <name>Yuan Xue</name>
     </author>
   </entry>
 </feed>
