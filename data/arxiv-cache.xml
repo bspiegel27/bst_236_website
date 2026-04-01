@@ -1,283 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-03-31T01:24:59Z -->
+<!-- Last updated: 2026-04-01T01:45:24Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-03-31T01:25:00Z</updated>
+  <updated>2026-04-01T01:45:25Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>138717</opensearch:totalResults>
+  <opensearch:totalResults>138911</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2603.27680v1</id>
-    <title>Toward More Realistic Machine-Learning Inference of the Dense-Matter Equation of State from Supernova Gravitational Waves</title>
-    <updated>2026-03-29T13:07:40Z</updated>
-    <link href="https://arxiv.org/abs/2603.27680v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27680v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Gravitational waves from core-collapse supernovae offer a unique probe of the equation of state (EOS) of dense nuclear matter. For rapidly rotating stars, previous machine-learning studies demonstrated promising EOS classification accuracy. However, these analyses relied on several simplifying assumptions. In this work, we relax three key assumptions. First, we include real detector noise. Second, we expand the analysis from a single progenitor model to four models spanning 12 to 40 solar masses, and for each mass we consider multiple rotational configurations, from slow to rapid. Third, we introduce uncertainty in the core bounce time of up to 20 ms, rather than assuming it is known precisely. We find that none of these effects significantly degrades EOS classification performance. Instead, the larger dataset associated with multiple progenitor models and noise realizations improves training and classification accuracy. This study is a step in a broader effort to progressively incorporate more realistic conditions into gravitational-wave inference for core-collapse supernovae.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T13:07:40Z</published>
-    <arxiv:comment>Submitted to PRD. Comments are welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
-    <author>
-      <name>Almat Akhmetali</name>
-    </author>
-    <author>
-      <name>Y. Sultan Abylkairov</name>
-    </author>
-    <author>
-      <name>Marat Zaidyn</name>
-    </author>
-    <author>
-      <name>Aknur Sakan</name>
-    </author>
-    <author>
-      <name>Alisher Zhunuskanov</name>
-    </author>
-    <author>
-      <name>Nurzhan Ussipov</name>
-    </author>
-    <author>
-      <name>José Antonio Font</name>
-    </author>
-    <author>
-      <name>Alejandro Torres-Forné</name>
-    </author>
-    <author>
-      <name>Ernazar Abdikamalov</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27678v1</id>
-    <title>Prototype-Aligned Federated Soft-Prompts for Continual Web Personalization</title>
-    <updated>2026-03-29T12:59:59Z</updated>
-    <link href="https://arxiv.org/abs/2603.27678v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27678v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Continual web personalization is essential for engagement, yet real-world non-stationarity and privacy constraints make it hard to adapt quickly without forgetting long-term preferences. We target this gap by seeking a privacy-conscious, parameter-efficient interface that controls stability-plasticity at the user/session level while tying user memory to a shared semantic prior. We propose ProtoFed-SP, a prompt-based framework that injects dual-timescale soft prompts into a frozen backbone: a fast, sparse short-term prompt tracks session intent, while a slow long-term prompt is anchored to a small server-side prototype library that is continually refreshed via differentially private federated aggregation. Queries are routed to Top-M prototypes to compose a personalized prompt. Across eight benchmarks, ProtoFed-SP improves NDCG@10 by +2.9% and HR@10 by +2.0% over the strongest baselines, with notable gains on Amazon-Books (+5.0% NDCG vs. INFER), H&amp;M (+2.5% vs. Dual-LoRA), and Taobao (+2.2% vs. FedRAP). It also lowers forgetting (AF) and Steps-to-95% and preserves accuracy under practical DP budgets. Our contribution is a unifying, privacy-aware prompting interface with prototype anchoring that delivers robust continual personalization and offers a transparent, controllable mechanism to balance stability and plasticity in deployment.</summary>
+    <id>http://arxiv.org/abs/2603.29768v1</id>
+    <title>Big2Small: A Unifying Neural Network Framework for Model Compression</title>
+    <updated>2026-03-31T14:09:19Z</updated>
+    <link href="https://arxiv.org/abs/2603.29768v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29768v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the development of foundational models, model compression has become a critical requirement. Various model compression approaches have been proposed such as low-rank decomposition, pruning, quantization, ergodic dynamic systems, and knowledge distillation, which are based on different heuristics. To elevate the field from fragmentation to a principled discipline, we construct a unifying mathematical framework for model compression grounded in measure theory. We further demonstrate that each model compression technique is mathematically equivalent to a neural network subject to a regularization. Building upon this mathematical and structural equivalence, we propose an experimentally-verified data-free model compression framework, termed \textit{Big2Small}, which translates Implicit Neural Representations (INRs) from data domain to the domain of network parameters. \textit{Big2Small} trains compact INRs to encode the weights of larger models and reconstruct the weights during inference. To enhance reconstruction fidelity, we introduce Outlier-Aware Preprocessing to handle extreme weight values and a Frequency-Aware Loss function to preserve high-frequency details. Experiments on image classification and segmentation demonstrate that \textit{Big2Small} achieves competitive accuracy and compression ratios compared to state-of-the-art baselines.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T12:59:59Z</published>
-    <arxiv:comment>Accepted by WWW 2026</arxiv:comment>
+    <published>2026-03-31T14:09:19Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Canran Xiao</name>
+      <name>Jing-Xiao Liao</name>
     </author>
     <author>
-      <name>Liwei Hou</name>
+      <name>Haoran Wang</name>
+    </author>
+    <author>
+      <name>Tao Li</name>
+    </author>
+    <author>
+      <name>Daoming Lyu</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+    <author>
+      <name>Chengjun Cai</name>
+    </author>
+    <author>
+      <name>Feng-Lei Fan</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.27665v1</id>
-    <title>Test-Time Instance-Specific Parameter Composition: A New Paradigm for Adaptive Generative Modeling</title>
-    <updated>2026-03-29T12:31:33Z</updated>
-    <link href="https://arxiv.org/abs/2603.27665v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27665v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Existing generative models, such as diffusion and auto-regressive networks, are inherently static, relying on a fixed set of pretrained parameters to handle all inputs. In contrast, humans flexibly adapt their internal generative representations to each perceptual or imaginative context. Inspired by this capability, we introduce Composer, a new paradigm for adaptive generative modeling based on test-time instance-specific parameter composition. Composer generates input-conditioned parameter adaptations at inference time, which are injected into the pretrained model's weights, enabling per-input specialization without fine-tuning or retraining. Adaptation occurs once prior to multi-step generation, yielding higher-quality, context-aware outputs with minimal computational and memory overhead. Experiments show that Composer substantially improves performance across diverse generative models and use cases, including lightweight/quantized models and test-time scaling. By leveraging input-aware parameter composition, Composer establishes a new paradigm for designing generative models that dynamically adapt to each input, moving beyond static parameterization.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.29765v1</id>
+    <title>Training-Free Dynamic Upcycling of Expert Language Models</title>
+    <updated>2026-03-31T14:05:10Z</updated>
+    <link href="https://arxiv.org/abs/2603.29765v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29765v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have achieved remarkable performance on a wide range of specialized tasks, exhibiting strong problem-solving capabilities. However, training these models is prohibitively expensive, and they often lack domain-specific expertise because they rely on general knowledge datasets. Expertise finetuning can address this issue; however, it often leads to overspecialization, and developing a single multi-domain expert remains difficult due to diverging objectives. Furthermore, multitask training is challenging due to interference and catastrophic forgetting. Existing work proposes combining the expertise of dense models within a Mixture of Experts (MoE) architecture, although this approach still requires multitask finetuning. To address these issues, we introduce Dynamic Upcycling MoE (DUME), a novel approach that reuses dense experts trained on different domains to construct a unified MoE model. Our method builds a single multitask model that preserves the capabilities of the original dense experts without requiring additional training. DUME is both cost-efficient and scalable: by leveraging the closed-form solution of ridge regression, it eliminates the need for further optimization and enables experts to be added dynamically while maintaining the model's original performance. We demonstrate that DUME consistently outperforms baseline approaches in both causal language modeling and reasoning settings. Finally, we also show that the DUME model can be fine-tuned to further improve performance. We show that, in the causal language modeling setting, DUME can retain up to 97.6% of a dense expert model specialized in one particular domain, and that it can also surpass it in the reasoning setting, where it can achieve 102.1% of the dense expert performance. Our code is available at: github.com/gensyn-ai/dume.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T12:31:33Z</published>
-    <arxiv:comment>Accepted at CVPR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T14:05:10Z</published>
+    <arxiv:comment>Accepted at the ICLR 2026 Workshop on Scaling Post-training for LLMs</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Minh-Tuan Tran</name>
+      <name>Eros Fanì</name>
     </author>
     <author>
-      <name>Xuan-May Le</name>
-    </author>
-    <author>
-      <name>Quan Hung Tran</name>
-    </author>
-    <author>
-      <name>Mehrtash Harandi</name>
-    </author>
-    <author>
-      <name>Dinh Phung</name>
-    </author>
-    <author>
-      <name>Trung Le</name>
+      <name>Oğuzhan Ersoy</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2603.27661v1</id>
-    <title>Amped: Adaptive Multi-stage Non-edge Pruning for Edge Detection</title>
-    <updated>2026-03-29T12:26:35Z</updated>
-    <link href="https://arxiv.org/abs/2603.27661v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27661v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Edge detection is a fundamental image analysis task that underpins numerous high-level vision applications. Recent advances in Transformer architectures have significantly improved edge quality by capturing long-range dependencies, but this often comes with computational overhead. Achieving higher pixel-level accuracy requires increased input resolution, further escalating computational cost and limiting practical deployment. Building on the strong representational capacity of recent Transformer-based edge detectors, we propose an Adaptive Multi-stage non-edge Pruning framework for Edge Detection(Amped). Amped identifies high-confidence non-edge tokens and removes them as early as possible to substantially reduce computation, thus retaining high accuracy while cutting GFLOPs and accelerating inference with minimal performance loss. Moreover, to mitigate the structural complexity of existing edge detection networks and facilitate their integration into real-world systems, we introduce a simple yet high-performance Transformer-based model, termed Streamline Edge Detector(SED). Applied to both existing detectors and our SED, the proposed pruning strategy provides a favorable balance between accuracy and efficiency-reducing GFLOPs by up to 40% with only a 0.4% drop in ODS F-measure. In addition, despite its simplicity, SED achieves a state-of-the-art ODS F-measure of 86.5%. The code will be released.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T12:26:35Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Yuhan Gao</name>
-    </author>
-    <author>
-      <name>Xinqing Li</name>
-    </author>
-    <author>
-      <name>Xin He</name>
-    </author>
-    <author>
-      <name>Bing Li</name>
-    </author>
-    <author>
-      <name>Xinzhong Zhu</name>
-    </author>
-    <author>
-      <name>Ming-Ming Cheng</name>
-    </author>
-    <author>
-      <name>Yun Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27650v1</id>
-    <title>V-CAST: Video Curvature-Aware Spatio-Temporal Pruning for Efficient Video Large Language Models</title>
-    <updated>2026-03-29T11:53:32Z</updated>
-    <link href="https://arxiv.org/abs/2603.27650v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27650v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Video large language models (VideoLLMs) show strong capability in video understanding, yet long-context inference is still dominated by massive redundant visual tokens in the prefill stage. We revisit token compression for VideoLLMs under a tight budget and identify a key bottleneck, namely insufficient spatio-temporal information coverage. Existing methods often introduce discontinuous coverage through coarse per-frame allocation or scene segmentation, and token merging can further misalign spatio-temporal coordinates under MRoPE-style discrete (t,h,w) bindings. To address these issues, we propose V-CAST (Video Curvature-Aware Spatio-Temporal Pruning), a training-free, plug-and-play pruning policy for long-context video inference. V-CAST casts token compression as a trajectory approximation problem and introduces a curvature-guided temporal allocation module that routes per-frame token budgets to semantic turns and event boundaries. It further adopts a dual-anchor spatial selection mechanism that preserves high-entropy visual evidence without attention intervention, while keeping retained tokens at their original coordinates to maintain positional alignment. Extensive experiments across multiple VideoLLMs of different architectures and scales demonstrate that V-CAST achieves 98.6% of the original performance, outperforms the second-best method by +1.1% on average, and reduces peak memory and total latency to 86.7% and 86.4% of vanilla Qwen3-VL-8B-Instruct.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T11:53:32Z</published>
-    <arxiv:comment>Code: \url{https://github.com/xinyouu/V-CAST}</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Xinying Lin</name>
-    </author>
-    <author>
-      <name>Xuyang Liu</name>
-    </author>
-    <author>
-      <name>Yiyu Wang</name>
-    </author>
-    <author>
-      <name>Teng Ma</name>
-    </author>
-    <author>
-      <name>Wenqi Ren</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27645v1</id>
-    <title>OpenDPR: Open-Vocabulary Change Detection via Vision-Centric Diffusion-Guided Prototype Retrieval for Remote Sensing Imagery</title>
-    <updated>2026-03-29T11:43:02Z</updated>
-    <link href="https://arxiv.org/abs/2603.27645v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27645v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Open-vocabulary change detection (OVCD) seeks to recognize arbitrary changes of interest by enabling generalization beyond a fixed set of predefined classes. We reformulate OVCD as a two-stage pipeline: first generate class-agnostic change proposals using visual foundation models (VFMs) such as SAM and DINOv2, and then perform category identification with vision-language models (VLMs) such as CLIP. We reveal that category identification errors are the primary bottleneck of OVCD, mainly due to the limited ability of VLMs based on image-text matching to represent fine-grained land-cover categories. To address this, we propose OpenDPR, a training-free vision-centric diffusion-guided prototype retrieval framework. OpenDPR leverages diffusion models to construct diverse prototypes for target categories offline, and to perform similarity retrieval with change proposals in the visual space during inference. The secondary bottleneck lies in change localization, due to the inherent lack of change priors in VFMs. To bridge this gap, we design a spatial-to-change weakly supervised change detection module named S2C to adapt their strong spatial modeling capabilities for change localization. Integrating the pretrained S2C into OpenDPR leads to an optional weakly supervised variant named OpenDPR-W, which further improves OVCD with minimal supervision. Experimental results on four benchmark datasets demonstrate that the proposed methods achieve state-of-the-art performance under both supervision modes. Code is available at https://github.com/guoqi2002/OpenDPR.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T11:43:02Z</published>
-    <arxiv:comment>Accepted by CVPR 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Qi Guo</name>
-    </author>
-    <author>
-      <name>Jue Wang</name>
-    </author>
-    <author>
-      <name>Yinhe Liu</name>
-    </author>
-    <author>
-      <name>Yanfei Zhong</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27632v1</id>
-    <title>ContraMap: Contrastive Uncertainty Mapping for Robot Environment Representation</title>
-    <updated>2026-03-29T11:06:45Z</updated>
-    <link href="https://arxiv.org/abs/2603.27632v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27632v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reliable robot perception requires not only predicting scene structure, but also identifying where predictions should be treated as unreliable due to sparse or missing observations. We present ContraMap, a contrastive continuous mapping method that augments kernel-based discriminative maps with an explicit uncertainty class trained using synthetic noise samples. This formulation treats unobserved regions as a contrastive class, enabling joint environment prediction and spatial uncertainty estimation in real time without Bayesian inference. Under a simple mixture-model view, we show that the probability assigned to the uncertainty class is a monotonic function of a distance-aware uncertainty surrogate. Experiments in 2D occupancy mapping, 3D semantic mapping, and tabletop scene reconstruction show that ContraMap preserves mapping quality, produces spatially coherent uncertainty estimates, and is substantially more efficient than Bayesian kernelmap baselines.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2603.29755v1</id>
+    <title>CausalPulse: An Industrial-Grade Neurosymbolic Multi-Agent Copilot for Causal Diagnostics in Smart Manufacturing</title>
+    <updated>2026-03-31T13:54:34Z</updated>
+    <link href="https://arxiv.org/abs/2603.29755v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29755v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern manufacturing environments demand real-time, trustworthy, and interpretable root-cause insights to sustain productivity and quality. Traditional analytics pipelines often treat anomaly detection, causal inference, and root-cause analysis as isolated stages, limiting scalability and explainability. In this work, we present CausalPulse, an industry-grade multi-agent copilot that automates causal diagnostics in smart manufacturing. It unifies anomaly detection, causal discovery, and reasoning through a neurosymbolic architecture built on standardized agentic protocols. CausalPulse is being deployed in a Robert Bosch manufacturing plant, integrating seamlessly with existing monitoring workflows and supporting real-time operation at production scale. Evaluations on both public (Future Factories) and proprietary (Planar Sensor Element) datasets show high reliability, achieving overall success rates of 98.0% and 98.73%. Per-criterion success rates reached 98.75% for planning and tool use, 97.3% for self-reflection, and 99.2% for collaboration. Runtime experiments report end-to-end latency of 50-60s per diagnostic workflow with near-linear scalability (R^2=0.97), confirming real-time readiness. Comparison with existing industrial copilots highlights distinct advantages in modularity, extensibility, and deployment maturity. These results demonstrate how CausalPulse's modular, human-in-the-loop design enables reliable, interpretable, and production-ready automation for next-generation manufacturing.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T11:06:45Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Chi Cuong Le</name>
-    </author>
-    <author>
-      <name>Weiming Zhi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27624v1</id>
-    <title>Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling</title>
-    <updated>2026-03-29T10:44:55Z</updated>
-    <link href="https://arxiv.org/abs/2603.27624v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27624v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Mixture-of-Experts is a promising approach for edge AI with low-batch inference. Yet, on-device deployments often face limited on-chip memory and severe workload imbalance; the prevalent use of offloading further incurs off-chip memory access bottlenecks. Moreover, MoE sparsity and dynamic gating shift distributed strategies toward much finer granularity and introduce runtime scheduling considerations. Recently, high die-to-die bandwidth chiplet interconnects have created new opportunities for multi-chiplet systems to address workload imbalance and offloading bottlenecks with fine-grained scheduling. In this paper, we propose Fully Sharded Expert Data Parallelism, a parallelization paradigm specifically architected for low-batch MoE inference on multi-chiplet accelerators. FSE-DP attains adaptive computation-communication overlap and balanced load by orchestrating fine-grained, complementary expert streams along dynamic trajectories across high-bandwidth D2D links. The attendant dataflow complexity is tamed by a minimal, hardware-amenable set of virtualization rules and a lightweight scheduling algorithm. Our approach achieves 1.22 to 2.00 times speedup over state-of-the-art baselines and saves up to 78.8 percent on-chip memory.</summary>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T10:44:55Z</published>
-    <arxiv:primary_category term="cs.AR"/>
-    <author>
-      <name>Songchen Ma</name>
-    </author>
-    <author>
-      <name>Hongyi Li</name>
-    </author>
-    <author>
-      <name>Weihao Zhang</name>
-    </author>
-    <author>
-      <name>Yonghao Tan</name>
-    </author>
-    <author>
-      <name>Pingcheng Dong</name>
-    </author>
-    <author>
-      <name>Yu Liu</name>
-    </author>
-    <author>
-      <name>Lan Liu</name>
-    </author>
-    <author>
-      <name>Yuzhong Jiao</name>
-    </author>
-    <author>
-      <name>Xuejiao Liu</name>
-    </author>
-    <author>
-      <name>Luhong Liang</name>
-    </author>
-    <author>
-      <name>Kwang-Ting Cheng</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27615v1</id>
-    <title>Adaptive differentiating filter: case study of PID feedback control</title>
-    <updated>2026-03-29T10:17:35Z</updated>
-    <link href="https://arxiv.org/abs/2603.27615v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27615v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This paper presents an adaptive causal discrete-time filter for derivative estimation, exemplified by its use in estimating relative velocity in a mechatronic application. The filter is based on a constrained least squares estimator with window adaptation. It demonstrates low sensitivity to low-amplitude measurement noise, while preserving a wide bandwidth for large-amplitude changes in the process signal. Favorable performance properties of the filter are discussed and demonstrated in a practical case study of PID feedback controller and compared experimentally to a standard linear low-pass filter-based differentiator and a robust sliding-mode based homogeneous differentiator.</summary>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T10:17:35Z</published>
-    <arxiv:comment>6 pages, 6 figures</arxiv:comment>
-    <arxiv:primary_category term="eess.SY"/>
-    <author>
-      <name>Alexey Pavlov</name>
-    </author>
-    <author>
-      <name>Michael Ruderman</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2603.27611v1</id>
-    <title>What does a system modify when it modifies itself?</title>
-    <updated>2026-03-29T10:12:15Z</updated>
-    <link href="https://arxiv.org/abs/2603.27611v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2603.27611v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>When a cognitive system modifies its own functioning, what exactly does it modify: a low-level rule, a control rule, or the norm that evaluates its own revisions? Cognitive science describes executive control, metacognition, and hierarchical learning with precision, but lacks a formal framework distinguishing these targets of transformation. Contemporary artificial intelligence likewise exhibits self-modification without common criteria for comparison with biological cognition.
-  We show that the question of what counts as a self-modifying system entails a minimal structure: a hierarchy of rules, a fixed core, and a distinction between effective rules, represented rules, and causally accessible rules. Four regimes are identified: (1) action without modification, (2) low-level modification, (3) structural modification, and (4) teleological revision. Each regime is anchored in a cognitive phenomenon and a corresponding artificial system.
-  Applied to humans, the framework yields a central result: a crossing of opacities. Humans have self-representation and causal power concentrated at upper hierarchical levels, while operational levels remain largely opaque. Reflexive artificial systems display the inverse profile: rich representation and causal access at operational levels, but none at the highest evaluative level. This crossed asymmetry provides a structural signature for human-AI comparison. The framework also offers insight into artificial consciousness, with higher-order theories and Attention Schema Theory as special cases. We derive four testable predictions and identify four open problems: the independence of transformativity and autonomy, the viability of self-modification, the teleological lock, and identity under transformation.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-03-29T10:12:15Z</published>
-    <arxiv:comment>Working Paper</arxiv:comment>
+    <published>2026-03-31T13:54:34Z</published>
+    <arxiv:comment>10 pages, 8 figures, 4 tables, Accepted at AAAI-MAKE 2026 (AAAI Spring Symposium on Machine Learning and Knowledge Engineering for Knowledge-Grounded Semantic Agents)</arxiv:comment>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Florentin Koch</name>
+      <name>Chathurangi Shyalika</name>
+    </author>
+    <author>
+      <name>Utkarshani Jaimini</name>
+    </author>
+    <author>
+      <name>Cory Henson</name>
+    </author>
+    <author>
+      <name>Amit Sheth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29745v1</id>
+    <title>RHINO-MAG: Recursive H-Field Inference based on Observed Magnetic Flux under Dynamic Excitation</title>
+    <updated>2026-03-31T13:43:52Z</updated>
+    <link href="https://arxiv.org/abs/2603.29745v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29745v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Driven by the MagNet Challenge 2025 (MC2), increased research interest is directed towards modeling transient magnetic fields within ferrite material. An accurate time-resolved and temperature-aware H-field prediction is essential for optimizing magnetic components in applications with quasi-stationary / non-stationary excitation waveforms. Within the scope of this investigation, a selection of model structures with varying degrees of physically motivated structure are compared. Based on a Pareto investigation, a rather black-box gated recurrent unit (GRU) model structure with a graceful initialization setup is found to offer the most attractive model size vs. model accuracy trade-off, while the physics-inspired models performed worse. For a GRU-based model with only 325 parameters, a sequence relative error of 8.02 % and a normalized energy relative error of 1.07 % averaged across five different materials are achieved on unseen test data. With this excellent parameter efficiency, the proposed model won the first place in the performance category of the MC2.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T13:43:52Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Hendrik Vater</name>
+    </author>
+    <author>
+      <name>Oliver Schweins</name>
+    </author>
+    <author>
+      <name>Lukas Hölsch</name>
+    </author>
+    <author>
+      <name>Wilhelm Kirchgässner</name>
+    </author>
+    <author>
+      <name>Till Piepenbrock</name>
+    </author>
+    <author>
+      <name>Oliver Wallscheid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29726v1</id>
+    <title>Tidal deformations of general-relativistic multifluid compact stars</title>
+    <updated>2026-03-31T13:26:31Z</updated>
+    <link href="https://arxiv.org/abs/2603.29726v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29726v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Over the past decade, gravitational-wave astronomy has opened a new window onto the extreme states of matter inside compact stars. At some point during the inspiral of a binary system, each star starts to experience adiabatic tides, characterized by tidal deformabilities. The dominant tidal deformability, first measured with the GW170817 event, has already constrained the dense-matter equation of state. With the advent of third-generation detectors, tidal deformabilities are expected to be inferred with much higher precision, potentially revealing subleading tidal contributions. This motivates the development of more accurate compact-star models that incorporate richer microphysics. With this in mind, we move beyond the commonly adopted perfect-fluid approximation and model compact stars through a multifluid framework. In this work, we present the fully general-relativistic description of adiabatic tidal deformations of compact stars composed of an arbitrary number of interacting fluids, using Carter's multifluid variational formalism. A distinctive feature of this approach is the presence of nondissipative mutual entrainment between fluid species. We derive the hydrostatic equilibrium equations for multifluid configurations, along with the perturbed equations governing stationary gravitoelectric and gravitomagnetic tidal responses of arbitrary order. We then investigate how entrainment modifies the corresponding tidal deformabilities. Using an analytical representation of the multifluid equation of state, we show that entrainment leaves adiabatic tidal responses unchanged and therefore produces no measurable effect on the gravitational-wave signal emitted during the inspiral long before the excitation of internal mode resonances. We subsequently discuss two specific applications: superfluid neutron stars and dark matter admixed compact stars.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T13:26:31Z</published>
+    <arxiv:comment>27 pages</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Ethan Carlier</name>
+    </author>
+    <author>
+      <name>Nicolas Chamel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29649v1</id>
+    <title>Joint Identification and Sensing with Noisy Feedback: A Task-Oriented Communication Framework for 6G</title>
+    <updated>2026-03-31T12:12:37Z</updated>
+    <link href="https://arxiv.org/abs/2603.29649v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29649v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Task-oriented communication is a key enabler of emerging 6G systems, where the objective is to support decisions and actions rather than full message reconstruction. From an information-theoretic perspective, identification (ID) codes provide a natural abstraction for this paradigm by enabling receivers to test whether a task-relevant message was sent, without decoding the entire message. Motivated by the strong impact of feedback on ID and by the growing interest in integrated communication and sensing, this paper studies joint identification and sensing (JIDAS) over state-dependent discrete memoryless channels with noisy strictly causal feedback. The transmitter conveys identification messages while simultaneously estimating the channel state from the feedback signal. For both deterministic and randomized coding schemes, we derive lower and upper bounds on the capacity--distortion function. The results quantify the fundamental limits of JIDAS under noisy feedback and recover existing noiseless-feedback characterizations as special cases.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T12:12:37Z</published>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Yaning Zhao</name>
+    </author>
+    <author>
+      <name>Holger Boche</name>
+    </author>
+    <author>
+      <name>Christian Deppe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29559v1</id>
+    <title>When Can We Trust LLM Graders? Calibrating Confidence for Automated Assessment</title>
+    <updated>2026-03-31T10:38:22Z</updated>
+    <link href="https://arxiv.org/abs/2603.29559v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29559v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) show promise for automated grading, but their outputs can be unreliable. Rather than improving grading accuracy directly, we address a complementary problem: \textit{predicting when an LLM grader is likely to be correct}. This enables selective automation where high-confidence predictions are processed automatically while uncertain cases are flagged for human review. We compare three confidence estimation methods (self-reported confidence, self-consistency voting, and token probability) across seven LLMs of varying scale (4B to 120B parameters) on three educational datasets: RiceChem (long-answer chemistry), SciEntsBank, and Beetle (short-answer science). Our experiments reveal that self-reported confidence consistently achieves the best calibration across all conditions (avg ECE 0.166 vs 0.229 for self-consistency). Surprisingly, self-consistency remains 38\% worse despite requiring 5$\times$ the inference cost. Larger models exhibit substantially better calibration though gains vary by dataset and method (e.g., a 28\% ECE reduction for self-reported), with GPT-OSS-120B achieving the best calibration (avg ECE 0.100) and strong discrimination (avg AUC 0.668). We also observe that confidence is strongly top-skewed across methods, creating a ``confidence floor'' that practitioners must account for when setting thresholds. These findings suggest that simply asking LLMs to report their confidence provides a practical approach for identifying reliable grading predictions. Code is available \href{https://github.com/sonkar-lab/llm_grading_calibration}{here}.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T10:38:22Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Robinson Ferrer</name>
+    </author>
+    <author>
+      <name>Damla Turgut</name>
+    </author>
+    <author>
+      <name>Zhongzhou Chen</name>
+    </author>
+    <author>
+      <name>Shashank Sonkar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29535v1</id>
+    <title>Quantization with Unified Adaptive Distillation to enable multi-LoRA based one-for-all Generative Vision Models on edge</title>
+    <updated>2026-03-31T10:17:07Z</updated>
+    <link href="https://arxiv.org/abs/2603.29535v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29535v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative Artificial Intelligence (GenAI) features such as image editing, object removal, and prompt-guided image transformation are increasingly integrated into mobile applications. However, deploying Large Vision Models (LVMs) for such tasks on resource-constrained devices remains challenging due to their high memory and compute requirements. While Low-Rank Adapters (LoRAs) enable parameter-efficient task adaptation, existing Mobile deployment pipelines typically compile separate model binaries for each LoRA + a copy of the foundation model, resulting in redundant storage and increased runtime overhead. In this work, we present a unified framework for enabling multi-task GenAI inference on edge devices using a single shared model. Our key idea is to treat LoRA weights as runtime inputs rather than embedding them into the compiled model graph, allowing dynamic task switching at runtime without recompilation. Then, to support efficient on-device execution, we introduce QUAD (Quantization with Unified Adaptive Distillation), a quantizationaware training strategy that aligns multiple LoRA adapters under a shared quantization profile. We implement the proposed system with a lightweight runtime stack compatible with mobile NPUs and evaluate it across multiple chipsets. Experimental results demonstrate up to 6x and 4x reduction in memory footprint and latency improvements, respectively, while maintaining high visual quality across multiple GenAI tasks.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T10:17:07Z</published>
+    <arxiv:comment>Accepted at the Mobile AI Workshop, CVPR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Sowmya Vajrala</name>
+    </author>
+    <author>
+      <name>Aakash Parmar</name>
+    </author>
+    <author>
+      <name>Prasanna R</name>
+    </author>
+    <author>
+      <name>Sravanth Kodavanti</name>
+    </author>
+    <author>
+      <name>Manjunath Arveti</name>
+    </author>
+    <author>
+      <name>Srinivas Soumitri Miriyala</name>
+    </author>
+    <author>
+      <name>Ashok Senapati</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29518v1</id>
+    <title>Impact of enriched meaning representations for language generation in dialogue tasks: A comprehensive exploration of the relevance of tasks, corpora and metrics</title>
+    <updated>2026-03-31T10:03:56Z</updated>
+    <link href="https://arxiv.org/abs/2603.29518v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29518v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Conversational systems should generate diverse language forms to interact fluently and accurately with users. In this context, Natural Language Generation (NLG) engines convert Meaning Representations (MRs) into sentences, directly influencing user perception. These MRs usually encode the communicative function (e.g., inform, request, confirm) via DAs and enumerate the semantic content with slot-value pairs. In this work, our objective is to analyse whether providing a task demonstrator to the generator enhances the generations of a fine-tuned model. This demonstrator is an MR-sentence pair extracted from the original dataset that enriches the input at training and inference time. The analysis involves five metrics that focus on different linguistic aspects, and four datasets that differ in multiple features, such as domain, size, lexicon, MR variability, and acquisition process. To the best of our knowledge, this is the first study on dialogue NLG implementing a comparative analysis of the impact of MRs on generation quality across domains, corpus characteristics, and the metrics used to evaluate these generations. Our key insight is that the proposed enriched inputs are effective for complex tasks and small datasets with high variability in MRs and sentences. They are also beneficial in zero-shot settings for any domain. Moreover, the analysis of the metrics shows that semantic metrics capture generation quality more accurately than lexical metrics. In addition, among these semantic metrics, those trained with human ratings can detect omissions and other subtle semantic issues that embedding-based metrics often miss. Finally, the evolution of the metric scores and the excellent results for Slot Accuracy and Dialogue Act Accuracy demonstrate that the generative models present fast adaptability to different tasks and robustness at semantic and communicative intention levels.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T10:03:56Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Alain Vázquez</name>
+    </author>
+    <author>
+      <name>Maria Inés Torres</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29517v1</id>
+    <title>LLM Probe: Evaluating LLMs for Low-Resource Languages</title>
+    <updated>2026-03-31T10:03:38Z</updated>
+    <link href="https://arxiv.org/abs/2603.29517v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29517v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite rapid advances in large language models (LLMs), their linguistic abilities in low-resource and morphologically rich languages are still not well understood due to limited annotated resources and the absence of standardized evaluation frameworks. This paper presents LLM Probe, a lexicon-based assessment framework designed to systematically evaluate the linguistic skills of LLMs in low-resource language environments. The framework analyzes models across four areas of language understanding: lexical alignment, part-of-speech recognition, morphosyntactic probing, and translation accuracy. To illustrate the framework, we create a manually annotated benchmark dataset using a low-resource Semitic language as a case study. The dataset comprises bilingual lexicons with linguistic annotations, including part-of-speech tags, grammatical gender, and morphosyntactic features, which demonstrate high inter-annotator agreement to ensure reliable annotations. We test a variety of models, including causal language models and sequence-to-sequence architectures. The results reveal notable differences in performance across various linguistic tasks: sequence-to-sequence models generally excel in morphosyntactic analysis and translation quality, whereas causal models demonstrate strong performance in lexical alignment but exhibit weaker translation accuracy. Our results emphasize the need for linguistically grounded evaluation to better understand LLM limitations in low-resource settings. We release LLM Probe and the accompanying benchmark dataset as open-source tools to promote reproducible benchmarking and to support the development of more inclusive multilingual language technologies.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T10:03:38Z</published>
+    <arxiv:comment>11 pages, 6 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hailay Kidu Teklehaymanot</name>
+    </author>
+    <author>
+      <name>Gebrearegawi Gebremariam</name>
+    </author>
+    <author>
+      <name>Wolfgang Nejdl</name>
     </author>
   </entry>
 </feed>
