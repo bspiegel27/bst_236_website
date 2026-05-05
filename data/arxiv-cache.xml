@@ -1,339 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-05-04T01:58:33Z -->
+<!-- Last updated: 2026-05-05T01:58:26Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-05-04T01:58:34Z</updated>
+  <updated>2026-05-05T01:58:27Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>142410</opensearch:totalResults>
+  <opensearch:totalResults>142523</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2605.00789v1</id>
-    <title>Make Your LVLM KV Cache More Lightweight</title>
-    <updated>2026-05-01T17:11:39Z</updated>
-    <link href="https://arxiv.org/abs/2605.00789v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00789v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Key-Value (KV) cache has become a de facto component of modern Large Vision-Language Models (LVLMs) for inference. While it enhances decoding efficiency in Large Language Models (LLMs), its direct adoption in LVLMs introduces substantial GPU memory overhead due to the large number of vision tokens processed during the prefill stage. To tackle this problem, we propose LightKV, a novel approach that reduces KV cache size by exploiting the redundancy among vision-token embeddings. Guided by text prompts, LightKV employs cross-modality message passing to aggregate informative messages across vision tokens and progressively compress them during prefill. This prompt-aware guidance distinguishes our method from prior vision-only compression strategies. We evaluate LightKV on eight open-source LVLMs across eight public benchmark datasets, e.g., MME and SeedBench. Experimental results demonstrate that with only 55% of the original vision tokens, LightKV (a) halves the vision-token KV cache size, (b) reduces computation by up to 40%, and (c) preserves general-purpose performance while significantly outperforming existing baselines.</summary>
+    <id>http://arxiv.org/abs/2605.01827v1</id>
+    <title>Referring Multiple Regions with Large Multimodal Models via Contextual Latent Steering</title>
+    <updated>2026-05-03T11:34:36Z</updated>
+    <link href="https://arxiv.org/abs/2605.01827v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01827v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Multimodal Models (LMMs) have recently demonstrated their proficiency in holistic visual comprehension. However, most of them struggle to tackle region-level perception guided by visual prompts, especially for cases where multiple regions are referred simultaneously, or scenarios where global contexts are necessary for precise visual referring. We introduce Contextual Latent Steering (CSteer), a training-free approach for guiding general LMMs to refer multiple regions contextually, without expensive fine-tuning or architectural modifications. CSteer starts with pre-computing contextual vectors that implicitly represent visual referring behaviors, such as differentiation among regions and attention to global contexts, followed by representation editing during inference time. Experimental results on multiple datasets indicate that general LMMs with CSteer outperform tailored referring LMMs in most cases, suggesting a promising solution in training-free, and setting new state-of-the-art for this field. Code is available at https://github.com/xing0047/csteer.git.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T17:11:39Z</published>
-    <arxiv:comment>Accepted to Transactions on Machine Learning Research (TMLR), 2026</arxiv:comment>
+    <published>2026-05-03T11:34:36Z</published>
+    <arxiv:comment>ICML 2026</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Xihao Chen</name>
+      <name>Yun Xing</name>
     </author>
     <author>
-      <name>Yangyang Guo</name>
+      <name>Hanyuan Liu</name>
     </author>
     <author>
-      <name>Roger Zimmermann</name>
+      <name>Jiahao Nie</name>
+    </author>
+    <author>
+      <name>Shijian Lu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2605.00778v1</id>
-    <title>Observable Performance Does Not Fully Reflect System Organization: A Multi-Level Analysis of Gait Dynamics Under Occlusal Constraint</title>
-    <updated>2026-05-01T16:48:00Z</updated>
-    <link href="https://arxiv.org/abs/2605.00778v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00778v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In biomechanical systems, observable performance is often used as a proxy for underlying system organization. However, this assumption implicitly presumes a correspondence between output metrics and internal system states that may not hold in adaptive systems. In this study, the vertical dimension of occlusion (VDO) is considered as a constraint applied to an adaptive neuromechanical system, enabling the exploration of system-level responses under controlled variations. A single-case design in a patient with Parkinson's disease allows an intra-individual analysis across repeated conditions.The analysis is structured across three complementary levels: (i) aggregated linear metrics describing observable performance, (ii) a dynamical systems framework describing temporal organization in state space, and (iii) a latent space representation obtained through unsupervised embedding. The results show that conditions with comparable observable performance may correspond to different organizations in both state space and latent space representations. This dissociation highlights a limitation of aggregated metrics and suggests that similar outputs may arise from non-equivalent system states. A fourth level is proposed as a purely conceptual extension describing potential relationships between system states. This level is not implemented and is not derived from experimental data. These observations are strictly exploratory and non-causal. The proposed framework does not establish mechanistic, predictive, or directional relationships, but provides a structured approach for analyzing constraint-driven systems across multiple levels of representation.</summary>
+    <id>http://arxiv.org/abs/2605.01817v1</id>
+    <title>Skipping the Zeros in Diffusion Models for Sparse Data Generation</title>
+    <updated>2026-05-03T10:51:25Z</updated>
+    <link href="https://arxiv.org/abs/2605.01817v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01817v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models (DMs) excel on dense continuous data, but are not designed for sparse continuous data. They do not model exact zeros that represent the deliberate absence of a signal. As a result, they erase sparsity patterns and perform unnecessary computation on mostly zero entries. With Sparsity-Exploiting Diffusion (SED), we model only non-zero values, preserving sparsity. SED delivers computational savings while maintaining or improving generation quality by skipping zeros during training and inference. Across physics and biology benchmarks, SED matches or surpasses conventional DMs and domain-specific baselines, while vision experiments provide intuitive insights into the limitations of dense DMs and the benefits of SED.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T16:48:00Z</published>
-    <arxiv:comment>1 table, 4 figures. Exploratory single-case study</arxiv:comment>
+    <published>2026-05-03T10:51:25Z</published>
+    <arxiv:comment>Accepted to ICML 2026</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Jacques Raynal</name>
+      <name>Phil Sidney Ostheimer</name>
     </author>
     <author>
-      <name>Pierre Slangen</name>
+      <name>Mayank Nagda</name>
     </author>
     <author>
-      <name>Jacques Margerit</name>
+      <name>Andriy Balinskyy</name>
+    </author>
+    <author>
+      <name>Gabriel Vicente Rodrigues</name>
+    </author>
+    <author>
+      <name>Jean Radig</name>
+    </author>
+    <author>
+      <name>Carl Herrmann</name>
+    </author>
+    <author>
+      <name>Stephan Mandt</name>
+    </author>
+    <author>
+      <name>Marius Kloft</name>
+    </author>
+    <author>
+      <name>Sophie Fellenz</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2605.00767v1</id>
-    <title>Magnetic loops in the solar transition region</title>
-    <updated>2026-05-01T16:29:51Z</updated>
-    <link href="https://arxiv.org/abs/2605.00767v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00767v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Transition region (TR) loops are arcade-like features in the solar transition region, with temperatures roughly between $2\times10^4$ K and $6\times10^5$ K. They are a fundamental building block of TR, which are results of the coupling between the magnetic field and the TR plasma. Their dynamics is closely related to the transport of energy and mass through the TR. Studies on this class of loops since the launch of the Interface Region Imaging Spectrograph (IRIS) have revealed that they are distinct from coronal loops. Observations have revealed that they are associated with many small-scale dynamic phenomena in the TR, from which one can infer the physics behind the energy and mass transfer in a magnetically confined environment at TR temperature. This review summarises the observational results of TR loops, showing their morphology, dynamics, plasma parameters, their relationship with flux emergence, their heating properties, and their implication in the heating of the solar atmosphere. This class of magnetic loops is much less well understood than their coronal counterparts. This review also concludes with several critical questions that need to be answered in the coming era with more advanced observational techniques and more precise and realistic simulations.</summary>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.space-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T16:29:51Z</published>
-    <arxiv:comment>An invited review to appear on RMPP, 32 pages</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.SR"/>
-    <author>
-      <name>Zhenghua Huang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2605.00765v1</id>
-    <title>Efficient Longitudinal Function-on-Function Regression</title>
-    <updated>2026-05-01T16:25:35Z</updated>
-    <link href="https://arxiv.org/abs/2605.00765v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00765v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We propose a computationally efficient inferential procedure for longitudinal function-on-function regression. The method follows a marginal three-step approach: (1) fit massive pointwise longitudinal scalar-on-function regression models, (2) smooth the resulting estimates along the bivariate functional domain, and (3) compute confidence bands using either an analytic approach for Gaussian data or a cluster bootstrap for Gaussian or non-Gaussian data. Simulation studies demonstrate that the proposed method achieves accurate estimation and valid inference, while substantially reducing computational burden compared to existing approaches. Methods are motivated by a physical activity intervention trial in older adults where high-dimensional wearable data were collected longitudinally across multiple visits. Our applications reveal significant increases in physical activity in the morning using interpersonal intervention strategies, but not intrapersonal strategies. The proposed methods are implemented in an R package.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T16:25:35Z</published>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Leif Verace</name>
-    </author>
-    <author>
-      <name>Siobhan McMahon</name>
-    </author>
-    <author>
-      <name>Erjia Cui</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2605.00742v1</id>
-    <title>Position: agentic AI orchestration should be Bayes-consistent</title>
-    <updated>2026-05-01T15:43:43Z</updated>
-    <link href="https://arxiv.org/abs/2605.00742v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00742v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>LLMs excel at predictive tasks and complex reasoning tasks, but many high-value deployments rely on decisions under uncertainty, for example, which tool to call, which expert to consult, or how many resources to invest. While the usefulness and feasibility of Bayesian approaches remain unclear for LLM inference, this position paper argues that the control layer of an agentic AI system (that orchestrates LLMs and tools) is a clear case where Bayesian principles should shine. Bayesian decision theory provides a framework for agentic systems that can help to maintain beliefs over task-relevant latent quantities, to update these beliefs from observed agentic and human-AI interactions, and to choose actions. Making LLMs themselves explicitly Bayesian belief-updating engines remains computationally intensive and conceptually nontrivial as a general modeling target. In contrast, this paper argues that coherent decision-making requires Bayesian principles at the orchestration level of the agentic system, not necessarily the LLM agent parameters. This paper articulates practical properties for Bayesian control that fit modern agentic AI systems and human-AI collaboration, and provides concrete examples and design patterns to illustrate how calibrated beliefs and utility-aware policies can improve agentic AI orchestration.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T15:43:43Z</published>
-    <arxiv:comment>Accepted for publication at ICML 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Theodore Papamarkou</name>
-    </author>
-    <author>
-      <name>Pierre Alquier</name>
-    </author>
-    <author>
-      <name>Matthias Bauer</name>
-    </author>
-    <author>
-      <name>Wray Buntine</name>
-    </author>
-    <author>
-      <name>Andrew Davison</name>
-    </author>
-    <author>
-      <name>Gintare Karolina Dziugaite</name>
-    </author>
-    <author>
-      <name>Maurizio Filippone</name>
-    </author>
-    <author>
-      <name>Andrew Y. K. Foong</name>
-    </author>
-    <author>
-      <name>Vincent Fortuin</name>
-    </author>
-    <author>
-      <name>Dimitris Fouskakis</name>
-    </author>
-    <author>
-      <name>Jes Frellsen</name>
-    </author>
-    <author>
-      <name>Eyke Hüllermeier</name>
-    </author>
-    <author>
-      <name>Theofanis Karaletsos</name>
-    </author>
-    <author>
-      <name>Mohammad Emtiyaz Khan</name>
-    </author>
-    <author>
-      <name>Nikita Kotelevskii</name>
-    </author>
-    <author>
-      <name>Salem Lahlou</name>
-    </author>
-    <author>
-      <name>Yingzhen Li</name>
-    </author>
-    <author>
-      <name>Fang Liu</name>
-    </author>
-    <author>
-      <name>Clare Lyle</name>
-    </author>
-    <author>
-      <name>Thomas Möllenhoff</name>
-    </author>
-    <author>
-      <name>Konstantina Palla</name>
-    </author>
-    <author>
-      <name>Maxim Panov</name>
-    </author>
-    <author>
-      <name>Yusuf Sale</name>
-    </author>
-    <author>
-      <name>Kajetan Schweighofer</name>
-    </author>
-    <author>
-      <name>Artem Shelmanov</name>
-    </author>
-    <author>
-      <name>Siddharth Swaroop</name>
-    </author>
-    <author>
-      <name>Martin Trapp</name>
-    </author>
-    <author>
-      <name>Willem Waegeman</name>
-    </author>
-    <author>
-      <name>Andrew Gordon Wilson</name>
-    </author>
-    <author>
-      <name>Alexey Zaytsev</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2605.00737v1</id>
-    <title>To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling</title>
-    <updated>2026-05-01T15:38:13Z</updated>
-    <link href="https://arxiv.org/abs/2605.00737v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00737v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Agentic AI architectures augment LLMs with external tools, unlocking strong capabilities. However, tool use is not always beneficial; some calls may be redundant or even harmful. Effective tool use, therefore, hinges on a core LLM decision: whether to call or not call a tool, when performing a task. This decision is particularly challenging for web search tools, where the benefits of external information depend on the model's internal knowledge and its ability to integrate potentially noisy tool responses. We introduce a principled framework inspired by decision-making theory to evaluate web search tool-use decisions along three key factors: necessity, utility, and affordability. Our analysis combines two complementary lenses: a normative perspective that infers true need and utility from an optimal allocation of tool calls, and a descriptive perspective that infers the model's self-perceived need and utility from their observed behaviors. We find that models' perceived need and utility of tool calls are often misaligned with their true need and utility. Building on this framework, we train lightweight estimators of need and utility based on models' hidden states. Our estimators enable simple controllers that can improve decision quality and lead to stronger task performance than the self-perceived set up across three tasks and six models.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T15:38:13Z</published>
-    <arxiv:comment>Preprint, under review</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Qinyuan Wu</name>
-    </author>
-    <author>
-      <name>Soumi Das</name>
-    </author>
-    <author>
-      <name>Mahsa Amani</name>
-    </author>
-    <author>
-      <name>Arijit Nag</name>
-    </author>
-    <author>
-      <name>Seungeon Lee</name>
-    </author>
-    <author>
-      <name>Krishna P. Gummadi</name>
-    </author>
-    <author>
-      <name>Abhilasha Ravichander</name>
-    </author>
-    <author>
-      <name>Muhammad Bilal Zafar</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2605.00730v1</id>
-    <title>Reconstruction of glymphatic transport fields from subject-specific imaging data, with particular emphasis on cerebrospinal fluid flow and tracer conservation</title>
-    <updated>2026-05-01T15:29:16Z</updated>
-    <link href="https://arxiv.org/abs/2605.00730v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00730v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The reconstruction of physically valid transport fields from subject-specific imaging data is a fundamental challenge in image-based computational modeling due to measurement noise, modeling uncertainties and discretization errors. Without a methodology to construct models that faithfully reflect the underlying physics, mechanistic understanding of complex biological systems is inherently limited. In this work, we address this challenge in the glymphatic system, the brain's waste-clearance network, where cerebrospinal fluid (CSF) is transported through perivascular spaces into the brain parenchyma to facilitate metabolic waste removal. We introduce a computational framework for the high-fidelity reconstruction of subject-specific glymphatic transport fields from spatiotemporal imaging data. The formulation utilizes an advection-diffusion model with a velocity decomposition that imposes mass conservation, enabling the recovery of solenoidal (divergence-free) velocity fields through the solution of a constrained inverse problem. The system is discretized using immersed isogeometric analysis with quadratic B-spline basis functions, providing smooth, high-continuity solutions and inherent regularization of imaging noise. We demonstrate the framework's utility by using contrast-enhanced magnetic resonance imaging of tracer transport in a mouse brain, obtaining spatially varying estimates of CSF velocity, diffusivity, and clearance parameters. Forward simulations using the recovered fields show close agreement with experimental observations, validating the framework's ability to characterize complex transport dynamics while preserving physical integrity. This approach provides a generalizable methodology for the robust inference of physically consistent transport fields from imperfect imaging data, with broad applicability to the image-guided modeling of biological and engineering systems.</summary>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T15:29:16Z</published>
-    <arxiv:comment>Total 40 pages including references and appendix, 16 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CE"/>
-    <author>
-      <name>A. Derya Bakiler</name>
-    </author>
-    <author>
-      <name>Michael J. Johnson</name>
-    </author>
-    <author>
-      <name>Michael R. A. Abdelmalik</name>
-    </author>
-    <author>
-      <name>Frimpong A. Baidoo</name>
-    </author>
-    <author>
-      <name>Andrew Badachhape</name>
-    </author>
-    <author>
-      <name>Ananth V. Annapragada</name>
-    </author>
-    <author>
-      <name>Thomas J. R. Hughes</name>
-    </author>
-    <author>
-      <name>Shaolie S. Hossain</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2605.00709v1</id>
-    <title>Bootstrap Inference under General Two-way Clustering with Serially and Spatially Dependent Common Effects</title>
-    <updated>2026-05-01T14:54:48Z</updated>
-    <link href="https://arxiv.org/abs/2605.00709v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00709v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This paper develops bootstrap procedures for inference in linear regression models with two-way clustered data. We characterize the estimator's asymptotic behavior in five mutually exclusive and exhaustive regimes: three Gaussian and two non-Gaussian. We establish four impossibility results: heterogeneous score components preclude uniform consistency; uniform consistency also fails in one non-Gaussian (infeasible) regime; the infeasible regime is not uniformly distinguishable from a feasible one; and uniform validity over all feasible regimes rules out uniform conservativeness over the infeasible regime.
-  To address the feasible regimes, we propose a data-driven regime classifier and a projection-based wild bootstrap procedure. The procedure delivers uniformly valid inference across the four feasible regimes while allowing serial dependence along the second clustering dimension and spatial dependence along the first. This combination of regime adaptivity and flexible dependence is new to the two-way clustering literature. Monte Carlo simulations confirm the accuracy and flexibility of the proposed methods in settings with complex clustering structures.</summary>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T14:54:48Z</published>
-    <arxiv:primary_category term="math.ST"/>
-    <author>
-      <name>Ulrich Hounyo</name>
-    </author>
-    <author>
-      <name>Jiahao Lin</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2605.00707v1</id>
-    <title>PhysEdit: Physically-Consistent Region-Aware Image Editing via Adaptive Spatio-Temporal Reasoning</title>
-    <updated>2026-05-01T14:51:52Z</updated>
-    <link href="https://arxiv.org/abs/2605.00707v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00707v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Image editing instructions are heterogeneous: a color swap, an object insertion, and a physical-action edit all demand different spatial coverage and different reasoning depth, yet existing reasoning-based editors apply a single fixed inference recipe to every instruction. We argue that adaptivity along both the spatial and temporal axes is the missing degree of freedom, and we present PhysEdit, an editing framework built around this principle. PhysEdit introduces two inference-time modules that compose without retraining the backbone. At its core, (1) Complexity-Adaptive Reasoning Depth (CARD) predicts edit complexity directly from the instruction and reference image and allocates the reasoning step count N_r and reasoning-token length r per sample -- turning a previously fixed inference schedule into a conditional-computation problem. CARD is supported by (2) a Spatial Reasoning Mask (SRM) that extracts an instruction-conditioned spatial prior from cross-attention to confine reasoning to regions that semantically require it. On the full 737-case ImgEdit Basic-Edit Suite, PhysEdit delivers a 1.18x wall-clock speedup (64.3s vs. 76.1s per sample) over a strong reasoning baseline while slightly improving instruction adherence (CLIP-T 0.2283 vs. 0.2266, +0.7%) and matching identity preservation within noise (CLIP-I 0.8246 vs. 0.8280). The speedup is category-dependent and reaches 1.52x on appearance-level edits, validating CARD's adaptive allocation as the principal source of efficiency gain. A 30-sample pilot with full ablations isolates the contribution of each module.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T14:51:52Z</published>
+    <id>http://arxiv.org/abs/2605.01807v1</id>
+    <title>Relativistic BDNK MHD Evolution in a Boost-Invariant Medium and Its Impact on Dilepton Production</title>
+    <updated>2026-05-03T10:23:00Z</updated>
+    <link href="https://arxiv.org/abs/2605.01807v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01807v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we explore a Bemfica--Disconzi--Noronha--Kovtun (BDNK)-type formulation of relativistic magnetohydrodynamics, providing a causal and stable first-order description of dissipative fluids. We derive coupled evolution equations for the temperature and magnetic field in a boost-invariant Bjorken background, restricting to $(0+1)$D dynamics while retaining all relevant first-order gradients. By varying the transport coefficients, we disentangle the interplay and mutual backreaction between the thermal and electromagnetic sectors. We find that, for comparable transport coefficients, the magnetic field responds more strongly to changes in the temperature evolution, while its feedback on the temperature remains subleading. We further analyze the number density evolution, which is sensitive to both temperature gradients and magnetic-field dynamics. We also investigate implications for dilepton production, where the magnetic field modifies the emission rate via the relaxation time in a kinetic-theory framework. The coupled evolution leads to a suppression of the low-mass dilepton spectrum, primarily driven by enhanced cooling in the presence of positive coupling between temperature gradients and magnetic-field evolution, as compared to scenarios without such feedback.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T10:23:00Z</published>
     <arxiv:comment>11 pages, 7 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:primary_category term="nucl-th"/>
     <author>
-      <name>Guandong Li</name>
+      <name>Ankit Kumar Panda</name>
     </author>
     <author>
-      <name>Mengxia Ye</name>
+      <name>Rajesh Biswas</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2605.00699v1</id>
-    <title>STARE: Step-wise Temporal Alignment and Red-teaming Engine for Multi-modal Toxicity Attack</title>
-    <updated>2026-05-01T14:36:29Z</updated>
-    <link href="https://arxiv.org/abs/2605.00699v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2605.00699v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Red-teaming Vision-Language Models is essential for identifying vulnerabilities where adversarial image-text inputs trigger toxic outputs. Existing approaches treat image generation as a black box, returning only terminal toxicity scores and leaving open the question of when and how toxic semantics emerge during multi-step synthesis. We introduce STARE, a hierarchical reinforcement learning framework that treats the denoising trajectory itself as the attack surface, under a direct white-box T2I and query-only black-box VLM setting. By coupling a high-level prompt editor with low-level T2I fine-tuning via Group Relative Policy Optimization (GRPO), STARE attains a 68\% improvement in Attack Success Rate over state-of-the-art black-box and white-box baselines. More importantly, this trajectory-level view surfaces the Optimization-Induced Phase Alignment phenomenon: vanilla models exhibit diffuse toxicity, whereas adversarial optimization concentrates conceptual harms into early semantic phases and detail-oriented harms into late refinement. Targeted perturbations of either window selectively suppress different toxicity categories, indicating that this temporal structure is a genuine causal handle rather than a side effect of the hierarchical design. The phenomenon turns toxicity formation from a chaotic process into a small set of predictable vulnerability windows, providing both a potent attack engine and a basis for phase-aware safety mechanisms. Content warning: This paper contains examples of toxic content that may be offensive or disturbing.</summary>
+    <id>http://arxiv.org/abs/2605.01805v1</id>
+    <title>MAGIC: Multi-Step Advantage-Gated Causal Influence for Multi-agent Reinforcement Learning</title>
+    <updated>2026-05-03T10:05:48Z</updated>
+    <link href="https://arxiv.org/abs/2605.01805v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01805v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A key challenge in multi-agent reinforcement learning (MARL) lies in designing learning signals that effectively promote coordination among agents. Designing such signals necessitates the ability to quantify the true, long-term causal influence between agents. To address this, we introduce Multi-step Advantage-Gated Interventional Causal MARL (MAGIC), a framework that extracts multi-step causal influences between agents and selectively converts them into intrinsic rewards. MAGIC uses causal intervention with conditional mutual information to quantify long-horizon agent influence, and introduces an advantage-based gating mechanism to ensure exploration is directed toward beneficial, goal-aligned behaviors. Experiments across multiple standard MARL benchmarks and task families, including MPE and SMAC/SMACv2, demonstrate that MAGIC outperforms state-of-the-art methods by a significant margin, achieving an improvement of at least 10.1% in the main evaluation metric.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T10:05:48Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Haohan Yu</name>
+    </author>
+    <author>
+      <name>Jinmiao Cong</name>
+    </author>
+    <author>
+      <name>Shengzhi Wang</name>
+    </author>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Chanjuan Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01793v1</id>
+    <title>Analytic Framework for Estimating Memory Cost</title>
+    <updated>2026-05-03T09:17:56Z</updated>
+    <link href="https://arxiv.org/abs/2605.01793v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01793v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As artificial intelligence (AI) models quickly spread and become more advanced, they are requiring an ever-increasing amount of data and compute capability, leading to a significant energy cost. Training and inference of AI models including the large language models (LLMs) and deep neural networks (DNNs) are contributing to a large carbon footprint owing to the massive amount of memory they consume in data centers. In this article, we present a generalized framework that quantifies these energy costs incurred to the environment. This framework provides a foundational quantification of AI's ecological footprint, facilitating the development of sustainable architectural strategies for future models.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T09:17:56Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Anirudh Shankar</name>
+    </author>
+    <author>
+      <name>Avhishek Chatterjee</name>
+    </author>
+    <author>
+      <name>Anjan Chakravorty</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01790v1</id>
+    <title>Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation</title>
+    <updated>2026-05-03T09:13:20Z</updated>
+    <link href="https://arxiv.org/abs/2605.01790v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01790v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A common design pattern in high-quality music generation is to handle structure and fidelity in different representation spaces: a generator first models high-level structure, followed by diffusion-based or neural decoding stages that reconstruct fine details. In this work, we explore an alternative view: both may be progressively modeled within a single deep acoustic-token hierarchy. To study this, we build a 64-layer residual vector quantization (RVQ) acoustic representation and propose a two-stage coarse-to-fine generation framework. A backbone model first generates coarse acoustic tokens for the full track, and a super-resolution model then completes finer tokens within the same acoustic token space. The super-resolution stage works at full-track scale and refines tokens layer by layer while running in parallel over time, leading to a fixed 62-step inference process. To jointly improve lyric alignment and fine-detail reconstruction, we further introduce hybrid-attention training: the alignment objective uses causal attention, while layer-wise refinement uses full attention. A key finding is that text--vocal alignment can emerge within pure acoustic-token language modeling, without requiring a separate semantic token stage. Moreover, initializing the super-resolution model from the trained backbone significantly improves convergence and final quality. Taken together, our results suggest that high-quality music generation can be effectively pursued without separating structure and fidelity into heterogeneous representation spaces. Instead, both can be progressively modeled within a unified acoustic-token hierarchy, pointing toward a simpler and more unified path to high-quality music generation.</summary>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T09:13:20Z</published>
+    <arxiv:primary_category term="cs.SD"/>
+    <author>
+      <name>Jiafeng Liu</name>
+    </author>
+    <author>
+      <name>Yuanliang Dong</name>
+    </author>
+    <author>
+      <name>Hongjia Liu</name>
+    </author>
+    <author>
+      <name>Yuqing Cheng</name>
+    </author>
+    <author>
+      <name>Zhancheng Guo</name>
+    </author>
+    <author>
+      <name>Huijing Liang</name>
+    </author>
+    <author>
+      <name>Wenbo Zhan</name>
+    </author>
+    <author>
+      <name>Yuming Sun</name>
+    </author>
+    <author>
+      <name>Xiaobing Li</name>
+    </author>
+    <author>
+      <name>Feng Yu</name>
+    </author>
+    <author>
+      <name>Maosong Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01782v1</id>
+    <title>Needle-in-RAG: Prompt-Conditioned Character-Level Traceback of Poisoned Spans in Retrieved Evidence</title>
+    <updated>2026-05-03T08:42:29Z</updated>
+    <link href="https://arxiv.org/abs/2605.01782v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01782v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval-augmented generation (RAG) improves factual grounding by conditioning large language models on retrieved evidence, but it also opens a data-layer attack surface: poisoned corpus entries can steer outputs without changing model parameters. Existing defenses and traceback methods are largely passage-level, which is too coarse for modern attacks whose effective payload may be a short fabricated claim, trigger phrase, or hidden instruction embedded inside an otherwise benign chunk. We study black-box character-level poison traceback in RAG and present RAGCharacter, a two-pass forensic framework that localizes the responsible retrieved span for a concrete misgeneration event. Pass-0 runs standard RAG while logging a prompt-anchored execution trace. Pass-1 re-enters a triggered trace and performs event-conditioned traceback over prompt-used evidence via budgeted counterfactual masking and replay, yielding an attribution span for forensic reporting and a causal span under the logged trace. We further introduce an evaluation protocol that measures both event-level chunk traceback and character-level localization fidelity. Across two QA corpora, five poisoning attack families, six target LLMs, and multiple passage- and character-level baselines, RAGCharacter achieves the best overall trade-off within our benchmark between localization accuracy and low over-attribution. These results suggest that prompt-conditioned, black-box character-level traceback can be feasible, moving RAG forensics from document-level suspicion toward finer-grained evidence auditing and potential remediation.</summary>
     <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-05-01T14:36:29Z</published>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T08:42:29Z</published>
     <arxiv:primary_category term="cs.CR"/>
     <author>
-      <name>Xutao Mao</name>
+      <name>Huining Cui</name>
     </author>
     <author>
-      <name>Liangjie Zhao</name>
+      <name>Wei Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01766v1</id>
+    <title>Mitigating Multimodal LLMs Hallucinations via Relevance Propagation at Inference Time</title>
+    <updated>2026-05-03T07:58:02Z</updated>
+    <link href="https://arxiv.org/abs/2605.01766v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01766v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal large language models (MLLMs) have revolutionized the landscape of AI, demonstrating impressive capabilities in tackling complex vision and audio-language tasks. However, a critical challenge remains: these models often suffer from hallucinations, generating outputs that diverge from the provided perceptual inputs. This tendency stems from an inherent imbalance in modality utilization during inference, where the dominance of textual tokens undermines the potential of perceptual inputs. As a result, the model frequently resorts to textual language priors at the expense of grounded evidence. To tackle this issue, we propose Learning Inference-time Modality Enhancement (LIME), a training-free framework designed to bolster multimodal grounding by explicitly enhancing modality usage during decoding. LIME leverages Layer-wise Relevance Propagation (LRP) to quantify token-level contributions and defines a relevance-based objective that promotes increased reliance on perceptual inputs. This objective is enforced through inference-time updates to the model's key-value representations, without modifying model parameters or requiring additional training data. We evaluate LIME across multiple multimodal benchmarks in both vision and audio domains, demonstrating consistent reductions in hallucinations and enhanced grounding while preserving generation quality. Further analysis shows that LIME increases modality contribution and produces more localized and semantically aligned relevance patterns.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T07:58:02Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Itai Allouche</name>
     </author>
     <author>
-      <name>Tao Liu</name>
+      <name>Joseph Keshet</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01765v1</id>
+    <title>Distributional Causal Mediation via Conditional Generative Modeling</title>
+    <updated>2026-05-03T07:57:41Z</updated>
+    <link href="https://arxiv.org/abs/2605.01765v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01765v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mediation analysis has traditionally focused on outcome-level summary contrasts, such as mean effects, which may obscure substantial distributional changes induced by complex and nonlinear causal mechanisms. We propose Distributional Causal Mediation Analysis (DCMA), a generative learning framework for identifying and estimating treatment effects on entire outcome distributions transmitted through multiple mediators. DCMA learns conditional generative models for the mediators and the outcome, recovering the relevant conditional distributions from observational data. Leveraging the identification formulas, it reconstructs interventional outcome distributions via Monte Carlo forward simulation by noise resampling, enabling the capture of both classical summary effects and rich distributional contrasts such as energy distance and the Wasserstein distance. Analytical error bounds are derived to decompose how estimation errors in the learned conditional models propagate to the reconstructed interventional outcome distributions. The empirical effectiveness of DCMA is demonstrated through numerical experiments and real-world data applications.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T07:57:41Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Jinlun Zhang</name>
     </author>
     <author>
-      <name>Xiang Zheng</name>
+      <name>Haoneng Huang</name>
     </author>
     <author>
-      <name>Hongying Zan</name>
+      <name>Zishu Zhan</name>
     </author>
     <author>
-      <name>Cong Wang</name>
+      <name>Chunquan Ou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01761v1</id>
+    <title>TrajShield: Trajectory-Level Safety Mediation for Defending Text-to-Video Models Against Jailbreak Attacks</title>
+    <updated>2026-05-03T07:49:51Z</updated>
+    <link href="https://arxiv.org/abs/2605.01761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text-to-Video (T2V) models have demonstrated remarkable capability in generating temporally coherent videos from natural language prompts, yet they also risk producing unsafe content such as violence or explicit material. Existing prompt-level defenses are largely inherited from text-to-image safety and operate on the lexical surface of the input, making them vulnerable to jailbreak attacks that disguise harmful intent through rephrasing or adversarial prompting. Moreover, T2V generation introduces a distinctive challenge overlooked by prior work: temporally emergent risk, where a seemingly benign prompt leads to unsafe content through the generator's temporal extrapolation toward narrative coherence. We propose \method{}, a training-free, inference-time defense framework that reformulates T2V safety as a causal intervention in a temporally structured semantic space. TrajShield handles explicit unsafe prompts, jailbreak attacks, and temporally emergent risks in a unified manner by simulating the implied trajectory of a prompt, localizing the causal origin of potential risk, and applying a minimally invasive rewrite that neutralizes the risk while preserving safety-irrelevant semantics. Experiments on T2VSafetyBench across 14 safety categories and multiple T2V backends demonstrate that TrajShield achieves state-of-the-art defenseive performance while maintaining high semantic fidelity, substantially outperforming existing defenses, with an average ASR reduction of 52.44\%.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T07:49:51Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Quanchen Zou</name>
+    </author>
+    <author>
+      <name>Nizhang Li</name>
+    </author>
+    <author>
+      <name>Wenxin Zhang</name>
+    </author>
+    <author>
+      <name>Jiaye Lin</name>
+    </author>
+    <author>
+      <name>Yangchen Zeng</name>
+    </author>
+    <author>
+      <name>Xiangzheng Zhang</name>
+    </author>
+    <author>
+      <name>Zonghao Ying</name>
     </author>
   </entry>
 </feed>
