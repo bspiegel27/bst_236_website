@@ -1,3 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-05-17T02:07:29Z -->
-Rate exceeded.
+<!-- Last updated: 2026-05-18T02:28:45Z -->
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
+  <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-05-18T02:28:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>144464</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16241v1</id>
+    <title>Offline Semantic Guidance for Efficient Vision-Language-Action Policy Distillation</title>
+    <updated>2026-05-15T17:48:25Z</updated>
+    <link href="https://arxiv.org/abs/2605.16241v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16241v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF action targets with high-level semantic guidance, including task phase anchors and multi-frame operating-direction descriptions. These auxiliary signals are used only during training: at test time, the student policy runs independently, with neither the VLA teacher nor the VLM required. We evaluate VLA-AD on three LIBERO benchmark suites. Using OpenVLA-7B as the teacher, our method produces a 158M-parameter student, yielding a $44\times$ reduction in model size while matching the teacher with only a $0.27\%$ average relative gap. The resulting policy runs at 12.5 Hz on an RTX 4090, achieving a $3.28\times$ inference speedup over OpenVLA-7B. We further show that the same semantic distillation pipeline generalizes to a different $π_{0.5}$-4B teacher, where the student outperforms the teacher on two suites and remains within $0.53\%$ on \texttt{libero\_goal}. Additional analysis indicates that phase-level supervision and multi-frame directional cues make the student less sensitive to noisy teacher actions, such as erroneous high-frequency gripper changes. Overall, VLA-AD demonstrates that offline semantic guidance from VLMs can substantially improve the efficiency, robustness, and deployability of VLA policy distillation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:48:25Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Jin Shi</name>
+    </author>
+    <author>
+      <name>Brady Zhang</name>
+    </author>
+    <author>
+      <name>Yishun Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16227v1</id>
+    <title>LymphNode: A Plug-and-Play Access Control Method for Deep Neural Networks</title>
+    <updated>2026-05-15T17:38:06Z</updated>
+    <link href="https://arxiv.org/abs/2605.16227v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16227v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep Neural Networks (DNNs) are high-value intellectual property (IP), yet deploying them to edge environments exposes them to \textbf{unrestricted oracle access}, rendering them vulnerable to model extraction and inversion attacks. Existing defenses fail to address this practically: passive watermarking only offers post-hoc provenance, while active defenses impose prohibitive latency or require persistent access to sensitive training data. To bridge this gap, we propose \textit{LymphNode}, a novel post-hoc defense framework that acts as an intrinsic ``immune system" within the model. \textit{LymphNode} enforces a strict ``default-deny'' policy: it actively neutralizes model utility for unauthorized queries via \textbf{Generalized Sparse Universal Adversarial Perturbations (GSUAP)} injected into the feature space, effectively blocking gradient estimation and data inference. Utility is selectively restored only for authorized inputs carrying a stealthy feature-domain credential. Our framework is highly practical: it is \textbf{data-efficient}, establishing robust protection with fewer than 100 samples ($&lt;1\%$ of training data), and \textbf{cross-dataset adaptable}, enabling protection using public surrogate datasets. \textit{LymphNode} thus provides a lightweight, immediately deployable defense for high-stakes scenarios where original training data is restricted or unavailable.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:38:06Z</published>
+    <arxiv:comment>Accepted by the 56th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2026). Author accepted manuscript. 14 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Hanyu Pei</name>
+    </author>
+    <author>
+      <name>Shang Liu</name>
+    </author>
+    <author>
+      <name>Zeyan Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16222v1</id>
+    <title>Artificial Aphasias in Lesioned Language Models</title>
+    <updated>2026-05-15T17:33:07Z</updated>
+    <link href="https://arxiv.org/abs/2605.16222v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16222v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Aphasias, selective language impairments which can arise from brain damage, reveal the functional organization of human language by providing causal links between affected brain regions and specific symptom profiles. Drawing on this literature, we introduce an aphasia-inspired technique to characterize the emergent functional organization of language models (LMs). We ``lesion'' (zero-out) model parameters and measure the effects of this intervention against clinical aphasia symptoms, as diagnosed by the Text Aphasia Battery (TAB). When applied to 112,426 outputs from five 1B-scale LMs, the full range of evaluated symptoms surface, but in distributions largely distinct from those of humans. Our method uncovers broad symptom-profile differences between attention components (query, key, value, output) and feed-forward components (up, gate, down), with weaker evidence for differences among components within the same mechanism. We also find an effect of depth, where lesions in early layers disproportionately cause syntactic and semantic symptoms while late-middle layers yield higher rates of phonological and fluency deficits. Although some LM lesions induce quantitatively more similar profiles to some human aphasia types than others, qualitative differences in symptom patterns between LMs and humans suggest that aphasia syndromes are heavily influenced by the details of learning and processing rather than being a domain-invariant consequence of disrupted language processing.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:33:07Z</published>
+    <arxiv:comment>49 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Nathan Roll</name>
+    </author>
+    <author>
+      <name>Jill Kries</name>
+    </author>
+    <author>
+      <name>Laura Gwilliams</name>
+    </author>
+    <author>
+      <name>Cory Shain</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16221v1</id>
+    <title>Why Empirical p-Values Are Not Uniform: Reference Samples, Dependence, and PIT Backtesting</title>
+    <updated>2026-05-15T17:32:13Z</updated>
+    <link href="https://arxiv.org/abs/2605.16221v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16221v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Probability integral transforms (PITs) and empirical $p$-values are widely used to assess the calibration of predictive distributions. While exact PIT values are uniformly distributed under correct model specification, practical implementations rely on empirical estimates constructed from finite samples. We show that this estimation step fundamentally alters the statistical structure of the problem. In particular, common-sample and rolling-window implementations introduce dependence and variance distortions that invalidate classical one-sample uniformity tests. When empirical percentiles are conditioned on a shared reference sample, the resulting statistics converge towards a two-sample Kolmogorov--Smirnov regime, while rolling windows induce autocorrelation and variance suppression. Our findings indicate that treating empirical percentiles as independent uniform draws can distort statistical inference and that backtesting procedures based on PITs require revised calibration methods accounting for the underlying two-stage sampling structure.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:32:13Z</published>
+    <arxiv:comment>16 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Jakub Lis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16217v1</id>
+    <title>Argus: Evidence Assembly for Scalable Deep Research Agents</title>
+    <updated>2026-05-15T17:29:27Z</updated>
+    <link href="https://arxiv.org/abs/2605.16217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep research agents have achieved remarkable progress on complex information seeking tasks. Even long ReAct style rollouts explore only a single trajectory, while recent state of the art systems scale inference time compute via parallel search and aggregation. Yet deep research answers are composed of complementary pieces of evidence, which parallel rollouts often duplicate rather than complete, yielding diminishing returns while pushing the aggregation context toward the model's limit. We propose Argus, an agentic system in which a Searcher and a Navigator cooperate to treat deep research as assembling a jigsaw from complementary evidence pieces, rather than brute forcing the whole answer in parallel. The Searcher collects evidence traces for a given sub-query through ReAct-style interaction. The Navigator maintains a shared evidence graph, verifying which pieces are still missing, dispatching Searchers to gather them, and reasoning over the completed graph to produce a source-traced final answer. We train the Navigator with reinforcement learning to verify, dispatch, and synthesize, while independently training the Searcher to remain a standard ReAct agent. The resulting Navigator supports rollouts with a single Searcher or many in parallel without retraining. With both Searcher and Navigator built on a 35B-A3B MoE backbone, Argus gains 5.5 points with a single Searcher and 12.7 points with 8 parallel Searchers, averaged over eight benchmarks. With 64 Searchers it reaches 86.2 on BrowseComp, surpassing every proprietary agent we benchmark, while the Navigator's reasoning context stays under 21.5K tokens.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:29:27Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zhen Zhang</name>
+    </author>
+    <author>
+      <name>Liangcai Su</name>
+    </author>
+    <author>
+      <name>Zhuo Chen</name>
+    </author>
+    <author>
+      <name>Xiang Lin</name>
+    </author>
+    <author>
+      <name>Haotian Xu</name>
+    </author>
+    <author>
+      <name>Simon Shaolei Du</name>
+    </author>
+    <author>
+      <name>Kaiyu Yang</name>
+    </author>
+    <author>
+      <name>Bo An</name>
+    </author>
+    <author>
+      <name>Lidong Bing</name>
+    </author>
+    <author>
+      <name>Xinyu Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16205v1</id>
+    <title>Context, Reasoning, and Hierarchy: A Cost-Performance Study of Compound LLM Agent Design in an Adversarial POMDP</title>
+    <updated>2026-05-15T17:23:08Z</updated>
+    <link href="https://arxiv.org/abs/2605.16205v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16205v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying compound LLM agents in adversarial, partially observable sequential environments requires navigating several design dimensions: (1) what the agent sees, (2) how it reasons, and (3) how tasks are decomposed across components. Yet practitioners lack guidance on which design choices improve performance versus merely increase inference costs. We present a controlled study of compound LLM agent design in CybORG CAGE-2, a cyber defense environment modeled as a Partially Observable Markov Decision Process (POMDP). Reward is non-positive, so all configurations operate in a failure-mitigation mode. Our evaluation spans five model families, six models, and twelve configurations (3,475 episodes) with token-level cost accounting. We vary context representation (raw observations vs. a deterministic state-tracking layer with compressed history), deliberation (self-questioning, self-critique, and self-improvement tools, with optional chain-of-thought prompting), and hierarchical decomposition (monolithic ReAct vs. delegation to specialized sub-agents). We find that: (1) Programmatic state abstraction delivers the largest returns per token spent (RPTS), improving mean return by up to 76% over raw observations. (2) Distributing deliberation tools across a hierarchy degrades performance relative to hierarchy alone for all five model families, reaching up to 3.4$\times$ worse mean return while using 1.8-2.7$\times$ more tokens. We call this destructive pattern a deliberation cascade. (3) Hierarchical decomposition without deliberation achieves the best absolute performance for most models, and context engineering is generally more cost-effective than deliberation. These findings suggest a design principle for structured adversarial POMDPs: invest in programmatic infrastructure and clean task decomposition rather than deeper per-agent reasoning, as these strategies can interfere when combined.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:23:08Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Igor Bogdanov</name>
+    </author>
+    <author>
+      <name>Chung-Horng Lung</name>
+    </author>
+    <author>
+      <name>Thomas Kunz</name>
+    </author>
+    <author>
+      <name>Jie Gao</name>
+    </author>
+    <author>
+      <name>Adrian Taylor</name>
+    </author>
+    <author>
+      <name>Marzia Zaman</name>
+    </author>
+    <arxiv:doi>10.1145/3786335.3813149</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3786335.3813149" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16199v1</id>
+    <title>Detectability of avoided crossings in black hole ringdowns</title>
+    <updated>2026-05-15T17:13:43Z</updated>
+    <link href="https://arxiv.org/abs/2605.16199v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16199v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quasinormal modes (QNMs) of black holes can exhibit avoided crossings (ACs), in which specific QNM frequencies approach each other while their amplitudes are enhanced and acquire nearly opposite phases, leading to characteristic interference. Resolving such closely spaced modes through black hole spectroscopy is observationally challenging. In this paper, we investigate the detectability of nearly degenerate QNMs in the presence of an AC within a Bayesian framework using three waveform models. We examine how the inference of the complex frequencies and amplitudes depends on the separation between the two QNM frequencies and on the choice of template waveform. We find that resolving the individual QNM frequencies is difficult even under optimistic conditions. On the other hand, collective waveform signatures associated with ACs may still be identified through complementary waveform descriptions, provided that the AC-related modes dominate the observed ringdown signal and contamination from more slowly damped modes is negligible or can be removed.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:13:43Z</published>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Hayato Imafuku</name>
+    </author>
+    <author>
+      <name>Naritaka Oshita</name>
+    </author>
+    <author>
+      <name>Hiroki Takeda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16182v1</id>
+    <title>A GPU Accelerated Temporal Window-Based Random Walk Sampler</title>
+    <updated>2026-05-15T17:02:08Z</updated>
+    <link href="https://arxiv.org/abs/2605.16182v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16182v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal random walks, which sample causality-preserving paths, are widely used to analyze time-stamped interactions in domains such as microservices, finance, and online platforms. Generating such walks at scale is challenging because real-world graphs evolve as high-volume streams, making continuous ingestion, efficient memory usage, and strict temporal ordering essential for practical deployment. We present Tempest (TEMPoral nEtwork Streaming Traversals), a GPU-accelerated engine for streaming temporal random walks. Tempest combines a GPU-native dual-index organization over a shared edge store with a hierarchical cooperative scheduler that dispatches walks at thread, warp, or block granularity based on per-step node convergence, enabling efficient start-edge selection, hop-by-hop causality enforcement, and window-based eviction without synchronization. It further provides closed-form constant-time samplers for common temporal bias functions. Our evaluation demonstrates sustained real-time processing of billion-edge streams under sliding windows, outperforming prior systems in ingestion and walk generation throughput while preserving causal correctness.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T17:02:08Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Md Ashfaq Salehin</name>
+    </author>
+    <author>
+      <name>George Parisis</name>
+    </author>
+    <author>
+      <name>Luc Berthouze</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16153v1</id>
+    <title>An Algebraic Exposition of the Theory of Dyadic Morality</title>
+    <updated>2026-05-15T16:33:51Z</updated>
+    <link href="https://arxiv.org/abs/2605.16153v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16153v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper provides an algebraic exposition of the theory of dyadic morality (TDM), a psychological model of moral judgment grounded in a simple two-node template: an intentional agent causing harm to a vulnerable patient. We formalize TDM using structural causal modeling (SCM) notation and identify three psychological operators (typecasting operator, completion operator, and valence-dependent inference mechanism) that extend standard SCM to capture how people compute moral judgments under constraints. We address scalability challenges arising from TDM's dyadic limitation, showing how moral cognition compresses multi-node scenarios through node collapse and sequential processing. Drawing on this algebraic framework, we demonstrate concrete applications to AI policy design: detecting conflicting obligations, structuring helpfulness policies to preserve user agency, and designing post-failure communication as causal interventions. Finally, we recommend scoped, contextual measurement of mind perception over universal averaging to operationalize the theory empirically. This algebraic formalization enables neurosymbolic AI systems to compute morality in a way that is both mathematically rigorous and faithful to human moral cognition.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T16:33:51Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Kush R. Varshney</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16148v1</id>
+    <title>A reason why we do not observe Schrödinger's cats</title>
+    <updated>2026-05-15T16:28:30Z</updated>
+    <link href="https://arxiv.org/abs/2605.16148v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16148v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A reason is discussed (may be not the only one) for why we do not see any superposition of macroscopic states in the real world. Under the general assumption that quantum macrostates are statistical ensembles of microstates, it is shown that any superposition of macrostates is reduced in a very short time by the unitary dynamics of the ordinary Schrödinger equation, deducing the Born rule without having to postulate it. In more detail, the macroscopic and microscopic degrees of freedom are decoupled in the Schrödinger equation, yielding an effective stochastic equation for the macroscopic variables, with the ensemble average of the microscopic amplitudes that acts as a self-generated internal white noise. The stochastic equation is shown to be a reducing Itô equation if some general causality conditions are met, predicting a very quick collapse of any macroscopic superposition upon formation, with probabilities which satisfy the Born rule. In the context of the von Neumann measurement scheme, the relevance of the result is discussed as a simple dynamical solution of the measurement problem.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T16:28:30Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Fabio Siringo</name>
+    </author>
+  </entry>
+</feed>
