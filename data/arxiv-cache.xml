@@ -1,273 +1,503 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-06-07T02:37:37Z -->
+<!-- Last updated: 2026-06-08T02:42:14Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-06-07T02:37:38Z</updated>
+  <updated>2026-06-08T02:42:15Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>147437</opensearch:totalResults>
+  <opensearch:totalResults>147563</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2606.06495v1</id>
-    <title>What it takes to solve the Hubble tension through Modifications of Cosmological Recombination II: in light of ACT DR6 and DESI DR2</title>
-    <updated>2026-06-04T17:59:59Z</updated>
-    <link href="https://arxiv.org/abs/2606.06495v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06495v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We construct data-driven solutions to the Hubble tension, in light of recent data from the Atacama Cosmology Telescope (ACT DR6) and the Dark Energy Spectroscopic Instrument (DESI DR2). We search for the minimal modification to the recombination history through a time-varying electron mass $m_e(z)$ that increases the best-fit $H_0$ inferred from CMB data toward the SH0ES value, without worsening the fit to the data. Using Planck and ACT data including lensing, we find a perturbative modification to $m_e(z)$ that fully resolves the Hubble tension, with the solution sharing the same qualitative oscillatory structure as in previous work using Planck data alone, demonstrating its robustness to the inclusion of more precise and independent CMB data. As a byproduct, the solution also eases the $S_8$ tension. Once DESI DR2 BAO data are added, however, perturbative modifications to $m_e(z)$ cannot fully resolve the Hubble tension. This reflects the same fundamental limitation: raising $H_0$ by modifying recombination generically lowers $Ω_m$, being inconsistent with late-time cosmological observations.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:59:59Z</published>
-    <arxiv:comment>7+3 pages, 5 figures. Comments are welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
-    <author>
-      <name>Nanoom Lee</name>
-    </author>
-    <author>
-      <name>Tianji Zhou</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.06492v1</id>
-    <title>Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</title>
-    <updated>2026-06-04T17:59:46Z</updated>
-    <link href="https://arxiv.org/abs/2606.06492v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06492v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysis) or through per-repository fine-tuning and LoRA -- costly at repository scale and brittle to evolving codebases. We introduce Code2LoRA, a hypernetwork framework that generates repository-specific LoRA adapters, effectively injecting repository knowledge with zero inference-time token overhead. Code2LoRA supports two usage scenarios: Code2LoRA-Static converts a single repository snapshot into an adapter, suitable for comprehension of stable codebases; while Code2LoRA-Evo maintains an adapter backed by a GRU hidden state updated per code diff, suitable for active development of evolving codebases. To evaluate Code2LoRA against parameter-efficient fine-tuning baselines, we build RepoPeftBench, a benchmark of 604 Python repositories with two tracks: a static track with 40K training and 12K test assertion-completion tasks, and an evolution track with 215K commit-derived training and 87K commit-derived test tasks. On the static track, Code2LoRA-Static achieves 63.8% cross-repo and 66.2% in-repo exact match, matching the per-repository LoRA upper bound; on the evolution track, Code2LoRA-Evo achieves 60.3% cross-repo exact match (+5.2 pp over a single shared LoRA). Code2LoRA's code can be found at https://anonymous.4open.science/r/code2lora-6857; the model checkpoints and RepoPeftBench datasets can be found at https://huggingface.co/code2lora.</summary>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.07512v1</id>
+    <title>MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism</title>
+    <updated>2026-06-05T17:59:21Z</updated>
+    <link href="https://arxiv.org/abs/2606.07512v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07512v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Current Vision-Language Models struggle with hours-long videos because processing full-length visual sequences induces prohibitive token explosion and attention dilution. To overcome this, we introduce MemDreamer to decouple perception and reasoning, shifting long-video understanding into an agentic exploration process. As a plug-and-play framework, it incrementally streams videos to construct a Hierarchical Graph Memory, a top-down three-tier architecture for semantic abstraction, anchored by a foundational graph capturing spatiotemporal and causal relations. During inference, the reasoning model employs agentic tool-augmented retrieval, navigating hierarchies, searching nodes, and traversing logical edges via an Observation-Reason-Action loop. Experiments show MemDreamer achieves SOTA results across four mainstream benchmarks, narrowing the gap with human experts to only 3.7 points. It constrains the reasoning context window to merely 2% of full-context ingestion while delivering a 12.5 point absolute accuracy gain. Furthermore, statistical analysis uncovers a strong positive linear correlation between an VLM's performance on logic reasoning and long-video understanding benchmarks, establishing agentic capability scaling as a new paradigm for multimodal comprehension.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:59:46Z</published>
-    <arxiv:primary_category term="cs.SE"/>
-    <author>
-      <name>Liliana Hotsko</name>
-    </author>
-    <author>
-      <name>Yinxi Li</name>
-    </author>
-    <author>
-      <name>Yuntian Deng</name>
-    </author>
-    <author>
-      <name>Pengyu Nie</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.06483v1</id>
-    <title>Statistically and Computationally Optimal Estimation and Inference of Common Subspaces</title>
-    <updated>2026-06-04T17:58:14Z</updated>
-    <link href="https://arxiv.org/abs/2606.06483v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06483v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Given multiple data matrices, many problems in statistics and data science rely on estimating a common subspace that captures certain structure shared by all the data matrices. In this paper we investigate the statistical and computational limits for the common subspace model in which one observes a collection of symmetric low-rank matrices perturbed by noise, where each low-rank matrix shares the same common subspace. Our main results identify several regimes of the signal-to-noise ratio (SNR) such that estimation and inference are statistically or computationally optimal, and we refer to these regimes as weak SNR, moderate SNR, strong estimation SNR, and strong inference SNR. First, we propose an estimator based on projected gradient descent initialized via spectral sum of squares and show that it achieves the optimal $\sinΘ$ error rate under strong estimation SNR. These results are complemented by both statistical and computational lower bounds identifying the weak and moderate estimation SNR regimes. Next, we turn to statistical inference for the $\sinΘ$ distance itself, and we show that our estimator has an asymptotically Gaussian distribution in the strong inference SNR regime. Based on this limiting result we propose confidence intervals and show that they are adaptively minimax optimal in the strong inference SNR regime, where adaptivity is measured in terms of the SNR. Finally, we show that adaptive confidence intervals are information-theoretically impossible below the strong inference SNR regime. Consequently, our results unveil a novel phenomenon: despite the SNR being ``above'' the computational limit for estimation, adaptive statistical inference may still be information-theoretically impossible.</summary>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:58:14Z</published>
-    <arxiv:primary_category term="math.ST"/>
-    <author>
-      <name>Joshua Agterberg</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.06478v1</id>
-    <title>Short Gravitational-Wave Transients as Probes of Cosmic Domain Walls</title>
-    <updated>2026-06-04T17:57:18Z</updated>
-    <link href="https://arxiv.org/abs/2606.06478v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06478v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>GW190521 and GW231123 have been reported as short-duration gravitational-wave transients consistent with very massive binary black hole (BBH) coalescences whose inferred parameters, i.e., exceptionally high total masses and spin magnitudes, challenge standard isolated binary stellar evolution. We test a topological dark matter (TDM) interpretation invoking cosmic domain walls by fitting a physically motivated domain wall template to the LIGO Hanford and Livingston strain data. The BBH hypothesis is individually favored, with $\log_{10}\mathcal{B}_{\rm BBH/TDM}=12.2$ and $11.3$ for GW231123 and GW190521, respectively. However, these values are lower than those typically recovered from matched maximum a posteriori BBH waveforms injected into nearby noise segments. We further perform, for the first time, a joint fit in which domain wall signals from a single underlying scalar field are constrained simultaneously by both events. Although not favored over BBH signals, we find the two events are consistent with a common scalar field, with shared TDM parameters agreeing across independent noise realizations and sky locations. We further find that injected TDM transients are systematically recovered under the BBH hypothesis with large spin parameters, revealing a morphological degeneracy that could mask genuine domain wall signals. This analysis demonstrates that multi-event parameter consistency tests provide a new discriminant for domain wall dark matter searches in upcoming observing runs.</summary>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:57:18Z</published>
-    <arxiv:comment>7+6 pages, 1+5 figures</arxiv:comment>
-    <arxiv:primary_category term="gr-qc"/>
-    <author>
-      <name>Tore Boybeyi</name>
-    </author>
-    <author>
-      <name>Doga Veske</name>
-    </author>
-    <author>
-      <name>David Maibach</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.06477v1</id>
-    <title>Complexity-Balanced Diffusion Splitting</title>
-    <updated>2026-06-04T17:57:15Z</updated>
-    <link href="https://arxiv.org/abs/2606.06477v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06477v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Standard continuous-time generative models rely on monolithic architectures that must navigate vastly different signal regimes, from isotropic noise to intricate data distributions. While scaling model capacity improves performance, deploying a massive network uniformly across the entire generative timeline is inherently inefficient. In this work, we propose Complexity-Balanced Splitting (CBS), a principled framework for temporal capacity allocation that distributes the generative workload across multiple specialized sub-networks. Grounded in function approximation theory and de Boor's equidistribution principle, CBS partitions the diffusion timeline into segments of equal approximation burden, allocating more representational capacity to regions where the generative dynamics are more difficult to model. To estimate this local complexity, we introduce two complementary and tractable monitor functions: a spatial measure based on the flow's Dirichlet energy, and a geometric measure based on the acceleration of the sampling trajectories. Using a lightweight auxiliary model to estimate these complexity profiles, our approach eliminates the need for heuristic temporal splits or computationally expensive search procedures. Extensive evaluation across multiple architectures (SiT, JiT, and UNet) and datasets demonstrates that CBS consistently improves synthesis quality without increasing per-step inference cost. In particular, CBS improves FID by ~35% on SiT-XL with CFG relative to naive temporal partitioning. Project page is available at https://noamissachar.github.io/CBS/.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:57:15Z</published>
+    <published>2026-06-05T17:59:21Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Noam Issachar</name>
+      <name>Cong Chen</name>
     </author>
     <author>
-      <name>Dani Lischinski</name>
+      <name>Guo Gan</name>
     </author>
     <author>
-      <name>Raanan Fattal</name>
+      <name>Kaixiang Ji</name>
+    </author>
+    <author>
+      <name>ChaoYang Zhang</name>
+    </author>
+    <author>
+      <name>Zhen Yang</name>
+    </author>
+    <author>
+      <name>Guangming Yao</name>
+    </author>
+    <author>
+      <name>Hao Chen</name>
+    </author>
+    <author>
+      <name>Jingdong Chen</name>
+    </author>
+    <author>
+      <name>Yi Yuan</name>
+    </author>
+    <author>
+      <name>Chunhua Shen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.06476v1</id>
-    <title>Thinking with Imagination: Agentic Visual Spatial Reasoning with World Simulators</title>
-    <updated>2026-06-04T17:56:36Z</updated>
-    <link href="https://arxiv.org/abs/2606.06476v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06476v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>While Vision-Language Models (VLMs) have shown strong visual reasoning capabilities, their spatial reasoning abilities remain largely constrained to the observed images and text-oriented chain-of-thought. They often struggle to infer unobserved layouts, maintain cross-view consistency, and reason from alternative viewpoints when only limited egocentric observations are available. In this work, we study this problem as thinking with imagination, where a VLM actively acquires imagined visual evidence by interacting with a world simulator during reasoning. We propose Astra, an agentic spatial reasoning framework that empowers VLMs with action-conditioned visual imagination. Specifically, Astra couples Astra-VL, an RL-trained VLM policy, with Astra-WM, a Bagel-based world simulator that generates novel-view observations from context images and natural-language camera motions. To provide reliable imagined evidence, Astra-WM is trained with view consistency tuning to improve pose and content consistency across views. In the RL stage, we propose a world-simulator-in-the-loop two-phase RL curriculum to stabilize tool-use exploration and advance the model's ability to invoke the simulator only when imagined observations improve over direct answering. Experiments demonstrate that both the world simulator and the agentic policy are necessary: Astra-WM improves simulator-augmented Gemini-3-Flash on MMSI-Bench from 45.1 to 49.5, while Astra-VL improves the Qwen3-VL backbone from 29.8 to 38.8 on MMSI-Bench and from 36.8 to 42.7 on MindCube. These results show that imagined observations can provide useful spatial evidence, but effective world-model-augmented reasoning requires learning when, where, and how to imagine.</summary>
+    <id>http://arxiv.org/abs/2606.07511v1</id>
+    <title>GJ 3929 b as the First Complete Rocky Worlds DDT Data Set</title>
+    <updated>2026-06-05T17:59:10Z</updated>
+    <link href="https://arxiv.org/abs/2606.07511v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07511v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite their large abundance, it is still unknown whether and under what conditions rocky planets around M dwarf stars can host atmospheres. This open question motivated the on-going Rocky Worlds DDT survey focused on searching for atmospheres on relatively low-temperature rocky exoplanets by systematically probing for the presence of day-night heat redistribution and CO2 absorption through JWST/MIRI 15 $μ$m eclipse observations. Here we present the analysis of the first full data set from this survey, consisting of four observations of the warm Earth-size exoplanet GJ 3929 b, with a planetary mass of 1.75+0.44-0.45 M$_\oplus$ and instellation flux of 17.3+/-0.7 S$_\oplus$. In our analysis, we include two previously unpublished eclipse observations and find an overall eclipse depth of 118+/-22 ppm and a dayside surface brightness temperature of 641+59-64 K. This is marginally lower than the eclipse depth of 160+26-27 ppm previously reported based on only the first two observations. While the full data set remains consistent with bare rock scenarios, it also leaves more room for thin atmosphere scenarios. Only thick CO2 atmospheres without thermal inversion remain ruled out at greater than 3$σ$. We also continue with lessons-learned in robustly analyzing these kind of high-precision JWST/MIRI 15 $μ$m eclipse observations. Notably, we find that the Frame Normalized Principal Component Analysis (FN-PCA) method appears more robust against the choice of extraction aperture size, which otherwise can have a significant impact on the inferred eclipse depth and scientific conclusions when using a standard polynomial baseline detrending method.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:59:10Z</published>
+    <arxiv:comment>20 pages, 9 figures + 5 in Appendix, submitted to The Astrophysical Journal Letters. This version addresses all comments from the first review by the referee</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Nicholas J. Connors</name>
+    </author>
+    <author>
+      <name>Christopher Monaghan</name>
+    </author>
+    <author>
+      <name>Bjorn Benneke</name>
+    </author>
+    <author>
+      <name>Lisa Dang</name>
+    </author>
+    <author>
+      <name>Pierre-Alexis Roy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07508v1</id>
+    <title>Streaming Video Generation with Streaming Force Control</title>
+    <updated>2026-06-05T17:57:32Z</updated>
+    <link href="https://arxiv.org/abs/2606.07508v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07508v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce StreamForce, a streaming video generation framework that enables physically grounded control through continuous force inputs. Unlike prior video models that train separate models for different force types, assume fixed forces, or rely on non-causal processing, StreamForce is a causal and unified model that responds instantly and coherently to both local and global, time-varying forces. To achieve this, we design a unified force representation as a control signal and develop a distillation pipeline for force-controllable video generation. Our model combines autoregressive efficiency with force responsiveness, sustaining stable photometric and dynamic realism. StreamForce runs at up to 16.6 FPS on a single GPU, achieving state-of-the-art performance in both force adherence and motion realism. Project website: https://neu-vi.github.io/StreamForce/</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:56:36Z</published>
-    <arxiv:comment>Project page: https://zcmax.github.io/projects/Thinking-With-Imagination</arxiv:comment>
+    <published>2026-06-05T17:57:32Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Chenming Zhu</name>
+      <name>Hanhui Wang</name>
     </author>
     <author>
-      <name>Jingli Lin</name>
+      <name>Yiming Xie</name>
     </author>
     <author>
-      <name>Yilin Long</name>
+      <name>Haiwen Feng</name>
     </author>
     <author>
-      <name>Peizhou Cao</name>
+      <name>Zhaoyang Lv</name>
     </author>
     <author>
-      <name>Tai Wang</name>
+      <name>Shenlong Wang</name>
     </author>
     <author>
-      <name>Jiangmiao Pang</name>
-    </author>
-    <author>
-      <name>Xihui Liu</name>
+      <name>Huaizu Jiang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.06470v1</id>
-    <title>PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training</title>
-    <updated>2026-06-04T17:55:11Z</updated>
-    <link href="https://arxiv.org/abs/2606.06470v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06470v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We propose a preconditioning (PC) layer, a weight parameterization via polynomial preconditioner that ensures stable weight conditioning throughout LLM training. The PC module reshapes the singular-value spectrum of weight matrices via low-degree polynomial preconditioning. After training, the preconditioned weights can be merged back into the original architecture, incurring no inference overhead. We demonstrate the advantage of the proposed PC layer over standard transformers in Llama-1B pre-training, for both the AdamW and Muon optimizers. Theoretically, we justify this spectrum-control principle by proving that uniformly bounding each layer's singular values ensures geometric convergence of gradient descent to global minima, for certain deep linear networks. Our code is available at https://github.com/Empath-aln/PC-layer.</summary>
+    <id>http://arxiv.org/abs/2606.07500v1</id>
+    <title>Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning</title>
+    <updated>2026-06-05T17:53:52Z</updated>
+    <link href="https://arxiv.org/abs/2606.07500v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07500v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continual learning in Large Language Models (LLMs) is hindered by the plasticity-stability dilemma, where acquiring new capabilities often leads to catastrophic forgetting of previous knowledge. Existing methods typically treat parameters uniformly, failing to distinguish between specific task knowledge and shared capabilities. We introduce Mixture of Sparse Experts for Task Agnostic Continual Learning (SETA), a framework that resolves the plasticity-stability conflict through adaptive sparse subspace decomposition into task-specific expert modules. Unlike standard updates, where tasks compete for the same parameters, SETA separates knowledge into unique experts, designed to isolate task-specific patterns, and shared experts, responsible for capturing common features. This structure is maintained through adaptive elastic anchoring and a routing-aware regularization that jointly protect shared knowledge at both the weight and routing levels and enable a unified gating network to automatically retrieve the correct expert combination during inference. Extensive experiments across diverse domain-specific benchmarks demonstrate that SETA achieves competitive or superior overall performance relative to state-of-the-art continual learning baselines, with particularly strong retention of early-task knowledge and improved backward transfer on LLaMA-2 7B and Qwen3-4B.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:55:11Z</published>
+    <published>2026-06-05T17:53:52Z</published>
+    <arxiv:comment>19 pages. arXiv admin note: text overlap with arXiv:2601.17616</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Senmiao Wang</name>
+      <name>Fatema Siddika</name>
     </author>
     <author>
-      <name>Tiantian Fang</name>
+      <name>Md Anwar Hossen</name>
     </author>
     <author>
-      <name>Haoran Zhang</name>
+      <name>Tanwi Mallick</name>
     </author>
     <author>
-      <name>Yushun Zhang</name>
-    </author>
-    <author>
-      <name>Kunxiang Zhao</name>
-    </author>
-    <author>
-      <name>Alex Schwing</name>
-    </author>
-    <author>
-      <name>Ruoyu Sun</name>
+      <name>Ali Jannesari</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.06467v1</id>
-    <title>You Only Index Once: Cross-Layer Sparse Attention with Shared Routing</title>
-    <updated>2026-06-04T17:54:04Z</updated>
-    <link href="https://arxiv.org/abs/2606.06467v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06467v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long-context inference in modern LLMs is increasingly constrained by decoding efficiency, especially in reasoning-heavy settings where models generate long intermediate chains of thought. Existing sparse attention methods often face a practical efficiency-quality trade-off. Structured block sparse methods typically provide stronger acceleration but incur noticeable quality loss, while token sparse methods are usually more accurate yet deliver limited end-to-end speedup because top-k routing over the full cache remains expensive. In this work, we propose cross-layer sparse attention (CLSA), which is built on top of KV-sharing architectures such as YOCO. The core idea is to share not only the KV cache across cross-decoder layers, but also the routing index. A single indexer computes token-level top-k selection once and reuses the resulting index across layers, thereby preserving the fine-grained selectivity of token sparse attention while amortizing the routing overhead. The resulting architecture improves all major inference bottlenecks jointly, including pre-filling, KV-cache storage, and long-context decoding. Experiments across short-context and long-context benchmarks show that CLSA is both accurate and efficient, achieving up to 7.6x decoding speedup and 17.1x overall throughput improvement at 128K context. These results suggest a more complete architectural solution for long-context LLMs that jointly advances model quality and inference efficiency.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.07497v1</id>
+    <title>The Roasting Marshmallows Program with IGRINS on Gemini South V: Atmosphere of MASCARA-1b is Enriched in Refractory Elements</title>
+    <updated>2026-06-05T17:52:08Z</updated>
+    <link href="https://arxiv.org/abs/2606.07497v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07497v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ultra-hot Jupiters (UHJs; $T_{\rm eq} \gtrsim 2000$ K) enable simultaneous detection of volatile (ice-forming) and refractory (rock-forming) species in planetary atmospheres, providing a powerful diagnostic of planet formation and atmospheric processing. We present a comprehensive high-resolution cross-correlation spectroscopy (HRCCS) analysis of the UHJ MASCARA-1b ($T_{\rm eq} \approx 2600$ K) using the IGRINS and IGRINS-2 spectrographs. We detect robust (SNR$&gt;$4) signals from H$_2$O, CO, OH, Fe I, Mg I, Ca I, and Ti I, marking the most complete atmospheric inventory of MASCARA-1b to date. Using a chemically consistent atmospheric inference framework, we constrain elemental abundances to a typical precision of $\approx$0.2 dex, retrieving a solar atmospheric metallicity ([M/H]$_\odot$ $= 0.07^{+0.17}_{-0.13}$ $\approx 1.2\times$ solar), a C/O ratio (C/O $= 0.65^{+0.08}_{-0.08}$) consistent with solar value (C/O $=$ 0.59), an enhanced refractory abundance ([R/H]$_\odot$ $= 0.40^{+0.23}_{-0.17} \approx 2.5\times$ solar; $\approx 3.8\times$ stellar), and a moderately super-solar refractory-to-volatile ratio ([R/V]$_\odot$ $= 0.36^{+0.11}_{-0.09}$ $\approx 2.3\times$ solar). Comparison with formation models suggests that MASCARA-1b most likely accreted material between the soot-H$_2$O or H$_2$O-CO snowlines (at 68$\%$ confidence). We additionally find stellar values for atmospheric Ti/Mg and Ca/Mg ratios (at 68$\%$ confidence). The Mg/Fe is also found to be consistent with stellar value at 95$\%$ confidence. Therefore, we do not find strong indication of nightside cold trapping in MASCARA-1b. As homogeneous refractory-to-volatile measurements expand across the UHJ population, particularly with upcoming Extremely Large Telescopes, these diagnostics will enable statistically robust tests of emerging trends in giant planet formation and atmospheric evolution.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:52:08Z</published>
+    <arxiv:comment>20 pages, 12 figures, accepted for publication in AJ</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Krishna Kanumalla</name>
+    </author>
+    <author>
+      <name>Michael R. Line</name>
+    </author>
+    <author>
+      <name>Martina Chiarella</name>
+    </author>
+    <author>
+      <name>Matteo Brogi</name>
+    </author>
+    <author>
+      <name>Peter C. B. Smith</name>
+    </author>
+    <author>
+      <name>Jorge A. Sanchez</name>
+    </author>
+    <author>
+      <name>Yayaati Chachan</name>
+    </author>
+    <author>
+      <name>Joshua Lothringer</name>
+    </author>
+    <author>
+      <name>Joost P. Wardenier</name>
+    </author>
+    <author>
+      <name>Hayley Beltz</name>
+    </author>
+    <author>
+      <name>Carlos Saffe</name>
+    </author>
+    <author>
+      <name>Emily K. Deibert</name>
+    </author>
+    <author>
+      <name>Megan Weiner Mansfield</name>
+    </author>
+    <author>
+      <name>Stefan Pelletier</name>
+    </author>
+    <author>
+      <name>Vivien Parmentier</name>
+    </author>
+    <author>
+      <name>Yeon-ho Choi</name>
+    </author>
+    <author>
+      <name>Swaetha Ramkumar</name>
+    </author>
+    <author>
+      <name>Arjun B. Savel</name>
+    </author>
+    <author>
+      <name>Luis Welbanks</name>
+    </author>
+    <author>
+      <name>Jacob L. Bean</name>
+    </author>
+    <author>
+      <name>Vatsal Panwar</name>
+    </author>
+    <author>
+      <name>Tomás Azevedo Silva</name>
+    </author>
+    <author>
+      <name>Lorenzo Pino</name>
+    </author>
+    <author>
+      <name>Yuya Hayashi</name>
+    </author>
+    <author>
+      <name>Dongwook Lim</name>
+    </author>
+    <author>
+      <name>Cicero X. Lu</name>
+    </author>
+    <author>
+      <name>Venu M. Kalari</name>
+    </author>
+    <author>
+      <name>Teo Močnik</name>
+    </author>
+    <author>
+      <name>Mark G. Rawlings</name>
+    </author>
+    <author>
+      <name>Heeyoung Oh</name>
+    </author>
+    <author>
+      <name>Ruben J. Diaz</name>
+    </author>
+    <author>
+      <name>Chan Park</name>
+    </author>
+    <author>
+      <name>Jae-Joon Lee</name>
+    </author>
+    <author>
+      <name>Sanghyuk Kim</name>
+    </author>
+    <author>
+      <name>Ueejeong Jeong</name>
+    </author>
+    <author>
+      <name>Hye-In Lee</name>
+    </author>
+    <author>
+      <name>Woojin Park</name>
+    </author>
+    <author>
+      <name>Youngsam Yu</name>
+    </author>
+    <author>
+      <name>Yunjong Kim</name>
+    </author>
+    <author>
+      <name>Moo-Young Chun</name>
+    </author>
+    <author>
+      <name>Jae Sok Oh</name>
+    </author>
+    <author>
+      <name>Sungho Lee</name>
+    </author>
+    <author>
+      <name>Jeong-Gyun Jang</name>
+    </author>
+    <author>
+      <name>Bi-Ho Jang</name>
+    </author>
+    <author>
+      <name>Hyeon Cheol Seong</name>
+    </author>
+    <author>
+      <name>Hyun-Jeong Kim</name>
+    </author>
+    <author>
+      <name>Cynthia B. Brooks</name>
+    </author>
+    <author>
+      <name>Gregory N. Mace</name>
+    </author>
+    <author>
+      <name>Hanshin Lee</name>
+    </author>
+    <author>
+      <name>John M. Good</name>
+    </author>
+    <author>
+      <name>Daniel T. Jaffe</name>
+    </author>
+    <author>
+      <name>Kang-Min Kim</name>
+    </author>
+    <author>
+      <name>In-Soo Yuk</name>
+    </author>
+    <author>
+      <name>Narae Hwang</name>
+    </author>
+    <author>
+      <name>Byeong-Gon Park</name>
+    </author>
+    <author>
+      <name>Hwihyun Kim</name>
+    </author>
+    <author>
+      <name>Brian Chinn</name>
+    </author>
+    <author>
+      <name>Francisco Ramos</name>
+    </author>
+    <author>
+      <name>Pablo Prado</name>
+    </author>
+    <author>
+      <name>John White</name>
+    </author>
+    <author>
+      <name>Andres Olivares</name>
+    </author>
+    <author>
+      <name>Valentina Oyarzun</name>
+    </author>
+    <author>
+      <name>Emma Kurz</name>
+    </author>
+    <author>
+      <name>Hawi Stecher</name>
+    </author>
+    <author>
+      <name>Carlos Quiroz</name>
+    </author>
+    <author>
+      <name>Ignacio Arriagada</name>
+    </author>
+    <author>
+      <name>Thomas L. Hayward</name>
+    </author>
+    <author>
+      <name>Hyewon Suh</name>
+    </author>
+    <author>
+      <name>Jen Miller</name>
+    </author>
+    <author>
+      <name>Siyi Xu</name>
+    </author>
+    <author>
+      <name>Emanuele Paolo Farina</name>
+    </author>
+    <author>
+      <name>Charlie Figura</name>
+    </author>
+    <author>
+      <name>Andrew Stephens</name>
+    </author>
+    <author>
+      <name>Bryan Miller</name>
+    </author>
+    <author>
+      <name>Kathleen Labrie</name>
+    </author>
+    <author>
+      <name>Paul Hirst</name>
+    </author>
+    <author>
+      <name>Edo Tapia</name>
+    </author>
+    <author>
+      <name>Zachary Hartmann</name>
+    </author>
+    <arxiv:doi>10.3847/1538-3881/ae77f1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3847/1538-3881/ae77f1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07488v1</id>
+    <title>CoMetaPNS: Continually Meta-learning Personalized Neural Surrogates for Cardiac Electrophysiology Simulations</title>
+    <updated>2026-06-05T17:44:42Z</updated>
+    <link href="https://arxiv.org/abs/2606.07488v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07488v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Personalized virtual heart simulations face challenges in model personalization and computational cost. While neural surrogates offer state-of-the-art solutions, they typically address either efficient personalization or training generalizable models. Recent work reframes this by learning the process of personalizing a surrogate using limited subject-specific context data, through few-shot generative modeling with set-conditioned surrogates and meta-learned amortized inference. These methods, however, assume a static and diverse training distribution with known task identifiers. When new data becomes available, they require costly retraining with all prior data to avoid catastrophic forgetting - a phenomena where the model forgets earlier tasks when trained on new ones. This is a major limitation in clinical settings where often unlabeled data arrives sequentially and full retraining is infeasible. This paper presents a new continual meta-learning framework to achieve personalized neural surrogates able to not only continually integrate information but also identify whether incoming data stems from a known or unknown dynamics source. By leveraging a continual Bayesian Gaussian Mixture Model over a memory buffer, our framework can infer the identifiers and relationships of data over time - required for effective meta-learning. Empirical results on synthetic cardiac data demonstrate superior simulation forecasting, computational scalability, and resilience to catastrophic forgetting compared to existing baselines.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:54:04Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Yutao Sun</name>
-    </author>
-    <author>
-      <name>Yanqi Zhang</name>
-    </author>
-    <author>
-      <name>Li Dong</name>
-    </author>
-    <author>
-      <name>Jianyong Wang</name>
-    </author>
-    <author>
-      <name>Furu Wei</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.06464v1</id>
-    <title>Human Adults and LLMs as Scientists: Who Benefits from Active Exploration?</title>
-    <updated>2026-06-04T17:53:36Z</updated>
-    <link href="https://arxiv.org/abs/2606.06464v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06464v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>A long-standing finding in the causal learning literature is that adults struggle to identify conjunctive causal rules, where an effect requires the simultaneous presence of multiple causes, while performing better in disjunctive settings. However, most demonstrations of this ``conjunctive handicap'' rely on passive observation paradigms with limited evidence, where learners have no control over evidence generation. This paper asks whether this bias persists when adults are granted agency through active exploration. Using a modified ``blicket detector'' task, adult participants freely intervened to identify causal objects under conjunctive or disjunctive rule structures. We show that active exploration substantially improves adults' conjunctive causal reasoning, although conjunctive rules still require more tests to infer than disjunctive rules. We further compare human performance to a range of large language models in the same setting. While some state-of-the-art models approach human-level performance on hypothesis inference accuracy, they often exhibit less efficient exploration strategies and similar conjunctive-disjunctive performance gaps.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:53:36Z</published>
-    <arxiv:comment>Accepted at the 48th Annual Conference of the Cognitive Science Society (CogSci 2026)</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Mandana Samiei</name>
-    </author>
-    <author>
-      <name>Eunice Yiu</name>
-    </author>
-    <author>
-      <name>Anthony GX-Chen</name>
-    </author>
-    <author>
-      <name>Dongyan Lin</name>
-    </author>
-    <author>
-      <name>Jocelyn Shen</name>
-    </author>
-    <author>
-      <name>Blake A. Richards</name>
-    </author>
-    <author>
-      <name>Alison Gopnik</name>
-    </author>
-    <author>
-      <name>Doina Precup</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.06458v1</id>
-    <title>In-Context Multiple Instance Learning</title>
-    <updated>2026-06-04T17:50:32Z</updated>
-    <link href="https://arxiv.org/abs/2606.06458v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.06458v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Multiple Instance Learning (MIL) addresses problems where supervision is available at the level of bags of instances and has been successfully applied in fields ranging from computational pathology to satellite imagery. Nevertheless, existing algorithms struggle in the low-label regime that characterizes many real-world applications. Flexible models overfit and rigid ones fail to adapt to the task at hand. We show that pretraining an in-context learner with a Perceiver-style architecture on synthetic data yields a model that can solve new tasks from a handful of labeled bags. At inference time, classification happens in a single forward pass and requires no gradient updates. We propose and investigate different synthetic data generators for bag-structured data and find that they capture complementary inductive biases. A model pretrained on a mixture of these generators inherits their per-task strengths and achieves the best average performance across twelve MIL benchmarks, outperforming supervised baselines that require task-specific training.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-04T17:50:32Z</published>
+    <published>2026-06-05T17:44:42Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Alexander Möllers</name>
+      <name>Ryan Missel</name>
     </author>
     <author>
-      <name>Marvin Sextro</name>
+      <name>Xiajun Jiang</name>
     </author>
     <author>
-      <name>Julius Hense</name>
+      <name>Linwei Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07483v1</id>
+    <title>Network Recovery from Cascade Data: A Debiased Jacobian-Based Machine Learning Approach</title>
+    <updated>2026-06-05T17:38:05Z</updated>
+    <link href="https://arxiv.org/abs/2606.07483v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07483v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many important outcomes unfold as dynamic cascades, including product adoption, disease spread, financial distress, and information diffusion. A central challenge is to recover the hidden influence network behind these cascades. Existing methods typically assume a specific diffusion model, and their performance degrades substantially when that assumption is misspecified. We propose CascadeNet, a Jacobian-based machine learning framework for network recovery that does not require specifying a diffusion mechanism. The key idea is that the underlying influence structure can be characterized by the Jacobian of the one-step transition function. CascadeNet first constructs a flexible estimator of the transition function, and further applies Neyman-orthogonal debiasing via the Riesz representer, so that the debiased Jacobian is $\sqrt{n}$-consistent and asymptotically normal, enabling formal inference on the network structure. We validate CascadeNet in both a simulation exercise and a real-world empirical application. In simulations, where the data-generating process is known, CascadeNet achieves the highest network recovery accuracy across nine common data-generating processes. In an empirical application to COVID-19 transmission across Spain's 52 provinces, CascadeNet recovers transmission networks that are significantly correlated with the true inter-province mobility network, whereas networks recovered by baseline methods show no significant alignment with the ground truth.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:38:05Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lei Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07481v1</id>
+    <title>Drifting Models for Surrogate Flow Modeling</title>
+    <updated>2026-06-05T17:35:09Z</updated>
+    <link href="https://arxiv.org/abs/2606.07481v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07481v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While Computational Fluid Dynamics (CFD) provides high-fidelity flow fields for optimizing indoor environments, its computational cost limits rapid exploration. To solve this problem generative surrogates offer better distribution modeling than deterministic networks, but iterative sampling is slow. To enable high-quality, single-pass generation, we adapt the novel generative drifting framework to fluid mechanics. We introduce a conditional architecture that performs drifting in a learned VAE latent space and uses label-aware masking to align generated samples with their boundary conditions. Our label-conditioned model matches iterative diffusion in accuracy and flow consistency while running two orders of magnitude faster. Additionally, we propose a spatial-conditioning variant that establishes a promising path towards generalization to unseen geometries. Ultimately, conditional drifting serves as a highly efficient alternative to diffusion based approaches, unlocking real-time CFD surrogates where inference speed is critical.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:35:09Z</published>
+    <arxiv:comment>Accepted to the 2nd International Symposium AI and Fluid Mechanics 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Chris R. Jung</name>
     </author>
     <author>
-      <name>Gabriel Dernbach</name>
+      <name>Markus Dörr</name>
     </author>
     <author>
-      <name>Klaus-Robert Müller</name>
+      <name>Natalie Jüngling</name>
+    </author>
+    <author>
+      <name>Jennifer Niessner</name>
+    </author>
+    <author>
+      <name>Adam T. Müller</name>
+    </author>
+    <author>
+      <name>Nicolaj C. Stache</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07476v1</id>
+    <title>Physiologically Constrained Musculoskeletal Neural Network for Multi-DoF Joint Kinematics Estimation from Partially Observed sEMG</title>
+    <updated>2026-06-05T17:30:16Z</updated>
+    <link href="https://arxiv.org/abs/2606.07476v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07476v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper investigates multi-degrees of freedom (DoF) joint kinematics estimation under partially observed surface electromyography (sEMG), where only a subset of task-relevant muscles can be measured due to anatomical inaccessibility or sensor constraints. A novel musculoskeletal neural network (MSK-NN) is proposed to estimate multi-DoF joint angles while simultaneously inferring activations for both measured and unmeasured muscles. MSK-NN consists of a CNN-based muscle activation estimator and an embedded MSK forward dynamics module, forming a fully differentiable architecture. Unlike existing hybrid neural frameworks that require additional biomechanical labels (e.g., muscle-tendon forces, joint torques), MSK-NN is trained without direct supervision of internal biomechanical variables. A composite physics-physiology loss is designed by incorporating a joint kinematics loss, a data-driven muscle synergy loss, and an anatomy-guided trend loss. The proposed method is evaluated on two-DoF wrist kinematics estimation across three rhythmic motions with unconstrained speed and amplitude, and one random motion. Compared with CNN, Bi-LSTM, CNN-LSTM, and PET baselines, MSK-NN achieves lower normalized root mean square error (NRMSE) and higher coefficient of determination (R2), especially for the random motion. More importantly, the optimized MSK parameters remain within physiological limits, and the estimated activation of an input-excluded muscle exhibits strong temporal agreement with its recorded sEMG envelope, demonstrating the capability of musculoskeletal (MSK)-NN to recover physiologically plausible activations.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:30:16Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Wending Heng</name>
+    </author>
+    <author>
+      <name>Mingming Zhang</name>
+    </author>
+    <author>
+      <name>Glen Cooper</name>
+    </author>
+    <author>
+      <name>Zhenhong Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07470v1</id>
+    <title>Verifiable and Confidential DNN Inference on Low-End Edge Devices</title>
+    <updated>2026-06-05T17:23:39Z</updated>
+    <link href="https://arxiv.org/abs/2606.07470v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07470v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying deep neural network (DNN) inference on low-end edge devices raises two key challenges: protecting model confidentiality against a potentially compromised edge system and enabling verifiable inference without incurring prohibitive overhead. Existing approaches either house partial models and inference software within trusted execution environments (TEEs), resulting in high cost and an application-dependent trusted computing base (TCB), or execute in untrusted environments, providing little security.
+  In this work, we present VECODI, a framework for verifiable and confidential DNN inference on constrained edge devices. At its core, VECODI introduces SHANGRI-LA, a new execution abstraction on TrustZone-M TEEs that establishes a third runtime environment with privileges strictly between the Secure and Non-Secure Worlds. VECODI leverages SHANGRI-LA to execute untrusted inference code in the Non-Secure World while using minimal application-agnostic Secure-World support to protect model confidentiality and enable verifiability (with respect to proper execution of inference code and model parameters) of inference results. We realize VECODI on a real-world NUCLEO-L552ZE-Q development board and open-source its prototype. Our results show VECODI's small TCB, memory footprint, and runtime overhead, making it a practical option for secure inference in low-end edge devices.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:23:39Z</published>
+    <arxiv:comment>12 pages, 4 figures, 5 tables, 1 algorithm</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Mohamed Khalil Kiri</name>
+      <arxiv:affiliation>EURECOM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ivan De Oliveira Nunes</name>
+      <arxiv:affiliation>University of Zurich</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aurélien Francillon</name>
+      <arxiv:affiliation>EURECOM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Norrathep Rattanavipanon</name>
+      <arxiv:affiliation>PSU Phuket</arxiv:affiliation>
     </author>
   </entry>
 </feed>
