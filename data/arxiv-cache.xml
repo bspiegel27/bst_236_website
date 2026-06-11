@@ -1,341 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-06-10T02:32:45Z -->
+<!-- Last updated: 2026-06-11T02:42:31Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-06-10T02:32:46Z</updated>
+  <updated>2026-06-11T02:42:32Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>148038</opensearch:totalResults>
+  <opensearch:totalResults>148187</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2606.11187v1</id>
-    <title>Next Forcing: Causal World Modeling with Multi-Chunk Prediction</title>
-    <updated>2026-06-09T17:59:22Z</updated>
-    <link href="https://arxiv.org/abs/2606.11187v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11187v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Autoregressive video generation has emerged as a powerful paradigm for World Action Models (WAMs). However, existing approaches suffer from slow training convergence and limited converged accuracy, particularly at high frame rates, as the training supervision is confined to the current chunk without explicit signals about future dynamics; they also suffer from slow inference due to iterative video denoising. In this paper, we present Next Forcing, a multi-chunk prediction (MCP) framework for causal world modeling that enables faster training, higher accuracy, and accelerated inference. Inspired by multi-token prediction in large language models, Next Forcing introduces an MCP training objective that augments the main model with lightweight auxiliary MCP modules to simultaneously denoise video chunks at multiple future temporal horizons (next$^1$, next$^2$, next$^3$ chunks). These MCP modules form a causal chain across prediction depths, where intermediate features fused from multiple layers of the main model are leveraged to predict future dynamics, allowing near-future predictions to inform farther-future ones and providing dense multi-scale temporal supervision back to the main model. During training, the MCP modules significantly accelerate convergence and improve converged accuracy, especially at high frame rates: at 50 fps, Next Forcing achieves a 93.1% relative improvement over LingBot-VA at 5k training steps and 2.3x faster convergence, and establishes new state-of-the-art results on the RoboTwin benchmark (94.1/93.5% on Clean/Random). At inference, the MCP modules can be retained to predict the next video chunk in parallel with the current one, achieving 2x inference acceleration. Next Forcing also demonstrates significant improvements on PhyWorld, a benchmark evaluating adherence to physical laws in video generation, and over 50% FVD reduction on general video pretraining.</summary>
+    <id>http://arxiv.org/abs/2606.12412v1</id>
+    <title>Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models</title>
+    <updated>2026-06-10T17:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2606.12412v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12412v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and Nüwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: https://github.com/elmma/mllm-reroute/</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:59:22Z</published>
-    <arxiv:comment>Project page: https://gangweix.github.io/next-forcing/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Gangwei Xu</name>
-    </author>
-    <author>
-      <name>Qihang Zhang</name>
-    </author>
-    <author>
-      <name>Jiaming Zhou</name>
-    </author>
-    <author>
-      <name>Xing Zhu</name>
-    </author>
-    <author>
-      <name>Yujun Shen</name>
-    </author>
-    <author>
-      <name>Xin Yang</name>
-    </author>
-    <author>
-      <name>Yinghao Xu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11186v1</id>
-    <title>AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference</title>
-    <updated>2026-06-09T17:59:05Z</updated>
-    <link href="https://arxiv.org/abs/2606.11186v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11186v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Low-light video enhancement (LLVE) remains a challenging task due to severe information degradation under low-illumination conditions. Recent multimodal approaches have significantly improved enhancement performance by incorporating auxiliary modalities, such as event streams and infrared images. However, these methods typically assume the availability of these modalities at inference, which is often not feasible in real-world scenarios. To solve this problem, in this work, we propose AMNet, a unified multimodal framework for LLVE, to support flexible modality-agnostic inference, where auxiliary modalities may be unavailable. To address the issue of modality absence, we introduce a Spatial-Spectral Dual-Gated Translator that learns the correspondence between auxiliary modalities and RGB inputs, producing implicit auxiliary representations to support the robust enhancement. Additionally, to fully facilitate the learning of cross-modal correspondence, we conduct large-scale multimodal pretraining based on the RGB-only dataset with synthetic auxiliary modalities. Extensive experiments demonstrate that AMNet could handle arbitrary inference-time modality combinations and exhibits superior performance for LLVE under modality absence conditions. Code and models are available on the project page.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:59:05Z</published>
-    <arxiv:comment>Accepted at ICML 2026; Project page and code: https://lhfgghc.github.io/LLVE-AMNet</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Hangfeng Liang</name>
-    </author>
-    <author>
-      <name>Yutao Hu</name>
-    </author>
-    <author>
-      <name>Yanhan Hu</name>
-    </author>
-    <author>
-      <name>Xiaohan Wu</name>
-    </author>
-    <author>
-      <name>Wenqi Shao</name>
-    </author>
-    <author>
-      <name>Ying Fu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11184v1</id>
-    <title>TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation</title>
-    <updated>2026-06-09T17:59:03Z</updated>
-    <link href="https://arxiv.org/abs/2606.11184v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11184v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Contact-rich manipulation requires robots to continuously perceive and regulate evolving physical interactions under dynamic contact transitions or complex surface geometries. Recent imitation learning methods improve contact-aware control by incorporating tactile or force feedback, but they rarely model the asymmetric spatiotemporal roles of global force and local tactile sensing. To address this, we propose TacForeSight, a lightweight force-conditioned tactile foresight framework for real-time manipulation. The core component is TacForceWM, a tactile world model that predicts short-horizon tactile latent dynamics from dual-finger tactile observations conditioned on high-frequency wrist force and torque signals. Another key component, the Predictive Tactile-Conditioned Policy, leverages the predicted latents as anticipatory contact priors, models the current-to-future tactile evolution via cross-attention, and adaptively fuses visuo-tactile features through a tactile-guided gating module. By forecasting purely within a compact latent space, TacForeSight enables proactive contact reasoning with efficient real-time inference suitable for high-frequency manipulation control. Real-robot experiments on five representative tasks and three in-process perturbation settings show that TacForeSight consistently outperforms existing baselines, particularly under dynamic contact disturbances. All models and datasets will be made publicly available on the project website at https://tacforesight.github.io/ProjectPage.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:59:03Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Yujie Zang</name>
-    </author>
-    <author>
-      <name>Yuhang Zheng</name>
-    </author>
-    <author>
-      <name>Xian Nie</name>
-    </author>
-    <author>
-      <name>Yupeng Zheng</name>
-    </author>
-    <author>
-      <name>Shuai Tian</name>
-    </author>
-    <author>
-      <name>Songen Gu</name>
-    </author>
-    <author>
-      <name>Chen Gao</name>
-    </author>
-    <author>
-      <name>Zining Wang</name>
-    </author>
-    <author>
-      <name>Shuicheng Yan</name>
-    </author>
-    <author>
-      <name>Wenchao Ding</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11180v1</id>
-    <title>Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization</title>
-    <updated>2026-06-09T17:56:36Z</updated>
-    <link href="https://arxiv.org/abs/2606.11180v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11180v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, $17.6\times$ faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs $39.8\times$ faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:56:36Z</published>
-    <arxiv:comment>Project Page: https://cvlab-kaist.github.io/LipForcing/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Paul Hyunbin Cho</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Jinhyuk Jang</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>SeokYoung Lee</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Joungbin Lee</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Siyoon Jin</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Heeseong Shin</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Jung Yi</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Yunjin Park</name>
-      <arxiv:affiliation>AIPARK</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Chulmin Park</name>
-      <arxiv:affiliation>AIPARK</arxiv:affiliation>
-    </author>
-    <author>
-      <name>Seungryong Kim</name>
-      <arxiv:affiliation>KAIST AI</arxiv:affiliation>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11164v1</id>
-    <title>ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models</title>
-    <updated>2026-06-09T17:44:23Z</updated>
-    <link href="https://arxiv.org/abs/2606.11164v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11164v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long chain-of-thought (CoT) trajectories in large language model (LLM) reasoning cause severe inference bottlenecks due to rapid key-value (KV) cache growth. Current decoding-time compression methods mitigate this issue via token eviction, but typically assume a uniform budget distribution across all layers and heads. In contrast, existing non-uniform budget allocation methods are predominantly designed for the static prompt prefill phase, and they do not capture the stepwise context demands of autoregressive reasoning. To bridge this gap, we propose ReasonAlloc, a training-free framework that recasts decoding-time KV compression as a hierarchical budget allocation problem. ReasonAlloc operates at two complementary levels: an offline layer-wise preallocation strategy captures an architecture-driven demand pattern which we call ``\textit{Reasoning Wave}'', while an online head-wise strategy reallocates resources during decoding to information-rich heads based on real-time utility. Evaluations on mathematical reasoning benchmarks (MATH-500, AIME~2024) using DeepSeek-R1-Distill-Llama-8B, DeepSeek-R1-Distill-Qwen-14B, and AceReason-14B show that ReasonAlloc outperforms uniform-budget R-KV, SnapKV, and Pyramid-RKV (a baseline enforcing a static, monotonically decreasing layer budget), with the largest gains at small budgets (128-512 tokens). ReasonAlloc is plug-and-play with existing token-eviction policies and introduces negligible inference-time overhead.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:44:23Z</published>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Wenhao Liu</name>
-    </author>
-    <author>
-      <name>Hao Shi</name>
-    </author>
-    <author>
-      <name>Yunhe Li</name>
-    </author>
-    <author>
-      <name>Weizhi Fei</name>
-    </author>
-    <author>
-      <name>Xiangyuan Wang</name>
-    </author>
-    <author>
-      <name>Mengzhe Ruan</name>
-    </author>
-    <author>
-      <name>Hanxu Hou</name>
-    </author>
-    <author>
-      <name>Peisong Wang</name>
-    </author>
-    <author>
-      <name>Linqi Song</name>
-    </author>
-    <author>
-      <name>Shuang Qiu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11156v1</id>
-    <title>Itô maps for any-step SDEs</title>
-    <updated>2026-06-09T17:39:22Z</updated>
-    <link href="https://arxiv.org/abs/2606.11156v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11156v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent one-step generative models accelerate sampling by learning deterministic flow maps of the underlying dynamics. These methods rely on learning from ordinary differential equations, leaving open how to define an exact distillation procedure for stochastic dynamics. We introduce the Itô map, an any-step stochastic flow map that takes an intermediate state and Brownian path and predicts future states in a single pass. The Itô map formulation yields novel estimators for inference-time control by providing cheap, differentiable access to posterior samples. Empirically, Itô maps produce diverse, conditionally valid endpoint samples from fixed intermediate states and support strong steering performance on synthetic and image-generation benchmarks. These results establish any-step SDE integration as a useful primitive for posterior sampling and stochastic control.</summary>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:39:22Z</published>
-    <arxiv:primary_category term="stat.ML"/>
-    <author>
-      <name>Zhengkai Pan</name>
-    </author>
-    <author>
-      <name>Peter Potaptchik</name>
-    </author>
-    <author>
-      <name>Wenxi Yao</name>
-    </author>
-    <author>
-      <name>Michael S. Albergo</name>
-    </author>
-    <author>
-      <name>Jakiw Pidstrigach</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11155v1</id>
-    <title>Mean Flow Distillation: Robust and Stable Distillation for Flow Matching Models</title>
-    <updated>2026-06-09T17:39:19Z</updated>
-    <link href="https://arxiv.org/abs/2606.11155v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11155v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Flow Matching models have demonstrated strong performance across a wide range of generative tasks. However, their reliance on ODE-based iterative sampling incurs substantial computational overhead in inference, which limits their applicability in real-time scenes. While distillation is a promising solution, existing approaches largely borrow from diffusion-based score matching, often failing to exploit the intrinsic geometric structure of flows and suffering from training instability, high variance, and degraded generation quality. In this paper, we propose Mean Flow Distillation (MFD), a novel distillation framework tailored for flow matching models. We theoretically demonstrate that MFD acts as a temporal low-pass filter, effectively suppressing the high-frequency optimization noise inherent in variational score distillation (VSD) while ensuring global trajectory consistency. We further prove the Mean Flow Matching Theorem, establishing that matching expected average velocities is sufficient for strict distribution alignment. Empirically, on challenging tasks of high-dimensional manifolds including 4D occupancy forecasting and text-to-image generation, MFD achieves state-of-the-art performance, enabling high-fidelity single-step generation.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:39:19Z</published>
+    <published>2026-06-10T17:59:57Z</published>
+    <arxiv:comment>Code: https://github.com/elmma/mllm-reroute/</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>An Zhao</name>
+      <name>Cheng-Yu Yang</name>
     </author>
     <author>
-      <name>Shengyuan Zhang</name>
+      <name>Shao-Yuan Lo</name>
     </author>
     <author>
-      <name>Zhongjian Sun</name>
-    </author>
-    <author>
-      <name>Yixiang Zhou</name>
-    </author>
-    <author>
-      <name>Zejian Li</name>
-    </author>
-    <author>
-      <name>Ling Yang</name>
-    </author>
-    <author>
-      <name>Tianrun Chen</name>
-    </author>
-    <author>
-      <name>Lingyun Sun</name>
+      <name>Yu-Lun Liu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.11151v1</id>
-    <title>JOIN: Anchor-Grasp-Conditioned Joining via Opposition, Inference, and Navigation for Bimanual Assistive Manipulation</title>
-    <updated>2026-06-09T17:36:06Z</updated>
-    <link href="https://arxiv.org/abs/2606.11151v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11151v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Assistive mobility and manipulation platforms have received increasing attention as a means of restoring independence to individuals with disabilities. While effective for many basic activities of daily living (ADLs), a significant percentage of everyday tasks such as opening a jar, pouring a liquid, lifting a tray, or basic meal preparation, is fundamentally bimanual and remains out of reach for any single-arm system. Adding a second arm to a wheelchair is impractical, due to the additional power draw, cost, and the loss of space required for transfers and mobility. We instead propose a heterogeneous, on-demand bimanual system, in which a wheelchair-mounted anchor arm is joined when needed by a summoned mobile manipulator that serves as a complement arm. The central technical problem, which we call bimanual joining, is conditional: the anchor has already committed to a grasp, and the complement arm must choose where to stand and what to grasp to complete the task. We formulate bimanual joining as a three-phase decomposition (plan, drive, grasp) and show that a vision-language model (VLM), coupled with standard geometric tools, provides task-level knowledge sufficient to solve a representative class of bimanual ADLs. Our system JOIN, contributes (i) a wheelchair-referenced opposition score, and (ii) task-conditioned directional manipulability. We evaluate JOIN on a Kinova Gen3 anchor and a Hello Robot Stretch~3 complement on representative same-object and different-object tasks. JOIN accomplished more attempts (19/20) than state-of-the-art methods (14/20) and required markedly less correction by the operator.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:36:06Z</published>
-    <arxiv:comment>Xiang Zhi Tan and Taşkın Padır share equal advising</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
+    <id>http://arxiv.org/abs/2606.12411v1</id>
+    <title>Context-Driven Incremental Compression for Multi-Turn Dialogue Generation</title>
+    <updated>2026-06-10T17:59:54Z</updated>
+    <link href="https://arxiv.org/abs/2606.12411v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12411v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficiency and robustness, we introduce Context-Driven Incremental Compression (C-DIC), which treats a conversation as interleaved contextual threads and stores revisable per-thread compression states in a single, compact dialogue memory. At each turn, a lightweight retrieve, revise, and write-back loop shares information across turns and updates stale memories, stabilizing long-horizon behavior. In addition, we adapt truncated backpropagation-through-time (TBPTT) to our multi-turn setting, learning cross-turn dependencies without full-history backpropagation. Extensive experiments on long-form dialogue benchmarks demonstrate superior performance and efficiency of C-DIC; notably, C-DIC shows stable inference latency and perplexity over hundreds of dialogue turns, supporting a scalable path to high-quality dialogue modeling.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:59:54Z</published>
+    <arxiv:comment>Accepted at ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Drake Moore</name>
+      <name>Yeongseo Jung</name>
     </author>
     <author>
-      <name>Matt Cheng</name>
+      <name>Jaehyeok Kim</name>
     </author>
     <author>
-      <name>Xiang Zhi Tan</name>
+      <name>Eunseo Jung</name>
     </author>
     <author>
-      <name>Taşkın Padır</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.11147v1</id>
-    <title>Quantum statistics in an extended collider coupled to a qubit</title>
-    <updated>2026-06-09T17:34:24Z</updated>
-    <link href="https://arxiv.org/abs/2606.11147v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11147v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Mesoscopic colliders provide an effective platform for probing the mutual statistics of quantum particles. Recent experiments have successfully extracted the mutual statistics of fermions, and more exotic anyons using quantum point contacts (QPCs). Coupling a point-like collider, such as a quantum point contact, to a two-level impurity or qubit can induce statistical transmutation of fermions, causing them to display boson-like bunching tendencies. Here, we extend the analysis to an extended collider. We investigate the scattering of two incoming fermionic and bosonic wave packets in the presence of post-selection on the impurity state, and systematically analyze the possible benchmarks used to characterize bunching and infer the underlying mutual statistics. We show that only a specific benchmark faithfully captures the mutual statistics of the colliding particles, while alternative choices can produce spurious statistical signatures. Hence, the correct benchmark for probing the quantum statistics depends on the intricate details of the mesoscopic collider.</summary>
-    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:34:24Z</published>
-    <arxiv:comment>Main text: 6 pages and 2 figures, Appendix: 13 pages</arxiv:comment>
-    <arxiv:primary_category term="cond-mat.mes-hall"/>
-    <author>
-      <name>Rishav Chaudhuri</name>
+      <name>Jiachuan Wang</name>
     </author>
     <author>
-      <name>Sai Satyam Samal</name>
+      <name>Yongqi Zhang</name>
+    </author>
+    <author>
+      <name>Ka Chun Cheung</name>
+    </author>
+    <author>
+      <name>Simon See</name>
+    </author>
+    <author>
+      <name>Lei Chen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.11145v1</id>
-    <title>OpenPCC: Open and Confidential LLM Serving on Commodity TEEs</title>
-    <updated>2026-06-09T17:33:33Z</updated>
-    <link href="https://arxiv.org/abs/2606.11145v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.11145v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Generative AI applications such as personal AI agents, image generators, and chat assistants offer advanced capabilities to improve user experience. Behind the scenes, Large Language Models (LLMs) that power these services require a massive amount of computation and are usually deployed in the cloud, available as APIs, meaning that a user's request has to be sent to a Cloud Inference Service (CIS) for processing. However, the strong capabilities of LLM also mean that user's requests now contain much more personal sensitive or enterprise confidential information, demanding equally strong protection in CIS. While early industry efforts such as Apple Private Cloud Compute (PCC) and Google Private AI Compute have emerged to show the potential of secure CIS, they are not adoptable for deployment by others due to their reliance on proprietary hardware and closed ecosystem. In addition, they all suffer from their own design glitches that can undermine the ambitious goal of bringing in true privacy protection to end users. In this paper, we present our analysis of the fundamental requirements of building a secure yet open CIS. We then present OpenPCC, a Confidential CIS framework that does not rely on proprietary hardware but instead uses commercially available TEEs. We implement an open-source prototype and characterize it end-to-end on a Llama-3 8B vLLM workload, separating OpenPCC's own cost from the underlying TEE hardware. Our analysis and evaluation demonstrated the feasibility and security of the system.</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-09T17:33:33Z</published>
-    <arxiv:primary_category term="cs.CR"/>
+    <id>http://arxiv.org/abs/2606.12407v1</id>
+    <title>How Seemingly Inconsequential Design Choices Dictate Performance of LLMs in Pathology</title>
+    <updated>2026-06-10T17:59:39Z</updated>
+    <link href="https://arxiv.org/abs/2606.12407v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12407v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>General-purpose large language models (LLMs) are routinely used as baselines when evaluating specialized pathology models on whole-slide images (WSIs). Because WSIs exceed contemporary model context limits, LLM baselines routinely use small, high-magnification patches processed independently via majority voting, without systematic evaluation of seemingly inconsequential design choices such as patch size, patch count, and magnification. Generalist LLMs have consistently underperformed specialized systems, reinforcing the perception that domain-specific training or architectural adaptation is necessary for pathology tasks involving WSIs. Here, we conduct a systematic factorial analysis of four input design factors: inference mode, patch size, magnification, and patch count. We demonstrate that prior studies have overstated the gap between specialized models and general-purpose LLMs by choosing non-optimized input configurations. On the MultiPathQA benchmark, switching to a single balanced configuration (large patches at lower magnification, processed jointly) raises GPT-5 from 15.1% to 39.5% on cancer-type classification (TCGA) and from 38.1% to 62.9% on organ classification (GTEx). Per-task optimization yields further gains up to 43.9% (TCGA) and 71.6% (GTEx). The same configuration generalizes to two other models and to a fully held-out CPTAC cohort, where it improves Gemini 3 Flash by 23.4 percentage points without any task-specific tuning.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:59:39Z</published>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Haoling Zhou</name>
-      <arxiv:affiliation>The Ohio State University</arxiv:affiliation>
+      <name>Kian R. Weihrauch</name>
     </author>
     <author>
-      <name>Shixuan Zhao</name>
-      <arxiv:affiliation>The Ohio State University</arxiv:affiliation>
+      <name>Thomas A. Buckley</name>
     </author>
     <author>
-      <name>Chao Wang</name>
-      <arxiv:affiliation>The Ohio State University</arxiv:affiliation>
+      <name>William Lotter</name>
     </author>
     <author>
-      <name>Zhiqiang Lin</name>
-      <arxiv:affiliation>The Ohio State University</arxiv:affiliation>
+      <name>Arjun K. Manrai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12401v1</id>
+    <title>The carbon isotope ratio of β Pic b with high-resolution spectroscopy</title>
+    <updated>2026-06-10T17:58:27Z</updated>
+    <link href="https://arxiv.org/abs/2606.12401v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12401v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Isotopic ratios trace the formation and evolution of planets and link their atmospheres to the chemistry of their natal protoplanetary discs. We measure $^{12}\mathrm{C}/^{13}\mathrm{C} = 58^{+18}_{-15}$ in the atmosphere of the young super-Jupiter $β$ Pic b from 11 nights of CRIRES+ K-band spectroscopy ($\mathcal{R} \approx 100{,}000$) at the Very Large Telescope (VLT). We detect both $^{12}\mathrm{CO}$ and $^{13}\mathrm{CO}$ and constrain $^{12}\mathrm{C}/^{13}\mathrm{C}$ with a Bayesian retrieval jointly fitted with near-infrared photometry. The inferred $^{12}\mathrm{C}/^{13}\mathrm{C}$ is consistent with the present-day interstellar medium (ISM), is below the solar value, and is comparable to measurements in other young super-Jupiters. We also retrieve $T_{\rm eff} = 1629^{+30}_{-28}\,\mathrm{K}$, near-solar to mildly super-solar metallicity ([M/H]$ = 0.20^{+0.16}_{-0.12}$), a solar-like carbon-to-oxygen ratio (C/O$ = 0.52 \pm 0.03$), and tentative evidence for thick clouds. We analyse each night independently and combine the results of the six epochs with the highest signal-to-noise ratio (S/N), propagating night-to-night scatter into the final uncertainties. This provides an isotopic benchmark for a directly imaged planet interior to the CO snow line.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:58:27Z</published>
+    <arxiv:comment>Accepted to A&amp;A</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>D. González Picos</name>
+    </author>
+    <author>
+      <name>I. A. G. Snellen</name>
+    </author>
+    <author>
+      <name>R. Landman</name>
+    </author>
+    <author>
+      <name>S. de Regt</name>
+    </author>
+    <author>
+      <name>N. Grasser</name>
+    </author>
+    <author>
+      <name>J. L. Birkby</name>
+    </author>
+    <author>
+      <name>T. Stolker</name>
+    </author>
+    <author>
+      <name>I. Koutalios</name>
+    </author>
+    <author>
+      <name>M. A. Kenworthy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12400v1</id>
+    <title>Doc-to-Atom: Learning to Compile and Compose Memory Atoms</title>
+    <updated>2026-06-10T17:58:20Z</updated>
+    <link href="https://arxiv.org/abs/2606.12400v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12400v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:58:20Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Xingjian Diao</name>
+    </author>
+    <author>
+      <name>Wenbo Li</name>
+    </author>
+    <author>
+      <name>Yashas Malur Saidutta</name>
+    </author>
+    <author>
+      <name>Avinash Amballa</name>
+    </author>
+    <author>
+      <name>Lazar Valkov</name>
+    </author>
+    <author>
+      <name>Srinivas Chappidi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12392v1</id>
+    <title>System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5</title>
+    <updated>2026-06-10T17:54:32Z</updated>
+    <link href="https://arxiv.org/abs/2606.12392v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12392v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on precise translation and affective-semantic understanding of classical poetry remains limited. The main challenge is that most studies treat the poetic appreciation task as a general-domain problem, neglecting the distinctive features of poetic appreciation, while high-quality and domain-specific datasets are extremely limited. To address this limitation, we decompose the task into three subtasks: term interpretation, semantic interpretation, and emotional inference. Based on multiple open-source datasets, we perform data cleansing and alignment to construct the Classical Chinese Poetry Instruction Pair Dataset (CCPoetry-49K), which comprises 49,404 high-quality instruction-response pairs explicitly optimized for this domain. We then propose a domain-specialized LLM, called PoetryQwen, by applying Low-Rank Adaptation (LoRA) to fine-tune the Qwen2.5-14B model. Experimental results on the CCL25-Eval Task 5 benchmark demonstrate that PoetryQwen achieves a score of 0.757, representing a 9.7% improvement over the Qwen2.5-14B-Instruct baseline (0.690). These findings clearly indicate that PoetryQwen significantly enhances performance in precise translation and emotional understanding of classical poetry. We present new dataset and methodological considerations intended to support the domain-specific optimization of LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:54:32Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Haotao Xie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12387v1</id>
+    <title>TAHOE: Text-to-SQL with Automated Hint Optimization from Experience</title>
+    <updated>2026-06-10T17:52:15Z</updated>
+    <link href="https://arxiv.org/abs/2606.12387v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12387v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massive schemas, and evolving user preferences, while supervised fine-tuning is costly and rigid and agentic test-time scaling is expensive. We present Tahoe, a system that treats prompt optimization as a dynamic data management problem. Tahoe uses an error-driven hint learning pipeline across Development and Deployment to consolidate debugging traces into a structured Hint Bank. Compiler feedback is distilled into reusable Syntax Hints for dialect-specific rules, while execution and user feedback are converted into Semantic Hints for schema- and user-specific logic. Tahoe further introduces a Strategy Layer that models conflicting user intents as competing strategies under shared natural-language triggers, with recency signals and post-learning attribution statistics that summarize empirical success, harm, inertness, and support. At inference time, Tahoe retrieves relevant hints and guides the LLM through Logic Planning followed by SQL Synthesis. We implement and evaluate the development-phase workflow, leaving deployment-time human-feedback updates for future work. On Spider 2.0-Snow, Tahoe substantially improves Text-to-SQL without updating model parameters. On 113 supervised Spider 2.0-Snow-0212 examples using GPT-5.5, Tahoe raises pass rate from 61.95 percent to 79.42 percent and pass-at-4 from 72.57 percent to 87.61 percent, achieves 100 percent Snowflake syntax pass rate, and reduces average compiler-feedback critic rounds from 2.79 to 0.12 per sampled candidate. The same Hint Bank also transfers to weaker backbones, including a 19.7 percentage-point pass-rate gain on Doubao-2.0-lite.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:52:15Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Zhiyi Chen</name>
+    </author>
+    <author>
+      <name>Jie Song</name>
+    </author>
+    <author>
+      <name>Peng Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12371v1</id>
+    <title>A Turbo-Inference Strategy for Object Detection and Instance Segmentation</title>
+    <updated>2026-06-10T17:38:22Z</updated>
+    <link href="https://arxiv.org/abs/2606.12371v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12371v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Object detection and instance segmentation tasks are closely related. Existing top-down instance segmentation methods usually follow a detect-then-segment paradigm, where an initial detector is used to recognize and localize objects with bounding boxes, followed by the segmentation of an instance mask within each bounding box. In such methods, the detection accuracy directly influences the subsequent segmentation performance. However, previous research has seldom explored the impact of the instance segmentation task on object detection. In this paper, we present a turbo-inference strategy for the top-down methods that leverages the complementary information between detection and segmentation tasks iteratively. Specifically we design two modules: turbo-detection head and turbo-segmentation head, which facilitate communication between the tasks. The two modules form a closed loop that interlaces the detection and segmentation results without retraining the model. Comprehensive experiments on the COCO, iFLYTEK, and Cityscapes datasets demonstrate that our method substantially enhances both detection and segmentation accuracies with a certain increase in computational cost. The proposed method represents a tradeoff between prediction accuracy and inference speed. Codes are available at https://github.com/zhaozhen2333/Turbo-Learning.git.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:38:22Z</published>
+    <arxiv:comment>Preprint version of an article published in Computer Vision and Image Understanding</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>Computer Vision and Image Understanding, Volume 270, Article 104827, 2026</arxiv:journal_ref>
+    <author>
+      <name>Zhen Zhao</name>
+    </author>
+    <author>
+      <name>Gang Zhang</name>
+    </author>
+    <author>
+      <name>Xiaolin Hu</name>
+    </author>
+    <author>
+      <name>Liang Tang</name>
+    </author>
+    <arxiv:doi>10.1016/j.cviu.2026.104827</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cviu.2026.104827" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12370v1</id>
+    <title>Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling</title>
+    <updated>2026-06-10T17:36:45Z</updated>
+    <link href="https://arxiv.org/abs/2606.12370v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12370v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:36:45Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yucheng Li</name>
+    </author>
+    <author>
+      <name>Huiqiang Jiang</name>
+    </author>
+    <author>
+      <name>Yang Xu</name>
+    </author>
+    <author>
+      <name>Jianxin Yang</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+    <author>
+      <name>Yizhong Cao</name>
+    </author>
+    <author>
+      <name>Yuhao Shen</name>
+    </author>
+    <author>
+      <name>Fan Zhou</name>
+    </author>
+    <author>
+      <name>Rui Men</name>
+    </author>
+    <author>
+      <name>Jianwei Zhang</name>
+    </author>
+    <author>
+      <name>An Yang</name>
+    </author>
+    <author>
+      <name>Bowen Yu</name>
+    </author>
+    <author>
+      <name>Bo Zheng</name>
+    </author>
+    <author>
+      <name>Fei Huang</name>
+    </author>
+    <author>
+      <name>Junyang Lin</name>
+    </author>
+    <author>
+      <name>Dayiheng Liu</name>
+    </author>
+    <author>
+      <name>Jingren Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12362v1</id>
+    <title>Latent World Recovery for Multimodal Learning with Missing Modalities</title>
+    <updated>2026-06-10T17:31:34Z</updated>
+    <link href="https://arxiv.org/abs/2606.12362v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12362v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study multimodal learning under missing modalities, with particular motivation from bioscience applications in which heterogeneous modalities are often only partially available when decisions need to be made. We propose Latent World Recovery (LWR), a framework built on two key ideas: (i) modality-specific embeddings from different modalities are aligned in a shared latent space, and (ii) a unified representation is constructed by fusing only the embeddings of the modalities that are actually available at both training and inference time. Rather than imputing missing modalities or requiring a fixed modality set, LWR treats each modality as a partial perception of an underlying latent state and performs availability-aware representation learning directly from the observed modalities. This combination of neighbor-based latent alignment and availability-aware modality fusion enables robust multimodal prediction under partial observation, while avoiding error propagation from explicit reconstruction of missing modalities. We evaluate the proposed framework on real-world incomplete multi-omics benchmarks and demonstrate that it provides an effective approach to downstream tasks such as cancer phenotype classification and survival prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T17:31:34Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hui Wang</name>
+    </author>
+    <author>
+      <name>Tianyu Ren</name>
+    </author>
+    <author>
+      <name>Joseph Butler</name>
+    </author>
+    <author>
+      <name>Christopher Baker</name>
+    </author>
+    <author>
+      <name>Karen Rafferty</name>
+    </author>
+    <author>
+      <name>Simon McDade</name>
     </author>
   </entry>
 </feed>
