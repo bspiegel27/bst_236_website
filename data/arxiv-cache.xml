@@ -1,320 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-06-11T02:42:31Z -->
+<!-- Last updated: 2026-06-12T02:38:28Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-06-11T02:42:32Z</updated>
+  <updated>2026-06-12T02:38:28Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>148187</opensearch:totalResults>
+  <opensearch:totalResults>148347</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2606.12412v1</id>
-    <title>Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models</title>
-    <updated>2026-06-10T17:59:57Z</updated>
-    <link href="https://arxiv.org/abs/2606.12412v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12412v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and Nüwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: https://github.com/elmma/mllm-reroute/</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:59:57Z</published>
-    <arxiv:comment>Code: https://github.com/elmma/mllm-reroute/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2606.13675v1</id>
+    <title>Improving Robotic Generalist Policies via Flow Reversal Steering</title>
+    <updated>2026-06-11T17:59:45Z</updated>
+    <link href="https://arxiv.org/abs/2606.13675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T17:59:45Z</published>
+    <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Cheng-Yu Yang</name>
+      <name>Andy Tang</name>
     </author>
     <author>
-      <name>Shao-Yuan Lo</name>
+      <name>William Chen</name>
     </author>
     <author>
-      <name>Yu-Lun Liu</name>
+      <name>Andrew Wagenmaker</name>
+    </author>
+    <author>
+      <name>Chelsea Finn</name>
+    </author>
+    <author>
+      <name>Sergey Levine</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.12411v1</id>
-    <title>Context-Driven Incremental Compression for Multi-Turn Dialogue Generation</title>
-    <updated>2026-06-10T17:59:54Z</updated>
-    <link href="https://arxiv.org/abs/2606.12411v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12411v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficiency and robustness, we introduce Context-Driven Incremental Compression (C-DIC), which treats a conversation as interleaved contextual threads and stores revisable per-thread compression states in a single, compact dialogue memory. At each turn, a lightweight retrieve, revise, and write-back loop shares information across turns and updates stale memories, stabilizing long-horizon behavior. In addition, we adapt truncated backpropagation-through-time (TBPTT) to our multi-turn setting, learning cross-turn dependencies without full-history backpropagation. Extensive experiments on long-form dialogue benchmarks demonstrate superior performance and efficiency of C-DIC; notably, C-DIC shows stable inference latency and perplexity over hundreds of dialogue turns, supporting a scalable path to high-quality dialogue modeling.</summary>
+    <id>http://arxiv.org/abs/2606.13659v1</id>
+    <title>Specifying Hardware Communication as Programs</title>
+    <updated>2026-06-11T17:56:13Z</updated>
+    <link href="https://arxiv.org/abs/2606.13659v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13659v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To test and debug hardware modules, it is common to write two programs: a driver, which translates high-level transactions into interactions on the module's input and output signals, and a monitor, which analyzes a signal-level execution trace and recognizes a transaction. These two programs are commonly implemented separately for each hardware protocol, but this separation entails manual effort and risks inconsistencies.
+  We advocate an alternative approach. We present a DSL in which users specify hardware communication protocols as succinct imperative programs. Crucially, the same specification can be used to both drive designs and monitor transactions. We present the design of a tool, which given a specification in our DSL and a waveform, automatically infers a transaction-level trace consistent with the waveform. We discuss plans to evaluate our DSL on real-world interconnects such as Wishbone and AXI-Stream.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T17:56:13Z</published>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Ernest Ng</name>
+    </author>
+    <author>
+      <name>Nikil Shyamsunder</name>
+    </author>
+    <author>
+      <name>Francis Pham</name>
+    </author>
+    <author>
+      <name>Adrian Sampson</name>
+    </author>
+    <author>
+      <name>Kevin Laeufer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13649v1</id>
+    <title>Operadic consistency: a label-free signal for compositional reasoning failures in LLMs</title>
+    <updated>2026-06-11T17:50:40Z</updated>
+    <link href="https://arxiv.org/abs/2606.13649v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13649v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Detecting LLM reasoning failures at inference time without ground-truth labels has motivated a wide range of confidence baselines, including self-consistency, semantic entropy, and P(True), built on within-question sampling and self-evaluation. Operad theory, the formalism for systems built by iterated substitution, suggests a complementary diagnostic: a model's direct answer to a compositional query should agree with the answer it produces by composing a stated decomposition of the same query. We instantiate this idea as operadic consistency (OC), a per-question signal. Across twelve instruction-tuned LLMs (4B to 671B parameters, open-weights and closed-source) on four multi-hop QA datasets, OC is strongly correlated with accuracy on every dataset (Pearson $r \in [0.86, 0.94]$, all $p \leq 0.0004$), and is the only signal we evaluate with $r \geq 0.85$ uniformly across all four datasets. Chain-of-thought self-consistency (CoT-SC; Wang et al., 2023) matches OC on HotpotQA and DROP ($r = 0.93, 0.87$) but drops to $r \approx 0.45$ on MuSiQue and StrategyQA. At the per-question level, OC contributes information beyond CoT-SC and semantic entropy on every dataset (cluster-robust $p \leq 10^{-16}$ for the OC coefficient), and the conclusion is robust to additionally controlling for constructed decomposition-aware baselines ($p \leq 10^{-13}$). The same signal yields selective-prediction improvements (accuracy at fixed coverage) over a tuned CoT-SC baseline at the equal-cost $K = 3$ budget (AUARC lifts of +0.086 to +0.096 and AUROC lifts of +0.092 to +0.164; 95% CIs exclude zero on every cell). On five frontier thinking models, where the decomposition is extracted from the model's own chain of thought, the same equal-cost comparison gives positive selective-prediction point-estimate lift on all 16 (dataset, budget, metric) cells tested, with 95% CIs excluding zero on 12 of the 16.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:59:54Z</published>
-    <arxiv:comment>Accepted at ICML 2026</arxiv:comment>
+    <published>2026-06-11T17:50:40Z</published>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Yeongseo Jung</name>
+      <name>Nathaniel Bottman</name>
     </author>
     <author>
-      <name>Jaehyeok Kim</name>
+      <name>Yinhong Liu</name>
     </author>
     <author>
-      <name>Eunseo Jung</name>
-    </author>
-    <author>
-      <name>Jiachuan Wang</name>
-    </author>
-    <author>
-      <name>Yongqi Zhang</name>
-    </author>
-    <author>
-      <name>Ka Chun Cheung</name>
-    </author>
-    <author>
-      <name>Simon See</name>
-    </author>
-    <author>
-      <name>Lei Chen</name>
+      <name>Kyle Richardson</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.12407v1</id>
-    <title>How Seemingly Inconsequential Design Choices Dictate Performance of LLMs in Pathology</title>
-    <updated>2026-06-10T17:59:39Z</updated>
-    <link href="https://arxiv.org/abs/2606.12407v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12407v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>General-purpose large language models (LLMs) are routinely used as baselines when evaluating specialized pathology models on whole-slide images (WSIs). Because WSIs exceed contemporary model context limits, LLM baselines routinely use small, high-magnification patches processed independently via majority voting, without systematic evaluation of seemingly inconsequential design choices such as patch size, patch count, and magnification. Generalist LLMs have consistently underperformed specialized systems, reinforcing the perception that domain-specific training or architectural adaptation is necessary for pathology tasks involving WSIs. Here, we conduct a systematic factorial analysis of four input design factors: inference mode, patch size, magnification, and patch count. We demonstrate that prior studies have overstated the gap between specialized models and general-purpose LLMs by choosing non-optimized input configurations. On the MultiPathQA benchmark, switching to a single balanced configuration (large patches at lower magnification, processed jointly) raises GPT-5 from 15.1% to 39.5% on cancer-type classification (TCGA) and from 38.1% to 62.9% on organ classification (GTEx). Per-task optimization yields further gains up to 43.9% (TCGA) and 71.6% (GTEx). The same configuration generalizes to two other models and to a fully held-out CPTAC cohort, where it improves Gemini 3 Flash by 23.4 percentage points without any task-specific tuning.</summary>
+    <id>http://arxiv.org/abs/2606.13646v1</id>
+    <title>Observable Dependence of Viscous Corrections in QGP: Heavy Quarks and Dileptons in Chapman--Enskog Theory</title>
+    <updated>2026-06-11T17:49:05Z</updated>
+    <link href="https://arxiv.org/abs/2606.13646v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13646v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We calculate, for the first time, heavy quark transport and thermal dilepton production from QGP using viscous correction up to second order in gradients. We use the form of viscous correction obtained from Chapman-Enskog like expansion of the Boltzmann transport equation in relaxation time approximation, and compare our results with that of Grad's 14-moment approximation. By employing the temperature and shear stress evolution profiles of QGP obtained from second-order causal relativistic viscous hydrodynamics, we study the heavy quark transport coefficients and thermal dilepton production from an evolving QGP. In the case of HQ transport, the CE corrections suppress the drag force substantially, induce a non-trivial momentum dependence in transverse momentum diffusion, and result in a comparatively less modification in longitudinal momentum diffusion. Whereas, for thermal dileptons, the CE corrections result in an enhanced early-time contribution which decreases and become converging to the first-order CE correction with the evolution of QGP, and remain well behaved compared to that of Grad's correction. Our results indicate that the modification of the observable due to viscous corrections is governed by the magnitude of the corrections as well as the interplay between their momentum dependence and momentum weighting of the transport and emission kernels. We demonstrate that the momentum structure of the various viscous corrections at the level of distribution function is not directly translated to the observables since the different observables are sensitive to distinct regions of momentum space.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T17:49:05Z</published>
+    <arxiv:comment>18 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Lakshmi J. Naik</name>
+    </author>
+    <author>
+      <name>P. Parvathi</name>
+    </author>
+    <author>
+      <name>Nachiketa Sarkar</name>
+    </author>
+    <author>
+      <name>V. Sreekanth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13644v1</id>
+    <title>Surflo: Consistent 3D Surface Flow Model with Global State</title>
+    <updated>2026-06-11T17:48:38Z</updated>
+    <link href="https://arxiv.org/abs/2606.13644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Geometry is invariant to viewpoint, which makes any collection of images a redundant encoding of a single 3D state. Existing feed-forward reconstruction models fail to exploit this: per-view methods emit overlapping, unaligned pointmaps that grow linearly with input count, while global-latent methods commit to a fixed, low-resolution output. We introduce Surflo, which compresses a variable number of unposed RGB views into K latent tokens-one global state-and decodes oriented 3D surface points by independently transporting them from noise onto the surface via flow matching. This frees the output from any fixed grid or token budget: the same latent yields from a few thousand to a million points in a single forward pass. To suppress the local inconsistencies inherent to independent per-point decoding, an inference-time guidance term correlates nearby points by injecting a photometric gradient during ODE integration. Surflo matches or surpasses feed-forward baselines on surface metrics, runs an order of magnitude faster than optimization-based methods that require hundreds of views, and is the only feed-forward approach to combine a global latent with arbitrary-resolution decoding.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:59:39Z</published>
+    <published>2026-06-11T17:48:38Z</published>
+    <arxiv:comment>Project webpage: https://anttwo.github.io/surflo/</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Kian R. Weihrauch</name>
+      <name>Antoine Guédon</name>
     </author>
     <author>
-      <name>Thomas A. Buckley</name>
+      <name>Shu Nakamura</name>
     </author>
     <author>
-      <name>William Lotter</name>
+      <name>Nicolas Dufour</name>
     </author>
     <author>
-      <name>Arjun K. Manrai</name>
+      <name>Jiahui Lei</name>
+    </author>
+    <author>
+      <name>Ko Nishino</name>
+    </author>
+    <author>
+      <name>Angjoo Kanazawa</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.12401v1</id>
-    <title>The carbon isotope ratio of β Pic b with high-resolution spectroscopy</title>
-    <updated>2026-06-10T17:58:27Z</updated>
-    <link href="https://arxiv.org/abs/2606.12401v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12401v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Isotopic ratios trace the formation and evolution of planets and link their atmospheres to the chemistry of their natal protoplanetary discs. We measure $^{12}\mathrm{C}/^{13}\mathrm{C} = 58^{+18}_{-15}$ in the atmosphere of the young super-Jupiter $β$ Pic b from 11 nights of CRIRES+ K-band spectroscopy ($\mathcal{R} \approx 100{,}000$) at the Very Large Telescope (VLT). We detect both $^{12}\mathrm{CO}$ and $^{13}\mathrm{CO}$ and constrain $^{12}\mathrm{C}/^{13}\mathrm{C}$ with a Bayesian retrieval jointly fitted with near-infrared photometry. The inferred $^{12}\mathrm{C}/^{13}\mathrm{C}$ is consistent with the present-day interstellar medium (ISM), is below the solar value, and is comparable to measurements in other young super-Jupiters. We also retrieve $T_{\rm eff} = 1629^{+30}_{-28}\,\mathrm{K}$, near-solar to mildly super-solar metallicity ([M/H]$ = 0.20^{+0.16}_{-0.12}$), a solar-like carbon-to-oxygen ratio (C/O$ = 0.52 \pm 0.03$), and tentative evidence for thick clouds. We analyse each night independently and combine the results of the six epochs with the highest signal-to-noise ratio (S/N), propagating night-to-night scatter into the final uncertainties. This provides an isotopic benchmark for a directly imaged planet interior to the CO snow line.</summary>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:58:27Z</published>
-    <arxiv:comment>Accepted to A&amp;A</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.EP"/>
-    <author>
-      <name>D. González Picos</name>
-    </author>
-    <author>
-      <name>I. A. G. Snellen</name>
-    </author>
-    <author>
-      <name>R. Landman</name>
-    </author>
-    <author>
-      <name>S. de Regt</name>
-    </author>
-    <author>
-      <name>N. Grasser</name>
-    </author>
-    <author>
-      <name>J. L. Birkby</name>
-    </author>
-    <author>
-      <name>T. Stolker</name>
-    </author>
-    <author>
-      <name>I. Koutalios</name>
-    </author>
-    <author>
-      <name>M. A. Kenworthy</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.12400v1</id>
-    <title>Doc-to-Atom: Learning to Compile and Compose Memory Atoms</title>
-    <updated>2026-06-10T17:58:20Z</updated>
-    <link href="https://arxiv.org/abs/2606.12400v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12400v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:58:20Z</published>
-    <arxiv:comment>20 pages</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Xingjian Diao</name>
-    </author>
-    <author>
-      <name>Wenbo Li</name>
-    </author>
-    <author>
-      <name>Yashas Malur Saidutta</name>
-    </author>
-    <author>
-      <name>Avinash Amballa</name>
-    </author>
-    <author>
-      <name>Lazar Valkov</name>
-    </author>
-    <author>
-      <name>Srinivas Chappidi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.12392v1</id>
-    <title>System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5</title>
-    <updated>2026-06-10T17:54:32Z</updated>
-    <link href="https://arxiv.org/abs/2606.12392v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12392v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on precise translation and affective-semantic understanding of classical poetry remains limited. The main challenge is that most studies treat the poetic appreciation task as a general-domain problem, neglecting the distinctive features of poetic appreciation, while high-quality and domain-specific datasets are extremely limited. To address this limitation, we decompose the task into three subtasks: term interpretation, semantic interpretation, and emotional inference. Based on multiple open-source datasets, we perform data cleansing and alignment to construct the Classical Chinese Poetry Instruction Pair Dataset (CCPoetry-49K), which comprises 49,404 high-quality instruction-response pairs explicitly optimized for this domain. We then propose a domain-specialized LLM, called PoetryQwen, by applying Low-Rank Adaptation (LoRA) to fine-tune the Qwen2.5-14B model. Experimental results on the CCL25-Eval Task 5 benchmark demonstrate that PoetryQwen achieves a score of 0.757, representing a 9.7% improvement over the Qwen2.5-14B-Instruct baseline (0.690). These findings clearly indicate that PoetryQwen significantly enhances performance in precise translation and emotional understanding of classical poetry. We present new dataset and methodological considerations intended to support the domain-specific optimization of LLMs.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.13629v1</id>
+    <title>Valid Inference with Synthetic Data via Task Exchangeability</title>
+    <updated>2026-06-11T17:41:09Z</updated>
+    <link href="https://arxiv.org/abs/2606.13629v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13629v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There is a proliferation of work arguing for the use of synthetic data in scientific research. For example, social scientists are arguing for the use of LLM-generated "silicon samples" in pilot studies; AI evaluations increasingly rely on "LLM-as-a-judge" outputs; and proteomics research is accelerated by generative models that produce synthetic protein structures. These developments raise an intriguing possibility: synthetic data may help researchers ask more questions, run more studies, and accelerate discovery. But they also raise a fundamental concern: synthetic data can be biased, noisy, and misspecified. In this work, we propose statistical principles for using synthetic data in scientific research with provable validity guarantees. The key insight is a new technical condition that we call task exchangeability. Informally, this is a requirement that the researcher can identify historical tasks, for which real data is available, such that their current task of interest is exchangeable with the historical tasks in an appropriate mathematical sense. We develop methods for valid inference under task exchangeability, together with extensions that provide guarantees even beyond exchangeability. We demonstrate the framework on public opinion surveys with silicon samples and AI evaluation with autoraters.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:54:32Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Haotao Xie</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.12387v1</id>
-    <title>TAHOE: Text-to-SQL with Automated Hint Optimization from Experience</title>
-    <updated>2026-06-10T17:52:15Z</updated>
-    <link href="https://arxiv.org/abs/2606.12387v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12387v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massive schemas, and evolving user preferences, while supervised fine-tuning is costly and rigid and agentic test-time scaling is expensive. We present Tahoe, a system that treats prompt optimization as a dynamic data management problem. Tahoe uses an error-driven hint learning pipeline across Development and Deployment to consolidate debugging traces into a structured Hint Bank. Compiler feedback is distilled into reusable Syntax Hints for dialect-specific rules, while execution and user feedback are converted into Semantic Hints for schema- and user-specific logic. Tahoe further introduces a Strategy Layer that models conflicting user intents as competing strategies under shared natural-language triggers, with recency signals and post-learning attribution statistics that summarize empirical success, harm, inertness, and support. At inference time, Tahoe retrieves relevant hints and guides the LLM through Logic Planning followed by SQL Synthesis. We implement and evaluate the development-phase workflow, leaving deployment-time human-feedback updates for future work. On Spider 2.0-Snow, Tahoe substantially improves Text-to-SQL without updating model parameters. On 113 supervised Spider 2.0-Snow-0212 examples using GPT-5.5, Tahoe raises pass rate from 61.95 percent to 79.42 percent and pass-at-4 from 72.57 percent to 87.61 percent, achieves 100 percent Snowflake syntax pass rate, and reduces average compiler-feedback critic rounds from 2.79 to 0.12 per sampled candidate. The same Hint Bank also transfers to weaker backbones, including a 19.7 percentage-point pass-rate gain on Doubao-2.0-lite.</summary>
-    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:52:15Z</published>
-    <arxiv:primary_category term="cs.DB"/>
-    <author>
-      <name>Zhiyi Chen</name>
-    </author>
-    <author>
-      <name>Jie Song</name>
-    </author>
-    <author>
-      <name>Peng Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.12371v1</id>
-    <title>A Turbo-Inference Strategy for Object Detection and Instance Segmentation</title>
-    <updated>2026-06-10T17:38:22Z</updated>
-    <link href="https://arxiv.org/abs/2606.12371v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12371v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Object detection and instance segmentation tasks are closely related. Existing top-down instance segmentation methods usually follow a detect-then-segment paradigm, where an initial detector is used to recognize and localize objects with bounding boxes, followed by the segmentation of an instance mask within each bounding box. In such methods, the detection accuracy directly influences the subsequent segmentation performance. However, previous research has seldom explored the impact of the instance segmentation task on object detection. In this paper, we present a turbo-inference strategy for the top-down methods that leverages the complementary information between detection and segmentation tasks iteratively. Specifically we design two modules: turbo-detection head and turbo-segmentation head, which facilitate communication between the tasks. The two modules form a closed loop that interlaces the detection and segmentation results without retraining the model. Comprehensive experiments on the COCO, iFLYTEK, and Cityscapes datasets demonstrate that our method substantially enhances both detection and segmentation accuracies with a certain increase in computational cost. The proposed method represents a tradeoff between prediction accuracy and inference speed. Codes are available at https://github.com/zhaozhen2333/Turbo-Learning.git.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:38:22Z</published>
-    <arxiv:comment>Preprint version of an article published in Computer Vision and Image Understanding</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <arxiv:journal_ref>Computer Vision and Image Understanding, Volume 270, Article 104827, 2026</arxiv:journal_ref>
-    <author>
-      <name>Zhen Zhao</name>
-    </author>
-    <author>
-      <name>Gang Zhang</name>
-    </author>
-    <author>
-      <name>Xiaolin Hu</name>
-    </author>
-    <author>
-      <name>Liang Tang</name>
-    </author>
-    <arxiv:doi>10.1016/j.cviu.2026.104827</arxiv:doi>
-    <link rel="related" href="https://doi.org/10.1016/j.cviu.2026.104827" title="doi"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.12370v1</id>
-    <title>Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling</title>
-    <updated>2026-06-10T17:36:45Z</updated>
-    <link href="https://arxiv.org/abs/2606.12370v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12370v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T17:41:09Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Lezhi Tan</name>
+    </author>
+    <author>
+      <name>Tijana Zrnic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13624v1</id>
+    <title>Beyond Uniform Tokens: Adaptive Compression for Time Series Language Models</title>
+    <updated>2026-06-11T17:39:26Z</updated>
+    <link href="https://arxiv.org/abs/2606.13624v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13624v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have enabled time series (TS) analysis by jointly modeling numerical observations and textual context through a shared token interface. However, TS tokens and prompt tokens exhibit fundamentally different information structures, making uniform token processing inefficient. In this paper, we study token efficiency in TS language modeling from an asymmetric-token perspective. We show that TS tokens have highly uneven spectral contributions, where many tokens share redundant frequency patterns while a small subset preserves critical temporal evidence. We also observe that prompt-token influence attenuates with model depth, suggesting that full prompt retention across all layers is unnecessary. Based on these findings, we develop an adaptive token budgeting framework that compresses TS tokens via frequency-domain structure and progressively reduces prompt tokens across layers. Experiments across forecasting, classification, imputation, and anomaly detection demonstrate up to \textit{\textbf{7.68$\times$}} inference acceleration and performance gains in \textit{\textbf{78\%}} of evaluated settings, showing the effectiveness of asymmetric token compression for scalable TS foundation models.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:36:45Z</published>
+    <published>2026-06-11T17:39:26Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jialin Gan</name>
+    </author>
+    <author>
+      <name>Xin Qiu</name>
+    </author>
+    <author>
+      <name>Guangzhe Chen</name>
+    </author>
+    <author>
+      <name>Xue Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13607v1</id>
+    <title>Reasoning as Pattern Matching: Shared Mechanisms in Human and LLM Everyday Reasoning</title>
+    <updated>2026-06-11T17:23:10Z</updated>
+    <link href="https://arxiv.org/abs/2606.13607v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13607v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When large language models (LLMs) fail to generalize or make haphazard errors in reasoning, it is often taken as evidence that LLMs are not truly reasoning, but rather performing a kind of pattern matching. The implication is that people's behavior does not exhibit the same types of failures because human reasoning uses principled and abstract world models. We evaluate human participants and 25 LLMs on their ability to engage in common-sense reasoning about a variety of everyday situations and observe similar patterns of errors in both people and models. We then identify the set of attention heads driving LLM responses and find that these heads implement a form of pattern-matching. These attention heads allow us to predict seemingly inexplicable reasoning errors in people caused by ostensibly irrelevant prompt details. Taken together, our results suggest that everyday causal reasoning in people and LLMs is more consistent with a form of pattern-matching than with abstract world models.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T17:23:10Z</published>
+    <arxiv:comment>13 pages main text, 51 pages supplementary text</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zach Studdiford</name>
+    </author>
+    <author>
+      <name>Gary Lupyan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13603v1</id>
+    <title>Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning Models</title>
+    <updated>2026-06-11T17:21:16Z</updated>
+    <link href="https://arxiv.org/abs/2606.13603v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13603v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chain-of-thought (CoT) reasoning is the dominant paradigm for inference-time scaling in language models, yet the causal influence of individual steps on the final answer poorly understood. We estimate each step's causal importance via early exit and use this measure to study how answers form across the reasoning traces of several model families. Across diverse tasks, we find that reasoning typically crosses a \emph{commitment boundary} -- a sharp transition from transient intermediate guesses to a stable, high-confidence answer. This transition often happens in a single step, well before the model's reasoning block ends, and is followed by \emph{epiphenomenal} CoT steps that leave the final answer probability unaltered. Using attention probes, we show that answer-formation stages can be linearly decoded from intermediate reasoning steps with high accuracy and generalize robustly to unseen reasoning tasks. We exploit this signal to early-exit reasoning blocks at the commitment boundary, reducing the length of CoTs up to 55\% on average with negligible impact on model performance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T17:21:16Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Yucheng Li</name>
+      <name>Daniel Scalena</name>
     </author>
     <author>
-      <name>Huiqiang Jiang</name>
+      <name>Sara Candussio</name>
     </author>
     <author>
-      <name>Yang Xu</name>
+      <name>Luca Bortolussi</name>
     </author>
     <author>
-      <name>Jianxin Yang</name>
+      <name>Elisabetta Fersini</name>
     </author>
     <author>
-      <name>Yi Zhang</name>
+      <name>Malvina Nissim</name>
     </author>
     <author>
-      <name>Yizhong Cao</name>
-    </author>
-    <author>
-      <name>Yuhao Shen</name>
-    </author>
-    <author>
-      <name>Fan Zhou</name>
-    </author>
-    <author>
-      <name>Rui Men</name>
-    </author>
-    <author>
-      <name>Jianwei Zhang</name>
-    </author>
-    <author>
-      <name>An Yang</name>
-    </author>
-    <author>
-      <name>Bowen Yu</name>
-    </author>
-    <author>
-      <name>Bo Zheng</name>
-    </author>
-    <author>
-      <name>Fei Huang</name>
-    </author>
-    <author>
-      <name>Junyang Lin</name>
-    </author>
-    <author>
-      <name>Dayiheng Liu</name>
-    </author>
-    <author>
-      <name>Jingren Zhou</name>
+      <name>Gabriele Sarti</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.12362v1</id>
-    <title>Latent World Recovery for Multimodal Learning with Missing Modalities</title>
-    <updated>2026-06-10T17:31:34Z</updated>
-    <link href="https://arxiv.org/abs/2606.12362v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.12362v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We study multimodal learning under missing modalities, with particular motivation from bioscience applications in which heterogeneous modalities are often only partially available when decisions need to be made. We propose Latent World Recovery (LWR), a framework built on two key ideas: (i) modality-specific embeddings from different modalities are aligned in a shared latent space, and (ii) a unified representation is constructed by fusing only the embeddings of the modalities that are actually available at both training and inference time. Rather than imputing missing modalities or requiring a fixed modality set, LWR treats each modality as a partial perception of an underlying latent state and performs availability-aware representation learning directly from the observed modalities. This combination of neighbor-based latent alignment and availability-aware modality fusion enables robust multimodal prediction under partial observation, while avoiding error propagation from explicit reconstruction of missing modalities. We evaluate the proposed framework on real-world incomplete multi-omics benchmarks and demonstrate that it provides an effective approach to downstream tasks such as cancer phenotype classification and survival prediction.</summary>
+    <id>http://arxiv.org/abs/2606.13589v1</id>
+    <title>Simplex-Constrained Sparse Bagging: Transitioning from Uniform Priors to Sparse Posteriors in Ensemble Learning</title>
+    <updated>2026-06-11T17:11:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.13589v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13589v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present Simplex-Constrained Sparse Bagging (SCSB), a mathematically rigorous framework for post-training compression and probability calibration of bootstrap-based bagging ensembles. Standard bagging ensembles (such as Random Forests, Bagged SVMs, and Bagged Neural Networks) assign uniform voting power to all constituent estimators. However, this naive uniform prior ignores the varying local competence of base estimators and contributes to model overconfidence. We formulate ensemble pruning and calibration as a joint optimization problem over the probability simplex by minimizing the Out-Of-Bag (OOB) loss. To induce sparsity, we address the theoretical "L1-simplex paradox" -- the mathematical reality that the L1 norm is constant on the simplex and fails to prune -- by introducing a concave quadratic penalty. SCSB is model-agnostic and achieves up to 96% ensemble compression, yielding linear inference speedups and superior probability calibration (lowered Expected Calibration Error) while preserving or enhancing generalization accuracy.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-10T17:31:34Z</published>
+    <published>2026-06-11T17:11:51Z</published>
+    <arxiv:comment>6 pages, 3 tables</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Hui Wang</name>
+      <name>Meher Sai Preetam</name>
     </author>
     <author>
-      <name>Tianyu Ren</name>
-    </author>
-    <author>
-      <name>Joseph Butler</name>
-    </author>
-    <author>
-      <name>Christopher Baker</name>
-    </author>
-    <author>
-      <name>Karen Rafferty</name>
-    </author>
-    <author>
-      <name>Simon McDade</name>
+      <name>Meher Bhaskar</name>
     </author>
   </entry>
 </feed>
