@@ -1,241 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-06-15T02:47:27Z -->
+<!-- Last updated: 2026-06-16T02:49:33Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-06-15T02:47:28Z</updated>
+  <updated>2026-06-16T02:49:33Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>148465</opensearch:totalResults>
+  <opensearch:totalResults>148767</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2606.14703v1</id>
-    <title>Gaze Heads: How VLMs Look at What They Describe</title>
-    <updated>2026-06-12T17:59:57Z</updated>
-    <link href="https://arxiv.org/abs/2606.14703v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14703v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>How a vision-language model internally solves the task of describing an image is far from obvious. We find that the model develops a specific mechanism for this: a small set of attention heads in its language-model backbone, which we call gaze heads, whose attention tracks the image region the model is currently describing. We find them with a simple correlation score from a few forward passes, using comic strips as a controlled testbed where narrative order is laid out spatially. These gaze heads do not just track the image tokens being described: redirecting their attention to a chosen region forces the VLM to describe that region instead. A single attention-mask intervention on the top-100 gaze heads, fewer than 9% of all heads, steers the model's answer to any chosen comic panel at 83.1% accuracy, while the same intervention on random heads fails to redirect the answer, and intervening on all heads destroys generation. The same lever also extends to continuous control: switching the gaze target mid-generation makes the model wrap up its current panel description and move to the new one within a few tokens. Beyond comics, the same intervention redirects answers to chosen regions in natural COCO images. The mechanism further recurs across model sizes from 2B to 32B parameters and across other VLM architectures, although some frozen-encoder families show no comparable head set. More broadly, this shows that targeted edits identified through mechanistic analysis can serve as practical inference-time levers for steering multimodal model behavior, without any retraining. Our code, interactive demo, and datasets are available at https://gaze.baulab.info/</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.16952v1</id>
+    <title>Phantoms and Disclosures: a Causal Framework for Auditing Synthetic Data</title>
+    <updated>2026-06-15T16:54:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.16952v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16952v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid adoption of generative AI and Large Language Models (LLMs) has spurred interest in synthetic data as a privacy-preserving alternative to sensitive real-world datasets. However, generating high-utility synthetic data often carries the risk of memorizing and regurgitating private information from the training corpus. In this work, we present a customizable empirical auditing framework designed to detect and explain such data disclosures. Our framework introduces a mechanism to distinguish between "true disclosures"-where the system directly reproduces a user's information-and "phantom disclosures''-where the system incidentally generates a user's data. By partitioning input data into training and holdout sets and applying rigorous statistical hypothesis testing, we determine if observed disclosures are consistent with strict privacy baselines, such as zero-learning or specific Differential Privacy (DP) bounds. Crucially, this approach requires no model access, no canary insertion, and no reference model training -only the synthetic output and a held-out control set. We demonstrate that this framework effectively functions as a membership inference attack, providing empirical lower bounds on privacy leakage that are tighter than prior data-based auditing methods. Our approach is model-agnostic, applies to any synthetic data generation mechanism, and requires orders of magnitude fewer computational resources than shadow-model or canary-based alternatives.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:59:57Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Rohit Gandikota</name>
-    </author>
-    <author>
-      <name>David Bau</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.14700v1</id>
-    <title>RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space</title>
-    <updated>2026-06-12T17:59:51Z</updated>
-    <link href="https://arxiv.org/abs/2606.14700v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14700v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large language models (LLMs) are widely used in text-to-image (T2I) systems, but they are typically limited to text encoding, while denoising is handled by newly trained generative backbones. The emergence of representation autoencoders (RAEs) shifts the generation target toward semantically structured visual representations, creating a latent space that is more compatible with pretrained LLM priors. Inspired by multimodal LLMs (MLLMs), where an MLP projector is sufficient to align clean visual representations with a pretrained LLM, we repurpose the MLLM itself as a noisy representation encoder, extending this mechanism from clean to noisy inputs. We present RepFusion, which uses the resulting MLLM outputs as the conditioning signal for a diffusion transformer. In controlled comparisons at similar inference budgets, RepFusion outperforms baselines that devote comparable capacity to newly initialized denoisers. These results demonstrate that MLLMs provide strong priors for denoising visual representations and that, by conditioning on evolving noisy representations, test-time compute can be productively spent on repeated MLLM conditioning in modern T2I systems.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:59:51Z</published>
-    <arxiv:comment>Project Page: https://xichenpan.com/repfusion</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Xichen Pan</name>
-    </author>
-    <author>
-      <name>Aashu Singh</name>
-    </author>
-    <author>
-      <name>Satya Narayan Shukla</name>
-    </author>
-    <author>
-      <name>Xiangjun Fan</name>
-    </author>
-    <author>
-      <name>Shlok Kumar Mishra</name>
-    </author>
-    <author>
-      <name>Saining Xie</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.14696v1</id>
-    <title>Scalar dissipation anomaly and scalar-gradient scaling in turbulence: A joint velocity-scalar multifractal view</title>
-    <updated>2026-06-12T17:58:34Z</updated>
-    <link href="https://arxiv.org/abs/2606.14696v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14696v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We revisit the problem of scalar dissipation anomaly and scaling of scalar gradients in passive scalar turbulence using theory and data from well-resolved direct numerical simulations (DNS) on grid sizes of up to $8192^3$, spanning Taylor-scale Reynolds numbers $Re_λ=140-1000$ and Schmidt numbers $Sc = 1-512$. The theory is based on a joint multifractal description of longitudinal velocity increments and scalar increments, constrained by Yaglom's law and extended to gradients via a fluctuating Batchelor cutoff scale. The DNS data show that the normalized mean scalar dissipation approaches a single asymptotic value as both $Re_λ$ and $Sc$ increase, although larger $Sc$ requires larger $\re$ to reach this state. In the multifractal framework, this corresponds to an effective scalar Hölder exponent tending to zero, associated with sharp cliff-like scalar fronts, and saturation of inertial-range scaling scalar structure-function exponents. The joint velocity-scalar fractal dimension of the dissipative structures is inferred to approach $7/3$, indicating a non-space-filling support. The framework further predicts that for fixed $Re_λ$, higher-order central moments of scalar gradients are independent of $Sc$. This prediction is confirmed by DNS data and by the collapse of standardized probability distributions of scalar-gradient across Schmidt numbers. These results suggest that the $Sc$-scaling of scalar gradients is dictated solely by scalar dissipation anomaly. In contrast, their $Re_λ$-dependence reflects strong intermittency, which can be directly related to mixed velocity-scalar structure function exponents.</summary>
-    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:58:34Z</published>
-    <arxiv:comment>18 pages, 5 figures</arxiv:comment>
-    <arxiv:primary_category term="physics.flu-dyn"/>
-    <author>
-      <name>Dhawal Buaria</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.14691v1</id>
-    <title>CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment</title>
-    <updated>2026-06-12T17:54:59Z</updated>
-    <link href="https://arxiv.org/abs/2606.14691v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14691v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reinforcement learning with verifiable rewards (RLVR) has successfully elicited the reasoning capabilities of large language models, motivating its extension to multimodal scenarios. Existing methods primarily focus on improving the visual coverage of reasoning traces and mitigating visual hallucinations, but underestimate the semantic inconsistency between the reasoning process and the final answer. In this paper, we delve into thinking-answer inconsistency in RLVR for large vision-language models (LVLMs), showing thorough analyses of rollouts collected throughout Group Relative Policy Optimization (GRPO) training process and post-RLVR evaluation outputs that this issue persists during training and remains present during inference. Motivated by the analysis, we propose Consistency-Oriented Reasoning Alignment (CORA), which introduces thinking-answer semantic consistency into RLVR through a lightweight plug-and-play consistency reward model, and further incorporates Hybrid Reward Advantage Splitting (HRAS) to stably coordinate task and consistency optimization. Extensive experiments across representative multimodal reasoning benchmarks and mainstream LVLMs show that CORA improves task performance while effectively mitigating thinking-answer inconsistency, leading to more faithful reasoning traces.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:54:59Z</published>
-    <arxiv:comment>Submitted to EMNLP 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Jiayue Cao</name>
-    </author>
-    <author>
-      <name>Zhicong Lu</name>
-    </author>
-    <author>
-      <name>Xuehan Sun</name>
-    </author>
-    <author>
-      <name>Wei Jia</name>
-    </author>
-    <author>
-      <name>Hongling Zheng</name>
-    </author>
-    <author>
-      <name>Changyuan Tian</name>
-    </author>
-    <author>
-      <name>Zichuan Lin</name>
-    </author>
-    <author>
-      <name>Wenqian Lv</name>
-    </author>
-    <author>
-      <name>Nayu Liu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.14682v1</id>
-    <title>Impact of 21-cm foreground mitigation strategies on reionization power spectrum constraints</title>
-    <updated>2026-06-12T17:47:06Z</updated>
-    <link href="https://arxiv.org/abs/2606.14682v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14682v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The 21-cm signal probes the intergalactic medium during the Epoch of Reionization (EoR) but is overwhelmed by astrophysical foregrounds orders of magnitude stronger than the cosmological signal. We evaluate two mitigation strategies: (i) Foreground Avoidance, restricting analysis to the EoR window in Fourier space, and (ii) Foreground Removal via Gaussian Process Regression, which exploits spectral smoothness to statistically separate contaminants and reclaim modes within the contaminated wedge. Both introduce systematic biases of up to $\approx$1$σ$ in astrophysical parameters such as the minimum star-forming halo mass and ionising escape fraction, with avoidance posteriors consistently broader than removal owing to its restricted visibility coverage. The global reionization history is recovered within the 95% credible interval, though the neutral fraction at late reionization epochs shows a persistent bias reflecting the difficulty of its inference from the power spectrum alone. Multi-redshift inference is susceptible to contamination from poorly mitigated bins. Excluding such bins significantly reduces parameter biases, but identifying them requires independent quality metrics. When restricted to identical length scales, both strategies recover similar power spectra, yielding posteriors in similar regions.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:47:06Z</published>
-    <arxiv:comment>5 pages, 2 figures. Comments welcome!</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
-    <author>
-      <name>Sambit K. Giri</name>
-    </author>
-    <author>
-      <name>Florent Mertens</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.14668v1</id>
-    <title>When to Write and When to Suppress: Route-Specialized Dual Adapters for Memory-Assisted Knowledge Editing</title>
-    <updated>2026-06-12T17:37:32Z</updated>
-    <link href="https://arxiv.org/abs/2606.14668v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14668v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Knowledge editing systems must update selected facts while preserving nearby but irrelevant behavior. This paper studies this problem in a memory-assisted setting where an edit memory is retrieved at inference time and a parameter-efficient adapter corrects the model's object preference. We argue that the central design question is not only how to write an edit, but also when to suppress it. We introduce \method{}, a route-specialized dual-adapter editor. A relevance router first decides whether a prompt should receive an edit memory. Routed prompts use an edit adapter trained to prefer the new object over the original object; unrouted non-direct prompts use a separate locality adapter trained to preserve or restore the original-object preference. We evaluate \method{} on three 1,000-case protocols, \cf{}, \zsre{}, and \mquake{}, under the same memory protocol and two 7B/8B base models. On Llama-3.1-8B-Instruct, \method{} obtains the best overall probability-preference accuracy on all three benchmarks: 0.8180 on \cf{}, 0.8946 on \zsre{}, and 0.9922 on \mquake{}. The same trend holds on Qwen3-8B. Router ablations show that the relevant memory boundary differs across datasets: a lexical neural router is safest on \cf{}, while BGE embedding routing is better on \zsre{} and \mquake{}. Component and module ablations show that the gain mainly comes from separating edit injection from off-route suppression rather than from simply increasing LoRA capacity.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:37:32Z</published>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:54:02Z</published>
+    <arxiv:comment>35 pages, 10 tables, 5 figures</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Yining Huang</name>
+      <name>Kareem Amin</name>
+    </author>
+    <author>
+      <name>Rudrajit Das</name>
+    </author>
+    <author>
+      <name>Alessandro Epasto</name>
+    </author>
+    <author>
+      <name>Adel Javanmard</name>
+    </author>
+    <author>
+      <name>Dennis Kraft</name>
+    </author>
+    <author>
+      <name>Mónica Ribero</name>
+    </author>
+    <author>
+      <name>Sergei Vassilvitskii</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.14654v1</id>
-    <title>Abstracting Cross-Domain Action Sequences into Interpretable Workflows</title>
-    <updated>2026-06-12T17:19:15Z</updated>
-    <link href="https://arxiv.org/abs/2606.14654v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14654v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Sequential or time-stamped interaction logs provide objective records of digital application usage, yet their granularity and noise often obscure meaningful insights into people's work. Such insights are essential for improving digital products in ways grounded in real-world user interactions. Prior research has applied deep learning models to cluster user actions into high-level activities, but these approaches are highly sensitive to noise and struggle to generalize across applications. To address this limitation, we introduce WorkflowView, a framework that uses large language models (LLMs) to abstract low-level action sequences into high-level activities. We establish the effectiveness and generality of our approach across three distinct, challenging sequential tasks and diverse domains: (a) zero-shot task description reconstruction from browser logs (achieving high semantic similarity, $μ_{sim} = 0.91$), (b) few-shot student dropout prediction using MOOC interaction logs (reaching weighted $F_1 = 0.90$ with only five few-shot examples), and (c) anonymized, privacy-preserving analysis of AI tool integration within document workflows in Microsoft Word. Our work demonstrates that LLM-based abstraction is a robust and efficient path forward for transforming low-level behavioral data into high-level, interpretable, and actionable insights. We also discuss practical considerations for deploying LLM-based inferences within logging infrastructures, including computational efficiency and user privacy.</summary>
+    <id>http://arxiv.org/abs/2606.16944v1</id>
+    <title>A Causal Model of Theory of Mind in Conflict for Artificial Intelligence</title>
+    <updated>2026-06-15T16:44:42Z</updated>
+    <link href="https://arxiv.org/abs/2606.16944v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16944v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Theory of mind (ToM), the capacity to ascribe mental states to others and use those ascriptions for prediction and inference, is widely assumed to be essential for effective human-machine integration. Existing AI-ToM models address \emph{how} to mentalize, but leave the question of when largely unaddressed. The central question is: under what situational and agent-level conditions is ToM engagement causally warranted in conflict? This paper presents a structural causal model formalized as a directed acyclic graph (DAG), treating ToM as a mechanism activated by situational and agent-level conditions rather than as an always-on capacity. The model specifies four exogenous variables capturing situational and agent-level conditions, five endogenous mediators, and a mechanistic ToM node producing engagement states through three distinct causal pathways: a tractability pathway, a reasoning-depth pathway, and an enabling-cause pathway. The primary outcome is epistemic accuracy, which decouples social reasoning from behavioral policy and generalizes across social phenomena beyond conflict. The framework gives AI systems a principled, resource-rational decision procedure for mentalizing, with implications for efficiency, trust, and the development of robust artificial social intelligence. Simulation validation, empirical human-machine teaming studies, and ethical considerations arising from conflict-optimized mentalizing are discussed.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:19:15Z</published>
-    <arxiv:comment>preprint; 9 pages, 5 figures</arxiv:comment>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:44:42Z</published>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Gaurav Verma</name>
-    </author>
-    <author>
-      <name>Scott Counts</name>
+      <name>Nikolos Gurney</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.14650v1</id>
-    <title>Graph Structured Combinatorial Semi-Bandit with Nonlinear Reward Associations through Separable Signals</title>
-    <updated>2026-06-12T17:11:56Z</updated>
-    <link href="https://arxiv.org/abs/2606.14650v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14650v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The identification of optimal structures within vast arrays of interconnected data necessitates significant sampling- and computational effort. Learning and leveraging underlying signal dependencies can improve efficiency and predictive capabilities considerably, but the ubiquity of nonlinear statistical relations amplifies the complexity of such undertakings. In this paper, we develop novel generic and adaptive strategies equipped with routines for graph-based causal reward modeling, analytic reproducing kernel methods, and Taylor approximation of functional processes. We establish theoretical performance guarantees sublinear in time and linear in data volume over time. Our analyses cover robustness to a multitude of uncertainties arising from noise interference, gradual model convergence, and solution space mismatch. The framework's general appeal is substantiated by a minimalistic set of conditions or reliance on prior estimates, while various outlined modifications address specific or extended settings. To demonstrate practical effectiveness, we conduct numerical experiments using both benchmarked synthetic and real-world transportation datasets.</summary>
+    <id>http://arxiv.org/abs/2606.16942v1</id>
+    <title>Adiabatic realization of anomalous Floquet topological systems</title>
+    <updated>2026-06-15T16:43:41Z</updated>
+    <link href="https://arxiv.org/abs/2606.16942v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16942v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Topology has emerged as a central concept for classifying phases of matter. The situation is especially rich in periodically driven systems, where anomalous Floquet topological phases break the usual bulk-boundary correspondence between Chern number and edges modes of two-dimensional systems. These phases were so far realized by periodic modulation of the tunneling elements at frequencies near-resonant with respect to the system's bandwidth, a regime where Floquet heating plays a significant role in interacting systems. Here we show that such anomalous Floquet topological phases can also be realized by means of an adiabatic protocol, where the system is always in the instantaneous ground state of the cyclic path in parameter space, like in a Thouless charge pump. We experimentally realize such a state using ultracold atoms in a hexagonal lattice where we adiabatically modulate the lattice geometry, including the sublattice offset. To infer the topology, we use the micromotion area in real-space, which was recently identified as a proxy for the winding number. This way of realizing anomalous phases avoids resonant Floquet heating and imperfect loading into the target state. We demonstrate the robustness of the adiabatic construction by observing the anomalous phase even in the presence of mean-field interactions of magnitude comparable to all other energy scales. These findings are promising for engineering novel topological states in a more robust way.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:43:41Z</published>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <author>
+      <name>Luca Asteria</name>
+    </author>
+    <author>
+      <name>Marcel N. Kosch</name>
+    </author>
+    <author>
+      <name>Henrik P. Zahn</name>
+    </author>
+    <author>
+      <name>Jonathan Bracker</name>
+    </author>
+    <author>
+      <name>André Eckardt</name>
+    </author>
+    <author>
+      <name>Klaus Sengstock</name>
+    </author>
+    <author>
+      <name>Christof Weitenberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16934v1</id>
+    <title>Exploring Extrinsic and Intrinsic Properties for Effective Reasoning with Code Interpreter</title>
+    <updated>2026-06-15T16:34:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.16934v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16934v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reasoning with a Code Interpreter (CI) has emerged as an effective paradigm for enhancing the reasoning capabilities of large language models (LLMs) through executable computation and iterative verification. Despite its growing adoption, the behavioral properties underlying effective code reasoning remain largely underexplored. In this work, we investigate code reasoning from two distinct perspectives inspired by prior studies of natural language reasoning: extrinsic properties, represented by crucial tokens, and intrinsic properties, represented by code-specific cognitive behaviors. Across multiple LLMs, we find that stronger CI reasoning models consistently exhibit a higher prevalence of crucial tokens and cognitive behaviors, particularly verification, backtracking, and backward chaining. Building on these observations, we examine how these properties can be leveraged during both inference and training. At inference time, appending code-specific crucial tokens improves performance on several reasoning capabilities, including mathematical, ordering, and optimization, while yielding limited benefits elsewhere. At training time, augmenting a state-of-the-art framework with code-specific cognitive behaviors improves supervised fine-tuning and reinforcement learning performance in two of three evaluated models. Further analysis shows that these behaviors reduce overthinking in incorrect responses and improve token efficiency, while also revealing factors that limit gains in a certain model. Our findings provide the first systematic characterization of effective reasoning with CI and demonstrate both the potential and limitations of leveraging key properties to improve CI-based reasoning.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:11:56Z</published>
+    <published>2026-06-15T16:34:00Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Patomporn Payoungkhamdee</name>
+    </author>
+    <author>
+      <name>Napat Laosaengpha</name>
+    </author>
+    <author>
+      <name>Jenta Wonglertsakul</name>
+    </author>
+    <author>
+      <name>Pittawat Taveekitworachai</name>
+    </author>
+    <author>
+      <name>Pume Tuchinda</name>
+    </author>
+    <author>
+      <name>Panjapong Poobanchuen</name>
+    </author>
+    <author>
+      <name>Ekapol Chuangsuwanich</name>
+    </author>
+    <author>
+      <name>Can Udomcharoenchaikit</name>
+    </author>
+    <author>
+      <name>Samuel Cahyawijaya</name>
+    </author>
+    <author>
+      <name>Peerat Limkonchotiwat</name>
+    </author>
+    <author>
+      <name>Sarana Nutanong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16933v1</id>
+    <title>A Unified Causal-Origin Taxonomy of Distributional Shifts in Reinforcement Learning</title>
+    <updated>2026-06-15T16:32:40Z</updated>
+    <link href="https://arxiv.org/abs/2606.16933v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16933v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reinforcement learning (RL) systems often degrade when operating conditions differ from those previously encountered, reflecting distributional shifts in the underlying data-generating process. Such shifts may occur between training and evaluation, as in In-Distribution (ID) and Out-of-Distribution (OOD) generalization, or within non-stationary settings where environment dynamics evolve over time. However, the formal relationship between these views remains unclear, and existing work mainly focuses on mitigation rather than the causal origin of shift within the agent-environment interaction. This work develops a unified causal-origin taxonomy that characterizes sources of distributional shift in RL and relates ID/OOD generalization to non-stationary settings. We transfer the classical dataset-shift principle from supervised learning to RL by reformulating distributional shift in terms of the generative interaction process. Using a Partially Observable Markov Decision Process (POMDP), we decompose the interaction into structural components, including the state distribution, observation process, policy, reward, and transition dynamics, together with the shifted-time boundary. The proposed taxonomy distinguishes internal, agent-driven, and external, environment-driven, distributional shifts. The shifted-time boundary perspective further characterizes explicit, implicit, and hybrid shifts. This formulation unifies ID/OOD generalization and non-stationarity as structured changes in the underlying process. We also introduce an evaluation framework for measuring shift impact and adaptation through performance degradation and recovery metrics. By grounding distributional shift in the causal-origin structure of RL, this work supports systematic analysis of robustness under distributional shift.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:32:40Z</published>
+    <arxiv:comment>The paper is currently under review at the Journal of Artificial Intelligence Research (JAIR)</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Christoph Bauschmann</name>
+      <name>Ardianto Wibowo</name>
     </author>
     <author>
-      <name>Setareh Maghsudi</name>
+      <name>Paulo E Santos</name>
+    </author>
+    <author>
+      <name>Amer Baghdadi</name>
+    </author>
+    <author>
+      <name>Matthew Stephenson</name>
+    </author>
+    <author>
+      <name>Karl Sammut</name>
+    </author>
+    <author>
+      <name>Jean-Philippe Diguet</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.14647v1</id>
-    <title>Listening with Attention: Entropy-Guided Explainability for Transformer-Based Audio Models</title>
-    <updated>2026-06-12T17:08:42Z</updated>
-    <link href="https://arxiv.org/abs/2606.14647v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14647v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Transformer-based automatic speech recognition (ASR) models such as Whisper are highly accurate, but their predictions remain difficult to interpret. Existing explainable AI (XAI) methods often lack faithfulness and precise temporal grounding. We propose Listening with Entropy-guided Attention for Faithful explainability (LEAF-X), a model-intrinsic XAI framework for transformer-based ASR. LEAF-X combines entropy-guided attention weighting, multi-layer attention rollout, and optional causal ablations to identify low-entropy, high-impact heads and layers, producing sparse token-to-frame attributions. Unlike perturbation-based explainers or raw attention maps, LEAF-X exploits the internal structure of encoder-decoder and speech-augmented decoder-only models to generate explanations that better reflect model computation. Results show 32% improved faithfulness, 35-39% stronger locality/sparsity, and the most stable attributions, supporting more transparent and auditable ASR.</summary>
-    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.16932v1</id>
+    <title>Experimental quantum state learning with pairs of photons</title>
+    <updated>2026-06-15T16:32:36Z</updated>
+    <link href="https://arxiv.org/abs/2606.16932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tomography allows one to estimate the density matrix describing the state an ensemble of quantum systems are prepared in (for example, polarization tomography determines the polarization state of a beam of identically prepared photons). In general, it is not possible to uniquely decompose the density matrix into its pure state components. Agarwal et al. proposed a protocol which, for a mixture composed of any two pure states of a qubit (with arbitrary probabilities), allows an observer to infer not only the density matrix but the identity of those specific pure states and their weights - the additional requirement being that the qubits arrive in pairs, where both qubits in each pair are in the same state. We experimentally demonstrate this learning-from-pairs concept using photons in the polarization degree of freedom. We use tomography to measure a sequence of single photons and make use of their time-of-arrival information to 'pair up' the photons after the measurement. From here we are able to infer the photons' polarization states and their respective probabilities, and we demonstrate this for various different choices of polarization states and ratios. Finally, we investigate our ability to discriminate between two equal mixtures of distinct pairs of orthogonal polarization states. We find that on the order of approx. 10e4 photons is typically enough to achieve tomography fidelities of approximately 0.9999. This is sufficient to discriminate between two different preparations of the same mixed state, differing by angles of less than 5 degrees between the pure states used in the two preparations.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:32:36Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>C. Pria Dobney</name>
+    </author>
+    <author>
+      <name>Johan Henaff</name>
+    </author>
+    <author>
+      <name>Allen Kasum</name>
+    </author>
+    <author>
+      <name>Rui Jie Tang</name>
+    </author>
+    <author>
+      <name>Haru Mukumoto</name>
+    </author>
+    <author>
+      <name>Mark Hillery</name>
+    </author>
+    <author>
+      <name>Berthold-Georg Englert</name>
+    </author>
+    <author>
+      <name>Aephraim Steinberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16925v1</id>
+    <title>RAID: Semantic Graph Diffusion for True Cold-Start and Cross-Lingual Forecasting</title>
+    <updated>2026-06-15T16:27:14Z</updated>
+    <link href="https://arxiv.org/abs/2606.16925v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16925v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Time-series foundation models show strong transfer performance when given a non-empty history window. However, true cold-start scenarios, where a new item has no prior observations, violate this assumption. We propose RAID (Retrieval-Augmented Iterative Diffusion) a framework, which replaces history-based correlation learning with metadata-driven semantic retrieval and graph-conditioned diffusion. RAID maps textual metadata into a shared semantic space using a frozen multilingual embedding model and constructs an inductive retrieval graph that extends naturally to unseen items. It first forms a base forecast by aggregating information from semantically related neighbors, then refines this forecast with a gated diffusion module to model residual uncertainty. Under a strict true cold-start protocol, RAID outperforms strong foundation models and competitive baselines on both forecasting accuracy and prediction interval coverage, while reducing inference latency by an order of magnitude through non-autoregressive decoding. The shared semantic space also enables zero-shot cross-lingual transfer, allowing a model trained on English descriptions to generalize to items described in other languages without direct supervision.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T17:08:42Z</published>
-    <arxiv:comment>17 pages, 3 figures, and 9 tables. Accepted in Interspeech 2026 conference</arxiv:comment>
-    <arxiv:primary_category term="cs.SD"/>
+    <published>2026-06-15T16:27:14Z</published>
+    <arxiv:comment>25 pages, 4 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Ravi Ranjan</name>
+      <name>Arunkumar V</name>
     </author>
     <author>
-      <name>Utkarsh Grover</name>
+      <name>Manoranjan Gandhudi</name>
     </author>
     <author>
-      <name>Xiaomin Lin</name>
+      <name>Gangadharan G. R.</name>
     </author>
     <author>
-      <name>Agoritsa Polyzou</name>
+      <name>Arun Prakash</name>
+    </author>
+    <author>
+      <name>S. Senthilkumar</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.14622v1</id>
-    <title>Impact of non-Gaussian likelihood on cosmological constraints from the thermal Sunyaev--Zel'dovich power spectrum: a simulation-based inference analysis</title>
-    <updated>2026-06-12T16:47:35Z</updated>
-    <link href="https://arxiv.org/abs/2606.14622v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.14622v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The thermal Sunyaev--Zel'dovich (tSZ) power spectrum is a sensitive probe of cosmology and cluster astrophysics, but its statistics are non-Gaussian because the signal receives a significant contribution from rare, massive, low-redshift galaxy clusters. As a result, a Gaussian likelihood fails to describe the statistics of its power spectrum on large scales. We use simulation-based inference (SBI) to test the accuracy of the standard Gaussian power-spectrum likelihood for a \textit{Planck}-like tSZ analysis. Using halo-based simulations of full-sky Compton-$y$ maps, we train neural posterior and likelihood estimators and compare the resulting constraints with those from a Gaussian likelihood assumption. Using only multipoles $\ell &lt; 1000$, we find that the Gaussian likelihood assumption gives unbiased cosmological constraints, while the SBI-based inference shows a mild broadening of the posterior distributions for the amplitudes of residual foregrounds. This suggests that the Gaussian likelihood assumption is sufficiently accurate for cosmological inference for a \textit{Planck}-like tSZ analysis, while SBI provides a useful validation tool to model non-Gaussian likelihoods beyond analytic approximations.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-12T16:47:35Z</published>
-    <arxiv:comment>22 pages, 15 figures, submitted to Physical Review D</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
+    <id>http://arxiv.org/abs/2606.16923v1</id>
+    <title>MA-SBI: Misspecification-Aware Simulation-Based Inference via Side-Channel Guidance</title>
+    <updated>2026-06-15T16:26:42Z</updated>
+    <link href="https://arxiv.org/abs/2606.16923v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16923v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Simulation-based inference (SBI) of latent parameters is often hindered by simulator misspecification, the mismatch between simulated and real-world observations caused by inherent modeling simplifications. RoPE, the recent state-of-the-art for robust SBI, addresses this through optimal transport between learned representations of real and simulated observations, but requires ground-truth parameter calibration pairs that are typically unavailable in the very settings where SBI is needed. What practitioners do have is unstructured side-information such as regime labels, instruction text, and policy bulletins. We propose Misspecification-Aware Simulation-Based Inference (MA-SBI), a calibration-free framework that turns this side-channel into a posterior correction. A learned corrector maps side-channel text to an observation-space shift applied before any pre-trained amortized posterior, requiring no retraining and no parameter ground-truth. Our main theorem bounds achievable bias reduction by the mutual information between misspecification and side-channel, with a non-vacuous constant that extends to all sub-Gaussian noise via Donsker-Varadhan. On hide-the-calibration benchmarks, MA-SBI with text alone matches the oracle posterior across 10 seeds and two backbones (TOST equivalence), while RoPE given more data does not. The two approaches are complementary: where misspecification is structural and recoverable from parameter pairs, RoPE dominates, as the theory predicts. A stochastic variant improves posterior-predictive log-likelihood on real COVID and OxCGRT epidemiological data, and correctly leaves the posterior unchanged on a well-specified cognitive-science corpus.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:26:42Z</published>
+    <arxiv:comment>23 pages, 9 figures, 12 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Licong Xu</name>
+      <name>Arunkumar V</name>
     </author>
     <author>
-      <name>Íñigo Zubeldia</name>
+      <name>Manoranjan Gandhudi</name>
     </author>
     <author>
-      <name>James Alvey</name>
+      <name>Gangadharan G. R.</name>
     </author>
     <author>
-      <name>Boris Bolliet</name>
+      <name>Arun Prakash</name>
     </author>
     <author>
-      <name>Anthony Challinor</name>
+      <name>S. Senthilkumar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16917v1</id>
+    <title>Unified Motion-Action Modeling for Heterogeneous Robot Learning</title>
+    <updated>2026-06-15T16:23:42Z</updated>
+    <link href="https://arxiv.org/abs/2606.16917v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16917v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present Unified Motion-Action (UMA) Model, an approach that uses 3D object motion trajectories as a shared interface to bridge visuomotor control and dynamics modeling. UMA treats object motion and robot actions as co-evolving variables under a masked generative objective, in which the mask pattern determines both the supervision regime during pretraining and the inference mode at deployment. Using hindsight-relabeled motion contexts and a contrastive objective that disentangles task intent from scene geometry, UMA enables multi-task pretraining across heterogeneous data sources without requiring manually annotated task instructions. At deployment, the same pretrained parameters support motion-conditioned visuomotor control, motion-based dynamics modeling, and task adaptation from few-shot demonstrations. Pretrained on a mixture of robot demonstrations, human videos, and simulated data, UMA consistently outperforms state-of-the-art baselines specialized for each inference mode.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:23:42Z</published>
+    <arxiv:comment>https://uma-manipulation.github.io/</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Yunhao Cao</name>
+    </author>
+    <author>
+      <name>Shitong Liu</name>
+    </author>
+    <author>
+      <name>Chao Feng</name>
+    </author>
+    <author>
+      <name>Meryl Zhang</name>
+    </author>
+    <author>
+      <name>Xuanchen Lu</name>
+    </author>
+    <author>
+      <name>Andrew Owens</name>
+    </author>
+    <author>
+      <name>Kuan Fang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16915v1</id>
+    <title>Magnetic Fields in Massive Star-forming Regions (MagMaR). VII. On the dynamical importance of B-fields in massive protocluster W33 A</title>
+    <updated>2026-06-15T16:23:05Z</updated>
+    <link href="https://arxiv.org/abs/2606.16915v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16915v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Magnetic fields (B-fields) are likely important in massive protocluster formation, but their role remains poorly constrained. We present 1.2 mm ALMA full-polarization observations of W33 A, a massive star-forming region at 2.4 kpc, with an angular resolution of 0.3 arcsec (730 au). The region is resolved into 20 dense cores and 9 filaments. The plane-of-sky B-field, inferred from linearly polarized dust emission, shows diverse structures: two nearly perpendicular large-scale components oriented northwest-southeast (NW-SE) and northeast-southwest (NE-SW), and two localized features toward the millimeter peaks MM1 and MM2. The NW-SE component could be shaped by a molecular outflow. The NE-SW component is coherent along the main filaments F1, F-Main, and Tail, all of which show trans-Alfvenic turbulence. In F-Main, the line mass exceeds the turbulent critical value, implying that magnetic support is required to prevent radial collapse and suppress fragmentation. In F1 and Tail, turbulence alone can support the gas against gravity, although B-fields may provide additional support. Toward MM1, the B-field follows a spiral-like infalling streamer traced by CH3CN. The trans-Alfvenic state of the accreting gas suggests efficient magnetic damping of turbulence and a magnetically regulated, laminar accretion flow feeding the core. Toward MM2, the B-field shows an hourglass morphology fitted by parabolic curves. Two independent methods give a consistent field strength of about 8.1(1.9) mG, and virial analysis indicates that the B-field is dynamically important in delaying collapse of MM2. Within a single protocluster, B-fields can stabilize filaments, regulate accretion, and delay core collapse, highlighting their diverse dynamic role in high-mass star formation.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T16:23:05Z</published>
+    <arxiv:comment>Main text: 15 pages, 8 figures. Appendix: 3 pages. Accepted for publication in Astronomy &amp; Astrophysics</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>Fengwei Xu</name>
+      <arxiv:affiliation>MPIA, PKU</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Q. Zhang</name>
+    </author>
+    <author>
+      <name>P. Sanhueza</name>
+    </author>
+    <author>
+      <name>K. Wang</name>
+    </author>
+    <author>
+      <name>Hauyu Baobab Liu</name>
+    </author>
+    <author>
+      <name>H. Beuther</name>
+    </author>
+    <author>
+      <name>Wenyu Jiao</name>
+    </author>
+    <author>
+      <name>C. Wang</name>
+    </author>
+    <author>
+      <name>P. C. Cortés</name>
+    </author>
+    <author>
+      <name>P. M. Koch</name>
+    </author>
+    <author>
+      <name>J. M. Girart</name>
+    </author>
+    <author>
+      <name>M. T. Beltrán</name>
+    </author>
+    <author>
+      <name>J. -W. Wang</name>
+    </author>
+    <author>
+      <name>J. Liu</name>
+    </author>
+    <author>
+      <name>F. A. Olguin</name>
+    </author>
+    <author>
+      <name>Xing Lu</name>
+    </author>
+    <author>
+      <name>S. Li</name>
+    </author>
+    <author>
+      <name>Pak Shing Li</name>
+    </author>
+    <author>
+      <name>T. Liu</name>
+    </author>
+    <author>
+      <name>K. Morii</name>
+    </author>
+    <author>
+      <name>J. Hwang</name>
+    </author>
+    <author>
+      <name>H. -R. V. Chen</name>
+    </author>
+    <author>
+      <name>S. Jiao</name>
+    </author>
+    <author>
+      <name>Y. Cheng</name>
+    </author>
+    <author>
+      <name>Q. Luo</name>
+    </author>
+    <author>
+      <name>Piyali Saha</name>
+    </author>
+    <author>
+      <name>Ji-hyun Kang</name>
+    </author>
+    <author>
+      <name>C. Y. Law</name>
+    </author>
+    <author>
+      <name>L. K. Dewangan</name>
+    </author>
+    <author>
+      <name>O. R. Jadhav</name>
+    </author>
+    <author>
+      <name>E. J. Chung</name>
+    </author>
+    <author>
+      <name>Chakali Eswaraiah</name>
+    </author>
+    <author>
+      <name>Luis A. Zapata</name>
     </author>
   </entry>
 </feed>
