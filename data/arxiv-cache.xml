@@ -1,340 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-06-18T02:42:05Z -->
+<!-- Last updated: 2026-06-19T02:58:46Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-06-18T02:42:05Z</updated>
+  <updated>2026-06-19T02:58:46Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>149066</opensearch:totalResults>
+  <opensearch:totalResults>149217</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2606.19340v1</id>
-    <title>Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning</title>
-    <updated>2026-06-17T17:59:56Z</updated>
-    <link href="https://arxiv.org/abs/2606.19340v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19340v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present a zero-shot framework for long-horizon dexterous manipulation that grounds language instructions into executable 3D task plans from calibrated multi-view RGB images. Rather than training an end-to-end policy, our system uses a vision-language model (VLM) to produce reference-frame task grounding and primitive-level 2D keypoints, then lifts them into 3D via multi-view fusion. This lifting combines triangulation of view-wise VLM groundings with reference-view ray voting, which searches along a semantic camera ray for geometrically consistent candidates across neighboring views. The resulting 3D keypoints support both pick-and-place and tool-use: for tool-use, we retrieve an object-centric atomic action corresponding to the inferred skill category and align its stored 6D tool trajectory to the scene; for dexterous execution, we expand the lifted grasp keypoint into a task-conditioned grasp affordance region and generate feasible grasp-motion pairs with an arm-hand motion generator. Real-world experiments show improved 3D grounding accuracy and execution reliability over single-view RGB-D grounding and fine-tuned VLA baselines. We further demonstrate long-horizon manipulation through closed-loop status verification and replan, enabling zero-shot execution on unseen objects and tool-use tasks in novel scenes.</summary>
+    <id>http://arxiv.org/abs/2606.20562v1</id>
+    <title>MemoryWAM: Efficient World Action Modeling with Persistent Memory</title>
+    <updated>2026-06-18T17:59:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.20562v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20562v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Robust robotic manipulation in the real world requires not only an understanding of the current observation, but also memory and dynamics modeling. World action models (WAMs) possess these capabilities by jointly modeling visual foresight and actions conditioned on both current and historical observations, making them a promising paradigm for robotic manipulation. However, existing WAMs face a fundamental trade-off: methods with efficient inference typically condition only on a bounded window of recent observations and therefore struggle in non-Markovian environments, whereas methods that preserve long histories incur time and space costs that grow substantially with sequence length. To address this challenge, we introduce MemoryWAM, a world action model with efficient persistent memory. MemoryWAM uses a hybrid memory design that combines recent frames, event-boundary anchor frames, and compact gist tokens that summarize long-range history. A tailored attention mechanism enables retrieval of both detailed short-term context and compressed long-term context, supporting memory-dependent decision-making with reduced inference latency and GPU memory usage. Across long-horizon, memory-dependent manipulation tasks in both simulation and the real world, MemoryWAM outperforms strong vision-language-action (VLA) and WAM baselines while maintaining favorable computational efficiency.</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T17:59:56Z</published>
+    <published>2026-06-18T17:59:51Z</published>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Jisoo Kim</name>
+      <name>Sizhe Yang</name>
     </author>
     <author>
-      <name>Sangwon Baik</name>
+      <name>Juncheng Mu</name>
     </author>
     <author>
-      <name>Taeksoo Kim</name>
+      <name>Tianming Wei</name>
     </author>
     <author>
-      <name>Sungjoo Kim</name>
+      <name>Chenhao Lu</name>
     </author>
     <author>
-      <name>Junyoung Lee</name>
+      <name>Xiaofan Li</name>
     </author>
     <author>
-      <name>Mingi Choi</name>
+      <name>Linning Xu</name>
     </author>
     <author>
-      <name>Hanbyul Joo</name>
+      <name>Zhengrong Xue</name>
+    </author>
+    <author>
+      <name>Zhecheng Yuan</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <author>
+      <name>Jiangmiao Pang</name>
+    </author>
+    <author>
+      <name>Huazhe Xu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.19315v1</id>
-    <title>Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation</title>
-    <updated>2026-06-17T17:38:32Z</updated>
-    <link href="https://arxiv.org/abs/2606.19315v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19315v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Enhancing the formal math reasoning capabilities of Large Language Models (LLMs) has become a key focus in both mathematical and computer science communities in recent years. While significant progress has been made in using state-of-the-art Auto-Regressive (AR) LLMs for formal theorem proving, these models suffer from inherent limitations. Their next-token prediction generation methods may yield suboptimal performance due to the challenges of long-range coherence and the compounding of errors over long sequences. Recent advancements in diffusion LLMs (dLLMs), which generate text through iterative denoising of a multi-token block, offer a promising alternative. However, the application of dLLMs to formal mathematics, where maintaining long-range coherence is critical, remains largely understudied. To address the challenges above, we propose **Diffusion-Proof**, to the best of our knowledge, the first framework to train and apply dLLMs for formal theorem proving. Our frameworks contain training and inference methods for two models. The first one is *dLLM-Prover-7B*, which performs whole-proof writing with long-range coherent tactic usage. The second one is *dLLM-Corrector-7B*, which is a novel large block diffusion-based correction model. It leverages the in-filling capabilities of dLLMs to perform local proof correction using bi-directional information. Extensive experiments demonstrate that **Diffusion-Proof** relatively significantly outperforms the AR LLM baseline trained under the same dataset. **Diffusion-Proof** achieves an absolute improvement of **1.61%** on ProofNet-Test and **6.14%** on MiniF2F-Test benchmarks compare to the baseline. Notably, **Diffusion-Proof** successfully resolves one IMO problem that more advanced thinking model DeepSeek-Prover-V2-7B could not solve, showcasing the unique advantage of dLLMs in formal theorem proving.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T17:38:32Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Ruida Wang</name>
-    </author>
-    <author>
-      <name>Rui Pan</name>
-    </author>
-    <author>
-      <name>Pengcheng Wang</name>
-    </author>
-    <author>
-      <name>Shizhe Diao</name>
-    </author>
-    <author>
-      <name>Tong Zhang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.19282v1</id>
-    <title>The first detection of dense gas in a massive main-sequence galaxy at cosmic noon</title>
-    <updated>2026-06-17T17:00:12Z</updated>
-    <link href="https://arxiv.org/abs/2606.19282v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19282v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Dense gas is the direct fuel for star formation, but measuring it has long been difficult at z&gt;2, especially in typical star-forming main-sequence galaxies. In this work, we report the first detection of HNC (J = 5--4) and CN (N = 4--3) emission in a massive main-sequence galaxy, BX610, at z=2.21. The velocity integrated emission of HNC(5--4)+CN(4--3) is concentrated in the galactic centre, coincident with the region of ongoing intense star formation. Based on line decomposition, we measure a line flux ratio HNC(5--4)/CN(4--3) of $1.05\pm0.23$, similar to that of starburst galaxies at comparable redshifts but lower than that of quasar/AGN host galaxies. The comparatively fainter HNC(5--4) disfavours the presence of a strongly buried AGN in BX610, consistent with optical line diagnostics. The radiative transfer analysis favours the presence of dense gas with a density of $(2-4)\times10^{6}\,\text{cm}^{-3}$ and a kinetic temperature of 50-80 K. The derived abundance ratio between N(HNC) and N(CN) favours dense gas clouds near photodissociation regions, as commonly seen in typical starburst environments. The inferred dense-gas line luminosity closely follows the scaling relation between far-IR and dense-gas line luminosities established for local luminous infrared galaxies (LIRGs). Our observations support the view that star formation in cosmic noon galaxies is primarily controlled by the availability of dense gas, which could be enhanced in central galactic regions with efficient cold gas inflows as observed in BX610 along the inner spiral arms and a possible stellar bar.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T17:00:12Z</published>
-    <arxiv:comment>Submitted to A&amp;A, 7 pages, 4 figures, comments are welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Jianhang Chen</name>
-    </author>
-    <author>
-      <name>Natascha M. Förster Schreiber</name>
-    </author>
-    <author>
-      <name>Rodrigo Herrera Camus</name>
-    </author>
-    <author>
-      <name>Lilian L. Lee</name>
-    </author>
-    <author>
-      <name>Minju M. Lee</name>
-    </author>
-    <author>
-      <name>Claudia Pulsoni</name>
-    </author>
-    <author>
-      <name>Daizhong Liu</name>
-    </author>
-    <author>
-      <name>Sebastián Arriagada-Neira</name>
-    </author>
-    <author>
-      <name>Capucine Barfety</name>
-    </author>
-    <author>
-      <name>Ric Davies</name>
-    </author>
-    <author>
-      <name>Frank Eisenhauer</name>
-    </author>
-    <author>
-      <name>Juan Manuel Espejo Salcedo</name>
-    </author>
-    <author>
-      <name>Reinhard Genzel</name>
-    </author>
-    <author>
-      <name>Jean-Baptiste Jolly</name>
-    </author>
-    <author>
-      <name>Dieter Lutz</name>
-    </author>
-    <author>
-      <name>Giovanni Mazzolari</name>
-    </author>
-    <author>
-      <name>Stavros Pastras</name>
-    </author>
-    <author>
-      <name>Alvio Renzini</name>
-    </author>
-    <author>
-      <name>Linda Tacconi</name>
-    </author>
-    <author>
-      <name>Giulia Tozzi</name>
-    </author>
-    <author>
-      <name>Hannah Übler</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.19264v1</id>
-    <title>Structured Inference with Large Language Gibbs</title>
-    <updated>2026-06-17T16:40:32Z</updated>
-    <link href="https://arxiv.org/abs/2606.19264v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19264v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The knowledge encoded in large language models (LLMs) can serve as a substrate for structured reasoning over variables describing a complex world, but accessing this knowledge in a probabilistically coherent manner poses a difficult inference problem. We propose Large Language Gibbs, a scheme for structured probabilistic inference that uses conditional distributions of an LLM as transition operators. Rather than sampling structured objects through single-pass autoregressive generation, we iteratively resample individual variables conditioned on others using an LLM's next-token conditionals. This approach avoids order-dependent biases and produces a stationary distribution that reflects a compromise between all local conditionals. We apply this approach to sampling from synthetic distributions, consistent reasoning tasks, and Bayesian structure learning. The results suggest that the use of LLM conditionals in MCMC is a practical alternative to one-pass generation for structured probabilistic inference under a world prior accessible through noisy LLM conditionals.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T16:40:32Z</published>
-    <arxiv:comment>Code: https://github.com/hyeok9855/large-language-gibbs</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Sanghyeok Choi</name>
-    </author>
-    <author>
-      <name>Henry Gouk</name>
-    </author>
-    <author>
-      <name>Esmeralda S. Whitammer</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.19258v1</id>
-    <title>CABLE: Cloud-Assisted Bandwidth-efficient LMM-based Encoding for V2X Systems</title>
-    <updated>2026-06-17T16:35:23Z</updated>
-    <link href="https://arxiv.org/abs/2606.19258v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19258v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Cloud-hosted large multimodal models (LMMs) can provide strong open-vocabulary perception for Vehicle-to-Everything systems, but naively transmitting full-resolution frames from edge to cloud causes severe communication overhead and high cloud-side prefill latency. We present CABLE, a cloud-assisted bandwidth-efficient LMM-based encoding framework for edge-cloud perception. CABLE propagates the previous cloud segmentation mask on the edge using ego-motion compensation, refines it with residual-motion cues, and consolidates disconnected regions via a corridor envelope to form a robust region of interest (ROI). Only ROI-masked images are uploaded, while the cloud segmentation output is fed back as the prior for the next frame, forming a mask-to-ROI-to-LMM feedback loop. Experiments on five datasets (nuScenes, WOD-ZB, Waymo, KITTI, and CADC) show consistent communication savings while largely preserving perception, achieving $73$--$87\%$ ROI pixel-coverage reduction with $5$--$8\times$ estimated LMM prefill speedup at a modest detection-quality trade-off relative to full-frame inference.</summary>
+    <id>http://arxiv.org/abs/2606.20561v1</id>
+    <title>TimeProVe: Propose, then Verify for Efficient Long Video Temporal Reasoning in Activities of Daily Living</title>
+    <updated>2026-06-18T17:59:48Z</updated>
+    <link href="https://arxiv.org/abs/2606.20561v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20561v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Long Video Question Answering (LVQA) requires identifying sparse, query-relevant evidence within hours-long untrimmed videos. Existing approaches either process videos densely with large vision-language models (VLMs), incurring prohibitive computational cost, or rely on sparse caption-based reasoning, which often misses temporally localized and motion-centric evidence. We introduce TimeProVe, a cost-efficient hybrid framework for temporally grounded reasoning in long videos. TimeProVe first employs lightweight modules to generate action-grounded answer--evidence hypotheses and subsequently invokes an expensive VLM only for targeted verification. The core of our framework lies in the Action-based Candidate Evidence (ACE) module, which converts temporally localized actions into query-conditioned candidate answers and supporting evidence windows through lightweight LLM reasoning. We further introduce OpenTSUBench (OTB), an open-ended benchmark designed to evaluate temporally grounded reasoning in real-world Activities of Daily Living (ADL) scenarios. Experiments show that TimeProVe outperforms the strongest baseline on OTB by 7.3%, while reducing VLM calls by 75% and inference cost by 93%. Furthermore, without explicit temporal grounding training, TimeProVe achieves competitive performance on Charades-STA, and reaches state-of-the-art results when enhanced with grounding VLMs.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T16:35:23Z</published>
+    <published>2026-06-18T17:59:48Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Haohua Que</name>
+      <name>Arkaprava Sinha</name>
     </author>
     <author>
-      <name>Zhipeng Bao</name>
+      <name>Dominick Reilly</name>
     </author>
     <author>
-      <name>Qianyi Wu</name>
+      <name>Siddharth Krishnan</name>
     </author>
     <author>
-      <name>Handong Yao</name>
+      <name>Hieu Le</name>
+    </author>
+    <author>
+      <name>Srijan Das</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.19257v1</id>
-    <title>DreamReasoner-8B: Block-Size Curriculum Learning for Diffusion Reasoning Models</title>
-    <updated>2026-06-17T16:34:02Z</updated>
-    <link href="https://arxiv.org/abs/2606.19257v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19257v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Block diffusion language models accelerate decoding through parallel block-wise denoising, yet whether they can be reliably scaled for long chain-of-thought (CoT) reasoning remains unresolved. To this end, we develop DreamReasoner-8B, an open-source block diffusion reasoning model, and conduct a systematic study of how training and inference block sizes affect long-CoT reasoning. Our analysis reveals a stark performance disparity: training with large block sizes yields remarkably poor reasoning, whereas small block sizes preserve effective reasoning. To bridge this granularity gap, we propose block-size curriculum learning, which gradually transitions training from fine-grained to coarse-grained block sizes, thereby overcoming this limitation and enabling strong reasoning performance that generalizes across diverse inference block sizes. On mathematical and code reasoning benchmarks, DreamReasoner-8B achieves results competitive with leading open autoregressive models such as Qwen3-8B. This work establishes a practical foundation for efficient, reasoning-capable diffusion language models. We release our model at https://github.com/DreamLM/DreamReasoner.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T16:34:02Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Zirui Wu</name>
-    </author>
-    <author>
-      <name>Lin Zheng</name>
-    </author>
-    <author>
-      <name>Jiacheng Ye</name>
-    </author>
-    <author>
-      <name>Shansan Gong</name>
-    </author>
-    <author>
-      <name>Xueliang Zhao</name>
-    </author>
-    <author>
-      <name>Yansong Feng</name>
-    </author>
-    <author>
-      <name>Wei Bi</name>
-    </author>
-    <author>
-      <name>Lingpeng Kong</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.19245v1</id>
-    <title>TxBench-PP: Analyzing AI Agent Performance on Small-Molecule Preclinical Pharmacology</title>
-    <updated>2026-06-17T16:23:45Z</updated>
-    <link href="https://arxiv.org/abs/2606.19245v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19245v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Artificial intelligence (AI) agents promise to accelerate drug discovery by compressing interpretation and decision-making loops, but practical deployment requires trusted evaluation on realistic program decisions. We introduce TherapeuticsBench Preclinical Pharmacology (TxBench-PP), a verifiable benchmark for small-molecule preclinical pharmacology and the first focused slice of a broader TherapeuticsBench effort across drug-discovery stages and therapeutic modalities. TxBench-PP tests whether agents can recover accurate conclusions from real-world assay data rather than memorized facts from literature. The benchmark contains 100 evaluations indexed by program stage, assay type, and task structure, spanning mechanism-of-action (MoA) and pharmacodynamic (PD) reasoning, compound-target engagement, causal target validation, developability and safety, and translational efficacy. Agents receive realistic workflow snapshots, inspect files in a coding environment, and return structured answers graded deterministically. Across 16 model-harness configurations, comprising 11 models and 4,800 trajectories, no system reliably recovered preclinical pharmacology decisions. The strongest configuration, Claude Opus 4.8 / Pi, passed 59.3\% of endpoint attempts (178/300; 95\% CI, 51.1-67.6), followed by GPT-5.5 / Pi at 55.3\% (166/300; 47.0-63.6).</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.20546v1</id>
+    <title>Predictability as a Fine-Grained Measure for Privacy</title>
+    <updated>2026-06-18T17:55:31Z</updated>
+    <link href="https://arxiv.org/abs/2606.20546v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20546v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. We introduce privacy via predictability, a fine-grained framework that explicitly incorporates the attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. Predictability measures privacy leakage as the incremental gain in an attacker's ability to predict sensitive information about unknown individuals after observing the algorithm's output, beyond what can already be inferred from the compromised data. We show that predictability and DP are generally incomparable: each can be small while the other is large. However, in the worst-case regime where all but one individual is compromised, and all binary queries are considered sensitive, predictability implies mutual-information DP. More generally, predictability provides a finer-grained privacy metric tailored to specific sensitive information and specific attacker models. We introduce a general framework, using the generalized method of moments (GMM), to analyze asymptotic predictability when the compromised data is generated by a stationary, ergodic, mixing process. Using this analysis, we derive a predictability-calibrated output perturbation scheme for ERM. Our approach is complementary to DP and can be used alongside DP to provide fine-grained privacy control.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T16:23:45Z</published>
+    <published>2026-06-18T17:55:31Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Linda Lu</name>
+    </author>
+    <author>
+      <name>Karthik Sridharan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20543v1</id>
+    <title>SSD: Spatially Speculative Decoding Accelerates Autoregressive Image Generation</title>
+    <updated>2026-06-18T17:52:30Z</updated>
+    <link href="https://arxiv.org/abs/2606.20543v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20543v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Autoregressive models excel in visual generation by treating images as 1D sequences of discrete tokens, mirroring language modeling. However, this flattening discards the intrinsic 2D spatial locality of visual signals, creating severe computational bottlenecks during inference. We introduce Spatially Speculative Decoding (SSD), a framework that aligns the predictive objective with the natural geometry of images. Rather than predicting only the immediate next token in a 1D sequence, our model simultaneously predicts the adjacent horizontal token and the token directly below it. By capitalizing on this 2D spatial correlation, spatially speculative decoding overcomes the memory wall in visual inference. Our approach accelerates autoregressive image generation by up to 13.3x while maintaining high fidelity on DPG-Bench and GenEval. Our results suggest that respecting the underlying geometry of vision unlocks massive computational efficiencies, paving the way for real-time, high-resolution autoregressive generative models.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T17:52:30Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Shilong Xiang</name>
+    </author>
+    <author>
+      <name>Zirui Zhang</name>
+    </author>
+    <author>
+      <name>Lijun Yu</name>
+    </author>
+    <author>
+      <name>Chengzhi Mao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20538v1</id>
+    <title>Multi-Task Bayesian In-Context Learning</title>
+    <updated>2026-06-18T17:50:10Z</updated>
+    <link href="https://arxiv.org/abs/2606.20538v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20538v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bayesian predictive inference provides a principled framework for uncertainty quantification, data efficiency, and robust generalization. However, exact inference is often intractable, and scalable approximations may remain computationally expensive or require restrictive modeling assumptions that degrade predictive performance. Prior-Data Fitted and in-context models have recently emerged as an amortized alternative by learning to map datasets directly to predictive distributions, but existing approaches are tightly coupled to the support of the training prior and lack explicit mechanisms for adapting to new priors at test time, resulting in limited robustness under distribution shift. We introduce a multi-task in-context learning framework for amortized hierarchical Bayesian predictive inference that explicitly represents prior information as a prefix of in-context datasets. A transformer trained on sequences of prior and target tasks learns to adapt its predictions across families of priors. On a suite of evaluations with increasing difficulty, including out-of-meta-distribution priors and priors with high-dimensional latent structures, our method matches oracle Bayesian predictors while being orders of magnitude faster. We further demonstrate its practical relevance on a real-world spatiotemporal temperature prediction benchmark. Code is available at https://github.com/martianmartina/multi-task-bayesian-icl/.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T17:50:10Z</published>
+    <arxiv:comment>ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Qingyang Zhu</name>
+    </author>
+    <author>
+      <name>Eric Karl Oermann</name>
+    </author>
+    <author>
+      <name>Kyunghyun Cho</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20529v1</id>
+    <title>LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents</title>
+    <updated>2026-06-18T17:41:56Z</updated>
+    <link href="https://arxiv.org/abs/2606.20529v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20529v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Policy-adherent tool-calling agents in customer-service domains must maintain task states across turns while calling tools and obeying domain policies. Task states consist of relevant facts, identifiers, constraints, and conditions observed through user interaction and tool calls. In standard agents, task states are not represented separately. Observations, tool returns, and policy instructions are placed in the prompt, leaving agents to reconstruct the relevant states from the prompt each time they decide what to do next. This design makes state management implicit, creating two common failure modes. An agent may retrieve the right facts but later ground its decision in stale, missing, or incorrect information; and a syntactically valid tool call may still violate a domain policy that depends on the current task state. We introduce \textsc{LedgerAgent}, an inference-time method for tool-calling agents that maintains observed task states in a separate ledger and renders the states into the prompt. The ledger is also used to check state-dependent policy constraints before environment-changing tool calls are executed, blocking policy violations. Across four customer-service domains and a mixed panel of open- and closed-weight models, \textsc{LedgerAgent} improves average pass\textasciicircum{}k over a standard prompt-based tool-calling approach, with the largest gains under stricter multi-trial consistency metrics.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T17:41:56Z</published>
+    <arxiv:comment>Work in Progress</arxiv:comment>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Hannah Le</name>
+      <name>Md Nayem Uddin</name>
     </author>
     <author>
-      <name>Ramesh Ramasamy</name>
+      <name>Amir Saeidi</name>
     </author>
     <author>
-      <name>Alex Urrutia</name>
+      <name>Eduardo Blanco</name>
     </author>
     <author>
-      <name>Mahsa Yazdani</name>
-    </author>
-    <author>
-      <name>Tim Proctor</name>
-    </author>
-    <author>
-      <name>Kenny Workman</name>
+      <name>Chitta Baral</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.19235v1</id>
-    <title>CodeSentinel: A Three-Layer Defense Against Indirect Prompt Injection in Code Contexts</title>
-    <updated>2026-06-17T16:12:50Z</updated>
-    <link href="https://arxiv.org/abs/2606.19235v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19235v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Code large language models increasingly retrieve external code context from repositories, documentation, issue threads, and coding-agent environments, creating an indirect prompt-injection surface where attackers hide instructions in comments, strings, identifiers, or decoy code. We propose CodeSentinel, a three-layer inference-time sanitizer. It uses Tree-sitter to extract high-risk model-facing CST nodes, then combines syntax-guided pre-filtering, CST-guided Dynamic Min-K\% scoring, and node perturbation analysis to detect adversarial and natural-looking semantic triggers. Detected nodes are removed or neutralized before reaching the downstream Code LLM. Across six recent attack families, \CodeSentinel achieves 0.80 average node-level F1, outperforming CodeGarrison, DePA, and KillBadCode.</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T16:12:50Z</published>
-    <arxiv:primary_category term="cs.CR"/>
+    <id>http://arxiv.org/abs/2606.20526v1</id>
+    <title>DeepSWIP: Quotient-WMC Counterfactuals for Neural Probabilistic Logic Programs</title>
+    <updated>2026-06-18T17:39:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.20526v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20526v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neurosymbolic systems such as DeepProbLog combine neural perception with probabilistic logic, but standard inference is associational. Counterfactual reasoning additionally requires a causal semantics for interventions and evidence. We introduce DeepSWIP, a single-world counterfactual semantics for DeepProbLog programs. Using neural materialization, we reduce fixed-context neural predicates to ordinary ProbLog choices, apply Single World Intervention Programs (SWIPs), and compute counterfactuals by weighted model counting (WMC) over a single transformed program. Under finite grounding and unique-supported-model assumptions, DeepSWIP is exact relative to the learned materialized FCM. The standard quotient-WMC form of ProbLog conditionals identifies active neural probabilities and explains intervention cleaning, calibration sensitivity, and rare-evidence instability. Experiments on MPI3D confirm the transformation against a DeepTwin construction against 12,000 queries, as predicted and a 2.14$\times$ inference speedup from avoiding the Twin's endogenous duplication. A SUMO HOV experiment shows that neural calibration degradation biases plug-in estimates, while a correctly scoped randomized-policy AIPW estimator removes most first-order bias for population mean and ATE estimands. Code is at https://github.com/saibib/deep_SWIP.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T17:39:00Z</published>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Po-Han Cheng</name>
+      <name>Saimun Habib</name>
     </author>
     <author>
-      <name>Chia-Mu Yu</name>
+      <name>Vaishak Belle</name>
     </author>
     <author>
-      <name>Ying-Dar Lin</name>
-    </author>
-    <author>
-      <name>Yu-Sung Wu</name>
-    </author>
-    <author>
-      <name>Wei-Bin Lee</name>
+      <name>Fengxiang He</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.19195v1</id>
-    <title>Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</title>
-    <updated>2026-06-17T15:35:38Z</updated>
-    <link href="https://arxiv.org/abs/2606.19195v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19195v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>While 10B-level industrial foundation models have pushed the boundaries of image inpainting, their prohibitive computational costs severely hinder practical deployment. Constructing a highly optimized task-specific specialist offers a promising solution; however, extreme structural compression inevitably triggers a severe representation bottleneck. To conquer this, we propose Moebius, a highly efficient lightweight inpainting framework. We systematically reconstruct the diffusion backbone by introducing the Local-$λ$ Mix Interaction ($LλMI$) block. Comprising Local-$λ$ and Interactive-$λ$ modules, it elegantly summarizes spatial contexts and global semantic priors into fixed-size linear matrices, preserving complex latent interactions while drastically shedding parameters. Furthermore, to unlock the full representational capacity of this highly compact architecture, we synergistically pair it with an adaptive multi-granularity distillation strategy. Operating strictly within the latent space to avoid expensive pixel-space decoding, this strategy dynamically balances multiple gradient-based losses to achieve high-fidelity alignment. Extensive experiments across natural and portrait benchmarks demonstrate that this optimal synergy enables Moebius to rival or even surpass the generation quality of the 10B-level industrial generalist FLUX.1-Fill-Dev. Remarkably, Moebius achieves this using less than 2\% of the parameters (0.22B vs. 11.9B) while delivering a $&gt;15\times$ acceleration in total inference time, setting a new efficiency standard for high-fidelity inpainting. Project page at https://hustvl.github.io/Moebius.</summary>
+    <id>http://arxiv.org/abs/2606.20519v1</id>
+    <title>GPU-accelerated semidefinite programming for causal games</title>
+    <updated>2026-06-18T17:36:34Z</updated>
+    <link href="https://arxiv.org/abs/2606.20519v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20519v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The process matrix formalism describes quantum correlations in scenarios without a fixed causal order between local laboratories. Operational signatures of such correlations can be investigated through causal games. A paradigmatic example is the Guess-Your-Neighbour's-Input game, in which two parties attempt to guess each other's inputs. Correlations compatible with any definite, or probabilistically mixed, causal order cannot achieve a winning probability exceeding $1/2$. The best process-matrix strategy currently known attains a value of approximately $0.6218$ using local dimension $d=5$, while the strongest known dimension-independent upper bound is $0.7592$. In this work, we investigate whether increasing the local dimension beyond $d = 5$ can narrow this gap. To this end, we employ a see-saw optimization scheme in which each step is formulated as a semidefinite program. For scalability, we develop a custom implementation of the SCS solver in which the dominant computational cost, the projection onto the positive-semidefinite cone, is offloaded to a GPU, yielding a six-fold speedup. Using this implementation, we explore local dimensions up to $d = 8$, and we do not find significant improvements over the value at $d=5$. Our results suggest that either qualitatively different strategies are required to approach the known upper bound, or that the bound itself is not tight.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T17:36:34Z</published>
+    <arxiv:comment>28 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Emanuel-Cristian Boghiu</name>
+    </author>
+    <author>
+      <name>Kyrylo Simonov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20518v1</id>
+    <title>FlowEdit: Associative Memory for Lifelong Pronunciation Adaptation in Flow-Matching TTS</title>
+    <updated>2026-06-18T17:36:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.20518v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20518v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow-matching text-to-speech systems achieve remarkable zero-shot quality but remain static after deployment: pronunciation errors on out-of-vocabulary proper nouns persist unless the model is retrained. We introduce FlowEdit, a life-long adaptation framework for frozen flow-matching TTS that learns pronunciation corrections as latent conditioning edits rather than weight updates. When corrective feedback is provided, FlowEdit optimizes a token-level perturbation in the text embedding space, then stores the correction in a Modern Hopfield Network serving as content-addressable episodic memory. At inference, corrections are retrieved via soft attention with a similarity gate, enabling fuzzy morphological matching. On our curated benchmark of 312 multilingual proper nouns across 18 language families, FlowEdit reduces target-word Phoneme Error Rate by 92.7% relative to the zero-shot baseline while maintaining identical general-speech quality. Corrections complete in approximately 15 seconds on a single GPU.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T17:36:02Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Harshit Singh</name>
+    </author>
+    <author>
+      <name>Ayush Pratap Singh</name>
+    </author>
+    <author>
+      <name>Nityanand Mathur</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20515v1</id>
+    <title>S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</title>
+    <updated>2026-06-18T17:34:55Z</updated>
+    <link href="https://arxiv.org/abs/2606.20515v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20515v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real-world spatial intelligence requires reasoning over a continuous and evolving 3D world, yet existing VLMs and tool-augmented agents largely remain tied to static, stateless inference from isolated visual observations. We introduce \textbf{\textsc{S-Agent}}, a spatial tool-use agentic paradigm for understanding and reasoning over continuous multi-view images and videos. By formulating spatial reasoning as spatio-temporal evidence accumulation rather than isolated frame-level prediction, \textsc{S-Agent} reshapes spatial perception into scene-centric understanding beyond frame-centric recognition. Specifically, \textsc{S-Agent} casts the VLM as a semantic planner that decides what evidence is needed, while a hierarchy of spatial tools and experts grounds objects in 2D, lifts them into 3D geometric evidence, and aggregates this evidence into high-level spatial knowledge (\textit{e.g.}, counting, measurement, orientation, and relative position). Additionally, a temporal memory mechanism, including Scene Memory for maintaining the evolving scene state and Agent Memory for accumulating reasoning context, enables evidence integration across frames and reasoning steps. Comprehensive experiments on multi-view and video spatial reasoning benchmarks show that \textsc{S-Agent} consistently improves both open-source and closed-source VLMs in a training-free manner. Beyond inference-time augmentation, supervised fine-tuning (SFT) on \textsc{S-Agent}-generated spatial trajectories \textsc{S-300K} yields \textsc{S-Agent-8B}, a compact spatial agent that significantly surpasses similar-scale baselines (e.g., Qwen3-VL-8B) and performs comparably to advanced closed-source models (e.g., GPT-5.4 and Gemini 3).</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T15:35:38Z</published>
+    <published>2026-06-18T17:34:55Z</published>
+    <arxiv:comment>Project Page : https://Ropedia.github.io/S-Agent</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Kangsheng Duan</name>
+      <name>Yalun Dai</name>
     </author>
     <author>
-      <name>Ziyang Xu</name>
+      <name>Hao Li</name>
     </author>
     <author>
-      <name>Wenyu Liu</name>
+      <name>Shulin Tian</name>
     </author>
     <author>
-      <name>Xiaohu Ruan</name>
+      <name>Runmao Yao</name>
     </author>
     <author>
-      <name>Xiaoxin Chen</name>
+      <name>Yuhao Dong</name>
     </author>
     <author>
-      <name>Xinggang Wang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.19194v1</id>
-    <title>Invertible Neural Network Adapter for One-Step Flow Matching in Robot Manipulation</title>
-    <updated>2026-06-17T15:35:27Z</updated>
-    <link href="https://arxiv.org/abs/2606.19194v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.19194v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This paper presents an invertible neural network adapter for general robotic manipulation, designed to generate precise high-dimensional actions conditioned on multimodal observations, including visual, linguistic, and proprioceptive inputs, through a one-step denoising process. Built upon a flow-matching formulation, the proposed adapter effectively constrains the action generation trajectory within an invertible latent space, thereby enabling efficient and high-quality dexterous action synthesis with only a single inference step. Compared with conventional iterative flow-matching policies, the proposed framework substantially reduces inference complexity while maintaining strong action prediction accuracy and stability. Extensive experiments are conducted across a diverse set of simulation benchmarks and real-world robotic platforms to evaluate the effectiveness of the proposed method. Across simulation benchmarks, the proposed adapter consistently demonstrates superior or near state-of-the-art performance on a wide range of manipulation tasks. Furthermore, real-world experiments reveal a significant improvement in inference efficiency for vision-language-action (VLA) models, reducing the average inference latency from 110 ms to 61 ms while maintaining strong task performance.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-17T15:35:27Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Yu Zhang</name>
+      <name>Fangzhou Hong</name>
     </author>
     <author>
-      <name>Kangyi Ji</name>
+      <name>Zhaoxi Chen</name>
     </author>
     <author>
-      <name>Yongxiang Zou</name>
+      <name>Fangfu Liu</name>
     </author>
     <author>
-      <name>Rongtao Xu</name>
+      <name>Baoliang Tian</name>
     </author>
     <author>
-      <name>Feng Zheng</name>
+      <name>Dingwen Zhang</name>
     </author>
     <author>
-      <name>Long Cheng</name>
+      <name>Tao Wang</name>
+    </author>
+    <author>
+      <name>Kim-Hui Yap</name>
+    </author>
+    <author>
+      <name>Ziwei Liu</name>
     </author>
   </entry>
 </feed>
