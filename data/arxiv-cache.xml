@@ -1,347 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-06-25T02:27:51Z -->
+<!-- Last updated: 2026-06-26T02:29:38Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-06-25T02:27:52Z</updated>
+  <updated>2026-06-26T02:29:39Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>149864</opensearch:totalResults>
+  <opensearch:totalResults>149998</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2606.26094v1</id>
-    <title>RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments</title>
-    <updated>2026-06-24T17:59:46Z</updated>
-    <link href="https://arxiv.org/abs/2606.26094v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26094v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>For most of scientific history, researchers studying behavior could only infer hidden mechanisms from outward actions: an inverse problem that becomes more tractable when observation is augmented by targeted intervention. We pose a computational analogue: given only behavioral traces of an agent in a game environment, can a learner reconstruct the underlying decision program as executable code, and how much does this reconstruction improve with the ability to design controlled experiments? We introduce RevengeBench, a benchmark of 75 LLM generated, Elo-calibrated policies across five game environments, drawn from CodeClash tournament trajectories. The learner observes the hidden target policy play against sampled opponents and designs behavioral probes in the form of custom opponent policies that elicit informative behavior. It then submits an executable hypothesis, which is evaluated using continuous action-distance metrics. We further validate that recovered code carries informative signal in downstream player-versus-player tournaments. Across twelve frontier LLMs, recovery quality varies substantially (34 to 72% of initial distance closed), with reconstructed policies yielding measurable competitive advantage, particularly for weaker models that otherwise struggle to design effective counter-strategies. Our benchmark positions behavioral recovery of programmatic policies as a tractable inverse problem in code-space, opening a path to opponent modeling, policy interpretability, and the broader question of inferring latent mechanisms from observations.</summary>
+    <id>http://arxiv.org/abs/2606.27371v1</id>
+    <title>Don't Settle at the Mode! Mitigating Diversity Collapse in Pretrained Flow Models via Feature Self-Guidance</title>
+    <updated>2026-06-25T17:59:47Z</updated>
+    <link href="https://arxiv.org/abs/2606.27371v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27371v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-of-the-art flow models generate stunning images from text or image prompts. However, they suffer from diversity collapse when generating multiple samples under the same conditioning. Existing methods address this issue via either latent guidance, which has limited effectiveness, or sample selection, which relies on external reward models that incur significant inference-time overhead. In this work, we introduce an efficient, training-free self-guidance mechanism to mitigate diversity collapse without requiring additional reward models. Specifically, we disperse the internal features of the flow model during batch generation with feature self-guidance. Further, to keep the features close to the manifold, we introduce a manifold regularization step that projects these dispersed features back onto the data manifold, ensuring diverse generation without sacrificing alignment with the input conditions. Our method integrates seamlessly as a plug-and-play module into pretrained flow models, adding only a marginal inference cost. Experiments demonstrate significant improvements in diversity while preserving fidelity across several conditional flow models, including multi-step and few-step text-to-image, depth-to-image, and reference image generation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:59:47Z</published>
+    <arxiv:comment>Accepted by ECCV 2026. Project page: https://dont-settle-at-the-mode.github.io/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Pradhaan S Bhat</name>
+    </author>
+    <author>
+      <name>Rishubh Parihar</name>
+    </author>
+    <author>
+      <name>Abhijnya Bhat</name>
+    </author>
+    <author>
+      <name>R. Venkatesh Babu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27364v1</id>
+    <title>PhysiFormer: Learning to Simulate Mechanics in World Space</title>
+    <updated>2026-06-25T17:59:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.27364v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27364v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion. Unlike video world models that operate in view-dependent pixel space, PhysiFormer represents objects as 3D meshes expressed in world coordinates. Given the initial vertex positions and velocities, as well as object material type, rigid or elastic, the model samples future vertex trajectories. While related neural physics approaches build on ad-hoc latent spaces or explicitly enforce rigidity and causality, PhysiFormer shows that excellent results can be obtained without any such inductive biases, by casting vertex trajectory prediction as a single denoising diffusion process directly in world coordinates. The probabilistic formulation captures uncertainty in the learned dynamics, enabling diverse plausible futures from initial conditions, making this framework potentially useful for applications with unobserved uncertainty. The model features attention factorised over time, space, and objects for efficiency, enabling permutation-invariant multi-object reasoning without needing explicit object encoding. Trained on over 100k simulated trajectories, PhysiFormer generates rigid and elastic mechanics, and generalises to mixed-material settings, unseen real-world geometries, and larger object counts. It substantially outperforms autoregressive baselines in trajectory accuracy, rigidity preservation, and momentum-based physical consistency. Our results position coordinate-space diffusion as a promising step toward view-invariant, geometry-aware world modelling for robotics, graphics, and physical design. Visualisations, code, and models are available at https://yimingc9.github.io/physiformer.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:59:00Z</published>
+    <arxiv:comment>Project page: https://yimingc9.github.io/physiformer</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yiming Chen</name>
+    </author>
+    <author>
+      <name>Yushi Lan</name>
+    </author>
+    <author>
+      <name>Andrea Vedaldi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27361v1</id>
+    <title>Autoregressive Boltzmann Generators</title>
+    <updated>2026-06-25T17:58:21Z</updated>
+    <link href="https://arxiv.org/abs/2606.27361v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27361v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizing flows (NFs), which either suffer from limited expressivity due to strict invertibility constraints (discrete time) or computationally expensive likelihoods (continuous time). In this paper, we propose Autoregressive Boltzmann Generators (ArBG) -- a novel autoregressive modelling framework -- that overcomes these limitations by departing from the flow-based BG paradigm. ArBG circumvents the topological constraints of flows and enables sequential inference-time interventions, while offering enhanced scalability by leveraging architectures effective in Large Language Models. We empirically demonstrate that ArBG leads to significant improvements over flow-based models across all benchmarks, but particularly in larger peptide systems such as the 10-residue Chignolin. Furthermore, we introduce Robin, a 132 million parameter transferable model trained with the ArBG framework which improves over the previous state-of-the-art, reducing the zero-shot energy error, E-W$_2$, on 8-residue systems by over 60$\%$. The code can be found at the following link: https://github.com/danyalrehman/autobg.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T17:59:46Z</published>
-    <arxiv:comment>12 pages, 5 figures, 22 appendix pages</arxiv:comment>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:58:21Z</published>
+    <arxiv:comment>ICML 2026 (Spotlight)</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Babak Rahmani</name>
+      <name>Danyal Rehman</name>
     </author>
     <author>
-      <name>Sebastian Dziadzio</name>
+      <name>Charlie B. Tan</name>
     </author>
     <author>
-      <name>Joschka Strüber</name>
+      <name>Yoshua Bengio</name>
     </author>
     <author>
-      <name>Sergio Hernández-Gutiérrez</name>
+      <name>Avishek Joey Bose</name>
     </author>
     <author>
-      <name>Matthias Bethge</name>
+      <name>Alexander Tong</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.26057v1</id>
-    <title>The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems</title>
-    <updated>2026-06-24T17:32:27Z</updated>
-    <link href="https://arxiv.org/abs/2606.26057v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26057v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prompts, output filters, and guardrail libraries. Any control in the agent's address space is reachable by inputs that influence it; this generalizes to any AI system with sufficient reach into its own runtime, a class we term escapable AI systems.
-  We identify four properties that an authorization mechanism must satisfy for architectural control rather than for cooperative requests: process separation, pre-action enforcement on a structurally only path, fail-closed at both the request and system levels, and externalized signed evidence verifiable outside the controlled system's trust boundary. We position this layer as execution-time AI alignment, complementing training-time alignment (RLHF, Constitutional AI) and inference-time alignment.
-  We present the Unfireable Safety Kernel, a Rust reference implementation realizing all four. Its fail-closed invariant is machine-checked at two levels: an SMT theorem (Z3) and an exhaustive bounded-model-checking proof of the production decision function (Kani, 4/4 harnesses). A Python-to-Rust migration was gated on byte-equivalence (1000/1000 fixtures; 17/17 adversarial classes). We evaluate the kernel governing a live, escapable AI system, a deterministic, self-improving world model, against an escape-seeking adversary driving its real self-modification seam: across 1,000 self-modifications, all 704 attempts on the safety-critical core are refused, with no escape; a further 300, under the operator kill switch, are also refused. A separate campaign of 6,240 authorization round-trips had no successful bypass. Against 3 contemporary systems claiming the agent control plane, the agent invokes control; here, it lacks that choice.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2606.27353v1</id>
+    <title>Continual Robot Policy Learning via Variational Neural Dynamics</title>
+    <updated>2026-06-25T17:56:04Z</updated>
+    <link href="https://arxiv.org/abs/2606.27353v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27353v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Robots deployed in the real world rarely operate under a single fixed dynamics model: wind changes, payloads vary, batteries drain, contacts shift, and hardware wears. Yet most learning-based controllers are trained once and deployed as if learning were complete. This prevents the robot from using deployment experience to further improve task performance. In this work, we propose a continual learning framework that uses real-world experience to improve robot policies under hidden and recurring dynamics. Our method learns a condition-aware dynamics model from real state-action trajectories by combining an analytical physics prior with a neural residual for unmodeled effects. A recurrent encoder infers the current hidden condition from recent interaction, and this estimate conditions both the residual model and the policy. Policy learning is performed via differentiable simulation using diverse learned dynamics sampled from the latent model. At deployment, these sampled conditions are replaced by conditions inferred online from recent real interaction, allowing the policy to recover recurring dynamics by recognition rather than residual re-fitting. Through extensive simulation studies and real-world experiments, we demonstrate that the framework improves policy performance under diverse unobserved disturbances. On real quadrotor trajectory tracking under changing wind, the policy recovers from recurring disturbances in roughly 1s, about 5x faster than online residual re-fitting. It also reduces large-disturbance hover and tracking errors by 65.7% and 53.3% over the state-of-the-art online adaptation approaches</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:56:04Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Jiaxu Xing</name>
+    </author>
+    <author>
+      <name>Zhiyuan Zhu</name>
+    </author>
+    <author>
+      <name>Yunfan Ren</name>
+    </author>
+    <author>
+      <name>Ismail Geles</name>
+    </author>
+    <author>
+      <name>Yifan Zhai</name>
+    </author>
+    <author>
+      <name>Rudolf Reiter</name>
+    </author>
+    <author>
+      <name>Davide Scaramuzza</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27338v1</id>
+    <title>Jet impingement cooling with multi-stage ducted electroaerodynamic actuators</title>
+    <updated>2026-06-25T17:47:05Z</updated>
+    <link href="https://arxiv.org/abs/2606.27338v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27338v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern high-performance mobile electronics impose extreme constraints on thermal management, and traditional cooling methods often fail to meet requirements for power density, form factor, and durability. Jet impingement cooling offers a compelling solution but is typically hindered by the need for bulky ancillary hardware. Here, we demonstrate that compact arrays of reduced-scale electroaerodynamic (EAD) plasma actuators, which are silent, solid-state devices with no moving parts, can be used for direct jet impingement cooling of electronics. The main contribution is the first rigorous experimental demonstration and system-level validation of multi-stage, ducted electroaerodynamic jet arrays as a compact, fan-replacement impingement cooling solution for mobile electronics. We characterize the performance of both single- and multi-stage ducted actuators, including thermographic analysis of heat transfer coefficients and spatial cooling profiles. We also quantify the relationship between actuator stage count and cooling efficiency, showing that increasing the number of ion acceleration stages enhances jet velocity and heat transfer performance at a reduced efficiency. The actuators are then assembled into an array and directly compared to a conventional fan with similar coverage area, showing competitive performance at a fraction of the volume, weight, and power. Finally, we integrate the array onto a commercial edge AI system and show that thermal regulation during extended inference workloads matches that of a stock fan, without any moving mechanical components or noise. These results confirm that multi-stage EAD jet arrays are not only viable but advantageous for thermal management in mobile and high-performance systems, paving the way toward silent and miniaturized solid-state cooling solutions.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:47:05Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <arxiv:journal_ref>Applied Thermal Engineering 296, 130770 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Quinna Nguyen</name>
+    </author>
+    <author>
+      <name>C. Luke Nelson</name>
+    </author>
+    <author>
+      <name>Daniel S. Drew</name>
+    </author>
+    <arxiv:doi>10.1016/j.applthermaleng.2026.130770</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.applthermaleng.2026.130770" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27321v1</id>
+    <title>Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders</title>
+    <updated>2026-06-25T17:34:39Z</updated>
+    <link href="https://arxiv.org/abs/2606.27321v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27321v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sparse autoencoders (SAEs) have become a leading tool for interpreting the representations of vision foundation models, decomposing their polysemantic activations into a larger set of sparse, more monosemantic features. The Top-$k$ SAE, a now-standard variant, enforces sparsity architecturally through its activation function, retaining only the $k$ most active latents per input. Because it was designed precisely to avoid the $\ell_1$ penalty used by earlier SAEs and its known drawbacks, it has not been combined with an explicit sparsity regularizer, despite retaining limitations of its own, such as a budget $k$ that is fixed regardless of input complexity and a tendency to overfit to the training value of $k$. We introduce two sparsity regularizers compatible with the Top-$k$ architecture, both acting on the activations before the Top-$k$ selection: an $\ell_1$ penalty on the unselected (off-support) units, and a scale-invariant $\ell_1/\ell_2$-ratio penalty that concentrates the code onto fewer effective units. Both penalties are applied only to the batch-active units, those selected by the Top-$k$ operator at least once within the batch. Across two datasets, three vision foundation models, and a range of $k$, both regularizers consistently improve monosemanticity at no cost to reconstruction quality. The $\ell_1/\ell_2$ penalty further concentrates information into fewer latents, making reconstruction more robust to the inference-time choice of $k$ and improving small-budget linear probing. Our central finding is that hard architectural sparsity and soft sparsity regularization are complementary rather than mutually exclusive.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T17:32:27Z</published>
-    <arxiv:comment>Pre-print submitted for publication</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Seth Dobrin</name>
-    </author>
-    <author>
-      <name>Łukasz Chmiel</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.26047v1</id>
-    <title>Learning Robot Visual Navigation in Crowds via Intention-Aware Scene Representations</title>
-    <updated>2026-06-24T17:26:17Z</updated>
-    <link href="https://arxiv.org/abs/2606.26047v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26047v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Robot crowd navigation requires the ability to infer human intentions while accounting for the structural constraints of the environment. Currently, deep reinforcement learning (DRL) provides a promising method for learning navigation policies that understand human intentions. However, most of them rely on limited scene representations, treating pedestrians as simple 2D points and ignoring rich visual cues from both humans and the environment. To address this issue, we introduce iCrowdNav, a novel visual crowd navigation method with intention-aware scene representations, to encode behavioral and structural context from egocentric visual observations. Our method employs two key components: a spatio-temporal encoder for extracting occupancy features of the scene, and Intent-Interact Former (I$^2$ Former), an attention-based module that encodes human poses to infer pedestrians' motion intentions. These features are integrated into a compact state embedding that supports effective DRL policy training. Extensive experiments show that our method achieves superior performance over baselines, and real-world deployment demonstrates vision-based crowd navigation.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T17:26:17Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Han Bao</name>
-    </author>
-    <author>
-      <name>Bingyi Xia</name>
-    </author>
-    <author>
-      <name>Hanjing Ye</name>
-    </author>
-    <author>
-      <name>Yu Zhan</name>
-    </author>
-    <author>
-      <name>Hao Cheng</name>
-    </author>
-    <author>
-      <name>Baozhi Jia</name>
-    </author>
-    <author>
-      <name>Wenjun Xu</name>
-    </author>
-    <author>
-      <name>Jiankun Wang</name>
-    </author>
-    <arxiv:doi>10.1109/LRA.2026.3677748</arxiv:doi>
-    <link rel="related" href="https://doi.org/10.1109/LRA.2026.3677748" title="doi"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.26042v1</id>
-    <title>Paleomagnetic signatures of core-mantle interactions inferred from top-heavy thermochemical geodynamo simulations</title>
-    <updated>2026-06-24T17:17:22Z</updated>
-    <link href="https://arxiv.org/abs/2606.26042v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26042v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The time-averaged geomagnetic field provides crucial insights into deep Earth dynamics and thermal core-mantle interactions. Paleomagnetic observations and numerical dynamo simulations are equivocal regarding the longitudinal structure of the time-averaged field, though the latter have often considered a generic buoyancy source, which may obscure distinct signatures of thermal and chemical buoyancy that arise near the equator and poles, respectively. In this study, we present a new suite of top-heavy geodynamo simulations, varying the relative strengths of thermal and chemical driving and comparing the resultant magnetic signatures to observational field models spanning centuries to tens of thousands of years. None of the spatially-averaged measures of field morphology and variability we tested could robustly distinguish between different levels of chemical driving or the presence of heterogeneous outer boundary heat flux. On the other hand, observational constraints requiring longitudinal variations in time-averaged inclination anomaly are readily matched by simulations with heterogeneous outer boundary thermal forcing, in contrast to those with homogeneous mantle heat flux. Longitudinal field structures are reduced, but not erased, by elevated chemical driving, which also promotes the formation and deepening of polar minima in the radial magnetic field. Our simulations indicate that both the strong heat flux heterogeneity and chemical driving in Earth's core are likely to result in small but persistent departures from the geocentric axial dipole approximation.</summary>
-    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T17:17:22Z</published>
-    <arxiv:comment>Submitted to EPSL</arxiv:comment>
-    <arxiv:primary_category term="physics.geo-ph"/>
-    <author>
-      <name>Souvik Naskar</name>
-    </author>
-    <author>
-      <name>Jonathan E. Mound</name>
-    </author>
-    <author>
-      <name>Christopher J. Davies</name>
-    </author>
-    <author>
-      <name>Hannah F. Rogers</name>
-    </author>
-    <author>
-      <name>Stephen J. Mason</name>
-    </author>
-    <author>
-      <name>Andrew T. Clarke</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.26025v1</id>
-    <title>In-Context World Modeling for Robotic Control</title>
-    <updated>2026-06-24T16:53:36Z</updated>
-    <link href="https://arxiv.org/abs/2606.26025v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26025v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T16:53:36Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Siyin Wang</name>
-    </author>
-    <author>
-      <name>Junhao Shi</name>
-    </author>
-    <author>
-      <name>Senyu Fei</name>
-    </author>
-    <author>
-      <name>Zhaoyang Fu</name>
-    </author>
-    <author>
-      <name>Li Ji</name>
-    </author>
-    <author>
-      <name>Jingjing Gong</name>
-    </author>
-    <author>
-      <name>Xipeng Qiu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.26021v1</id>
-    <title>Privacy Vulnerabilities of Attention Layers in Tabular Foundation Models and Protection of High-Risk Queries</title>
-    <updated>2026-06-24T16:42:21Z</updated>
-    <link href="https://arxiv.org/abs/2606.26021v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26021v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Tabular foundation models are commonly assumed to present limited privacy concerns as they are often pre-trained on large collections of synthetic data. However, these models leverage in-context learning, where sensitive records may be provided directly at inference time as labelled context examples. In this paper, we demonstrate that predictions generated via the attention mechanism leak sufficient information to enable effective Membership Inference Attacks (MIAs). To highlight this vulnerability, we propose AMIA (Attention-based Membership Inference Attack), a shadow-model-free attack that exploits the concentration of transformer attention patterns. Our results show that attention mechanisms reveal strong membership signals, which exceed classical confidence-based attacks, achieving an average gain of 7.7\%, specially in low false-positive regimes. To mitigate this risk, we introduce an inference-time defence inspired by $k$-anonymity principles. This approach reduces the uniqueness of context-key representations without introducing random noise or retraining the model. By targeting only high-risk queries identified through AMIA scores, the defence substantially reduces membership leakage of this attack by an average of 50\% and 25\% against confidence-based attacks, while preserving predictive utility with only 3.9\% performance degradation. Beyond showing that context examples are vulnerable, we further demonstrate that fine-tuning introduces an additional source of privacy risk. In particular, samples whose prediction confidence increases after fine-tuning become more susceptible to MIAs, indicating that fine-tuning can amplify memorisation and expose sensitive training information through confidence shifts.</summary>
-    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T16:42:21Z</published>
-    <arxiv:comment>18 pages, 12 figures, 4 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.CR"/>
+    <published>2026-06-25T17:34:39Z</published>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Tânia Carvalho</name>
+      <name>Nathanaël Jacquier</name>
     </author>
     <author>
-      <name>Maxime Cordy</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2606.26017v1</id>
-    <title>G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance</title>
-    <updated>2026-06-24T16:38:55Z</updated>
-    <link href="https://arxiv.org/abs/2606.26017v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26017v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In autonomous driving, diffusion-based planners have emerged as a promising paradigm for robust motion planning in dense and interactive traffic, as they can effectively model diverse driving behaviors. However, their inherent stochasticity often requires explicit guidance during denoising to ensure safety and route adherence for robust closed-loop execution. Existing guidance typically relies on sparse, entity-centric geometric queries or post-hoc refinement, yielding limited situational awareness and fragile performance in interactive scenes. To address this issue, we propose G2DP (Grid-Guided Diffusion Planning), a diffusion-based planner that directly enforces dense environmental constraints through inference-time guidance. Specifically, G2DP constructs a differentiable spatio-temporal cost volume by fusing probabilistic future occupancy distributions with a route-progress map. By formulating this volume as a continuous safety energy functional, it injects dense gradients directly into the denoising loop, actively steering trajectory generation toward collision-free and progress-optimal regions. Extensive closed-loop evaluations show that G2DP achieves state-of-the-art performance on nuPlan, outperforming the strongest imitation-learning baseline by +7.2 points in reactive score. It further maintains top scores in zero-shot transfers to interPlan and DeepScenario benchmarks, with collision avoidance improving by +10.15 over the unguided approach on interPlan. These results demonstrate that spatio-temporal cost grids serve as an effective representation for robust guidance in diffusion-based planning.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T16:38:55Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Hang Yu</name>
+      <name>Maria Vakalopoulou</name>
     </author>
     <author>
-      <name>Ye Jin</name>
-    </author>
-    <author>
-      <name>Alessandro Canevaro</name>
-    </author>
-    <author>
-      <name>Julian Schmidt</name>
-    </author>
-    <author>
-      <name>Julian Jordan</name>
-    </author>
-    <author>
-      <name>Peizheng Li</name>
-    </author>
-    <author>
-      <name>Marc Kaufeld</name>
-    </author>
-    <author>
-      <name>Silvan Lindner</name>
-    </author>
-    <author>
-      <name>Johannes Betz</name>
-    </author>
-    <author>
-      <name>Wilhelm Stork</name>
+      <name>Mahdi S. Hosseini</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.26016v1</id>
-    <title>MIMFlow: Integrating Masked Image Modeling with Normalizing Flows for End-to-End Image Generation</title>
-    <updated>2026-06-24T16:37:10Z</updated>
-    <link href="https://arxiv.org/abs/2606.26016v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26016v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Normalizing Flows (NFs) are powerful generative models capable of exact density estimation and sampling. However, their strict invertibility often forces the model to exhaust its capacity on low-level pixel details, hindering the capture of high-level semantic structures. While Masked Image Modeling (MIM) has excelled in representation learning, its integration into generative pipelines has remained largely modular and disjointed. In this paper, we propose MIMFlow, a unified end-to-end framework that jointly optimizes latent semantics, pixel reconstruction, and generative flow. By employing a VAE encoder to infer semantic latent from masked images, MIMFlow achieves a principled decoupling of the generative task: the Normalizing Flow focuses on modeling a simplified, low-frequency semantic manifold, while a specialized decoder handles high-frequency synthesis. This design effectively resolves the inherent capacity bottleneck of NFs, allowing the model to prioritize global structural coherence over redundant noise. Empirical results on ImageNet 256$\times$256 show that MIMFlow-L reaches 71.3\% linear probing accuracy and an FID of 2.50. Despite using only 128 tokens (50\% fewer than standard models), it yields a 32.8\% performance gain over similar-scale NF baselines. Our code is available at https://github.com/MCG-NJU/MIMFlow.</summary>
+    <id>http://arxiv.org/abs/2606.27320v1</id>
+    <title>Elastic Time: Dynamic Frame Rate Bottlenecks for Neural Audio Coding</title>
+    <updated>2026-06-25T17:33:09Z</updated>
+    <link href="https://arxiv.org/abs/2606.27320v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27320v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural audio autoencoders have become a core component of compression, feature extraction, and generation. However, while existing systems support variable bitrate, the vast majority of models still operate at a fixed latent frame-rate, allocating equal temporal budget to regions with very different information density, which can result in unnecessarily long sequences. We introduce Elastic Time, a dynamic frame-rate bottleneck that converts fixed-frame-rate autoencoders to dynamic ones. Our method learns a lightweight latent predictor used to decide which frames can be skipped and later reconstructed, enabling efficient greedy boundary selection at inference. Experiments show our method enables deployment-time rate control while improving efficiency-quality tradeoffs relative to baselines. Overall, we provide a flexible mechanism for adjusting temporal resolution in audio autoencoders, potentially facilitating more efficient downstream modeling for generation and long-context tasks.</summary>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:33:09Z</published>
+    <arxiv:comment>Interspeech 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.SD"/>
+    <author>
+      <name>Dimitrios Bralios</name>
+    </author>
+    <author>
+      <name>Paris Smaragdis</name>
+    </author>
+    <author>
+      <name>Minje Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27317v1</id>
+    <title>OctoSense: Self-Supervised Learning for Multimodal Robot Perception</title>
+    <updated>2026-06-25T17:30:49Z</updated>
+    <link href="https://arxiv.org/abs/2606.27317v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27317v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present OctoSense, an open-source sensor platform with stereo RGB and event cameras, LiDAR, a thermal camera, an inertial measurement unit, RTK-corrected global positioning system, and proprioception (CAN bus data from a car, and joint angles for a quadruped robot). The eponymous OctoSense dataset contains 59 hours of time-synchronized driving data across different types of environments at different times of the day, including situations with highly degraded sensors. We demonstrate multi-modal self-supervised learning using such real-world robotics data, where sensors have different representations, frequencies, latencies and noise. Our approach, a "late-fusion" masked autoencoder, (i) uses modality-specific tokenizers to account for different spatiotemporal characteristics of these sensors, and (ii) caches modality-specific tokens at inference time to process new measurements as they come. This architecture (i) is fast (6.68 ms and 112 ms on NVIDIA 5090 and Orin NX respectively, to compute the representation), (ii) performs better than existing image-only foundation models on tasks such as estimation of optical flow, depth, semantic segmentation, and ego-motion (translation, rotation, and steering angle), and (iii) predicts robustly at nighttime or in situations where sensory data is degraded. See our project page for links to the dataset, code, and supplementary videos: https://abisulco.com/octosense/.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T16:37:10Z</published>
-    <arxiv:comment>Accepted by ECCV 2026</arxiv:comment>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:30:49Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yang Chen</name>
+      <name>Anthony Bisulco</name>
     </author>
     <author>
-      <name>Xiaowei Xu</name>
+      <name>Jeremy Wang</name>
     </author>
     <author>
-      <name>Shuai Wang</name>
+      <name>Kostas Daniilidis</name>
     </author>
     <author>
-      <name>Xinwen Zhang</name>
+      <name>Randall Balestriero</name>
     </author>
     <author>
-      <name>Qiushi Guo</name>
-    </author>
-    <author>
-      <name>Tiezheng Ge</name>
-    </author>
-    <author>
-      <name>Limin Wang</name>
+      <name>Pratik Chaudhari</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.26007v1</id>
-    <title>From Sparse and Imperfect 2D Anchors to Consistent 3D Gaussian Street Scenes: Support-Aware Appearance</title>
-    <updated>2026-06-24T16:26:53Z</updated>
-    <link href="https://arxiv.org/abs/2606.26007v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.26007v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Image priors can synthesize target conditions for 3D Gaussian street scenes, but independently edited views do not define a coherent 3D target. Direct fitting can propagate view-specific noise, while existing pipelines do not jointly handle imperfect sparse anchors and standard-rasterizer deployment. To address this gap, teacher-relative appearance residual distillation is introduced for appearance baking. A structured space for frequency decomposition, confidence estimation, and primitive-level lifting is formed by residuals between teacher anchors and original renders. The direct optimization signal is supplied by renderer-space matching, while primitive assignment is regularized by support-aware Gaussian-space aggregation. Supported detail is admitted and unsupported noise is suppressed through confidence-gated coarse-to-fine optimization, after which all residuals are baked into fixed-geometry spherical-harmonic coefficients. The teacher and auxiliary training modules are discarded at inference. Evaluation across Waymo street assets, Tanks and Temples scenes, and multiple target conditions shows a favorable overall balance of target alignment, content preservation, artifact suppression, and cross-view consistency over editing-based baselines. Ablations confirm the effectiveness of the main components. Code will be released at https://github.com/Cagares/Baking-for-3D-Gaussian.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T16:26:53Z</published>
-    <arxiv:primary_category term="cs.CV"/>
+    <id>http://arxiv.org/abs/2606.27301v1</id>
+    <title>Reading the Same Data Differently: Interpretive Labor Across System Boundaries in Electronic Monitoring</title>
+    <updated>2026-06-25T17:23:20Z</updated>
+    <link href="https://arxiv.org/abs/2606.27301v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27301v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Electronic monitoring (EM) systems are increasingly used in community corrections to enforce spatial, temporal, and behavioral rules through continuous sensing. While prior work has examined EM as a criminal justice tool or as a mechanism for compliance, less is known about how sensed data become meaningful in everyday practice. This poster examines EM as a dual-sided sensing system in which supervised individuals and authorities reason about the same data stream from different positions. Based on semi-structured interviews with 26 supervised individuals and 12 authorities in China's community corrections system, we show that supervised individuals infer system logic from outcomes with limited visibility into how data are interpreted, while authorities reconstruct behavior from ambiguous traces using contextual knowledge, professional experience, and institutional procedures. We call this structural divergence interpretive misalignment. It emerges from asymmetric access to data, context, and reasoning processes, and it shapes behavior through probing, strategic adaptation, over-compliance, disengagement, and contestation. We contribute a CSCW account of continuous sensing as distributed interpretive work and identify design opportunities for making data-to-decision processes more legible, contestable, and accountable across system sides.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T17:23:20Z</published>
+    <arxiv:primary_category term="cs.HC"/>
     <author>
-      <name>Long Cao</name>
+      <name>Yibo Meng</name>
     </author>
     <author>
-      <name>Zhongquan Wang</name>
+      <name>Bingyi Liu</name>
     </author>
     <author>
-      <name>Jie Li</name>
+      <name>Zhiqi Gao</name>
     </author>
     <author>
-      <name>Yuhan Chen</name>
+      <name>Shuai Ma</name>
     </author>
     <author>
-      <name>Kefei Qian</name>
-    </author>
-    <author>
-      <name>Xiangfei Huang</name>
-    </author>
-    <author>
-      <name>Guofa Li</name>
+      <name>Hongyu Zhou</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2606.25996v1</id>
-    <title>Autodata: An agentic data scientist to create high quality synthetic data</title>
-    <updated>2026-06-24T16:08:31Z</updated>
-    <link href="https://arxiv.org/abs/2606.25996v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2606.25996v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We introduce Autodata, a general method that enables AI agents to act as data scientists who build high quality training and evaluation data. We show how to train (meta-optimize) such a data scientist agent, so that it learns to create even stronger data. We describe the overall formulation, and a specific practical implementation, Agentic Self-Instruct. We conduct experiments on computer science research tasks, legal reasoning tasks and reasoning with mathematical objects, where we obtain improved results compared to classical synthetic dataset creation methods. Further, meta-optimizing the data scientist agent itself delivers an even larger performance uplift. Agentic data creation provides a way to convert increased inference compute into higher quality model training. Overall, we believe this direction has the potential to change the way we build AI data.</summary>
+    <id>http://arxiv.org/abs/2606.27286v1</id>
+    <title>Simulation-based inference for rapid Bayesian parameter estimation in epidemiological models: a comparison with MCMC</title>
+    <updated>2026-06-25T17:03:30Z</updated>
+    <link href="https://arxiv.org/abs/2606.27286v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27286v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mechanistic epidemiological models are widely used to support infectious disease forecasting and public-health decision making. Bayesian calibration of such models is commonly performed using Markov chain Monte Carlo (MCMC), which can become computationally expensive for high-dimensional nonlinear systems and repeated near-real-time analyses. Here, we investigate simulation-based inference (SBI) using neural posterior estimation as a scalable alternative for Bayesian calibration of a mechanistic SECIR epidemiological model using COVID-19 intensive care unit (ICU) occupancy data from Germany during 2020. We compared SBI and MCMC across multiple epidemic phases using both 31-day inference windows and a substantially more challenging 201-day reconstruction problem involving multiple transmission change points. Posterior agreement was evaluated quantitatively using Wasserstein distances and Kullback-Leibler divergences together with posterior predictive checks. Across the 31-day windows, SBI recovered posterior distributions in strong agreement with MCMC while accurately reproducing observed ICU trajectories. In the 201-day setting, SBI preserved the dominant posterior structure despite increased uncertainty. SBI, by combining CPU and GPU resources, substantially reduced computational runtime compared with MCMC, which was restricted to running on CPUs. Whereas MCMC required approximately 1000 seconds for the 31-day inference problems, SBI achieved comparable posterior and predictive performance in approximately 60-70 seconds on a single GPU. For the 201-day inference problem, SBI required an average of 157 seconds, while the MCMC runs took over 19,000 seconds. Our results demonstrate that SBI provides a rapid and computationally efficient framework for Bayesian calibration of mechanistic epidemiological models, supporting repeated near-real-time inference and rapid outbreak analysis.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-06-24T16:08:31Z</published>
+    <published>2026-06-25T17:03:30Z</published>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Ilia Kulikov</name>
+      <name>Alina Bazarova</name>
     </author>
     <author>
-      <name>Chenxi Whitehouse</name>
+      <name>Johann Fredrik Jadebeck</name>
     </author>
     <author>
-      <name>Tianhao Wu</name>
+      <name>Henrik Zunker</name>
     </author>
     <author>
-      <name>Yixin Nie</name>
+      <name>Carolina J. Klett-Tammen</name>
     </author>
     <author>
-      <name>Swarnadeep Saha</name>
+      <name>Torben Heinsohn</name>
     </author>
     <author>
-      <name>Eryk Helenowski</name>
+      <name>Wolfgang Wiechert</name>
     </author>
     <author>
-      <name>Weizhe Yuan</name>
+      <name>Katharina Noeh</name>
     </author>
     <author>
-      <name>Olga Golovneva</name>
-    </author>
-    <author>
-      <name>Jack Lanchantin</name>
-    </author>
-    <author>
-      <name>Yoram Bachrach</name>
-    </author>
-    <author>
-      <name>Jakob Foerster</name>
-    </author>
-    <author>
-      <name>Xian Li</name>
-    </author>
-    <author>
-      <name>Han Fang</name>
-    </author>
-    <author>
-      <name>Sainbayar Sukhbaatar</name>
-    </author>
-    <author>
-      <name>Jason Weston</name>
+      <name>Stefan Kesselheim</name>
     </author>
   </entry>
 </feed>
