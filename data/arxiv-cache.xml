@@ -1,394 +1,389 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-07-08T01:48:13Z -->
+<!-- Last updated: 2026-07-09T02:00:36Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-07-08T01:48:14Z</updated>
+  <updated>2026-07-09T02:00:38Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>151298</opensearch:totalResults>
+  <opensearch:totalResults>151458</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2607.06456v1</id>
-    <title>A Hardware-Aware Open-Source Framework for Design Space Exploration of Mixed-Signal Spiking Neural Networks</title>
-    <updated>2026-07-07T16:15:03Z</updated>
-    <link href="https://arxiv.org/abs/2607.06456v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06456v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Energy-efficient neuromorphic computing at the edge requires simulation tools that can capture the non-ideal behavior of mixed-signal spiking neural network (SNN) hardware while supporting system-level design exploration. This work presents an open-source hardware-aware simulation framework for mixed-signal SNNs that enables comparative analysis across neuron, synapse and architecture choices. The framework supports multiple neuron models, including Leaky Integrate-and-Fire (LIF), Hodgkin-Huxley (HH) and Axon-Hillock (AH), together with non-volatile analog synapses based on floating-gate transistors and ReRAM devices. By incorporating device-level nonlinearities directly into PyTorch-based training and inference, the tool enables optimization of physical synaptic parameters rather than idealized abstract weights. The framework is evaluated on standard neuromorphic benchmarks, including N-MNIST, DVS Gesture and Spiking Heidelberg Digits (SHD). For each model dataset configuration, it reports classification accuracy together with hardware-oriented metrics such as silicon area, power consumption and quantization sensitivity. These capabilities enable cross-layer design space exploration and help identify neuron-synapse configurations that best satisfy application-specific constraints on accuracy, energy efficiency, area and hardware fidelity.</summary>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T16:15:03Z</published>
-    <arxiv:primary_category term="eess.SP"/>
-    <author>
-      <name>Sayma Nowshin Chowdhury</name>
-    </author>
-    <author>
-      <name>Vineeta Nair</name>
-    </author>
-    <author>
-      <name>Taseen Forhad</name>
-    </author>
-    <author>
-      <name>Aishwarya Natarajan</name>
-    </author>
-    <author>
-      <name>Corey Hart</name>
-    </author>
-    <author>
-      <name>Sahil Shah</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.06452v1</id>
-    <title>From Voting to Agent Collaboration: Answer-Type-Aware LLM Pipelines for BioASQ 14b</title>
-    <updated>2026-07-07T16:12:51Z</updated>
-    <link href="https://arxiv.org/abs/2607.06452v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06452v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Biomedical question answering requires not only accurate extraction of information from scientific literature but also reliable integration of evidence across multiple documents. This study presents a question-type-specific large language model (LLM) framework for BioASQ 14b Task B, designed to improve answer robustness and evidence grounding in biomedical question answering. Rather than applying a single prompting strategy to all questions, the framework selects different inference procedures for yes/no, factoid, and list questions according to their distinct reasoning and evaluation requirements. For yes/no questions, snippet shuffling and self-reflection are used to reduce sensitivity to evidence ordering and improve decision stability. For factoid questions, full-snippet input is combined with chain-of-thought-based in-context learning to support accurate biomedical entity identification. For list questions, a multi-agent architecture is employed, in which evidence extraction, candidate generation, answer verification, and final aggregation are handled collaboratively. Preliminary experiments on BioASQ 13b were used to identify effective inference strategies for each question type, and the resulting framework was subsequently evaluated in the official BioASQ 14b Task B challenge. In the official evaluation, our framework showed competitive performance across multiple batches and achieved first place in the factoid subtask of Batch 4. These results demonstrate the effectiveness of combining question-type-specific inference, ensemble prediction, and agent-based verification for reliable biomedical question answering.</summary>
+    <id>http://arxiv.org/abs/2607.07708v1</id>
+    <title>Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning</title>
+    <updated>2026-07-08T17:59:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.07708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing $F_{\max}$ from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T16:12:51Z</published>
-    <arxiv:comment>15 pages</arxiv:comment>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:59:59Z</published>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Taeyun Roh</name>
+      <name>Chen Tang</name>
     </author>
     <author>
-      <name>Eunha Lee</name>
+      <name>Yizhou Wang</name>
     </author>
     <author>
-      <name>Wonjune Jang</name>
+      <name>Jianyu Wu</name>
     </author>
     <author>
-      <name>Sohyun Chung</name>
+      <name>Lintao Wang</name>
     </author>
     <author>
-      <name>Junha Jung</name>
+      <name>Shixiang Tang</name>
     </author>
     <author>
-      <name>Jaewoo Kang</name>
+      <name>Pengze Li</name>
+    </author>
+    <author>
+      <name>Encheng Su</name>
+    </author>
+    <author>
+      <name>Jun Yao</name>
+    </author>
+    <author>
+      <name>Jiabei Xiao</name>
+    </author>
+    <author>
+      <name>Yuqi Shi</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Zhangyang Gao</name>
+    </author>
+    <author>
+      <name>Fang Wu</name>
+    </author>
+    <author>
+      <name>Ben Fei</name>
+    </author>
+    <author>
+      <name>Xiangyu Yue</name>
+    </author>
+    <author>
+      <name>Pan Tan</name>
+    </author>
+    <author>
+      <name>Bozitao Zhong</name>
+    </author>
+    <author>
+      <name>Jinouwen Zhang</name>
+    </author>
+    <author>
+      <name>Aoran Wang</name>
+    </author>
+    <author>
+      <name>Yan Lu</name>
+    </author>
+    <author>
+      <name>Jiaheng Liu</name>
+    </author>
+    <author>
+      <name>Xinzhu Ma</name>
+    </author>
+    <author>
+      <name>Liang Hong</name>
+    </author>
+    <author>
+      <name>Mingyue Zheng</name>
+    </author>
+    <author>
+      <name>Phil Torr</name>
+    </author>
+    <author>
+      <name>Bowen Zhou</name>
+    </author>
+    <author>
+      <name>Wanli Ouyang</name>
+    </author>
+    <author>
+      <name>Lei Bai</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2607.06431v1</id>
-    <title>Unbiased Estimation of Conditional Covariance for Quantum Optomechanics</title>
-    <updated>2026-07-07T15:59:37Z</updated>
-    <link href="https://arxiv.org/abs/2607.06431v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06431v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Continuous measurements can prepare macroscopic mechanical oscillators in conditional quantum states, but their covariance is difficult to verify. The conventional retrodictive estimator assumes a forward--backward covariance symmetry and can be biased, because physical dynamics such as feedback damping reduces the observability of the state from future records. Here, we derive an exact linear-Gaussian estimator from causal, retrodictive, and smoothed trajectories. For a milligram-scale mirror, it agrees with a Riccati prediction based on parameters fixed independently, while the conventional estimate exhibits a large bias in the covariance-space metric, $d_M \sim 5$. Our method paves the way toward unbiased testing of macroscopic entanglement within a calibrated linear-Gaussian model, which will be applicable to tabletop mirrors as well as gravitational-wave kg-scale test masses.</summary>
-    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T15:59:37Z</published>
-    <arxiv:primary_category term="quant-ph"/>
+    <id>http://arxiv.org/abs/2607.07709v1</id>
+    <title>The Subversive Role of Excessive External Shear in Concealing Lensing Anomalies</title>
+    <updated>2026-07-08T17:59:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.07709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To best reproduce observed multiply-lensed lensed images, lens models usually incorporate shear attributed to objects unrelated to the lensing galaxy (i.e., external shear): whether it be neighbouring galaxies not explicitly included in the lens model or other cosmic structures along the sightline. When constrained solely by the positions of image counterparts, such lens models, even those utilising simple ellipsoidal mass distributions, can satisfactorily -- if not near perfectly -- reproduce the observed image positions, but often leave significant differences in flux ratios between the predicted and observed images. For the narrow-line regions (NLRs) of quasars, which are too large to be affected by micro-lensing from stars in the lensing galaxy, the flux ratio anomalies thus left are commonly attributed to small-scale structures (sub-structures) in Dark Matter associated with the lensing galaxy. Here, we show that external shear can always resolve, among the quadruply-lensed quasar NLRs studied, position anomalies in lens models constrained solely by the observed image positions, and in addition reduce although not fully resolving flux ratio anomalies when constrained by both the observed image positions and flux ratios -- provided, usually, that the external shear incorporated have strengths that far exceed (as is the common practise) those typically inferred from weak lensing along general sightlines (i.e., cosmic shear). Our work highlights the subversive role of excessive external shear in concealing lensing anomalies, undermining inferences on the characteristics of Dark Matter sub-structures -- and, correspondingly, the nature (mass and temperature) of the Dark Matter particle -- when not sensibly incorporated into lens models.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:59:59Z</published>
+    <arxiv:comment>9 pages, 2 figures, 1 table. Comments welcome. Submitted to ApJ. Lens model parameters and performance metrics available in GitHub repository (link in paper)</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
     <author>
-      <name>Katsuta Sakai</name>
+      <name>Amruth Alfred</name>
     </author>
     <author>
-      <name>Nobuyuki Matsumoto</name>
+      <name>Shashpal Singh</name>
+    </author>
+    <author>
+      <name>Rommulus Francis Lewis</name>
+    </author>
+    <author>
+      <name>Alex Chow</name>
+    </author>
+    <author>
+      <name>Jeremy Lim</name>
+    </author>
+    <author>
+      <name>Masamune Oguri</name>
+    </author>
+    <author>
+      <name>Jose M. Diego</name>
+    </author>
+    <author>
+      <name>Tom Broadhurst</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2607.06413v1</id>
-    <title>An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery</title>
-    <updated>2026-07-07T15:43:22Z</updated>
-    <link href="https://arxiv.org/abs/2607.06413v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06413v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large language model coding agents increasingly perform open-ended data modeling and analysis. These agents are stochastic and adaptive, and therefore their autonomous model discovery behavior cannot be adequately characterized by a single benchmark run. In this work, we propose an experimental design and analysis framework for systematically evaluating this discovery process, quantifying its variability, and identifying important factors. The proposed framework treats these agents as stochastic model-discovery operators, which map task-specific discovery data and an optimization target to a fitted model. Specifically, we investigate two such operators, Codex and Claude Code, under controlled experimental factors including agent's reasoning effort, task, optimization metric, and composition of training data. For each agent-task-metric combination, regression models and inference are conducted for multiple responses such as output quality, dollar cost, wall-clock time, and process complexity. Furthermore, we develop a utility-aligned canonical decomposition to characterize the dominant direction of the reasoning-effort effect and to assess whether that direction aligns with a performance-cost utility direction. The proposed framework is demonstrated on a testbed of networked word-forming games with insightful findings on reasoning effort with respect to cost and process complexity.</summary>
+    <id>http://arxiv.org/abs/2607.07706v1</id>
+    <title>The Key to Going Linear: Analysis-Driven Transformer Linearization</title>
+    <updated>2026-07-08T17:59:09Z</updated>
+    <link href="https://arxiv.org/abs/2607.07706v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07706v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The quadratic cost of causal self-attention severely bottlenecks long-context transformer inference. While numerous post hoc linearization pipelines exist, it is difficult to identify which components preserve model quality. This work isolates the effect of state update design in a strict frozen-backbone regime. We show that softmax relies on key-dependent, rank-1 orthogonal projections, elucidating why delta-style networks outperform purely gated accumulation. We identify a potential source of approximation errors and introduce structural interventions, specifically sink tokens, short convolutions, and fixed-budget cache routing, which reduces the remaining gap. We scale this linearization approach across LLaMA and Qwen models up to 32B parameters, outperforming prior post hoc baselines on MMLU and matching the long-context retrieval of complex adaptive-caching frameworks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:59:09Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Anna Kuzina</name>
+    </author>
+    <author>
+      <name>Paul N. Whatmough</name>
+    </author>
+    <author>
+      <name>Babak Ehteshami Bejnordi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07702v1</id>
+    <title>From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization</title>
+    <updated>2026-07-08T17:57:27Z</updated>
+    <link href="https://arxiv.org/abs/2607.07702v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07702v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, while naive context reduction methods such as truncation or sliding windows can discard causally important evidence and produce misleading optimization signals. To resolve this dilemma, we introduce STRACE (Structural TRajectory Analysis and Causal Extraction), a framework that constructs high signal-noise optimization contexts for more precise and effective optimization. At the batch level, STRACE mines failure patterns to filter redundant traces and retain representative failures; within each selected trace, it performs causal localization over a textual dependency graph to remove non-causal steps and identify the true root-cause module for optimization. Empirical results demonstrate that STRACE significantly outperforms standard context-filtering baselines. Notably, on a challenging formal verification task (VeruSAGE-Bench), it successfully optimizes human-expert designed agents, delivering $1.4\times$ success-rate improvement (42.5% to 58.5%). The code is available at https://github.com/moomight/STRACE .</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:57:27Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ying Chang</name>
+    </author>
+    <author>
+      <name>Jiahang Xu</name>
+    </author>
+    <author>
+      <name>Xuan Feng</name>
+    </author>
+    <author>
+      <name>Chenyuan Yang</name>
+    </author>
+    <author>
+      <name>Peng Cheng</name>
+    </author>
+    <author>
+      <name>Yuqing Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07699v1</id>
+    <title>Mitigating the Winner's Curse While Controlling Multiplicity: e-Process Methods for Anytime-Valid Inference in Dose-Ranging Trials</title>
+    <updated>2026-07-08T17:55:46Z</updated>
+    <link href="https://arxiv.org/abs/2607.07699v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07699v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Phase II dose-ranging trials often report the largest observed dose-control effect while inspecting accumulating data repeatedly. This creates two coupled distortions: selection optimism from choosing the empirical winner, known as the winner's curse, and Type I error inflation from multiplicity across doses and interim looks. We develop an anytime-valid procedure for testing whether the best true dose effect exceeds a clinically meaningful margin. The mathematical starting point is a recent selection-premium identity for the running maximum: for dose-control scores, the expected gain from re-selecting the current leader becomes a predictable selection charge. Subtracting this charge gives a residual with nonpositive drift under the composite null; applying a one-sided mixture-exponential construction then yields an e-process and hence an anytime-valid global test. The resulting rule has a transparent ledger form: raw best effect minus selection charge minus monitoring margin, and a ``GO'' decision is made only when the remaining evidence still exceeds the clinical margin. We give plug-in implementations for Gaussian and binary outcomes, prove finite-sample Type I control and anytime lower confidence bounds for the best dose effect, and illustrate the method through a worked example and simulations.</summary>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T15:43:22Z</published>
-    <arxiv:comment>39 pages, 11 figures, 6 tables. Data and code available at the GitHub repository listed in the paper</arxiv:comment>
+    <published>2026-07-08T17:55:46Z</published>
+    <arxiv:comment>Presented at SAVI Conference 2026</arxiv:comment>
     <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Hao He</name>
+      <name>Victor K. de la Pena</name>
     </author>
     <author>
-      <name>Xueying Liu</name>
+      <name>Fangyuan Lin</name>
     </author>
     <author>
-      <name>Chris J. Kuhlman</name>
+      <name>Demissie Alemayehu</name>
     </author>
     <author>
-      <name>Xinwei Deng</name>
+      <name>Victor H. de la Pena</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2607.06375v1</id>
-    <title>An Intermediate Scale R-axion \&amp; the QCD Axion</title>
-    <updated>2026-07-07T15:13:53Z</updated>
-    <link href="https://arxiv.org/abs/2607.06375v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06375v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>An intermediate scale R-axion faces an immediate obstruction from the Dine-Festuccia-Komargodski (DFK) bound on the superpotential, $2|\langle W\rangle|\leq f_R F$, since for a nearly Minkowski vacuum it typically follows that $f_R\gtrsim M_{\rm Pl}$. We show that this lower bound on $f_R$ can be relaxed in an effective construction with the scalar potential tuned near zero via a mixed $F$- and $D$-term uplift, leading to a metastable vacuum in which the usual Planckian-$f_R$ inference from the DFK argument is avoided locally. Validity of the effective field theory and metastability of the small $f_R$ vacuum generically both imply a relaxed bound: $ f_R \gtrsim \sqrt{m_{3/2}M_{\rm Pl}} $. We also highlight that if the R-symmetry has a QCD anomaly, this potentially permits the R-axion to play the role of the QCD axion. TeV-scale supersymmetry permits $f_R\sim10^{11}$ GeV, this not only evades certain astrophysical and cosmological axion constraints, but notably lies in the window for which the observed dark matter abundance can be reproduced by the R-axion via the misalignment mechanism.</summary>
-    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T15:13:53Z</published>
-    <arxiv:comment>24 pages</arxiv:comment>
-    <arxiv:primary_category term="hep-th"/>
+    <id>http://arxiv.org/abs/2607.07695v1</id>
+    <title>Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety</title>
+    <updated>2026-07-08T17:53:56Z</updated>
+    <link href="https://arxiv.org/abs/2607.07695v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07695v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute the resulting change in collective behavior to that rule. We instantiate the methodology in IABench-CA, a consequence-allocation benchmark spanning 228 contexts, five canonical rules, and seven model populations (33,924 games), with a normative cooperative reference and auto-labelled reasoning traces. Three findings emerge. (1) Deployment rules causally alter collective safety: changing only the consequence rule moves mean fatality by 22 to 58 percentage points within every population. (2) There is no safe default, but the targeting hazard is universal: the safest rule, the least-safe rule, and even the direction of the incidence effect vary across populations, yet regressive identity-targeting is never decisively safest in any context for any population, eliminates the least-resourced agent in 30-87% of games everywhere, and is selection-unsafe relative to the cooperative reference for all seven populations. (3) Identity salience is the mechanism: a one-shot anonymization ablation on the most exploitation-prone population (gpt-5.1) shows that merely naming the loss bearer in the rule text drives targeted elimination from 22% to 81% at identical payoffs; under repeated play, anonymization only delays the targeting, as agents re-infer the hidden rule from observed eliminations. We package the methodology as a safety-case workflow that certifies a provisional rule region $Φ(c,P)$ per deployment context and population, with explicit residual risks and monitoring obligations.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:53:56Z</published>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>James Unwin</name>
+      <name>Yujiao Chen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2607.06374v1</id>
-    <title>VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery</title>
-    <updated>2026-07-07T15:11:56Z</updated>
-    <link href="https://arxiv.org/abs/2607.06374v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06374v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-language models (VLMs) have made interactive digital museums increasingly feasible by connecting 3D digitization with natural-language artifact exploration. However, in cultural heritage domains such as ancient Greek pottery, reliable VLM assistance is limited by two challenges. First, open-ended interpretation requires grounding fine-grained 2D/3D visual evidence in specialized curatorial knowledge, yet the retrieval process may introduce weak sources and unverifiable references. Second, when the available evidence is incomplete, noisy, or ambiguous, VLMs often produce confident but unsupported answers instead of calibrated uncertainty. To address these challenges, we propose VaseMuseum, a lightweight and modular multimodal agent framework for intelligent digital museums of ancient Greek pottery. VaseMuseum combines an interactive virtual museum with VaseAgent, which supports both 2D images and 3D artifacts through multimodal perception, 3D-aware reasoning, external knowledge retrieval, and inference-time reliability control. Specifically, VaseAgent retrieves evidence from authoritative web and museum knowledge sources, and source-level control selects diverse and verifiable evidence before generation. Meanwhile, response-level control checks generated claims against the evidence pool and encourages neutral, evidence-bounded answers when support is insufficient or conflicting. Moreover, a training-free GRPO-style selection mechanism favors responses with valid references and calibrated confidence without updating the VLM backbone. Experiments in a realistic digital museum simulation show that VaseMuseum improves citation validity, reduces hallucinations on knowledge-intensive queries, and produces more neutral answers under ambiguity compared with search-enabled VLM baselines.</summary>
+    <id>http://arxiv.org/abs/2607.07690v1</id>
+    <title>Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning</title>
+    <updated>2026-07-08T17:49:14Z</updated>
+    <link href="https://arxiv.org/abs/2607.07690v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07690v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather than to think better, since the trace itself is never graded and no label for good thinking exists. We introduce Agon, which makes two competing models each other's graders. Both attempt the same problem; in alternating roles, one drafts a solution and the other reads it while solving, and each is rewarded for out-solving the other. To win, a model must out-reason a rival that has seen its work, so reasoning is judged implicitly during training, with no process labels and no reward model. Because both models are optimized, each faces a progressively stronger rival, which single-model RL cannot provide. The two need only be comparably strong and behaviorally different. At inference the pair deploys as it trains, a two-stage cascade in which one model drafts and the other answers after reading the draft. On the hard split of DeepMath with Qwen3, this doubles GRPO's pass@1, roughly eight times the gain of an untrained Mixture-of-Agents pass over the same base. The ordering replicates on competitive-programming code and across model families (Qwen3.5, Gemma 4). For now the models talk in text; the next step is to let them reason together in latent space.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:49:14Z</published>
+    <arxiv:comment>15 pages, 7 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Vladislav Beliaev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07685v1</id>
+    <title>Decoding magnetic texture</title>
+    <updated>2026-07-08T17:44:49Z</updated>
+    <link href="https://arxiv.org/abs/2607.07685v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07685v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In magnetically ordered materials, magnetic field and temperature variations modify the magnetic texture through their coupling to the local energy landscape, imprinting distinct fingerprints in the resulting magnetic domain patterns. Retrieving these conditions from the pattern remains challenging, as stochastic nucleation and hysteresis produce a nonlinear, multivariate, and ambiguous relationship between magnetic domain morphology and external stimuli. To decode these fingerprints, we designed a controlled magneto-optical inference experiment that reconstructs magnetic field, temperature, and magnetic history from a single fine-scale, high-contrast, pixel-resolved optical polarization map of feature-rich magnetic domain textures in a bismuth-substituted yttrium iron garnet film. Deep convolutional neural networks are complemented by feature-based neural-network inference using hand-crafted, physically interpretable descriptors of measured magneto-optical image data, linking the decoded information to material-dependent features and exploring their contributions. Together, these results establish magnetic texture as a high-fidelity record of external conditions enabling accurate single image multiparametric sensing and paving the way for data-driven explorations of complex magnetic states. Uncovering the physically interpretable features that encode this record sheds new light on the physics of magnetic domain formation.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T17:44:49Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Michael P. Path</name>
+    </author>
+    <author>
+      <name>Jeffrey McCord</name>
+    </author>
+    <author>
+      <name>Michael Vogel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07675v1</id>
+    <title>Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence</title>
+    <updated>2026-07-08T17:33:40Z</updated>
+    <link href="https://arxiv.org/abs/2607.07675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite the recent promise in robot control, video generative models suffer from a domain mismatch due to their primary focus on content creation. For example, their design inherently prioritizes visual fidelity and creativity over computational efficiency and physical realism. In this work, we present LingBot-Video, a DiT-based video pretraining paradigm specifically tailored for embodied intelligence. From the architecture perspective, we adopt the Mixture-of-Experts (MoE), instead of dense, framework to achieve a better trade-off between modeling capacity and inference efficiency, and manage to scale it up from scratch. From the data perspective, we construct a data profiling engine that augments standard internet videos with extensive robot-oriented footage, encompassing manipulation, navigation, and egocentric perspectives, to equip the base model with an intrinsic understanding of actions and world dynamics. From the training perspective, we develop a multi-dimensional reward system to enforce the alignment regarding physical rationality and task completion, going beyond standard criteria such as aesthetics, prompt-following, and motion consistency. Comprehensive evaluations validate its performance and efficiency as a video foundation model. We contribute LingBot-Video as the inaugural large-scale, open-source MoE video foundation model to the community, in a pioneering effort to bridge digital creativity and physical actuation.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T15:11:56Z</published>
-    <arxiv:comment>Code: https://github.com/AIGeeksGroup/VaseMuseum. Website: https://aigeeksgroup.github.io/VaseMuseum</arxiv:comment>
+    <published>2026-07-08T17:33:40Z</published>
+    <arxiv:comment>Project page: https://technology.robbyant.com/lingbot-video</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Jiazi Wang</name>
+      <name>Shuailei Ma</name>
     </author>
     <author>
-      <name>Nonghai Zhang</name>
+      <name>Jiaqi Liao</name>
     </author>
     <author>
-      <name>Qiushi Xie</name>
+      <name>Xinyang Wang</name>
     </author>
     <author>
-      <name>Zeyu Zhang</name>
+      <name>Jingjing Wang</name>
     </author>
     <author>
-      <name>Yufeng Chen</name>
+      <name>Chaoran Feng</name>
     </author>
     <author>
-      <name>Yang Zhao</name>
+      <name>Zijing Hu</name>
     </author>
     <author>
-      <name>Ling Shao</name>
+      <name>Chong Bao</name>
     </author>
     <author>
-      <name>Hao Tang</name>
+      <name>Zichen Xi</name>
+    </author>
+    <author>
+      <name>Yuqi Gan</name>
+    </author>
+    <author>
+      <name>Weisen Wang</name>
+    </author>
+    <author>
+      <name>Yanhong Zeng</name>
+    </author>
+    <author>
+      <name>Qin Zhao</name>
+    </author>
+    <author>
+      <name>Zifan Shi</name>
+    </author>
+    <author>
+      <name>Wei Wu</name>
+    </author>
+    <author>
+      <name>Hao Ouyang</name>
+    </author>
+    <author>
+      <name>Qiuyu Wang</name>
+    </author>
+    <author>
+      <name>Shangzhan Zhang</name>
+    </author>
+    <author>
+      <name>Jiahao Shao</name>
+    </author>
+    <author>
+      <name>Yipengjing Sun</name>
+    </author>
+    <author>
+      <name>Liangxiao Hu</name>
+    </author>
+    <author>
+      <name>Lunke Pan</name>
+    </author>
+    <author>
+      <name>Nan Xue</name>
+    </author>
+    <author>
+      <name>Kecheng Zheng</name>
+    </author>
+    <author>
+      <name>Yinghao Xu</name>
+    </author>
+    <author>
+      <name>Xing Zhu</name>
+    </author>
+    <author>
+      <name>Yujun Shen</name>
+    </author>
+    <author>
+      <name>Ka Leong Cheng</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2607.06373v1</id>
-    <title>Error Propagation in Spectral Functionals of Shrinkage Covariance Estimators: Perturbation Bounds and Calibrated Inference</title>
-    <updated>2026-07-07T15:11:16Z</updated>
-    <link href="https://arxiv.org/abs/2607.06373v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06373v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Rolling covariance estimates feed two objects that are routinely treated as market structure. The first is the dominant eigenspace, monitored through the projector movement $\widehat D_{K,t}=\|\widehat P_{K,t}-\widehat P_{K,t-1}\|_F$; the second comprises scalar spectral functionals such as the absorption ratio and the leading-eigenvalue share. Both fluctuate under estimation noise, and shrinkage changes the law of that noise, so reading their movements as structural change requires calibration. For the eigenspace, we derive a first-order null law for $\widehat D_{K,t}$ between overlapping windows that share most of their data and show that it transfers without change to rotation-equivariant shrinkage estimators. A distribution-free Davis-Kahan band gauges whether the eigenspace is identified, an estimator-aware bootstrap provides the calibrated test, and a companion power analysis gives an approximate design rule for the smallest detectable rotation. For the scalar functionals, we show that first-order immunity to elliptical kurtosis holds for scale-invariant functionals and only for them, so that one estimated scalar calibrates the projector null and the absorption-ratio and leading-share intervals across the elliptical family. In high dimensions, where shrinkage cleaning biases the absorption ratio, we give a trace-preserving spike-debiased estimator that removes the bias. The results are verified by simulation under a known population covariance; an equity-panel appendix shows the procedures as diagnostics when the population is unknown.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-fin.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T15:11:16Z</published>
-    <arxiv:comment>39 pages, 8 figures, 14 tables</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Ahmad Koman</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.06370v1</id>
-    <title>Training-Free Acceleration for Vision-Language-Action Models with Action Caching and Refinement</title>
-    <updated>2026-07-07T15:10:15Z</updated>
-    <link href="https://arxiv.org/abs/2607.06370v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06370v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action (VLA) models have emerged as a promising approach for generalizable robotic manipulations. In particular, flow matching-based VLA models have shown remarkable success due to their capability to generate precise and smooth action sequences and capture multimodal distributions. However, the iterative denoising process in the action head acts as a major computational bottleneck, posing a critical challenge for real-time deployment. To address this challenge, we propose ActionCache, a plug-and-play external cache that opportunistically reuses past intermediate actions to warm-start generations from the vicinity of target actions, thereby drastically reducing the inference latency. Specifically, ActionCache stores the intermediate actions with compact multimodal keys, which enables retrieval from similar past contexts across different episodes or even different tasks. Experimental results in simulation and real-world environments demonstrate that ActionCache maintains high task success rates in a low-latency regime, achieving inference acceleration of up to $11.75\times$ and $34.43\times$ for representative flow-based VLA models, $π_{0.5}$ and GR00T-N1.6, respectively.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2607.07671v1</id>
+    <title>PeTeR: Post-Training Robustification of Probabilistic Circuits</title>
+    <updated>2026-07-08T17:25:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.07671v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07671v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Probabilistic circuits (PCs) can model complex joint distributions while supporting exact and efficient computation of many inference queries. However, standard likelihood-based PC learning is vulnerable to overfitting and fragile generalization when confronted with data noise, small sample sizes, or distribution shifts. This can be mitigated using distributionally-robust optimization which consider worst-case distributions within a Wasserstein ball of the empirical distribution, but current methods are limited to training a model from scratch in this framework. Instead, we propose PeTeR: a novel, data-free post-training framework designed to robustify pre-trained PCs against distribution shifts without retraining from scratch. Empirical evaluations across multiple density estimation benchmarks demonstrate that PeTeR effectively robustifies baseline models against both random and adversarial perturbations, achieving competitive or superior performance to data-dependent robust learning baselines.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T15:10:15Z</published>
-    <arxiv:primary_category term="cs.RO"/>
+    <published>2026-07-08T17:25:20Z</published>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Ryuji Oi</name>
+      <name>Adrian Ciotinga</name>
     </author>
     <author>
-      <name>Hikari Otsuka</name>
+      <name>Yeming Dai</name>
     </author>
     <author>
-      <name>Kosuke Matsushima</name>
-    </author>
-    <author>
-      <name>Yuki Ichikawa</name>
-    </author>
-    <author>
-      <name>Masato Motomura</name>
-    </author>
-    <author>
-      <name>Tatsuya Kaneko</name>
-    </author>
-    <author>
-      <name>Daichi Fujiki</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.06355v1</id>
-    <title>Entropic Dynamics of Jump-Diffusion Option Pricing</title>
-    <updated>2026-07-07T14:53:50Z</updated>
-    <link href="https://arxiv.org/abs/2607.06355v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06355v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Standard models of stock price dynamics and option valuation usually begin by postulating stochastic processes. This paper develops an entropic inference framework that derives these processes from information constraints. The key symmetry is that markets reward returns rather than price levels, which selects log price as the dynamical variable. Price changes are represented by two channels. The continuous channel carries constraints of continuity and directionality. The jump channel carries the arrival rate and the first two moments of jump size. Since these constraints apply to disjoint parts of the microstate, the channels factorize. The resulting dynamics is the Merton jump diffusion, with Geometric Brownian Motion as the no jump limit. The log price density satisfies the Kolmogorov Feller equation, whose no jump limit is the Fokker Planck equation. The same inferential principle, with no arbitrage imposed through the mean log return, selects the Esscher transform from the many martingale measures available in an incomplete market. The option price then satisfies Mertons partial integro differential equation, and the risk neutral mixture of lognormal distributions generates the implied volatility smile. The Black Scholes results are recovered when jumps vanish. What changes from one model to another is not the inference, but the information supplied to it.</summary>
-    <category term="q-fin.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-fin.MF" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-fin.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T14:53:50Z</published>
-    <arxiv:primary_category term="q-fin.PR"/>
-    <author>
-      <name>Mohammad Abedi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.06338v1</id>
-    <title>SN 2022erq: A Superluminous Thermonuclear Supernova with Escalating Pre-Explosion Mass Loss</title>
-    <updated>2026-07-07T14:35:19Z</updated>
-    <link href="https://arxiv.org/abs/2607.06338v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.06338v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present a photometric and spectroscopic study of the superluminous Type Ia supernova SN 2022erq. Its early spectra, dominated by iron-group elements with weak intermediate-mass features, might indicate highly efficient nuclear burning, broadly similar to that inferred for some overluminous SNe Ia. The rapid emergence and persistence of narrow Balmer emission lines superposed on this iron-rich spectrum provide clear evidence of long-lived interaction with a hydrogen-rich circumstellar medium (CSM), establishing SN 2022erq as a member of the rare Ia-CSM class. SN 2022erq reached a peak bolometric luminosity of about 8 x 10^43 erg/s and exhibited an exceptionally slow post-peak decline, indicating that its light curve is dominated by long-duration ejecta-CSM interaction. By combining H-alpha diagnostics with bolometric light-curve modeling, we reconstruct the pre-explosion mass-loss history of the progenitor. The mass-loss rate escalated by one order of magnitude over the final decades, rising from about 0.04 to about 0.6 solar masses per year. This surge produced a massive, extended CSM shell of about 3 solar masses out to about 3.5 x 10^16 cm. The young stellar environment (about 100 Myr) together with this substantial, extensive CSM points to a progenitor system consisting of a white dwarf and an intermediate-mass companion that underwent increasing mass loss prior to explosion.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-07T14:35:19Z</published>
-    <arxiv:comment>28 pages, 18 figures, accepted for publication in ApJ</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
-    <author>
-      <name>Qian Zhai</name>
-    </author>
-    <author>
-      <name>Jujia Zhang</name>
-    </author>
-    <author>
-      <name>Xiaofeng Wang</name>
-    </author>
-    <author>
-      <name>A. Pastorello</name>
-    </author>
-    <author>
-      <name>Alexei V. Filippenko</name>
-    </author>
-    <author>
-      <name>József Vinkó</name>
-    </author>
-    <author>
-      <name>Thomas G. Brink</name>
-    </author>
-    <author>
-      <name>Yunkun Han</name>
-    </author>
-    <author>
-      <name>G. Valerin</name>
-    </author>
-    <author>
-      <name>N. Elias Rosa</name>
-    </author>
-    <author>
-      <name>Yongzhi Cai</name>
-    </author>
-    <author>
-      <name>Weili Lin</name>
-    </author>
-    <author>
-      <name>Yi Yang</name>
-    </author>
-    <author>
-      <name>WeiKang Zheng</name>
-    </author>
-    <author>
-      <name>Xiangcun Meng</name>
-    </author>
-    <author>
-      <name>Chengyuan Wu</name>
-    </author>
-    <author>
-      <name>Liping Li</name>
-    </author>
-    <author>
-      <name>Zeyi Zhao</name>
-    </author>
-    <author>
-      <name>J. Craig Wheeler</name>
-    </author>
-    <author>
-      <name>Jose L. Prieto</name>
-    </author>
-    <author>
-      <name>Jialian Liu</name>
-    </author>
-    <author>
-      <name>Gaici Li</name>
-    </author>
-    <author>
-      <name>Shengyu Yan</name>
-    </author>
-    <author>
-      <name>Fangzhou Guo</name>
-    </author>
-    <author>
-      <name>C. P. Gutiérrez</name>
-    </author>
-    <author>
-      <name>E. Kankare</name>
-    </author>
-    <author>
-      <name>Peter Lundqvist</name>
-    </author>
-    <author>
-      <name>S. Moran</name>
-    </author>
-    <author>
-      <name>A. Reguitti</name>
-    </author>
-    <author>
-      <name>I. Salmaso</name>
-    </author>
-    <author>
-      <name>M. D. Stritzinger</name>
-    </author>
-    <author>
-      <name>S. Williams</name>
-    </author>
-    <author>
-      <name>J. -W. Zhao</name>
-    </author>
-    <author>
-      <name>D. -D Shi</name>
-    </author>
-    <author>
-      <name>Jianrong Shi</name>
-    </author>
-    <author>
-      <name>Z. -H. Peng</name>
-    </author>
-    <author>
-      <name>Tengfei Song</name>
-    </author>
-    <author>
-      <name>Yongyuan Xiang</name>
-    </author>
-    <author>
-      <name>Attila Bódi</name>
-    </author>
-    <author>
-      <name>Borbála Cseh</name>
-    </author>
-    <author>
-      <name>Ágoston Horti-Dávid</name>
-    </author>
-    <author>
-      <name>Csilla Kalup</name>
-    </author>
-    <author>
-      <name>Levente Kriskovics</name>
-    </author>
-    <author>
-      <name>Réka Könyves-Tóth</name>
-    </author>
-    <author>
-      <name>András Pál</name>
-    </author>
-    <author>
-      <name>Bálint Seli</name>
-    </author>
-    <author>
-      <name>Ádám Sódor</name>
-    </author>
-    <author>
-      <name>Róbert Szakáts</name>
-    </author>
-    <author>
-      <name>Bo Wang</name>
+      <name>YooJung Choi</name>
     </author>
   </entry>
 </feed>
