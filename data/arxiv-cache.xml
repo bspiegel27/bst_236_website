@@ -1,12 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-07-16T01:45:41Z -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>503</title>
-  </head>
-  <body>
-    503
-  </body>
-</html>
+<!-- Last updated: 2026-07-17T01:49:04Z -->
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
+  <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-07-17T01:49:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>152324</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15190v1</id>
+    <title>Can We Trust Item Response Theory for AI Evaluation?</title>
+    <updated>2026-07-16T16:44:40Z</updated>
+    <link href="https://arxiv.org/abs/2607.15190v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15190v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI benchmarks increasingly leverage item-level statistical models, particularly item response theory (IRT), to estimate model capabilities, rank systems, select informative examples, and diagnose benchmark quality. However, AI benchmark data often departs from the data regime of human testing, for which standard IRT estimation tools were originally developed: benchmarks typically involve fewer evaluated models, far more items, and capability distributions that may be skewed, clustered, or multimodal. We examine how these regime mismatches challenge the reliability of IRT modeling for AI evaluation. Using item parameters and capability distributions derived from six widely used LLM benchmarks, we simulate response matrices under three common IRT models and compare four estimation tools used in recent benchmark studies: marginal maximum likelihood, Markov chain Monte Carlo, variational inference, and a neural pseudo-Siamese estimator. Across 18,000 simulation conditions, we systematically evaluate computational feasibility, scalability, and the reliability of IRT inferences about model rankings, predicted performance, and item characteristics. Results show that classical estimators can become infeasible in large benchmark settings, whereas scalable estimators can produce unreliable item-level and ranking inferences with small or nonnormally distributed model sets. This study identifies when latent trait models reliably support or risk distorting AI benchmarking claims, and what sample sizes and diagnostics are needed for trustworthy use.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T16:44:40Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Han Jiang</name>
+    </author>
+    <author>
+      <name>Sunbeom Kwon</name>
+    </author>
+    <author>
+      <name>Jinwen Luo</name>
+    </author>
+    <author>
+      <name>Ziang Xiao</name>
+    </author>
+    <author>
+      <name>Susu Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15185v1</id>
+    <title>Memory-Exhaustion Attack on the Blocklace Byzantine-Repelling Conflict-Free Replicated Data Type</title>
+    <updated>2026-07-16T16:37:28Z</updated>
+    <link href="https://arxiv.org/abs/2607.15185v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15185v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The blocklace is a directed acyclic graph encoding the causal relationship between authenticated updates produced by participating nodes. Compared to previous approaches, it adds restrictions on what can be replicated: a new update and its causal history is replicated locally if and only if either 1) it reveals a new node behaving arbitrarily (byzantine), or 2) it was signed by a node that still appears to be correct and the new updates provide evidence incriminating at least the set of nodes locally known to have behaved arbitrarily. The restrictions purport to limit the replication of arbitrary updates, even in the presence of colluders that never produce incriminating evidence, so that only a finite number will eventually be replicated by correct nodes.
+  While the original description of the replication behaviour successfully achieve this aim, we show that this finite number can be made arbitrarily large, up to the size of the identifier space used to authenticate messages. This effectively enables malicious nodes to overwhelm correct nodes with arbitrary and useless updates. Practical deployments therefore require additional restrictions on the set of identifiers that will be accepted by correct nodes.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T16:37:28Z</published>
+    <arxiv:comment>2 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Erick Lavoie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15180v1</id>
+    <title>RTS Smoother-Guided Learning of Physics-Based Neural Differential Models</title>
+    <updated>2026-07-16T16:34:48Z</updated>
+    <link href="https://arxiv.org/abs/2607.15180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ordinary differential equations (ODEs) are widely used to model dynamical systems in physics, biology, neuroscience, and physiology, but in many applications some equations of the dynamics are unknown and only a subset of the state variables are measured. We propose a hybrid neural--physics framework in which the known components of the ODE are kept explicit and the missing components are represented by a neural network. The proposed method consists of two stages where we alternate between state and parameter estimation and iterate until a predetermined criterion is met. Specifically, in the first step, we treat the model parameters as being known and we infer the latent states from the available measurements using a Rauch--Tung--Striebel (RTS) smoother. In the second stage, we treat the smoothed trajectories as being known and use them to estimate the neural networks' parameters through backpropagation. We evaluate the method on benchmark systems spanning linear, nonlinear, and stiff dynamics under partial state observation. Across these settings, the proposed method learns missing ODE components from incomplete measurements while exploiting and retaining interpretable mechanistic structure and improving latent-state reconstruction and long-horizon prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T16:34:48Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ahmet Demirkaya</name>
+    </author>
+    <author>
+      <name>Georgios Stratis</name>
+    </author>
+    <author>
+      <name>Tales Imbiriba</name>
+    </author>
+    <author>
+      <name>Zachary D. Danziger</name>
+    </author>
+    <author>
+      <name>Deniz Erdogmus</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15179v1</id>
+    <title>A Complete-Data Likelihood for Epidemic Processes on Partially Observed Dynamic Networks</title>
+    <updated>2026-07-16T16:34:39Z</updated>
+    <link href="https://arxiv.org/abs/2607.15179v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15179v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inference for infectious disease transmission on dynamic contact networks is complicated by latent infection times, partially observed network evolution, measurement error in contact data, and infection originating from outside the observed population. Existing likelihood-based approaches typically address these challenges separately and often rely on restrictive assumptions such as fully observed networks, closed populations, or symptom onset as a surrogate for infection time. We develop a unified complete-data likelihood framework for epidemic processes evolving on partially observed dynamic networks. The proposed formulation represents disease progression, network evolution, and observation mechanisms as interacting continuous-time stochastic processes within a common probabilistic framework. Specifically, we couple a susceptible-exposed-infectious-removed (SEIR) epidemic process with a status-dependent dynamic contact network and explicit observation models for symptoms and contacts. The resulting framework accommodates latent incubation periods, intermittent network observation, contact measurement error, and external infection pressure while preserving a coherent likelihood structure. Our principal contribution is the derivation of a complete-data event-history likelihood for the joint epidemic-network process under partial observation. The likelihood provides a rigorous foundation for likelihood-based and Bayesian inference through data augmentation, clarifies how information from disease progression and contact dynamics jointly determines parameter estimability, and reveals a broad class of existing epidemic network models as special cases. More generally, the framework contributes to statistical inference for partially observed interacting stochastic systems on evolving networks and establishes a foundation for uncertainty-aware analysis of complex transmission processes.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T16:34:39Z</published>
+    <arxiv:comment>42 pages, 20 figures. For associated R files, see https://github.com/asadmdaz/infectious-disease-modelling</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Md Asaduzzaman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15178v1</id>
+    <title>T^2MLR: Transformer with Temporal Middle-Layer Recurrence</title>
+    <updated>2026-07-16T16:33:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.15178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transformer reasoning is limited by autoregressive decoding, which repeat edly compresses rich hidden computation through token space and makes it difficult for intermediate reasoning states to persist across time. We in troduce Transformers with Temporal Middle-Layer Recurrence (T2MLR), a transformers-based latent reasoning architecture that fuses a cached middle layer representation from the previous token directly into an earlier layer of the current token position, enabling abstract intermediate computation to persist across decoding steps with little inference overhead. Across natural-language pretraining and multi-hop reasoning finetuning, T2MLR consistently outperforms data- and parameter-matched Transformer base lines. Moreover, applying recurrence to only a localized middle-layer block (as little as 20% of the network) often outperforms full-layer recurrence. Im portantly, T2MLR does not require pretraining from scratch: retrofitting the recurrent pathway into an existing pretrained 1.7B Transformer and briefly finetuning substantially improves math reasoning, lowering the barrier to practical adoption. These results suggest that effective latent reasoning in Transformers does not require looping over all layers as in previous works, but can instead emerge more strongly from targeted middle-layer recurrence.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T16:33:59Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ziyang Cai</name>
+    </author>
+    <author>
+      <name>Xingyu Zhu</name>
+    </author>
+    <author>
+      <name>Yihe Dong</name>
+    </author>
+    <author>
+      <name>Yinghui He</name>
+    </author>
+    <author>
+      <name>Sanjeev Arora</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15168v1</id>
+    <title>Indirect Variational Inference: Applications to Earnings Dynamics</title>
+    <updated>2026-07-16T16:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2607.15168v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15168v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Latent-variable models are central to economics but often entail intractable integration. Variational inference (VI), widely used in machine learning, turns this integration into tractable, differentiable optimization by replacing the likelihood with a variational objective. However, guarantees of recovering the true parameters remain limited when the variational family is insufficiently flexible -- a key obstacle to the adoption of VI in economics. We first evaluate VI in models of earnings dynamics and show that the choice of variational posterior is crucial. We then introduce indirect variational inference (IVI), which treats VI as an auxiliary model and corrects the bias induced by the variational approximation. IVI retains much of VI's tractability because it does not require computing the likelihood. We apply these methods to models allowing for nonlinear persistence, non-Gaussian and serially correlated transitory shocks, and latent heterogeneity. Across simulated and empirical applications, flexible variational families combined with IVI deliver reliable estimates.</summary>
+    <category term="econ.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T16:17:14Z</published>
+    <arxiv:primary_category term="econ.GN"/>
+    <author>
+      <name>Neele Balke</name>
+    </author>
+    <author>
+      <name>Stephane Bonhomme</name>
+    </author>
+    <author>
+      <name>Thibaut Lamadon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15144v1</id>
+    <title>The majority of hot Jupiters formed beyond the water ice line</title>
+    <updated>2026-07-16T15:47:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.15144v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15144v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atmospheric compositions of giant exoplanets can retain information about their formation environments, as volatile species condense at different temperatures in protoplanetary discs. We investigated whether the atmospheric compositions of hot Jupiters can constrain their formation locations. We performed planet formation simulations using the ChemComp code, including pebble drift, pebble and gas accretion, planet migration, stellar abundances, and two additional chemical processes: thermal decomposition of refractory organics and CO/CO2 trapping in water ice. We applied this framework to nine observed hot Jupiter systems and compared the resulting atmospheric metallicities (C/H and O/H) with observational constraints. We found that the observed atmospheric abundances of the nine hot Jupiter systems can be reproduced by planets forming at different locations relative to the H2O and CO2 snowlines. Our results suggest that at least six of the nine systems are consistent with formation beyond the H2O snowline. Combined with the observed orbital separations, eccentricities, and spin-orbit obliquities, these inferred formation locations indicate that many systems likely experienced dynamical scattering followed by tidal evolution. Atmospheric abundances, in combination with detailed orbital parameters, can provide a powerful diagnostic of the formation and migration histories of hot Jupiter systems, opening up avenues to understand the origin of giant planets in general.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T15:47:30Z</published>
+    <arxiv:comment>8 pages, 5 figures, 2 tables. Accepted for publication in A&amp;A Letters</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Yaxing He</name>
+    </author>
+    <author>
+      <name>Bertram Bitsch</name>
+    </author>
+    <author>
+      <name>Adrien Houge</name>
+    </author>
+    <author>
+      <name>Joe Williams</name>
+    </author>
+    <author>
+      <name>Masahiro Ogihara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15131v1</id>
+    <title>Berkeley 32: A Metal-poor and Dynamically Evolved Open Cluster with Evidence of Radial Migration</title>
+    <updated>2026-07-16T15:41:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.15131v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15131v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a comprehensive chemo-dynamical analysis of the old, metal-poor open cluster Berkeley 32 based on Gaia DR3 astrometry and Gaia-ESO Survey DR5.1 spectroscopy. Cluster membership is determined using a Gaussian Mixture Model applied to proper-motion components and trigonometric parallaxes. Isochrone fitting yields an age of 4.9 +/- 0.5 Gyr, a heliocentric distance of 3325 pc, and an extinction of A_V = 0.38 +/- 0.12 mag. Spectroscopic member stars exhibit a mean metallicity of [Fe/H] = -0.39 +/- 0.02 dex, near-solar alpha-element abundances, and a weighted mean radial velocity of V_rad = 106.26 +/- 0.03 km s^-1. The [Y/Mg] chemical clock yields an age of 4.73 +/- 2.39 Gyr, consistent with the isochrone estimate. Orbital integration indicates a moderately eccentric orbit (e = 0.268 +/- 0.004) with a guiding radius of R_g = 8.82 kpc. The inferred chemical birth radius, R_b = 9.82 kpc, together with DeltaR ~ -1 kpc, suggests moderate inward radial migration, while the offsets among R_b, R_g, and R_GC are consistent with both churning and blurring processes. A photometric analysis identifies a binary fraction of f_b = 0.449 +/- 0.017 for systems with mass ratios q &gt;= 0.5, implying a substantial unresolved binary population. Radial cumulative distribution functions further reveal significant mass segregation, with evolved stars more centrally concentrated than main-sequence stars. These results indicate that Berkeley 32 is a dynamically evolved old-disk cluster whose present-day structure and orbit preserve signatures of both internal dynamical evolution and radial migration within the Galactic disk.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T15:41:20Z</published>
+    <arxiv:comment>27 pages, including 15 figures and 4 tables, accepted for publication in the The Astronomical Journal (AJ)</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>Deniz Cennet Çınar</name>
+    </author>
+    <author>
+      <name>D. Bisht</name>
+    </author>
+    <author>
+      <name>Ing-Guey Jiang</name>
+    </author>
+    <author>
+      <name>W. H. Elsanhoury</name>
+    </author>
+    <author>
+      <name>K. Belwal</name>
+    </author>
+    <author>
+      <name>Selçuk Bilir</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15127v1</id>
+    <title>On-board AI-based Channel Estimation for LEO NTNs</title>
+    <updated>2026-07-16T15:37:07Z</updated>
+    <link href="https://arxiv.org/abs/2607.15127v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15127v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Artificial Intelligence(AI) methods have shown strong channel estimation performance in terrestrial networks, but they typically rely on substantial computational resources. As 6G moves toward a unified architecture that will include Non-Terrestrial Networks (NTN) from day 0, availability of large and power hungry computational resources shall not be taken for granted. At the same time, NTN propagation often exhibits high predictability, limited multipath richness and significant Doppler shifts, representing a specific channel estimation problem. In this work, we propose a lightweight convolution-based channel estimator designed specifically for NTN operation and real-time onboard inference. We evaluate its channel estimation accuracy under stringent NGSO power budgets and quantify the resulting end-to-end impact on link performance. We show the improvement in terms of Mean Squared Error (MSE) achieved by the proposed approach compared with established algorithms, demonstrating that efficient AI models can deliver robust performance even on power-constrained spaceborne nodes. In addition, the proposed design by exploiting the domain knowledge, improves parameter efficiency by $27\%$ compared with state-of-the-art AI models and requires approximately $29\times$ fewer floating-point operations than conventional methods while achieving superior MSE performance.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T15:37:07Z</published>
+    <arxiv:comment>IEEE SPAWC 2026</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Mahdi Abdollahpour</name>
+    </author>
+    <author>
+      <name>Bruno De Filippo</name>
+    </author>
+    <author>
+      <name>Carla Amatetti</name>
+    </author>
+    <author>
+      <name>Alessandro Vanelli-Coralli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15123v1</id>
+    <title>NIFA: Nonlinear IMC enhanced FPGA for efficient ML inference</title>
+    <updated>2026-07-16T15:32:44Z</updated>
+    <link href="https://arxiv.org/abs/2607.15123v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15123v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent FPGAs have improved deep learning (DL) inference efficiency through dedicated tensor blocks and in-BRAM computation. ReRAM-based analog in-memory computing (IMC) pushes efficiency further, offering an order-of-magnitude improvement in compute density and energy efficiency over conventional digital logic by performing vector-matrix multiplication (VMM) directly within the ReRAM crossbar; prior work has integrated such IMC blocks into FPGAs for DL inference. However, conventional IMC designs support only static-weight VMM, leaving nonlinear operations and dynamic matrix-matrix multiplication (DIMM) to the FPGA fabric. As a result, the benefits of IMC are largely confined to static-weight models, whereas Transformer-based models, which rely on frequent nonlinear and DIMM operations, gain only limited improvement. Moreover, the ADCs within each IMC block consume more than 70% of its area and power, further limiting system efficiency and scalability. To address these limitations, we propose a novel FPGA architecture that integrates an ADC-free IMC block, replacing the conventional ADC with analog content-addressable memories (ACAMs) that natively perform nonlinear operations inside the block. To fully exploit this block, we conduct an FPGA-aware design-space exploration that determines optimal crossbar dimensions while balancing FPGA area, flexibility, and DL performance, and we develop an efficient mapping that leverages ACAMs to carry out DIMM operations, extending the applicability of IMC to attention computation. On CNN and Transformer-based benchmarks, the proposed architecture achieves up to 40x and 1.9x higher energy efficiency and 4.1x and 2.5x higher area efficiency, respectively. Overall, it significantly improves FPGA DL inference efficiency and sustains robust gains on Transformer-based workloads across long input sequences, advancing domain-specialized FPGA design.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T15:32:44Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Jiajun Hu</name>
+    </author>
+    <author>
+      <name>Ruthwik Reddy Sunketa</name>
+    </author>
+    <author>
+      <name>Lei Zhao</name>
+    </author>
+    <author>
+      <name>Archit Gajjar</name>
+    </author>
+    <author>
+      <name>Luca Buonanno</name>
+    </author>
+    <author>
+      <name>Aman Arora</name>
+    </author>
+  </entry>
+</feed>
