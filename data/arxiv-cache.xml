@@ -1,14 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-07-17T01:49:04Z -->
+<!-- Last updated: 2026-07-18T01:29:52Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-07-17T01:49:05Z</updated>
+  <updated>2026-07-18T01:29:53Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>152324</opensearch:totalResults>
+  <opensearch:totalResults>152331</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15278v1</id>
+    <title>Hierarchical Denoising For Multi-Step Visual Reasoning</title>
+    <updated>2026-07-16T17:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2607.15278v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15278v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning. Streaming autoregressive diffusion models are efficient but limited in reasoning, while bidirectional diffusion enables global revision with high inference costs due to dense frame-level denoising. Both paradigms struggle to achieve logical consistency and low-latency streaming for complex reasoning tasks. We propose HDR (Hierarchical Denoising for Visual Reasoning), a unified framework that integrates hierarchical latents into causal video generation for multi-step reasoning. HDR organizes video latents into a tree-structured hierarchy, enabling coarse-to-fine reasoning before streaming output. Coarse denoising layers preserve uncertain hypotheses for global planning, while finer layers progressively refine them into concrete visual states. A sparse hierarchical attention pattern (SHAP) further reduces temporal attention costs. We introduce a level-stratified multi-step video reasoning benchmark with out-of-distribution cases, covering six tasks: maze navigation, Tower of Hanoi, one-line drawing, sliding puzzle, Sokoban, and water pouring. Compared with streaming autoregressive diffusion baselines, HDR improves success from 34.22 to 60.29 (76.2% relative gain) and increases average progress from 76.00 to 89.56, demonstrating more consistent reasoning trajectories. HDR maintains low-latency streaming at 0.70 seconds per latent, achieving 54.2 times faster inference than bidirectional diffusion. It also retains 82.9% of full-data performance with only 2% training data, compared with 52.0% for bidirectional diffusion. Real-world robot experiments further demonstrate HDR's potential for physical interaction and world modeling. Project demo: https://hierarchical-diffusion-reasoning.github.io/.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:59:57Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zezhong Qian</name>
+    </author>
+    <author>
+      <name>Xiaowei Chi</name>
+    </author>
+    <author>
+      <name>Chak-Wing Mak</name>
+    </author>
+    <author>
+      <name>Tianze Zhou</name>
+    </author>
+    <author>
+      <name>Ruibin Yuan</name>
+    </author>
+    <author>
+      <name>Yuhan Rui</name>
+    </author>
+    <author>
+      <name>Hengzhe Sun</name>
+    </author>
+    <author>
+      <name>Zhuoqun Wu</name>
+    </author>
+    <author>
+      <name>Yuming Li</name>
+    </author>
+    <author>
+      <name>Siyuan Qian</name>
+    </author>
+    <author>
+      <name>Sirui Han</name>
+    </author>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15277v1</id>
+    <title>Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models</title>
+    <updated>2026-07-16T17:59:31Z</updated>
+    <link href="https://arxiv.org/abs/2607.15277v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15277v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In this work, we investigate to what extent LLM estimates adhere to this self-consistency principle. We use binary trees as an evaluation scaffold to recursively partition a population into increasingly fine-grained subpopulations. We then prompt LLMs with verbalized subpopulation descriptions in context, aggregate the resulting estimates back into population-level estimates, and compare them across partitions of varying granularity. Applying this protocol across problem domains and state-of-the-art frontier models, we show widespread violations of basic consistency properties. An in-depth study of persona prompting reveals a pattern we call the macro fallacy: estimates reconstructed from more fine-grained subpopulation responses are often better aligned with human reference data than direct population-level estimates. This effect persists across variations in tree structure and estimation task, and can be partially recovered through implicit prompting. Together, these findings suggest that models possess relevant subpopulation knowledge but do not reliably propagate it into aggregate estimates. This gap establishes statistical self-consistency as an unsaturated, reference-free criterion for evaluating LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:59:31Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Patrik Wolf</name>
+    </author>
+    <author>
+      <name>Thomas Kleine Buening</name>
+    </author>
+    <author>
+      <name>Andreas Krause</name>
+    </author>
+    <author>
+      <name>Celestine Mendler-Dünner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15276v1</id>
+    <title>Locality of deep thermalisation through the lens of entanglement teleportation</title>
+    <updated>2026-07-16T17:59:16Z</updated>
+    <link href="https://arxiv.org/abs/2607.15276v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15276v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep thermalisation characterises the emergence of universal quantum state ensembles on subsystems due to projective measurements on their complement. We study the notion of locality, or lack thereof, in this phenomenon by considering a subsystem partitioned into two disjoint subregions which remain causally disconnected at all times under unitary dynamics. We show that the onset of deep thermalisation in this geometry is fundamentally bounded by measurement-induced entanglement teleportation between the subregions. While measurements on the environment generate entanglement across the disconnected partitions -- suggesting an apparent non-locality -- we demonstrate that generic locally interacting systems exhibit an emergent locality. Specifically, the timescales for both deep thermalisation and entanglement teleportation scale logarithmically with the distance separating the subregions. Exceptions to this include special circuits where the randomness of the measurement outcomes is perfectly transmitted to the ensemble of states of the subsystem, conditioned on the outcomes; in such cases the timescale for deep thermalisation is finite leading to genuine non-locality.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:59:16Z</published>
+    <arxiv:comment>7 pages, 3 figures + Supplementary Material (3 pages, 1 figure)</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Saptarshi Mandal</name>
+    </author>
+    <author>
+      <name>Alan Sherry</name>
+    </author>
+    <author>
+      <name>Sthitadhi Roy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15275v1</id>
+    <title>RoboTTT: Context Scaling for Robot Policies</title>
+    <updated>2026-07-16T17:59:06Z</updated>
+    <link href="https://arxiv.org/abs/2607.15275v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15275v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturbations, and stronger performance on multi-stage, long-horizon tasks. We also observe, for the first time, steady gains in closed-loop performance as pretraining context length scales. At its core, RoboTTT integrates Test-Time Training into robot foundation models such as Vision-Language-Action policies, yielding a sequence model whose recurrent state consists of fast weights, parameters updated by gradient descent during both training and inference, compressing histories into weight space and retrieving contextual information for long-context conditioning. To scale training context length, the recipe combines sequence action forcing with truncated backpropagation through time. On challenging real-robot manipulation tasks, RoboTTT improves overall performance by 87% over the single-step context baseline and fully completes a five-minute, ten-stage assembly task, which no baseline ever does. RoboTTT trained with 8K-timestep context outperforms the same model pretrained with 1K timesteps by 62%, suggesting context length as a new scaling axis for robot foundation models. Videos are available at https://research.nvidia.com/labs/gear/robottt/</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:59:06Z</published>
+    <arxiv:comment>Project website: http://research.nvidia.com/labs/gear/robottt/</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Yunfan Jiang</name>
+    </author>
+    <author>
+      <name>Yevgen Chebotar</name>
+    </author>
+    <author>
+      <name>Ruijie Zheng</name>
+    </author>
+    <author>
+      <name>Fengyuan Hu</name>
+    </author>
+    <author>
+      <name>Yunhao Ge</name>
+    </author>
+    <author>
+      <name>Jimmy Wu</name>
+    </author>
+    <author>
+      <name>Tianyuan Dai</name>
+    </author>
+    <author>
+      <name>Scott Reed</name>
+    </author>
+    <author>
+      <name>Li Fei-Fei</name>
+    </author>
+    <author>
+      <name>Yuke Zhu</name>
+    </author>
+    <author>
+      <name>Linxi "Jim" Fan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15263v1</id>
+    <title>Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents</title>
+    <updated>2026-07-16T17:54:47Z</updated>
+    <link href="https://arxiv.org/abs/2607.15263v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15263v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry query, and enrichment request consumes budget. We evaluate language-model security agents through this cost-success lens on offensive Cybench challenges and defensive Splunk BOTS v1 investigation challenges. Instead of reporting only best-case success, we compare models at fixed cost levels and decompose performance by inference spend and tool spend. Our results show distinct scalingregimes for red- and blue-team tasks. Offensive CTF performance improves with additional test-time compute, and scaled open-weight models can approach frontier proprietary systems while remaining cost-competitive. Defensive SOC investigation does not scale in the same way: success depends more heavily on disciplined tool use, telemetry navigation, and selective enrichment than on raw reasoning budget alone. We argue that security-agent benchmarks should measure economic efficiency and operational fit alongside task success. Cost-aware, SOC-native evaluations provide a clearer picture of which models are practically useful today and where defensive agents still need to improve. We present an interactive website with our results https://evals.frontier.security.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:54:47Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Paul Kassianik</name>
+    </author>
+    <author>
+      <name>Blaine Nelson</name>
+    </author>
+    <author>
+      <name>Yaron Singer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15254v1</id>
+    <title>teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data</title>
+    <updated>2026-07-16T17:49:28Z</updated>
+    <link href="https://arxiv.org/abs/2607.15254v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15254v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traffic agencies now have access to large volumes of video-derived data for studying safety and congestion. Most of these data are observational and collected without interventions, which makes causal questions such as "How would rain change traffic density?" difficult to answer. We present teLLMe, a system for exploratory causal analysis of urban driving datasets. The system starts from a structured event table built from dashcam annotations and combines causal structure learning with the PC algorithm, bootstrap-based stability checks, and query-specific effect estimation using linear regression and DoWhy. Natural-language questions are mapped to structured causal queries through a schema-aware LLM, enabling users to specify treatments, outcomes, and subpopulations. teLLMe returns a "Causal Card" that summarizes effect estimates, adjustment sets, DAG support, and assumptions, followed by a short natural-language explanation. Case studies on BDD-derived traffic events show that the system can surface plausible relationships involving weather, peak hours, and traffic density, while making uncertainty and modeling choices explicit. The system is designed as a tool for hypothesis generation and expert reasoning rather than a source of definitive causal claims.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:49:28Z</published>
+    <arxiv:comment>Accepted at the NeurIPS 2025 Workshop on UrbanAI. 6 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Qiwei Li</name>
+    </author>
+    <author>
+      <name>Jorge Ortiz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15253v1</id>
+    <title>Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search</title>
+    <updated>2026-07-16T17:48:29Z</updated>
+    <link href="https://arxiv.org/abs/2607.15253v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15253v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval systems are trained and evaluated on a static idea of usefulness: hand a document and a question to a reader model, see whether the answer improves, and score the document accordingly. The idea holds up when a document is read on its own. It breaks when a language model works as a search agent, issuing several queries and reasoning across turns, because a document can matter for what it lets the agent do next rather than for what it says about the current question.
+  We measure that gap rather than argue it. Using a ReAct style agent over HotpotQA, we replay 1000 development questions and, for every document the agent read, delete it and re-run the rest of the trajectory from that point. Comparing the original run against its counterfactual gives a Counterfactual Trajectory Utility (CTU) score from three deltas: final answer quality, next query retrieval quality, and turn count. Crossing CTU against Static RAG Utility (SRU) over 23,322 document observations, the two are close to statistically independent (Spearman rho = -0.026). Roughly a third of the documents the agent reads are causally load bearing while looking useless to a static reader; we call these bridge documents. The pattern survives when the reader based axis is swapped for a BM25 and cross encoder proxy, giving a bridge cell of 27.2% on an evenly spread axis.
+  A second experiment pins down the mechanism. Using the Observable Entity Relevance (OER) measure from prior work, entities that discriminate relevant from non-relevant candidates appear in the agent's next query 4.02 times more often than entities found only in non-relevant documents (6.1% vs 1.5%, n = 227,139). A bridge document earns its keep by handing the agent a discriminative entity that redirects the search. Static relevance and causal usefulness are different quantities in agentic retrieval, and optimizing the first does not deliver the second.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:48:29Z</published>
+    <arxiv:comment>Preprint; extended version in preparation</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Debayan Mukhopadhyay</name>
+    </author>
+    <author>
+      <name>Utshab Kumar Ghosh</name>
+    </author>
+    <author>
+      <name>Shubham Chatterjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15219v1</id>
+    <title>Cosmic string gravitational wave backgrounds at LISA: II. Reconstruction of conventional signals over astrophysical foregrounds</title>
+    <updated>2026-07-16T17:21:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.15219v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15219v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the reconstruction of conventional cosmic-string signals with LISA in the presence of all major known astrophysical foregrounds expected in the LISA band. These include stellar-origin black-hole binaries (SOBHBs), galactic (WDs) and extragalactic (ExWDs) white dwarfs, extreme-mass-ratio-inspirals (EMRIs), and massive black-hole binaries (MBHBs). Using the Simulation-based Inference package GWBackFinder, we perform a joint inference on the LISA noise, foregrounds, and signal, across a range of injected string tensions $Gμ$. We find that reconstructing tensions with an error $\lesssim 10\%$ requires values as large as $Gμ\gtrsim 10^{-11}$, i.e. a factor $\sim10^5$ larger than previous estimates with no foregrounds, and $\sim 10^2$ larger compared to estimates accounting only for SOBHB and WD foregrounds. This work is the second in a series initiated in Ref. arXiv:2508.05395, which aims to quantify LISA's ability to measure representative cosmic-string models.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T17:21:20Z</published>
+    <arxiv:comment>19 pages + 8 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <author>
+      <name>Androniki Dimitriou</name>
+    </author>
+    <author>
+      <name>Daniel G. Figueroa</name>
+    </author>
+    <author>
+      <name>Peera Simakachorn</name>
+    </author>
+    <author>
+      <name>Isak Stomberg</name>
+    </author>
+    <author>
+      <name>Bryan Zaldivar</name>
+    </author>
+  </entry>
   <entry>
     <id>http://arxiv.org/abs/2607.15190v1</id>
     <title>Can We Trust Item Response Theory for AI Evaluation?</title>
@@ -49,207 +283,6 @@
     <arxiv:primary_category term="cs.DC"/>
     <author>
       <name>Erick Lavoie</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15180v1</id>
-    <title>RTS Smoother-Guided Learning of Physics-Based Neural Differential Models</title>
-    <updated>2026-07-16T16:34:48Z</updated>
-    <link href="https://arxiv.org/abs/2607.15180v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15180v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Ordinary differential equations (ODEs) are widely used to model dynamical systems in physics, biology, neuroscience, and physiology, but in many applications some equations of the dynamics are unknown and only a subset of the state variables are measured. We propose a hybrid neural--physics framework in which the known components of the ODE are kept explicit and the missing components are represented by a neural network. The proposed method consists of two stages where we alternate between state and parameter estimation and iterate until a predetermined criterion is met. Specifically, in the first step, we treat the model parameters as being known and we infer the latent states from the available measurements using a Rauch--Tung--Striebel (RTS) smoother. In the second stage, we treat the smoothed trajectories as being known and use them to estimate the neural networks' parameters through backpropagation. We evaluate the method on benchmark systems spanning linear, nonlinear, and stiff dynamics under partial state observation. Across these settings, the proposed method learns missing ODE components from incomplete measurements while exploiting and retaining interpretable mechanistic structure and improving latent-state reconstruction and long-horizon prediction.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T16:34:48Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Ahmet Demirkaya</name>
-    </author>
-    <author>
-      <name>Georgios Stratis</name>
-    </author>
-    <author>
-      <name>Tales Imbiriba</name>
-    </author>
-    <author>
-      <name>Zachary D. Danziger</name>
-    </author>
-    <author>
-      <name>Deniz Erdogmus</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15179v1</id>
-    <title>A Complete-Data Likelihood for Epidemic Processes on Partially Observed Dynamic Networks</title>
-    <updated>2026-07-16T16:34:39Z</updated>
-    <link href="https://arxiv.org/abs/2607.15179v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15179v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Inference for infectious disease transmission on dynamic contact networks is complicated by latent infection times, partially observed network evolution, measurement error in contact data, and infection originating from outside the observed population. Existing likelihood-based approaches typically address these challenges separately and often rely on restrictive assumptions such as fully observed networks, closed populations, or symptom onset as a surrogate for infection time. We develop a unified complete-data likelihood framework for epidemic processes evolving on partially observed dynamic networks. The proposed formulation represents disease progression, network evolution, and observation mechanisms as interacting continuous-time stochastic processes within a common probabilistic framework. Specifically, we couple a susceptible-exposed-infectious-removed (SEIR) epidemic process with a status-dependent dynamic contact network and explicit observation models for symptoms and contacts. The resulting framework accommodates latent incubation periods, intermittent network observation, contact measurement error, and external infection pressure while preserving a coherent likelihood structure. Our principal contribution is the derivation of a complete-data event-history likelihood for the joint epidemic-network process under partial observation. The likelihood provides a rigorous foundation for likelihood-based and Bayesian inference through data augmentation, clarifies how information from disease progression and contact dynamics jointly determines parameter estimability, and reveals a broad class of existing epidemic network models as special cases. More generally, the framework contributes to statistical inference for partially observed interacting stochastic systems on evolving networks and establishes a foundation for uncertainty-aware analysis of complex transmission processes.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T16:34:39Z</published>
-    <arxiv:comment>42 pages, 20 figures. For associated R files, see https://github.com/asadmdaz/infectious-disease-modelling</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Md Asaduzzaman</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15178v1</id>
-    <title>T^2MLR: Transformer with Temporal Middle-Layer Recurrence</title>
-    <updated>2026-07-16T16:33:59Z</updated>
-    <link href="https://arxiv.org/abs/2607.15178v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15178v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Transformer reasoning is limited by autoregressive decoding, which repeat edly compresses rich hidden computation through token space and makes it difficult for intermediate reasoning states to persist across time. We in troduce Transformers with Temporal Middle-Layer Recurrence (T2MLR), a transformers-based latent reasoning architecture that fuses a cached middle layer representation from the previous token directly into an earlier layer of the current token position, enabling abstract intermediate computation to persist across decoding steps with little inference overhead. Across natural-language pretraining and multi-hop reasoning finetuning, T2MLR consistently outperforms data- and parameter-matched Transformer base lines. Moreover, applying recurrence to only a localized middle-layer block (as little as 20% of the network) often outperforms full-layer recurrence. Im portantly, T2MLR does not require pretraining from scratch: retrofitting the recurrent pathway into an existing pretrained 1.7B Transformer and briefly finetuning substantially improves math reasoning, lowering the barrier to practical adoption. These results suggest that effective latent reasoning in Transformers does not require looping over all layers as in previous works, but can instead emerge more strongly from targeted middle-layer recurrence.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T16:33:59Z</published>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Ziyang Cai</name>
-    </author>
-    <author>
-      <name>Xingyu Zhu</name>
-    </author>
-    <author>
-      <name>Yihe Dong</name>
-    </author>
-    <author>
-      <name>Yinghui He</name>
-    </author>
-    <author>
-      <name>Sanjeev Arora</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15168v1</id>
-    <title>Indirect Variational Inference: Applications to Earnings Dynamics</title>
-    <updated>2026-07-16T16:17:14Z</updated>
-    <link href="https://arxiv.org/abs/2607.15168v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15168v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Latent-variable models are central to economics but often entail intractable integration. Variational inference (VI), widely used in machine learning, turns this integration into tractable, differentiable optimization by replacing the likelihood with a variational objective. However, guarantees of recovering the true parameters remain limited when the variational family is insufficiently flexible -- a key obstacle to the adoption of VI in economics. We first evaluate VI in models of earnings dynamics and show that the choice of variational posterior is crucial. We then introduce indirect variational inference (IVI), which treats VI as an auxiliary model and corrects the bias induced by the variational approximation. IVI retains much of VI's tractability because it does not require computing the likelihood. We apply these methods to models allowing for nonlinear persistence, non-Gaussian and serially correlated transitory shocks, and latent heterogeneity. Across simulated and empirical applications, flexible variational families combined with IVI deliver reliable estimates.</summary>
-    <category term="econ.GN" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T16:17:14Z</published>
-    <arxiv:primary_category term="econ.GN"/>
-    <author>
-      <name>Neele Balke</name>
-    </author>
-    <author>
-      <name>Stephane Bonhomme</name>
-    </author>
-    <author>
-      <name>Thibaut Lamadon</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15144v1</id>
-    <title>The majority of hot Jupiters formed beyond the water ice line</title>
-    <updated>2026-07-16T15:47:30Z</updated>
-    <link href="https://arxiv.org/abs/2607.15144v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15144v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Atmospheric compositions of giant exoplanets can retain information about their formation environments, as volatile species condense at different temperatures in protoplanetary discs. We investigated whether the atmospheric compositions of hot Jupiters can constrain their formation locations. We performed planet formation simulations using the ChemComp code, including pebble drift, pebble and gas accretion, planet migration, stellar abundances, and two additional chemical processes: thermal decomposition of refractory organics and CO/CO2 trapping in water ice. We applied this framework to nine observed hot Jupiter systems and compared the resulting atmospheric metallicities (C/H and O/H) with observational constraints. We found that the observed atmospheric abundances of the nine hot Jupiter systems can be reproduced by planets forming at different locations relative to the H2O and CO2 snowlines. Our results suggest that at least six of the nine systems are consistent with formation beyond the H2O snowline. Combined with the observed orbital separations, eccentricities, and spin-orbit obliquities, these inferred formation locations indicate that many systems likely experienced dynamical scattering followed by tidal evolution. Atmospheric abundances, in combination with detailed orbital parameters, can provide a powerful diagnostic of the formation and migration histories of hot Jupiter systems, opening up avenues to understand the origin of giant planets in general.</summary>
-    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T15:47:30Z</published>
-    <arxiv:comment>8 pages, 5 figures, 2 tables. Accepted for publication in A&amp;A Letters</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.EP"/>
-    <author>
-      <name>Yaxing He</name>
-    </author>
-    <author>
-      <name>Bertram Bitsch</name>
-    </author>
-    <author>
-      <name>Adrien Houge</name>
-    </author>
-    <author>
-      <name>Joe Williams</name>
-    </author>
-    <author>
-      <name>Masahiro Ogihara</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15131v1</id>
-    <title>Berkeley 32: A Metal-poor and Dynamically Evolved Open Cluster with Evidence of Radial Migration</title>
-    <updated>2026-07-16T15:41:20Z</updated>
-    <link href="https://arxiv.org/abs/2607.15131v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15131v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present a comprehensive chemo-dynamical analysis of the old, metal-poor open cluster Berkeley 32 based on Gaia DR3 astrometry and Gaia-ESO Survey DR5.1 spectroscopy. Cluster membership is determined using a Gaussian Mixture Model applied to proper-motion components and trigonometric parallaxes. Isochrone fitting yields an age of 4.9 +/- 0.5 Gyr, a heliocentric distance of 3325 pc, and an extinction of A_V = 0.38 +/- 0.12 mag. Spectroscopic member stars exhibit a mean metallicity of [Fe/H] = -0.39 +/- 0.02 dex, near-solar alpha-element abundances, and a weighted mean radial velocity of V_rad = 106.26 +/- 0.03 km s^-1. The [Y/Mg] chemical clock yields an age of 4.73 +/- 2.39 Gyr, consistent with the isochrone estimate. Orbital integration indicates a moderately eccentric orbit (e = 0.268 +/- 0.004) with a guiding radius of R_g = 8.82 kpc. The inferred chemical birth radius, R_b = 9.82 kpc, together with DeltaR ~ -1 kpc, suggests moderate inward radial migration, while the offsets among R_b, R_g, and R_GC are consistent with both churning and blurring processes. A photometric analysis identifies a binary fraction of f_b = 0.449 +/- 0.017 for systems with mass ratios q &gt;= 0.5, implying a substantial unresolved binary population. Radial cumulative distribution functions further reveal significant mass segregation, with evolved stars more centrally concentrated than main-sequence stars. These results indicate that Berkeley 32 is a dynamically evolved old-disk cluster whose present-day structure and orbit preserve signatures of both internal dynamical evolution and radial migration within the Galactic disk.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T15:41:20Z</published>
-    <arxiv:comment>27 pages, including 15 figures and 4 tables, accepted for publication in the The Astronomical Journal (AJ)</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Deniz Cennet Çınar</name>
-    </author>
-    <author>
-      <name>D. Bisht</name>
-    </author>
-    <author>
-      <name>Ing-Guey Jiang</name>
-    </author>
-    <author>
-      <name>W. H. Elsanhoury</name>
-    </author>
-    <author>
-      <name>K. Belwal</name>
-    </author>
-    <author>
-      <name>Selçuk Bilir</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15127v1</id>
-    <title>On-board AI-based Channel Estimation for LEO NTNs</title>
-    <updated>2026-07-16T15:37:07Z</updated>
-    <link href="https://arxiv.org/abs/2607.15127v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15127v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Artificial Intelligence(AI) methods have shown strong channel estimation performance in terrestrial networks, but they typically rely on substantial computational resources. As 6G moves toward a unified architecture that will include Non-Terrestrial Networks (NTN) from day 0, availability of large and power hungry computational resources shall not be taken for granted. At the same time, NTN propagation often exhibits high predictability, limited multipath richness and significant Doppler shifts, representing a specific channel estimation problem. In this work, we propose a lightweight convolution-based channel estimator designed specifically for NTN operation and real-time onboard inference. We evaluate its channel estimation accuracy under stringent NGSO power budgets and quantify the resulting end-to-end impact on link performance. We show the improvement in terms of Mean Squared Error (MSE) achieved by the proposed approach compared with established algorithms, demonstrating that efficient AI models can deliver robust performance even on power-constrained spaceborne nodes. In addition, the proposed design by exploiting the domain knowledge, improves parameter efficiency by $27\%$ compared with state-of-the-art AI models and requires approximately $29\times$ fewer floating-point operations than conventional methods while achieving superior MSE performance.</summary>
-    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T15:37:07Z</published>
-    <arxiv:comment>IEEE SPAWC 2026</arxiv:comment>
-    <arxiv:primary_category term="eess.SP"/>
-    <author>
-      <name>Mahdi Abdollahpour</name>
-    </author>
-    <author>
-      <name>Bruno De Filippo</name>
-    </author>
-    <author>
-      <name>Carla Amatetti</name>
-    </author>
-    <author>
-      <name>Alessandro Vanelli-Coralli</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2607.15123v1</id>
-    <title>NIFA: Nonlinear IMC enhanced FPGA for efficient ML inference</title>
-    <updated>2026-07-16T15:32:44Z</updated>
-    <link href="https://arxiv.org/abs/2607.15123v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2607.15123v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Recent FPGAs have improved deep learning (DL) inference efficiency through dedicated tensor blocks and in-BRAM computation. ReRAM-based analog in-memory computing (IMC) pushes efficiency further, offering an order-of-magnitude improvement in compute density and energy efficiency over conventional digital logic by performing vector-matrix multiplication (VMM) directly within the ReRAM crossbar; prior work has integrated such IMC blocks into FPGAs for DL inference. However, conventional IMC designs support only static-weight VMM, leaving nonlinear operations and dynamic matrix-matrix multiplication (DIMM) to the FPGA fabric. As a result, the benefits of IMC are largely confined to static-weight models, whereas Transformer-based models, which rely on frequent nonlinear and DIMM operations, gain only limited improvement. Moreover, the ADCs within each IMC block consume more than 70% of its area and power, further limiting system efficiency and scalability. To address these limitations, we propose a novel FPGA architecture that integrates an ADC-free IMC block, replacing the conventional ADC with analog content-addressable memories (ACAMs) that natively perform nonlinear operations inside the block. To fully exploit this block, we conduct an FPGA-aware design-space exploration that determines optimal crossbar dimensions while balancing FPGA area, flexibility, and DL performance, and we develop an efficient mapping that leverages ACAMs to carry out DIMM operations, extending the applicability of IMC to attention computation. On CNN and Transformer-based benchmarks, the proposed architecture achieves up to 40x and 1.9x higher energy efficiency and 4.1x and 2.5x higher area efficiency, respectively. Overall, it significantly improves FPGA DL inference efficiency and sustains robust gains on Transformer-based workloads across long input sequences, advancing domain-specialized FPGA design.</summary>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-07-16T15:32:44Z</published>
-    <arxiv:primary_category term="cs.AR"/>
-    <author>
-      <name>Jiajun Hu</name>
-    </author>
-    <author>
-      <name>Ruthwik Reddy Sunketa</name>
-    </author>
-    <author>
-      <name>Lei Zhao</name>
-    </author>
-    <author>
-      <name>Archit Gajjar</name>
-    </author>
-    <author>
-      <name>Luca Buonanno</name>
-    </author>
-    <author>
-      <name>Aman Arora</name>
     </author>
   </entry>
 </feed>
