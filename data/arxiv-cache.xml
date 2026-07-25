@@ -1,3 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-07-24T01:49:38Z -->
-Rate exceeded.
+<!-- Last updated: 2026-07-25T01:49:19Z -->
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
+  <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-07-25T01:49:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>153055</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21591v1</id>
+    <title>Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning</title>
+    <updated>2026-07-23T17:59:46Z</updated>
+    <link href="https://arxiv.org/abs/2607.21591v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21591v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion and flow-matching models dominate conditional image generation, yet inference-time scaling for these models is far less developed than for autoregressive language models. Because final quality is highly sensitive to the initial noise seed, many approaches spend extra compute on seed search or resampling under a black-box reward, but typically maintaining a constant memory footprint throughout inference. We show that relaxing this constraint enables an underexplored inference-time scaling axis: by front-loading exploration, evaluating many seeds early, and pruning aggressively, we can use a fixed compute budget more effectively. \emph{Progressive Seed Pruning} (\PSP) scores intermediate denoised estimates and progressively narrows the candidate set so that only promising trajectories are fully denoised, while keeping the total number of model evaluations fixed. Across diffusion and flow-matching backbones, \PSP \ consistently improves reward-guided selection and achieves higher GenEval scores (automated) and better human evaluation on prompt-alignment than best-of-$N$, importance-sampling, and tree-search baselines at matched compute. Project page: https://www.vision.caltech.edu/psp. Code: https://github.com/rogerioagjr/psp.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:59:46Z</published>
+    <arxiv:comment>Project page: https://www.vision.caltech.edu/psp. Code: https://github.com/rogerioagjr/psp</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Rogerio Guimaraes</name>
+    </author>
+    <author>
+      <name>Pietro Perona</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21573v1</id>
+    <title>Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity</title>
+    <updated>2026-07-23T17:52:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.21573v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21573v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \textbf{TimePNS}, a necessity-aware framework for time-series explanation. Inspired by Pearl's counterfactual notion of necessity, TimePNS assesses whether a temporal factor is necessary by intervening on it and measuring whether the original prediction is disrupted. The framework adopts a two-stage design. Stage I learns an identifiable causal generative process together with a sufficiency-oriented explanation mask. Stage II performs counterfactual interventions on temporal factors to derive necessity signals, which supervise a temporal gate that refines the initial explanation by suppressing non-essential components and emphasizing counterfactually necessary ones. Experiments on synthetic and real-world time-series benchmarks show that TimePNS more accurately identifies decision-critical subsequences and consistently improves sufficiency-necessity trade-offs over strong baselines.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:52:01Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hongnan Ma</name>
+    </author>
+    <author>
+      <name>Yiwei Shi</name>
+    </author>
+    <author>
+      <name>Mengyue Yang</name>
+    </author>
+    <author>
+      <name>Weiru Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21557v1</id>
+    <title>OpenForgeRL: Train Harness-native Agents in Any Environment</title>
+    <updated>2026-07-23T17:38:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.21557v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21557v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks cannot natively express stateful, multi-process harness inference. To address this, we present OpenForgeRL, an open-source framework for training harness-based agents end-to-end in diverse environments. OpenForgeRL achieves this with a lightweight proxy that serves the harness's model calls while recording them as training data for a standard RL codebase (e.g., veRL), and a Kubernetes orchestrator that runs each rollout in its own remote container, together enabling training on any harness in any environment at scale. By decoupling training and inference, OpenForgeRL allows researchers to easily train, study, and improve agents directly in the real harnesses and environments they are deployed with. We validate our framework across diverse, complex harnesses and environments, spanning tool/claw-based agents and multimodal GUI browser- and computer-use agents. Using only hundreds to a few thousand tasks, OpenForgeClaw reaches 31.7 pass^3 and 55.9 pass@3 on ClawEval and 33.7 on QwenClawBench. OpenForgeGUI reaches 37.7 on OSWorld-Verified, 63.0 on Online-Mind2Web, and 72.3 on WebVoyager. Both outperform open baselines of similar size on nearly all benchmarks, and in the GUI setting match or surpass models several times larger. Beyond benchmarks, we analyze how harness choice (e.g., ZeroClaw, OpenClaw, Codex) and RL shape agent behavior. We find that some harnesses are substantially harder to learn than others, and that RL improves agentic reliability, such as self-verification, tool coverage, and completing multi-step plans, though critical abilities such as error recovery remain weak.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:38:30Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Xiao Yu</name>
+    </author>
+    <author>
+      <name>Baolin Peng</name>
+    </author>
+    <author>
+      <name>Ruize Xu</name>
+    </author>
+    <author>
+      <name>Hao Zou</name>
+    </author>
+    <author>
+      <name>Qianhui Wu</name>
+    </author>
+    <author>
+      <name>Hao Cheng</name>
+    </author>
+    <author>
+      <name>Wenlin Yao</name>
+    </author>
+    <author>
+      <name>Nikhil Singh</name>
+    </author>
+    <author>
+      <name>Zhou Yu</name>
+    </author>
+    <author>
+      <name>Jianfeng Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21556v1</id>
+    <title>Visual Contrastive Self-Distillation</title>
+    <updated>2026-07-23T17:37:37Z</updated>
+    <link href="https://arxiv.org/abs/2607.21556v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21556v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On-policy self-distillation (OPSD) is promising as it removes the external teacher required by on-policy distillation (OPD), yet it still needs asymmetric information between teacher and student to ensure that the self-teacher provides a stronger learning signal than the student. Existing methods create this asymmetry either through privileged answers or visual evidence. We ask whether both can be removed, yielding a simpler form of OPSD driven purely by input conditioning. For this purpose, we propose Visual Contrastive Self-Distillation, namely VCSD, which converts image-content removal into an on-policy self-distillation signal. At each student-generated response prefix, the EMA teacher produces two next-token distributions under the same prompt and prefix -- one conditioned on the original image and the other on a content-erased control. Their token-wise log-probability difference highlights candidates whose likelihood is specifically increased by the instance-level visual content. We use this contrast to sharpen the teacher's original-image distribution within its plausible support, and distill the resulting full-distribution target into the student. Using ViRL39K dataset, VCSD consistently outperforms matched OPSD across Qwen3-VL and Qwen3.5 models. For example, on Qwen3-VL, it improves the seven-benchmark aggregate from $62.27\% \rightarrow 67.04\%$ at 2B, $71.30\% \rightarrow 73.16\%$ at 4B, and $72.51\% \rightarrow 76.26\%$ at 8B. Furthermore, VCSD requires no external teacher, privileged answers, visual evidence signals, reasoning traces, or additional inference-time cost.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:37:37Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yijun Liang</name>
+    </author>
+    <author>
+      <name>Yunjie Tian</name>
+    </author>
+    <author>
+      <name>Yijiang Li</name>
+    </author>
+    <author>
+      <name>Yuqi Jia</name>
+    </author>
+    <author>
+      <name>Furong Huang</name>
+    </author>
+    <author>
+      <name>Tianyi Zhou</name>
+    </author>
+    <author>
+      <name>Di Fu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21541v1</id>
+    <title>Optimal use of a black-box learner in semiparametric estimation</title>
+    <updated>2026-07-23T17:26:17Z</updated>
+    <link href="https://arxiv.org/abs/2607.21541v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21541v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider the partial linear model $Y = μ_0(X) + β_0 \cdot T + \varepsilon$ and $T = π_0(X) + u$ in the structure-agnostic setting, where we are blind to the structure $μ_0$ and $π_0$ and estimate the nuisances by a black-box hypothesis class. The learnability of the class is characterized by the estimation error $δ_s$ in the absence of model misspecification and its $L_2$ mis-specification error $δ_{a, μ}$ and $δ_{a, π}$ for $μ_0$ and $π_0$, respectively. We propose a novel estimator of the target linear coefficient $θ_0 = β_0$ with error rate \[
+  \frac{1}{\sqrt{n}} + δ_{a, μ} \cdot δ_{a, π} + [δ_s]^2. \] A matching lower bound is also established, implying that this rate is unimprovable. Compared with the product rate yielded by double machine learning (DML), our estimator removes the suboptimal term $\max(δ_{a, μ}, δ_{a, π})\cdot δ_s$ at no extra cost or assumption.
+  Building on the underlying insights, which are neither tailored to the one-learner setting nor the partial linear model, we propose Transductive Adversarial Moment-calibrated Editing (TAME), which locally edits debiasing weights induced by black-box regression estimates on the inference sample through adversarial conditional moment calibration. TAME can be combined with any initial black-box estimates and can strictly improve on DML guarantees when the nuisance difficulties are imbalanced. We discuss how to fully exploit the advantages introduced by TAME, including the gains from using two learners, the resulting under-smoothing principle for model selection, and extensions to other linear functional estimation problems.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:26:17Z</published>
+    <arxiv:comment>30 pages</arxiv:comment>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Yihong Gu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21540v1</id>
+    <title>DONDO: Open w2v-BERT Speech-Recognition Base Models for African Languages</title>
+    <updated>2026-07-23T17:25:08Z</updated>
+    <link href="https://arxiv.org/abs/2607.21540v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21540v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present DONDO, a family of open, permissively licensed automatic speech recognition (ASR) base models for African languages, built on the w2v-BERT 2.0 self-supervised speech encoder. DONDO comprises twenty-one monolingual models and five multilingual models spanning twenty-seven language varieties across Ghana, Sierra Leone, Nigeria, Senegal, Kenya and Zimbabwe. Models are fine-tuned primarily on read speech drawn from religious texts, which offer broad, license-clear and orthographically consistent coverage for languages that otherwise lack transcribed audio. We describe a two-step (and, for one family, three-step) learning-rate-annealed fine-tuning procedure that first adapts a shared multilingual model at a high learning rate and then anneals it to recover, and in several cases surpass, strong monolingual baselines. We further describe a lightweight language-conditioning mechanism that injects a one-hot language identity as a sequence of prefix frames prepended to the acoustic features, allowing a single multilingual checkpoint to be steered to a target language at inference. Across the five multilingual families the annealed models reach average word error rates (WER) of 10-13%, closing most of the gap to monolingual models while covering many languages in a single checkpoint. All models are released on the Hugging Face KhayaAI organisation under the Apache-2.0 license (attribution only) so that others may fine-tune them freely, including for commercial use. We provide a conservative estimate that the languages covered are spoken by on the order of one hundred million first-language speakers, and by substantially more when second-language use is included.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:25:08Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Paul Azunre</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21530v1</id>
+    <title>From Resource Flow to Executable Tests: Petri-Net-Guided LLM Test Generation for Concurrent Stateful Rust APIs</title>
+    <updated>2026-07-23T17:15:53Z</updated>
+    <link href="https://arxiv.org/abs/2607.21530v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21530v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Concurrent stateful library APIs expose behavior through evolving resource ownership, lifecycle states, and competing interleavings. Large language models can synthesize executable Rust tests, but their outputs often violate API preconditions, remain shallow, or reduce concurrency to accidental sequential traces. Conversely, model-based and systematic testing techniques provide semantic control but commonly require substantial handwritten code to turn abstract scenarios into executable tests. This paper addresses the gap between formal scenario design and low-cost test concretization. We present a Petri-net-guided methodology for test generation over concurrent stateful Rust APIs. The method represents API resources, lifecycle conditions, and causal dependencies as colored tokens and transitions; derives legal deep-state, near-legal, and partial-order concurrent scenarios; and uses these scenarios as a constrained intermediate representation for LLM-based code synthesis. A local-faithfulness contract and structural repair loop preserve the modeled intent during concretization, while Petri-guided schedule shaping prioritizes high-conflict concurrency skeletons for systematic exploration. A layered semantic oracle then distinguishes synthesis failures from violations of the target API's expected behavior.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:15:53Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Kaiwen Zhang</name>
+    </author>
+    <author>
+      <name>Guanjun Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21529v1</id>
+    <title>ElasticTTT: Prior-Preserving Test-Time Tuning for Video Editing</title>
+    <updated>2026-07-23T17:15:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.21529v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21529v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Test-Time Tuning (TTT) on pretrained diffusion models has emerged as a powerful paradigm for video editing. However, there exists a foundational mismatch between the distribution-mapping nature of generative models and the single-point optimization of standard TTT. In this paper, we demonstrate that this mismatch triggers \textit{Prior Collapse}, a degenerate state where the model discards the text conditions and spatial latents, collapsing generations to the source video, or entangling the features of distinct regions. To resolve this, we propose \textbf{ElasticTTT}, a novel framework that preserves the prior generative distribution and rescues generative elasticity. Specifically, we propose \textit{Target Distribution Regularization} to prevent sharp memorization minima, \textit{Contrastive CFG} to guide inference away from source biases, and \textit{Asynchronous Noise Schedule} to preserve unedited regions. Extensive evaluations, supported by theoretical analysis, demonstrate that ElasticTTT successfully preserves the generative prior of the base model, achieving state-of-the-art performance on one-shot video editing.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:15:30Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yueyi Liu</name>
+    </author>
+    <author>
+      <name>Chi Zhang</name>
+    </author>
+    <author>
+      <name>Sen Cui</name>
+    </author>
+    <author>
+      <name>Miao Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21527v1</id>
+    <title>Sources of Inequity and Fairness Risks inWellbeing Sensing</title>
+    <updated>2026-07-23T17:12:24Z</updated>
+    <link href="https://arxiv.org/abs/2607.21527v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21527v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Passive sensing for wellbeing uses smartphones and wearables to continuously collect human behavioral data and applies ML/AI models to infer psychological states and behaviors (e.g., depression, cognitive load). These systems are increasingly adopted in high-stakes settings (e.g., hospitals, universities), yet fairness research remains limited---primarily to post-hoc, identity-based comparisons of model performance. However, passive sensing combines heterogeneous sensing infrastructures, indirect behavioral inference, and longitudinal deployment---characteristics that, while not exclusive to the domain, are jointly pronounced here and raise two underexplored questions: (1) what additional sources of inequity arise from these characteristics, and (2) how do such inequities propagate beyond algorithmic audits across the system lifecycle? To address this gap, we conducted semi-structured interviews with 14 researchers and practitioners across five countries, examining how fairness risks emerge and are negotiated across the full passive sensing lifecycle. Our findings empirically characterize five situated sources of inequity (e.g., comfort with monitoring, behavioral regularity) that systematically shape fairness risks beyond identity-based attributes. We further synthesize 15 fairness risks and corresponding mitigation strategies across the lifecycle, from study design to deployment. Finally, we identify structural barriers that constrain fair practice in reality, and argue that enabling fair passive sensing requires both individual researcher efforts and ecosystem-level governance support from funders, publication venues, and deploying institutions.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:12:24Z</published>
+    <arxiv:comment>16 pages, 1 figure, 2 tables. Accepted to AIES 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Han Zhang</name>
+    </author>
+    <author>
+      <name>Vedant Das Swain</name>
+    </author>
+    <author>
+      <name>Koustuv Saha</name>
+    </author>
+    <author>
+      <name>Anind K. Dey</name>
+    </author>
+    <author>
+      <name>Jennifer Mankoff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21497v1</id>
+    <title>Hubble tension: a short review of theoretical explanations</title>
+    <updated>2026-07-23T16:45:10Z</updated>
+    <link href="https://arxiv.org/abs/2607.21497v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21497v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The $Λ$ cold dark matter model successfully describes a wide range of cosmological observations. However, the persistent discrepancy between the value of the Hubble constant inferred from cosmic microwave background measurements within this model and that obtained from local distance-ladder determinations points to a significant inconsistency. This short review examines theoretical responses across the cosmological inference chain, from the gravitational field equations to the pre-recombination sound horizon and the late-time distance-redshift relation. We focus primarily on modified gravity, and briefly discuss early- and late-time mechanisms that can alter the acoustic ruler, distance measures, structure growth, or gravitational response. Current proposals can reduce the nominal tension, but often at the cost of correlated shifts in cosmic microwave background spectra, standard-ruler distances, lensing, structure growth, or calibrator information. Further progress requires unified likelihoods and multiprobe tests linking all key observables under the same model assumptions.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T16:45:10Z</published>
+    <arxiv:comment>49 pages, 13 figures, a short review prepared by invitation for RAA special topics</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>Res. Astron. Astrophys. 26 (2026) 084009</arxiv:journal_ref>
+    <author>
+      <name>Jia-Qi Wang</name>
+    </author>
+    <author>
+      <name>Zong-Kuan Guo</name>
+    </author>
+    <arxiv:doi>10.1088/1674-4527/ae842d</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1674-4527/ae842d" title="doi"/>
+  </entry>
+</feed>
