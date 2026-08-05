@@ -1,262 +1,272 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-08-04T01:29:05Z -->
+<!-- Last updated: 2026-08-05T01:42:54Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-08-04T01:29:06Z</updated>
+  <updated>2026-08-05T01:42:54Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>154177</opensearch:totalResults>
+  <opensearch:totalResults>154548</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2608.01076v1</id>
-    <title>EpiLENS: Patient-Relative Epileptogenic Zone Localization from Multi-Center Intracranial EEG</title>
-    <updated>2026-08-02T08:19:56Z</updated>
-    <link href="https://arxiv.org/abs/2608.01076v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01076v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Drug-resistant epilepsy remains a major clinical challenge, as successful neurosurgery depends critically on accurate epileptogenic zone (EZ) localization accounting for substantial variability across patients, seizures, implantation layouts, recording systems and clinical centers. Existing intracranial electroencephalogram (iEEG) methods typically rely on channel-wise classifiers trained globally, which often obscure patient-specific electrophysiological abnormalities and exhibit instability under severe class imbalance and noisy clinical annotations. To address these limitations, we present EpiLENS, a primary-guided asymmetric dual-branch framework for patient-relative epileptogenic localization. Its localization strategy, Conservative Dual-Evidence Localization (CDEL), asymmetrically combines independently trained but complementary branches at inference: the Patient-Relative Quantile Network (PRQ-Net), which captures seizure-consistent deviations from each patient's internal electrophysiological baseline, and the Boundary-Coverage Ranking Network (BCR-Net), which emphasizes ambiguous epileptogenic zone or non-epileptogenic zone boundaries and recovery of the patient-specific epileptogenic set. CDEL retains PRQ-Net as the primary branch while incorporating complementary patient-wise ranking evidence from BCR-Net. Experiments on a heterogeneous four-center cohort demonstrate improved balanced localization over classical feature-based and raw-iEEG neural baselines, while component ablations and within-patient permutation analyses support the contributions of patient-relative normalization, lower-tail seizure aggregation, and boundary-coverage ranking. Cross-seizure and leave-one-center-out generalization experiments further confirm that the proposed patient-relative evidence remains robust across repeated recordings and transfers effectively to unseen clinical centers.</summary>
-    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T08:19:56Z</published>
-    <arxiv:comment>17pages, 6 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CE"/>
-    <author>
-      <name>Yuanchu Gong</name>
-    </author>
-    <author>
-      <name>Zibo Yan</name>
-    </author>
-    <author>
-      <name>Yibo Lyu</name>
-    </author>
-    <author>
-      <name>Chen Chen</name>
-    </author>
-    <author>
-      <name>Sixian Chan</name>
-    </author>
-    <author>
-      <name>Yalin Wang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01069v1</id>
-    <title>Characterizing Bias in Post-Bandit Inference under Index Algorithms</title>
-    <updated>2026-08-02T08:11:10Z</updated>
-    <link href="https://arxiv.org/abs/2608.01069v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01069v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Bandit algorithms generate data for downstream inference, but adaptive sampling biases post-bandit sample means. We analyze this bias for stable index algorithms, including UCB1 and its generalizations, and derive sharp leading-order expressions for the sample-mean bias and expected $Z$-statistic. Our characterization reveals the algorithmic origin of bias through a key index-function-dependent quantity, which we term effective exploration rate. For example, under UCB1, the effective exploration rate is of order $\sqrt{\log T}$, and the standardized bias of any arm (that is not uniquely optimal) decays at the extremely slow rate $1/\sqrt{\log T}$. We also show how the choice of the index function affects both regret and bias, which reveals a regret-bias trade-off: more exploratory algorithm reduces bias but increases regret. Our sharp characterization for bias uses a novel empirical fluid approximation of the algorithm's sampling dynamics, which may be of independent interest.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T08:11:10Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Lisu Wang</name>
-    </author>
-    <author>
-      <name>Yilun Chen</name>
-    </author>
-    <author>
-      <name>Jiaqi Lu</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01068v1</id>
-    <title>adabay: an R package for rapid evaluation and calibration of Bayesian group sequential designs across common endpoint types</title>
-    <updated>2026-08-02T08:07:03Z</updated>
-    <link href="https://arxiv.org/abs/2608.01068v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01068v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Bayesian group sequential designs (GSDs) combine the efficiency of frequentist GSDs with clinically interpretable probability statements and principled external evidence incorporation. However, their uptake in confirmatory trials has been held back by the cost of evaluating frequentist operating characteristics at the design stage, which often nests Markov chain Monte Carlo or another approximate posterior inference within a Monte Carlo trial-simulation loop. We introduce adabay, an open-source R package implementing a semi-simulation framework for the rapid evaluation and calibration of Bayesian GSDs. Trial data paths are simulated by Monte Carlo, while per-look posteriors and posterior tail probabilities are computed analytically or by low-dimensional deterministic quadrature. Flexible prior specification is achieved by approximating any user-specified prior with a finite mixture of conjugate components, with tail-probability diagnostics that flag inadequate approximations at the decision thresholds. The package offers a unified application programming interface for continuous, binary, count and time-to-event endpoints, supports posterior-probability decision rules with one or more efficacy and futility criteria under binding or non-binding regimes, and includes a precomputation strategy that decouples threshold calibration and look-time selection from the simulation pass. adabay reproduces the operating characteristics of BATSS and adaptr in the continuous and binary case studies, the analytic gsbDesign values in the continuous case, and the BATSS results in the count case, all within Monte Carlo error, while running approximately four to five orders of magnitude faster than BATSS and one to over two orders of magnitude faster than adaptr per virtual trial on eight cores. The package is distributed under an MIT licence.</summary>
+    <id>http://arxiv.org/abs/2608.03775v1</id>
+    <title>Multi-Signal Safety Surveillance with Bayesian Latent Factor Modeling and Bias Correction</title>
+    <updated>2026-08-04T14:58:09Z</updated>
+    <link href="https://arxiv.org/abs/2608.03775v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03775v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Safety surveillance increasingly involves repeated monitoring of many exposure-outcome signals in observational healthcare data, where sparse information, dependence across related signals, and systematic error can complicate inference. Existing frameworks typically focus on either correcting residual bias using negative controls or borrowing information across exposure-outcome pairs, but not both. We propose a multi-signal Bayesian sequential surveillance framework that integrates empirical bias correction with low-rank latent factor modeling. At each analysis time, a hierarchical Bayesian model learns exposure-specific bias distributions from negative control outcomes assumed to have null latent effects. Conditional on these distributions, low-rank latent factors are estimated across exposures and outcomes of interest to share information across correlated signals. As new data accrue, posterior inference is updated sequentially, yielding bias-corrected posterior summaries of effect sizes across multiple monitored signals. We illustrate the method in a postmarket vaccine safety surveillance study using a large US insurance claims database.</summary>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T08:07:03Z</published>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:58:09Z</published>
     <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Zhangyi He</name>
+      <name>Ziyang Pan</name>
     </author>
     <author>
-      <name>Feng Yu</name>
+      <name>Fan Bu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.01067v1</id>
-    <title>ReACT-CLIP: Response-Aware Test-Time Defense for Vision--Language Models</title>
-    <updated>2026-08-02T08:06:45Z</updated>
-    <link href="https://arxiv.org/abs/2608.01067v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01067v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Training-free test-time defenses offer a practical way to improve the adversarial robustness of CLIP-style vision--language models without modifying the pretrained model. However, their correction strength is typically fixed for a narrow range of attack budgets, even though the attack budget is unknown at inference and the required correction varies across samples. We show that this mismatch causes existing defenses to degrade sharply as attacks strengthen. We introduce ReACT-CLIP, a response-conditioned test-time defense that separately determines how strongly each input should be corrected and whether defensive intervention is necessary. Our key observation is that the relative increase in CLIP visual-feature drift between low- and high-noise probes provides a graded, sample-specific proxy for correction demand. ReACT-CLIP maps this relative cross-noise drift to the Gaussian noise scale used to construct a stable, noise-averaged feature anchor, enabling the corrective reach to adapt to each input. To determine whether intervention is necessary, we further observe that clean inputs retain stable class-probability distributions under weak spatial augmentations, whereas adversarial inputs exhibit greater variation. ReACT-CLIP quantifies this variation using a prediction-instability score computed by Jensen--Shannon divergence and combines it with relative cross-noise drift to form the defensive intervention score. ReACT-CLIP requires no model or prompt training, and its correction-strength mapping is calibrated once and fixed across datasets and attack budgets. Across 12 downstream datasets, as well as ImageNet and its distribution-shifted variants, ReACT-CLIP delivers substantial robustness gains across diverse attack types and strengths while largely preserving clean accuracy.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T08:06:45Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Hashmat Shadab Malik</name>
-    </author>
-    <author>
-      <name>Toluwani Aremu</name>
-    </author>
-    <author>
-      <name>Samuele Poppi</name>
-    </author>
-    <author>
-      <name>Muzammal Naseer</name>
-    </author>
-    <author>
-      <name>Salman Khan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01061v1</id>
-    <title>Optimal frequency scales for probing black-hole geometries</title>
-    <updated>2026-08-02T07:53:55Z</updated>
-    <link href="https://arxiv.org/abs/2608.01061v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01061v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Can gravitational waves probe the near-horizon geometry of black holes, and if yes, which frequency scale is optimal? Although shorter wavelengths usually resolve smaller scales, we show that black-hole scattering may impose an information-theoretic optimum. We study a controlled scattering Gedankenexperiment in which Gaussian pulses of scalar test fields are sent toward a black- hole potential and the reflected waveform is used to infer the geometry. Near-horizon deviations are parametrized with the Rezzolla-Zhidenko metric, and information recovery is quantified by the Fisher matrix in the high-signal-to-noise limit. Narrow, high-frequency pulses resolve short scales but are mostly transmitted through the barrier, while wide pulses are efficiently reflected but poorly resolve the potential. Their competition selects an optimal pulse width, numerically found to be set by about the inverse square root of the potential peak. Using the Pöschl-Teller analytical solutions, we further model the correct excitation of quasinormal modes and separate the information in the fundamental mode from that in the full waveform, including the prompt response. The optimal probe is therefore not the highest-frequency pulse, but the waveform that balances spatial resolution against reflected information, linking black-hole spectroscopy, semiclassical barrier scattering, and information theory.</summary>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T07:53:55Z</published>
-    <arxiv:comment>8 pages, 3 figures</arxiv:comment>
-    <arxiv:primary_category term="gr-qc"/>
-    <author>
-      <name>Saulo Albuquerque</name>
-    </author>
-    <author>
-      <name>Sebastian H. Völkel</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01060v1</id>
-    <title>One Query, Many Scales: Sparse Mixture-of-Experts for Efficient Hierarchical Cross-View Geo-Localization</title>
-    <updated>2026-08-02T07:53:17Z</updated>
-    <link href="https://arxiv.org/abs/2608.01060v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01060v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Cross-view geo-localization (CVGL) retrieves geo-tagged satellite imagery for a ground-view query. Most systems exhaustively search a flat, fixed-resolution gallery, incurring high cost over large areas and adapting poorly to satellite resolution changes. Autoregressive coarse-to-fine alternatives reduce comparisons but bind later predictions to earlier decisions and a predefined hierarchy. We introduce GeoMoE, a sparse mixture-of-experts dual encoder that decouples global multi-scale representation learning from local hierarchical search. Global multi-scale supervision and content-adaptive routing map ground and satellite images across resolutions into a globally comparable embedding space. At inference, each image is encoded once, and probabilistic beam search follows parent--child links to score a small candidate subset. Later levels reuse these descriptors rather than features generated by preceding levels, limiting feature-level error propagation and hierarchy coupling. We further introduce VIGOR-M, a four-city benchmark with an explicit parent--child satellite hierarchy and held-out half-step galleries for single-resolution, cross-resolution, and hierarchical evaluation. GeoMoE achieves 95.78% R@40m on Just Zoom In, 2.77 percentage points above the previous best, and 62.39% R@1 on VIGOR-M. The latter requires 0.885 MMAC/query for descriptor matching, 5.27% of an exhaustive L3 scan, while exceeding the strongest exhaustive baseline by 3.12 percentage points in R@1. One model trained on L1, L2, and L3 also outperforms a matched dense control across all six galleries and transfers to three withheld resolutions. By decoupling globally trained embeddings from local hierarchical search, GeoMoE jointly improves localization accuracy, search efficiency, and cross-resolution transfer.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T07:53:17Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Ruijie Fan</name>
-    </author>
-    <author>
-      <name>Junyan Ye</name>
-    </author>
-    <author>
-      <name>Qi Zhu</name>
-    </author>
-    <author>
-      <name>Weijia Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01049v1</id>
-    <title>FactorJEPA: Factorizing Monolithic Futures into Layout-Agent-Interaction Channels for Crowded and Chaotic Global South Urban Worlds</title>
-    <updated>2026-08-02T07:32:46Z</updated>
-    <link href="https://arxiv.org/abs/2608.01049v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01049v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>World models have attracted significant attention for their ability to capture and predict the structure and dynamics of the physical world. In this emerging landscape, Joint Embedding Predictive Architectures (JEPA) offer a particularly compelling direction.
-  We study a largely unexplored regime: populous, crowded, and chaotic Global South urban environments, which we call DENSEWORLD. Unlike the lower-density, lane-structured settings that dominate existing evaluations, these scenes exhibit soft spatial boundaries, extreme agent heterogeneity, persistent occlusion, and rapid social negotiation under mixed traffic. We introduce the first large-scale dataset for this regime: 1,000 hours of drive-through, walk-through, and aerial video across 22 cities. Existing JEPA formulations struggle to preserve dense interaction dynamics under heterogeneity and partial observability.
-  We introduce FactorJEPA, which makes world structure a first-class predictive primitive. Rather than encoding the future in a monolithic latent, it composes layout, entities, and interactions, using a visibility gate and separated subspaces to preserve partially observed agents and discourage cross-factor shortcuts. FactorJEPA improves (i) future-latent accuracy (Future-frame L1), (ii) intervention-sensitive prediction (Causal L1), and (iii) robustness to reduced visual evidence (Mask-ratio slope), while exposing (iv) a reproducible motion-information trade-off (Motion cosine). Method rankings replicate across 2B and 1B V-JEPA 2.1 backbones, with rho = 0.895 to 0.978.
-  We publicly release the DENSEWORLD-115k dataset (https://huggingface.co/datasets/anonymousML123/denseworld-115k) and the surgery-trained FactorJEPA checkpoints (https://huggingface.co/datasets/anonymousML123/factorjepa-outputs/tree/main/outputs/full/vjepa_2_1_vitg_1B/train/m09c_surgery_3stage_DI_diheavy_encoder).</summary>
+    <id>http://arxiv.org/abs/2608.03772v1</id>
+    <title>Computing Actual Causes for Neural Network Predictions under Structured Causal Inputs</title>
+    <updated>2026-08-04T14:57:06Z</updated>
+    <link href="https://arxiv.org/abs/2608.03772v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03772v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explaining the predictions of neural networks is a central challenge in trustworthy AI. Existing explanation methods, such as those based on feature attribution or minimal sufficient sets, typically treat input features as independent, which can yield misleading explanations when inputs exhibit structured dependencies. We address this by formalizing explanations as Halpern-Pearl (HP) actual causes, modeling input dependencies using Boolean Structural Causal Models (SCMs). We compute HP causes by applying bound propagation and branch-and-bound techniques, while providing formal guarantees of completeness and minimality. Our experiments show that we substantially outperform brute-force and ILP baselines in scalability, and outperform heuristic search as graph size grows, computing all minimal actual causes on instances with search spaces of up to $2.3\times10^{13}$ candidate (cause, contingency) pairs, on SCMs with up to 28 nodes, within a 180s per-instance budget. In a case study, we further show that ignoring input dependencies inflates the number of reported causes, 14.9% of which are spurious under our SCM.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T07:32:46Z</published>
-    <arxiv:comment>42 pages. Independent preprint. Dataset: https://huggingface.co/datasets/anonymousML123/denseworld-115k ; checkpoints: https://huggingface.co/datasets/anonymousML123/factorjepa-outputs</arxiv:comment>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:57:06Z</published>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Kapil Wanaskar</name>
+      <name>Jannick Strobel</name>
     </author>
     <author>
-      <name>Gaytri Jena</name>
+      <name>Muqsit Azeem</name>
     </author>
     <author>
-      <name>Aman Chadha</name>
-    </author>
-    <author>
-      <name>Vinija Jain</name>
-    </author>
-    <author>
-      <name>Vasu Sharma</name>
-    </author>
-    <author>
-      <name>Amitava Das</name>
+      <name>Stefan Leue</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.01047v1</id>
-    <title>VeraRAN: Pre-Actuation Certification and Event-Causal Synchronization Repair for Asynchronous Multi-Interface RAN Plans</title>
-    <updated>2026-08-02T07:29:14Z</updated>
-    <link href="https://arxiv.org/abs/2608.01047v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01047v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Agentic RAN controllers combine mobility, energy, and resource actions across independently implemented interfaces. Even when each command is valid and the target state is safe, asynchronous actuation can drive the network through unsafe intermediate states. In a frozen study of a 35B planner, 28.8% of locally valid plans remained asynchronously unsafe. We introduce VeraRAN, which checks plans before actuation by modeling request, delivery, acceptance, application, completion, and observation for each action while exploring plausible delays and event orders. When VeraRAN finds a counterexample, VeraSync inserts versioned event barriers and rechecks the repaired plan for safety and completion. MI-POR prunes independent interleavings using RAN lifecycle and resource footprints. In a post-freeze stratified confirmation within the declared repair domain, VeraSync re-certified every confirmation plan while leaving 87% of action pairs unordered. MI-POR matched exact search in a property-stratified audit and reduced explored states by 94.6-95.0% on 20-40-action plans. Native ns-O-RAN replay and an independent live E2 audit showed why distinguishing these events matters: acceptance may precede the authoritative state transition, so dependent actions must wait for direct APPLY evidence or a contract-backed completion event causally downstream of APPLY.</summary>
-    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T07:29:14Z</published>
-    <arxiv:comment>10 pages, 4 figures, 1 table</arxiv:comment>
-    <arxiv:primary_category term="cs.NI"/>
-    <author>
-      <name>Yinghan Hou</name>
-    </author>
-    <author>
-      <name>Zongyou Yang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01042v1</id>
-    <title>What Could the Agent See at 19:05? Generating Temporal Enterprise Scenarios from Real Research and Replaying Them to Evaluate Agents</title>
-    <updated>2026-08-02T06:56:56Z</updated>
-    <link href="https://arxiv.org/abs/2608.01042v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01042v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Enterprise AI agents act across many apps whose data changes continuously, so an answer is correct only relative to what data existed and who could see it at the moment it was asked. Offline evaluation today grades against a single static snapshot, effectively the end of the episode. So, it can only evaluate one situation, the final one, even though every earlier moment of the episode is a different situation that invites its own realistic questions with its own correct answers. Recreating each of those moments as a separate snapshot would mean re-provisioning a whole tenant per instant, which is prohibitively costly; and even a single snapshot leaks future state hidden inside records and cannot represent the multi-app, time-ordered way real work happens. Our system closes two gaps at once: it generates a realistic, persona-driven, temporally-evolving enterprise world from real research, and replays that world at any chosen moment to evaluate any pluggable agent. A schema-inferred temporal description drives a deterministic-plus-LLM rebuild of each record's past state; because the queryable moments are finite, all rebuilds are precomputed into a compact difference cache, making evaluation a fast, reproducible lookup with no model in the path. We describe the design, an architecture spanning both flows, and early experience evaluating enterprise agents.</summary>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T06:56:56Z</published>
-    <arxiv:comment>6 pages, 3 figures, 4 tables. Accepted as a poster at SERI 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.SE"/>
-    <author>
-      <name>Tezan Sahu</name>
-    </author>
-    <author>
-      <name>Himani Arora</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.01035v1</id>
-    <title>WAM-Diff2: Hierarchical AR-to-Diffusion Distillation for Highly Efficient Autonomous Driving VLA</title>
-    <updated>2026-08-02T06:45:16Z</updated>
-    <link href="https://arxiv.org/abs/2608.01035v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.01035v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action (VLA) models have emerged as a prominent paradigm for end-to-end autonomous driving; however, their efficient deployment is severely constrained by high computational latency and exposure bias arising from sequential autoregressive decoding. Conversely, while specialized diffusion policies enable low-latency, parallel execution, training them from scratch typically yields narrow, single-task architectures that lack holistic visual-linguistic reasoning. Successfully transforming pre-trained autoregressive generalists into parallel diffusion models could combine multi-task cognitive intelligence with execution efficiency, yet this transition presents a formidable architectural challenge due to mismatched attention patterns (causal versus bidirectional) and divergent optimization objectives. To bridge this divide, we introduce WAM-Diff2, a multi-task discrete diffusion VLA framework powered by a three-stage hierarchical distillation strategy. By structuring the architectural shift through progressive block-wise adaptation, block-wise distillation, and model-wise cross-scale distillation, WAM-Diff2 preserves the underlying semantic foundations of the base model while accelerating inference. Extensive evaluations across driving understanding, perception, and planning benchmarks demonstrate that WAM-Diff2 effectively mitigates exposure bias and achieves performance parity with autoregressive baselines. Crucially, the autoregressive-to-diffusion transition yields a 2.8x decoding speedup, which scales to an ultimate 15.1x acceleration when combined with system-level optimizations including FlashInfer and CUDA Graphs.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2608.03763v1</id>
+    <title>TDVR: Joint Text Disambiguation and Viewpoint Reasoning for Zero-Shot 3D Visual Grounding</title>
+    <updated>2026-08-04T14:51:15Z</updated>
+    <link href="https://arxiv.org/abs/2608.03763v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03763v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Zero-shot 3D visual grounding aims to localize specific objects based on textual descriptions and 3D visual input. However, the effectiveness of existing methods is significantly hindered by the ambiguous query text and deficient viewpoints. To address these issues, we propose TDVR, a training-free reasoning framework that disambiguates the input text and infers accurate viewpoints for zero-shot 3D visual grounding. First, we construct semantic 3D scene graph from the detected instances in the 3D point cloud. Subsequently, we put the original query, appearance and spatial relationship descriptions into the LLM for fusion, thereby disambiguating the initial input. We leverage chain-of-thought reasoning to generate the structured representation of disambiguated query. Then taking the scene graph and structured query as input, we get the optimal view via viewpoint reasoning to solve the problem of missing viewpoints during grounding. Based on the obtained optimal viewpoint, we further discriminate the distracting objects, enabling the model with the ability to distinguish similar instances. After that, we match the category text and appearance images with the query by computing the similarity of feature vectors. Finally, the target object was identified by integrating the viewpoint score, confusion score, category score, and appearance score. Compared with previous methods, our TDVR has stronger capabilities in viewpoint reasoning, similar object discrimination, and ambiguous query understanding. Experimental results on the public ScanRefer dataset show that our method outperforms the existing state-of-the-art methods by 15.25% and 14.46% in Acc@0.25 and Acc@0.5 respectively, demonstrating the effectiveness of our TDVR in addressing ambiguous query text and deficient viewpoints.</summary>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-02T06:45:16Z</published>
+    <published>2026-08-04T14:51:15Z</published>
+    <arxiv:comment>10 pages, 5 figures, 7 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Qingxi Du</name>
+    </author>
+    <author>
+      <name>Junbo Wang</name>
+    </author>
+    <author>
+      <name>Yuke Li</name>
+    </author>
+    <author>
+      <name>Yining Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03741v1</id>
+    <title>When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference</title>
+    <updated>2026-08-04T14:35:25Z</updated>
+    <link href="https://arxiv.org/abs/2608.03741v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03741v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agentic inference now dominates the LLM inference landscape, requiring LLMs to actively engage in multi-turn interactions with tool-calling capabilities. This introduces a more complex workload for the underlying inference system: serving stages such as prefill and decode exhibit substantially different behaviors and demand distinct compute and memory-bandwidth capabilities. As a result, a single homogeneous GPU system now struggles to support agentic inference, motivating an industry shift toward heterogeneous systems with disaggregated serving capabilities, such as the emerging Vera-Rubin platform with GPUs and Groq LPUs. However, the question of what the optimal hardware should look like for each component in a heterogeneous system remains underexplored. To this end, we propose a novel simulation framework for disaggregated serving, termed \textbf{HeteroPanacea}, that enables system-level simulation across three dimensions: 1) disaggregated quantization, 2) automated intra- and inter-device parallelization scheduling, and 3) PDAF (prefill-decode-attention-FFN) NPU architectural heterogeneity. By combining these three axes, we provide a cross-stack simulation framework for future heterogeneous agentic serving systems. We confirm the benefit of Prefill Decode disaggregation, simulating increased serving throughput by up to 75\% compared to traditional serving with current GPUs and demonstrate 4 way Prefill Decode Attention FFN disaggregation is the most consistent for increasing throughput across different models, assuming custom NPUs. We also investigate the relationship between model architecture and gain from disaggregation by running a set of ablation studies.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:35:25Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Przemyslaw Forys</name>
+    </author>
+    <author>
+      <name>Haoran Wu</name>
+    </author>
+    <author>
+      <name>Can Xiao</name>
+    </author>
+    <author>
+      <name>Jiayi Nie</name>
+    </author>
+    <author>
+      <name>Tony Liu</name>
+    </author>
+    <author>
+      <name>Rika Antonova</name>
+    </author>
+    <author>
+      <name>Timothy Jones</name>
+    </author>
+    <author>
+      <name>Robert Mullins</name>
+    </author>
+    <author>
+      <name>Wayne Luk</name>
+    </author>
+    <author>
+      <name>Aaron Zhao</name>
+    </author>
+    <author>
+      <name>George A. Constantinides</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03727v1</id>
+    <title>Track4Action: Distilling World-Centric 3D Tracker into Vision-Language-Action Policies</title>
+    <updated>2026-08-04T14:25:13Z</updated>
+    <link href="https://arxiv.org/abs/2608.03727v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03727v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Action labels tell a vision-language-action (VLA) policy which robot commands to imitate, but not how those commands change the 3D world. The aligned demonstration clip contains this missing supervision because its $K$ frame transitions record the geometry, motion, visibility, and camera change produced during the corresponding $K$ actions. We introduce Track4Action, a framework that distills this realized transition from a frozen world-centric 3D tracker into a current-observation VLA policy. During training, Track4World encodes the clip $V_{t:t+K}$ into a pooled tracker feature. Learnable track queries infer this feature from current VLA hidden states, match it in a shared space, and condition a flow-matching action head through a feature-wise gate. The tracker feature only defines the alignment target, so neither the clip nor the tracker is used at deployment. Track4Action reaches 82.3% on zero-shot LIBERO-Plus, improving the alignment-free variant by 7.6 points and LaMP by 3.0 points. It obtains 80.44% and 81.48% on the clean and randomized RoboTwin 2.0 splits, and 67.5% average success across four physical bimanual tasks, 25.0 points above the alignment-free variant. The gains across simulation and physical tasks support action-aligned 3D tracker features as privileged supervision for tracker-free VLA deployment. Our project page is available at https://wing0night.github.io/track4action-project-page.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:25:13Z</published>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Zhihao Zhu</name>
+      <name>Chenyi Wang</name>
     </author>
     <author>
-      <name>Hanlin Shang</name>
+      <name>Xinkai Wang</name>
     </author>
     <author>
-      <name>Mingwang Xu</name>
+      <name>Bokai Lin</name>
     </author>
     <author>
-      <name>Feipeng Cai</name>
+      <name>Jialin Tian</name>
     </author>
     <author>
-      <name>Zhuolin He</name>
+      <name>Fucheng Zhang</name>
     </author>
     <author>
-      <name>Yaoyi Li</name>
+      <name>Cewu Lu</name>
     </author>
     <author>
-      <name>Jianhua Han</name>
+      <name>Lixin Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03726v1</id>
+    <title>Statistical Study of Solar Prominence Plumes Based on NVST H$α$ Observations</title>
+    <updated>2026-08-04T14:24:53Z</updated>
+    <link href="https://arxiv.org/abs/2608.03726v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03726v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Plumes are one of the most representative dynamic features observed in prominences and play a key role in mass and magnetic transport within them. However, their physical nature and triggering processes remain actively debated. Based on limb H$α$ observations from the New Vacuum Solar Telescope (NVST) during 2013--2025, we statistically investigated 34 plumes with clear and complete evolutions by developing an automated image-processing pipeline. It is revealed that plume lifetimes mainly range from 300 s to 700 s, with vertical displacements between 3--7 Mm. The mean widths and velocities are concentrated in the range of 0.5--1.5 Mm and 10--20 km s$^{-1}$, respectively. Besides wide distribution ranges, plume parameters exhibit irregular evolution fluctuations, indicating that the formation and evolution of various plumes may exhibit different physical patterns. Correlation analysis among the parameters further reveals that: (1) Positive correlations were found among lifetime, vertical displacement, and mean width, indicating an intrinsic coupling between the temporal and spatial scales of plumes. (2) Trajectory curvature is negatively correlated with lifetime, vertical displacement, and velocity. Accelerating and width-contracting plumes typically have lower curvature, suggesting that curvature may reflect environmental influences and the stability of plumes. (3) Plumes with higher initial velocities were more likely to be accompanied by precursor brightening, suggesting that these plumes may be triggered by magnetic reconnection. Furthermore, we infer that some plumes in non-bubble regions may be inherently driven by mini-filament eruptions. These results establish a statistical framework for prominence plumes and reveal diversity in their dynamical evolution and triggering mechanisms.</summary>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:24:53Z</published>
+    <arxiv:comment>15 pages, 9 figures, 1 table, accepted for publication in ApJ</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.SR"/>
+    <author>
+      <name>Yangrui Chen</name>
     </author>
     <author>
-      <name>Hang Xu</name>
+      <name>Yijun Hou</name>
     </author>
     <author>
-      <name>Siyu Zhu</name>
+      <name>Jincheng Wang</name>
+    </author>
+    <author>
+      <name>Ting Li</name>
+    </author>
+    <author>
+      <name>Shuo Yang</name>
+    </author>
+    <author>
+      <name>Yilin Guo</name>
+    </author>
+    <author>
+      <name>Junyi Zhang</name>
+    </author>
+    <author>
+      <name>Haitang Li</name>
+    </author>
+    <author>
+      <name>Feiyang Sha</name>
+    </author>
+    <author>
+      <name>Qing Zhou</name>
+    </author>
+    <author>
+      <name>Yu Liu</name>
+    </author>
+    <author>
+      <name>Xiaoli Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03720v1</id>
+    <title>Detecting Hallucinations and Recovering Verified Answers in Arabic Islamic Question Answering</title>
+    <updated>2026-08-04T14:19:53Z</updated>
+    <link href="https://arxiv.org/abs/2608.03720v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03720v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models can generate fluent responses to Islamic questions while introducing factual errors that are difficult to identify. This paper presents our system for \textsc{HalluScoring 2026} Task 2.1, \textit{Islamic Hallucination Detection and Find the Truth}. The task requires a unified two-step prediction: determining whether an Arabic answer generated by an LLM is hallucinated and selecting the verified answer from six closely related candidate options. We use the Islamic knowledge dataset provided by the shared task, which contains 600 question--answer instances, including 341 hallucinated and 259 non-hallucinated answers. Our system is based on the fine-tuned \texttt{google/gemma-4-12B-it} model and uses deterministic decoding during inference. The generated outputs are normalized to extract the hallucination label and the selected option. The system achieves a Macro-F1 score of 0.928 and a label accuracy of 0.935 for hallucination detection, together with an option accuracy of 0.895 for answer selection. These results yield a combined score of 0.912, demonstrating strong performance across both stages of the task. The lower option-selection accuracy indicates that distinguishing the verified answer from plausible alternatives remains more challenging than detecting hallucinated responses.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:19:53Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Khaled Ziani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03719v1</id>
+    <title>Effort without Evidence</title>
+    <updated>2026-08-04T14:18:55Z</updated>
+    <link href="https://arxiv.org/abs/2608.03719v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03719v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Actions determine not only payoffs but what can be learned. I study communication across successive decision makers when hidden effort governs public evidence and a sender motivates her successor while underweighting effort cost. Common sender rankings can force every message into a Bayes-unavoidable nonidentifying region. If experimentation is costly, strong motivation can make persuasive encouragement incredible and produce inactivity after a confounded failure. If maximal effort is technologically saturated, the same bias can produce universal overexertion after a bad pooled history, which is equally uninformative. At such nodes collapse is monotone: once strong motivation eliminates the identifying action, strengthening it cannot restore information. Moderate motivation instead preserves causal distinctions. In a threshold application, stronger motivation raises measured success yet lowers welfare because society fails to learn that less effort would suffice. A Kullback--Leibler decomposition shows that certification directly adds no information after entry into a fixed recursively nonidentifying region. Whether it prevents entry depends on attribution--selection alignment: do certificate-induced posteriors preserve the identifying action? The corrective action payment changes sign across technologies---subsidize effort when agents do too little, but subsidize restraint when maximal effort is saturated. Motivation selects the costly action, not the informative one.</summary>
+    <category term="econ.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:18:55Z</published>
+    <arxiv:primary_category term="econ.TH"/>
+    <author>
+      <name>Georgy Lukyanov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03715v1</id>
+    <title>Amortized Interventional Forecasting for Multivariate CIR Processes</title>
+    <updated>2026-08-04T14:17:35Z</updated>
+    <link href="https://arxiv.org/abs/2608.03715v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03715v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mean-reverting dynamics are pervasive in finance, and the Cox--Ingersoll--Ross (CIR) process is a standard model for the time series they produce, from short rates to credit default swap (CDS) spreads. Yet CIR models capture only \emph{correlated} co-movement, not \emph{causal} influence between series, so they cannot answer the system's response when one series is externally shocked, which observational conditionals confound with historical co-movement. We make two contributions. First, an amortized model for distributional causal effect estimation that frames trajectories as time-stamped observations and predicts the calibrated multi-horizon shock response without retraining per scenario. Second, a causal multivariate CIR data-generating process that supplies the paired observational and interventional ground truth that real markets cannot. We instantiate and calibrate the framework on CDS spreads as a testbed. CIR-ACTIVA's validity is established on synthetic ground truth, independent of how well the simulator matches reality, while practical grounding is assessed by backtesting the generated traces against real CDS data. Against observational and amortized causal-inference baselines, CIR-ACTIVA leads on both causal selectivity in the joint distribution and horizon-resolved calibration, retaining its selectivity once the interventional law varies over the horizon, with gains concentrating at short horizons. This opens up a class of what-if queries on coupled spread systems, CDS stress testing among them, that observational forecasters cannot answer.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:17:35Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Andreas Sauter</name>
+    </author>
+    <author>
+      <name>Sumit Sourabh</name>
+    </author>
+    <author>
+      <name>Drona Kandhai</name>
+    </author>
+    <author>
+      <name>Erman Acar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03708v1</id>
+    <title>MultiCompose: Multi-Concept Personalized Composition with Per-Subject Attribute Binding</title>
+    <updated>2026-08-04T14:13:18Z</updated>
+    <link href="https://arxiv.org/abs/2608.03708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text-to-image diffusion models enable personalization of specific visual concepts from a small number of reference images. However, generating a single image that contains multiple personalized subjects, each bound to user-specified attributes such as clothing, accessories, and held objects, remains largely unaddressed. Without explicit spatial constraints, concurrently activated concept checkpoints produce overlapping cross-attention responses, causing per-subject identity degradation and attribute misalignment. Moreover, no established benchmark jointly evaluates these two failure modes in the personalized multi-subject setting. We present MultiCompose, a composition framework that decouples per-concept personalization from multi-subject inference. A semantic preservation regularization maintains attribute binding capacity during fine-tuning, while a two-phase inference procedure automatically establishes subject layout and composes per-concept predictions through spatially exclusive masks. We further introduce MSP-Bench, a benchmark that jointly evaluates identity fidelity (ID), attribute binding accuracy (BIND), and attribute misalignment (MIS) through a dual-pathway protocol. Experiments show that MultiCompose outperforms existing methods on both conventional metrics and MSP-Bench, confirming the benchmark's ability to reveal failure modes that conventional metrics overlook. Code is available at https://github.com/I2-Multimedia-Lab/MultiCompose</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:13:18Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Ruirui Zhang</name>
+    </author>
+    <author>
+      <name>Zhengkai Zhao</name>
+    </author>
+    <author>
+      <name>Pan Gao</name>
     </author>
   </entry>
 </feed>
