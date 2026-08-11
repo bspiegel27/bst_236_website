@@ -1,245 +1,344 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-08-10T00:59:56Z -->
+<!-- Last updated: 2026-08-11T00:59:22Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-08-10T00:59:56Z</updated>
+  <updated>2026-08-11T00:59:23Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>154866</opensearch:totalResults>
+  <opensearch:totalResults>154982</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2608.06362v1</id>
-    <title>AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games</title>
-    <updated>2026-08-06T17:57:11Z</updated>
-    <link href="https://arxiv.org/abs/2608.06362v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06362v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\% level and a target precision of $\pm1$ Big Blind, raw outcomes need a median $74\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact finite-sample certification uses the Empirical-Bernstein CS (EB-CS), which needs an independently justified bound on corrected payoffs. We establish such a bound structurally for Leduc hold'em and characterize a width floor set by the CS's bet cap and that bound, which governs how much of a variance gain becomes earlier stopping; the descriptive HUNL EB-CS runs show a median $1.37\times$ stopping-time ratio. AV-AIVAT turns variance reduction into efficient, auditable early stopping while separating asymptotic screening from exact certification, so an evaluation can stop the moment its evidence suffices and hand a third party everything needed to recheck the verdict at that very stopping time.</summary>
-    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:57:11Z</published>
-    <arxiv:comment>34 pages, 5 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.GT"/>
+    <id>http://arxiv.org/abs/2608.07468v1</id>
+    <title>SimWAM: A Simple World Action Model for End-to-End Autonomous Driving</title>
+    <updated>2026-08-07T17:59:09Z</updated>
+    <link href="https://arxiv.org/abs/2608.07468v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07468v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We present SimWAM, a simple yet effective WAM that uses video generation purely as a training signal. It co-trains a pretrained video expert and a lightweight action expert with joint flow matching. An isolated attention mask keeps action prediction independent of future frames, allowing the video branch to be discarded after training and leaving a self-contained planner that directly predicts trajectories. Since the two experts share no parameters and interact only through a unified attention interface, the video backbone could be replaced and the action expert scaled independently without modifying the learning objective or inference pipeline. We further apply reinforcement learning to optimize a compositional driving reward beyond trajectory imitation. Our SimWAM achieves $91.5$ PDMS on NAVSIM, surpasses state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes. These results position SimWAM as a simple yet solid baseline that could readily benefit from advances in video generation for efficient autonomous driving. The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:59:09Z</published>
+    <arxiv:comment>The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Boning Li</name>
+      <name>Zongchuang Zhao</name>
     </author>
     <author>
-      <name>Yu Chen</name>
+      <name>Xin Zhou</name>
     </author>
     <author>
-      <name>Longbo Huang</name>
+      <name>Tianyang Xu</name>
+    </author>
+    <author>
+      <name>Zhengyang Sun</name>
+    </author>
+    <author>
+      <name>Kaixuan Zhou</name>
+    </author>
+    <author>
+      <name>Honglin Li</name>
+    </author>
+    <author>
+      <name>Dingkang Liang</name>
+    </author>
+    <author>
+      <name>Xiang Bai</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.06347v1</id>
-    <title>RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation for Multilingual Reasoning Transfer</title>
-    <updated>2026-08-06T17:52:06Z</updated>
-    <link href="https://arxiv.org/abs/2608.06347v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06347v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Multilingual reasoning transfer is crucial for extending reasoning capabilities of large language models (LLMs) beyond high-resource languages. On-policy self-distillation (OPSD) and its variants have emerged as a promising paradigm, providing dense token-level supervision on student-generated rollouts, yet their objectives do not explicitly prioritize reasoning signals most critical to cross-lingual transfer. We characterize that target-language reasoning comprises the generation of both surface text and reasoning pivots, which are decisions that advance or redirect the reasoning process and shape subsequent inference. This motivates concentrating privileged distillation around such pivots. We therefore propose RP-OPSD, Reasoning-Pivot-guided On-Policy Self-Distillation, using the distributional shift between matched teacher views with and without an English reference solution as an operational proxy to guide privileged distillation and reference anchoring. Experiments on mathematical reasoning benchmarks covering 17 languages and multiple difficulty levels show that our method outperforms strong multilingual reasoning baselines and OPSD variants. Further analysis reveals that RP-OPSD concentrates privileged distillation on reasoning-control and problem-condistioned state-update tokens, while downweighting it for tokens that mainly support surface realization. Our code is available at https://github.com/NJUNLP/RP-OPSD.</summary>
+    <id>http://arxiv.org/abs/2608.07462v1</id>
+    <title>SemBridge: Semantic Token Anchoring for Continuous-Latent Autoregressive Speech Generation</title>
+    <updated>2026-08-07T17:57:45Z</updated>
+    <link href="https://arxiv.org/abs/2608.07462v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07462v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuous-latent autoregressive speech generation has emerged as a promising alternative to discrete-token modeling by avoiding quantization loss and preserving richer acoustic information. However, continuous acoustic targets do not ex- pose linguistic structure as explicit token-level prediction tar- gets. Consequently, the autoregressive language model (LM) must acquire linguistic structure indirectly through acous- tic prediction, which can compromise the content fidelity of generated speech. We propose SemBridge, a training-only semantic-token anchoring framework for continuous-latent autoregressive speech generation. SemBridge uses discrete se- mantic tokens to directly supervise autoregressive LM states and employs a Semantic-Aligned Acoustic VAE to organize the continuous target space under the same semantic refer- ence. The semantic supervision is used only during train- ing, while inference remains entirely continuous. We evalu- ate SemBridge on zero-shot text-to-speech (TTS) and score- conditioned singing voice synthesis (SVS). Across multi- ple benchmarks, SemBridge improves content accuracy, as measured by word and character error rates (WER/CER), while maintaining competitive speaker similarity and percep- tual quality. Experimental results demonstrate that explicit semantic-token supervision for autoregressive state learning is an effective and general direction for continuous speech generation. Speech samples are available.1 The model code and checkpoints will be available at https://github.com/ASLP- lab/SemBridge</summary>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:57:45Z</published>
+    <arxiv:primary_category term="eess.AS"/>
+    <author>
+      <name>Hanke Xie</name>
+    </author>
+    <author>
+      <name>Haopeng Lin</name>
+    </author>
+    <author>
+      <name>Jiale Qian</name>
+    </author>
+    <author>
+      <name>Dake Guo</name>
+    </author>
+    <author>
+      <name>Yuepeng Jiang</name>
+    </author>
+    <author>
+      <name>Zhichao Wang</name>
+    </author>
+    <author>
+      <name>Wenxiao Cao</name>
+    </author>
+    <author>
+      <name>Jingbin Hu</name>
+    </author>
+    <author>
+      <name>Guobin Ma</name>
+    </author>
+    <author>
+      <name>Wenhao Li</name>
+    </author>
+    <author>
+      <name>Huakang Chen</name>
+    </author>
+    <author>
+      <name>Chengyou Wang</name>
+    </author>
+    <author>
+      <name>Ming Tao</name>
+    </author>
+    <author>
+      <name>Zhonghua Fu</name>
+    </author>
+    <author>
+      <name>Lei Xie</name>
+    </author>
+    <author>
+      <name>Xinsheng Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07460v1</id>
+    <title>CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity</title>
+    <updated>2026-08-07T17:55:48Z</updated>
+    <link href="https://arxiv.org/abs/2608.07460v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07460v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (RL). We instead propose CreativeInstruct, a scalable instruction-tuning method that teaches LLMs to balance creative, base-model-like generations with the quality of post-trained models, by learning to inject special [StartCreativity] spans that bias generation toward creativity. Furthermore, we introduce a structural diversity metric based on graph edit distance, which captures narrative level variation missed by purely lexical and semantic metrics. On narrative generation, CreativeInstruct matches or exceeds the diversity of both multi-model baselines and distilled variants of their outputs, without sacrificing quality or requiring multiple models at inference time. These results are mirrored in our human evaluation, where we find that annotators rate CreativeInstruct generations as more creative than the post-trained LLMs' generations in 70.3% of cases. We also show the benefits of creative models as a substrate for RL: GRPO applied to a CreativeInstruct checkpoint improves by ~4% on AMC and ~5% points on MATH over the same training applied to the post-trained checkpoint.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:52:06Z</published>
-    <arxiv:comment>16 pages. Under review</arxiv:comment>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:55:48Z</published>
+    <arxiv:comment>Code: https://github.com/ananya-sahu/CreativeInstruct</arxiv:comment>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Xinye Wang</name>
+      <name>Ananya Sahu</name>
     </author>
     <author>
-      <name>Junxiao Liu</name>
+      <name>Mohit Bansal</name>
     </author>
     <author>
-      <name>Shujian Huang</name>
+      <name>Elias Stengel-Eskin</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.06331v1</id>
-    <title>Tytan: Interactive Neurosymbolic Construction of Analytic Semantic Schemas from Relational Data</title>
-    <updated>2026-08-06T17:40:26Z</updated>
-    <link href="https://arxiv.org/abs/2608.06331v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06331v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>From natural-language query interfaces to automated report generation, data analysis tools need a description of the data: the real-world entities it contains, which columns function as measures or identifiers, and how tables connect into units of analysis. Today, this semantic layer is usually written by hand. This is a knowledge-acquisition bottleneck that limits the scalability of analytic systems, keeps non-technical users dependent on experts, and is itself error-prone. We present TYTAN, a system for automatically constructing an analytic semantic schema from a relational database and, when available, a short user-provided description. TYTAN combines symbolic analysis of the database with LLM-based semantic inference for entity proposal, role assignment, and naming. When the evidence leaves a decision ambiguous, TYTAN asks the user a targeted natural-language question. We evaluate TYTAN on eight databases spanning real-world and benchmark domains along the three axes that define a schema's functional utility: (i) coverage, are all important entities and features captured?; (ii) retrieval correctness, do the schema's instructions actually reach the data; and (iii) characterization accuracy, are semantic types correct? Across the seven reference domains, TYTAN reaches every entity, attribute, and aggregable feature of the expert-corrected reference schemas (100% coverage). Additionally, 100% of its retrieval instructions execute correctly (1,678 of 1,678 self-generated claims), and semantic roles agree with the reference on 92-100% of matched attributes. Checking the underlying data showed the small disagreement is in the reference, not in TYTAN. On a held-out blind test (a live, ten-table database with no declared keys), TYTAN recovers the full entity structure with verified keys and satisfies 100% of the satisfiable expectations of five independent blind annotators.</summary>
-    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2608.07427v1</id>
+    <title>A Picture is Worth a Thousand Tokens: How Vision Language Models Cut AI Energy Costs While Improving Accuracy</title>
+    <updated>2026-08-07T17:14:45Z</updated>
+    <link href="https://arxiv.org/abs/2608.07427v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07427v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM inference accounts for over 90% of AI operational energy, scaling directly with input token count---a critical inefficiency for telecom network analytics and numerical time-series data analysis (NTSDA), where raw multivariate KPI windows from 4G/5G cell sites expand into thousands of floating-point tokens. Vision-Language Models (VLMs) eliminate this mismatch by encoding time-series as 2D plots, achieving 3.6-10.4x input token reduction across Llama-3.2-90B, Qwen2.5-VL-72B, and Pixtral-12B architectures. This translates to 1.8-2.5x measured inference energy reduction, saving approximately 7.2 MJ/day at telecom edge deployments and CloudRAN that monitor 200 cells per 15-minute interval. Critically, efficiency gains do not sacrifice accuracy: a fine-tuned Llama-3.2-90B-Vision VLM achieves 220.7% higher precision than its text-only counterpart and outperforms LSTM and ARIMA baselines by over 144% on telecom anomaly detection. On public benchmarks, Pixtral-12B achieves a 20.6x improvement in J/F1 score at mean F1 = 0.82. At 24 KPIs, text representations exceed the 128K context window of most production LLMs, rendering text-only processing infeasible without truncation, while visual representations remain within standard limits. These results establish VLMs as an energy-efficient and accuracy-superior modality for numerical time-series workloads, providing empirical grounding for AI inference systems that treat energy consumption as a first-class engineering constraint.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:40:26Z</published>
-    <arxiv:comment>20 pages, 4 figures, 6 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.DB"/>
-    <author>
-      <name>Donna Hooshmand</name>
-    </author>
-    <author>
-      <name>Shubham Shahi</name>
-    </author>
-    <author>
-      <name>Cameron Barrie</name>
-    </author>
-    <author>
-      <name>Abhratanu Dutta</name>
-    </author>
-    <author>
-      <name>Marko Sterbentz</name>
-    </author>
-    <author>
-      <name>Harper Pack</name>
-    </author>
-    <author>
-      <name>Kristian J. Hammond</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.06322v1</id>
-    <title>From Precision Medicine to Precision Education: A Vision for AI-Powered Student Digital Twins, Preventive Student Success, and Career-Aligned Academic Pathways</title>
-    <updated>2026-08-06T17:36:56Z</updated>
-    <link href="https://arxiv.org/abs/2608.06322v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06322v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Higher education remains largely reactive in its approach to student success. Institutions frequently identify academic problems only after students have failed courses, fallen behind in degree progression, accumulated excessive debt, or departed without a credential. Healthcare faced a similar challenge decades ago. It responded by shifting from reactive treatment to preventive care powered by predictive models, risk stratification, electronic health records, and artificial intelligence (AI). This paper argues that higher education stands at an analogous inflection point. Drawing on advances in learning analytics, educational data mining, machine learning, workforce analytics, and digital twin technologies, we propose a paradigm we call Precision Education. Under this framework, AI continuously analyzes academic, behavioral, financial, and career data to identify emerging risks, recommend personalized interventions, optimize educational pathways, and align academic decisions with long-term career success. Central to the model is the Student Digital Twin, a continuously updated representation of a learner that can simulate multiple educational futures and intervention scenarios. We ground the vision in evidence from early deployments such as Course Signals at Purdue and GPS Advising at Georgia State University. We also argue that prediction alone is insufficient. The central methodological challenge is the move from prediction to causal, actionable intervention. The paper presents a conceptual framework, examines enabling technologies, reviews the empirical record and its limits, analyzes ethical and governance implications, and outlines a research agenda for the next decade of AI-enabled higher education.</summary>
-    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:36:56Z</published>
-    <arxiv:primary_category term="cs.CY"/>
-    <author>
-      <name>Kaushik Dutta</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.06307v1</id>
-    <title>UQ-Loc: Uncertainty-Aware LiDAR Scene Coordinate Regression</title>
-    <updated>2026-08-06T17:23:17Z</updated>
-    <link href="https://arxiv.org/abs/2608.06307v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06307v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>LiDAR-based Scene Coordinate Regression (SCR) maps point clouds directly to 3D scene coordinates, enabling precise 6-DoF localisation without explicit map retrieval. However, existing methods produce deterministic predictions, discarding aleatoric uncertainty that could improve robustness and downstream decision-making. We present UQ-Loc, which extends the LightLoc architecture with an anisotropic Gaussian covariance head that predicts a full 3x3 positive-definite covariance matrix per voxel. Training uses a Negative Log-Likelihood (NLL) loss augmented with a kNN-based spatial smoothness regulariser, while inference employs a modified SC2-PCR solver with uncertainty-weighted seed scoring and a Mahalanobis-distance inlier test. We adopt Expected Calibration Error (ECE) as a principled metric for evaluating the quality of the predicted uncertainty. Experiments demonstrate that UQ-Loc achieves consistent improvement in 6-DoF localization accuracy while producing well-calibrated covariances.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:23:17Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Jacek Komorowski</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.06306v1</id>
-    <title>On the degeneracy of solutions from stellar spectropolarimetric data</title>
-    <updated>2026-08-06T17:23:16Z</updated>
-    <link href="https://arxiv.org/abs/2608.06306v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06306v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In this work we investigate the inversion accuracy of stellar magnetic fields through the analysis of spectropolarimetric data. We performed several noise free tests to untangle the impact among the atmospheric and magnetic parameters in the data analysis. Using a single spectral line, we found that under ideal scenario, without noise, the magnetic parameters can be recovered with very high accuracy, while some of the atmospheric ones show a considerable incertitude. If multi-line profiles are considered instead, then the accuracy of the recovered atmospheric parameters increases significantly. Nonetheless, it is quite common that for the inversion of stellar spectropolarimetric data, the atmospheric parameters and the stellar inclination angle of the star are fixed; we show that this procedure could induce very high errors in the inference of the magnetic properties, specially in what concerns to fix the inclination angle. We show that even small deviations from the true inclination angles could have as consequence that the recovery of the magnetic properties of the star are no longer reliable. This is because we demonstrate that given a set of Stokes profiles observed along the rotational phase, they can be satisfactorily fitted regardless of the assumed stellar inclination angle, thereby revealing a degeneracy in the solution. Although this work validates the solution generation solely for a de-centered dipolar geometry, a comparable degeneracy is anticipated when modeling the magnetic field with higher order spherical harmonics, an effect that remains to be formally characterized.</summary>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:23:16Z</published>
-    <arxiv:comment>Submitted to MNRAS (minor revision)</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.SR"/>
-    <author>
-      <name>J. C. Ramirez Velez</name>
-    </author>
-    <author>
-      <name>J. M. Raygoza-Romero</name>
-    </author>
-    <author>
-      <name>I. H. Lopez-Nava</name>
-    </author>
-    <author>
-      <name>R. Lopez-Valdivia</name>
-    </author>
-    <author>
-      <name>M. F. Arenas</name>
-    </author>
-    <author>
-      <name>L. Adame Villanueva</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.06275v1</id>
-    <title>TLNM: Externally Validated Tooth Detection, Numbering and Segmentation from Smartphone Photographs Using Mask R-CNN</title>
-    <updated>2026-08-06T17:03:05Z</updated>
-    <link href="https://arxiv.org/abs/2608.06275v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06275v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Oral health issues affect billions globally, but the cost and limited access to professional dental care hinder preventive oral healthcare. Research relies on clinical-grade radiographs or intraoral camera images, unavailable for public self-screening. This study introduces a tooth localisation and numbering model for smartphone photographs. We developed a customised Mask Region-based Convolutional Neural Network (Mask R-CNN) pipeline trained on 1,272 annotated smartphone images. To address variability in patient-generated health data, the pipeline incorporates two domain-informed mechanisms: a masked gray-world white-balancing algorithm to mitigate artificial colour casts and an anatomically constrained detection layer to enforce structural validity and suppress false positives. Evaluation comprised four stages: internal held-out testing, independent external testing, a descriptive ablation study, and fold-based training stability analysis using the same internal test set. On the internal test set, the model achieved an instance-mask AP@50 of 0.818, class-aware PQ of 0.780, and operational F1 of 0.884. Training stability showed limited between-model variation: across ten runs, instance-mask AP@50 had a standard deviation of 0.009. On the external dataset, the model achieved an instance-mask AP@50 of 0.901, class-aware PQ of 0.832, and operational F1 of 0.928 despite differences in population, sensors, and acquisition protocols. The inference pipeline is available as an open-source, containerised API. These results demonstrate that consumer-grade smartphone imagery can support automated tooth-level anatomical mapping, offering a scalable, potentially low-cost foundation for remote screening and tele-dentistry in resource-constrained environments.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:03:05Z</published>
-    <arxiv:comment>16 pages, 7 figures, 6 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Arash Nedaei</name>
-    </author>
-    <author>
-      <name>Henna Tiensuu</name>
-    </author>
-    <author>
-      <name>Elina Väyrynen</name>
-    </author>
-    <author>
-      <name>Saujanya Karki</name>
-    </author>
-    <author>
-      <name>Jaakko Suutala</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.06274v1</id>
-    <title>NestyNet. II. Coherent Function-Space Posteriors from Scientific Neural Surrogates (or How to Avoid Expensive MCMC)</title>
-    <updated>2026-08-06T17:02:04Z</updated>
-    <link href="https://arxiv.org/abs/2608.06274v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06274v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Scientific analyses increasingly use flexible neural networks, but their thousands of correlated parameters make it challenging to interpret the associated uncertainties. Here we develop a low-dimensional posterior for the fitted function itself, for scientific neural surrogates trained with second-order optimization. Linearizing the fitting procedure with respect to the randomized residual rows gives a measurement-to-function transport, the linear map, assembled from the converged Jacobians and Gauss--Newton curvature, that carries measurement perturbations into the function perturbations that refitting would produce. Its leading singular functions define coherent deformation modes. Independent Gaussian coefficients then generate smooth function draws, so that any derived quantity, including those requiring derivatives or integrals of the draw, inherits the posterior. The construction distinguishes repeated-experiment covariance from the local Gauss--Newton/Laplace posterior and propagates both to correlated quantities of scientific interest. The result is conditional on the fit's declared choices (architecture, hyperparameters, active set, and optimization branch), and every fit is certified as converged by checking that a further optimization step would change the fitted predictions by less than a chosen small fraction of the measurement errors. Our primary example is an 800-parameter phase-space distribution function fit for a mock stellar disk. Four uncertainty coordinates, two orders of magnitude fewer than the fitted parameters and stable under refinement of the force basis, capture 99\% of the vertical-force posterior variance, and 4000 coherent draws propagate through the force, total-density, surface-density, and frequency calculations in 0.8s. The method provides a highly efficient route to uncertainty propagation for derivative-dependent scientific inference.</summary>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:02:04Z</published>
-    <arxiv:comment>16 pages 4 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.IM"/>
-    <author>
-      <name>Rodrigo Ibata</name>
-    </author>
-    <author>
-      <name>Wassim Tenachi</name>
-    </author>
-    <author>
-      <name>Foivos Diakogiannis</name>
-    </author>
-    <author>
-      <name>Neil Ibata</name>
-    </author>
-    <author>
-      <name>Anirudh Shankar</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.06270v1</id>
-    <title>The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images</title>
-    <updated>2026-08-06T17:01:08Z</updated>
-    <link href="https://arxiv.org/abs/2608.06270v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06270v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The "thinking-with-images" paradigm equips multimodal LLMs with active visual operations such as crop-and-zoom. However, models using these operations often achieve only marginal or negative gains over direct inference at substantially higher token cost. They may also repeatedly crop irrelevant regions and fail on questions that direct inference answers correctly. We ask whether the returned visual evidence causally affects the answer. To answer this question, we formulate visual tool-use as a causal graph that separates observation-mediated paths from action-induced shortcuts. We then audit it through interventions at the three levels: policy (comparing tool-use with direct inference), trajectory (corrupting all observations during rollout), and step (counterfactually replacing one individual observation under a fixed prefix). Our step-level estimand, Visual Evidence Gain, isolates the contribution of each returned observation. Across six representative models and five fine-grained perception benchmarks, we uncover policy miscalibration with two failure modes. In Calling Without Looking, returned observations have no causal effect on the answer. In Looking Without Planning, observations are informative but the call schedule is incoherent. A trajectory-level diagnostic decomposes the policy-level accuracy gain and shows that the gain is concentrated in a Calibrated minority. We term this discrepancy the illusion of visual tool-use: despite aggregate accuracy gains, visual tool-use is not causally effective across a broad range of rollouts. The code is available at https://github.com/OpenCausaLab/CauAudit.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:01:08Z</published>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:14:45Z</published>
+    <arxiv:comment>Accepted at the 14th European Conference on Renewable Energy Systems (ECRES), July 7--9, 2026, London, UK</arxiv:comment>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Zhiheng Wang</name>
+      <name>Bhavika Jalli</name>
     </author>
     <author>
-      <name>Bo Peng</name>
+      <name>Nikhil Korati Prasanna</name>
     </author>
     <author>
-      <name>Lai Wei</name>
-    </author>
-    <author>
-      <name>Chaochao Lu</name>
+      <name>Jayanta Choudhury</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.06269v1</id>
-    <title>An "inside-out" approach to modeling supermassive black hole binary inspiral</title>
-    <updated>2026-08-06T17:00:07Z</updated>
-    <link href="https://arxiv.org/abs/2608.06269v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.06269v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The inspiral and merger of two supermassive black holes (SMBHs) releases immense energy in low-frequency gravitational waves (GWs). Recent pulsar timing array (PTA) observations of the stochastic nHz GW background (GWB) are consistent with a SMBH binary origin. GW data from PTAs and from the upcoming Laser Interferometer Space Antenna (LISA) can probe late-stage binary evolution where electromagnetic constraints are scarce. However, the complexity of the relevant astrophysics necessitates a well optimized approach. I argue that a key physical quantity to constrain with PTAs is the orbital semi-major axis at which binary inspiral transitions from the astrophysical to the GW-dominated regime ($a_{\rm GW}$). This quantity should be treated as a free parameter in analysis of the GWB. Using this premise, I present a simple analytic framework for modeling SMBH binary inspiral in an "inside-out" fashion. At orbital separations slightly larger than $a_{\rm GW}$, a power-law scaling for the astrophysical inspiral timescale is assumed, while the outermost phase (prior to the PTA regime) is simply modeled via a delay time. I show that the GWB spectral shape and amplitude are most sensitive to $a_{\rm GW}$ (normalized to $10^9 M_{\odot}$, equal-mass binaries and expressed in gravitational units), with weaker dependence on the inner power-law index and the outer delay time. The GWB is largely insensitive to the mass and mass-ratio scaling of $a_{\rm GW}$ and to the boundary between the inner and outer astrophysical inspiral regimes. I compare with models for gas- and stellar-driven binary inspiral and discuss implications for LISA and for GW source parameter inference.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-06T17:00:07Z</published>
-    <arxiv:comment>29 pages, 12 figures, submitted to ApJ. Comments welcome</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
+    <id>http://arxiv.org/abs/2608.07424v1</id>
+    <title>CoBa: Cost-Effective Test-Time Scaling via Compute-Balanced Routing</title>
+    <updated>2026-08-07T17:12:13Z</updated>
+    <link href="https://arxiv.org/abs/2608.07424v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07424v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Test-time scaling is often implemented by spending more compute along one axis: sampling more solutions, extending a chain of thought, or applying a stronger evaluator. Under a fixed inference budget, these choices compete. This paper formulates test-time reasoning as a compute-allocation problem in which a system must decide whether the next unit of compute should be spent on generation, verification, or stopping. We introduce CoBa, a compute-balanced routing policy that first obtains a small set of candidates, applies cheap verification broadly, and routes uncertain or high-value candidates to stronger verification. On 3,129 example-generator evaluations spanning MATH-500, AIME 2024/2025, AMC 2023, and procedural symbolic reasoning, CoBa-Routed-Strong reaches 85.13% macro accuracy, statistically matching a self-evaluation weighted-voting proxy at 85.20% while using 49.1% fewer parameter-weighted tokens. It also matches best-of-16 majority voting within 0.01 macro-accuracy points while using 58.9% fewer parameter-weighted tokens; paired tests retain a small best-of-16 edge at substantially higher cost. Paired bootstrap tests show significant gains over single-sample decoding, while the remaining gap to the pool oracle exposes headroom for sharper routing. For local reasoning systems, test-time scaling becomes a question of where the next computation is most valuable.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:12:13Z</published>
+    <arxiv:comment>11 pages, 7 figures; includes supplementary material. Preprint</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Laura Blecha</name>
+      <name>Yan Zhou</name>
     </author>
+    <author>
+      <name>Yue Ouyang</name>
+    </author>
+    <author>
+      <name>Kaiyang Zheng</name>
+    </author>
+    <author>
+      <name>Suncheng Xiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07423v1</id>
+    <title>Cloud-Boosted Low-Compute Multi-Channel Speech Enhancement</title>
+    <updated>2026-08-07T17:11:35Z</updated>
+    <link href="https://arxiv.org/abs/2608.07423v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07423v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Low-latency, low-compute speech enhancement is essential for wearable devices with real-time communication requirements, but strict computational constraints significantly limit on-device performance. Knowledge Boosting has been proposed as an effective approach to improve edge model performance by leveraging a more capable server-side model, but performance gains for speech enhancement have been limited. We propose a collaborative framework incorporating three techniques: (1) delayed server output as additional input, (2) layerwise feature boosting that transfers intermediate server representations to guide edge inference, and (3) collaborative multichannel Wiener filtering, which fuses weighted covariance matrices estimated from both server and edge models for improved beamforming. Experimental results demonstrate that the proposed collaborative framework significantly outperforms the edge-only baseline with minimal additional computational overhead.</summary>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:11:35Z</published>
+    <arxiv:comment>Accepted to Interspeech 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.SD"/>
+    <author>
+      <name>Xulin Fan</name>
+    </author>
+    <author>
+      <name>Juan Azcarreta</name>
+    </author>
+    <author>
+      <name>Ashutosh Pandey</name>
+    </author>
+    <author>
+      <name>Jesus Alvarez</name>
+    </author>
+    <author>
+      <name>Ke Tan</name>
+    </author>
+    <author>
+      <name>Jacob Donley</name>
+    </author>
+    <author>
+      <name>Ritwik Giri</name>
+    </author>
+    <author>
+      <name>Buye Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07420v1</id>
+    <title>Beyond Myopic World Models: Long-Horizon End-to-End Training for Direct Future Prediction</title>
+    <updated>2026-08-07T17:05:44Z</updated>
+    <link href="https://arxiv.org/abs/2608.07420v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07420v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>World models are expected to support imagination over extended temporal horizons, yet most are still trained through local few-step prediction objectives and deployed by recursively rolling out their own predictions. This creates a fundamental mismatch: few-step losses optimize local transition fidelity, while long-horizon prediction depends on how errors and gradients propagate through the entire trajectory. As a result, transitions with different downstream influence on the endpoint are treated uniformly during training, and small local errors are amplified through recursive inference. We argue that long-horizon accuracy is better achieved by optimizing directly, through an end-to-end endpoint prediction objective. To instantiate this paradigm, we introduce the Direct Prediction World Model (DPWM), a non-recursive architecture that compresses an action sequence of arbitrary length into a single embedding and predicts the endpoint observation in a single forward pass. This design avoids recurrent rollout in both prediction and gradient propagation, making long-horizon end-to-end training practical at horizons where unrolled autoregressive training becomes unstable. Empirically, DPWM substantially improves long-horizon endpoint prediction over recursive world-model baselines on continuous-control and pixel-based benchmarks, with larger gains as the prediction horizon increases. We further show that recurrent baselines benefit similarly when retrained with the same long-horizon endpoint objective, supporting our central claim that the training objective, rather than the particular backbone choice, is the main driver of long-horizon prediction accuracy. Our results suggest that world models can benefit from being trained and evaluated at the temporal scales where they are ultimately used, shifting the focus from local transition modeling toward long-horizon predictive accuracy.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:05:44Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xinyi Li</name>
+    </author>
+    <author>
+      <name>Zaishuo Xia</name>
+    </author>
+    <author>
+      <name>Chenjie Hao</name>
+    </author>
+    <author>
+      <name>Yubei Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07417v1</id>
+    <title>I Seek You in Videos: Identity-Conditioned Queries for Person-Centric Video Reasoning</title>
+    <updated>2026-08-07T17:02:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.07417v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07417v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real-world video reasoning often involves multimodal, multi-source inputs, whereas existing video reasoning tasks typically assume a simplified video-text setting, limiting identity matching and person-centric reasoning. To bridge this gap, we introduce the Identity-conditioned Queries (ICQ) task, in which models are required to jointly associate and interpret an input video and a reference image of a person, and leverage this conditioning to address identity grounding, behavior understanding, and temporal reasoning, among other challenges. Building on ICQ, we present ISYV (I Seek You in Videos), a systematic solution comprising three components: (1) ISYV-Bench, a challenging evaluation benchmark with 1,377 real-world complex videos and 1,377 question-answer pairs, organized into six difficulty levels spanning capabilities from identity recognition to causal reasoning; (2) ISYV-75K, a large-scale training set of 75K high-quality samples constructed via automated annotation, multi-stage verification, and manual review; and (3) ISYV-Framework, containing an ICQ-oriented model and training strategy for learning to exploit informative video shots without additional shot-level annotations. Extensive experiments show that both mainstream closed-source and open-source MLLMs struggle on ISYV-Bench, especially in cross-domain identity matching and long-horizon tracking. ISYV-Model outperforms strong baselines and in some aspects approaches closed-source performance. Overall, ISYV provides a unified task definition, scalable datasets/benchmarks, and modeling insights for person-centric video reasoning.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T17:02:02Z</published>
+    <arxiv:comment>Accepted to ACM Multimedia 2026 (MM '26). 6 figures, 5 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Shibo Gao</name>
+    </author>
+    <author>
+      <name>Chongxiao Wang</name>
+    </author>
+    <author>
+      <name>Chenglong Huang</name>
+    </author>
+    <author>
+      <name>Jie Ma</name>
+    </author>
+    <author>
+      <name>Haolin Shi</name>
+    </author>
+    <author>
+      <name>Fei Ding</name>
+    </author>
+    <author>
+      <name>Jing Li</name>
+    </author>
+    <author>
+      <name>Qiang Lyu</name>
+    </author>
+    <author>
+      <name>Yangyang Liu</name>
+    </author>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Jun Liu</name>
+    </author>
+    <author>
+      <name>Linlin Huang</name>
+    </author>
+    <author>
+      <name>Peipei Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07403v1</id>
+    <title>Topology Inference for Immune System Networks by Using Cell Amount Data</title>
+    <updated>2026-08-07T16:48:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.07403v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07403v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent years have witnessed the advanced development of topology inference research, which helps elucidate the interaction relationships of components in many biological networks. This paper focuses on inferring the topology of a group of immune cells, based on the collected data from cell-depletion based experiments. The problem is very challenging due to i) the lack of standard analytical models for the cell interactions, and ii) the restrictive data availability determined by the huge experiment and time costs. To address these issues, we first leverage certain common knowledge and observations on the experiments to characterize three properties on the cell amounts during the interaction process: state non-negativity, ratio-based convergence, and triple signs of topology weights. Then, we construct a new model with simple structure and analytical convenience, and obtain sufficient conditions for the model to accommodate all three properties. Finally, based on the constructed model, we propose a constrained quadratic programming method to infer the topology from limited number of data pairs. Validation on experiment data demonstrate the effectiveness of the proposed method.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T16:48:26Z</published>
+    <arxiv:comment>Accepted by IFAC World Congress 2026</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Yushan Li</name>
+    </author>
+    <author>
+      <name>Rikard Forlin</name>
+    </author>
+    <author>
+      <name>Dimos V. Dimarogonas</name>
+    </author>
+    <author>
+      <name>Petter Brodin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07398v1</id>
+    <title>Uncovering expert objectives in production planning via inverse optimization: An industrial case study</title>
+    <updated>2026-08-07T16:41:30Z</updated>
+    <link href="https://arxiv.org/abs/2608.07398v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07398v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Production planning in the manufacturing industry often relies on the use of optimization models, but defining an appropriate objective function can be a challenge. In practice, planners must balance competing goals, manage uncertainty, and account for qualitative business preferences that are difficult to quantify. As a result, many optimization models fail to match expert behavior, limiting trust and adoption. In this work, we propose a data-driven inverse optimization framework to infer the objective function implicitly captured in expert planners' decisions. We formulate the production planning problem as a mixed-integer linear program, where the unknown objective function is represented as a weighted sum of hypothesized cost terms. A suboptimality-loss-based inverse optimization method is then applied to learn the objective weights from historical production plans. The proposed approach is applied to a real industrial case provided by Dow, where the inferred weights reveal that avoiding inventory shortages and maintaining consistent cycle lengths dominate the planners' decision-making. Time- and product-dependent extensions further improve predictive accuracy and uncover evolving priorities. Expert interviews confirm the practical validity of these insights. Overall, this study shows that inverse optimization can transform tacit human expertise into interpretable models, enabling more accurate and trusted decision-support tools for complex industrial systems.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T16:41:30Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <arxiv:journal_ref>Chemical Engineering Research and Design, 2026</arxiv:journal_ref>
+    <author>
+      <name>Shivi Dixit</name>
+    </author>
+    <author>
+      <name>Rishabh Gupta</name>
+    </author>
+    <author>
+      <name>Adam Kelloway</name>
+    </author>
+    <author>
+      <name>John Wassick</name>
+    </author>
+    <author>
+      <name>Qi Zhang</name>
+    </author>
+    <arxiv:doi>10.1016/j.cherd.2026.07.065</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cherd.2026.07.065" title="doi"/>
   </entry>
 </feed>
