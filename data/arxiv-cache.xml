@@ -1,490 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-08-19T00:39:57Z -->
+<!-- Last updated: 2026-08-20T00:39:53Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-08-19T00:39:57Z</updated>
+  <updated>2026-08-20T00:39:53Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>156182</opensearch:totalResults>
+  <opensearch:totalResults>156297</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2608.16888v1</id>
-    <title>Q-based Variational Inverse Reinforcement Learning</title>
-    <updated>2026-08-17T17:59:55Z</updated>
-    <link href="https://arxiv.org/abs/2608.16888v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16888v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The development of safe and beneficial AI requires that systems can learn and act in accordance with human preferences. However, explicitly specifying these preferences by hand is often infeasible. Inverse reinforcement learning (IRL) addresses this challenge by inferring preferences, represented as reward functions, from expert behaviour. We introduce Q-based Variational IRL (QVIRL), a novel Bayesian IRL method that recovers a posterior distribution over rewards from expert demonstrations via primarily learning a variational distribution over optimal Q-values. Unlike previous approaches, QVIRL combines scalability with uncertainty quantification, important for safety-critical applications as well as active learning. We demonstrate QVIRL's strong performance in apprenticeship learning across various tasks, including gridworlds, Lunar Lander, the Highway Environment, and two ATARI games both with static expert data and with active learning. It is the first method for Bayesian IRL that demonstrates training from raw pixel observations.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:59:55Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Ondrej Bajgar</name>
-    </author>
-    <author>
-      <name>Peter Tisnikar</name>
-    </author>
-    <author>
-      <name>Alessandro Abate</name>
-    </author>
-    <author>
-      <name>Konstantinos Gatsis</name>
-    </author>
-    <author>
-      <name>Maike Osborne</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16887v1</id>
-    <title>An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models</title>
-    <updated>2026-08-17T17:59:25Z</updated>
-    <link href="https://arxiv.org/abs/2608.16887v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16887v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>This paper investigates an increasingly important topic in generative modeling: pixel-space diffusion models. Although numerous studies have explored this topic, most focus on small-scale or class-conditional settings. Consequently, a practical recipe for training pixel-space models that rival or exceed well-established latent-space counterparts remains elusive. Through a comprehensive empirical study, we first observe that direct large-scale pre-training in pixel space converges substantially more slowly than in latent space. This observation motivates a latent-to-pixel strategy that acquires generative priors efficiently in latent space and transitions to pixel space during post-training. We then systematically investigate the key design choices governing this transition, including weight initialization, data composition, prediction target, decoder architecture, and noise schedule, and identify a practical recipe that makes the resulting pixel-space models match or outperform their latent-space counterparts while delivering 3.18 to 4.75 times end-to-end inference speedups. We hope that our findings provide useful empirical insights and practical guidelines for future research on pixel-space generation.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:59:25Z</published>
-    <arxiv:comment>Z-Image-Pixel &amp; Empirical Insight of Training Pixel-Space Diffusion Models</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Dengyang Jiang</name>
-    </author>
-    <author>
-      <name>Ruoyi Du</name>
-    </author>
-    <author>
-      <name>Zhennan Chen</name>
-    </author>
-    <author>
-      <name>Dongyang Liu</name>
-    </author>
-    <author>
-      <name>Zanyi Wang</name>
-    </author>
-    <author>
-      <name>Mingzhe Zheng</name>
-    </author>
-    <author>
-      <name>Xiangpeng Yang</name>
-    </author>
-    <author>
-      <name>Huanqia Cai</name>
-    </author>
-    <author>
-      <name>Aiming Hao</name>
-    </author>
-    <author>
-      <name>Yuming Jiang</name>
-    </author>
-    <author>
-      <name>Peng Gao</name>
-    </author>
-    <author>
-      <name>Harry Yang</name>
-    </author>
-    <author>
-      <name>Steven Hoi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16885v1</id>
-    <title>$τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation</title>
-    <updated>2026-08-17T17:59:11Z</updated>
-    <link href="https://arxiv.org/abs/2608.16885v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16885v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices. We introduce $τ_0$-VLA, a hierarchical robot foundation model that formulates high-level subtask generation as a compute-scalable inference problem through world-model-guided test-time computation. At each inference step, the high-level policy uses execution memory to generate a subtask and, when needed, searches over alternatives before committing to its output. A low-level policy then executes the generated subtask across multiple robot embodiments. The policy is trained on 40,115 hours of heterogeneous real-world data with multimodal co-training. Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:59:11Z</published>
-    <arxiv:comment>18 pages, 5 figures. Project page: https://tau0-vla.github.io/</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Xiaowei Cai</name>
-    </author>
-    <author>
-      <name>Yunuo Cai</name>
-    </author>
-    <author>
-      <name>Bingao Chen</name>
-    </author>
-    <author>
-      <name>Jingxiao Chen</name>
-    </author>
-    <author>
-      <name>Zhi Chen</name>
-    </author>
-    <author>
-      <name>Siyuan Feng</name>
-    </author>
-    <author>
-      <name>Tengyu Hou</name>
-    </author>
-    <author>
-      <name>Jingshun Huang</name>
-    </author>
-    <author>
-      <name>Han Jiang</name>
-    </author>
-    <author>
-      <name>Runkun Ju</name>
-    </author>
-    <author>
-      <name>Dong Li</name>
-    </author>
-    <author>
-      <name>Mingxiang Li</name>
-    </author>
-    <author>
-      <name>Shaowei Li</name>
-    </author>
-    <author>
-      <name>Xinchen Li</name>
-    </author>
-    <author>
-      <name>Yifan Li</name>
-    </author>
-    <author>
-      <name>Yi Liu</name>
-    </author>
-    <author>
-      <name>Zhongyuan Liu</name>
-    </author>
-    <author>
-      <name>Jianlan Luo</name>
-    </author>
-    <author>
-      <name>Junwen Miao</name>
-    </author>
-    <author>
-      <name>Ruiqi Ni</name>
-    </author>
-    <author>
-      <name>Buqing Nie</name>
-    </author>
-    <author>
-      <name>Mingjie Pan</name>
-    </author>
-    <author>
-      <name>Xinlin Ren</name>
-    </author>
-    <author>
-      <name>Jianheng Song</name>
-    </author>
-    <author>
-      <name>Jiaxu Wang</name>
-    </author>
-    <author>
-      <name>Peiqi Wang</name>
-    </author>
-    <author>
-      <name>Sen Wang</name>
-    </author>
-    <author>
-      <name>Xiaoyan Wang</name>
-    </author>
-    <author>
-      <name>Dafeng Wei</name>
-    </author>
-    <author>
-      <name>Dongming Wu</name>
-    </author>
-    <author>
-      <name>Pengwei Xie</name>
-    </author>
-    <author>
-      <name>Pu Yang</name>
-    </author>
-    <author>
-      <name>Hangjian Ye</name>
-    </author>
-    <author>
-      <name>Xiangyu Yue</name>
-    </author>
-    <author>
-      <name>Jinyu Zhang</name>
-    </author>
-    <author>
-      <name>Qinglin Zhang</name>
-    </author>
-    <author>
-      <name>Xueyong Zhao</name>
-    </author>
-    <author>
-      <name>Pengfei Zhou</name>
-    </author>
-    <author>
-      <name>Yue Zhou</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16873v1</id>
-    <title>An Analytical-Prior Framework for Data-Efficient Prediction of Sound-Reduction Frequencies in Rectangular Side-Branch Helmholtz Resonators</title>
-    <updated>2026-08-17T17:53:14Z</updated>
-    <link href="https://arxiv.org/abs/2608.16873v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16873v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>High-fidelity finite-element simulations can provide accurate numerical predictions for side-branch resonators, but large simulation datasets are expensive to generate and purely data-driven surrogates may become unreliable when simulation-labelled data are scarce. This study develops an analytical-prior learning framework that reuses a low-cost analytical model to improve data efficiency under limited high-fidelity simulation budgets. Two complementary routes are considered. When the analytical model remains available at inference, it is retained as an explicit baseline and the simulation data are used to learn only the analytical-to-simulation discrepancy. When a self-contained predictor is required, the analytical mapping is first distilled from abundant low-cost evaluations into a learned prior and then calibrated with the limited simulation data. The framework is evaluated on rectangular side-branch Helmholtz resonators using 86 simulation-labelled geometries and 8,998 non-overlapping analytical-only geometries. The analytical model achieved a mean absolute error (MAE) of 1.333 Hz. Direct support vector regression (SVR) achieved 3.375 Hz, while residual SVR reduced the MAE to 0.426 Hz. A direct multilayer perceptron (MLP) achieved 1.109 Hz, whereas analytical-prior pretraining reduced the error to 0.556 Hz with frozen-prior residual adaptation and 0.371 Hz with full-model fine-tuning. Across training budgets of 20 to 70 simulation-labelled cases, both analytical correction and analytical-prior pretraining consistently improved data efficiency relative to direct learning. These results show that analytical prior information can substantially improve high-fidelity prediction when simulation data are scarce, with explicit correction and prior distillation serving complementary deployment needs.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:53:14Z</published>
-    <arxiv:comment>13 pages, 5 figures, 1 table</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Jiaming Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16872v1</id>
-    <title>Impression Share Prediction: An Offline Evaluation Task for Ranking Systems</title>
-    <updated>2026-08-17T17:52:55Z</updated>
-    <link href="https://arxiv.org/abs/2608.16872v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16872v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Offline evaluation is a major gateway before online evaluation of ranking models in A/B testing. Standard offline metrics measure predictive accuracy, but are only a surrogate for downstream utility: a model can improve them while redistributing impressions across objective buckets in ways that degrade downstream utility. No offline method surfaces these impression share shifts before online evaluation. We propose \emph{impression share prediction} as an offline evaluation task: given a candidate ranking model, predict the distribution of impressions it would produce across objective buckets - impressions grouped by optimization goal (e.g., click, video view). The task is inherently counterfactual, since the candidate has never served live traffic. We propose a structural causal model of how model predictions and delivery capacity jointly determine impression allocation, and show the counterfactual effect is identified from observational data. Building on this, we develop a statistical learning framework that predicts impression shares from a candidate's early-interaction confidence signals and current system state, trained on historical data. On data from multiple ranking model families, a Random Forest reduces L1 error by 49\% over a constant baseline for models seen during training. For held-out models, evaluated by time since first appearance, the first hour is the closest analog to true online evaluation and the hardest: the Random Forest falls below the baseline because the capacity state still reflects the prior model. An encoder-conditioned architecture that simulates a 2-hour rollout over recent auction dynamics recovers $+$22\% L1 in this regime.</summary>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:52:55Z</published>
-    <arxiv:primary_category term="cs.IR"/>
-    <author>
-      <name>Mohsen Malmir</name>
-    </author>
-    <author>
-      <name>Houssam Nassif</name>
-    </author>
-    <author>
-      <name>Danish Nasir Shaikh</name>
-    </author>
-    <author>
-      <name>Taher Rahgooy</name>
-    </author>
-    <author>
-      <name>Murat Ali Bayir</name>
-    </author>
-    <arxiv:doi>10.1145/3773078.3831809</arxiv:doi>
-    <link rel="related" href="https://doi.org/10.1145/3773078.3831809" title="doi"/>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16870v1</id>
-    <title>Data-Efficient and Interpretable Classification of Circulating Tumor Cell Phenotypes in Microfluidic Devices via Deep Learning</title>
-    <updated>2026-08-17T17:51:49Z</updated>
-    <link href="https://arxiv.org/abs/2608.16870v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16870v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Accurate classification of circulating tumor cell (CTC) phenotypes can provide valuable information for assessing metastatic potential. Label free microfluidic devices provide a hydrodynamic obstacle course that transforms subtle biophysical characteristics of CTCs, including size and deformability, into distinct kinematic trajectories. However, the highly nonlinear fluid structure interactions governing these trajectories make the inverse problem of inferring cellular phenotype from trajectory data analytically intractable. While deep neural networks (DNNs) have emerged as a powerful approach for addressing this inverse problem, their effectiveness is constrained by the limited availability of trajectory data and the lack of physical interpretability.
-  To address these challenges, we propose an interpretable and data efficient DNN framework for trajectory based CTC classification. To mitigate the scarcity of data, we develop Subsequence (SubSeq), a targeted augmentation strategy that randomly extracts informative local trajectory segments during training to promote learning from localized patterns. We further apply Gradient Weighted Class Activation Mapping to identify the trajectory features and physical regions of the microfluidic device that drive model predictions. Experimental results demonstrate that SubSeq improves classification accuracy over the evaluated baseline and augmentation methods. Furthermore, interpretability analysis suggests that localized trajectory segments contain substantial biophysical information relevant to accurate classification. This provides justification for SubSeq and also highlights the redundancy of full-length trajectories. More broadly, the proposed framework views microfluidic geometries as physical encoders of cellular mechanical properties, providing mechanistic insights that may inform the future design of diagnostic devices.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:51:49Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Serena Su</name>
-    </author>
-    <author>
-      <name>Yifan Wang</name>
-    </author>
-    <author>
-      <name>Senwei Liang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16868v1</id>
-    <title>Towards Computational Provenance: Carrying Causal-State Evidence in Generated Text</title>
-    <updated>2026-08-17T17:50:04Z</updated>
-    <link href="https://arxiv.org/abs/2608.16868v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16868v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>A language model's output does not by itself provide verifiable evidence about the internal computation that produced it. We study computational provenance: whether generated text can carry detectable evidence of which causally relevant internal state occurred. We test a bounded form of this idea in two controlled architectures: a modular feed-forward neural network and a transformer-based model. Both architectures are trained on the same arithmetic task with a mandatory pathway through two discrete intermediate states, allowing different internal paths to produce the same answer. We deliberately switch between these paths, authenticate the state actually used, and let that verified state determine a subtle statistical pattern in the generated text that can later be detected. The feed-forward and transformer systems each passed all 128 matched pairs in both their public and separately sealed protected end-to-end evaluations, with the detector recovering the signal associated with the authenticated internal state. The required causal computation also reproduced across five independently trained feed-forward models and three independently trained transformers. In a separate answer-only transformer experiment, our linear probes did not recover a naturally learned intermediate state. These results provide a controlled proof of concept that information about a verified, causally relevant internal state can be preserved in generated text even when the answer is unchanged.</summary>
+    <id>http://arxiv.org/abs/2608.18041v1</id>
+    <title>Language Has Two Parameters: Narrative-Induced Semantic Plasticity and Phase-Sensitive Interpretation</title>
+    <updated>2026-08-18T17:34:25Z</updated>
+    <link href="https://arxiv.org/abs/2608.18041v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18041v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Language has two parameters. Count how often words occur together and you estimate amplitude, the strength of association. Word embeddings and attention weights refine that count, which sums every writer in the corpus together. This paper claims a second parameter, phase, which signed weights learned from a corpus do not supply. Phase exists only between meanings: it determines how coactivated meanings combine, and it can reverse what a meaning contributes while that meaning stays fully present. A speaker can set phase in the signal through linguistic form; encounters install phase relations and history distributes them. Population averaging deletes history-indexed phase: agent-deindexed corpora identify the population marginal state and determine no individual or dyadic state, at any scale. The standard transformer has no explicit representation for phase in frozen inference, and the interpretability program measuring progress by monosemanticity is optimizing against it: the coexistence it treats as a defect is the condition of allusion, irony, and quotation. Six predictions test whether a suppressed meaning stays active, whether encounter order changes what a phrase does, whether marking the signal changes how a shared phrase is taken, and whether a model given a history is changed by it or only informed about it. The claim defended is the weak version: interpretation requires a second relational parameter, signed, persistent, and indexed to individuals and dyads. Quantum probability is one notation for the parameter; nothing in the formalism claims quantum processes in the brain. The strong version, that the quantum calculus constrains these phenomena as signed classical models do not, rests on an encounter-order constraint not yet derived. The architecture the theory calls for is a language model with agent-indexed, phase-bearing semantic states.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:50:04Z</published>
-    <arxiv:comment>16 pages, 1 figure, 7 tables</arxiv:comment>
+    <published>2026-08-18T17:34:25Z</published>
+    <arxiv:comment>23 pages; 0 figuresCC</arxiv:comment>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Benjamin Belay</name>
+      <name>Hollis Robbins</name>
+      <arxiv:affiliation>University of Utah</arxiv:affiliation>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.16859v1</id>
-    <title>HarnessEval-W: Agentifying the Evaluation of Visual Worlds</title>
-    <updated>2026-08-17T17:43:24Z</updated>
-    <link href="https://arxiv.org/abs/2608.16859v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16859v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollout requires understanding whether physics, causality, and world state evolve correctly. Humans spot such violations naturally, yet no existing benchmark automates this capability: metrics are computed brute-force, leaving no reasoning chain that can be examined or verified. We introduce HarnessEval-W, an agentified evaluation pipeline that brings the harness paradigm from the LLM ecosystem to world model benchmarking. Rather than applying a fixed rubric, HarnessEval-W interprets the context of each evaluation case, decomposes the evaluation question into measurable subproblems, and spawns specialized sub-agents, each equipped with tailored context and diagnostic tools to reason over its own subproblem. The parent agent then validates the gathered evidence and summarizes it into the final verdict. This hierarchical workflow turns every evaluation into a transparent evidence tree whose complete reasoning chain justifies the result. We apply HarnessEval-W to 18 representative world models over 330 evaluation cases. Its judgments closely align with human preferences while providing verifiable, fine-grained diagnoses of every generated rollout. We open-source the full pipeline as a live benchmark and invite the broad community to contribute to grow new skills and evaluation cases as world models evolve.</summary>
+    <id>http://arxiv.org/abs/2608.18040v1</id>
+    <title>Optimize Your Sampling: Tuned Diffusion Sampling with Bayesian Optimization</title>
+    <updated>2026-08-18T17:33:00Z</updated>
+    <link href="https://arxiv.org/abs/2608.18040v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18040v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sampling from a diffusion model typically requires many forward passes through a large neural network, making generation computationally expensive. While much work has focused on efficient solvers and samplers, comparatively little attention has been paid to selecting the sampling timesteps themselves. A recent line of work optimizes theoretically derived surrogates for sample quality rather than the quality metric itself. We propose Optimizing Your Sampling (OYS), which instead treats timestep selection as a black-box optimization problem, optimizing the target metric directly with Bayesian optimization. OYS outperforms both the default schedules and those of Align Your Steps on text-to-image generation, and improves over the default schedules on inpainting and other image tasks, in both quantitative and human evaluations. OYS requires no additional training, is applicable even to distilled models, and improves both simple and sophisticated samplers such as Euler and DPM-Solver++. A 5-step OYS schedule retains 89%-94% of the quality of a 50-step schedule while reducing inference cost by 10x.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:43:24Z</published>
-    <arxiv:comment>Project Page: https://mirros-lab.github.io/HarnessEval-W</arxiv:comment>
+    <published>2026-08-18T17:33:00Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Travis Zhang</name>
+    </author>
+    <author>
+      <name>Christian Belardi</name>
+    </author>
+    <author>
+      <name>Justin Lovelace</name>
+    </author>
+    <author>
+      <name>Jin Peng Zhou</name>
+    </author>
+    <author>
+      <name>Saebyeol Shin</name>
+    </author>
+    <author>
+      <name>Carla P. Gomes</name>
+    </author>
+    <author>
+      <name>Kilian Q. Weinberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18029v1</id>
+    <title>Minimizing Commit Rules for DAG-based Atomic Broadcast</title>
+    <updated>2026-08-18T17:23:29Z</updated>
+    <link href="https://arxiv.org/abs/2608.18029v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18029v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A popular class of Byzantine fault-tolerant atomic broadcast protocols rely on directed acyclic graphs (DAGs) that represent causal relations between broadcast messages. Each process applies a protocol-specific \emph{commit rule} on its local DAG to determine which vertices can be delivered in a total order. Intuitively, commit rules that impose fewer conditions on the DAG to order its vertices imply more efficient protocols, as the broadcast messages are delivered with lower latency.
+  In this paper, we define commit rules on an uncertified round-based DAG construction, and introduce a sub-rule relation between them: a commit rule $cr_1$ is a sub-rule of a commit rule $cr_2$ if, for any DAG, the set of vertices committed by $cr_1$ contains all vertices committed by $cr_2$. We use the sub-rule relation to determine a minimal commit rule in an eventually synchronous model and a minimal commit rule in an asynchronous model, namely, two commit rules that require the least conditions on the DAG to safely commit any set of vertices in their respective models. To the best of our knowledge, no existing DAG-based atomic broadcast protocol relies on such minimal commit rules: we introduce \emph{Minnow}, a new protocol for DAG-based atomic broadcast, which can be instantiated in both eventually synchronous (S-Minnow) and asynchronous networks (A-Minnow).</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T17:23:29Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Petr Kuznetsov</name>
+    </author>
+    <author>
+      <name>Maxence Perion</name>
+    </author>
+    <author>
+      <name>Sara Tucci-Piergiovanni</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18027v1</id>
+    <title>Chain-of-Experience for Continual LLM Improvement</title>
+    <updated>2026-08-18T17:22:54Z</updated>
+    <link href="https://arxiv.org/abs/2608.18027v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18027v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Humans continuously learn from experience, whereas conventional large language model (LLM) evaluations ignore the models' ability to improve through inference-time interaction. In this paper, we study how LLMs learn from iterative experience at test time, a setting we refer to as Chain-of-Experience (CoE), where models accumulate experiential traces through iterative interactions with self or environmental feedback to form a continual improvement loop beyond zero-shot inference. We instantiate CoE with diverse feedback mechanisms, including model self-feedback and environmental signals such as correctness or public coding test pass rates, and evaluate across math, coding, and knowledge domains using 8 LLMs, including GPT-5, Gemini-2.5 Pro, Claude-4.5 Sonnet. Our study shows that leveraging iterative experience consistently outperforms feedback-free baselines, achieving substantial gains with self feedback alone, alongside a 5.6% overall improvement and 19% lower API cost across tasks and models. We further show that combining complementary feedback channels (e.g., model and correctness signals) yields additional gains, and that CoE delivers higher accuracy per token than existing test-time strategies. We observe a positive correlation between LLM base ability and improvement capacity, and show that models remain robust under weak or spurious feedback, with different feedback contributing to distinct improvement aspects and most gains emerging early in the iterations.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T17:22:54Z</published>
+    <arxiv:comment>H.T. and Y.F. contributed to this work equally</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Haoqin Tu</name>
+    </author>
+    <author>
+      <name>Yunhao Fang</name>
+    </author>
+    <author>
+      <name>Yizhong Wang</name>
+    </author>
+    <author>
+      <name>Cihang Xie</name>
+    </author>
+    <author>
+      <name>Shen Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18019v1</id>
+    <title>Ordered Diffusion Kernels</title>
+    <updated>2026-08-18T17:12:17Z</updated>
+    <link href="https://arxiv.org/abs/2608.18019v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18019v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Ordered Diffusion Kernels (ODKs), a novel class of local kernels that can approximate the infinitesimal generator of an arbitrary Itô Stochastic Differential Equation (SDE). ODKs are designed to be applied to data sampled from dynamical systems where little dynamical information is available a priori. The Laplacian of classical diffusion kernels approximates the Laplace-Beltrami operator on the underlying manifold; adjusting the normalisation introduces an advection term that depends on the sampling density; recently, TMDmap generalised this normalisation to target an arbitrary measure, but at the cost of coupling advection to diffusion. More general local kernels can learn arbitrary second-order elliptic operators but are formulated in terms of known velocity fields --- making the first step of any analysis a potentially ill-posed inference problem. To formulate ODK, we first relax the problem of potential estimation to the more tractable task of inferring an ordering of the data, which we represent through an ordering function. We prove ODK's Laplacian converges to the infinitesimal generator of a gradient-flow SDE with state-dependent isotropic diffusion, without coupling advection and diffusion. We provide various extensions of ODK to: arbitrary drifts via local ordering functions; anisotropic diffusions via a Strang splitting scheme; multiple ordering functions; and self-tuning bandwidths. In addition, we introduce two loss functions which exploit the structure of ODKs to solve a non-parametric inference problem. We validate this framework on synthetic data from deterministic and stochastic systems, demonstrating accurate recovery of operators, velocity fields, extrinsic curvature, and spatially dependent drift and diffusion coefficients.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T17:12:17Z</published>
+    <arxiv:comment>46 pages, 7 figures, 46 page appendix, related to work presented at ECMTB26</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Jack H. Soulsby</name>
+    </author>
+    <author>
+      <name>Andreas C. S. Jørgensen</name>
+    </author>
+    <author>
+      <name>Atiyo Ghosh</name>
+    </author>
+    <author>
+      <name>Vahid Shahrezaei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18018v1</id>
+    <title>Scalable Heteroskedastic Gaussian Process Models for Large Inhomogeneous Datasets</title>
+    <updated>2026-08-18T17:11:44Z</updated>
+    <link href="https://arxiv.org/abs/2608.18018v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18018v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Heteroskedastic Normalized Vecchia Gaussian Processes (HetNV), a scalable framework for Gaussian process regression with input-dependent observation noise. HetNV combines Vecchia likelihood approximations on normalized inputs with residual-based nonparametric variance estimation. The latent mean is estimated via a Vecchia GP with observation-specific nugget variances, while the log noise variance is obtained by smoothing stabilized log-squared residual pseudo-responses that account for kriging uncertainty and current nugget estimates, using LOESS in one dimension and thin plate spline generalized additive models in two dimensions. The method alternates between mean and variance updates, avoiding latent-variable inference for the variance process. For fixed neighborhood size ($m$) and number of observations ($n$), the dominant per-iteration cost is the Vecchia update, scaling as $O(nm^2)$. Simulation studies show improved recovery of input-dependent uncertainty relative to homoskedastic Vecchia models while maintaining competitive mean prediction accuracy, with additional gains in two-dimensional mean estimation. An application to spacecraft plasma measurements demonstrates how locally adaptive uncertainty estimates influence downstream signal-detection decisions in large, noisy, heteroskedastic settings.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T17:11:44Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>K. Potter</name>
+    </author>
+    <author>
+      <name>K. R. Moran</name>
+    </author>
+    <author>
+      <name>R. Ulrich</name>
+    </author>
+    <author>
+      <name>D. C. Stenning</name>
+    </author>
+    <author>
+      <name>D. Bingham</name>
+    </author>
+    <author>
+      <name>L. Castro</name>
+    </author>
+    <author>
+      <name>G. Wilson</name>
+    </author>
+    <author>
+      <name>C. A. Maldonado</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18017v1</id>
+    <title>Can Large Language Models Explain Flight Safety Events? A Prior-Guided Semantic LLM-based Approach</title>
+    <updated>2026-08-18T17:11:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.18017v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18017v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Improving flight safety with flight data requires not only accurate detection of risk events, but more importantly, clear interpretation of their underlying causes at the level of pilot control behavior. Existing explainable AI techniques, such as feature importance maps, often require considerable domain knowledge to translate them into operationally meaningful explanations. Large Language Models (LLMs), which excel at language reasoning, bring a promising solution to this issue. However, applying LLMs in this domain presents key challenges such as modal inconsistency, limited classification ability, scarcity of task-specific data for fine-tuning, and lack of domain knowledge. To overcome these challenges, we propose FlightLLM, a prior-guided semantic LLM-based approach for interpretable flight safety analysis. Specifically, we first perform feature engineering to address modal inconsistency, combining statistical descriptors with physically meaningful flight indicators. This representation is further processed by a Semantic Discretization module, which converts abstract numerical patterns into qualitative descriptions that are more compatible with language reasoning. In addition, since LLMs are not inherently strong classifiers, CatBoost is incorporated as a statistical expert, and its prediction results are injected into the prompt as prior guidance. A contrastive few-shot learning strategy is further adopted to compensate for limited data. Finally, we design structured prompts to embed aviation-specific knowledge into the inference process. Using hard landing, a representative risk event with complex causal mechanisms, as an anchor point, we evaluate FlightLLM on a dataset of 704 real-world A320 flight samples. Experimental results show that the proposed approach achieves competitive classification performance while generating direct and reasonable explanations for event causes.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T17:11:40Z</published>
+    <arxiv:comment>14 pages, 6 figures, submitted to IEEE Transactions on Intelligent Transportation Systems</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Lu Xu</name>
+    </author>
+    <author>
+      <name>Xu Li</name>
+    </author>
+    <author>
+      <name>Linjiang Zheng</name>
+    </author>
+    <author>
+      <name>Fan Li</name>
+    </author>
+    <author>
+      <name>Riquan Zhang</name>
+    </author>
+    <author>
+      <name>Jiaxing Shang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18010v1</id>
+    <title>Gisin's Argument and the Limits of Causal Explanations in Relativistic Spacetime</title>
+    <updated>2026-08-18T16:57:33Z</updated>
+    <link href="https://arxiv.org/abs/2608.18010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gisin has provided an argument for the conclusion that no covariant nonlocal model can reproduce the operational statistics observed in Bell experiments. Gisin's argument applies only to deterministic models and we argue that proposed generalizations of the argument beyond determinism based solely on statistical notions are unconvincing, as they lack the resources to formulate a satisfactory notion of no-retrocausality. We introduce the framework of frame-indexed causal models in order to extend Gisin's argument to the genuinely probabilistic case. Frame-indexed causal models associate potentially different causal models with different reference frames while requiring corresponding operational variables to agree runwise. Within this framework, we establish two no-go results based on Gisin's argument. First, we show that no empirically adequate frame-indexed causal model can jointly satisfy Independent Settings, No-Retrocausality, and Causal Lorentz Invariance. Second, it is established that this result continues to hold when Causal Lorentz Invariance is weakened to Lorentz Invariance of Causal Connections, which requires only the skeleton of the causal structure to remain invariant, thereby allowing the direction of causal influence to depend on the choice of reference frame. These results are discussed in the context of relativistic interpretations of quantum theory and nonclassical causal inference.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T16:57:33Z</published>
+    <arxiv:comment>13 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Felix J. Rutzinger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18009v1</id>
+    <title>Memory Tree Guided Key Frame Querying for Efficient 3D Question Answering</title>
+    <updated>2026-08-18T16:56:35Z</updated>
+    <link href="https://arxiv.org/abs/2608.18009v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18009v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Answering questions accurately and efficiently in embodied scenarios presents significant challenges due to limited computational and memory resources for Vision Language Model (VLM) inference. Existing methods adopt visual search key frame retrieval method to select critical question-related key frames for VLM input. However, visual search methods are inefficient because they require visual search among thousands of video frames for each individual user query. In this work, we propose a memory tree guided key frame selection paradigm for efficient 3D question answering in embodied scenarios. Our method leverages a compact and reusable 3D scene representation, termed MemTree3D, which supports real-time online construction leveraging camera 6-DoF poses. MemTree3D captures multi-level 3D scene information, enabling a Large Language Model to efficiently query and retrieve question-relevant key frames through our scoring-based frame selection without reprocessing the entire video stream. On OpenEQA, our method improves the LLM-Match of GPT-4o by 17.4%, LLaVA-OneVision-7B by 5.8%, outperforms existing visual search methods. Our code is available at https://github.com/hsiangwei0903/MemTree3D</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T16:56:35Z</published>
+    <arxiv:comment>ECCV 2026</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Weiliang Chen</name>
+      <name>Hsiang-Wei Huang</name>
     </author>
     <author>
-      <name>Haowen Sun</name>
+      <name>Fu-Chen Chen</name>
     </author>
     <author>
-      <name>Jun Gao</name>
+      <name>Li-Wu Tsao</name>
     </author>
     <author>
-      <name>Jiawei Chi</name>
+      <name>Cheng-Han Lee</name>
     </author>
     <author>
-      <name>Hanyang Wang</name>
+      <name>Che-Chun Su</name>
     </author>
     <author>
-      <name>Qiyu Dai</name>
+      <name>Lu Xia</name>
     </author>
     <author>
-      <name>Yihao Li</name>
+      <name>Ronghui Peng</name>
     </author>
     <author>
-      <name>Hao Li</name>
+      <name>Jenq-Neng Hwang</name>
     </author>
     <author>
-      <name>Jingnan Gao</name>
+      <name>Min Sun</name>
     </author>
     <author>
-      <name>Yi-Hsin Hung</name>
-    </author>
-    <author>
-      <name>Xingzhuo Guo</name>
-    </author>
-    <author>
-      <name>Shangchen Miao</name>
-    </author>
-    <author>
-      <name>Zhiyuan Shi</name>
-    </author>
-    <author>
-      <name>Xiang Li</name>
-    </author>
-    <author>
-      <name>Fengrui Tian</name>
-    </author>
-    <author>
-      <name>Weihua Du</name>
-    </author>
-    <author>
-      <name>Ziqi Huang</name>
-    </author>
-    <author>
-      <name>Shenyuan Gao</name>
-    </author>
-    <author>
-      <name>Siqiao Huang</name>
-    </author>
-    <author>
-      <name>Mingyu Liu</name>
-    </author>
-    <author>
-      <name>Yifei Li</name>
-    </author>
-    <author>
-      <name>Shizun Wang</name>
-    </author>
-    <author>
-      <name>Xi Wang</name>
-    </author>
-    <author>
-      <name>Tianqi Zhang</name>
-    </author>
-    <author>
-      <name>Xue Luo</name>
-    </author>
-    <author>
-      <name>Xiyin Ren</name>
-    </author>
-    <author>
-      <name>Jinshan Ren</name>
-    </author>
-    <author>
-      <name>Xiaoyang Shen</name>
-    </author>
-    <author>
-      <name>Xiaobo Hu</name>
-    </author>
-    <author>
-      <name>Zhiyang Dou</name>
-    </author>
-    <author>
-      <name>Mingyu Ding</name>
-    </author>
-    <author>
-      <name>Yichao Yan</name>
-    </author>
-    <author>
-      <name>Xinchao Wang</name>
-    </author>
-    <author>
-      <name>Yizhou Wang</name>
-    </author>
-    <author>
-      <name>Shilong Liu</name>
-    </author>
-    <author>
-      <name>Wenzhao Zheng</name>
-    </author>
-    <author>
-      <name>Yueqi Duan</name>
-    </author>
-    <author>
-      <name>Yuan Gong</name>
-    </author>
-    <author>
-      <name>Ziwei Liu</name>
-    </author>
-    <author>
-      <name>Ming-Yu Liu</name>
-    </author>
-    <author>
-      <name>Jialong Wu</name>
-    </author>
-    <author>
-      <name>Jiangran Lyu</name>
-    </author>
-    <author>
-      <name>Fangfu Liu</name>
+      <name>Cheng-Hao Kuo</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.16856v1</id>
-    <title>zLend: A Dual-Scope Cash-Flow Reconstruction Framework for On-Chain Credit Underwriting</title>
-    <updated>2026-08-17T17:39:05Z</updated>
-    <link href="https://arxiv.org/abs/2608.16856v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16856v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Decentralized lending lacks a credit bureau: a borrower's capacity to repay must be inferred entirely from public on-chain activity, without income verification or a liability record. This paper presents zLend, a deployed cash-flow underwriting framework that reconstructs a wallet's daily balance history from raw token transfers and derives short-duration repayment-capacity signals from it. The reconstruction is performed twice per wallet, once restricted to a fixed stablecoin basket and once over all fungible transfers, on the premise that a wallet's total token holdings and its liquid, spendable balance are distinct quantities whose conflation misprices risk. From each series we derive liquidity coverage against a fixed loan size, cash-flow volatility and regularity, a drawdown-and-recovery statistic adapted from quantitative finance, and a recurring-counterparty detector that identifies salary-like payment cadence from transfer timing alone. The two views are then compared: a wallet with large aggregate holdings whose stablecoin reserve rarely covers the loan size is flagged as a liquidity mismatch irrespective of total wealth. We specify the pipeline formally, document the golden-master methodology used to verify a cross-language production migration to numerical tolerance 1e-9, and characterize the tier function's parameter sensitivity with an independent reimplementation validated to exact agreement (78 of 78 field assertions) against the deployed system's reference fixtures. Tier assignment is governed predominantly by the reference loan size, with four of six reference wallets changing tier across loan sizes from USD 10 to USD 25,000; the drawdown and coverage criteria bind on disjoint wallets, so neither subsumes the other; and no criterion in the tier rule is inert. zLend is deployed in production, informing real lending decisions via third-party API integrations.</summary>
-    <category term="q-fin.RM" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2608.18004v1</id>
+    <title>Composing Flow-Matching Energies with Known Physics: Generation, OOD Detection, and Inversion on PDE Fields</title>
+    <updated>2026-08-18T16:53:08Z</updated>
+    <link href="https://arxiv.org/abs/2608.18004v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18004v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Probabilistic modeling of physical fields benefits from both a data-driven prior and known physical structure such as the governing equations. Energy-based models (EBMs) are a natural fit since energies compose additively, which enables augmenting physics information during inference. However, EBMs have been difficult to train and sample from due to the intractable partition function. We show in this work that flow matching models with a potential-induced velocity yield an explicit scalar energy at all transport times, whose gradient is exactly the converted learned score and which recovers the marginal negative log-density at the population optimum. The time-dependent energy functions are obtained purely from the matching regression objective on an independent linear Gaussian interpolation, without a variational form or additional MCMC steps, and the sampling retains the flow ODE. Access to the energy function from a trained model serves three roles: energy-corrected data generation, energy as a scoring function for out-of-distribution (OOD) detection, and energy compositional posterior sampling for inverse problems. In particular, we show the explicit energy permits general MCMC samplers in the predictor-corrector sampling framework, reducing PDE residual and spectral distance compared to the flow ODE baseline. Furthermore, we demonstrate utilizing the data energy and physics-based energy (e.g., PDE residuals) as complementary mechanisms to improve detection accuracy for OOD tasks. In addition, we explore the connection to MCMC-based inference for inverse problems by composing the energy with a quadratic observational likelihood that yields a posterior energy, used as an explicitly chosen family of inference-time targets.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:39:05Z</published>
-    <arxiv:primary_category term="q-fin.RM"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T16:53:08Z</published>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Girish G N</name>
+      <name>Yixuan Sun</name>
     </author>
     <author>
-      <name>Ashutosh Sahoo</name>
+      <name>Anirban Samaddar</name>
     </author>
     <author>
-      <name>Akshay SP</name>
-    </author>
-    <author>
-      <name>Gurukiran S</name>
-    </author>
-    <author>
-      <name>Dhanashekar Kandaswamy</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.16814v1</id>
-    <title>Prediction market visualizations, betting, and uncertainty: A study of Reddit Posts and Comments</title>
-    <updated>2026-08-17T17:04:33Z</updated>
-    <link href="https://arxiv.org/abs/2608.16814v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.16814v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Prediction market platforms present contracts about future events through visualizations that show probabilities, prices, trends, odds, and payout information. Although these visualizations often appear precise, they do not always show uncertainty directly. As a result, users infer uncertainty from market movement, visualization cues, and contextual information. In this paper, we examine how users interpret prediction market visualizations through a qualitative analysis of posts and comments from the Reddit community r/Kalshi. From an initial corpus of approximately 12,000 posts and 96,000 comments, we identified 360 posts containing prediction market visualizations and conducted a thematic analysis of annotated posts and related discussions. Our findings show that users infer uncertainty through several forms of interpretation: they interpret chart values, struggle with probability information displayed, bring in external knowledge, question credibility and liquidity, critique visualization design, and connecting visualized information to betting decisions.</summary>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-17T17:04:33Z</published>
-    <arxiv:comment>5 pages, 2 figures, 1 table. IEEE VIS 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.HC"/>
-    <author>
-      <name>Subham Sah</name>
-    </author>
-    <author>
-      <name>Alireza Karduni</name>
-    </author>
-    <author>
-      <name>Douglas Markant</name>
-    </author>
-    <author>
-      <name>Wenwen Dou</name>
+      <name>Sandeep Madireddy</name>
     </author>
   </entry>
 </feed>
