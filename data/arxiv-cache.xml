@@ -1,283 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-08-26T00:41:54Z -->
+<!-- Last updated: 2026-08-27T05:49:31Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-08-26T00:41:55Z</updated>
+  <updated>2026-08-27T05:49:32Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>156925</opensearch:totalResults>
+  <opensearch:totalResults>157215</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2608.23565v1</id>
-    <title>ReWorld: An Interactive World Model with Long-Horizon Memory</title>
-    <updated>2026-08-24T17:59:05Z</updated>
-    <link href="https://arxiv.org/abs/2608.23565v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23565v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounded one. ReWorld separates the two during training and bounds them at inference. Mixed per-head attention windows confine most heads to the recent past while a small set of global heads attends over the entire history, and random head routing keeps either capability from binding to particular heads; random chunk dropping makes sparse histories in-distribution. At inference the whole past lives under a fixed budget: a bounded KV cache backed by a pose-indexed landmark bank, from which the model retrieves the landmarks nearest the current pose. A metric-scale-aligned data engine places eight sources -- Unreal-rendered fly-throughs, game roaming, and real-world footage -- on one physical action scale, so the same key press moves the camera the same distance in every source, and palindrome trajectories supply the revisit evidence that memory training needs. Distribution-matching distillation confined to a LoRA adapter then compresses sampling to four steps: one backbone serves both a high-fidelity multi-step mode and a real-time interactive one, streaming 704x1280 video across photorealistic, game-style, and stylized worlds. Under a three-axis protocol covering action following, long-horizon recall, and video quality, against six recent interactive world models it attains the best control fidelity ($11.95^\circ$ rotation error and the best camera-motion consistency) and the best generation quality; and on minute-long out-and-back rollouts ($64$\,s, $384$ latents), its fixed 12-chunk cache still regenerates the starting view -- at rollout lengths where a sliding window has long evicted the evidence and full-KV attention runs out of memory.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T17:59:05Z</published>
-    <arxiv:comment>21 pages, 9 figures. Project page: https://zhifeichen097.github.io/ReWorld/</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
+    <id>http://arxiv.org/abs/2608.26103v1</id>
+    <title>Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization</title>
+    <updated>2026-08-26T17:59:34Z</updated>
+    <link href="https://arxiv.org/abs/2608.26103v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26103v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Zero-shot cross-task generalization, where a policy must execute manipulation tasks never seen during training, remains a central challenge in robot learning. In large language models, a novel task can be performed simply by specifying it in the context, without any parameter update. This form of in-context learning (ICL) turns generalization into a problem of task specification. To achieve cross-task generalization, we bring this paradigm to robotic manipulation, and argue that the natural task specification for manipulation is a human video: unlike language, it provides rich visual cues about the intended task evolution. We present Zero-WAM, a causal video-action model that executes unseen tasks by following in-context human video guidance. To address the scarcity of task-rich paired human-robot data, we propose an automatic pipeline that converts task-sampled robot trajectories into semantically matched human videos, yielding HumanGen, a dataset of 74.2K human-robot ICL pairs across 8.6K tasks. For model training, we further introduce an in-context future chunk prediction (IFP) objective that suppresses shortcuts learned from seen tasks and forces the policy to draw task information from the video prompt. On seven unseen tasks in RoboTwin 2.0 simulation, Zero-WAM achieves a 47.0% average success rate, an absolute improvement of 29.5 percentage points over the strongest video-action baseline. In real-world evaluations, it follows human video guidance to generalize to unseen task configurations involving multi-object scenes, long-horizon manipulation, and fine-grained insertion.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:59:34Z</published>
+    <arxiv:comment>https://robbyant-research.github.io/Zero-WAM/</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Zhifei Chen</name>
+      <name>Jiaming Zhou</name>
     </author>
     <author>
-      <name>Luozhou Wang</name>
+      <name>Qihang Zhang</name>
     </author>
     <author>
-      <name>Guibao Shen</name>
+      <name>Gangwei Xu</name>
     </author>
     <author>
-      <name>Dongyu Yan</name>
+      <name>Cunxin Fan</name>
+    </author>
+    <author>
+      <name>Yujie Zhao</name>
+    </author>
+    <author>
+      <name>Ruilin Wang</name>
+    </author>
+    <author>
+      <name>Yiming Luo</name>
     </author>
     <author>
       <name>Shuai Yang</name>
     </author>
     <author>
-      <name>Tianshuo Xu</name>
+      <name>Xing Zhu</name>
     </author>
     <author>
-      <name>Yihua Du</name>
+      <name>Yujun Shen</name>
     </author>
     <author>
-      <name>Wei Wang</name>
+      <name>Junwei Liang</name>
     </author>
     <author>
-      <name>Tianyi Gui</name>
-    </author>
-    <author>
-      <name>Lianghua Huang</name>
-    </author>
-    <author>
-      <name>Yingcong Chen</name>
+      <name>Yinghao Xu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.23534v1</id>
-    <title>Strong Lensing Cosmology with Population-level Calibrated Neural Ratio Estimation</title>
-    <updated>2026-08-24T17:35:46Z</updated>
-    <link href="https://arxiv.org/abs/2608.23534v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23534v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Strong gravitational lensing contains key information about cosmic acceleration. Modern and next-generation galaxy imaging surveys are expected to provide high-quality data on $\mathcal{O}(10^5)$ galaxy-galaxy lensing systems. The plethora and complexity of the data are likely to present computational challenges for parameter inference methods for fitting high-dimensional likelihoods, which are often analytically intractable. Neural Ratio Estimation (NRE) efficiently computes individual likelihood ratios that can be combined into population-level posteriors. We use simulations to study the capacity of NRE to jointly predict the dark energy equation-of-state parameter $w$ and the total matter density $Ω_{m}$ from lensing images and companion spectroscopic information. We also introduce a post hoc posterior coverage calibration procedure that mitigates the model overconfidence that is typically found in neural density estimation applications. Our experiments show that the errors on both parameters decrease with increasing inference population sizes. In particular, for 100 lenses in a standard $Λ$CDM Universe, our calibrated NRE model achieves median fractional uncertainty of $22.8\%$ in $w$ and $2.9\%$ in $Ω_{m}$. This proof of concept demonstrates a potentially scalable approach for efficient cosmological parameter inference with large populations of galaxy-scale lenses observed in future surveys.</summary>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T17:35:46Z</published>
-    <arxiv:comment>50 pages, 48 figures, 3 tables, code available at https://github.com/deepskies/CosmoLensNRE , Submitted to Machine Learning: Science and Technology</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.IM"/>
+    <id>http://arxiv.org/abs/2608.26093v1</id>
+    <title>Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role</title>
+    <updated>2026-08-26T17:56:00Z</updated>
+    <link href="https://arxiv.org/abs/2608.26093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Designing machine learning algorithms for wireless resource management is labour-intensive: the architecture, the loss function and the training recipe are all specified by hand. We demonstrate that this design layer can be surrendered to an autonomous agent in its entirety. We adopt the autoresearch protocol, in which an AI coding agent edits a training script, runs a fixed-budget experiment, and retains or discards the change according to a single immutable metric. We grant the agent authority over the architecture family, the input representation, the output parameterization, the loss function and the task-sampling law, and set it a target chosen for its difficulty: sum-least-percentile-rate power control across a multicell network. The formulation targets cell-edge throughput and is non-convex, non-smooth and strongly NP-hard away from its max-min vertex. Safeguards render the results trustworthy: a hash-pinned evaluator, an enforced inference contract and a pre-registered falsifier per experiment. In eighty-one unattended experiments over twenty-six hours, the agent reached $99.5\%$ of a converged minorization-maximization reference in one fixed-cost inference pass, at roughly $600\times$ lower inference cost, closing $94\%$ of the gap from its first working architecture, with one parameter set serving every network size and percentile target. It recovered provable structure rather than tuned constants: the output parameterization it discovered reproduces the exact max-min-optimal allocation at the minimum percentile, for every value of the trained weights.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:56:00Z</published>
+    <arxiv:comment>Submitted to IEEE Globecom Workshops</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Sreevani Jarugula</name>
+      <name>Ahmad Khan</name>
     </author>
     <author>
-      <name>Brian D. Nord</name>
+      <name>Akram Bin Sediq</name>
     </author>
     <author>
-      <name>Aleksandra Ćiprijanović</name>
+      <name>Sara Azadegi Naeini</name>
     </author>
     <author>
-      <name>Shubhendu Trivedi</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.23524v1</id>
-    <title>The Measurement Revolution? Credible Measurement and Inference in the Age of AI</title>
-    <updated>2026-08-24T17:28:34Z</updated>
-    <link href="https://arxiv.org/abs/2608.23524v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23524v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Artificial intelligence (AI) is transforming measurement in economics. AI models convert unstructured data, such as text and images, into structured variables at low cost, making previously prohibitive measurement feasible at scale. This shifts the bottleneck from finding any scalable measure of a phenomenon to choosing among many plausible ones, which may support different empirical conclusions. This review provides guidance for navigating that shift. We describe three stages at which AI enters the measurement pipeline---discovery, construct definition, and observation---and what each demands of researchers. We argue that credible inference with AI-generated variables requires appropriately designed validation: anchoring measurement to explicit criteria, rather than informal claims that a proxy is reasonable. We then examine how validation samples support valid inference even when AI predictions are arbitrarily biased, and what can be done when a random validation sample is unavailable.</summary>
-    <category term="econ.GN" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T17:28:34Z</published>
-    <arxiv:comment>This review accompanies the National Bureau of Economic Research 2026 Methods Lecture on "Estimation and Inference with AI-Generated Data."</arxiv:comment>
-    <arxiv:primary_category term="econ.GN"/>
-    <author>
-      <name>Melissa Dell</name>
-    </author>
-    <author>
-      <name>Ashesh Rambachan</name>
+      <name>Raviraj S. Adve</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.23522v1</id>
-    <title>Disentangling propagation effects from Fast Radio Burst spectra: An analysis on simulated data</title>
-    <updated>2026-08-24T17:25:50Z</updated>
-    <link href="https://arxiv.org/abs/2608.23522v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23522v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We present a methodology to decouple propagation effects, specifically scattering and dispersion, from the intrinsic spectro-temporal properties of repeating Fast Radio Bursts. Utilizing the Triggered Relativistic Dynamical Model, and assuming superradiance as the emission mechanism, we generate simulated sub-bursts and inject controlled levels of scattering and residual dispersion. For each burst, we measure the sub-burst slope, defined as the trajectory of the centroids in the dynamic spectrum, and the characteristic duration of the burst profile. We then fit a modified sub-burst slope law to the resulting slope-duration measurements to recover the scattering timescale, residual dispersion measure, and other model parameters. Under the thin-screen approximation, the scattering timescale at $1~\mathrm{GHz}$ is precisely recovered, typically to within $\sim 1-2\%$ of the true value. In contrast, the residual dispersion is recovered with comparatively lower precision, with median absolute errors of $\sim 0.3-0.6\ \mathrm{pc \, cm^{-3}}$, reflecting its weaker constraint and degeneracy with an intrinsic parameter. Despite this, the modified sub-burst slope law successfully reproduces the spectro-temporal evolution and accurately constrains the scattering properties even for diverse intrinsic burst populations. These results demonstrate that our framework yields a tractable method for separating propagation-induced distortions from intrinsic emission characteristics to a meaningful degree, enabling more reliable inference of the physical properties of FRB sources.</summary>
+    <id>http://arxiv.org/abs/2608.26090v1</id>
+    <title>Finding and using interpretable latents in a neutrino foundation model with sparse autoencoders</title>
+    <updated>2026-08-26T17:53:00Z</updated>
+    <link href="https://arxiv.org/abs/2608.26090v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26090v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a first application of sparse-autoencoder-based mechanistic interpretability to particle physics. Studying a neutrino foundation model pretrained on IceCube data and fine-tuned for direction reconstruction, we identify a validated atlas of physical concepts in the model representation, using a strict validation protocol consisting of held-out tests, matched nuisance controls, and replication across independent dictionary trainings. Causal interventions show that the direction head barely draws on this atlas. Motivated by this underused information, we train an uncertainty head on the same event-level representation to predict the model's angular reconstruction error. Unlike the direction head, it depends causally on quality and brightness features from the atlas. At $20\%$ selection efficiency, this interpretable estimator improves the median angular resolution from $20.2^\circ$ to $3.2^\circ$. These results suggest that mechanistic interpretability can reveal learned latent physics encoded within a model's internal representation and help design downstream tasks that exploit it.</summary>
     <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T17:25:50Z</published>
-    <arxiv:comment>16 pages, 7 figures, to be submitted to New Astronomy</arxiv:comment>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:53:00Z</published>
     <arxiv:primary_category term="astro-ph.HE"/>
     <author>
-      <name>Aishwarya Kumar</name>
+      <name>Raphaël Bonnet-Guerrini</name>
     </author>
     <author>
-      <name>Fereshteh Rajabi</name>
+      <name>Johann Ioannou-Nikolaides</name>
     </author>
     <author>
-      <name>Martin Houde</name>
+      <name>Inar Timiryasov</name>
+    </author>
+    <author>
+      <name>Vincenzo Piuri</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2608.23518v1</id>
-    <title>Investigating Relational Reasoning in VLMs</title>
-    <updated>2026-08-24T17:23:36Z</updated>
-    <link href="https://arxiv.org/abs/2608.23518v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23518v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language Models (VLMs) achieve strong performance in visual reasoning tasks, but it remains unclear whether they understand visual relations, or simply employ shortcuts such as language cues or priors. To investigate this, we use the Qwen3-VL-4B (Bai et al., 2025), a modern VLM, to decode how visual information is encoded across depths. For this, we propose a synthetic dataset of simple geometric shapes for controlled analysis, along with queries crafted to precisely test language cues. Furthermore, the dataset is modified to test causal reliance on visual evidence. Our results show that current VLMs combine genuine visual reasoning with shortcut strategies primarily rooted in language cues.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T17:23:36Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Adhithya Laxman Ravi Shankar Geetha</name>
-    </author>
-    <author>
-      <name>Aulia Kharis Rakhmasari</name>
-    </author>
-    <author>
-      <name>Haleema Ramzan</name>
-    </author>
-    <author>
-      <name>Xander Yap</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.23503v1</id>
-    <title>Action-Aligned Retrieval with Pairwise Multimodal Reranking for Text-Based Person Anomaly Search</title>
-    <updated>2026-08-24T17:04:34Z</updated>
-    <link href="https://arxiv.org/abs/2608.23503v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23503v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Text-based person anomaly search requires distinguishing individuals based on fine-grained, context-dependent behaviors rather than mere appearance. Existing methods struggle to capture these context-conditioned actions, frequently relying on isolated skeletal geometry, discarding raw query details during reformulation, or utilizing absolute pointwise scoring for multimodal verification. To address these limitations, we propose \textbf{ActPair}, a unified three-stage coarse-to-fine framework that combines action-aligned retrieval with pairwise multimodal reranking to bridge the pose-semantic gap. First, we fine-tune a vision-language model (VLM) with an action-aligned multi-task objective that encourages the representations to encode action-discriminative semantics. Second, we perform parallel late-fusion retrieval using the original query and a large language model (LLM)-generated context-grounded rewrite, retaining complementary details from both semantic views. Finally, we propose an efficient off-the-shelf reranking module that leverages a pivot-promote algorithm to perform direct pairwise visual comparisons, mitigating residual spatial and compositional ambiguities without the prohibitive inference costs of exhaustive evaluation. Extensive experiments demonstrate that our framework achieves the best results among the compared methods on the Pedestrian Anomaly Behavior (PAB) public test and transfers effectively to an unseen, non-anomaly-specific dataset.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T17:04:34Z</published>
-    <arxiv:comment>Accepted to the AI City workshop @ ECCV 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Thanh-Khoi Nguyen</name>
-    </author>
-    <author>
-      <name>Thanh-Nhan Vo</name>
-    </author>
-    <author>
-      <name>Trong-Thuan Nguyen</name>
-    </author>
-    <author>
-      <name>Minh-Triet Tran</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.23486v1</id>
-    <title>GeoWAM: Visual Geometry World Action Models for Autonomous Driving</title>
-    <updated>2026-08-24T16:49:53Z</updated>
-    <link href="https://arxiv.org/abs/2608.23486v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23486v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>World action models (WAMs) have recently gained increasing attention as a framework for jointly modeling scene evolution and ego actions in autonomous driving. Most existing WAMs learn scene dynamics in pixel space by combining a video-generation backbone for future-observation prediction with an action head for ego-trajectory prediction. Pixels, however, provide only an indirect representation of these dynamics: they entangle geometry and motion with appearance, texture, and illumination, forcing the model to infer three-dimensional transformations from two-dimensional observations. We argue that geometry, represented by point clouds, offers a more natural state space for driving because it explicitly captures spatial structure and the rigid and non-rigid transformations that govern scene evolution while directly aligning with the space in which driving actions are executed. Building on this insight, we introduce \textbf{GeoWAM}, a visual geometry world action model for autonomous driving. Rather than predicting future images, GeoWAM is pretrained to forecast future scene geometry, yielding representations that jointly encode spatial structure and temporal evolution. A geometry-conditioned action head then leverages these learned geometric dynamics to predict future ego trajectories. Extensive open-loop and closed-loop evaluations show that visual geometry world modeling yields substantially stronger driving policies than image-based alternatives, establishing future-geometry prediction as an effective pretraining objective for autonomous driving.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2608.26076v1</id>
+    <title>Fast Generative Grasping via Lie Group-Constrained MeanFlow</title>
+    <updated>2026-08-26T17:43:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.26076v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26076v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Grasp synthesis is a core task in robotic manipulation, for which the solution typically forms a multimodal distribution rather than a point estimate. Generative robotic grasping aims to learn this distribution with deep generative models such as diffusion and flow-based approaches. The iterative nature of such generative models makes them flexible and generalizable; however, multi-step sampling impedes the time-critical operation required in robotics. We devise an approach to fast generative grasping based on MeanFlow on the product Lie group $\mathcal{G} = \mathrm{SO}(3) \times \mathbb{R}^3$. The training objective couples a purely algebraic semigroup consistency condition with Riemannian Conditional Flow Matching on $\mathcal{G}$ that anchors the average velocity to the data distribution. The resulting Lie Group-constrained MeanFlow formulation samples reliable grasps in $\leq 5$ network evaluations, matching the grasp generation performance of state-of-the-art diffusion and flow-based models on the ACRONYM dataset at millisecond-scale inference latency (up to $39\times$ speed-up). We further demonstrate that the approach directly translates to real-world robotic grasping without additional training or domain adaptation, exhibiting robust grasp synthesis under observation noise.</summary>
     <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T16:49:53Z</published>
+    <published>2026-08-26T17:43:07Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>S. Talha Bukhari</name>
+    </author>
+    <author>
+      <name>Yi Wei</name>
+    </author>
+    <author>
+      <name>Ruiqi Ni</name>
+    </author>
+    <author>
+      <name>Zachary Kingston</name>
+    </author>
+    <author>
+      <name>Aniket Bera</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26067v1</id>
+    <title>StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models</title>
+    <updated>2026-08-26T17:33:19Z</updated>
+    <link href="https://arxiv.org/abs/2608.26067v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26067v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-Language-Action (VLA) models have demonstrated effectiveness in robot manipulation, yet state-of-the-art models such as pi0.5 operate under a single-frame paradigm, limiting their ability to retain past observations and develop precise spatial perception. In this paper, we propose StreamPI, a streaming multimodal temporal modeling framework that equips single-frame VLA with temporal reasoning capability without introducing any additional parameters. One core design is instruction-anchored temporal modeling. It treats each (visual observation, language instruction) pair as an atomic temporal unit: bidirectional attention within each pair enables cross-modal fusion, while causal attention across pairs preserves autoregressive streaming inference. This ensures the language instruction serves as a persistent semantic anchor throughout task execution. To bridge the gap between synchronous training and asynchronous real-robot deployment, we introduce a andom-interval streaming training strategy: a proper inter-frame interval (e.g., every 3 frames) enables faster and smoother action execution. Beyond this, randomizing the interval further improves robustness to frame-timing perturbations, supporting asynchronous deployment in practice. Furthermore, by leveraging the length extrapolation capability of the LLM backbone, StreamPI seamlessly inherits pretrained single-frame weights and supports flexible single-frame and multi-frame inference. Experiments on real-robot tasks spanning memory-dependent and precise perception scenarios, as well as the simulation benchmark LIBERO, demonstrate that StreamPI outperforms pi0.5 across diverse tasks.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:33:19Z</published>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Yiren Lu</name>
+      <name>Zhe Liu</name>
     </author>
     <author>
-      <name>Xin Ye</name>
+      <name>Jinghua Hou</name>
     </author>
     <author>
-      <name>Jiaming Liu</name>
+      <name>Yuxiang Lu</name>
     </author>
     <author>
-      <name>Jin Yao</name>
+      <name>Zhenya Yang</name>
     </author>
     <author>
-      <name>Yi-chung Chen</name>
+      <name>Xianzhe Fan</name>
     </author>
     <author>
-      <name>Liam Merino</name>
+      <name>Junwei Luo</name>
     </author>
     <author>
-      <name>Dhruva Dixith Kurra</name>
+      <name>Junyi Li</name>
     </author>
     <author>
-      <name>Min Cai</name>
+      <name>Ruihua Han</name>
     </author>
     <author>
-      <name>Tom Lampo</name>
+      <name>Zhi Hou</name>
+    </author>
+    <author>
+      <name>Hengshuang Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26049v1</id>
+    <title>RTLGuard: A Lightweight Teacher-Student Defense for Poisoned RTL Code Generation Models</title>
+    <updated>2026-08-26T17:23:48Z</updated>
+    <link href="https://arxiv.org/abs/2608.26049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid advancement of large language models (LLMs) is driving a shift toward automated register transfer level (RTL) code generation, enabling designers to translate high-level specs. into synthesizable hardware. However, this reliance on pre-trained (3rd-party) fine-tuned models may introduce critical trust issues, as the training data and adaptation process of these models are often opaque. Thus, adversaries (even model providers) may embed hidden backdoor threats during fine-tuning, allowing malicious behavior, e.g., hardware Trojans, to be triggered by seemingly benign prompts given by victim user at inference time. In this paper, we introduce RTLGuard, to mitigate such a trust issue in AI-enabled IC supply chain. Rather than prohibitive computational cost of full-parameter retraining, RTLGuard leverages a teacher-student framework designed to sanitize compromised RTL generation models by (1) fine-tuning a small-scale, "clean" teacher model on a limited set of trusted RTL data, (2) guiding the poisoned target model via a composite teacher-student objective, and (3) incorporating feature alignment and knowledge distillation to suppress malicious behaviors. Our experiments across various LLM architectures demonstrate that RTLGuard significantly reduces the Attack Success Rate (ASR) while preserving the functional correctness and synthesizability of the generated RTL code.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:23:48Z</published>
+    <arxiv:comment>8 pages, 4 figures, 7 tables. Accepted at the IEEE/ACM International Conference on Computer-Aided Design (ICCAD 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Mahshid Rezakhani</name>
+    </author>
+    <author>
+      <name>Kimia Azar</name>
+    </author>
+    <author>
+      <name>Hadi Kamali</name>
+    </author>
+    <arxiv:doi>10.1145/3831252.3834219</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3831252.3834219" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26029v1</id>
+    <title>Benchmark Brown Dwarfs as Chemical Laboratories: Linking System Bulk Properties to Atmospheric Retrievals</title>
+    <updated>2026-08-26T17:09:36Z</updated>
+    <link href="https://arxiv.org/abs/2608.26029v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26029v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the first atmospheric retrieval analysis of two compositional benchmark mid-L dwarfs -- SDSSJ141659.78+500626.4 and GJ 499 C -- using the \textit{Brewster} retrieval framework, where the wide benchmark nature of these systems provides independent constraints on age and bulk composition from their stellar primaries. These targets were observed with JWST using NIRSpec Prism and MIRI LRS, providing low-resolution ($R$ $\sim$ 100) spectra between 0.6--14.0 $\mathrmμ$m with high signal-to-noise ratios (SNR $\sim$100 -- 600). For SDSSJ141659.78+500626.4, the retrieved cloud combination of a high-altitude enstatite slab and low-altitude iron deck clouds matches phase-equilibrium predictions based on the primary star's Mg/Si ratio. We retrieve a super-solar C/O = 0.71$^{+0.01}_{-0.01}$ and slightly metal-rich [M/H] = 0.22$^{+0.03}_{-0.03}$. This C/O ratio can only be reconciled with the value inferred for the primary if additional oxygen sequestration beyond the retrieved cloud mass is present, or if there are uncertainties in the adopted opacities or other model deficiencies. The inferred [C/H] and [O/H] are 0.31$\pm$0.03 and 0.19$\pm$0.03, respectively, which are consistent within the relatively large uncertainties of the host star abundances. For GJ 499 C, the retrieved silicon-monoxide and forsterite slab clouds are difficult to explain with simple phase-equilibrium assumptions, yielding Mg/Si $\sim$ 1.9. We estimate C/O = 0.69$^{+0.02}_{-0.02}$ and [M/H] = 0.13$^{+0.04}_{-0.06}$. For both objects, the inferred radii of 0.85$^{+0.01}_{-0.01}$ $R_{\mathrm{Jup}}$ and 1.00$^{+0.02}_{-0.02}$ $R_{\mathrm{Jup}}$ and masses of 73.7$^{+4.9}_{-9.2}$ $M_{\mathrm{Jup}}$ and 68.0$^{+8.5}_{-12.7}$ $M_{\mathrm{Jup}}$ are consistent with evolutionary models and system ages, highlighting the plausibility of our results.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:09:36Z</published>
+    <arxiv:comment>26 pages, 18 figures, accepted for publication in MNRAS</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Viktória Kecskeméthy</name>
+    </author>
+    <author>
+      <name>Ben Burningham</name>
+    </author>
+    <author>
+      <name>Fei Wang</name>
+    </author>
+    <author>
+      <name>Austin J. Rothermich</name>
+    </author>
+    <author>
+      <name>Jacqueline K. Faherty</name>
+    </author>
+    <author>
+      <name>Genaro Suárez</name>
+    </author>
+    <author>
+      <name>Caprice L. Phillips</name>
+    </author>
+    <author>
+      <name>Melanie Rowland</name>
+    </author>
+    <author>
+      <name>Channon Visscher</name>
+    </author>
+    <author>
+      <name>Johanna M. Vos</name>
+    </author>
+    <author>
+      <name>Daniella C. Bardalez Gagliuffi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26027v1</id>
+    <title>Immittance formulas for exact blackbox quantization and divergence-free effective models in circuit QED</title>
+    <updated>2026-08-26T17:08:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.26027v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26027v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building on the first-order circuit quantization method [arXiv:2304.12252, arXiv:2401.09120], we provide simple formulas to construct exact Hamiltonians for Josephson-junction-based superconducting qudits capacitively, inductively, or galvanically coupled to passive linear environments. These environments may be multiport, multimode, discrete or continuous, reciprocal or nonreciprocal, and are characterized directly by their impedance or admittance matrices. In the weak-coupling regime, we further derive \emph{divergence-free} dispersive Hamiltonians for mode-resolved environments and transition-resolved weak-coupling master equations for dissipative continua. Mode structure, frequency renormalizations, environment-mediated interactions, decay rates, and directional cross couplings then follow from the same causal immittance response, while spurious Lamb-shift divergences arising from uncontrolled approximations in previous treatments are made explicit and avoided. We apply the theory to a set of illustrative circuits comprising a discrete resonator filter, finite-band metamaterial environments, nonreciprocal waveguide-QED systems, and superconducting giant atoms, for which analytical response matrices can be obtained, although the method is particularly well suited to numerical responses from electromagnetic solvers or experimental characterization. We thereby extend the black-box quantization framework to multiport, dissipative, and nonreciprocal settings, establishing a simple and scalable route toward optimized and automated electromagnetic design of large-scale superconducting quantum hardware.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T17:08:02Z</published>
+    <arxiv:comment>44 pages. 18 Figures. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Philippe Gigon</name>
+    </author>
+    <author>
+      <name>Peter Rabl</name>
+    </author>
+    <author>
+      <name>Adrian Parra-Rodriguez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26004v1</id>
+    <title>AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs</title>
+    <updated>2026-08-26T16:50:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.26004v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26004v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agentic LLM pipelines face escalating inference costs as context accumulates across retrieval, tool use, and multi-turn interactions. To control latency, deployments routinely compress inputs, but this degrades task accuracy. Speculative decoding (SD) accelerates generation losslessly, yet it assumes the drafter and verifier share an identical context, preventing SD from resolving the accuracy-overhead trade-off. We propose AsymSpec, an asymmetric speculative decoding framework that breaks this symmetry: a lightweight drafter reads the full input while the large verifier operates on the compressed view. The drafter steers the verifier via a contrastive $δ$-fusion of logits, modulated by a divergence-aware acceptance gate that preserves verification stability and high draft acceptance rates. Evaluated across four agentic capabilities and two end-to-end agent benchmarks, AsymSpec reaches $\approx 90\%$ of full-context accuracy on average, delivering $1.3$--$1.7\times$ throughput speedups at $0.2$--$0.3\times$ the compute cost on isolated text capabilities. These results show that asymmetric context access yields substantial gains precisely when compression discards critical reasoning signals.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T16:50:02Z</published>
+    <arxiv:comment>EMNLP Main Conference 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Sheng Liang</name>
+    </author>
+    <author>
+      <name>Yongyue Zhang</name>
+    </author>
+    <author>
+      <name>Nathanael Brian</name>
+    </author>
+    <author>
+      <name>Hang Lv</name>
+    </author>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+    <author>
+      <name>Chen Zhang</name>
+    </author>
+    <author>
+      <name>Yong Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.25977v1</id>
+    <title>When Personality Meets Quantization: A Layer-wise MBTI Analysis of Quantized LLMs</title>
+    <updated>2026-08-26T16:32:50Z</updated>
+    <link href="https://arxiv.org/abs/2608.25977v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.25977v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Personality is increasingly important in large language models (LLMs), as it shapes users' trust, engagement, and emotional experiences. While the Myers--Briggs Type Indicator (MBTI) has emerged as a common framework for assessing LLMs' personality, existing studies focus primarily on full-precision models and evaluate only final outputs. They overlook the widespread deployment of quantized LLMs requiring low memory footprints, whose personality traits remain underexplored. In this work, we present a systematic MBTI analysis of open-source LLMs across multiple precisions, including mainstream 4-bit methods (GPTQ, AWQ) and extreme 2-bit settings (AQLM variants). Beyond output-level evaluation, we examine how personality emerges across layers through option-level entropy and confidence-gap dynamics, and introduce Uncertainty-Amplified Layer Decoding (UALD) to study decoding-induced personality drift at inference time. Our results reveal a key insight: LLMs' personality is not a static property, but an emergent, layer-dependent decision process sensitive to quantization, prompting, and decoding. Specifically, we find that (1) ENFJ remains dominant across model families and precisions; (2) 4-bit quantization largely preserves coarse personality structure, while 2-bit quantization disrupts fine-grained prompt consistency and cross-precision agreement; (3) personality decisions emerges in upper layers, following substantial ambiguity in early layers; and (4) inference decoding can shift personality, while personality-aligned conditioning improves robustness. These findings provide a new perspective on the behavioral reliability of quantized LLMs and highlight the importance of considering internal dynamics and inference strategies in personality-sensitive chatbot applications.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T16:32:50Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yao Fu</name>
+    </author>
+    <author>
+      <name>Lijia Huang</name>
+    </author>
+    <author>
+      <name>Xiaomin Li</name>
+    </author>
+    <author>
+      <name>Runchao Li</name>
     </author>
     <author>
       <name>Yu Yin</name>
     </author>
     <author>
-      <name>Danhua Guo</name>
-    </author>
-    <author>
-      <name>Burhan Yaman</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.23463v1</id>
-    <title>ProxyFormer: A Dual-Stream Proxy Architecture for Ultra-Long Context and High-Resolution Generation</title>
-    <updated>2026-08-24T16:31:46Z</updated>
-    <link href="https://arxiv.org/abs/2608.23463v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23463v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The quadratic growth of attention computation and key-value (KV) cache with respect to sequence length is a central bottleneck for ultra-long-context language models and high-resolution generative models. We propose ProxyFormer, a general dual-stream architecture built upon proxy tokens. In each layer, fine-grained local features are compressed bottom-up into a small set of proxy states; expensive global interactions are performed only in the compressed proxy space; the globally contextualized proxies are then decompressed and injected top-down back into the local stream. Because the local stream persists across layers, fine-grained information that is not captured by one compression step remains accessible for later refinement, alleviating the irreversible information loss of conventional one-shot compression. We further introduce factorized multi-level compression/decompression, layer-wise dynamic compression ratios, asymmetric dual embeddings, and a proxy-only KV-cache inference scheme. On a 16GB GPU with batch size 1, a standard decoder-only model can train sequences of only about 20K tokens, whereas ProxyFormer with a compression ratio of 64 extends the trainable sequence length to about 0.7M. A model trained with a 64K window retains 92%-95% retrieval accuracy on a multi-needle retrieval task with 1,048,576 tokens, and a model trained with an 8K window exceeds 94% accuracy when extrapolated to 256K tokens. Preliminary image-generation experiments demonstrate the feasibility of ProxyFormer for both pixel-space and latent-space flow matching.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T16:31:46Z</published>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Zhongpan Tang</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.23458v1</id>
-    <title>Traceable Spectral Inference via Influence Functions: Efficient Data Attribution and Error Proxies for the Ariel Mission</title>
-    <updated>2026-08-24T16:28:26Z</updated>
-    <link href="https://arxiv.org/abs/2608.23458v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23458v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Interpretability is critical for machine learning models deployed in scientific space missions such as ESA's Ariel, where ground truth is unavailable during operations and physical plausibility must be assessed. While most explainable AI methods focus on feature attribution, this work investigates training data attribution through influence functions and introduces three key contributions for operational spectroscopy pipelines. First, influence is reformulated in terms of prediction rather than loss, enabling label-free deployment. Second, by leveraging the closed-form ridge solution of an Extreme Learning Machine, infinitesimal prediction influence is efficiently computed. Third, an influence-based conservative error proxy is derived by propagating training residuals through the influence sensitivities. Evaluated against simulated spectra, the proposed proxy correlates strongly with scale and shape-based spectral errors. Furthermore, influence functions enable the identification of the most influential samples and the approximation of the most harmful ones. Together, these results suggest that this approach can serve as an operational framework for scientific machine learning.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T16:28:26Z</published>
-    <arxiv:comment>To appear in "Proceedings of SPAICE 2026: Third Conference on AI in and for Space"</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Nikki Grens</name>
-    </author>
-    <author>
-      <name>Luís F. Simões</name>
-    </author>
-    <author>
-      <name>Kai Hou Yip</name>
-    </author>
-    <author>
-      <name>Theresa Lueftinger</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2608.23453v1</id>
-    <title>Transporting Randomized Trial Effects to Real-World Populations via Riesz-Calibrated Optimal Transport</title>
-    <updated>2026-08-24T16:24:20Z</updated>
-    <link href="https://arxiv.org/abs/2608.23453v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2608.23453v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Randomized trials support causal inference, but differences between trial and target populations can limit the transportability of treatment effects to real-world settings. Many existing approaches model the propensity of trial participation and can therefore be sensitive to model misspecification and weak overlap of the covariate distributions. Optimal Transport (OT) offers a different route by comparing the trial and target populations directly in covariate space. We develop RICOT, a Riesz-calibrated OT procedure transporting treatment effects to a treated target population. We consider a semi-unbalanced OT with entropic regularization where the source marginals are relaxed. We show that the uncalibrated OT introduces a bias which does not shrink with increasing sample size. RICOT removes this bias by imposing calibration equations directly within the transport problem. With a growing calibration sieve, the calibrated weight consistently estimates the target-to-trial density ratio, equivalently the Riesz representer of the target expectation functional, even when the entropic and source-relaxation parameters remain fixed and positive. Combined with outcome regression, the resulting estimator is doubly robust and attains the semiparametric efficiency bound under suitable rate conditions. Its variance is estimated directly from the influence function, without resampling or repeated OT optimization. Simulations show low bias and near-nominal coverage across a range of overlap and misspecification settings, including settings in which sampling-score methods perform poorly. We illustrate RICOT in a real-world application involving a rare progressive cardiomyopathy, comparing conventional IPW and AIPW estimators with our OT-based IPW and doubly robust estimators for transporting the randomized treatment effect to a real-world population receiving the same treatment.</summary>
-    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-08-24T16:24:20Z</published>
-    <arxiv:comment>86 pages, 7 figures, supplementary appendix included</arxiv:comment>
-    <arxiv:primary_category term="stat.ME"/>
-    <author>
-      <name>Anik Burman</name>
-    </author>
-    <author>
-      <name>Margaret Gamalo</name>
-    </author>
-    <author>
-      <name>Promit Ghosal</name>
-    </author>
-    <author>
-      <name>Prosenjit Kundu</name>
+      <name>Kenneth A. Loparo</name>
     </author>
   </entry>
 </feed>
