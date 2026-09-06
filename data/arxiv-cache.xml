@@ -1,3 +1,289 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-09-05T02:03:27Z -->
-Rate exceeded.
+<!-- Last updated: 2026-09-06T01:59:04Z -->
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
+  <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-06T01:59:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>158371</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04203v1</id>
+    <title>Temporal Self-Distillation: Learning Visual State Tracking in Videos Without Supervision</title>
+    <updated>2026-09-03T17:59:55Z</updated>
+    <link href="https://arxiv.org/abs/2609.04203v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04203v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce S$^3$T (Self-Supervised Self-Distillation over Time), which, to the best of our knowledge, is the first fully self-contained framework for continuous video state tracking. Our method treats temporal sampling density as privileged information, based on the hypothesis that a denser view of the same clip recovers the running state more accurately. This view serves as the teacher, while a sparse-view student with the same weights learns to match its next-token distribution. The model generates its own target, so training requires no labels, separate teacher, or reward signal, and adds no inference cost. On LLaVA-OneVision-2-8B, S$^3$T improves VSTAT accuracy by $+1.74$ as a single model, $+2.38$ with souping, and $+2.70$ with additional vision-encoder adaptation, while prior self-evolving methods leave state tracking largely unchanged. The capability learned from unlabeled synthetic clips transfers to real videos, improving performance by $+7.95$ on VSTAT-YouTube state-tracking questions and $+4.50$ on MVBench Action Count.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:59:55Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Shravan Venkatraman</name>
+    </author>
+    <author>
+      <name>Wenshuai Zhao</name>
+    </author>
+    <author>
+      <name>Mohammad Hassan Vali</name>
+    </author>
+    <author>
+      <name>Arno Solin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04202v1</id>
+    <title>TokenMatch: 3D Mesh Correspondence Transformer with Curvature-Guided Tokenisation</title>
+    <updated>2026-09-03T17:59:55Z</updated>
+    <link href="https://arxiv.org/abs/2609.04202v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04202v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While data-driven 3D shape correspondence estimation has recently seen substantial progress, robust matching under partial observations and strong non-isometric deformations remains challenging. Existing learning-based approaches often rely on hand-crafted descriptors or template-based representations, whereas recent generative models over functional maps suffer from high inference cost, limited interpretability, and poor generalisation to partial shapes. In response to these limitations, this paper introduces TokenMatch, a new transformer-based unified model for estimating 3D shape correspondences. Our feed-forward approach trained exclusively on BeCoS, a challenging non-isometric partial-to-partial shape-matching dataset, can generalise to matching full shapes without retraining or fine-tuning. TokenMatch uses self- and cross-attention mechanisms to efficiently learn patch-level and point-level relations as well as dense correspondences between shape pairs. Our core insight is that meshes can be adaptively tokenised into patches using shape curvature guidance, enabling effective learning of shape-specific geometric descriptors for correspondence estimation. We evaluate TokenMatch on standard benchmarks for partial and full shape matching, including CP2P, PSMAL, BeCoS, FAUST, SCAPE, and SHREC'19. Our method achieves consistently high performance, in most cases outperforming existing methods for partial and full shape matching in the mean geodesic error and intersection-over-union metrics, while also running faster at sub-second inference speeds.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:59:55Z</published>
+    <arxiv:comment>25 pages, 13 figures and 12 tables; project page: https://4dqv.mpi-inf.mpg.de/TokenMatch/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Adeela Islam</name>
+    </author>
+    <author>
+      <name>Zorah Lähner</name>
+    </author>
+    <author>
+      <name>Vittorio Murino</name>
+    </author>
+    <author>
+      <name>Vladislav Golyanik</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04197v1</id>
+    <title>ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize</title>
+    <updated>2026-09-03T17:59:37Z</updated>
+    <link href="https://arxiv.org/abs/2609.04197v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04197v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and propose ESPO (Error-Structured Prompt Optimization), which decomposes prompt optimization into three phases: Diagnose clusters all training errors into structural patterns in one round; Propose generates candidates via four complementary strategies with independent biases; Select applies bootstrap stability selection. On seven public NLP benchmarks - Tweet, MMLU, GSM8K, HotpotQA, ScoNe, HoVer, and PUPA - ESPO improves average accuracy by $+$3.76 pp over the state-of-the-art (74.67% vs 70.91% for GEPA), matching or exceeding GEPA on every dataset while producing prompts 47% shorter (1,004 vs 1,878 chars) and faster at inference. Cross-model experiments across four additional student models (Gemma 3 12B, Mistral 14B, Qwen3 32B, Claude Haiku 4.5) show ESPO yields the best average accuracy on every model tested, with the largest gap on Qwen3 GSM8K (15.00% $\to$ 91.40%). A generalization bound (Appendix) grounds each phase in a corresponding term of the test-time gap, and the ablation confirms a key prediction: adding diversity without bootstrap selection actually hurts performance ($-$1.20%).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:59:37Z</published>
+    <arxiv:comment>EMNLP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Lihao Liu</name>
+    </author>
+    <author>
+      <name>Peng Tang</name>
+    </author>
+    <author>
+      <name>Kunwar Yashraj Singh</name>
+    </author>
+    <author>
+      <name>Shabnam Ghadar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04190v1</id>
+    <title>One Editor, Many Edits: A Unified Training-Free Framework for Diverse Video Editing</title>
+    <updated>2026-09-03T17:59:01Z</updated>
+    <link href="https://arxiv.org/abs/2609.04190v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04190v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Video editing spans diverse editing paradigms, yet achieving high-quality instruction-guided and subject-guided editing within a single unified framework remains challenging. We introduce EditVid, a training-free framework combining sparse causal memory for local coherence, correspondence-based post-attention token injection for long-range identity preservation, and soft latent blending for edit locality. The same framework supports instruction-guided and reference-guided edits, including style transfer, attribute modification, object insertion, part-level editing, and subject replacement. On FiVE, EditVid achieves 78.16 FiVE-Acc, compared with 58.95 for the strongest evaluated training-free baseline, while obtaining competitive results on IVEBench. A user study further shows a 51.8\% overall preference for EditVid over 7 competing methods.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:59:01Z</published>
+    <arxiv:comment>https://plan-lab.github.io/editvid</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Adheesh Sunil Juvekar</name>
+    </author>
+    <author>
+      <name>Onkar Kishor Susladkar</name>
+    </author>
+    <author>
+      <name>Kiet A. Nguyen</name>
+    </author>
+    <author>
+      <name>Muntasir Wahed</name>
+    </author>
+    <author>
+      <name>Nabeel Bashir</name>
+    </author>
+    <author>
+      <name>Xiaona Zhou</name>
+    </author>
+    <author>
+      <name>Tianjiao Yu</name>
+    </author>
+    <author>
+      <name>Vedant Shah</name>
+    </author>
+    <author>
+      <name>Ismini Lourentzou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04180v1</id>
+    <title>Knowledge Acquisition During Pre-training? Large Language Models Learn Better With Auxiliary Views</title>
+    <updated>2026-09-03T17:57:02Z</updated>
+    <link href="https://arxiv.org/abs/2609.04180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gaps remain in our understanding of how large language models (LLMs) acquire knowledge during pre-training. We posit that auxiliary views, reformulations of knowledge, are causally helpful for learning. We design controlled experiments to isolate this. First, we confirm that repetition is necessary for acquisition and clarify that paraphrasing helps only at smaller batch sizes. Second, holding the token budget fixed, allocating tokens from document repetition to auxiliary views improves learning, counterintuitively, even for factual recall. Third, the effectiveness of auxiliary views is not contingent on the strength of the teacher model that generates them. Fourth, we identify forms of knowledge, contextual and foundational, that aid learning in the presence of prior knowledge gaps. Finally, we examine how these effects manifest mechanistically via layer-wise biases and compression. Together, our findings suggest that auxiliary representations of knowledge, which arise naturally in large pre-training corpora, are a key factor in the success of pre-training and offer a plausible explanation for why data diversity matters.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:57:02Z</published>
+    <arxiv:comment>Accepted to Findings of EMNLP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Joseph Lee</name>
+    </author>
+    <author>
+      <name>Yidi Huang</name>
+    </author>
+    <author>
+      <name>Dokyoon Kim</name>
+    </author>
+    <author>
+      <name>Shu Yang</name>
+    </author>
+    <author>
+      <name>Li Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04177v1</id>
+    <title>A Computationally Feasible Framework for Causal Probabilistic Explanation</title>
+    <updated>2026-09-03T17:55:43Z</updated>
+    <link href="https://arxiv.org/abs/2609.04177v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04177v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explaining why a specific outcome occurred, and which inputs deserve the blame or credit, is central to philosophical, scientific, and policy analysis. Existing tools split into two camps. The theory of actual causality (AC) gives principled verdicts, but only for toy-sized models, because computing them requires enumerating counterfactual scenarios. Scalable attribution methods like SHAP (or even causal SHAP) at least partially ignore the causal structure that generated the data, and can give answers that conflict with a careful causal analysis. We close this gap with Probabilistic Causal Impact (PCI).
+  PCI builds on actual causality and on Pearl's notions of probability of necessity and sufficiency, but recasts the question of explainability as an estimation problem on a probabilistic causal model that is easily approximated via Monte Carlo. By specifying a distribution over "candidate explanations," a distribution over counterfactual values, and a scoring function, PCI provides tractable, causally grounded, graded explanations, generalizing AC and Pearl's probability of causation as degenerate cases.
+  We evaluate PCI in synthetic and real-world examples, spanning consistency checks with AC, scaling experiments, complex continuous-valued dynamical systems, and a real-world deployed causal machine learning model trained on millions of datapoints.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:55:43Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Rafal Urbaniak</name>
+    </author>
+    <author>
+      <name>Sam Witty</name>
+    </author>
+    <author>
+      <name>Daniel Waxman</name>
+    </author>
+    <author>
+      <name>Andy Zane</name>
+    </author>
+    <author>
+      <name>Poorva Garg</name>
+    </author>
+    <author>
+      <name>Emily Bunnapradist</name>
+    </author>
+    <author>
+      <name>Sankaran Vaidyanathan</name>
+    </author>
+    <author>
+      <name>Jack Feser</name>
+    </author>
+    <author>
+      <name>Drew Lehe</name>
+    </author>
+    <author>
+      <name>Eli Bingham</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04174v1</id>
+    <title>Zero-Shot Novel Depth Synthesis Using 3D Foundation Models Scene Representations</title>
+    <updated>2026-09-03T17:54:52Z</updated>
+    <link href="https://arxiv.org/abs/2609.04174v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04174v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>3D Foundation Models (3DFMs) such as VGGT have recently pushed the boundaries of 3D vision by predicting rich unified representations with feed-foward transformers. The scene representations learned by these models enable strong performance on multiple 3D vision tasks. In this paper, we investigate using their internal representations to infer 3D in the scene from new views. Our hypothesis is that in order to solve the task of 3D reconstruction, these models need to learn a representation that includes a large amount of general knowledge about 3D scenes. After showing that it is possible to decode hidden surfaces from internal 3DFM representations, we propose a method, Z3D, that estimates pointmaps in unseen views by doing latent diffusion on 3DFM representation. We show that Z3D can predict realistic depth maps for new views across multiple datasets.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:54:52Z</published>
+    <arxiv:comment>Accepted to the European Conference on Computer Vision (ECCV) 2026. Project page: https://akola-mbey-denis.github.io/Z3D-page/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Denis M. Akola</name>
+    </author>
+    <author>
+      <name>David F. Fouhey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04168v1</id>
+    <title>Para-Pipe: Exploiting Hierarchical Operator Parallelism of ML Computational Graphs on SoCs</title>
+    <updated>2026-09-03T17:53:44Z</updated>
+    <link href="https://arxiv.org/abs/2609.04168v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04168v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As edge-based deep learning applications become more complex, optimizing performance on heterogeneous System-on-Chips (SoCs) presents unique challenges. Traditional pipelining techniques distributing the computation across different on-chip processing units, while effective for throughput, do not address the latency demands posed by modern neural networks with complex interdependencies and extensive operator parallelism. There is a potential in leveraging operator parallelism to enable concurrent execution across multiple processing units, thereby reducing inference latency. However, prioritizing pipelining or parallel execution often necessitates a compromise, where optimizing one performance metric adversely impacts the other. This paper introduces Para-Pipe, a hierarchical mapping framework that integrates intra- and inter-stage operator parallelism within a pipelined architecture. Para-Pipe navigates the trade-off between throughput and latency by selectively fine-tuning parallelism levels within and across pipeline stages. This strategy can significantly reduce inter-processor communication overhead, significantly improving energy efficiency. Our evaluation demonstrates that Para-Pipe generates multiple Pareto-optimal configurations, achieving a balance between throughput and latency on an Amlogic SoC equipped with ARM big.LITTLE CPUs and GPU, as well as the Black Sesame Technology SoC featuring a deep learning accelerator and two DSPs. More importantly, throughput-optimized configurations under Para-Pipe on Amlogic SoC show an average energy efficiency improvement of 11.0% over purely pipelined strategies and 23.3% relative to non-pipelined parallel execution.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:53:44Z</published>
+    <arxiv:comment>Accepted to IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <arxiv:journal_ref>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 44, no. 12, pp. 4472-4485, Dec. 2025</arxiv:journal_ref>
+    <author>
+      <name>Yujie Zhang</name>
+    </author>
+    <author>
+      <name>Huiying Lan</name>
+    </author>
+    <author>
+      <name>Ehsan Aghapour</name>
+    </author>
+    <author>
+      <name>Zhiyuan Ning</name>
+    </author>
+    <author>
+      <name>Peng Zan</name>
+    </author>
+    <author>
+      <name>Weidong Shao</name>
+    </author>
+    <author>
+      <name>Anuj Pathania</name>
+    </author>
+    <author>
+      <name>Tulika Mitra</name>
+    </author>
+    <arxiv:doi>10.1109/TCAD.2025.3568348</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TCAD.2025.3568348" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04166v1</id>
+    <title>From Deceptive Outputs to Deceptive Mechanisms: A Causal Framework for Language-Model Deception Research</title>
+    <updated>2026-09-03T17:52:19Z</updated>
+    <link href="https://arxiv.org/abs/2609.04166v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04166v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Research and news coverage of language-model deception increasingly attributes human-like mental-state concepts to language models. Such claims can blur the distinction between behavior that looks deceptive and a mechanism that is actually deceptive.
+  We introduce a causal taxonomy separating prior commitment from retrospective report, model preference from realized output, false preference from sensitivity to the utility of misleading a recipient, and deceptive behavior from the provenance of the objective or strategy producing it. We test these distinctions in two open-weight model families. Across controlled guessing-game and stock-trading experiments, we find that deceptive-looking behavior can arise without the corresponding proposed mechanism, while other interventions provide direct evidence that recipient information state can causally affect deceptive preference.
+  These results show that deceptive behavior can provide evidence for a deceptive mechanism. But even evidence for such a mechanism does not establish model agency in the deception.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:52:19Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yakov Pyotr Shkolnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04162v1</id>
+    <title>Thermodynamic Concentration Inequalities: Controlling Uncertainty in Finite-Time and Small-Sample Thermodynamic Inference</title>
+    <updated>2026-09-03T17:49:59Z</updated>
+    <link href="https://arxiv.org/abs/2609.04162v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04162v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive nonasymptotic upper bounds on the probability that a generalized current of a geometrically ergodic diffusion observed for any amount of time, or its sample mean over any arbitrary sample size, deviates from the stationary mean by more than any given amount. The concentration-of-measure behavior of generalized currents is universally governed by the relaxation time of the underlying dynamics, the locally observed dissipation rate, and the intrinsic local fluctuations of the observable. We uncover stark qualitative and quantitative differences in fluctuations in and out of thermodynamic equilibrium. We further obtain refined inverse thermodynamic uncertainty relations, bounding the variance of generalized currents from above. We construct nonasymptotic confidence intervals for controlling uncertainty in thermodynamic inference from small data, i.e., from short trajectories and small samples, and provide the first quantitative answer to when a trajectory is sufficiently long and a sample is sufficiently large. As an illustration, we apply our results to currents observed on a two-dimensional Ornstein-Uhlenbeck process in and out of equilibrium and show how they can be used to rigorously detect broken detailed balance.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:49:59Z</published>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Rick Bebon</name>
+    </author>
+    <author>
+      <name>Aljaž Godec</name>
+    </author>
+  </entry>
+</feed>
