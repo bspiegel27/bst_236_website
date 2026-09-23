@@ -1,267 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-09-22T02:28:04Z -->
+<!-- Last updated: 2026-09-23T02:28:10Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-09-22T02:28:04Z</updated>
+  <updated>2026-09-23T02:28:10Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>160683</opensearch:totalResults>
+  <opensearch:totalResults>160920</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2609.24547v1</id>
-    <title>MIRA: Real-Time Full-Duplex Human-Robot Interaction for Embodied Companions</title>
-    <updated>2026-09-21T13:14:53Z</updated>
-    <link href="https://arxiv.org/abs/2609.24547v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24547v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Real-time embodied companion interaction requires a robot to infer user intent from streaming speech, generate timely responses, and execute expressive, interruptible motions. Existing systems typically decouple dialogue orchestration from gesture synthesis, relying on offline motion generation from complete audio. This separation leaves open how a deployed robot can dynamically synchronize response content, prosodic timing, and physical safety under incremental inputs and uncertain turn boundaries. We present MIRA, a unified framework for full-duplex embodied companion interaction. Given streaming user speech, dialogue history, and vocal affect, MIRA predicts both the response text and an explicit embodiment cue. Discrete social behaviors (\eg listening, greeting) are mapped to validated robot trajectories, while open-ended speaking is paired with streaming, co-speech motion. This generative motion is governed by a predict-more-than-commit sliding window that provides temporal look-ahead for motion continuity while limiting physical commitment to a short, cancellable prefix. Crucially, we design CORTEX, a dual-timescale interaction policy that manages low-latency streaming and deliberative turn decisions, backed by a robot-side execution layer that enforces physical safety constraints at the control rate. We deploy MIRA on an Astribot S1 humanoid robot. Quantitative evaluations demonstrate competitive audio-motion alignment relative to state-of-the-art motion-generation baselines, while real-robot deployment measurements characterize streaming responsiveness and interruption handling.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T13:14:53Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Lijian Lin</name>
-    </author>
-    <author>
-      <name>Ye Zhu</name>
-    </author>
-    <author>
-      <name>Fan Zhang</name>
-    </author>
-    <author>
-      <name>Yunfei Liu</name>
-    </author>
-    <author>
-      <name>Baofeng Li</name>
-    </author>
-    <author>
-      <name>Xianwen Zeng</name>
-    </author>
-    <author>
-      <name>Jianan Wang</name>
-    </author>
-    <author>
-      <name>Yu Li</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2609.24526v1</id>
-    <title>ME-VLM:A Unified VLM for Embodied Cognition and Agent Coordination</title>
-    <updated>2026-09-21T12:59:59Z</updated>
-    <link href="https://arxiv.org/abs/2609.24526v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24526v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Physical AI requires models to ground visual and linguistic understanding in real-world environments while accounting for environmental constraints and execution feedback. We introduce MachEmbodied-VLM (ME-VLM), a unified vision-language model with two variants, 4B and 35B-A3B, that brings together embodied cognition and multimodal agent capabilities. Our work emphasizes physical perception and spatiotemporal reasoning, together with planning, interaction, and outcome assessment in both digital and physical environments. We construct training data spanning embodied and multimodal agent tasks, including execution observations and feedback to support outcome assessment and decision refinement. The training pipeline comprises embodied capability injection, separate reinforcement learning of embodied and multimodal-agent experts, and multi-teacher on-policy distillation that consolidates their complementary capabilities into a single model. Experiments show competitive performance on both embodied and agent benchmarks, as well as on autonomous-driving and embodied-navigation tasks. For edge deployment, visual token compression, W4A8 quantization, and hardware--software co-optimization enable on-device inference of the 4B variant on the M100, reducing prefill latency from 400 ms to 188 ms.
-  Project Page: https://machembodied.com/ME-Brain/ME-VLM.html Code Repository: https://github.com/MachEmbodied/ME-VLM</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:59:59Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Foundation Model</name>
-    </author>
-    <author>
-      <name>Li Auto Inc</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2609.24507v1</id>
-    <title>TACIT: Tactile Contact Supervision for Spatial Attention in Dexterous Manipulation</title>
-    <updated>2026-09-21T12:47:16Z</updated>
-    <link href="https://arxiv.org/abs/2609.24507v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24507v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Visuomotor policies trained from a few demonstrations may reproduce demonstrated trajectories without reliably following changes in object position. Existing approaches with explicit attention typically obtain spatial priors from human annotation or visual models. We introduce TACIT (tactile contact informs attention), which uses measured tactile contacts from teleoperated demonstrations to supervise spatial attention without additional point annotation. Gaussian targets over preceding camera point clouds supervise an attention head whose pooled output conditions a visuotactile diffusion policy. Targets are used only during training; tactile observations remain inputs at inference. In the primary real-robot benchmark, with ten demonstrations per task and five demonstrated placement regions, TACIT achieves 66.7% success on ball placement and 73.3% on peg insertion, compared with 10.0% and 20.0% for input-matched 3D visuotactile fusion and 20.0% and 43.3% for vision-only DP3. TACIT enters the 150 mm palm-to-object approach region within 12 seconds in all 30 trials per task; all remaining failures occur after arrival. Across three training seeds on real ball and simulated peg, TACIT outperforms input-matched fusion and an architecture-matched control without explicit attention supervision, supporting the contribution of supervision beyond branch capacity. Pre-contact and contact-time supervision show no consistent ordering. These results demonstrate that measured tactile contact provides effective spatial supervision for approach behavior from few demonstrations within the evaluated workspace.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:47:16Z</published>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Yanhou Lai</name>
-    </author>
-    <author>
-      <name>Fucai Zhu</name>
-    </author>
-    <author>
-      <name>Ruiqiang Wang</name>
-    </author>
-    <author>
-      <name>Koichi Hashimoto</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2609.24495v1</id>
-    <title>Oblique kink waves in solar coronal streamers</title>
-    <updated>2026-09-21T12:32:49Z</updated>
-    <link href="https://arxiv.org/abs/2609.24495v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24495v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Coronal streamer kink waves excited by an impact of coronal mass ejections (CMEs) are routinely used to estimate the coronal Alfvén speed. These estimates generally assume wave propagation parallel to the equilibrium magnetic field directed radially outward to the Sun, in the plane of the sky. However, the geometry of CME impacts naturally allows for oblique propagation. We investigate the properties of obliquely propagating kink waves guided by a plasma slab with a central current sheet representing a coronal streamer stalk. We consider both cold and warm streamer plasmas and analyse influence of propagation obliquity on wave dispersion, eigenfunctions, and seismological diagnostics. We find that increasing the propagation obliquity reduces the phase speed owing to both projection effects and the intrinsic dependence of the phase speed on the propagation angle. The wave structure also undergoes a gradual transition from a body mode to a surface mode, leading to stronger perturbations at the slab boundaries and enhanced wave localization. Consequently, for a given energy deposited by a CME impact, oblique kink waves are expected to produce larger observable amplitudes than field-aligned waves. Applying the developed theory to streamer waves reported previously, we infer Alfvén speeds in the range of 50-500 km/s. We show that neglecting wave propagation obliquity may underestimate the Alfvén speed by up to a factor of 1.5. These results demonstrate that wave propagation obliquity should be taken into account in coronal seismology of streamer waves and that stereoscopic observations will be required to constrain the true propagation direction.</summary>
-    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:32:49Z</published>
-    <arxiv:primary_category term="astro-ph.SR"/>
-    <author>
-      <name>Aleksandr V. Rubtsov</name>
-    </author>
-    <author>
-      <name>Valery M. Nakariakov</name>
-    </author>
-    <author>
-      <name>Dmitri Yu. Klimushkin</name>
-    </author>
-    <author>
-      <name>Ding Yuan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2609.24487v1</id>
-    <title>AgentSTAR: Agentic Shape Tracking and Reconstruction from Monocular Videos</title>
-    <updated>2026-09-21T12:26:13Z</updated>
-    <link href="https://arxiv.org/abs/2609.24487v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24487v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>In this work, we present a method for shape reconstruction and tracking from video via agentic analysis-by-synthesis. Unlike prior methods which first estimate dense pixel correspondences and then recover object motion from them, our method infers a structured 3D object model, including its geometry and kinematic structure, and uses this model to optimise object track estimates over time. In our optimisation loop, a Vision-Language Model (VLM) agent iteratively refines shape or generalised pose through a render-and-compare loop, combining coarse visual reasoning with numerical pose optimisation for precise state estimation. This structured formulation enables our method to track through large motion, articulation, and severe occlusion without relying on pixel-matching objectives. Quantitatively, on ARCTIC, our method substantially outperforms state-of-the-art 3D point-tracking baselines for articulated objects, and on HOT3D it outperforms all evaluated rigid-object tracking baselines.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:26:13Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Kirill Mazur</name>
-    </author>
-    <author>
-      <name>Nikita Karaev</name>
-    </author>
-    <author>
-      <name>Matthew Chang</name>
-    </author>
-    <author>
-      <name>Jitendra Malik</name>
-    </author>
-    <author>
-      <name>Nur Muhammad "Mahi'' Shafiullah</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2609.24485v1</id>
-    <title>VPRune: Efficient Training-free Pre-LLM Visual Token Pruning</title>
-    <updated>2026-09-21T12:24:39Z</updated>
-    <link href="https://arxiv.org/abs/2609.24485v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24485v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Visual token pruning is a promising approach to reducing the inference cost of large vision-language models (LVLMs), yet aggressive token reduction often causes substantial performance degradation. We identify three key factors behind this degradation: text-guided selection bias, information loss from discarded tokens, and positional distortion caused by sequence compaction. Based on these observations, we propose \textbf{VPRune}, a training-free pre-LLM pruning framework consisting of visual-only diversity selection, similarity-guided token recycling, and position-preserving restoration. Experiments on FastVLM-1.5B across multiple vision-language benchmarks demonstrate that VPRune achieves a favorable accuracy--compression trade-off, with particularly pronounced advantages under aggressive compression. Furthermore, evaluations on edge-device show that VPRune effectively reduces end-to-end inference latency while maintaining superior task performance, demonstrating its practicality for resource-constrained LVLM deployment.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:24:39Z</published>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Guangchuan Lv</name>
-    </author>
-    <author>
-      <name>Dianxing Shi</name>
-    </author>
-    <author>
-      <name>Dingjie FU</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2609.24480v1</id>
-    <title>Fathom-Vaidya: Advancing Medical Reasoning with Rubric-Based Rewards</title>
-    <updated>2026-09-21T12:19:50Z</updated>
-    <link href="https://arxiv.org/abs/2609.24480v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24480v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Deploying Large Language Models (LLMs) in healthcare requires robust performance across two complementary dimensions - diagnostic reasoning: the convergent, evidence-driven task of inferring a patient's condition from clinical data to produce a diagnosis, and clinical healthcare reasoning: the broader, navigational judgment required to communicate, plan, and adapt across multi-turn clinical interactions where a single correct answer may not exist. Recent benchmarks such as HealthBench and MedXpertQA reveal persistent weaknesses in both areas, exposing failures in complex diagnostic scenarios and limitations in contextual, patient-centered dialogue. We introduce a sequential training framework that targets these facets using synthetic data and rubric-based reinforcement learning. First, we improve diagnostic reasoning using MedBullets-derived questions with rule- and rubric-guided Reinforcement Learning (RL). We then shift to clinical reasoning by generating 5.3k synthetic multi-turn scenarios, each paired with multi-dimensional rubrics to comprehensively assess the response. This approach yields over 10% improvement on MedXpertQA, and our 30B model achieves 50.1% accuracy on HealthBench-Hard, surpassing proprietary baselines including GPT-5 (thinking). Our results show that targeted synthetic datasets and rubric-based training can systematically improve both diagnostic and interactive clinical reasoning in medical LLMs.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2609.26796v1</id>
+    <title>Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs</title>
+    <updated>2026-09-22T17:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2609.26796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment remains limited by inefficient inference, largely due to the absence of effective Key-Value (KV) caching and scalable parallel decoding mechanisms. Existing acceleration methods typically study KV caching and parallel decoding in isolation, overlooking the I/O bottlenecks that arise when cache reuse and parallel token verification are jointly applied. In this work, we introduce $\textbf{Flash-dLLM}$, a training-free inference acceleration framework for fast and memory-efficient dLLMs. Flash-dLLM first identifies GPU memory I/O as a dominant bottleneck in KV-cache-enabled dLLM inference and addresses it with an I/O-aware fused KV-cache kernel that reduces redundant memory movement. Building on this optimized cache mechanism, Flash-dLLM further proposes an efficient KV-cache-driven draft-and-verify decoding strategy, where the dLLM itself serves as both drafter and verifier without requiring an auxiliary model. This unified design enables faster decoding while preserving generation quality and improving scalability to longer sequences and larger batch size. Extensive experiments on mathematical reasoning and code-generation benchmarks demonstrate that Flash-dLLM consistently outperforms existing state-of-the-art dLLM acceleration methods in both inference speed and memory efficiency. In particular, it achieves $5.1\times$ and $11.0\times$ speedups over prior strongest baseline Elastic-Cache on GSM8K and HumanEval, respectively.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:19:50Z</published>
-    <arxiv:comment>18 pages, 5 Figures, Correspondence to kunal.singh@fractal.ai</arxiv:comment>
+    <published>2026-09-22T17:59:57Z</published>
+    <arxiv:comment>Code available at: https://github.com/VILA-Lab/Flash-dLLM</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Quan Nguyen-Tri</name>
+    </author>
+    <author>
+      <name>Mukul Ranjan</name>
+    </author>
+    <author>
+      <name>Zhiqiang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26794v1</id>
+    <title>The First Blind Survey of Intervening NaI Absorbers: Incidence and Cosmic Evolution with DESI</title>
+    <updated>2026-09-22T17:59:47Z</updated>
+    <link href="https://arxiv.org/abs/2609.26794v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26794v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the first blind statistical survey of intervening NaI absorbers over the last $\simeq3$~Gyr using quasar spectra from the Dark Energy Spectroscopic Instrument Data Release~1. We identify 3636 NaI D doublets at $0.01\lesssim z_{\rm abs}\lesssim0.27$ along 214,035 quasar sightlines. We quantify the survey selection function through end-to-end injection--recovery tests and estimate the residual contamination from visual inspection. The completeness reaches 50% at a rest-equivalent width of the NaI $\lambda5891$ line, $W_{5891}\simeq0.95$ Angstrom, and the catalog-weighted purity is $\simeq77\%$. For the fiducial sample with $0.95&lt;W_{5891}&lt;3.5$ Angstrom, we measure the equivalent-width distribution ($f(W_r)$), absorber incidence ($dN/dX$), and cosmic NaI mass density ($Ω_{\rm Na\,I}$). From $z\simeq0.25$ to $z\simeq0.03$, $dN/dX$ rises by a factor of $\simeq3.4$ in both rest-equivalent-width subsamples, split at the median $W_{5891}=1.41$ Angstrom, while $Ω_{\rm Na\,I}$ increases by a similar factor. This corresponds to a smooth increase in the product of the comoving number density of NaI-absorbing hosts ($n_{\rm com}$) and the cross-section of the NaI-bearing gas ($σ_{\rm eff}$) with cosmic time. The similar evolution of $Ω_{\rm Na\,I}$ and $dN/dX$ indicates little change in the mean measured NaI column density per absorber. We also find preliminary evidence that NaI absorbers are associated with foreground galaxies at relatively small projected separations and that their quasar sightlines are redder than matched controls. These results support a picture in which NaI traces dense neutral gas in and around galaxies. Dedicated galaxy surveys and CGM/ISM simulations can test the inferred incidence and cross-section, while spectral stacking can probe the associated gas and dust.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:59:47Z</published>
+    <arxiv:comment>Submitted to AAS journals</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>Abhijeet Anand</name>
+    </author>
+    <author>
+      <name>Sowgat Muzahid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26777v1</id>
+    <title>SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving</title>
+    <updated>2026-09-22T17:54:59Z</updated>
+    <link href="https://arxiv.org/abs/2609.26777v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26777v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce SWE-Serve, a benchmark for evaluating agents on production inference engineering tasks. Implementing an inference feature can require coordinating multiple changes across the serving stack, including model support, runtime execution, and public APIs. Existing benchmarks provide limited coverage of production inference engineering: repository-level software engineering benchmarks do not target inference, while general terminal-agent benchmarks include only a few inference tasks. Dedicated inference benchmarks, meanwhile, focus primarily on isolated kernel generation or performance optimization rather than repository-scale production feature implementation. SWE-Serve provides 53 repository-grounded tasks derived from recent production changes to SGLang, spanning six inference engineering families. Each task executes on either CPU or a single GPU (H100) and is evaluated with hidden functional and regression tests, including, where applicable, end-to-end (E2E) serving tests and calibrated performance gates. Executable no-op and oracle controls, adversarial verifier review, and closed-book execution support task validity and evaluation integrity. Across 11 models and 31 model-effort configurations, the best-performing configuration achieves 75% mean pass@1. SWE-Serve exposes a substantial gap between completing tasks locally and achieving production correctness. On 19 tasks with end-to-end coverage, model-serving E2E tests reject roughly one-third of patches that pass every other test (45.9% under the verifier versus 69.4% with E2E tests excluded from scoring), with pass rate increasing for each model's best-performing configuration. By making the production correctness gap directly measurable, SWE-Serve enables the field to track whether future agents move beyond completing tasks locally to achieving production correctness.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:54:59Z</published>
     <arxiv:primary_category term="cs.AI"/>
     <author>
-      <name>Kalash Shah</name>
+      <name>Jennifer Williams</name>
     </author>
     <author>
-      <name>Kunal Singh</name>
+      <name>Dave Farris</name>
     </author>
     <author>
-      <name>Snehan J</name>
+      <name>Jeff Farris</name>
     </author>
     <author>
-      <name>Shreyas Singh</name>
+      <name>Jiantao Jiao</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2609.24476v1</id>
-    <title>Biases from Astrophysical Environmental Effects in Standard-Siren Cosmology</title>
-    <updated>2026-09-21T12:16:33Z</updated>
-    <link href="https://arxiv.org/abs/2609.24476v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24476v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Next-generation ground based gravitational wave detectors will enable precision standard-siren cosmology, making systematics increasingly important. We investigate how line-of-sight acceleration, as may arise for compact binaries in dense astrophysical environments, biases measurements of the Hubble constant $H_0$. We simulate a catalogue of 50 binary neutron star bright sirens with known host redshifts, assuming the signals have been impacted by line-of-sight acceleration and analysing them with vacuum waveforms. Unmodelled line-of-sight acceleration biases the inferred luminosity distances and shifts the individual $H_0$ posteriors systematically towards lower values. Consequently, combining events narrows the posterior around a biased value rather than averaging away the systematic, even when the acceleration signs are assigned randomly. For our 50-event catalogues, affected fractions of approximately $10\%$ at $|a_\parallel|/c=10^{-6}\,\mathrm{s^{-1}}$, or $30\%$ at $|a_\parallel|/c=10^{-7}\,\mathrm{s^{-1}}$, produce offsets exceeding three posterior standard deviations in at least one quarter of the realisations. Considering larger catalogues further increases the significance of the effect. Our results indicate that environmental effects may constitute an important systematic for precision standard-siren cosmology and should be incorporated into future population analyses.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T12:16:33Z</published>
-    <arxiv:primary_category term="astro-ph.CO"/>
+    <id>http://arxiv.org/abs/2609.26776v1</id>
+    <title>Birnbaum's principles in Venn diagrams: Extended version with Lean verification</title>
+    <updated>2026-09-22T17:54:58Z</updated>
+    <link href="https://arxiv.org/abs/2609.26776v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26776v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Birnbaum's theorem states that the sufficiency and conditionality principles jointly imply, and are implied by, the likelihood principle. To enable formal certification of the results in Lean, we make the conditionality relation explicit through a finite-sample formulation based on \cite{Evans2013}. We reformulate the theorem as a statement about classes of statistical procedures that preserve statistical relations, and show that the proof reduces to the propagation of evidential equality along chains of conditionality-related inference bases (experiment--observation pairs). The main results are illustrated by Venn diagrams, and a worked finite example exhibits two pairs of inference bases: one related by conditionality but not by sufficiency, and the other related by sufficiency but not by conditionality. For finite parameter spaces with at least two points, the class of likelihood-invariant procedures with codomain $[0,1]$ is strictly contained in the class of sufficiency-invariant procedures.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:54:58Z</published>
+    <arxiv:primary_category term="math.ST"/>
     <author>
-      <name>Ioannis Liodis</name>
+      <name>Jaime Enrique Lincovil Curivil</name>
     </author>
     <author>
-      <name>Rodrigo Vicente</name>
-    </author>
-    <author>
-      <name>Soumen Roy</name>
-    </author>
-    <author>
-      <name>Samaya Nissanke</name>
+      <name>Alexandre Galvão Patriota</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2609.24443v1</id>
-    <title>Horizon-Aware Early Event Prediction for Tokamak Disruption Alarms</title>
-    <updated>2026-09-21T11:39:57Z</updated>
-    <link href="https://arxiv.org/abs/2609.24443v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24443v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reliable disruption prediction is essential for the safe operation of future tokamaks. Existing full-distribution survival methods model the complete residual time-to-disruption distribution, whereas operational decisions primarily depend on disruption risk within a finite prediction horizon. This mismatch motivates introducing Early Event Prediction (EEP) objectives into survival-based disruption prediction. We take Deep Survival Machines (DSM) as the full-distribution baseline and propose applying two established EEP methods to tokamak disruption prediction: Temporal Label Smoothing (TLS), which directly predicts disruption probability within a finite horizon, and survTLS, which additionally models the event-time distribution within that horizon. Using a common causal encoder, we compare these methods on DIII-D, Alcator C-Mod, and EAST. We distinguish threshold-free deadline ranking from validation-selected fixed-policy alarm performance and evaluate prediction horizons and encoder architectures. TLS achieves the best mean alarm performance on DIII-D and EAST, whereas all methods perform poorly on Alcator C-Mod. survTLS does not consistently outperform DSM, suggesting that directly learning horizon-level event probability is more effective than modeling detailed within-horizon event-time distributions in the present setting. Finally, the selected prediction horizons and encoder-ablation results vary across devices, reflecting differences in disruption characteristics.</summary>
-    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T11:39:57Z</published>
-    <arxiv:primary_category term="physics.plasm-ph"/>
+    <id>http://arxiv.org/abs/2609.26763v1</id>
+    <title>SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services</title>
+    <updated>2026-09-22T17:42:35Z</updated>
+    <link href="https://arxiv.org/abs/2609.26763v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26763v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in large language models (LLMs) are driving the emergence of multi-modal and agentic services for mobile users through cloud and edge infrastructures, where long-context workloads pose daunting challenges for inference latency. Existing disaggregated LLM serving systems largely rely on hardware profiling, configuration enumeration, or heuristic scheduling, offering limited analytical guidance for cost-efficient resource allocation. In this paper, we propose SARA, a Service level objectives (SLOs)-Aware Resource Allocation framework for disaggregated agentic LLM serving systems, which maximizes goodput under a deployment cost constraint and a series of quantile-based SLO constraints. By capitalizing on queuing theory, we first model the prefill, KV cache transfer, and decode stages as an M/G/k queue, an M/G/1 queue, and a generalized birth-death process, respectively. The analysis reveals that the prefill and decode stages are dominantly limited by computational capacity and high-bandwidth memory (HBM) resources, respectively. With these mathematical models, we further derive tractable tail behaviors of different stage-wise service level metrics for both light- and heavy-tailed workloads. These characterizations explicitly map workload, model architecture, and hardware parameters to stage-wise SLO constraints and minimum resource requirements. Finally, we develop an effective resource allocation framework to maximize system goodput under limited cost budgets. Simulation and hardware results demonstrate that the proposed framework accurately predicts the stage-wise SLO with mean errors below 5%, and improves system goodput by 26.6% on average over state-of-the-art baseline methods under the same deployment cost.</summary>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:42:35Z</published>
+    <arxiv:comment>17 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.PF"/>
     <author>
-      <name>Takeshi Koshizuka</name>
+      <name>Shicong Liu</name>
     </author>
     <author>
-      <name>Takaharu Yaguchi</name>
+      <name>Xianghao Yu</name>
+    </author>
+    <author>
+      <name>Zhen Gao</name>
+    </author>
+    <author>
+      <name>Jun Zhang</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2609.24433v1</id>
-    <title>FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding</title>
-    <updated>2026-09-21T11:28:41Z</updated>
-    <link href="https://arxiv.org/abs/2609.24433v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2609.24433v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Low-bit vision-language-action inference must reduce observation-to-action latency while preserving robot behavior. We present FoldQuantVLA, a post-training quantization framework that carries a consistent activation representation through calibration, weight rounding, and native integer execution. It combines channel scaling and block Hadamard transforms with dynamic per-token quantization, without policy retraining. Custom TensorRT plugins execute projections in both the language backbone and iterative action expert with four-bit weights and activations (W4A4) on Ada GPUs and Jetson AGX Orin. Evaluation spans LIBERO, SimplerEnv, and two robot platforms. Across three GR00T checkpoints and $π_{0.5}$, W4A4 achieves $1.20$ to $1.33\times$ speedups over floating-point TensorRT on Orin and $1.25$ to $1.52\times$ on desktop. Retaining language attention-output and feed-forward down projections at eight bits (W8A8) improves held-out action fidelity on all four checkpoints. Across four real-robot tasks, this configuration raises observed GR00T N1.7 success from $80.0\%$ with uniform W4A4 to $92.5\%$ over 80 trials per configuration, with a measured additional Orin latency of 1 ms.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2609.26760v1</id>
+    <title>Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents</title>
+    <updated>2026-09-22T17:40:45Z</updated>
+    <link href="https://arxiv.org/abs/2609.26760v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26760v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) agents often handle streams of related tasks, yet standard harnesses repeatedly ask the model to reconstruct the same control decisions inside each task's context. We study whether task feedback can instead turn recurring control into reusable executable code, while reserving LLM calls for task-specific semantic reasoning. We introduce Growing Harness, a failure-guided training paradigm that learns the agent harness itself from a strategy-free scaffold that exposes fixed model and tool interfaces but encodes no task-solving controller. Function-level execution traces localize each failure to a bounded code surface, an optimizer repairs a window of failures jointly, and a success-first held-out gate rolls back repair sequences that harm prior capability. Accepted edits accumulate in one shared harness, allowing its control structure to emerge from task feedback. Across BrowseComp-Plus and WebArena-Verified with three deployment models from 4B to 120B parameters, Growing Harness achieves the highest mean success in five of six benchmark-model settings and trails the best mean by 0.7 pp. in the sixth. Relative to a Tool-Calling agent, it reduces LLM calls by 76.0-91.8% and deployed-agent inference cost by 74.4-98.6%. On WebArena-Verified, its success remains 44.7-45.3% across model scales, whereas Tool-Calling falls to 6.7% with the 4B model. Ablations show that trace-local edits, joint repair, and gate-based rollback each improve final success. These results show that persistent program growth can move recurring control out of model context and into low-cost code, yielding reusable specialist agents that remain effective with smaller deployment models.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-09-21T11:28:41Z</published>
-    <arxiv:comment>8 pages, 5 figures, 7 tables. Code: https://github.com/cair-vinuni/FoldQuantVLA</arxiv:comment>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:40:45Z</published>
+    <arxiv:comment>16 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Laizhen Li</name>
+    </author>
+    <author>
+      <name>Jiarui Li</name>
+    </author>
+    <author>
+      <name>Juanjuan Zhao</name>
+    </author>
+    <author>
+      <name>Kejiang Ye</name>
+    </author>
+    <author>
+      <name>Ye Li</name>
+    </author>
+    <author>
+      <name>Cheng-zhong Xu</name>
+    </author>
+    <author>
+      <name>Xitong Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26753v1</id>
+    <title>Underwater Navigation in Unsteady Flows Using Measurement Histories from a Single Sensing Unit</title>
+    <updated>2026-09-22T17:34:33Z</updated>
+    <link href="https://arxiv.org/abs/2609.26753v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26753v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spatial flow measurements support underwater navigation, but distributed sensing is constrained by robot size and sensor layout. We use a causal observer to estimate current lateral velocities from a finite history of measurements collected by a single sensing unit, supplying the inputs of a fixed navigation controller. In two-dimensional wake simulations with access to body-frame ambient velocity, this virtual sensing interface reduces simultaneous flow sampling from three points to the robot center. Trained only in a circular-cylinder wake at Re = 100, the flow-history observer achieves 84.4% and 80.6% success at held-out Re = 205 and 240 without retraining. These rates are 7.4 and 4.6 percentage points below direct spatial sensing and more than 30 points above a matched current-only observer. Past flow remains beneficial when past goal and yaw information is available. Across obstacle geometries, performance remains close to direct sensing in square-prism wakes but declines in triangular-prism wakes. Component replacement identifies the lateral velocity difference as control-relevant, while controlled perturbations reveal sensitivity to error persistence. The results demonstrate the closed-loop utility of single-point flow histories under the assumed observation model.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:34:33Z</published>
+    <arxiv:comment>This paper is under review at the IEEE International Conference on Robotics and Automation (ICRA)</arxiv:comment>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Hung T. Ho</name>
+      <name>Linhao Jin</name>
     </author>
     <author>
-      <name>Khanh D. Nguyen</name>
+      <name>Qimin Feng</name>
     </author>
     <author>
-      <name>Quang D. Nguyen</name>
+      <name>Peter Gunnarson</name>
     </author>
     <author>
-      <name>Thanh Q. Duong</name>
+      <name>Qiang Zhong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26737v1</id>
+    <title>Diffusion-Induced Spatial Attention Overlapping Community Detection</title>
+    <updated>2026-09-22T17:25:55Z</updated>
+    <link href="https://arxiv.org/abs/2609.26737v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26737v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Detection of overlapping communities is essential for modelling networks in which nodes participate simultaneously in multiple structural or functional groups. Existing graph neural network approaches commonly rely on local message passing, which can obscure community boundaries through smoothing and limit the representation of structurally relevant long-range dependencies. We introduce Diffusion-Induced Spatial Attention Community Detection (DISCO), a deep-learning framework that combines a structural prior derived from influence spreading dynamics, sparse multi-head attention, and non-negative community-affiliation learning. The prior identifies candidate interactions beyond immediate graph neighbours and biases attention according to their structural proximity, while a Bernoulli-Poisson edge-reconstruction objective enables overlapping community inference from node attributes and structural profiles, or both. Benchmark experiments show that DISCO performs competitively against established graph convolutional and graph attention approaches across different input configurations. To demonstrate its practical applicability, we present a proof-of-concept cybersecurity use case in which changes between community assignments inferred from consecutive communication-network snapshots provide an interpretable anomaly signal. Temporal community similarity identifies structural deviations, while node-level contributions help locate the devices associated with them. DISCO therefore provides both a flexible method for overlapping community detection and a foundation for analysing structural change in dynamic networks.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:25:55Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Kosti Koistinen</name>
     </author>
     <author>
-      <name>Ngan Le</name>
+      <name>Vesa Kuikka</name>
     </author>
     <author>
-      <name>Meng Guo</name>
+      <name>Joni Herttuainen</name>
     </author>
     <author>
-      <name>Vien A. Ngo</name>
+      <name>Matthew Hendren</name>
     </author>
     <author>
-      <name>An T. Le</name>
+      <name>Brian Holt</name>
+    </author>
+    <author>
+      <name>Kimmo K. Kaski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26711v1</id>
+    <title>TraceVIC: Causal Reasoning over Code Evolution for Identifying Vulnerability-Inducing Commits</title>
+    <updated>2026-09-22T17:02:42Z</updated>
+    <link href="https://arxiv.org/abs/2609.26711v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26711v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Software vulnerabilities are often discovered long after they are introduced, making it difficult to identify the vulnerability-inducing commit (VIC) responsible for introducing the underlying vulnerable condition. Existing VIC identification techniques largely rely on git blame to trace vulnerable code through revision history and use positional heuristics, such as selecting its earliest or most recent modification. However, the true VIC may occur anywhere within this history, and vulnerable behavior may depend on code that evolves across multiple revisions. We therefore argue that VIC identification requires reasoning about how vulnerability-relevant code evolves, rather than simply where a candidate commit appears in the revision history.
+  We present TraceVIC, a temporal graph-based approach for identifying and ranking VICs by reasoning over code evolution. TraceVIC first localizes likely root-cause lines and traces their histories across revisions, constructing graph representations that capture program structure within each revision and the evolution of vulnerability-relevant code across the history. It reasons over the resulting revision history, using temporal edges to preserve correspondences between program elements across consecutive revisions, and directly ranks candidate commits according to their contribution to the vulnerable condition.
+  Ablation results show that modeling the full revision history improves F2 from 0.637 to 0.814. TraceVIC improves F2 by up to 28.7% over state-of-the-art methods and identifies a valid VIC for 78 of 79 vulnerabilities across four unseen C/C++ projects.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:02:42Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Fnu Tanish</name>
+    </author>
+    <author>
+      <name>Samiha Shimmi</name>
+    </author>
+    <author>
+      <name>Samikshya Chapagain</name>
+    </author>
+    <author>
+      <name>Hamed Okhravi</name>
+    </author>
+    <author>
+      <name>Mona Rahimi</name>
+    </author>
+    <author>
+      <name>Lei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26707v1</id>
+    <title>Optimal Sequential Annotations for Off-Policy Evaluation</title>
+    <updated>2026-09-22T17:00:22Z</updated>
+    <link href="https://arxiv.org/abs/2609.26707v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26707v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Offline reinforcement learning and off-policy evaluation evaluates dynamic treatment rules based on retrospectively collected data prior to deployment. In recent AI applications, state and reward information is recorded as complex text or image, which recent AI advancements such as LLM-as-a-judge can label with unknown bias. Expert annotation may be available but at a higher cost. For example, safety classification via cheap but imperfect classifiers vs. expensive expert review. We show how a limited budget for ground-truth data-annotation can be used via doubly-robust OPE with missing rewards, and we optimize variance-optimal annotation probabilities for sequential off-policy evaluation, where the target policy value is estimated from annotated data. We characterize the optimal annotation probabilities for sequential forward-monotone annotation protocols, and provide a feasible batch-adaptive implementation. Our work is motivated by a collaboration with a homelessness services nonprofit that writes casenotes for individuals over time. Our method can be used to unlock trustworthy inference from casenote data and answer new inferential questions such as: how does expanding outreach effort over time affect progress towards a housing application and improvement in housing placement? In simulations and on two real datasets - casenotes from the nonprofit and human-preference votes from LMArena - we see reductions in RMSE of 34-65% for housing placement and 17-68% for progress towards a housing application at budgets of 40% of full annotation and above, and by 55-62% at every budget on LMArena.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T17:00:22Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Woojin Chae</name>
+    </author>
+    <author>
+      <name>Ezinne Nwankwo</name>
+    </author>
+    <author>
+      <name>Haitong Qin</name>
+    </author>
+    <author>
+      <name>Angela Zhou</name>
     </author>
   </entry>
 </feed>
