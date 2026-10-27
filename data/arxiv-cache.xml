@@ -1,234 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-10-26T02:21:03Z -->
+<!-- Last updated: 2026-10-27T02:56:41Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-10-26T02:21:03Z</updated>
+  <updated>2026-10-27T02:56:41Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>166806</opensearch:totalResults>
+  <opensearch:totalResults>167051</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2610.32964v1</id>
-    <title>Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection</title>
-    <updated>2026-10-23T17:53:30Z</updated>
-    <link href="https://arxiv.org/abs/2610.32964v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32964v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the problem as normal-counterpart recovery in frozen DINOv2 feature space. Given normal supports, a velocity field is learned through conditional flow matching over frozen patch tokens to transport Gaussian noise toward normal features. Along straight paths, a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration. The operating time governs how strongly recovery modifies a query token. With no anomalous validation samples available for tuning, a normal-only Jacobian gain-to-noise criterion selects this time from the supports alone. Squared residuals between query tokens and their recovered counterparts yield anomaly signals for both dense localization and image-level detection. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA, together with sample-shot evaluations on Real-IAD, Flownomaly achieves state-of-the-art performance against recent category-specific methods. In the 1-shot setting, image- and pixel-level AUROC reach 97.8% and 98.0% on MVTec-AD and 95.3% and 98.7% on VisA, with a 2.1-point image-level AUROC improvement over the strongest baseline on VisA. Code is available at https://github.com/b-rbmp/Flownomaly.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2610.35101v1</id>
+    <title>Spherical Brownian Diffusion for Language Modeling</title>
+    <updated>2026-10-26T09:40:42Z</updated>
+    <link href="https://arxiv.org/abs/2610.35101v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35101v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuous diffusion language models involve two coupled design choices: how to corrupt continuous token representations and how to invert that corruption at generation time. Recent work has explored language generation on the unit sphere through geodesic and von Mises--Fisher (vMF) paths, raising the question of which forward process to use on this geometry and how much that choice matters relative to inference. We introduce Spherical Brownian Diffusion, using Brownian motion as the canonical isotropic diffusion on the sphere. Its heat semigroup provides a principled forward process, an additive dimension-free noise clock, and an exact ancestral bridge, while a clean-token posterior learned with cross-entropy supports multiple samplers. To separate corruption from inference, we derive high-dimensional approximation rates between Brownian and moment-matched vMF corruption and use this relationship for controlled substitutions. On Sudoku, Brownian and moment-matched vMF give nearly identical results across four samplers and five budgets under otherwise identical settings. In contrast, with the corruption process fixed, sampler choice produces a 25.0-point spread at a sampler budget of 180 calls. Using the ancestral bridge, we split this gain into a memory effect from re-noising the state, present on Sudoku and GSM8K, and a token-selection effect on GSM8K and largest at small budgets. Across reasoning tasks, categorical refinement improves performance, whereas unconditional text generation benefits from stochastic updates that preserve diversity.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:53:30Z</published>
-    <arxiv:comment>Accepted to WACV 2027</arxiv:comment>
+    <published>2026-10-26T09:40:42Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Andrea Miele</name>
+    </author>
+    <author>
+      <name>Ilija Bogunovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.35085v1</id>
+    <title>Reading the Registers of Honorius III without Manual Line Transcription: Forced-Aligned HTR, End to End, Modular or Hybrid</title>
+    <updated>2026-10-26T09:26:38Z</updated>
+    <link href="https://arxiv.org/abs/2610.35085v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35085v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Unlocking medieval archives at scale is bottlenecked by the cost of line-level diplomatic transcriptions and manual abbreviation expansion. Focusing on the registers of Pope Honorius III (1216-1227) over 5,000 letters surviving in full only as manuscript images - we show that existing, line-break-free expert transcriptions (edition drafts) suffice to train end-to-end hand-written text recognition (HTR) that jointly transcribes and expands heavily abbreviated Latin. Using forced alignment on 860 unaligned edition entries across 394 pages of Reg. Vat. 9, we automatically bootstrap 13,122 training lines without manual alignment of segmented lines. While the generic CATMuS baseline struggles on this domain (18.9% CER) and a modular space-free HTR + word-segmentation pipeline (cf. Camps et al. 2021) plateaus at 15.6% WER, our from-scratch hybrid Conformer - combining CTC with bidirectional subword attention decoders, iterative self-realignment and n-best LM rescoring - achieves 4.7% CER and 8.7% WER (8.4% WER with ROVER system combination), nearly halving errors on clause-final words (22.7% to 12.2% WER). These figures are measured on the test lines that align with the transcription (86% of all test lines for the best hybrid). Furthermore, we address a tension between paleographic fidelity and editorial normalization: training on targets that preserve scribal name initials reduces the WER against the manuscript text on the 31 affected test lines from 13.3% to 9.2%, at a small cost against the expanded transcription (WER +0.3 points, CER +0.4). Finally, extensive ablations show that none of an auxiliary diplomatic CTC head, a copy mechanism, a permutation decoder or masked-image pretraining improves on direct end-to-end supervision, while strict padding-mask propagation and per-line beam termination make inference batch-invariant.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T09:26:38Z</published>
+    <arxiv:comment>10 pages, 10 figures</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Bernardo Perrone Ribeiro</name>
+      <name>Tamas Kovacs</name>
     </author>
     <author>
-      <name>Erkut Akdag</name>
-    </author>
-    <author>
-      <name>Egor Bondarev</name>
+      <name>Daniel Luger</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2610.32955v1</id>
-    <title>Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox</title>
-    <updated>2026-10-23T17:49:43Z</updated>
-    <link href="https://arxiv.org/abs/2610.32955v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32955v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Personal email agents decide, for every message, what it is, whether it is urgent, whether to draft a reply, create a task, or ignore it. Their error rate is rarely measured: the stored labels were written by the system itself. We present Foyer, a self-hosted personal inbox agent in daily use, and a measurement protocol (stratified sampling, frozen snapshots, thread-grouped splits, pre-registered hypotheses, human labels in the agent's review loop) that yields ground truth before any training. On 739 real Italian/English emails labelled by the owner (231 unbiased, 500 adversarially sampled), we compare nine systems under thread-grouped cross-validation: the production keyword rules, a TF-IDF + logistic-regression baseline, local typed decision models (Tev1, Nimble), a hosted decision model (Nimble v4-max), and hosted generative LLMs (Qwen2.5-7B, Gemma 4 26B/31B). Four results. The production rules score 28% on message type against a 58% majority class: the field shown most prominently carried no information. With ~200 labels, logistic regression has the highest accuracy on every field (type 0.79, urgency 0.74, needs-reply 0.83, is-noise 0.90), though it never predicts the two rarest classes and is statistically tied with Gemma 4 on type; few-shot prompting does not close the gap. The sender's relationship (client, supplier, service) is recovered from other emails of the same contact with 98.6% accuracy where the contact has been seen, and is not inferable from a single message by any model: it belongs in the contact graph, not the prompt. Finally, accuracy is not the product metric: composed into actions, the most accurate system most often ignores emails needing action (18% vs 4% for the best LLM); a cost-chosen threshold on its noise probability halves that rate and makes it the cheapest system.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2610.35084v1</id>
+    <title>A JiT-Based Denoising Defense Method Against Adversarial Examples for Radio Signal Automatic Modulation Classification</title>
+    <updated>2026-10-26T09:26:37Z</updated>
+    <link href="https://arxiv.org/abs/2610.35084v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35084v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automatic modulation classification (AMC) of radio signals is a core technology for spectrum monitoring and electromagnetic situational awareness. Deep neural networks (DNNs) play an important role in this field owing to their powerful feature extraction capabilities and end-to-end learning paradigm. However, their vulnerability to adversarial attacks poses serious security challenges to practical deployment. Adversarial training, a common defense, has limitations including poor generalization across attack types and high training costs. Inspired by Just image Transformers (JiT), a diffusion generative model that directly predicts clean images, this paper proposes a JiT-based denoising defense against adversarial examples for radio signal modulation classification. During training, a signal-specific 1D Transformer denoising network is optimized via flow matching to directly predict clean signal samples. It thereby learns a mapping that projects arbitrary examples back onto the low-dimensional manifold of clean signal examples. During inference, arbitrary examples are fed into the trained network and directly projected onto this manifold. This enables denoising defense without prior knowledge of attacks. Experiments on the RML2018.01A dataset were conducted without attack information, using a single empirically selected, fixed denoising start time. Compared with PGD-based adversarial training, the proposed method achieves a relative improvement of at least 20.58% in robust accuracy under PGD attacks. It also achieves a relative improvement of 10.20% in classification accuracy on clean examples. When evaluated against attack types unseen during adversarial training, the proposed method provides stronger defense than adversarial training. In particular, at higher attack strengths, it achieves a relative improvement of at least 39.72% in robust accuracy.</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:49:43Z</published>
-    <arxiv:comment>8 pages, 7 tables. Single-user case study. Code and protocol: https://gitlab.com/federicolucca/foyer-measure . The emails are private and not released</arxiv:comment>
+    <published>2026-10-26T09:26:37Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shiwei Liu</name>
+    </author>
+    <author>
+      <name>Linyuan Wang</name>
+    </author>
+    <author>
+      <name>Nuolin Sun</name>
+    </author>
+    <author>
+      <name>Libin Hou</name>
+    </author>
+    <author>
+      <name>Bin Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.35083v1</id>
+    <title>Ask Before You Answer: A Question-Driven Evidence Reasoning Architecture (QERA) for In-Context Learning</title>
+    <updated>2026-10-26T09:26:23Z</updated>
+    <link href="https://arxiv.org/abs/2610.35083v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35083v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI assistants are increasingly asked to reason over a user's own web traces: group chats, community threads, activity logs and revision histories. On CL-bench Life, a benchmark of such real-life context learning, frontier LLMs solve fewer than one task in five. We find that the request is not the specification: over 80% of the benchmark's rubrics share less than 60% of their content words with the final request, as for a rule set two turns earlier or every record that meets the user's criterion, and LLMs answering directly pass only 67% of these implicit rubrics against 81% of the others. We propose QERA, a Question-driven Evidence Reasoning Architecture that asks before it answers. QERA first turns the request into a requirement checklist and typed information needs, filtered by code for faithfulness to the user's words; it then answers from the whole conversation, asks the same questions again with quotes verified by code, and applies a guarded local repair. It needs no training or rubrics and makes about four LLM calls per task. On all 405 tasks with four frontier LLMs, QERA attains the highest solving rate on every LLM (21.0% on average, against 18.2% for the strongest of three inference-time baselines and 14.6% for direct answering) and leads every baseline significantly when pooled across LLMs, while using fewer tokens than PSCI and 4-5% of the tokens of Ctx2Skill. Ablations on GPT-6-Luna show that the gain is settled before the answer, by a fixed answer protocol (+3.8 rubric points) and the request-specific questions (+1.6), and that it is concentrated on implicit rubrics, with checking afterwards refining mainly numeric requirements.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T09:26:23Z</published>
+    <arxiv:comment>12 pages, 5 figures, 7 tables</arxiv:comment>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Federico Lucca</name>
+      <name>Jinhu Qi</name>
+    </author>
+    <author>
+      <name>Minda Hu</name>
+    </author>
+    <author>
+      <name>Wentao Zhang</name>
+    </author>
+    <author>
+      <name>Zixing Song</name>
+    </author>
+    <author>
+      <name>Irwin King</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2610.32951v1</id>
-    <title>Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning</title>
-    <updated>2026-10-23T17:45:03Z</updated>
-    <link href="https://arxiv.org/abs/2610.32951v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32951v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reinforcement learning for large language models often uses separate systems for inference and training. Even with identical weights and BF16 tensors, implementation differences can make an intended on-policy update off-policy and destabilize training. Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm. We ask whether aligning selected parts of the execution stack can stabilize BF16 RL while other implementation differences remain. We align training-side rounding locations with inference in three regions---RoPE, SwiGLU, and residual RMSNorm---by retaining selected intermediates in FP32 until their BF16 outputs. Across four Qwen-family models, aligning all three regions prevents the collapse observed under the default BF16 baseline; RoPE-path alignment alone also suffices in the studied runs, despite remaining numerical discrepancies. The interventions keep the inference engine, matrix-multiplication and attention kernels, and learning objective unchanged.</summary>
+    <id>http://arxiv.org/abs/2610.35079v1</id>
+    <title>Toward Fast Human Reaction Modeling from High-Frequency Digital Interaction Data</title>
+    <updated>2026-10-26T09:24:10Z</updated>
+    <link href="https://arxiv.org/abs/2610.35079v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35079v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate whether limbic-like signatures of rapid, salience-driven behavior can be identified in high-resolution Counter-Strike 2 telemetry. This exploratory study introduces Ego-Knowledge, a leak-reduced reconstruction of each player's plausible perceptual state, supported by a millisecond-precision visibility engine and a reaction-centered extraction pipeline. Using a neuroscience-motivated 60--120 ms window, we derive coarse fight-or-flight labels from visibility- and damage-triggered events, with back-damage cases enabling constrained reaction-time analysis and manual label checks. We train two telemetry-native models using only information available by the trigger: EMBER (gradient boosting) and ORBIT (a custom transformer). On the full validation set, EMBER achieves 73.5% accuracy and ORBIT 71.2%, versus a 51.5% majority-class baseline, and both generalize to held-out players. The strongest LLM baseline achieves 62.7% on 1,000 validation cases; on these same cases, EMBER (73.6%) and ORBIT (70.9%) perform better (McNemar p=1.3e-9 and 1.5e-6, respectively), with orders-of-magnitude lower inference time and cost, though the comparison is not compute-matched. Including a short post-trigger window changes forecasting into early response recognition, raising accuracy monotonically to 85.15%. We propose this curve as a candidate probe of the transition from rapid to deliberative control, but roughly uniform per-tick gains do not establish that interpretation. The neuroscience framing is hypothesis-generating, not mechanistic: physiological ground truth, suitable control distributions, and reverse-inference limitations remain open. We outline extensions to auditory reconstruction, larger datasets, and telemetry-native foundation models.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:45:03Z</published>
+    <published>2026-10-26T09:24:10Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Emanuel Dopater</name>
+    </author>
+    <author>
+      <name>Daniel Gavlas</name>
+    </author>
+    <author>
+      <name>Lukáš Jochymek</name>
+    </author>
+    <author>
+      <name>Kannan Paul</name>
+    </author>
+    <author>
+      <name>Miloslav Szczypka</name>
+    </author>
+    <author>
+      <name>David Vojáček</name>
+    </author>
+    <author>
+      <name>Josef Žáček</name>
+    </author>
+    <author>
+      <name>Jan Plucar</name>
+    </author>
+    <author>
+      <name>Radek Svoboda</name>
+    </author>
+    <author>
+      <name>Ivan Zelinka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.35077v1</id>
+    <title>Improving VLMs on Scientific Chart Analysis via Autonomous Evolution</title>
+    <updated>2026-10-26T09:22:52Z</updated>
+    <link href="https://arxiv.org/abs/2610.35077v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35077v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding and operating with scientific charts is a standard approach in data analysis, and while humans are good at interpreting such charts, open vision-language models (VLMs) are known to perform poorly when it comes to question answering based on such data types. Motivated by an initial observation that many of their errors are due to inexact answering, we raise the following natural question: how much accuracy can we recover without changing the model at all? In this paper, we study this question by searching over inference programs and the code around a "frozen" version of the model. Using ideas from autonomous evolution (famously used in AlphaEvolve), we first start from a baseline inference program, and in each round we show an LLM judge the code together with a few failures on training questions, and ask for an improving evolutionary move. As usual in autonomous evolution approaches, the candidate programs are kept in a small pool ranked by training accuracy, and the next edit is performed on top-scorers from this pool. We run this approach on three VLMs and four popular benchmarks on scientific charts, and we measure the fraction of descriptive questions whose answer exactly matches the ground truth. The accuracy improves in all experimental settings. On average, it rises from 16.6% with the starting program to 41.3% with the evolved one, and the largest single increase is 55.2 percentage points. As a side benefit, our evolved program is 3.8x faster than the starting program, because short answers are easier to grade and faster to generate. Our results demonstrate that a large part of the observed errors arise due to the inference pipeline, and that optimizing it can improve the "frozen" VLM without the need to retrain it.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T09:22:52Z</published>
+    <arxiv:comment>13 pages, 5 figures, 4 tables. Code: https://github.com/AbhinavDubey30/VLM-Autonomous-Evolution</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Abhinav Sudhakar Dubey</name>
+    </author>
+    <author>
+      <name>Vidushi Goel</name>
+    </author>
+    <author>
+      <name>Kiran Rana</name>
+    </author>
+    <author>
+      <name>Shikhar Mathur</name>
+    </author>
+    <author>
+      <name>Vaggos Chatziafratis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.35059v1</id>
+    <title>Reinforcement Learning Done Right for Explicit Confidence Targets</title>
+    <updated>2026-10-26T09:05:29Z</updated>
+    <link href="https://arxiv.org/abs/2610.35059v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35059v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) can produce plausible but incorrect answers when they are uncertain, which can mislead users and undermine model reliability. Training models to abstain with reinforcement learning is a natural approach, but most existing methods use a fixed error penalty and therefore cannot adapt their behavior to different confidence requirements at inference time. We study \emph{explicit confidence targets}, where a user specifies a target \(p\) in the prompt and the model directly chooses whether to answer or abstain, with the goal of achieving an accuracy of at least \(p\) among answered questions. However, learning to respond to different confidence targets with a single model has proven difficult, and prior attempts have failed to distinguish different targets. We show that this failure comes from two problems: the reward signal that distinguishes different values of $p$ is often lost during optimization, while the original error penalty grows without bound as $p$ approaches one. We propose RLEC (\textbf{R}einforcement \textbf{L}earning with \textbf{E}xplicit \textbf{C}onfidence Targets), which preserves the learning signal needed to distinguish confidence targets, introduces a stable reward family that keeps the desired answer condition unchanged, and uses reward scheduling to balance effective learning and training stability. Together, these designs enable the first successful training of a single LLM for explicit confidence target control. Extensive experiments across diverse benchmarks and model scales show that RLEC largely preserves general capabilities and achieves competitive calibration performance. RLEC also supports fine-grained target control without an external decision system or threshold calibration after training. By making explicit confidence targets part of the trained policy, RLEC opens a new and more direct path toward behavioral calibration.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T09:05:29Z</published>
+    <arxiv:comment>22 pages, 13 figures</arxiv:comment>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Yijing Ke</name>
+      <name>Zefeng He</name>
     </author>
     <author>
-      <name>Tianle Cai</name>
+      <name>Yichen He</name>
     </author>
     <author>
-      <name>Ruosong Wang</name>
+      <name>Yuan Lin</name>
+    </author>
+    <author>
+      <name>Yang Yang</name>
+    </author>
+    <author>
+      <name>Yu Cheng</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2610.32941v1</id>
-    <title>If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs</title>
-    <updated>2026-10-23T17:35:33Z</updated>
-    <link href="https://arxiv.org/abs/2610.32941v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32941v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Vision-Language-Action (VLA) models perform well on robotic manipulation, yet remain brittle once their own actions carry them into states their training data barely covers. Recovering from such failures usually requires recovery demonstrations, policy retraining, or a separate model at inference time. We introduce Backtrack, a lightweight failure detection and recovery mechanism for frozen VLAs that needs none of these. A small failure prediction head, trained only on outcome-labeled rollouts of the frozen policy, reads the VLA's existing internal representations to estimate whether the current episode will fail. When the predicted failure probability exceeds a threshold, a controller pauses the policy, retraces the arm's recently achieved motion, and hands control back to the unchanged policy so it can retry from an earlier configuration. The head adds only 0.48-0.88% to the policy's parameter count. We evaluate Backtrack on LIBERO with three VLAs spanning two action-generation families: SmolVLA and $π$0.5, which use flow-matching action experts, and the autoregressive $π$0-FAST. On LIBERO-Long, the suite of long-horizon multi-step tasks and the one on which all three policies fail most often, Backtrack reduces each policy's failure rate by 19-48%, raising success by up to 7.4 percentage points; on the three shorter suites, where control success is already 85-99%, its effect is smaller. On MetaWorld, all twelve controller configurations tested with SmolVLA improve on the unassisted policy.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:35:33Z</published>
-    <arxiv:comment>17 pages, 1 figure, 14 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.RO"/>
-    <author>
-      <name>Thomas Landeg</name>
-    </author>
-    <author>
-      <name>Thierry Tambe</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.32933v1</id>
-    <title>Yalda-Embedding: Open Development of a Competitive Persian Retrieval Model</title>
-    <updated>2026-10-23T17:30:40Z</updated>
-    <link href="https://arxiv.org/abs/2610.32933v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32933v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Despite advances in multilingual text representations, effective dense retrieval for Persian remains constrained by the limited availability of language-specific training resources and compact embedding models. We present Yalda Embedding, a 595.8-million-parameter Persian retrieval model adapted from Qwen3-Embedding-0.6B using more than one million query-document pairs. On eight Persian retrieval tasks from FaMTEB, the model achieves the highest macro-average among the evaluated 0.6B models, scoring 0.5488 and outperforming Qwen3-Embedding-0.6B and F2LLM-v2-0.6B on every task. It also approaches Qwen3-Embedding-4B, winning on four tasks, tying on one, and trailing by 0.0075 in macro-average. An incremental ablation study examines contrastive batch size, optimization stabilization, and relational knowledge distillation from F2LLM-v2-8B. Under the one-epoch training setup, contrastive fine-tuning alone yields a modest mean improvement over initialization and regressions on two tasks. The final distilled configuration improves all eight tasks over the non-distilled model, raising the mean from 0.4813 to 0.5488 without increasing inference-time model size. These gains include hard-negative evaluation tasks despite training without explicitly mined or supplied hard negatives. We release model weights, training and evaluation code, the pairwise dataset, and its teacher-embedded counterpart, enabling inspection of data composition and training procedures, independent evaluation, and reuse without repeating expensive teacher inference.</summary>
+    <id>http://arxiv.org/abs/2610.35042v1</id>
+    <title>SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning</title>
+    <updated>2026-10-26T08:54:00Z</updated>
+    <link href="https://arxiv.org/abs/2610.35042v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35042v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Simultaneous speech translation (SimulST) aims to translate ongoing speech with low latency while preserving translation quality. Recent studies have adopted large language models (LLMs) for SimulST and formulated it as a multi-turn dialogue task for efficient generation, achieving state-of-the-art performance. However, existing dialogue-style SimulST approaches typically rely on specialized training schemes to acquire simultaneous translation behavior, either using synthesized read/write trajectories, which may provide suboptimal training signals, or jointly optimizing translation quality and latency, whose competing objectives may cause optimization instability. In this paper, we introduce SimPOTrans, a reinforcement learning (RL) framework that enables offline speech translation models to self-adapt to dialogue-style SimulST. Through a simple two-stage RL post-training pipeline, SimPOTrans rewards an offline model for exhibiting translation behaviors beneficial to simultaneous scenarios when given partial speech inputs, thereby enabling offline-to-simultaneous self-adaptation without synthesized read/write trajectories or explicit latency optimization. At inference time, SimPOTrans requires no external decision policy and enables flexible quality--latency control by simply adjusting the chunk size of speech input. Experiments on the ACL 60/60 and MCIF benchmarks across three language directions (En$\rightarrow$De, En$\rightarrow$Zh, and En$\rightarrow$Ja) demonstrate that SimPOTrans outperforms several strong baselines, achieving a superior quality--latency trade-off.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:30:40Z</published>
+    <published>2026-10-26T08:54:00Z</published>
     <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Yalda Taheri</name>
+      <name>Haotian Tan</name>
     </author>
     <author>
-      <name>Mohammad Hassan Heydari</name>
+      <name>Hiroki Ouchi</name>
     </author>
     <author>
-      <name>Armon Rasooli</name>
+      <name>Sakriani Sakti</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2610.32926v1</id>
-    <title>ZENO: Nonlinear filtering with Zakai Equation Neural Operators</title>
-    <updated>2026-10-23T17:24:31Z</updated>
-    <link href="https://arxiv.org/abs/2610.32926v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32926v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>State inference and parameter learning for nonlinear filters is a core computation for scientific machine learning with varied applications in engineering and neuroscience. The unnormalized filtering distribution is governed by the Zakai equation, a stochastic partial differential equation (SPDE) that combines the forward Kolmogorov operator (known as the Fokker-Planck equation) with observed likelihood updates. Although solving these high-dimensional SPDEs is often impossible analytically and intractable numerically, advances in operator learning and physics-informed machine learning have made it feasible. Harnessing these advances, we introduce the Zakai Equation Neural Operator (ZENO), a model that optimizes a neural operator against a Zakai Equation based physics-informed loss to approximate the exact unnormalized filtering distribution for latent stochastic dynamical systems. We use this ZENO-inferred posterior distribution in an expectation-maximization (EM) framework to perform parameter learning and state inference. We demonstrate ZENO's ability to accurately infer the posterior distribution and learn its corresponding SDE parameters in three simulated stochastic dynamical systems (Double-Well bistable system, Van Der Pol (VDP) oscillator, and Lorenz system) and compare its performance against established methods for latent SDE inference and learning. We show that ZENO recovers previously observed limit cycles representing forward and backward locomotion from a whole-brain imaging dataset of immobilized \textit{C. elegans} nematodes. ZENO is a novel approach to the problem of nonlinear filtering and dynamical inference through the lens of partial differential equations and operator theory.</summary>
+    <id>http://arxiv.org/abs/2610.35023v1</id>
+    <title>BellowsKV: One Latent for Many Layers, Expanded on Demand</title>
+    <updated>2026-10-26T08:35:59Z</updated>
+    <link href="https://arxiv.org/abs/2610.35023v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35023v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) now serve as the backbone of agents that reason over many turns, call tools, and pursue long-horizon tasks. To avoid recomputation, a model stores the attention keys and values of all past tokens in a key-value (KV) cache. Each layer maintains its own cache, so KV-cache memory can become the main bottleneck for GPU serving. Most compression methods operate within a single layer, by quantizing the cache entries, reducing the channel dimension, or evicting less important tokens. All three lose substantial accuracy at high compression ratios. Cross-layer methods share one compressed cache across adjacent layers to go beyond this limit. However, these methods also degrade sharply at high compression ratios. We find that the KV-cache representations of adjacent layers are quite different, whereas the input hidden states of adjacent layers are highly similar. We also find that, under the same memory budget, reducing the dimension of this shared latent loses far more accuracy than quantizing it. Based on these findings, we propose BellowsKV, a training-free method that maps the hidden states of n adjacent layers to one shared latent per token. At inference time, each layer reads its own keys and values from this latent through a layer-specific projection. We keep the latent at full dimension and compress it in two other ways: BellowsKV-Quant stores the latent at low precision, which is nearly lossless because the latent has no dominant outlier channels; BellowsKV-Evict makes one shared eviction decision per block, because the layers rank token importance very similarly. Across Llama-3.1-8B, Mistral-7B and Qwen2.5-7B, BellowsKV-Quant retains about 99% of full-cache accuracy at 3.6x compression and 97-98% at 13-14x, where the strongest cross-layer method retains at most 84% at 16x. Code: https://github.com/MorrisZJ/BellowsKV</summary>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:24:31Z</published>
+    <published>2026-10-26T08:35:59Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Aaditya Prasad</name>
+      <name>Jiamu Zhang</name>
     </author>
     <author>
-      <name>Steven W. Flavell</name>
-    </author>
-    <author>
-      <name>Brian DePasquale</name>
+      <name>Hanjie Chen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2610.32914v1</id>
-    <title>A Tutorial on Physics Constrained Machine Learning for Hybrid Modeling, Optimization, and Control</title>
-    <updated>2026-10-23T17:17:11Z</updated>
-    <link href="https://arxiv.org/abs/2610.32914v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32914v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Physics-constrained machine learning (PCML) integrates domain knowledge, first-principles, and physical constraints into AI/ML models. In this work, we present a step-by-step tutorial of a modular PCML framework, KKT-HardNet, and illustrate how it could be used for hybrid modeling, process simulation, optimization and model predictive control in a single platform. KKT-HardNet combines fast inference capabilities of neural networks with guaranteed satisfaction of algebraic constraints through differential projection. It can handle heterogeneous data and enforce both linear and nonlinear equality and inequality constraints. The modular design supports custom neural-network backbones and user-defined projection mechanisms for PCML. To enable efficient end-to-end training, KKT-HardNet exploits implicit function theorem to backpropagate through the projection layer. This avoids computationally expensive automatic differentiation. This work also introduces an exact reduced-order Fischer-Burmeister reformulation and a primal-dual interior-point method as an alternative projection solve strategy. We also provide a diverse set of benchmarking problems for PCML in engineering applications. KKT-HardNet achieves orders of magnitude better performance in terms of both constraint satisfaction and inference time. The KKT-HardNet code and the benchmark datasets are available at https://github.com/souls-tamu/kkt-hardnet .</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:17:11Z</published>
-    <arxiv:primary_category term="cs.LG"/>
+    <id>http://arxiv.org/abs/2610.35017v1</id>
+    <title>When Pointing Becomes Profiling: Social Bias and Refusal in Text-Steerable Visual Encoders</title>
+    <updated>2026-10-26T08:29:12Z</updated>
+    <link href="https://arxiv.org/abs/2610.35017v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35017v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text-steerable visual encoders condition a frozen Vision Transformer on a natural-language prompt and point at the matching image region, producing prompt-conditioned heatmaps and features. We audit the released SteerViT model and find that its steering interface turns language-driven pointing into demographic profiling. On counterfactual face mosaics and real multi-person photographs, "the person" selects a man more often than the base rate, crime words select Black people more often than occupation words do, "the man" among four women selects the Black woman 75.6% of the time on SocialCounterfactuals, and "the monkey" selects Black people. None of them is in the backbone's unsteered saliency, and the crime association is not in the frozen text encoder; the race effects grow with steering strength and enter through the last two cross-attention layers: giving the prompt to those layers alone reproduces them. Four other grounding models, CLIPSeg, Grounding-DINO, SAM 3, and Qwen2.5-VL, show no crime routing and weaker race routing. The model cannot refuse. Its patch softmax must place its mass somewhere, and its heatmap separates a groundable request ("the police officer") from one that is absent ("the pizza") or that would require a stereotyped demographic inference ("the criminal") only at chance (AUROC 0.52). We introduce SafeSteer, which adds a learned abstention output and counterfactual-invariance training on the same 23M steering parameters. SafeSteer separates should-point from should-abstain prompts at AUROC 0.997, generalizes to held-out sensitive and absent words (0.998; at a 0.5 threshold it refuses 99.8% of trained and 62% of held-out sensitive words) with no over-refusal of visible people on the benchmark, and removes most race routing while keeping localization and retrieval within 1 point of the released model. Code, benchmarks, and the curated mosaic sets will be released.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T08:29:12Z</published>
+    <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Rahul Golder</name>
+      <name>Seyedarmin Azizi</name>
     </author>
     <author>
-      <name>Bimol Nath Roy</name>
+      <name>Parsa Razmara</name>
     </author>
     <author>
-      <name>MM Faruque Hasan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.32910v1</id>
-    <title>Recommender regret for improving regularised RL estimation with bandits and MCTS</title>
-    <updated>2026-10-23T17:14:15Z</updated>
-    <link href="https://arxiv.org/abs/2610.32910v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32910v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Regularised reinforcement learning (RL) algorithms rely on estimators, like Monte Carlo tree search or one-step look-ahead, to provide policy, value, or Q-value estimates in training and inference. However, existing bandit-based estimation frameworks evaluate sampling efficiency, not the quality of estimates. We address this by formalising estimate generation as a recommendation process, treating bandit-based sampling as an improvement operator. To evaluate the quality of a recommendation (estimate), we define regulariser-aware recommender regrets, analysing their lower bounds, and proving that simple algorithms like uniform sampling can achieve these bounds. Finally, we unify bandit- and search-based target improvement under recommender MCTS. Across synthetic trees, arcade games, and scientific discovery tasks, recommenders often yield faster target convergence and superior downstream performance. Our experiments characterise for the first time the potential of regularised MCTS in scientific applications.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:14:15Z</published>
-    <arxiv:comment>10 pages, plus appendices for proofs and additional information</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Danilo Vucetic</name>
+      <name>Sajjad Ghiasvand</name>
     </author>
     <author>
-      <name>Alexandre Larouche</name>
+      <name>Ardalan Aryashad</name>
     </author>
     <author>
-      <name>Mohammad Pedramfar</name>
-    </author>
-    <author>
-      <name>Audrey Durand</name>
-    </author>
-    <author>
-      <name>Gauthier Gidel</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.32895v1</id>
-    <title>Time-temperature superposition from multi-temperature chirp rheometry of thermorheologically simple materials via physics-informed Gaussian processes</title>
-    <updated>2026-10-23T17:01:08Z</updated>
-    <link href="https://arxiv.org/abs/2610.32895v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32895v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Inferring constitutive laws from transient response data is a central inverse problem in soft condensed-matter physics, particularly when the relevant relaxation spectrum extends beyond the time window of a single experiment. Time-temperature superposition (TTS) constrains this problem for thermorheologically simple materials in the linear viscoelastic regime by allowing temperature to rescale the characteristic relaxation time without changing the underlying shape of the relaxation spectrum. We incorporate this constraint into a physics-informed machine-learning framework for time-resolved mechanical spectroscopy via chirp rheometry. We encode compact fractional viscoelastic models as causal convolutional features derived from the Boltzmann superposition principle, and we jointly fit multi-temperature chirp records using sparse variational Gaussian process regression. The model infers horizontal shift factors, constitutive parameters, and an observational-noise scale directly from time-domain stress-strain signals measured in the linear viscoelastic regime, without first extracting frequency-domain spectra or manually shifting separate curves. For synthetic Fractional Maxwell data, the method recovers the generating constitutive law from a prescribed model library and latent shifts over stress-noise levels from 3% to 25%. Applied to a DGEBA-IPDA epoxy dataset spanning the glass-transition regime, the pooled likelihood distinguishes competing fractional rheology models using the Bayesian information criterion. These results recast TTS master-curve construction as probabilistic inference over latent time rescaling and linear viscoelasticity, while also identifying limitations, such as homoscedastic noise and weakly informative spectral regimes.</summary>
-    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T17:01:08Z</published>
-    <arxiv:primary_category term="cond-mat.soft"/>
-    <author>
-      <name>Isaac Y. Miranda-Valdez</name>
-    </author>
-    <author>
-      <name>Kourosh Mobredi</name>
-    </author>
-    <author>
-      <name>Juha Koivisto</name>
-    </author>
-    <author>
-      <name>Mikko J. Alava</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.32891v1</id>
-    <title>Green Code or Costly Code? Evaluating the Energy Costs of Iterative LLM-Based Code Optimizations</title>
-    <updated>2026-10-23T16:58:01Z</updated>
-    <link href="https://arxiv.org/abs/2610.32891v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.32891v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Large Language Models (LLMs) are increasingly used to optimize code for performance. This practice often assumes that improvements in execution speed naturally translate into overall lower energy consumption. We challenge this assumption empirically by measuring whether performance-optimized code produced by LLM self-refinement pipelines is also energy-efficient relative to canonical human reference solutions, and whether the energy cost of the optimization process can be offset by subsequent execution-time savings. We evaluate 11 open-source models across four decoding configurations on all 1,000 problems of EffiBench, a state-of-the-art performance benchmark, while collecting per-process, hardware-level energy measurements throughout. Inference energy spans 0.79 to 8.68 MJ across model-variant pairs, which is roughly equivalent to the energy of 250 to 2800 GPT-4.1 queries. Limiting the maximum number of output tokens has the largest impact, reducing energy use by up to 69% compared to the default configuration. On the execution side, 42 of 44 configurations produce code that consumes more energy per problem than the canonical human reference, with overheads ranging from +4% to +886%. The two exceptions achieve only marginal gains, with break-even points on the order of 10^6 to 10^7 executions. Mixture-of-Experts architectures consume substantially less inference energy than equivalently-sized dense models without sacrificing correctness, making architectural choice a more consequential sustainability lever than decoding parameters. Performance optimization and energy efficiency are not always aligned goals: LLM self-refinement consistently produces faster-seeking but energy-heavier code relative to what a human engineer would write. All artifacts are available at https://doi.org/10.5281/zenodo.23598170.</summary>
-    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-23T16:58:01Z</published>
-    <arxiv:comment>Accepted at the 49th IEEE/ACM International Conference on Software Engineering (ICSE 2027)</arxiv:comment>
-    <arxiv:primary_category term="cs.SE"/>
-    <author>
-      <name>Sadra Emami</name>
-    </author>
-    <author>
-      <name>Benjamin Weigell</name>
-    </author>
-    <author>
-      <name>Mohammad Reza Mousavi</name>
-    </author>
-    <author>
-      <name>Gunel Jahangirova</name>
-    </author>
-    <author>
-      <name>Hugo Araujo</name>
-    </author>
-    <author>
-      <name>Bernhard Bauer</name>
+      <name>Tina Khezresmaeilzadeh</name>
     </author>
   </entry>
 </feed>
