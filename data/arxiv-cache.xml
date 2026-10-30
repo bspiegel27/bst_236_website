@@ -1,307 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-10-29T03:32:10Z -->
+<!-- Last updated: 2026-10-30T03:35:20Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-10-29T03:32:10Z</updated>
+  <updated>2026-10-30T03:35:21Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>167331</opensearch:totalResults>
+  <opensearch:totalResults>167516</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2610.37656v1</id>
-    <title>Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops</title>
-    <updated>2026-10-27T17:58:48Z</updated>
-    <link href="https://arxiv.org/abs/2610.37656v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37656v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Relations compose through the entity they share - Alice is Bob's mother and Bob is Carol's father, so Alice is Carol's grandmother - and the order matters, since a father's mother is not a mother's father; verifying a composed relation means closing the loop. We show that if each entity's coordinate frame may be rotated independently (per-entity frame freedom), three things follow. In the pure-gauge sector, relations that share no cycle cannot interact at all. The only gauge-invariant score of a triangle is a class function of its holonomy $H = T_{ij} T_{jk} T_{ki}$ - a Wilson loop. And the only equivariant update of an edge is $U = Ψ(H)\, T_{ij}$ with $Ψ$ conjugation-equivariant. Edge attention by Wilson loops is therefore not one design among many but the unique form the symmetry permits. Three communities hold pieces of this form: the commuting-operator embeddings of knowledge graphs are its abelian (commuting) sector; AlphaFold's triangle update and the Edge Transformer have its shape - an edge updated through the third vertex - without its constraints; and lattice QCD builds it equivariantly on lattices. We instantiate the equivariant sub-family on general relational graphs as holonomy attention. With no training and composition alone, it infers unobserved $S_4$ relations on sparse graphs at 0.88 with a fifth of the edges corrupted, at or slightly below specialist synchronization algorithms, where every commutative architecture is capped at 0.083; its holonomy score flags corrupted triangles at AUC 0.99 where commuting scores are capped at 0.76 by a second selection rule, and it separates clusters without labels.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2610.39491v1</id>
+    <title>Automated Verification of Hamiltonian Simulation by Quantum Signal Processing</title>
+    <updated>2026-10-29T06:55:21Z</updated>
+    <link href="https://arxiv.org/abs/2610.39491v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39491v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present, to the best of our knowledge, the first fully automated verification framework for QSP-based Hamiltonian simulation. Our framework exploits the structure of the simulation algorithm: Hamiltonians are given as weighted sums of Pauli strings, embedded into larger unitaries through block encodings, and transformed into time-evolution operators by quantum signal processing (QSP). Using a symbolic Pauli-sum semantics for ancilla-indexed circuit blocks, our verifier proves that the distinguished all-zero ancilla block is proportional to the target Hamiltonian and infers the subnormalization factor automatically. It then verifies the QSP layer by extracting the implemented polynomial transformation and certifying its approximation error. This structure-aware abstraction is essential for scalability. Composing our verified block encoding and QSP wrapper yields an estimated macro-expanded size of about 1.52 million gates. The verifier certifies the block encoding once and checks the QSP layer through its abstract interface, without expanding the oracle calls. Our implementation verifies block encodings of structured Pauli-sum Hamiltonians with up to 256 system qubits and verifies QSP Hamiltonian-simulation instances by extracting their implemented polynomials and checking the resulting approximation bounds. These results show that fully automated verification can handle common Hamiltonian-simulation circuits at substantial scale when it exploits their algorithmic structure.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:55:21Z</published>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Min Lai</name>
+    </author>
+    <author>
+      <name>Yu-Fang Chen</name>
+    </author>
+    <author>
+      <name>Shih-Han Hung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39483v1</id>
+    <title>Does Federated Training Degrade Explainability? A Comparative Analysis of Grad-CAM Faithfulness in Centralized vs. Federated Deepfake Detection</title>
+    <updated>2026-10-29T06:49:14Z</updated>
+    <link href="https://arxiv.org/abs/2610.39483v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39483v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automated detection has become the essential safeguard against realistic synthetic media, but deploying it at scale requires training on sensitive data from multiple organizations, putting privacy and the transparency demanded by forensic review in direct conflict. Federated learning resolves the privacy side by sharing only model updates rather than raw data, but whether this comes at the cost of trustworthy gradient-based explanations, which analysts rely on to decide whether or not to trust a flagged clip, has not been studied. We present the systematic study of Grad-CAM explanation faithfulness under federated deepfake detection, evaluating an EfficientNet-B4 detector on FaceForensics++ across five federated clients under varying degrees of data heterogeneity. We find that the relationship between federation and explanation quality is non-monotonic: at near-IID (Independent and Identically Distributed Data) and moderate heterogeneity, federated models match or exceed the faithfulness of a centralized baseline, but at extreme heterogeneity, explanations break down entirely, becoming spatially incoherent and, on average, causally misleading. This degradation is not a general cost of federated training but a threshold effect tied to client heterogeneity, and we offer practical guidance for identifying when privacy-preserving deepfake detection can be deployed safely and when its explanations can no longer be trusted. Code and data partitions are available for reproducibility.</summary>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:58:48Z</published>
-    <arxiv:comment>7 pages, 1 figure. Accepted at the 9th Workshop on Machine Learning and the Physical Sciences (ML4PS 2026), co-located with NeurIPS 2026</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>Aakash Sarkar</name>
-    </author>
-    <author>
-      <name>Ananya Mukherjee</name>
-    </author>
-    <author>
-      <name>Motoshige Sato</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37646v1</id>
-    <title>Measuring the magnetization profiles of galaxy groups and clusters</title>
-    <updated>2026-10-27T17:56:29Z</updated>
-    <link href="https://arxiv.org/abs/2610.37646v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37646v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Magnetic fields are vital in determining the physical conditions of baryons in massive halos. They are, however, notoriously difficult to observe. This impacts problems from our understanding of galaxy formation, to the observed deficit in the amplitude of thermal Sunyaev-Zel'dovich (tSZ) power spectrum that affects cosmological inferences. Although Faraday rotation measures (RMs) offer a direct probe of magnetic fields, it weights magnetic fields by the free-electron density. Several probes of free electrons, including fast radio burst (FRB) dispersion measures (DMs) and kinematic SZ (kSZ) effect, are now maturing into precision tools. We combine RM$^2$ stacks from SPICE-RACS around DESI galaxy groups and ROSAT clusters with optical depth profiles constrained jointly by the FRB DM-redshift relation and the kSZ effect, and obtain 95% upper limits on the rms line-of-sight magnetic field of $&lt;3.9$-$11.6~μ$G ($&lt;2.3$-$6.4~μ$G) in groups (clusters) for a 10~kpc coherence length. Combining these with thermal pressure profiles inferred from tSZ-shear cross-correlations, we obtain 95% lower limits on the plasma $β$ of $&gt;0.31$ ($&gt;11$) in groups (clusters). Although current constraints are only limits, we forecast a first detection with larger datasets from the Deep Synoptic Array (DSA). We present the first forecast of the DSA RM grid density ($\sim365$ RMs deg$^{-2}$), which when combined with 10$^4$ FRBs would measure the field in groups to $3$-$13\%$ precision, compared to current constraints of $38$-$75\%$. Although the interpretation of current measurements remains challenging owing to depolarization along turbulent halo sightlines and the unknown coherence length, larger samples and DSA/Square Kilometer Array observations may resolve these uncertainties by measuring polarization-fraction profiles and the RM structure function using extended radio sources, respectively.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:56:29Z</published>
-    <arxiv:comment>14 pages, 6 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Kritti Sharma</name>
-    </author>
-    <author>
-      <name>Vikram Ravi</name>
-    </author>
-    <author>
-      <name>Elisabeth Krause</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37643v1</id>
-    <title>What shapes the bright end of the UV luminosity function? Stellar mass, star-formation variability, and dust in JADES</title>
-    <updated>2026-10-27T17:55:29Z</updated>
-    <link href="https://arxiv.org/abs/2610.37643v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37643v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>JWST surveys find more UV-bright galaxies at $z&gt;10$ than galaxy-formation models predict, but the roles of recent star formation, stellar mass and dust remain uncertain. We analyse 1365 spectroscopically confirmed JADES galaxies at $3\leq z\leq9$, fitting NIRCam photometry and NIRSpec emission lines with \ceri. Our model includes flexible star-formation histories (SFHs) under three priors, two-component dust attenuation and nebular emission. We account for spectroscopic selection through population reweighting and assess the reliability of inferred trends. At $z=3$--5, rising SFHs are more common in low-mass galaxies, whereas most galaxies above $10^{9.5}\,{\rm M}_{\odot}$ have declining SFHs. The apparent increase in rising fractions with redshift cannot be distinguished from the adopted SFH prior alone. At fixed stellar mass, recent star formation is the strongest predictor of UV brightness. UV-brighter galaxies have higher recent SFRs, younger stellar populations and less attenuation at fixed SFR. Below $10^9\,{\rm M}_{\odot}$, they are also more likely to have rising SFHs, with odds increasing by up to a factor of 2.3 per magnitude brighter, although the strongest trend requires caution. In contrast, galaxies with $M_{\mathrm{UV}}&lt;-20$ at $z=3$--5 are predominantly massive, and approximately half have declining SFHs. Dust partly offsets burst-driven UV brightening: attenuation increases with recent SFR and declines gradually after the inferred SFR peak. In model sensitivity tests, dust has the largest effect on bright-end counts, whereas removing galaxy-to-galaxy SFH scatter changes them by at most 0.17~dex. Thus, bursts can make low-mass galaxies unusually UV-bright for their mass, while the absolute bright end of the UVLF is primarily shaped by stellar mass and dust attenuation.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:55:29Z</published>
-    <arxiv:comment>39 pages, 25 figures, 4 tables. Submitted to MNRAS. Comments welcome. Machine-readable tables: doi:10.5281/zenodo.23697784</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Amanda Stoffers</name>
-    </author>
-    <author>
-      <name>Sandro Tacchella</name>
-    </author>
-    <author>
-      <name>Benjamin D. Johnson</name>
-    </author>
-    <author>
-      <name>Brant Robertson</name>
-    </author>
-    <author>
-      <name>Roberto Maiolino</name>
-    </author>
-    <author>
-      <name>Andrew J. Bunker</name>
-    </author>
-    <author>
-      <name>Emma Curtis-Lake</name>
-    </author>
-    <author>
-      <name>A. Lola Danhaive</name>
-    </author>
-    <author>
-      <name>Qiao Duan</name>
-    </author>
-    <author>
-      <name>Francesco D'Eugenio</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37642v1</id>
-    <title>Metacognitive Decoding: Efficient Inference for Diffusion Language Agents</title>
-    <updated>2026-10-27T17:55:24Z</updated>
-    <link href="https://arxiv.org/abs/2610.37642v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37642v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Diffusion language models offer a promising path to efficient agents through parallel token generation. However, efficient interaction requires adapting both where computation is spent and how much text is generated. We introduce a metacognitive controller that guides diffusion generation according to the needs of the current response and the agent's interaction with the environment. It learns when to finalize tokens and how far generation should extend, reducing overall computation within responses. Our controller, a lightweight plug-in for the diffusion backbone, is trained on agent trajectories to balance correctness and generation cost. This approach connects the agent's generation process to the interaction the agent serves. Experiments across five benchmarks demonstrate that our approach reduces inference FLOPs by 20.6% on average compared with the most efficient baseline, while maintaining competitive task accuracy. Ablation studies further validate the effectiveness of our approach.</summary>
-    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:55:24Z</published>
-    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
-    <arxiv:primary_category term="cs.CL"/>
-    <author>
-      <name>Mingyu Zhao</name>
-    </author>
-    <author>
-      <name>Shuhang Lin</name>
-    </author>
-    <author>
-      <name>Ligong Han</name>
-    </author>
-    <author>
-      <name>Xiaojing Yu</name>
-    </author>
-    <author>
-      <name>Zhenting Wang</name>
-    </author>
-    <author>
-      <name>Yifei Pang</name>
-    </author>
-    <author>
-      <name>Yang Zhou</name>
-    </author>
-    <author>
-      <name>Dimitris N. Metaxas</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37638v1</id>
-    <title>Weighing dark matter particles with gravitational waves</title>
-    <updated>2026-10-27T17:54:29Z</updated>
-    <link href="https://arxiv.org/abs/2610.37638v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37638v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>It is commonly assumed that the mass of dark matter particles cannot be determined from their gravitational effects when dark matter behaves as collisionless matter. Here we show that extreme-mass-ratio inspirals observable by millihertz gravitational-wave observatories such as the Laser Interferometer Space Antenna (LISA) could measure the mass of ultralight dark matter particles in sufficiently dense dark matter spikes. The separation of scales between the two black holes allows ultralight dark matter to form a collisionless density spike around the massive primary while retaining wave effects in its interaction with the stellar-mass companion. We incorporate wave-dependent accretion and dynamical friction into relativistic inspiral waveforms and jointly infer the dark matter particle mass, spike normalisation and binary parameters from simulated LISA signals. For massive black holes at the low-mass end of the LISA population ($M\sim 10^5 M_\odot$), our forecasts show that particle masses spanning $10^{-14}-10^{-11}\,\mathrm{eV}$ could be measured to within an order of magnitude.</summary>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:54:29Z</published>
-    <arxiv:comment>11 pages, 5 figures. Comments are welcomed</arxiv:comment>
-    <arxiv:primary_category term="gr-qc"/>
-    <author>
-      <name>Rodrigo Vicente</name>
-    </author>
-    <author>
-      <name>Francisco Duque</name>
-    </author>
-    <author>
-      <name>Theophanes K. Karydas</name>
-    </author>
-    <author>
-      <name>Gianfranco Bertone</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37621v1</id>
-    <title>Galactic Dynamics Drives Cyclic Star Formation in Dipole Dwarf Galaxies</title>
-    <updated>2026-10-27T17:48:10Z</updated>
-    <link href="https://arxiv.org/abs/2610.37621v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37621v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Dwarf galaxies are dark matter-dominated systems that are sensitive to feedback and display bursty star formation histories. This makes them ideal probes of the processes that regulate star formation. This work investigates the timescales of star formation rate (SFR) variability in isolated dwarf galaxies using high-resolution cosmological zoom-in simulations of $50$ dwarf galaxies drawn from the Marvelous Massive Dwarfs and Extended Marvelous Dwarfs simulation suites ($7.3 &lt;$ \lmstar $&lt; 9.1$). We measure star formation histories in $10$ Myr bins and characterize their variability with power spectral densities (PSDs). At the population level, the PSDs of both disk and non-disk galaxies follow a broken power-law, with a break timescale near $100$ Myr. Individually, our galaxies show both smooth and bursty star formation. A subset of disk galaxies show quasi-periodic SFR oscillations about their mean, which we refer to as cyclic star formation. The dominant timescale of these oscillations scales linearly with half-light radius and is approximated by the orbital period at that radius. Cyclic galaxies have Magellanic Spiral (Sm) morphologies and host lopsided dipole gas disks. In these systems, the bulk of the gas in the lopsided disk moves between its maximum and minimum distance from the galactic center, compressing the star-forming gas once per radial orbit and driving the SFR cycle. Cyclic star formation adds a narrow Lorentzian component to the PSD, peaked at radial orbital frequency of the disk ($\sim 200-500$ Myr), which is comparable to burst timescales inferred from observations.</summary>
-    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:48:10Z</published>
-    <arxiv:comment>27 pages, 12 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.GA"/>
-    <author>
-      <name>Robel Geda</name>
-    </author>
-    <author>
-      <name>Akaxia Cruz</name>
-    </author>
-    <author>
-      <name>Alyson Brooks</name>
-    </author>
-    <author>
-      <name>Jenny E. Greene</name>
-    </author>
-    <author>
-      <name>Carrie Filion</name>
-    </author>
-    <author>
-      <name>Adrian M. Price-Whelan</name>
-    </author>
-    <author>
-      <name>Thomas R. Quinn</name>
-    </author>
-    <author>
-      <name>James Wadsley</name>
-    </author>
-    <author>
-      <name>Ben Keller</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37619v1</id>
-    <title>Perceiving and Predicting Dynamic Sports: Spatiotemporal Intelligence in Vision Models for Egocentric Tennis Video</title>
-    <updated>2026-10-27T17:47:14Z</updated>
-    <link href="https://arxiv.org/abs/2610.37619v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37619v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Agile robots require spatiotemporal intelligence to interpret scenes, reason about interactions, and anticipate future events. Yet it remains unclear how well foundation vision models support these capabilities, particularly from a moving egocentric camera, which is a natural view for robots. To investigate this, we collect an annotated tennis dataset and train a suite of vision models on spatiotemporal tasks. Our dataset contains egocentric video synchronized with five allocentric videos, estimated global positions, labeled contact times, and annotated stroke types. We then evaluate seven prediction tasks from egocentric images: 2D ego player and 3D ball localization, future player and ball trajectories, forehand or backhand stroke anticipation, time to the next ego player ball contact, and 3D ball position at that contact. We compare image encoders, video encoders, and vision-language models with jointly trained prediction heads. The best performing models achieve mean current-frame localization errors of 0.14 m for the ego player and 0.54 m for the ball, future forecasting errors of 0.34 m for the ego player and 0.91 m for the ball over 1.1 s, and a mean contact-time prediction error of 0.14 s. Auxiliary depth information substantially improves 3D ball localization, suggesting that inferring metric depth remains a challenge. Longer image histories do not improve ball forecasting, indicating that representations exploit scene context rather than rely solely on inter-frame motion. Finally, we propose a conditional diffusion model to generate whole-body kinematic tennis motion from vision encoder predictions on egocentric video at real-time rates, adapting movements as predictions are refined. These results move towards a deeper understanding of how foundation vision models can support real-time dynamic robots using egocentric video.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:47:14Z</published>
-    <arxiv:comment>8 pages, 5 figures. Project page: https://tennis-vision.csail.mit.edu/</arxiv:comment>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:49:14Z</published>
+    <arxiv:comment>10 Pages, 3 figures, Muhammad Uzair Shahid and Muhammad Zabil Mehboob contributed equally to this work</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Muhammad Uzair Shahid</name>
+    </author>
+    <author>
+      <name>Muhammad Zabil Mehboob</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39480v1</id>
+    <title>Splitting Compositions of Monotone Operators</title>
+    <updated>2026-10-29T06:47:45Z</updated>
+    <link href="https://arxiv.org/abs/2610.39480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coupled convex optimisation equilibria, bilinear saddle and potential systems, and nonlinear electronic device laws lead naturally to inclusions of the form $0\in Hx+A(Bx)-b$, where $A$ and $B$ are maximal monotone but their composition need not be monotone. We introduce a new class of splitting algorithms that solve such inclusions. Introducing the intermediate graph variable $y\in Bx$ exposes a directed two-row system. A one-parameter family of kernels produces a lower-triangular warped-resolvent iteration evaluated with one application of $H$ and the ordinary resolvents $J_{αA}$ and $J_{βB}$. Appropriate specializations of the problem data and algorithmic parameters recover forward--backward, inertial, primal--dual, and Douglas--Rachford constructions, while setting $H=b=0$ generates three novel algorithms for the pure composition $0\in A(Bx)$.
+  Convergence of the coupled method is certified by an explicit nonnegative two-block gain matrix. Its Schur condition yields contraction in particular weighted norms, global linear convergence, and residual error estimates. For the general problem class, our convergence condition is shown to be sharp for an explicitly constructed linear family. When the problem is specialized to a pure composition, we prove convergence under the weaker assumption that only one operator is strongly monotone. This weaker regime is illustrated on a nonlinear circuit problem. We further illustrate our methods by solving inference problems for cascaded equilibrium neural networks.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:47:45Z</published>
+    <arxiv:comment>32 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Haoming Qu</name>
+    </author>
+    <author>
+      <name>Yefan Wu</name>
+    </author>
+    <author>
+      <name>Thomas Chaffey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39478v1</id>
+    <title>Regional Anchor Routing for Multi-Object Motion Transfer</title>
+    <updated>2026-10-29T06:46:24Z</updated>
+    <link href="https://arxiv.org/abs/2610.39478v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39478v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Compositional motion transfer requires a model to extract motions from multiple reference videos, and apply each motion to a user-specified object in one target scene. Existing methods normally struggle to reliably assign different reference motions to the correct target objects, thus a motion intended for one object may affect another. Meanwhile, some motion-specific tuning approaches are still facing another issue: they must run a new optimization whenever the reference video changes, making repeated transfers inefficient. To address these limitations, we propose RART, a framework that unifies object-wise motion extraction, target-region anchoring, and frame-aligned injection into a frozen video Diffusion Transformer for multi-object motion transfer. For each reference motion, RART extracts temporally ordered features from the masked reference video, and then conditions them on the target first-frame mask to form mask-anchored motion tokens. Frame-aligned motion cross-attention allows each generated frame to read only the motion tokens at the corresponding time slots, composing all object motions in one denoising process. During training, a motion-attention routing loss encourages each target region to attend to its corresponding motion tokens and reduces interference between objects. Therefore, RART can handle novel reference-target combinations without per-video optimization. Experiments show that RART achieves accurate motion preservation, efficient inference, and strong compositional generalization.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:46:24Z</published>
+    <arxiv:comment>Project Page: https://ethan-li123.github.io/RART_page/</arxiv:comment>
     <arxiv:primary_category term="cs.CV"/>
     <author>
-      <name>Tudor Braicu</name>
+      <name>Yuze Li</name>
     </author>
     <author>
-      <name>Joseph DelPreto</name>
+      <name>Fuchen Long</name>
     </author>
     <author>
-      <name>Jared Boyer</name>
+      <name>Xinlong Sun</name>
     </author>
     <author>
-      <name>Mónika Farsang</name>
+      <name>Cheng Yan</name>
     </author>
     <author>
-      <name>Maximilian Stölzle</name>
+      <name>Xinyu Zhang</name>
     </author>
     <author>
-      <name>Tim Niklas Seyde</name>
-    </author>
-    <author>
-      <name>Daniela Rus</name>
+      <name>Xi Chen</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2610.37617v1</id>
-    <title>A Quiet Night in the Millihertz Sky? LISA Forecasts from LIGO/Virgo/KAGRA Populations</title>
-    <updated>2026-10-27T17:46:56Z</updated>
-    <link href="https://arxiv.org/abs/2610.37617v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37617v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The high-mass black hole population inferred from ground-based observations can substantially affect the number of binaries detectable by the Laser Interferometer Space Antenna (LISA). We use population constraints based on data from the latest LIGO/Virgo/KAGRA Gravitational-Wave Transient Catalog (GWTC-5.0), as well as constraints from the O3 search for intermediate-mass black hole binaries, to forecast the number and masses of binary black holes detectable by LISA. Using the released GWTC-5.0 population posterior, we obtain $6.6^{+5.5}_{-2.2}$ expected detections with signal-to-noise ratio $&gt;8$ in 4 years (median and $90\%$ credible interval). The alternative population models we consider use a broken power law with two or three Gaussian peaks for either the primary-mass distribution or a common mass distribution for both black holes. For the three-peak model with the common mass distribution, extrapolating from $300$ to $1000M_\odot$ roughly doubles the median expected number of LISA detections to $\sim14$. The upper end of its $90\%$ credible interval rises from tens to thousands of expected detections, although approximations may limit the reliability of the most extreme counts. For the reference GWTC-5.0 population, $39^{+22}_{-11}\%$ of the binaries detectable by LISA merge during the mission or within $10$ years after its end and are potential multiband sources. Essentially all of these mergers would be detectable by a reference Cosmic Explorer configuration if it is operating at merger. Ground-based measurements of the high-mass population can therefore inform both LISA forecasts and the prospects for observing the same binaries through inspiral and merger.</summary>
-    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:46:56Z</published>
-    <arxiv:comment>25 pages, 7 figures</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.HE"/>
-    <author>
-      <name>Ignacio Magaña Hernandez</name>
-    </author>
-    <author>
-      <name>Antonella Palmese</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37601v1</id>
-    <title>SLICE-CiM: Selective Layer-wise Inference Control Engine with Confidence-Based Early Exit for SRAM based Digital Compute-in-Memory</title>
-    <updated>2026-10-27T17:32:32Z</updated>
-    <link href="https://arxiv.org/abs/2610.37601v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37601v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Digital SRAM compute-in-memory (CIM) macros enable energy-efficient CNN inference by eliminating off-chip weight transfers; however, peripheral control logic introduces three inefficiencies: bit- slice over-activation at reduced precision (L1), unnecessary accumula- tion depth (L2), and idle precision-transition stalls (L3). To address these, we present four synthesizable peripheral blocks: a Flush-Merge Enable (FME) controller, a Confidence-Based Early-Exit (EE) module, a Precision Register with Decoder (PR/PD), and a Bit-Serial Cycle Controller (CC), co-designed to minimize switching activity, wordline overhead, and leakage. Implemented in TSMC 65-nm CMOS at 335 MHz, the peripheral framework occupies 1769.760 μm2 post-synthesis and 1982.131 μm2 post-PnR. Gate-level VCD analysis reports 6.0706 μW leakage and 288.2902 μW (post-synthesis) / 322.8850 μW (post-PnR) dynamic power, totaling 328.9556 μW (0.2402% of system power). The EE module dominates dynamic power (58.2%), while WLG dominates area (58.1%). System evaluation on MobileNetV2 (CIFAR-100) shows efficiency scaling from 31.35 TOPS/W (8b/8b, 1.2 V) to 454.91 TOPS/W (2b/8b, 0.8 V), achieving 13.33x improvement without bitcell modification or retraining. The framework targets CNN workloads exploiting sparsity, with Transformer extension as future work.</summary>
-    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:32:32Z</published>
-    <arxiv:primary_category term="cs.AR"/>
-    <author>
-      <name>Pratham Sharma</name>
-    </author>
-    <author>
-      <name>Mohd Faisal Khan</name>
-    </author>
-    <author>
-      <name>Santosh Kumar Vishvakarma</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2610.37598v1</id>
-    <title>GAS-PFN: Graph-Aware Spatiotemporal Prior-Data Fitted Networks for Zero-Shot Traffic Forecasting</title>
-    <updated>2026-10-27T17:31:26Z</updated>
-    <link href="https://arxiv.org/abs/2610.37598v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2610.37598v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Traffic forecasting requires modeling complex temporal dynamics and the spatial dependencies imposed by road topology. Supervised graph-based models achieve strong performance, but are often trained for a particular dataset and sensor graph, making deployment to new or evolving networks costly. Prior-Data Fitted Networks (PFNs) offer a zero-shot alternative by learning in-context inference from synthetic task priors, which provide an explicit mechanism for encoding domain-specific assumptions. Existing forecasting PFNs, however, do not explicitly represent the graph-structured dependencies governing traffic dynamics. To combine graph-aware traffic modeling with zero-shot adaptation, we introduce the Graph-Aware Spatiotemporal Prior-Data Fitted Network (GAS-PFN). GAS-PFN incorporates sampled road topology into its synthetic task prior through random-walk diffusion, teaching the model to learn graph-coupled dynamics during pretraining. Its co-designed inference architecture uses two mask-conditioned passes through a shared Transformer backbone to separately model sensor-specific temporal dynamics and spatiotemporal interactions among neighboring sensors before integrating their representations for prediction. This design enables GAS-PFN to use target-network structure and context without parameter updates. Across six benchmarks at the 90-minute horizon, GAS-PFN reduces MSE by 34.0% on average relative to TimePFN, its closest PFN-based predecessor. It also reduces MSE by 27.7% on average relative to four recent industry-developed general-purpose zero-shot forecasters. In this comparison, all models receive 90 minutes of contiguous recent history, and any additional context is drawn from each dataset's chronological training split. These results indicate that aligning PFN priors and inference architectures with graph structure improves in-context learning for zero-shot traffic forecasting.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2610.39468v1</id>
+    <title>Soei: Structured Observability of Evidence and Intent for Multi-Agent AI Software Engineering</title>
+    <updated>2026-10-29T06:40:12Z</updated>
+    <link href="https://arxiv.org/abs/2610.39468v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39468v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI coding agents now do long, multi-step and multi-session software work with little supervision. When a developer comes back to that work, the useful question is not what the model said but what was actually done, by whom, and whether it is finished. We study this in three parts. First, we verify Agenttrail, an open-source local observability tool for coding agents, against its source at commit e4ba2da: nine documented constants and mechanisms hold at file-and-line level, two event pipelines are never unified, and its Map service has an unauthenticated local mutation surface. Second, we run a prototype of our system on 45 real coding-agent sessions (102,233 records, 20,577 tool executions, 2,336 human-to-agent episodes). With a blind-audited classifier (precision 83.3% and 96.7%) we estimate that 23.4% (95% CI 17.1 to 35.7) of code-editing episodes end with no independent check after the last edit, and that 57.8% of to-dos the agent marked complete after editing had no proof in between. A 10-minute timing heuristic for session hand-offs recovers 6 of the 24 session pairs that content lineage links. 42% of sessions run longer than 24 hours, 48.1% of transcript bytes lie past a 2 MiB replay bound, and 1,326 records in 16 sessions contain credential-like strings. Third, we propose Soei (Structured Observability of Evidence and Intent): an acknowledgement-aware event schema, a hash-chained local ledger, a W3C PROV-aligned graph, calibrated inference for attribution and lineage, and a verification layer that keeps a claim of completion apart from proof. On the same corpus the ledger is 20% of raw size, holds no content or credentials, verifies at about 126k events/s, detects tampering and replays deterministically. We position the work against concurrent 2026 proposals and define autonomy levels with evidence gates and harness metrics baselined on our data.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-10-27T17:31:26Z</published>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:40:12Z</published>
+    <arxiv:comment>27 pages, 19 figures, 16 tables. Preprint v1.1</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Mohammed Nayeem Khan</name>
+    </author>
+    <author>
+      <name>K S Sarun Kumar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39467v1</id>
+    <title>Calibrating Attention-Based Token Pruning for Efficient Multi-Image Synthesis in UMMs</title>
+    <updated>2026-10-29T06:39:00Z</updated>
+    <link href="https://arxiv.org/abs/2610.39467v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39467v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Unified Multimodal Models (UMMs) enable powerful multi-image synthesis but incur substantial computation from long visual contexts. While token pruning offers a direct route to accelerating inference, existing methods are primarily adapted from understanding tasks, suffering from insufficient reference image exploration, confused conditional guidance, and pooling-induced ambiguity that degrades generation quality. To address these issues, we propose CATP, the first training-free context-compression method tailored to UMM generation, which \textbf{C}alibrates the discrepancies of general \textbf{A}ttention-based \textbf{T}oken \textbf{P}runing for better quality-efficiency trade-off. Concretely, building on independent layer-wise pruning during denoising, we introduce Guidance-Consistent Pruning (GCP) to synchronize pruning decisions across conditioning branches, and a Taylor-Calibrated Attention Metric (TCAM) that derives a theoretically grounded second-order correction for pooling-induced bias. In addition, a Fast Scoring Operator (FSO) fuses the calibration into tiled online Softmax to reduce pruning cost. Extensive experiments across representative UMMs and benchmarks demonstrate that CATP consistently outperforms state-of-the-art token-reduction methods, achieving up to 2.09$\times$ attention-core speedup.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:39:00Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zimeng Wu</name>
+    </author>
+    <author>
+      <name>Qijian Tian</name>
+    </author>
+    <author>
+      <name>Penghui Du</name>
+    </author>
+    <author>
+      <name>Changqian Yu</name>
+    </author>
+    <author>
+      <name>Jiaxin Chen</name>
+    </author>
+    <author>
+      <name>Yunhong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39451v1</id>
+    <title>Smooth Action Chunking Via Movement-Primitive Representations for Imitation Learning</title>
+    <updated>2026-10-29T06:24:09Z</updated>
+    <link href="https://arxiv.org/abs/2610.39451v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39451v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Imitation learning has become a widely adopted approach for vision-based robot policies, owing to its conceptual simplicity, scalability, and ability to leverage large-scale datasets. As these policies have grown more capable, action chunking has become their standard interface. At each decision step the policy outputs several future actions at once. Backbones from diffusion policies to large vision-language-action models all share it. Whatever backbone produces the chunk, its temporal structure is learned only implicitly. The commanded trajectory is therefore jerky both within a chunk and between successive chunks. On real hardware this appears as visible vibration and as repeated saturation of the follower's velocity limit. We address this issue by incorporating a movement-primitive-based trajectory representation into action chunking. Specifically, a trajectory segment is represented as a linear combination of smooth basis functions, yielding smooth trajectories by construction while leaving the policy architecture, training objective, and inference procedure unchanged. The same representation also yields a closed-form, inference-time correction for the second source of jerk. We condition the predicted coefficients so that the new chunk passes through a via-point at the previous chunk's last commanded action. This correction needs no retraining and, unlike asynchronous Real-Time Chunking, applies to policies queried in one shot. We instantiate it on a one-shot (ACT) and an iterative (DiT) backbone and evaluate in simulation and on a real bimanual ALOHA platform. The representation lowers within-chunk jerk by an order of magnitude on the one-shot backbone and by 2.4 times on the iterative one, with task success statistically non-inferior. The conditioning then removes 73-84% of the boundary discontinuity, at negligible per-step cost.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:24:09Z</published>
     <arxiv:primary_category term="cs.LG"/>
     <author>
-      <name>Joseph Natter</name>
+      <name>Shota Nomura</name>
     </author>
     <author>
-      <name>Long Vu</name>
+      <name>Takayuki Osa</name>
     </author>
     <author>
-      <name>Yifan Zhang</name>
+      <name>Yasuhiro Kato</name>
     </author>
     <author>
-      <name>Bobin Deng</name>
+      <name>Kazuki Ota</name>
     </author>
     <author>
-      <name>Kun Suo</name>
+      <name>Naoki Shitanda</name>
     </author>
     <author>
-      <name>Rui Wu</name>
+      <name>Tatsuya Harada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39441v1</id>
+    <title>PathCowork: Learning from real-world pathology practice to build AI copilots</title>
+    <updated>2026-10-29T06:15:58Z</updated>
+    <link href="https://arxiv.org/abs/2610.39441v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39441v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Medical AI learns from the answers doctors record, but rarely from how they interpret the evidence to reach them. Here we introduce PathCowork, a framework that turns pathologists' narrated examinations into supervision for visual grounding and procedures that guide diagnostic AI agents. Synchronized gaze, narration and navigation link visual findings to the process of interpreting them. Across 48 sessions from 16 pathologists, the platform captured 1,028 minutes of slide review. Using these data, we trained PathCowork-1T for server deployment and PathCowork-27B for local deployment, with improved visual grounding. Across five organ-specific evaluations, agents combining this grounding with recorded diagnostic procedures achieved primary task scores averaging 17.9 and 24.1 percentage points higher than Claude Code and Codex, respectively, with shorter processing times and lower inference costs. Compared to the state-of-the-art multiple-instance learning AIs, the PathCowork agent-proposed regions achieved higher prostate-grading scores with limited slide labels. PathCowork can also help construct pathology AI benchmarks where questions derived from the recordings identified difficulties in recognizing viewing context and rejecting inapplicable premises. In summary, PathCowork proposes a new paradigm to scale up the data collection and train pathology AI through transparent reasoning from diagnostic sessions, opening a path towards systems that learn directly from routine clinical practice.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:15:58Z</published>
+    <arxiv:comment>56 pages, including supplementary information. Code, models and demonstration videos: https://github.com/zhihuanglab/PathCowork</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Sheng Wang</name>
+    </author>
+    <author>
+      <name>Jialu Yao</name>
+    </author>
+    <author>
+      <name>Maria V. Rossi</name>
+    </author>
+    <author>
+      <name>Shunsuke Koga</name>
+    </author>
+    <author>
+      <name>Esther Baranov</name>
+    </author>
+    <author>
+      <name>MacLean P. Nasrallah</name>
+    </author>
+    <author>
+      <name>Songhao Li</name>
+    </author>
+    <author>
+      <name>Jonathan Xu</name>
+    </author>
+    <author>
+      <name>Wei Du</name>
+    </author>
+    <author>
+      <name>Cindy McGrath</name>
+    </author>
+    <author>
+      <name>Timothy Chao</name>
+    </author>
+    <author>
+      <name>Anne Wang</name>
+    </author>
+    <author>
+      <name>Zhaohai Yang</name>
+    </author>
+    <author>
+      <name>Daniel Akuma</name>
+    </author>
+    <author>
+      <name>Selemon M. Walle</name>
+    </author>
+    <author>
+      <name>Olga Pozdnyakova</name>
+    </author>
+    <author>
+      <name>Edward B. Lee</name>
+    </author>
+    <author>
+      <name>Zahra Alipour</name>
+    </author>
+    <author>
+      <name>Annapurna Saksena</name>
+    </author>
+    <author>
+      <name>Rashmi Tondon</name>
+    </author>
+    <author>
+      <name>Nikolina Dioufa</name>
+    </author>
+    <author>
+      <name>David E. Elder</name>
+    </author>
+    <author>
+      <name>George J. Netto</name>
+    </author>
+    <author>
+      <name>Xiaowei Xu</name>
+    </author>
+    <author>
+      <name>Zhi Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39422v1</id>
+    <title>Nonlinear Sufficient Dimension Reduction for Causal Inference with Continuous Treatments</title>
+    <updated>2026-10-29T06:01:13Z</updated>
+    <link href="https://arxiv.org/abs/2610.39422v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39422v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Causal inference with continuous treatments requires estimating nuisance functions to adjust for the potentially high-dimensional confounder, but nonparametric estimation of these functions is severely hampered by the curse of dimensionality. To address this challenge, we propose a nonlinear sufficient dimension reduction framework to construct low-dimensional sufficient confounders to preserve the unbiasedness of the treatment effect. We estimate the causal effect by combining the generalized Sliced Inverse Regression with the inverse probability weighting, outcome regression, and augmented inverse probability weighting, respectively. We further establish the convergence rates of the first two estimators and derive the asymptotic distributions of the third. Our theoretical results show that, compared to estimators based on the full covariates, dimension reduction yields faster convergence rates and weaker rate conditions without inflating the asymptotic variance. Simulation studies demonstrate that the proposed estimators improve finite-sample performance over their counterparts without dimension reduction, particularly when the original covariate dimension is high. These results demonstrate that sufficient dimension reduction provides a flexible approach to mitigating the curse of dimensionality in causal inference with continuous treatments.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:01:13Z</published>
+    <arxiv:comment>30 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Chak Fung Choi</name>
+    </author>
+    <author>
+      <name>Yin Tang</name>
+    </author>
+    <author>
+      <name>Bing Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.39420v1</id>
+    <title>Energy-Efficient Memristor Accelerator for Depression Detection with a CNN-LSTM Hybrid Model</title>
+    <updated>2026-10-29T06:00:44Z</updated>
+    <link href="https://arxiv.org/abs/2610.39420v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.39420v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Early screening of depression requires efficient analysis of audio and speech data, while conventional CPU and GPU platforms incur high latency and energy consumption for CNN-LSTM inference. To address this challenge, we propose a unified resistive RAM (ReRAM) processing-in-memory accelerator for a CNN-LSTM attention workload. The architecture integrates convolutional, recurrent, attention, and multi-layer perceptron (MLP) stages within a crossbar-based framework, reducing intermediate data movement between spatial and temporal branches. CNN operations are mapped through im2col-based vectorization, while LSTM gate computations are reformulated using concatenated input-state vectors and mapped onto ReRAM crossbars. We further provide module-level workload breakdown, parameter sensitivity analysis, and matched-workload context against representative ReRAM/PIM accelerators. Experimental results show 32.1 times and 9.3 times latency reduction over CPU and GPU baselines, respectively, with about 160 times and 140 times energy reduction. Simplified weight-perturbation tests characterize ASLF sensitivity in an untrained pipeline with synthetic spectrogram-shaped inputs. Task-level prediction accuracy and robustness remain to be evaluated.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T06:00:44Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Jiaqi Liu</name>
+    </author>
+    <author>
+      <name>Yun Yu</name>
+    </author>
+    <author>
+      <name>Fenglin Xi</name>
+    </author>
+    <author>
+      <name>Shenjian Zhang</name>
+    </author>
+    <author>
+      <name>Shenghao Liao</name>
+    </author>
+    <author>
+      <name>Wenze Zheng</name>
+    </author>
+    <author>
+      <name>Mingxuan Hu</name>
+    </author>
+    <author>
+      <name>Yangbin Chen</name>
+    </author>
+    <author>
+      <name>Xinhong Chen</name>
+    </author>
+    <author>
+      <name>Chun Zhao</name>
     </author>
   </entry>
 </feed>
