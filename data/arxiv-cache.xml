@@ -1,3 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-11-03T04:37:53Z -->
-Rate exceeded.
+<!-- Last updated: 2026-11-04T03:57:22Z -->
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
+  <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-04T03:57:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>168317</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04794v1</id>
+    <title>Accelerating Offloading-Based MoE Inference by Interleaving Concurrent Requests</title>
+    <updated>2026-11-03T12:30:30Z</updated>
+    <link href="https://arxiv.org/abs/2611.04794v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04794v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Expert offloading enables large mixture-of-experts (MoE) language models to run locally, but conventional batching stalls the GPU while missing experts are fetched. A popular remedy, known as prefetching, is to predict what experts will be needed soon and fetch them using idle link bandwidth. Imprecise prediction, however, wastes bandwidth and GPU memory on fetching unnecessary experts. Our key finding is that prefetching can be harmful when there is an expert cache in GPU memory. This is because as the cache includes more necessary experts, expert prediction becomes less precise. Our key insight is that proper request scheduling beats prefetching. Building on this insight, we present Bevy, an MoE inference system based on runahead inference for concurrent requests. A request whose experts are available can run ahead to later layers while other requests wait for fetches, revealing the experts it needs next. Bevy can then fetch the missing experts so identified while computing ready requests, overlapping computation and fetching without predicting expert selections. Running requests separately, however, repeats reads of shared weights in GPU memory and increases compute time. To limit this cost, Bevy's self-balancing scheduler batches ready requests at each layer and prioritizes lagging requests, adapting their grouping as expert availability changes. Across two local platforms, Bevy delivers up to 3.46$\times$ the decode throughput of llama.cpp and up to 1.55$\times$ that of the fastest prefetching baseline.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T12:30:30Z</published>
+    <arxiv:comment>12 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Hongseung Yu</name>
+    </author>
+    <author>
+      <name>In Gim</name>
+    </author>
+    <author>
+      <name>Kyunghan Lee</name>
+    </author>
+    <author>
+      <name>Lin Zhong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04782v1</id>
+    <title>Reducing Logprob Without Causal Verification: Diagnosing SAE-Based PII Suppression in LLMs</title>
+    <updated>2026-11-03T12:22:01Z</updated>
+    <link href="https://arxiv.org/abs/2611.04782v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04782v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>SAE-based feature-level interventions to suppress PII leakage in LLMs are primarily evaluated by log-probability reduction. We show that this criterion cannot distinguish feature specific suppression from a magnitude artifact: a direction-agnostic effect of sufficiently large activation perturbations. Across 36 (model, layer, PII type) cases, we compare selected SAE feature interventions with coherencematched random direction controls using logprob and rank-aware metrics. While 17 cases (47%) appear successful under logprob-only evaluation, only 1 case (2.8%) passes our multimetric framework. The rest reveal two failure modes: random directions outperform selected features, and feature selection collapse across PII types. These results indicate that existing evaluations cannot verify whether interventions target causal pathways of PII leakage. A 9,000 run causal mediation feasibility study corroborates this: the verifier separates candidates reliably, but correlation-selected candidates rarely pass it. We therefore propose a new research mission for NLP: causally grounded PII suppression through circuit-level localization and causal mediation analysis.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T12:22:01Z</published>
+    <arxiv:comment>Accepted to Findings of AACL-IJCNLP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Chaerin Lee</name>
+    </author>
+    <author>
+      <name>Wonho Lee</name>
+    </author>
+    <author>
+      <name>Sohee Park</name>
+    </author>
+    <author>
+      <name>Daeseon Choi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04779v1</id>
+    <title>Replica-Aware Split Inference for Edge IoT Systems</title>
+    <updated>2026-11-03T12:18:16Z</updated>
+    <link href="https://arxiv.org/abs/2611.04779v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04779v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Split Inference (SI) addresses the hardware resource limitations of Internet of Things (IoT) devices by distributing tiny Machine Learning (TinyML) model segments across multiple IoT devices. However, a device failure can interrupt the inference pipeline. This paper proposes a replica-aware recovery approach that deploys replicas of TinyML model segments originally hosted on failed devices onto surviving devices. We formulate the joint selection of replica hosts and communication protocols as a mixed-integer linear programming (MILP) problem that minimizes post-reconfiguration inference latency, accounting for computation and transmission latencies, under flash memory and runtime memory constraints. Simulations using MobileNetV2 on heterogeneous IoT networks compare the proposed approach with four baselines. We implement the model in a network of 15 IoT devices with a maximum link-rate reduction of 75%, and show that MILP approach achieves an average modeled end-to-end inference latency that is 6.8% lower than that of Computation Greedy and 18.3% lower than that of Random. Index Terms TinyML, split inference, Internet of Things, fault tolerance, replica placement.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T12:18:16Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Zied Jenhani</name>
+    </author>
+    <author>
+      <name>Nasrin Razmi</name>
+    </author>
+    <author>
+      <name>Admela Jukan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04760v1</id>
+    <title>Koopman Generative Operators for Efficient Probabilistic Time-Series Forecasting</title>
+    <updated>2026-11-03T12:08:37Z</updated>
+    <link href="https://arxiv.org/abs/2611.04760v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04760v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Probabilistic time-series forecasting requires models that simultaneously capture structured temporal dynamics, expressive uncertainty, and efficient inference, yet existing approaches fall short of this goal: latent dynamical models impose structure but rely on restrictive generation mechanisms, while modern generative methods such as diffusion and flow matching achieve flexibility at the cost of iterative and computationally expensive sampling. We introduce the Koopman Generative Operator (KGO), a probabilistic forecasting method that conceptualizes prediction as the evolution of structured uncertainty. KGO integrates three core components: (1) Koopman Patch Embedding (KoPE) for temporally consistent latent trajectory extrapolation; (2) Koopman Flow Matching (KoFM), which enables fast, single-step generation through a closed-form matrix exponential in a Koopman latent space, bypassing iterative sampling; and (3) an Adaptive Uncertainty Gate (AUG), which provides probabilistic forecasts by adapting uncertainty per-variable and per-horizon, corresponding to a learned decomposition of aleatoric uncertainty without manual tuning. By unifying these components, KGO achieves state-of-the-art accuracy on 13/17 ProbTS benchmarks in CRPS and 16/17 in NMAE. Further, by eliminating iterative sampling, KGO delivers at least a 25$\times$ reduction in inference time compared to iterative generative models. These results position KGO as a practical and principled framework that advances the accuracy-efficiency trade-off in probabilistic time-series forecasting, combining leading accuracy on the evaluated benchmarks with fast, single-step generation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T12:08:37Z</published>
+    <arxiv:comment>Accepted at NeurIPS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Raz Marshanski</name>
+    </author>
+    <author>
+      <name>Liran Nochumsohn</name>
+    </author>
+    <author>
+      <name>Mayank Jauhari</name>
+    </author>
+    <author>
+      <name>Boris N. Oreshkin</name>
+    </author>
+    <author>
+      <name>Omri Azencot</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04739v1</id>
+    <title>Stochastic interpretation of the Water Waves equations</title>
+    <updated>2026-11-03T11:57:25Z</updated>
+    <link href="https://arxiv.org/abs/2611.04739v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04739v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this article is to derive a stochastic interpretation of the Water Waves equations, based on the location uncertainty principle (LU). Next, these equations are used to infer simpler models from scaling limits, such as the Saint-Venant, Boussinesq and Serre-Green-Naghdi ones. Once adapted to the stochastic setting, these models have been successfully implemented numerically, and we show several experiments to assess their properties -- for example the breaking of the wave symmetry, and the influence of time correlated noises.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T11:57:25Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Antoine Moneyron</name>
+      <arxiv:affiliation>ODYSSEY, IRMAR</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04728v1</id>
+    <title>SPOD: Recovering Suppressed Temporal Evidence in Video-LLMs via Single-Pass Orthogonal Decomposition</title>
+    <updated>2026-11-03T11:46:39Z</updated>
+    <link href="https://arxiv.org/abs/2611.04728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Video Large Language Models (Video-LLMs) have achieved strong performance on many video understanding tasks, yet remain vulnerable to temporal hallucination in time-sensitive reasoning scenarios such as scene transition understanding and event ordering. Existing solutions either require costly retraining or introduce inefficient multi-pass inference and external supervision at test time. In this work, we show that temporal evidence is already encoded in Video-LLM hidden representations but is not fully exploited during standard inference. Motivated by this observation, we propose Single-Pass Orthogonal Decomposition (SPOD), a training-free framework that recovers suppressed temporal evidence through analytical hidden-state manipulation in a single forward pass. SPOD consists of two components: Frame Distinctiveness Analysis (FDA), which identifies salient frames from middle-layer hidden-state geometry, and Temporal Delta Subspace (TDS), which constructs orthogonal temporal and prior subspaces from weighted inter-frame hidden-state differences. By decomposing final hidden states into temporal, prior, and residual components and rescaling them independently, SPOD enhances dynamic information, suppresses static appearance bias, and preserves complementary information. Experiments on VidHalluc, EventHallusion, and VideoMMMU show that SPOD consistently outperforms strong inference-time baselines across temporal reasoning tasks and model architectures while retaining near-vanilla inference efficiency. These results suggest that improving temporal reasoning in Video-LLMs may depend not only on additional supervision, but also on recovering temporal evidence already present in their internal representations. Our code is available at https://github.com/VioAgnes/SPOD.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T11:46:39Z</published>
+    <arxiv:comment>10 pages, 4 figures, 1 table. Accepted to ACM Multimedia 2026 (MM '26)</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>In Proceedings of the 34th ACM International Conference on Multimedia (MM '26), November 10-14, 2026, Rio de Janeiro, Brazil</arxiv:journal_ref>
+    <author>
+      <name>Yangguang Lin</name>
+    </author>
+    <author>
+      <name>Quan Fang</name>
+    </author>
+    <author>
+      <name>Xiaoyan Liu</name>
+    </author>
+    <author>
+      <name>Zefan Xu</name>
+    </author>
+    <arxiv:doi>10.1145/3767308.3835492</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3767308.3835492" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04711v1</id>
+    <title>Cycle WAM: Coupling Action and Video through Cycle Consistency</title>
+    <updated>2026-11-03T11:33:51Z</updated>
+    <link href="https://arxiv.org/abs/2611.04711v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04711v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in video modeling have driven substantial progress in world action models (WAMs). Existing approaches exploit pretrained video priors by decoding actions from latent representations or inferring them from generated videos. The underlying link is causal: robot actions produce changes in the scene, and video observations of these changes provide evidence for inferring the actions that produced them. However, existing training formulations do not by themselves ensure that actions and their predicted visual consequences are consistent, potentially limiting the use of pretrained capabilities. We treat video and action as paired modalities linked by this causal relationship and learn their correspondence through a unified training framework designed to better exploit pretrained video priors. Cycle WAM first augments video-action co-training with bidirectional conversion to reinforce cross-modal correspondence and recover forward and inverse dynamics. It then introduces a differentiable cycle-reconstruction objective to further couple the two mappings. The resulting model supports both forward and inverse dynamics, with the potential to improve performance through more effective use of pretrained video priors. Cycle WAM achieves state-of-the-art performance among comparable methods on LIBERO-Pro and substantially improves DreamZero on DROID. Comparisons with UWM characterize its inverse-dynamics performance and show sharper visual detail in the displayed forward-dynamics predictions.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T11:33:51Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Qinglin Yang</name>
+    </author>
+    <author>
+      <name>Jiepeng Wang</name>
+    </author>
+    <author>
+      <name>Yuxing Huang</name>
+    </author>
+    <author>
+      <name>Haibin Huang</name>
+    </author>
+    <author>
+      <name>Kai Xu</name>
+    </author>
+    <author>
+      <name>Chi Zhang</name>
+    </author>
+    <author>
+      <name>Ruizhen Hu</name>
+    </author>
+    <author>
+      <name>Xuelong Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04681v1</id>
+    <title>Small-data physics-informed ML model for magnetic exchange based on chemical composition and structure</title>
+    <updated>2026-11-03T11:04:59Z</updated>
+    <link href="https://arxiv.org/abs/2611.04681v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04681v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we propose an ensemble model based on a swarm of dense neural networks, able to predict Heisenberg exchange interactions within less than 1% error. The model uses the inputs of the ab-initio Schrödinger equation, i.e. the compound structure and chemical composition. In this first work, we trained the model on a few compounds of the hexagonal manganite family and were able to infer, with similar accuracy, the J values for other compounds of the same family at randomly chosen geometries, thus showing that we accurately learned the effect of the chemical composition and structure on effective magnetic integrals J.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T11:04:59Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Brice Kengni Zanguim</name>
+    </author>
+    <author>
+      <name>Thibaut Véry</name>
+    </author>
+    <author>
+      <name>Marie-Bernadette Lepetit</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04663v1</id>
+    <title>Best-of-Depth: Learning Exploratory Dynamics in Looped Transformers</title>
+    <updated>2026-11-03T10:50:34Z</updated>
+    <link href="https://arxiv.org/abs/2611.04663v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04663v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Looped Transformers extend inference-time computation through repeated latent-state updates, but final-depth training does not directly encourage useful intermediate alternatives. We introduce Best-of-Depth (BoD), which trains a recurrent trajectory as a candidate set by minimizing prediction loss across depths. Different valid targets can be matched at different depths without architectural changes or depth-specific labels. An exact-match analysis connects this objective to solution coverage. On N-Queens completion and graph coloring, BoD improves coverage over final-depth and intermediate-supervision objectives. N-Queens coverage reaches 91.03%, versus 45.75% for final-depth training. Further experiments show discovery beyond the training depth and recovery of solutions withheld from teacher pools on familiar inputs. Fine-tuning a pretrained looped language model with BoD yields higher pooled code-generation success than final-depth training when programs are generated separately at evaluated fixed depths. These results support training recurrent computation for solution discovery along its trajectory.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T10:50:34Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shota Takashiro</name>
+    </author>
+    <author>
+      <name>Takeshi Kojima</name>
+    </author>
+    <author>
+      <name>Masanori Koyama</name>
+    </author>
+    <author>
+      <name>Kohei Hayashi</name>
+    </author>
+    <author>
+      <name>Yusuke Iwasawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04657v1</id>
+    <title>Exploiting Biases in Attention for Transformers</title>
+    <updated>2026-11-03T10:44:30Z</updated>
+    <link href="https://arxiv.org/abs/2611.04657v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04657v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Attention is known to be sparse in vision transformers. In particular, we analyze the unequal relevance of attention-matrix columns to the final computation and show that this phenomenon becomes increasingly pronounced with network depth. This can be interpreted as saying that tokens have an absolute importance for the attention process, independently of queries. Inspired by this, we propose a reformulation of the attention formula that makes this phenomenon explicit by adding an input-dependent bias to the query-key dot product. We show that this new term gives each token a scalar value indicating its anticipated influence on other tokens during the attention process, and can thus serve as a proxy for pruning attention maps. Across multiple transformer model sizes, this allows us to substantially reduce the computational cost of attention, in terms of both FLOPs and inference latency, while retaining most of the original classification accuracy. We publicly released the code and models at https://github.com/EIDOSLAB/AttentionWithBias.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T10:44:30Z</published>
+    <arxiv:comment>23 pages, 21 figures, accepted at WACV 2027</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Charles Herr</name>
+    </author>
+    <author>
+      <name>Gabriele Spadaro</name>
+    </author>
+    <author>
+      <name>Enzo Tartaglione</name>
+    </author>
+  </entry>
+</feed>
