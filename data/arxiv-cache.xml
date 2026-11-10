@@ -1,3 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-11-09T03:42:56Z -->
-Rate exceeded.
+<!-- Last updated: 2026-11-10T05:16:40Z -->
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
+  <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-10T05:16:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>169085</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2611.12042v1</id>
+    <title>Four-Step Text-Bearing Image Generation via Distillation with Local Response Regularization and Teacher-Guided Training</title>
+    <updated>2026-11-09T08:20:36Z</updated>
+    <link href="https://arxiv.org/abs/2611.12042v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.12042v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generating text-bearing images requires coherent scenes and accurate characters. Large text-to-image models improve both capabilities through repeated denoising, at substantial sampling cost. Few-step distillation reduces this cost but requires the student to organize scenes and refine glyphs within a short trajectory. We present a four-step distillation framework combining local response regularization with teacher-guided text training. Built on distribution matching, the framework distills the GLM-Image DiT while retaining its autoregressive visual prior, glyph encoder, and VAE. A path-length penalty promotes consistent local responses of the conditional denoising field. Progressive training combines synthetic strings with teacher-generated imagery to preserve character accuracy and scene-integrated typography. The student achieves GenEval Overall 0.84 and CVTG-2K word accuracy 0.5045, compared with 0.81 and 0.1690 for four-step TDM. A coefficient study favors $10^{-5}$, and Qwen-Image experiments show additional gains from response regularization and text supervision. Single-image inference takes 1.742 s, compared with 5.818 s for the teacher, yielding a $3.34\times$ speedup at the same 40 GB GPU memory requirement.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T08:20:36Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Kairui Wen</name>
+    </author>
+    <author>
+      <name>Sheng Ye</name>
+    </author>
+    <author>
+      <name>Yong-Jin Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.12013v1</id>
+    <title>Enhancing Multi-Step Chemical Mechanism Prediction with Graph-Guided Preference Data</title>
+    <updated>2026-11-09T07:51:06Z</updated>
+    <link href="https://arxiv.org/abs/2611.12013v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.12013v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting multi-step chemical reaction mechanisms requires identifying plausible intermediates and correctly ordering the elementary reaction steps. Existing computational methods focus on single-step elementary reaction prediction, limiting their ability to generalize to unseen reaction spaces. We introduce a graph-guided framework for multi-step chemical mechanism prediction that leverages a chemical mechanism knowledge graph (ChemMechKG) to guide large language models (LLMs). To improve pathway prediction, we develop a graph-aligned reaction mechanism predictor (GRMP) that uses graph neural networks to generate synthetic candidate pathways for pathway optimization. During inference, we design a relation retrieval (RR) module to extract relevant graph evidence from the KG for pathway refinement. Experiments show that GRMP achieves the highest pathway accuracy among all compared methods on ChemMechQA and oMe-Gold, reaching 48.1% and 57.9%, respectively. On a fixed sample of 110 out-of-distribution reactions from ChemMechQA-Hard, GRMP achieves 36.4% top-1 pathway accuracy. LLM-as-Judge and human assessment further demonstrate its ability to generalize to unseen reactions.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:51:06Z</published>
+    <arxiv:comment>5 figures, 3tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yu Zhang</name>
+    </author>
+    <author>
+      <name>Ruijie Yu</name>
+    </author>
+    <author>
+      <name>Xuelin Zhao</name>
+    </author>
+    <author>
+      <name>Jinming Yang</name>
+    </author>
+    <author>
+      <name>Feng Zhu</name>
+    </author>
+    <author>
+      <name>Xiaokang Yang</name>
+    </author>
+    <author>
+      <name>Yaohui Jin</name>
+    </author>
+    <author>
+      <name>Yanyan Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.12011v1</id>
+    <title>HIST3R: Decomposing and Rectifying State Updates with History for Streaming 3D Reconstruction</title>
+    <updated>2026-11-09T07:50:03Z</updated>
+    <link href="https://arxiv.org/abs/2611.12011v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.12011v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Streaming 3D reconstruction with recurrent states enables long-video scene understanding under bounded memory, but turns reconstruction into a state-evolution problem: each incoming frame updates a compact scene memory on which all subsequent predictions depend, so unreliable updates overwrite historical context and accumulate into long-horizon geometric drift. We analyze CUT3R-style recurrent updates through a direction--magnitude decomposition, in which the magnitude sets the update gain, i.e., how strongly an observation is written into the state, and the direction encodes the geometric intent, i.e., where the update drives the state. This decomposition provides a unified view of CUT3R and its variants, revealing that existing training-free extensions perform magnitude-only control: they can attenuate an unreliable update but cannot correct its direction. We propose HIST3R, a training-free framework built on CUT3R that controls both components using history. HIST3R rectifies the update direction using locally consistent historical states, and modulates the update magnitude according to the visual discrepancy between the current observation and its history, suppressing redundant updates while preserving complementary evidence. Across camera pose estimation, 3D reconstruction, and video depth estimation, HIST3R consistently improves long-horizon performance while retaining the memory footprint and inference speed of CUT3R. With 1000 input frames, it reduces ATE by 23.87% on ScanNet and 33.65% on TUM-Dynamics relative to the strongest competing method; with 500 frames, it improves median reconstruction accuracy over the strongest CUT3R-based variant by 56.52% on 7-Scenes and 33.96% on NRGBD.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:50:03Z</published>
+    <arxiv:comment>Accepted at NeurIPS 2026. Project page: https://kennethyangg.github.io/HIST3R/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Kenneth Yang</name>
+    </author>
+    <author>
+      <name>Yu-Chiang Frank Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.12006v1</id>
+    <title>Constraining Evidence Strength in Bayesian Tonal-State Inference: A Posterior-Continuity Diagnostic</title>
+    <updated>2026-11-09T07:43:09Z</updated>
+    <link href="https://arxiv.org/abs/2611.12006v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.12006v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Effective pitch-evidence strength governs the concentration of tonal-state posteriors. Expert local-key annotations cannot calibrate this strength because they do not specify the posterior distribution over the 24 candidate keys. This study constrains evidence strength through tonal continuity, quantified by a measure $λ$ derived from adjacent-window posterior overlap. Passages with $λ$ &gt; 0.50 exhibit relatively strong tonal continuity. At $λ$ = 0.50, carrying forward the preceding tonal belief is predictively equivalent to starting afresh with a uniform, key-neutral prior. Across 26 subcorpora of the Distant Listening Corpus, median $λ$ remains above 0.50 for changes from major keys to IV, V, and vi throughout the examined range of evidence strengths, whereas changes to i, ii, and iii cross this threshold as evidence strength increases. Because these latter three keys share the departed key's tonic or differ from it by a single key-signature accidental, such changes are expected to retain $λ$ &gt; 0.50 in a substantial proportion of cases. An event share G therefore assesses how often this expectation holds as tonal selectivity increases in 4-bar windows. The resulting high-G region identifies evidence-strength settings that may be appropriate for tonal-state inference. When $λ$ is extended to cross-scale compatibility, the Presto finale of Mozart's Piano Sonata K. 310 shows that, within this region, a 4-bar C-minor interpretation remains compatible with its 16-bar C-major context. The findings establish tonal continuity as a music-theoretical constraint on evidence strength and illustrate how local and prevailing-key interpretations can coexist when pitch evidence is integrated over nested spans.</summary>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:43:09Z</published>
+    <arxiv:primary_category term="cs.SD"/>
+    <author>
+      <name>Chen-Gia Tsai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.12000v1</id>
+    <title>HyPLM Technical Report</title>
+    <updated>2026-11-09T07:37:34Z</updated>
+    <link href="https://arxiv.org/abs/2611.12000v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.12000v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Protein language models (PLMs) are standard tools for variant-effect prediction, protein annotation and design, but the compute needed to train and serve them keeps growing. We present HyPLM-Flash, an efficient and open PLM trained by Hyra 2.0, the research agent developed by our team. HyPLM-Flash is a 650-million-parameter masked language model trained on 726 billion tokens, 0.73 times the data of ESM-2 650M and a fifth to an eighth of the data of E1-600M and ESM C 600M. It runs on an inference engine with fused kernels and INT8 matrix multiplication, embedding about 130,000 residues per second on a single NVIDIA H20 GPU, 1.9 to 2.7 times faster than other 600M-class encoders. In a matched evaluation against 28 public checkpoints on 32 tasks, HyPLM-Flash reaches a ProteinGym zero-shot Spearman correlation of 0.409, statistically tied with ESM-2 650M, ESM C 600M and E1-600M, and the highest organismal-fitness score among self-supervised single-sequence models. It gives the best long-range contact precision of all models evaluated, including ESM-2 15B and ESM C 6B, and a lower masked-residue loss than ESM-2 650M, ESM C 600M and E1-600M on held-out sequences and on recently released PDB chains. Matching state-of-the-art accuracy at a fraction of the training and inference cost, HyPLM-Flash sets a new Pareto frontier for protein language models. We have released the model weights and the inference engine at https://github.com/Tencent-Hunyuan/hyra-results/tree/main.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:37:34Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Haowei Lin</name>
+    </author>
+    <author>
+      <name>Cai Zhou</name>
+    </author>
+    <author>
+      <name>Xiangxin Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.11997v1</id>
+    <title>HyInv Technical Report</title>
+    <updated>2026-11-09T07:26:20Z</updated>
+    <link href="https://arxiv.org/abs/2611.11997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.11997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inverse folding designs amino-acid sequences for a given protein backbone, and screening needs many candidates that are both diverse and well folded. We present HyInv, a 1.96-million-parameter backbone-conditioned graph network with an encoder-decoder architecture, trained by Hyra 2.0, the research agent developed by our team: pretrained with random-order autoregressive sequence modeling, followed by structure-reward reinforcement learning. At inference, a grouped draft-and-rewrite sampler that uses separate draft and rewrite temperatures improves refolding TM-score at matched diversity. An optimized implementation with BF16 numerics designs 128 sequences for a 402-residue backbone in 50.6 ms on a single NVIDIA H20 GPU, about 52 times faster than the reference sampler, and an exact FP32 path that returns the reference sequences is 8.7 times faster. Across five benchmark datasets and seven dataset-predictor combinations, HyInv reaches a higher average scTM than all ten external baselines at comparable or higher sequence diversity, with large margins over ProteinMPNN and ProteinZero V2. The same default setting supports de novo backbones, pocket-constrained libraries, enzyme redesign with the catalytic site kept, and loop redesign. We have released our code and model at https://github.com/Tencent-Hunyuan/Hyra-results/tree/main/AI4Science/hyinv.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:26:20Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Haowei Lin</name>
+    </author>
+    <author>
+      <name>Cai Zhou</name>
+    </author>
+    <author>
+      <name>Xiangxin Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.11996v1</id>
+    <title>OASIS: Optimization-Aware Subgoal Inference with Safety Constraints for Autonomous Mobile Robot Navigation</title>
+    <updated>2026-11-09T07:25:13Z</updated>
+    <link href="https://arxiv.org/abs/2611.11996v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.11996v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Navigation in dynamic environments requires mobile robots to make progress toward their goals while respecting motion limits and avoiding surrounding obstacles. Learned subgoal policies can guide model predictive control beyond its local prediction horizon, but a geometrically suitable subgoal does not necessarily lead to a successfully solved control problem. This paper proposes OASIS, a hierarchical navigation framework that incorporates recent optimization outcomes into reinforcement learning-based subgoal generation. A high-level policy trained using Soft Actor--Critic generates local subgoals, while a nonlinear model predictive controller tracks them subject to motion limits, geometric collision-avoidance constraints, and embedded high-order control barrier function constraints. The outcomes of controller optimizations over each subgoal interval are summarized and provided to the policy at its next decision, without requiring additional optimization calls. The framework is evaluated in five navigation scenarios with static and moving obstacles, including dense interactions and sensing uncertainty. Comparisons with hierarchical and direct-goal control variants show that OASIS achieves the highest aggregate navigation success. Matched comparisons across three training seeds further show a consistent success advantage over the otherwise identical hierarchy without optimization-status input. The selected-policy comparison also shows fewer primary optimization failures with similar mean controller time.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:25:13Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Arian Hajizadeha</name>
+    </author>
+    <author>
+      <name>Javad Pourrafia</name>
+    </author>
+    <author>
+      <name>Negar Shenavara</name>
+    </author>
+    <author>
+      <name>Sana Bashiria</name>
+    </author>
+    <author>
+      <name>Seyed Majid Esmailzadeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.11987v1</id>
+    <title>When Audio and Video Mislead: Evaluating Multimodal AI for Conversational Emotion Recognition</title>
+    <updated>2026-11-09T07:13:25Z</updated>
+    <link href="https://arxiv.org/abs/2611.11987v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.11987v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal Emotion Recognition in Conversation (MERC) combines lexical, acoustic, visual and conversational cues, but accepting audio and video does not establish their effective or robust use. We audit off-the-shelf Omni models while holding the target transcript and prior textual context fixed and adding, removing or replacing target audio and video. In the primary evaluation of Qwen2.5-Omni-7B, Baichuan-Omni-1.5 and MiniCPM-o 2.6 on MELD and the full five-session six-class IEMOCAP set, T+A improves Accuracy in all six model-dataset pairs, with four gains significant after false discovery rate (FDR) correction. Across three source mappings, unrelated A/V (RandA/V) lowers Accuracy relative to Full in all 18 comparisons; all 18 remain significant under dialogue-cluster inference and BH-FDR correction, both on common-valid pairs and when invalid/OOM outcomes are treated as incorrect. Comparisons with modality-omission baselines further distinguish replacement penalties from mismatch-specific harm. A Qwen/MELD case study finds significantly greater gold-vs-best-candidate margin recovery in Late than Early or Middle under decision-query audio knockout, relative to an edge-count-matched Video-Sham control, using Holm-corrected tests. These results distinguish genuine-modality benefit from sensitivity and vulnerability to misleading input.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:13:25Z</published>
+    <arxiv:comment>40 pages, 3 figures, 24 tables. Full version with appendices of a paper accepted at AICompS 2026 (Springer CCIS). Code and data: https://doi.org/10.5281/zenodo.23970406</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Youngseok Kim</name>
+    </author>
+    <author>
+      <name>Minjae Kim</name>
+    </author>
+    <author>
+      <name>Eunsoo Lee</name>
+    </author>
+    <author>
+      <name>Jihie Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.11980v1</id>
+    <title>AnyBreak: Towards Jailbreaking Any T2I Model for Any Concept</title>
+    <updated>2026-11-09T07:06:19Z</updated>
+    <link href="https://arxiv.org/abs/2611.11980v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.11980v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text-to-image (T2I) models have demonstrated remarkable capabilities in image generation and editing, yet this progress has also introduced significant security risks. Prior work has shown that adversarial prompt can induce the generation of Not-Safe-For-Work (NSFW) content, including pornographic, violent, and graphic imagery. However, such attacks are typically mitigated by prompt filters and often rely on white-box assumptions. In this paper, we propose AnyBreak, a novel jailbreak framework that constructs adversarial images via multi-scale progressive semantic alignment. During the generation process, these adversarial images steer the generation trajectory in latent space towards unsafe data manifolds, enabling cross-modal transfer of malicious concepts from the text modality to the image modality. AnyBreak operates using only clean textual prompts and adversarial images at inference time, and can jailbreak any T2I models towards any malicious concepts in a fully black-box setting. We further introduce AnyBreak-V, an enhanced variant that incorporates a compensation term to bypass post-hoc safety checkers. Extensive experiments demonstrate that AnyBreak achieves high attack success rates while preserving visual fidelity and semantic consistency with the input prompts under black-box and clean-text constraints. Our findings reveal that existing T2I defense leave critical cross-modal attack surfaces insufficiently addressed. The code is available at https://github.com/luqi-glory/AnyBreak.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T07:06:19Z</published>
+    <arxiv:comment>Accepted for poster presentation at ICME 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Qi Lu</name>
+    </author>
+    <author>
+      <name>Zehui Guo</name>
+    </author>
+    <author>
+      <name>Yucheng Zhao</name>
+    </author>
+    <author>
+      <name>Zijing Li</name>
+    </author>
+    <author>
+      <name>Chuhan Song</name>
+    </author>
+    <author>
+      <name>Wenrui Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.11951v1</id>
+    <title>UltraVoxelGS: Voxel-First Feed-Forward Gaussian Splatting for 3D Ultrasound Reconstruction</title>
+    <updated>2026-11-09T06:16:49Z</updated>
+    <link href="https://arxiv.org/abs/2611.11951v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.11951v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present UltraVoxelGS, a 3D ultrasound reconstruction method that achieves both fast reconstruction and physically faithful rendering for the first time, bringing live spatial feedback during 2D ultrasound scanning within reach. This is made possible by a feed-forward design that predicts a complete Gaussian scene representation from posed ultrasound images directly, entirely bypassing the per-scene optimization bottleneck that has confined prior methods to offline use. Realising such feed-forward prediction in this setting is non-trivial: unlike natural images, ultrasound slices share at most one-dimensional intersections and exhibit view-dependent appearance due to acoustic propagation and attenuation, violating the dense overlap and photometric consistency assumed by existing feed-forward Gaussian methods. Hence, to achieve fast reconstruction, we introduce a feed-forward voxel-to-Gaussian pass that decouples representation size from input count by lifting all posed slices into a fixed-size voxel support and predicting Gaussian parameters directly. For faithful rendering, we propose ultrasound-aware appearance rendering strategy factorize reflection from cumulative attenuation during training and exploit appearance continuity among spatially adjacent slices for efficient Render-time Appearance Adaptation. On both real-world and simulated datasets, UltraVoxelGS achieves best PSNR/SSIM compared with per-scene optimization baselines while reducing inference from 10-20 minutes to approximately 10 seconds (over 35 times faster) and scales to sequences exceeding 1,000 frames. Code is available at https://github.com/YuebyYue/UltraVoxelGS-camera-ready.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T06:16:49Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yue Wang</name>
+    </author>
+    <author>
+      <name>Haoxin Chen</name>
+    </author>
+    <author>
+      <name>Xiaoqing Guo</name>
+    </author>
+  </entry>
+</feed>
