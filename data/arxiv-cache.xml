@@ -1,277 +1,404 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last updated: 2026-11-24T07:38:47Z -->
+<!-- Last updated: 2026-11-25T06:07:19Z -->
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/p6EyKyP4fMY/66n9Ev8E79F7KlI</id>
   <title>arXiv Query: search_query=all:causal OR all:inference&amp;id_list=&amp;start=0&amp;max_results=10</title>
-  <updated>2026-11-24T07:38:48Z</updated>
+  <updated>2026-11-25T06:07:19Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:causal+OR+all:inference&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
-  <opensearch:totalResults>171301</opensearch:totalResults>
+  <opensearch:totalResults>171520</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
-    <id>http://arxiv.org/abs/2611.31240v1</id>
-    <title>Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action</title>
-    <updated>2026-11-23T18:59:52Z</updated>
-    <link href="https://arxiv.org/abs/2611.31240v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31240v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understanding and trajectory prediction. Our analysis of Taylor importance in Alpamayo-1.5-10B shows that reasoning and trajectory objectives assign different importance to the same vision-language model (VLM) structures. In the action expert, MLP channels exhibit more stable importance rankings across denoising steps than query heads, and a small fraction of channels accounts for most of the measured importance. Based on these findings, we propose MoOP, which combines importance ranks from both objectives for VLM pruning and aggregates stepwise importance to select a fixed subset of expert MLP channels. At 24.0% total parameter reduction, VLM-only pruning with MoOP performs comparably to or slightly better than the strongest baselines in driving, while retaining 94.0% of the dense model's LingoQA score, far above all other methods. At a higher reduction of 30.0%, MoOP degrades much less than every other method, as it is the only one whose reasoning does not collapse. Removing 93.75% of expert MLP channels increases total parameter reduction to 39.4%, with nearly unchanged open-loop errors relative to VLM-only pruning and competitive closed-loop performance. The resulting model achieves a 1.37x end-to-end inference speedup and 36.6% lower peak memory than the dense model, without post-pruning fine-tuning.</summary>
+    <id>http://arxiv.org/abs/2611.33148v1</id>
+    <title>CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies</title>
+    <updated>2026-11-24T18:58:53Z</updated>
+    <link href="https://arxiv.org/abs/2611.33148v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33148v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:58:53Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Dawid J. Kopiczko</name>
+    </author>
+    <author>
+      <name>Tijmen Blankevoort</name>
+    </author>
+    <author>
+      <name>Yuki M. Asano</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.33142v1</id>
+    <title>VENUS: A Census of Strong Lensing in a 60-Cluster JWST Survey</title>
+    <updated>2026-11-24T18:56:18Z</updated>
+    <link href="https://arxiv.org/abs/2611.33142v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33142v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present strong-lensing models for the 57 galaxy clusters observed in Cycle 4 out of the 60 targeted by the JWST Vast Exploration for Nascent, Unexplored Sources (VENUS) program. Models for the remaining three clusters will be incorporated after their observations. The dataset comprises 5013 individual images, corresponding to 1733 multiply-imaged systems, of which 912 have spectroscopic redshift measurements and 227 are newly identified. Using this new wealth of observations, we construct parametric lens models with our $\mathtt{AstroLensPy}$ software, reproducing the observed image positions with an average image-plane precision $Δ_{\rm RMS}$ of $0.54''$. With a total imaging area of $576$ arcmin$^2$, VENUS offers the largest homogeneous set of cluster strong-lensing models to date. The clusters yield a combined area of $191$ arcmin$^{2}$ magnified by $|μ|\geq3$ for a source $z_s=10$, for example, establishing the VENUS fields as a premier survey for high-redshift studies. Among our sample, the clusters MACS J0717.5+3745, RXC J0600.1-2007 and PLCK G287.0+32.9 display the largest Einstein radii ($\geq 60''$) and magnified areas ($\mathcal{A}_{z_s=10}^{|μ|\geq3} \geq 9$ arcmin$^2$) for a source $z_s=10$, and therefore constitute the most potent gravitational telescopes known to date. Finally, leveraging the statistical power of the sample, we derive scaling relations between various lensing observables (Einstein radius, magnified area, projected mass) and the SZ/X-ray-inferred cluster mass, $M_{500,c}$.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:56:18Z</published>
+    <arxiv:comment>51 pages, 16 figures, 2 tables. Submitted to ApJS. Lens models and catalogues will be released at https://jwst-venus.github.io</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <author>
+      <name>Joseph F. V. Allingham</name>
+    </author>
+    <author>
+      <name>Lukas J. Furtak</name>
+    </author>
+    <author>
+      <name>Miriam Golubchik</name>
+    </author>
+    <author>
+      <name>Ashish K. Meena</name>
+    </author>
+    <author>
+      <name>Adi Zitrin</name>
+    </author>
+    <author>
+      <name>John Chisholm</name>
+    </author>
+    <author>
+      <name>Seiji Fujimoto</name>
+    </author>
+    <author>
+      <name>Vasily Kokorev</name>
+    </author>
+    <author>
+      <name> Abdurro'uf</name>
+    </author>
+    <author>
+      <name>Franz E. Bauer</name>
+    </author>
+    <author>
+      <name>Maruša Bradač</name>
+    </author>
+    <author>
+      <name>Gabriel Brammer</name>
+    </author>
+    <author>
+      <name>Dan Coe</name>
+    </author>
+    <author>
+      <name>José M. Diego</name>
+    </author>
+    <author>
+      <name>Henry C. Ferguson</name>
+    </author>
+    <author>
+      <name>Steven L. Finkelstein</name>
+    </author>
+    <author>
+      <name>Tiger Yu-Yang Hsiao</name>
+    </author>
+    <author>
+      <name>Yolanda Jiménez-Teja</name>
+    </author>
+    <author>
+      <name>José M. Palencia</name>
+    </author>
+    <author>
+      <name>Gregor Rihtaršič</name>
+    </author>
+    <author>
+      <name>Chris Willott</name>
+    </author>
+    <author>
+      <name>Rogier A. Windhorst</name>
+    </author>
+    <author>
+      <name>Hollis B. Akins</name>
+    </author>
+    <author>
+      <name>Ricardo O. Amorín</name>
+    </author>
+    <author>
+      <name>Larry D. Bradley</name>
+    </author>
+    <author>
+      <name>Chloe M. Cheng</name>
+    </author>
+    <author>
+      <name>Christopher J. Conselice</name>
+    </author>
+    <author>
+      <name>David A. Coulter</name>
+    </author>
+    <author>
+      <name>Pratika Dayal</name>
+    </author>
+    <author>
+      <name>Guillaume Desprez</name>
+    </author>
+    <author>
+      <name>Miroslava Dessauges-Zavadsky</name>
+    </author>
+    <author>
+      <name>Andreas L. Faisst</name>
+    </author>
+    <author>
+      <name>Qinyue Fei</name>
+    </author>
+    <author>
+      <name>Brenda Frye</name>
+    </author>
+    <author>
+      <name>Yuichi Harikane</name>
+    </author>
+    <author>
+      <name>Jeyhan S. Kartaltepe</name>
+    </author>
+    <author>
+      <name>Tomokazu Kiyota</name>
+    </author>
+    <author>
+      <name>Conor Larison</name>
+    </author>
+    <author>
+      <name>Paulo A. A. Lopes</name>
+    </author>
+    <author>
+      <name>Ray A. Lucas</name>
+    </author>
+    <author>
+      <name>Georgios E. Magdis</name>
+    </author>
+    <author>
+      <name>Nicholas S. Martis</name>
+    </author>
+    <author>
+      <name>Masami Ouchi</name>
+    </author>
+    <author>
+      <name>Richard Pan</name>
+    </author>
+    <author>
+      <name>Casey Papovich</name>
+    </author>
+    <author>
+      <name>Massimo Pascale</name>
+    </author>
+    <author>
+      <name>Justin D. R. Pierel</name>
+    </author>
+    <author>
+      <name>Tom Resseguier</name>
+    </author>
+    <author>
+      <name>Johan Richard</name>
+    </author>
+    <author>
+      <name>Massimo Ricotti</name>
+    </author>
+    <author>
+      <name>Luke Robbins</name>
+    </author>
+    <author>
+      <name>William Sheu</name>
+    </author>
+    <author>
+      <name>Fengwu Sun</name>
+    </author>
+    <author>
+      <name>Felix Vecchi</name>
+    </author>
+    <author>
+      <name>Brian Welch</name>
+    </author>
+    <author>
+      <name>Hiroto Yanagisawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.33141v1</id>
+    <title>iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction</title>
+    <updated>2026-11-24T18:56:04Z</updated>
+    <link href="https://arxiv.org/abs/2611.33141v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33141v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:59:52Z</published>
-    <arxiv:comment>45 pages. Project page: https://cvlab-kaist.github.io/MoOP</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Seongchan Kim</name>
-    </author>
-    <author>
-      <name>Soowon Son</name>
-    </author>
-    <author>
-      <name>Sangoh Kim</name>
-    </author>
-    <author>
-      <name>Hyunah Ko</name>
-    </author>
-    <author>
-      <name>Eunbeen Hong</name>
-    </author>
-    <author>
-      <name>Hyunkoo Lee</name>
-    </author>
-    <author>
-      <name>Sanghyun Lee</name>
-    </author>
-    <author>
-      <name>WonJun Moon</name>
-    </author>
-    <author>
-      <name>Kihong Kim</name>
-    </author>
-    <author>
-      <name>Dongyeon Son</name>
-    </author>
-    <author>
-      <name>Woongchan Nam</name>
-    </author>
-    <author>
-      <name>Seungryong Kim</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2611.31233v1</id>
-    <title>TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming</title>
-    <updated>2026-11-23T18:59:13Z</updated>
-    <link href="https://arxiv.org/abs/2611.31233v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31233v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the usual suspect. Yet removing it post hoc degrades retrieval on every CLIP checkpoint we test. We introduce a paired statistic that identifies directions where the two towers agree more on hard negatives than on matched pairs. Mildly attenuating these directions improves retrieval while largely preserving the gap. We arrive at this correction through weight-space programming: guided by the statistic, an LLM agent inspects both towers and writes closed-form weight edits without backpropagation. Free to edit any component, the agent improves COCO test retrieval on all 13 CLIP checkpoints and edits an output projection in 12 of the 13. We distill and refine its recurring correction into TowerBridge, a closed-form recipe motivated by a first-order analysis of the hard-negative margin. Computed in seconds from 25,000 labelled pairs, it requires no model-specific tuning and leaves the architecture and inference cost unchanged. TowerBridge improves COCO test retrieval by 16.8 RSUM and Flickr30k test retrieval by 6.6 on average across all 21 evaluated CLIP checkpoints, including 8 unseen by the agent, while limiting any drop in ImageNet zero-shot accuracy to 0.5 points. It also reduces hubness on all 21 checkpoints and improves retrieval on 4 of 5 dual encoders from other families.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:59:13Z</published>
-    <arxiv:comment>42 pages (13 main + 29 supplementary), 11 figures, 35 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
-    <author>
-      <name>Hani Alomari</name>
-    </author>
-    <author>
-      <name>Md Atabuzzaman</name>
-    </author>
-    <author>
-      <name>Chris Thomas</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2611.31228v1</id>
-    <title>Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ</title>
-    <updated>2026-11-23T18:58:52Z</updated>
-    <link href="https://arxiv.org/abs/2611.31228v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31228v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does confidence drop when an error occurs?) and (2) downstream steering control (does an uncertainty token causally steer the model to repair its error?). We evaluated four open-weights models (Qwen2.5-7B, Llama-3.1-8B, Mistral-7B, and Phi-4, 14.7B) across 15,200 math benchmark attempts, isolating 2,017 reasoning errors within each model's capability frontier. Applying 27,568 counterfactual continuations across these failure points, we demonstrate a consistent decoupling between monitoring and control.
-  On monitoring, all four models fail to detect their own errors. Verbalized confidence does not distinguish mistake steps from sound reasoning, yielding near-chance within-position AUROCs between 0.500 and 0.561. Even at a model's first reasoning error, trajectory confidence remains saturated at 95.1% to 99.9%, with noticeable drops ($\ge 10$ points) appearing on fewer than 9% of errors in Llama and under 1.6% in the other three models. In contrast, models respond readily to external uncertainty: injecting a low-confidence tag (10%) at the error step significantly increases downstream correction across all models (+3.7 to +22.5 points over format-matched 95% certainty; all $p \le 0.0022$), reaching up to 38.5% under active rethinking instructions. However, injecting doubt onto already-correct steps causes models to discard valid reasoning, reducing solve rates by up to 22.8 points. Inference-time self-correction is thus bottlenecked by in-situ error detection rather than downstream repair capacity: models readily steer toward recovery when prompted with doubt, yet fail to self-monitor during generation.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:58:52Z</published>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Daniel Theron</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2611.31195v1</id>
-    <title>VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control</title>
-    <updated>2026-11-23T18:46:15Z</updated>
-    <link href="https://arxiv.org/abs/2611.31195v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31195v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>World action model (WAM) is a promising paradigm for visuomotor control by jointly modeling world dynamics and actions. Notably, existing WAMs often rely on large generative models and iterative sampling which incur substantial latency for action generation, limiting real-time deployment. In particular, there are two root causes of inefficiency in conventional flow matching or diffusion based action models in WAMs: 1) transporting uninformative Gaussian noise into precise actions necessitating multiple ODE steps, and 2) repeatedly injecting task context through expensive cross-attention modules. Our key insight is that jointly learning and aligning the source and action manifolds streamlines the transport between them, substantially accelerating action generation. Building on this insight, we introduce VITA-WAM, a WAM architecture with manifold-aligned flow-matching (VITA flow matching) that directly transports latent observation representations containing visual, language, and proprioceptive information into latent actions. More specifically, a flow latent alignment (FLA) mechanism is employed to facilitate manifold alignment between latent observation and action representations, enabling accurate generation with few ODE steps. The resulting architecture also eliminates costly attention for observation conditioning during repeated denoising steps. Notably, with a single ODE step, VITA-WAM outperforms 10-step FastWAM by 21.47 pp on LIBERO-Plus and by 1.65 pp on LIBERO, achieving these gains through the FLA objective without distillation, while inferring at 55.67~ms latency, a $2.10\times$ speedup compared to FastWAM.</summary>
-    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:46:15Z</published>
-    <arxiv:comment>Project page. http://ucd-dare.github.io/VITA-WAM. Equal Contributors: Boqi Zhao, Dechen Gao. Corresponding Author: Junshan Zhang</arxiv:comment>
+    <published>2026-11-24T18:56:04Z</published>
     <arxiv:primary_category term="cs.RO"/>
     <author>
-      <name>Boqi Zhao</name>
+      <name>Vansh Kapoor</name>
     </author>
     <author>
-      <name>Dechen Gao</name>
+      <name>Max Sobol Mark</name>
     </author>
     <author>
-      <name>Hanchu Zhou</name>
+      <name>Sreyas Venkataraman</name>
     </author>
     <author>
-      <name>Hang Wang</name>
+      <name>Max Simchowitz</name>
     </author>
     <author>
-      <name>Junshan Zhang</name>
+      <name>Aviral Kumar</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2611.31183v1</id>
-    <title>Four consistent estimates of $H_0$ from a $Λ$CDM inference network given CMB data</title>
-    <updated>2026-11-23T18:38:12Z</updated>
-    <link href="https://arxiv.org/abs/2611.31183v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31183v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We organize inferences from cosmic microwave background (CMB) data, of the current rate of expansion, $H_0$, into a network whose structure is informed by a scaling symmetry of the Einstein-Boltzmann evolution equations. There are four distinct routes through this network from a calibrating anchor to $H_0$. Given key assumptions of the $Λ$CDM model, they are mutually consistent. This consistency is a significant feature of the $Λ$CDM model's compatibility with CMB data. The redundancy in $H_0$ determinations illuminates a hurdle to resolving the $H_0$ tension with alternative cosmological models.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:38:12Z</published>
-    <arxiv:comment>5 pages + 2 pages of end matter, 3 figures; comments welcome!</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
+    <id>http://arxiv.org/abs/2611.33124v1</id>
+    <title>SAG-Mem-1.0 Technical Report</title>
+    <updated>2026-11-24T18:51:29Z</updated>
+    <link href="https://arxiv.org/abs/2611.33124v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33124v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Long-term conversational memory requires retrieving complementary facts scattered across dialogue sessions, including intermediate evidence with limited similarity to the original question. Existing approaches often rely on derived memory representations or persistent relational structures, introducing construction costs and potentially losing source details. We present SAG-Mem, a conversational memory framework that preserves complete dialogue messages in non-overlapping chunks and discovers complementary evidence through query-time lexical expansion. Memory construction requires no model inference, using a lexical index without LLM-based extraction, summarization, or semantic relation construction. At query time, BM25 retrieves initial candidates, an evidence evaluator identifies useful chunks, and lexical cues from selected evidence guide an additional retrieval round. Retrieved dialogue is further annotated with calendar interpretations of supported relative-time expressions, preserving the original wording and temporal granularity. We also introduce SAG-Mem-Lite, an alternative configuration that replaces evidence scoring with embedding-based candidate scoring, achieving lower operational cost than Full Context and all memory-based baselines across both benchmarks with low query latency. On LoCoMo and LongMemEval, SAG-Mem achieves overall scores of 83.08 and 80.20, respectively, the highest among the evaluated methods on both benchmarks. On LongMemEval, it exceeds the strongest compared baseline by 7.20 points. SAG-Mem-Lite achieves scores of 77.09 and 77.20, respectively. These results support dialogue preservation and evidence-guided retrieval expansion as an effective design for long-term conversational memory.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:51:29Z</published>
+    <arxiv:primary_category term="cs.CL"/>
     <author>
-      <name>Gabriel P. Lynch</name>
+      <name>Yuchao Wu</name>
     </author>
     <author>
-      <name>Lloyd Knox</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2611.31175v1</id>
-    <title>Needwise: Generation-Free Conversational Recommendation from Need-Level Typed Decisions</title>
-    <updated>2026-11-23T18:32:04Z</updated>
-    <link href="https://arxiv.org/abs/2611.31175v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31175v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Conversational recommenders must rank items against needs that catalogs record only in part, while users add, withdraw and reverse needs and switch between requests. LLM rankers re-read the dialogue at every turn: they are slow, and their ordering does not show which needs an item meets. We show that a conversational recommender can be built from typed decisions instead: named questions over fixed options, answered with option probabilities rather than generated text. On each turn, one typed request maps the message onto the catalog's fields, keeps what no field expresses in the user's words, and decides how the turn changes each earlier need. Needwise then ranks candidates must-first: the needs on the kind of item, its place and its price form a tier, and within it one holistic decision and need-level verdicts (supported, contradicted or unknown) are combined with equal weight (Needwise-HF). With the graded attributes withheld from the records, so that needs must be inferred from names, descriptions and reviews, Needwise-HF ranks Google Local requests significantly better than GPT-6 Sol (0.383 against 0.343 nDCG@10) and is not significantly different from the strongest LLM ranker on Google Local and Yelp; these comparisons keep their sign under every treatment of unrecorded attributes we test. It costs a fraction of GPT-6 Sol's API price and answers in 2.5 s at the median on Google Local, against 5.6 s for GPT-6 Sol. In conversations, the typed state keeps the ranking across switches and returns, but it recognizes only 19-27% of withdrawn needs.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:32:04Z</published>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Sungchul Kim</name>
+      <name>XingCheng Liang</name>
     </author>
     <author>
-      <name>Weixiao Huang</name>
+      <name>Xuanze Wang</name>
     </author>
     <author>
-      <name>Mekala Raja Sekhar Reddy</name>
+      <name>Yini Huang</name>
     </author>
     <author>
-      <name>Amrutha Srinivasan</name>
+      <name>Yue Wu</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2611.31174v1</id>
-    <title>Reducing Order Sensitivity in Decision Models</title>
-    <updated>2026-11-23T18:31:54Z</updated>
-    <link href="https://arxiv.org/abs/2611.31174v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31174v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Decision models are emerging as fast components of larger AI systems. Yet recent decision models, such as Jev, process options sequentially, leading to different predictions based on their ordering. Across ten open- and closed-source decision models, we find that \emph{order-sensitivity} is pervasive, causing substantial accuracy degradation and unreliable decision-making. These effects become more pronounced as the number of options grows and can compound across multi-step decisions. To address this problem, we systematically compare eight methods for mitigating order sensitivity in terms of robustness, predictive accuracy, and inference efficiency. Among these methods, we find that \emph{tree attention} is a surprisingly effective and efficient method. It achieves order invariance by processing options as parallel branches of a shared context. When used during training, it matches the baseline's average accuracy. Applied to the baseline without retraining, it also eliminates order sensitivity with only a 1.1-point drop in accuracy. Our findings demonstrate that order invariance can be enforced directly in decision models with little or no loss in predictive accuracy.</summary>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:31:54Z</published>
-    <arxiv:comment>28 pages, 5 figures, 12 tables</arxiv:comment>
-    <arxiv:primary_category term="cs.AI"/>
-    <author>
-      <name>Bodong Liu</name>
-    </author>
-    <author>
-      <name>Dongyoung Go</name>
-    </author>
-    <author>
-      <name>Sofian Zalouk</name>
-    </author>
-    <author>
-      <name>Kilian Q. Weinberger</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2611.31167v1</id>
-    <title>Interpretable morphology-based marked statistics</title>
-    <updated>2026-11-23T18:28:54Z</updated>
-    <link href="https://arxiv.org/abs/2611.31167v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31167v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>The shapes and environments of cosmic structures carry cosmological information beyond the matter power spectrum. Recovering this information while retaining a physical understanding is a central challenge for cosmological inference. We construct an interpretable, rotation-equivariant neural marking scheme that reweights the matter field, combining learned density responses with explicit measures of local morphology. This approach enables direct inspection of the learned transformations, while retaining the advantages of a two-point function analysis. We employ a contrastive learning framework to align the marked summaries with the respective cosmological parameters. In real-space matter simulations, the learned marked spectra recover information beyond the ordinary power spectrum, tightening marginalized Fisher constraints on $σ_8$ and $Ω_m$ by factors of $1.7\times$ and $1.5\times$ relative to the power spectrum plus bispectrum at $k_{\mathrm{max}}=0.3\,h\,\mathrm{Mpc}^{-1}$. Without retraining, our mark also improves a neutrino-mass forecast by a factor of $1.5\times$ relative to the power spectrum at the same scale cut. Across the cosmological prior, our marking scheme also improve the prediction errors in both parameters by $1.3\times$ over the best tested classical mark at $k_{\mathrm{max}}=0.2\,h\,\mathrm{Mpc}^{-1}$. A qualitative comparison with neural forecasts motivates the possibility that these different compressions approach a common information level. Neural marked statistics thus offer a route to extracting non-Gaussian information from cosmological surveys, combining interpretable, physically motivated transformations with the practical advantages of two-point estimators.</summary>
-    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:28:54Z</published>
-    <arxiv:comment>17 pages, 7 figures, submitted</arxiv:comment>
-    <arxiv:primary_category term="astro-ph.CO"/>
-    <author>
-      <name>Federico Semenzato</name>
-    </author>
-    <author>
-      <name>Benjamin D. Wandelt</name>
-    </author>
-    <author>
-      <name>Michele Liguori</name>
-    </author>
-    <author>
-      <name>Alvise Raccanelli</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2611.31140v1</id>
-    <title>HoloSplat: Real-Time Token Streaming for Feed-Forward Human Reconstruction</title>
-    <updated>2026-11-23T18:11:00Z</updated>
-    <link href="https://arxiv.org/abs/2611.31140v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31140v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Live free-viewpoint video streaming of humans enables immersive telepresence and interactive XR applications. However, this requires reconstructing each frame in real time, transmitting the data within strict bandwidth budgets, and decoding it on lightweight client GPUs. Existing approaches, whether relying on per-frame optimization or feed-forward inference, generate massive 3D Gaussian payloads that exceed practical streaming limits, while aggressive compression severely degrades rendering quality. In this work, we present HoloSplat, a real-time streaming framework for human-centric volumetric video. HoloSplat splits a feed-forward reconstructor before its Gaussian head, introducing a multi-rate streaming codec driven by server-side token compression and client-side token restoration. On the server side, we apply opacity-guided token pruning, PCA-based dimensionality reduction, and lossless geometry coding for token anchors. On the client side, a feature reconstruction hypernetwork is fused into the Gaussian head to recover compression-induced quality loss. Furthermore, we introduce Neural Session Calibration (NSC), which rapidly fine-tunes the Gaussian head online using incoming camera views during a warm-up phase. This resolves quality degradation from novel camera parameters and varying capture conditions with zero per-frame overhead. In our evaluations, HoloSplat averages 32.2 FPS on four RTX 5090 GPUs at 50 Mbit/s. It decodes each frame into 3D Gaussians in 22.1 ms on an RTX 3050 Ti laptop GPU, transmitting 22.8$\times$ less data than uncompressed float32 Gaussians, while calibrated decoding improves PSNR by 1.050 dB.</summary>
-    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <id>http://arxiv.org/abs/2611.33117v1</id>
+    <title>Read My Lips: Context-aware Lip Reading Using Language and Audio-Visual Models</title>
+    <updated>2026-11-24T18:48:44Z</updated>
+    <link href="https://arxiv.org/abs/2611.33117v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33117v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real-world speech is often partially observable: audio may be missing or corrupted by noise and competing speakers, while the speaker's lips remain visible. Recovering speech requires combining what can be heard, seen, and inferred from context. We introduce RML (Read My Lips), a collaborative method combining a lip reader, a language model, and an audio-visual generative model. The lip reader provides articulation hypotheses, the language model uses context to resolve ambiguous or missing words, and the audio-visual generator reconstructs synchronized speech while preserving speaker identity. Since source reliability varies, RML generates multiple reconstructions and uses the available evidence to favor the most reliable ones. This allows RML to handle missing audio, strong interference, and poor visual evidence without manually defined thresholds. Quantitative and qualitative experiments across these conditions show the benefit of combining visual, acoustic, and linguistic signals.</summary>
     <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:11:00Z</published>
-    <arxiv:comment>43 pages including supplementary material, 20 figures. Project page: https://heaticy.github.io/HoloSplat/</arxiv:comment>
-    <arxiv:primary_category term="cs.CV"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:48:44Z</published>
+    <arxiv:comment>Project page: https://amirhossein-razlighi.github.io/read_my_lips/</arxiv:comment>
+    <arxiv:primary_category term="cs.GR"/>
     <author>
-      <name>Chaofan Li</name>
+      <name>Amir Razlighi</name>
     </author>
     <author>
-      <name>Qihan Ding</name>
+      <name>Zhuo Ning</name>
     </author>
     <author>
-      <name>Shihan Wang</name>
+      <name>Naomi Ken Korem</name>
     </author>
     <author>
-      <name>Zhehao Shen</name>
+      <name>Nisarg Patel</name>
     </author>
     <author>
-      <name>Boyu Shen</name>
+      <name>Yiorgos Chrysanthou</name>
     </author>
     <author>
-      <name>Quanyu Chen</name>
+      <name>Daniel Cohen-Or</name>
     </author>
     <author>
-      <name>Haoyu Wu</name>
-    </author>
-    <author>
-      <name>Lan Xu</name>
-    </author>
-    <author>
-      <name>Xin Lou</name>
+      <name>Ali Mahdavi Amiri</name>
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2611.31138v1</id>
-    <title>Score-aware nonparametric adaptation of prediction-powered inference</title>
-    <updated>2026-11-23T18:08:28Z</updated>
-    <link href="https://arxiv.org/abs/2611.31138v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2611.31138v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Prediction-powered inference supplements labelled data with unlabelled data and external predictions to improve statistical efficiency. For inference on generalized linear model (GLM) coefficients, optimal use of these predictions generally requires estimating a conditional mean given the covariates and the external prediction, which can be challenging when the labelled data are limited or the covariates are multi-dimensional. We address this challenge through dimension reduction. We first fit an augmented generalized linear model combining the covariates and external prediction to obtain a scalar index, and then approximate the conditional mean by a univariate function of this index. Based on this construction, we develop a class of estimators for GLM coefficients and select the proposed estimator by minimizing the estimated asymptotic covariance trace. Under regularity conditions, the proposed estimator is asymptotically normal and has an asymptotic covariance trace no greater than that of the labelled-only estimator, even when the dimension reduction is insufficient. We also establish conditions under which the dimension reduction is sufficient. Simulations show that the proposed estimator is generally close to the best feasible estimator in root mean squared error, with confidence interval coverage close to the nominal level.</summary>
+    <id>http://arxiv.org/abs/2611.33111v1</id>
+    <title>Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions</title>
+    <updated>2026-11-24T18:41:59Z</updated>
+    <link href="https://arxiv.org/abs/2611.33111v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33111v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the acceptance probability of draft tokens in target verification, which is directly related to the gap $\|p-q\|_1$ between the target distribution $p$ and the draft distribution $q$. In this paper, we study draft calibration of speculative decoding to improve the speedup of speculative decoding, where we employ post-hoc methods to calibrate the draft distribution to mitigate the distribution gap. We observe that though current community open-source draft models may learn the top candidate token correctly, they are generally underconfident compared to the target model, suggesting a consistent distribution mismatch. To mitigate the effect of this mismatch on the acceptance rate of the draft models, we try various post-hoc calibration methods, including standard temperature scaling and token-wise calibration. Our results suggest that a standard temperature scaling applied to the draft distribution improves the acceptance length by up to approximately 10\% with almost no additional cost across different tasks. Throughput analysis further verifies that this improvement in serving efficiency. Analysis of more general calibration methods reveals further potential room for improvement.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:41:59Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuxing Liu</name>
+    </author>
+    <author>
+      <name>Wei Zuo</name>
+    </author>
+    <author>
+      <name>Walid Krichene</name>
+    </author>
+    <author>
+      <name>Tong Zhang</name>
+    </author>
+    <author>
+      <name>Li Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.33094v1</id>
+    <title>Bayesian Learning of Spatially Heterogeneous Causal Structure in Spatial Transcriptomics</title>
+    <updated>2026-11-24T18:28:56Z</updated>
+    <link href="https://arxiv.org/abs/2611.33094v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33094v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spatial transcriptomics preserves the location of each expression profile, making it possible to study how gene regulatory networks differ within a tissue. Across regions of a tissue, regulatory relationships may vary and even reverse direction, so identifying the causal relationships in a specific pathological region can provide insight into therapeutic targets. We propose SpaDAG, a Bayesian method for learning spatially varying causal directed acyclic graphs. By defining the graphs on a triangulation of the tissue, SpaDAG allows each edge to have its own spatial pattern and even to reverse direction across regions. We show that the graphs nonetheless remain fully identifiable, and develop an MCMC sampler that explores them efficiently by reversing an edge over an entire connected region in a single move. SpaDAG outperforms competing methods in simulations with and without direction reversals. In a section spanning a renal cell carcinoma and the adjacent kidney, SpaDAG finds largely different relationships in the two tissues, with those in the tumor concentrated on genes associated with therapeutic targets. Between two of these genes, it identifies a relationship whose direction reverses across the tumor boundary, generating hypotheses about their region-specific coupling. Supplementary materials and code for this article are available online.</summary>
     <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2026-11-23T18:08:28Z</published>
-    <arxiv:comment>35 pages, 6 figures. Includes supplementary material with proofs and additional simulation results</arxiv:comment>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:28:56Z</published>
+    <arxiv:comment>37 pages, 7 figures. Supplementary Material (56 pages) and Supplementary Atlas (12 pages) are provided as ancillary files. Code: https://github.com/KyungWookBack/SpaDAG</arxiv:comment>
     <arxiv:primary_category term="stat.ME"/>
     <author>
-      <name>Xin Lu</name>
+      <name>Kyungwook Back</name>
     </author>
     <author>
-      <name>Xuming He</name>
+      <name>Junsouk Choi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.33086v1</id>
+    <title>Uncertainty-Aware Candidate Generation for Entity Linking in Cyber Threat Intelligence</title>
+    <updated>2026-11-24T18:23:14Z</updated>
+    <link href="https://arxiv.org/abs/2611.33086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Entity Resolution (ER) pipelines often collapse ambiguity into early hard decisions: upstream Named Entity Recognition (NER) selects a single span and type, and downstream Entity Linking (EL) treats that choice as ground truth. This discards valuable information about the ambiguity of the underlying data (e.g., span boundary disagreement and type confusion), leading to brittle systems that fail unpredictably when faced with uncertainty in inputs. Therefore, this work presents a proof-of-concept for uncertainty-aware ER that treats uncertainty as native data that should be preserved and exploited throughout ER pipelines. We (i) capture uncertainty signals in the NER stage and (ii) leverage these signals into the EL stage to improve candidate retrieval under ambiguity. Using a BERT-based NER model augmented with two auxiliary span-boundary prediction heads, we apply Monte Carlo (MC) dropout at inference time to derive three mention-level proxy signals: the MC-averaged start-boundary probability, the MC-averaged end-boundary probability, and De Luca-Termini fuzzy entropy computed over the Begin-Inside-Outside (BIO) predictive distribution. These signals are used to adapt the fuzzy cutoff in candidate generation (CG) for EL. Because CG is treated as a blocking step, we evaluate retrieval recall. On the AnnoCTR dataset linked to the MITRE ATTCK knowledge base, the boundary-aware and dual-signal fuzzy linking approaches improve Recall@10 from 0.6186 to 0.7966. The contribution lies not in an end-to-end optimised ER pipeline but in establishing uncertainty preservation as a viable and beneficial component of ER pipelines, enabling downstream EL to make better-informed decisions under uncertainty.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:23:14Z</published>
+    <arxiv:comment>This paper has been accepted for oral presentation at the 19th International Conference on Agents and Artificial Intelligence (ICAART 2027)</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Nasser Alkhulaifi</name>
     </author>
     <author>
-      <name>Bo Li</name>
+      <name>Direnc Pekaslan</name>
+    </author>
+    <author>
+      <name>Christian Wagner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.33080v1</id>
+    <title>Shifter Quantization: Compact Representations for Native Integer Computation</title>
+    <updated>2026-11-24T18:14:52Z</updated>
+    <link href="https://arxiv.org/abs/2611.33080v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33080v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Groupwise quantization is used in LLM quantization to improve accuracy at low bit widths, but grouping weights keeps standard integer MMA from spanning the full dot product for efficient GPU inference. We develop a new quantization method, Shifter Quantization (SQ), that reconstructs native-width integer operands by appending and shifting shared bits. To further extend the efficiency, we develop a special variant of SQ, Shifter Integer (SHI), to use INT4 kernels. We show that SQ and SHI formats perform better than standard groupwise quantization in quality, as measured by projection error and KL divergence, and in inference speed, as measured during decoding and prefill. For low precision like 2-bit quantization, SQ2 and SHI2 achieve 2.71-3.77x the 4,096-token prefill throughput of llama.cpp on a Q2_K checkpoint and reduce WikiText-2 KL by 6.6-7.8%. For mid precision like 4-bit quantization, SQ4 achieves 1.43-2.47x the prefill throughput of NInfer's groupwise-integer baselines across the tested models and prompt lengths, with 24-40% lower KL than the NInfer baselines. For high precision like 8-bit quantization, SQ8 achieves 27.4% higher batch-one prefill throughput and 72.7% lower KL than vLLM's online FP8.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:14:52Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yufeng Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.33059v1</id>
+    <title>ClusterVAD: Threshold-Free Unsupervised Voice Activity Detection with Pre-Trained Neural Representations</title>
+    <updated>2026-11-24T18:03:21Z</updated>
+    <link href="https://arxiv.org/abs/2611.33059v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.33059v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Voice activity detection (VAD) is one of the first steps in speech processing pipelines, from transcription and diarization to speech language models. Supervised detectors need labelled data and inherit the domain and annotation conventions of their training corpora. Existing unsupervised detectors rely on hand-crafted acoustic features which cannot benefit from data and degrade in far-field, noisy or atypical speech. We propose ClusterVAD, an unsupervised VAD built on frozen speech foundation model representations. Fitted once on a small set of untranscribed speech, it clusters the representations and labels each cluster as speech or non-speech with sonority, an acoustic measure. At inference, a frame-level speech probability is computed from the cluster assignments, and a two-state hidden Markov model fitted to each recording enables threshold-free detection. Across benchmarks covering meetings, far-field and noisy recordings, Mandarin and dysarthric speech, ClusterVAD obtains the lowest detection error on pause-level references and is competitive on speaker turn-level references. These results indicate that speech foundation models inherently capture the distinction between speech and non-speech, which can be leveraged without training a detector.</summary>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T18:03:21Z</published>
+    <arxiv:primary_category term="eess.AS"/>
+    <author>
+      <name>Karl El Hajal</name>
+    </author>
+    <author>
+      <name>Mathew Magimai. -Doss</name>
     </author>
   </entry>
 </feed>
